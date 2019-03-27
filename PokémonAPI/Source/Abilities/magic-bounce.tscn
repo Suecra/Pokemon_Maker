@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Ability.gd" type="Script" id=1]
+
+[node name="magic-bounce" type="Node"]
+
+script = ExtResource( 1 )
+description = "Reflects status moves, instead of getting hit
+by them."
+
+

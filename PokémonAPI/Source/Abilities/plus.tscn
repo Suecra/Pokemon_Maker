@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Ability.gd" type="Script" id=1]
+
+[node name="plus" type="Node"]
+
+script = ExtResource( 1 )
+description = "Boosts the Sp. Atk stat of the Pokémon if an ally
+with the Plus or Minus Ability is also in battle."
+
+

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Ability.gd" type="Script" id=1]
+
+[node name="download" type="Node"]
+
+script = ExtResource( 1 )
+description = "Compares an opposing Pokémon’s Defense and
+Sp. Def stats before raising its own Attack or
+Sp. Atk stat—whichever will be more effective."
+
+

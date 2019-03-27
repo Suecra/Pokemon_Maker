@@ -1,0 +1,239 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Source/Pokemon.gd" type="Script" id=1]
+[ext_resource path="res://Source/Type.gd" type="Script" id=2]
+[ext_resource path="res://Source/Ability.gd" type="Script" id=3]
+[ext_resource path="res://Source/LearnableMove.gd" type="Script" id=4]
+[ext_resource path="res://Source/EggGroup.gd" type="Script" id=5]
+[ext_resource path="res://TestChar.gd" type="Script" id=6]
+[ext_resource path="res://HGSS_170.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "walk_down"
+length = 0.8
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 0, 0, 64, 64 ), Rect2( 64, 0, 64, 64 ), Rect2( 128, 0, 64, 64 ), Rect2( 192, 0, 64, 64 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "walk_left"
+length = 0.8
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 0, 64, 64, 64 ), Rect2( 64, 64, 64, 64 ), Rect2( 128, 64, 64, 64 ), Rect2( 192, 64, 64, 64 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "walk_right"
+length = 0.8
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 0, 128, 64, 64 ), Rect2( 64, 128, 64, 64 ), Rect2( 128, 128, 64, 64 ), Rect2( 192, 128, 64, 64 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "walk_up"
+length = 0.8
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 0, 192, 64, 64 ), Rect2( 64, 192, 64, 64 ), Rect2( 128, 192, 64, 64 ), Rect2( 192, 192, 64, 64 ) ]
+}
+
+[node name="Main" type="Node"]
+
+[node name="Bulbasaur" type="Node" parent="." index="0"]
+
+script = ExtResource( 1 )
+regional_dex_nr = null
+national_dex_nr = null
+hp = null
+attack = null
+defense = null
+special_attack = null
+special_defense = null
+speed = null
+catch_rate = null
+happyness = null
+gender_chance = null
+egg_cycle = null
+base_ep = null
+growth_rate = null
+kategory = ""
+size = null
+weight = null
+color = null
+shape = null
+dex_entry = null
+
+[node name="Types" type="Node" parent="Bulbasaur" index="0"]
+
+editor/display_folded = true
+
+[node name="Grass" type="Node" parent="Bulbasaur/Types" index="0"]
+
+script = ExtResource( 2 )
+id = 11
+effective = 1072
+neutral = 487555
+not_very_effective = 35660
+no_effect = null
+
+[node name="Poison" type="Node" parent="Bulbasaur/Types" index="1"]
+
+script = ExtResource( 2 )
+id = null
+effective = null
+neutral = null
+not_very_effective = null
+no_effect = null
+
+[node name="Abilities" type="Node" parent="Bulbasaur" index="1"]
+
+[node name="Overgrow" type="Node" parent="Bulbasaur/Abilities" index="0"]
+
+script = ExtResource( 3 )
+description = null
+
+[node name="Chlorophyll" type="Node" parent="Bulbasaur/Abilities" index="1"]
+
+script = ExtResource( 3 )
+description = null
+
+[node name="Moves" type="Node" parent="Bulbasaur" index="2"]
+
+[node name="Tackle Lv1" type="Node" parent="Bulbasaur/Moves" index="0"]
+
+script = ExtResource( 4 )
+move = null
+level = 1
+egg = null
+tm = null
+
+[node name="Evolutions" type="Node" parent="Bulbasaur" index="3"]
+
+editor/display_folded = true
+
+[node name="Ivisaur" type="Node" parent="Bulbasaur/Evolutions" index="0"]
+
+[node name="Egg Groups" type="Node" parent="Bulbasaur" index="4"]
+
+editor/display_folded = true
+
+[node name="Plant" type="Node" parent="Bulbasaur/Egg Groups" index="0"]
+
+script = ExtResource( 5 )
+
+[node name="Monster" type="Node" parent="Bulbasaur/Egg Groups" index="1"]
+
+script = ExtResource( 5 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="1"]
+
+position = Vector2( 217.174, 165.097 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D" index="1"]
+
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 128, 128, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/walk_down = SubResource( 2 )
+anims/walk_left = SubResource( 3 )
+anims/walk_right = SubResource( 4 )
+anims/walk_up = SubResource( 5 )
+blend_times = [  ]
+
+[node name="Button" type="Button" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 411.0
+margin_top = 69.0
+margin_right = 620.0
+margin_bottom = 127.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+
+[connection signal="pressed" from="Button" to="Bulbasaur" method="_on_Button_pressed"]
+
+
