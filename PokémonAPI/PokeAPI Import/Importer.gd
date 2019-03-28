@@ -5,6 +5,7 @@ export(String) var folder_name
 var base_url
 var json
 var request_result
+var count
 
 func import(base_url, destination):
 	self.base_url = base_url
@@ -12,31 +13,29 @@ func import(base_url, destination):
 	var directory = destination + "/" + folder_name
 	if !dir.dir_exists(directory):
 		dir.make_dir(directory)
-	yield(do_request("ability"), "completed")
+	yield(get_count(), "completed")
+	yield(do_request(api_endpoint + "/?limit=" + str(count)), "completed")
 	if json.result != null:
-		var count = json.result["count"]
 		print(json.result)
 		for i in count - 1:
-			yield(do_request(api_endpoint + "/" + str(i + 1)), "completed")
-			if json.result != null:
-				var name = json.result["name"]
-				var file = File.new()
-				var scene
-				var item
-				var path = directory + "/" + name + ".tscn"
-				if file.file_exists(path):
-					scene = load(path)
-					item = scene.instance()
-				else:
-					scene = PackedScene.new()
-					item = _create_item()
-					item.name = name
-				_import_item(item)
-				scene.pack(item)
-				ResourceSaver.save(path, scene)
-				get_parent().get_node("ProgressBar").value = i / count * 100
+			#yield(do_request(api_endpoint + "/" + str(i + 1)), "completed")
+			var dict = json.result["results"][i + 1]
+			var name = dict["name"]
+			var file = File.new()
+			var scene
+			var item
+			var path = directory + "/" + name + ".tscn"
+			if file.file_exists(path):
+				scene = load(path)
+				item = scene.instance()
 			else:
-				do_log("ability/" + str(i + 1) + " not found")
+				scene = PackedScene.new()
+				item = _create_item()
+				item.name = name
+			_import_item(item, dict)
+			scene.pack(item)
+			ResourceSaver.save(path, scene)
+			get_parent().get_node("ProgressBar").value = i / count * 100
 	pass
 
 func do_request(url):
@@ -47,6 +46,10 @@ func do_request(url):
 	if request_result != 0:
 		do_log("Error requesting " + full_url + "! Error-Code " + request_result)
 	pass
+
+func get_count():
+	yield(do_request(api_endpoint + "/?limit=1"), "completed")
+	count = json.result["count"]
 
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 	json = JSON.parse(body.get_string_from_utf8())
