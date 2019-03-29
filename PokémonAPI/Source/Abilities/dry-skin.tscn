@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Ability.gd" type="Script" id=1]
+
+[node name="dry-skin" type="Node"]
+
+script = ExtResource( 1 )
+description = "Restores HP in rain or when hit by Water-type
+moves. Reduces HP in harsh sunlight, and increases
+the damage received from Fire-type moves."
+
+

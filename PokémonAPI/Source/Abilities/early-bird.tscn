@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Ability.gd" type="Script" id=1]
+
+[node name="early-bird" type="Node"]
+
+script = ExtResource( 1 )
+description = "The Pokémon awakens twice as fast as other
+Pokémon from sleep."
+
+
