@@ -1,12 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Source/Pokemon.gd" type="Script" id=1]
-[ext_resource path="res://Source/Type.gd" type="Script" id=2]
-[ext_resource path="res://Source/Ability.gd" type="Script" id=3]
-[ext_resource path="res://Source/LearnableMove.gd" type="Script" id=4]
-[ext_resource path="res://Source/EggGroup.gd" type="Script" id=5]
-[ext_resource path="res://TestChar.gd" type="Script" id=6]
-[ext_resource path="res://HGSS_170.png" type="Texture" id=7]
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://Common/Textboxes/Textbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TestChar.gd" type="Script" id=3]
+[ext_resource path="res://HGSS_170.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -91,91 +88,9 @@ tracks/0/keys = {
 
 [node name="Main" type="Node"]
 
-[node name="Bulbasaur" type="Node" parent="." index="0"]
-
 script = ExtResource( 1 )
-regional_dex_nr = null
-national_dex_nr = null
-hp = null
-attack = null
-defense = null
-special_attack = null
-special_defense = null
-speed = null
-catch_rate = null
-happyness = null
-gender_chance = null
-egg_cycle = null
-base_ep = null
-growth_rate = null
-kategory = ""
-size = null
-weight = null
-color = null
-shape = null
-dex_entry = null
 
-[node name="Types" type="Node" parent="Bulbasaur" index="0"]
-
-editor/display_folded = true
-
-[node name="Grass" type="Node" parent="Bulbasaur/Types" index="0"]
-
-script = ExtResource( 2 )
-id = 11
-effective = 1072
-neutral = 487555
-not_very_effective = 35660
-no_effect = null
-
-[node name="Poison" type="Node" parent="Bulbasaur/Types" index="1"]
-
-script = ExtResource( 2 )
-id = null
-effective = null
-neutral = null
-not_very_effective = null
-no_effect = null
-
-[node name="Abilities" type="Node" parent="Bulbasaur" index="1"]
-
-[node name="Overgrow" type="Node" parent="Bulbasaur/Abilities" index="0"]
-
-script = ExtResource( 3 )
-description = null
-
-[node name="Chlorophyll" type="Node" parent="Bulbasaur/Abilities" index="1"]
-
-script = ExtResource( 3 )
-description = null
-
-[node name="Moves" type="Node" parent="Bulbasaur" index="2"]
-
-[node name="Tackle Lv1" type="Node" parent="Bulbasaur/Moves" index="0"]
-
-script = ExtResource( 4 )
-move = null
-level = 1
-egg = null
-tm = null
-
-[node name="Evolutions" type="Node" parent="Bulbasaur" index="3"]
-
-editor/display_folded = true
-
-[node name="Ivisaur" type="Node" parent="Bulbasaur/Evolutions" index="0"]
-
-[node name="Egg Groups" type="Node" parent="Bulbasaur" index="4"]
-
-editor/display_folded = true
-
-[node name="Plant" type="Node" parent="Bulbasaur/Egg Groups" index="0"]
-
-script = ExtResource( 5 )
-
-[node name="Monster" type="Node" parent="Bulbasaur/Egg Groups" index="1"]
-
-script = ExtResource( 5 )
+[node name="Textbox" parent="." index="0" instance=ExtResource( 2 )]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="1"]
 
@@ -184,7 +99,7 @@ input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-script = ExtResource( 6 )
+script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="0"]
 
@@ -192,7 +107,7 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D" index="1"]
 
-texture = ExtResource( 7 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 128, 128, 64, 64 )
 _sections_unfolded = [ "Region" ]
@@ -210,16 +125,42 @@ anims/walk_right = SubResource( 4 )
 anims/walk_up = SubResource( 5 )
 blend_times = [  ]
 
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D" index="3"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = 0
+limit_top = 0
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Limit" ]
+
 [node name="Button" type="Button" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 411.0
-margin_top = 69.0
-margin_right = 620.0
-margin_bottom = 127.0
+margin_left = 469.0
+margin_top = 97.0
+margin_right = 684.0
+margin_bottom = 194.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -234,6 +175,6 @@ group = null
 flat = false
 align = 1
 
-[connection signal="pressed" from="Button" to="Bulbasaur" method="_on_Button_pressed"]
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
 
 

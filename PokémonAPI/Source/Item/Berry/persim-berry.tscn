@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Source/Berry.gd" type="Script" id=1]
+[ext_resource path="res://Source/Type/ground.tscn" type="PackedScene" id=2]
+
+[node name="persim-berry" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 4
+category = "Medicine"
+price = 20.0
+sell_price = 10.0
+stack_size = null
+holdable = null
+fling_power = 10.0
+description = "A Berry to be consumed by Pokémon. If a Pokémon
+holds one, it can recover from confusion on its own
+in battle."
+size = 47.0
+smoothness = 20.0
+soil_dryness = 15.0
+firmness = 2
+grow_time = 4.0
+max_harvest = 5.0
+flavor_spicy = 10.0
+flavor_dry = 10.0
+flavor_sweet = 10.0
+flavor_bitter = 0.0
+flavor_sour = 10.0
+natural_gift_type = ExtResource( 2 )
+natural_gift_power = 60.0
+
+

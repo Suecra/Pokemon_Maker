@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+
+[node name="antidote" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 1
+category = "Status cures"
+price = 200.0
+sell_price = 100.0
+stack_size = null
+holdable = null
+fling_power = 30.0
+description = "A spray-type medicine for poisoning. It can be used
+once to lift the effects of being poisoned from
+a Pokémon."
+
+

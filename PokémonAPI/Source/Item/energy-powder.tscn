@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+
+[node name="energy-powder" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 1
+category = "Healing"
+price = 500.0
+sell_price = 250.0
+stack_size = null
+holdable = null
+fling_power = 30.0
+description = "A very bitter medicinal powder. When consumed,
+it restores up to 60 HP to an injured Pokémon."
+
+

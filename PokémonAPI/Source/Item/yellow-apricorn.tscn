@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+
+[node name="yellow-apricorn" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 7
+category = "Apricorn Box"
+price = 20.0
+sell_price = 10.0
+stack_size = null
+holdable = null
+fling_power = null
+description = "A yellow Apricorn. It has an invigorating scent."
+
+

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+
+[node name="flying-memory" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 0
+category = "Memories"
+price = 1000.0
+sell_price = 500.0
+stack_size = null
+holdable = null
+fling_power = 50.0
+description = "A memory disc that contains Flying-type data.
+It changes the type of the holder if held by
+a certain species of Pokémon."
+
+

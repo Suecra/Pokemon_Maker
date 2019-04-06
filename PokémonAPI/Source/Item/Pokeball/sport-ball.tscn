@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Ball.gd" type="Script" id=1]
+
+[node name="sport-ball" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 2
+category = "Standard balls"
+price = 300.0
+sell_price = 150.0
+stack_size = null
+holdable = null
+fling_power = null
+description = "A special Poké Ball that is used during the
+Bug-Catching Contest."
+
+
