@@ -1,57 +1,106 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Common/Textboxes/Styles/TextboxStyle.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/pkmndp.ttf" type="DynamicFontData" id=2]
-
-[sub_resource type="DynamicFont" id=1]
-size = 28
-extra_spacing_top = 10
-extra_spacing_bottom = 10
-font_data = ExtResource( 2 )
 
 [node name="TextboxStyle1" type="Container"]
+
+anchor_left = 0.0
+anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 script = ExtResource( 1 )
-text_node = NodePath("text")
+_sections_unfolded = [ "Anchor" ]
+debug_text = null
+custom_border = false
+top_left_corner = null
+top_right_corner = null
+bottom_left_corner = null
+bottom_right_corner = null
+horizontal_border = null
+vertical_border = null
 
-[node name="background" type="ColorRect" parent="."]
+[node name="background" type="ColorRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
 
-[node name="top" type="ColorRect" parent="background"]
+[node name="top" type="ColorRect" parent="background" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
 anchor_right = 1.0
-margin_bottom = 4.0
-color = Color( 0.4, 0.4, 0.4, 1 )
+anchor_bottom = 0.0
+margin_bottom = 8.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.126587, 0.129457, 0.132813, 1 )
+_sections_unfolded = [ "Rect" ]
 
-[node name="left" type="ColorRect" parent="background"]
+[node name="left" type="ColorRect" parent="background" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
 anchor_bottom = 1.0
-margin_right = 4.0
-color = Color( 0.4, 0.4, 0.4, 1 )
+margin_right = 8.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.126587, 0.129457, 0.132813, 1 )
+_sections_unfolded = [ "Rect" ]
 
-[node name="right" type="ColorRect" parent="background"]
+[node name="right" type="ColorRect" parent="background" index="2"]
+
 anchor_left = 1.0
+anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -4.0
-color = Color( 0.4, 0.4, 0.4, 1 )
+margin_left = -8.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.126587, 0.129457, 0.132813, 1 )
+_sections_unfolded = [ "Rect" ]
 
-[node name="bottom" type="ColorRect" parent="background"]
+[node name="bottom" type="ColorRect" parent="background" index="3"]
+
+anchor_left = 0.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -4.0
-color = Color( 0.4, 0.4, 0.4, 1 )
+margin_top = -8.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.126587, 0.129457, 0.132813, 1 )
+_sections_unfolded = [ "Rect" ]
 
-[node name="text" type="RichTextLabel" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 10.0
-margin_top = 9.0
-margin_right = -9.0
-margin_bottom = -10.0
-custom_fonts/normal_font = SubResource( 1 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-text = "Dies ist ein Test
-"
 
