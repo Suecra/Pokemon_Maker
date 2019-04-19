@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+
+[node name="clanging-scales" type="Node"]
+script = ExtResource( 1 )
+type = null
+damage_class = 1
+power = 110.0
+accuracy = 100.0
+priority = 0.0
+pp = 5.0
+z_power = 0
+flags = 32
+hit_range = 1
+is_HM = false
+contest_type = 0
+contest_effect = null
+battle_style = 0
+description = "The user rubs the scales on its entire body and
+makes a huge noise to attack the opposing Pokémon.
+The user’s Defense stat goes down after the attack."
+

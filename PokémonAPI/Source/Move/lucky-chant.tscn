@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+
+[node name="lucky-chant" type="Node"]
+script = ExtResource( 1 )
+type = null
+damage_class = 2
+power = null
+accuracy = null
+priority = 0.0
+pp = 30.0
+z_power = 0
+flags = 4096
+hit_range = 6
+is_HM = false
+contest_type = 2
+contest_effect = null
+battle_style = 0
+description = "The user chants an incantation toward the sky,
+preventing opposing Pokémon from landing
+critical hits for five turns."
+

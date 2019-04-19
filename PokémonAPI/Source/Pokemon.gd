@@ -17,7 +17,7 @@ export(PackedScene) var gender_chance
 export(int) var egg_cycle
 export(int) var base_ep
 export(PackedScene) var growth_rate
-export(String) var kategory = ""
+export(String) var category = ""
 export(float) var size
 export(float) var weight
 export(PackedScene) var color

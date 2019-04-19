@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Contest-Effect/contest_effect5.tscn" type="PackedScene" id=2]
+
+[node name="mud-shot" type="Node"]
+script = ExtResource( 1 )
+type = null
+damage_class = 1
+power = 55.0
+accuracy = 95.0
+priority = 0.0
+pp = 15.0
+z_power = 0
+flags = 32
+hit_range = 0
+is_HM = false
+contest_type = 4
+contest_effect = ExtResource( 2 )
+battle_style = 0
+description = "The user attacks by hurling a blob of mud at the
+target. This also lowers the target’s Speed stat."
+

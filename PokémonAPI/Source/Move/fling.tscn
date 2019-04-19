@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+
+[node name="fling" type="Node"]
+script = ExtResource( 1 )
+type = null
+damage_class = 0
+power = null
+accuracy = 100.0
+priority = 0.0
+pp = 10.0
+z_power = 0
+flags = 32
+hit_range = 0
+is_HM = false
+contest_type = 4
+contest_effect = null
+battle_style = 0
+description = "The user flings its held item at the target to attack.
+This move’s power and effects depend on the item."
+

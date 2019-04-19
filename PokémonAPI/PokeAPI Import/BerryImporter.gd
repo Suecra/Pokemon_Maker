@@ -13,11 +13,11 @@ func _import_item(item):
 	item.smoothness = api_item["smoothness"]
 	item.soil_dryness = api_item["soil_dryness"]
 	match api_item["firmness"]["name"]:
-		"very-soft": item.firmness = Berry.Very_Soft
-		"soft": item.firmness = Berry.Soft
-		"hard": item.firmness = Berry.Hard
-		"very-hard": item.firmness = Berry.Very_Hard
-		"super-hard": item.firmness = Berry.Super_Hard
+		"very-soft": item.firmness = Berry.Firmness.Very_Soft
+		"soft": item.firmness = Berry.Firmness.Soft
+		"hard": item.firmness = Berry.Firmness.Hard
+		"very-hard": item.firmness = Berry.Firmness.Very_Hard
+		"super-hard": item.firmness = Berry.Firmness.Super_Hard
 	item.grow_time = api_item["growth_time"]
 	item.max_harvest = api_item["max_harvest"]
 	item.flavor_spicy = api_item["flavors"][0]["potency"]

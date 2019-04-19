@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Contest-Effect/contest_effect5.tscn" type="PackedScene" id=2]
+
+[node name="screech" type="Node"]
+script = ExtResource( 1 )
+type = null
+damage_class = 2
+power = null
+accuracy = 85.0
+priority = 0.0
+pp = 40.0
+z_power = 0
+flags = 0
+hit_range = 0
+is_HM = false
+contest_type = 3
+contest_effect = ExtResource( 2 )
+battle_style = 0
+description = "An earsplitting screech harshly lowers the target’s
+Defense stat."
+

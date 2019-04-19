@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Contest-Effect/contest_effect32.tscn" type="PackedScene" id=2]
+
+[node name="silver-wind" type="Node"]
+script = ExtResource( 1 )
+type = null
+damage_class = 1
+power = 60.0
+accuracy = 100.0
+priority = 0.0
+pp = 5.0
+z_power = 0
+flags = 32
+hit_range = 0
+is_HM = false
+contest_type = 1
+contest_effect = ExtResource( 2 )
+battle_style = 0
+description = "The target is attacked with powdery scales blown
+by the wind. This may also raise all the user’s stats."
+

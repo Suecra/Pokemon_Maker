@@ -17,9 +17,11 @@ func _on_Import_pressed():
 		#yield($AbilityImporter.import(base_url, $DestinationDirectory.text), "completed")
 		#yield($ItemImporter.import(base_url, $DestinationDirectory.text), "completed")
 		#yield($BerryImporter.import(base_url, $DestinationDirectory.text), "completed")
-		#yield($TypeImporter.import(base_url, $DestinationDirectory.text), "completed")
+		#yield($HTTPRequest/TypeImporter.import(base_url, $DestinationDirectory.text), "completed")
 		#yield($HTTPRequest/ContestEffectImporter.import(base_url, $DestinationDirectory.text), "completed")
-		yield($HTTPRequest/NatureImporter.import(base_url, $DestinationDirectory.text), "completed")
+		#yield($HTTPRequest/NatureImporter.import(base_url, $DestinationDirectory.text), "completed")
+		#yield($HTTPRequest/EggGroupImporter.import(base_url, $DestinationDirectory.text), "completed")
+		yield($HTTPRequest/MoveImporter.import(base_url, $DestinationDirectory.text), "completed")
 		pass
 	else:
 		do_log("Directory not found: " + $DestinationDirectory.text)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Contest-Effect/contest_effect2.tscn" type="PackedScene" id=2]
+
+[node name="rock-blast" type="Node"]
+script = ExtResource( 1 )
+type = null
+damage_class = 0
+power = 25.0
+accuracy = 90.0
+priority = 0.0
+pp = 10.0
+z_power = 0
+flags = 32
+hit_range = 0
+is_HM = false
+contest_type = 4
+contest_effect = ExtResource( 2 )
+battle_style = 0
+description = "The user hurls hard rocks at the target. Two to five
+rocks are launched in a row."
+

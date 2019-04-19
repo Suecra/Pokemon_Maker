@@ -37,14 +37,14 @@ func _create_item():
 
 func _import_item(item):
 	match pocket:
-		"misc": item.pocket = Item.Objects
-		"medicine": item.pocket = Item.Medicine
-		"pokeballs": item.pocket = Item.Balls
-		"machines": item.pocket = Item.TMs
-		"berries": item.pocket = Item.Berries
-		"mail": item.pocket = Item.Letters
-		"battle": item.pocket = Item.Battle_Items
-		"key": item.pocket = Item.Key_Items
+		"misc": item.pocket = Item.Pocket.Objects
+		"medicine": item.pocket = Item.Pocket.Medicine
+		"pokeballs": item.pocket = Item.Pocket.Balls
+		"machines": item.pocket = Item.Pocket.TMs
+		"berries": item.pocket = Item.Pocket.Berries
+		"mail": item.pocket = Item.Pocket.Letters
+		"battle": item.pocket = Item.Pocket.Battle_Items
+		"key": item.pocket = Item.Pocket.Key_Items
 	yield(get_category(api_item["category"]["name"]), "completed")
 	item.category = result["names"][0]["name"]
 	item.price = api_item["cost"]

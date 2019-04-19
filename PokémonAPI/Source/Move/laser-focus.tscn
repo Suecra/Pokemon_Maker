@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+
+[node name="laser-focus" type="Node"]
+script = ExtResource( 1 )
+type = null
+damage_class = 2
+power = null
+accuracy = null
+priority = 0.0
+pp = 30.0
+z_power = 0
+flags = 0
+hit_range = 3
+is_HM = false
+contest_type = 0
+contest_effect = null
+battle_style = 0
+description = "The user concentrates intensely. The attack on the
+next turn always results in a critical hit."
+

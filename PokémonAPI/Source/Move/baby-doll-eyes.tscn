@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+
+[node name="baby-doll-eyes" type="Node"]
+script = ExtResource( 1 )
+type = null
+damage_class = 2
+power = null
+accuracy = 100.0
+priority = 1.0
+pp = 30.0
+z_power = 0
+flags = 0
+hit_range = 0
+is_HM = false
+contest_type = 0
+contest_effect = null
+battle_style = 0
+description = "The user stares at the target with its baby-doll
+eyes, which lowers its Attack stat. This move always
+goes first."
+
