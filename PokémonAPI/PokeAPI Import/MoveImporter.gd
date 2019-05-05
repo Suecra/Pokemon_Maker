@@ -3,11 +3,14 @@ extends "Importer.gd"
 const Move = preload("res://Source/Move.gd")
 
 var contest_effects = []
+var moves = []
+var api_items = []
 
 func _create_item():
 	return Move.new()
 
 func _import_item(item):
+	item.type = load("res://Source/Type/" + api_item["type"]["name"] + ".tscn")
 	match api_item["damage_class"]["name"]:
 		"status": item.damage_class = Move.DamageClass.Status
 		"physical": item.damage_class = Move.DamageClass.Physical
@@ -63,7 +66,48 @@ func _import_item(item):
 		yield(get_contest_effect(api_item["contest_effect"]["url"]), "completed")
 		item.contest_effect = load("res://Source/Contest-Effect/contest_effect" + str(result["id"]) + ".tscn")
 	item.description = get_en_description(api_item["flavor_text_entries"], "flavor_text")
+	
+	moves.append(item)
+	api_items.append(api_item)
 	yield(get_tree().create_timer(0), "timeout")
+
+func _after_import():
+	var item
+	var scene
+	var path 
+	var directory_name = destination + "/" + folder_name
+	for i in moves.size():
+		item = api_items[i]
+		if item["contest_combos"] != null:
+			import_combos("normal", i)
+			import_combos("super", i)
+			
+			scene = PackedScene.new()
+			scene.pack(moves[i])
+			path = directory_name + "/" + moves[i].name + ".tscn"
+			ResourceSaver.save(path, scene)
+			pass
+
+func import_combos(contest: String, index: int):
+	var item
+	var move
+	var node
+	item = api_items[index]
+	if item["contest_combos"][contest] != null:
+		if item["contest_combos"][contest]["use_after"] != null:
+			node = moves[index].get_node(contest)
+			if node == null:
+				node = Node.new()
+				node.name = contest
+				moves[index].add_child(node)
+				node.owner = moves[index]
+			for k in item["contest_combos"][contest]["use_after"].size():
+				move = node.get_node(item["contest_combos"][contest]["use_after"][k]["name"])
+				if move == null:
+					move = Node.new()
+					move.name = item["contest_combos"][contest]["use_after"][k]["name"]
+					node.add_child(move)
+					move.owner = moves[index]
 
 func get_contest_effect(url):
 	var id = int(url.substr(url.length() - 2, 1))

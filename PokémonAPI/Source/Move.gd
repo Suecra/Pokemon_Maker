@@ -14,7 +14,7 @@ export(int) var pp
 export(int, 1, 255) var z_power
 
 export(Flags, FLAGS) var flags
-export(HitRange) var hit_range;
+export(HitRange) var hit_range
 export(bool) var is_HM
 
 export(ContestType) var contest_type

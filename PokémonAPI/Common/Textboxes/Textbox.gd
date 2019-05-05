@@ -25,7 +25,7 @@ func _physics_process(delta):
 	counter += delta
 	if displaying:
 		if fast_forward && Input.is_action_pressed("ui_accept"):
-			actual_chars_per_second = 60.0
+			actual_chars_per_second = chars_per_second * 4
 		else:
 			actual_chars_per_second = chars_per_second
 		

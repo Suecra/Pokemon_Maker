@@ -2,6 +2,9 @@ extends Node
 
 export(String) var api_endpoint
 export(String) var folder_name
+export(bool) var enabled = true
+export(int) var max_amount = -1
+
 var base_url
 var destination
 var json
@@ -22,7 +25,10 @@ func import(base_url, destination):
 	api_item_list = json.result
 	if api_item_list != null:
 		var count = api_item_list["count"]
+		if max_amount > -1:
+			count = min(count, max_amount)
 		var progress_bar = get_node("/root/Panel/TabContainer/API/ProgressBar")
+		_before_import()
 		for i in count:
 			yield(do_request(api_item_list["results"][i]["url"], true), "completed")
 			api_item = json.result
@@ -44,6 +50,7 @@ func import(base_url, destination):
 			ResourceSaver.save(path, scene)
 			progress_bar.value = (i / count) * 100
 		progress_bar.value = 0
+		_after_import()
 
 func do_request(url, absolute = false):
 	var full_url = url
@@ -75,6 +82,12 @@ func get_en_description(entries, property_name):
 		if entries[i]["language"]["name"] == "en":
 			return entries[i][property_name]
 	return ""
+
+func _before_import():
+	pass
+
+func _after_import():
+	pass
 
 func _create_item():
 	pass

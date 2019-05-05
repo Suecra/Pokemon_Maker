@@ -13,7 +13,11 @@ func _on_Import_pressed():
 	var success = false
 	base_url = $BaseURL.text
 	dir = Directory.new()
+	var importer_list = $HTTPRequest.get_children()
 	if dir.open($DestinationDirectory.text) == 0:
+		for importer in importer_list:
+			if importer.enabled:
+				yield(importer.import(base_url, $DestinationDirectory.text), "completed")
 		#yield($AbilityImporter.import(base_url, $DestinationDirectory.text), "completed")
 		#yield($ItemImporter.import(base_url, $DestinationDirectory.text), "completed")
 		#yield($BerryImporter.import(base_url, $DestinationDirectory.text), "completed")
@@ -21,8 +25,7 @@ func _on_Import_pressed():
 		#yield($HTTPRequest/ContestEffectImporter.import(base_url, $DestinationDirectory.text), "completed")
 		#yield($HTTPRequest/NatureImporter.import(base_url, $DestinationDirectory.text), "completed")
 		#yield($HTTPRequest/EggGroupImporter.import(base_url, $DestinationDirectory.text), "completed")
-		yield($HTTPRequest/MoveImporter.import(base_url, $DestinationDirectory.text), "completed")
-		pass
+		#yield($HTTPRequest/MoveImporter.import(base_url, $DestinationDirectory.text), "completed")
 	else:
 		do_log("Directory not found: " + $DestinationDirectory.text)
 	if success:

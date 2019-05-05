@@ -9,7 +9,7 @@ extra_spacing_top = 10
 extra_spacing_bottom = 10
 font_data = ExtResource( 2 )
 
-[node name="TextboxStyle1" type="Container"]
+[node name="TextboxStyle1" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )

@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Source/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Type/dark.tscn" type="PackedScene" id=2]
 
 [node name="night-slash" type="Node"]
 script = ExtResource( 1 )
-type = null
+type = ExtResource( 2 )
 damage_class = 0
 power = 70.0
 accuracy = 100.0
@@ -19,4 +20,8 @@ contest_effect = null
 battle_style = 0
 description = "The user slashes the target the instant an
 opportunity arises. Critical hits land more easily."
+
+[node name="Super" type="Node" parent="."]
+
+[node name="focus-energy" type="Node" parent="Super"]
 

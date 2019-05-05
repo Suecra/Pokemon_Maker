@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Common/Textboxes/Styles/TextboxStyle.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/DS DSi - Pokemon HeartGold SoulSilver - Text Boxes.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Fonts/pkmndp.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+extra_spacing_top = 15
+extra_spacing_bottom = 15
+font_data = SubResource( 1 )
+
+[node name="Container" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.902496
+margin_bottom = 0.902466
+script = ExtResource( 1 )
+text_node = NodePath("RichTextLabel")
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 4, 3 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 255, 48 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 57.0
+margin_top = 16.0
+margin_right = 921.0
+margin_bottom = 134.0
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Dies ist ein Test
+
+
+"
+scroll_active = false
+

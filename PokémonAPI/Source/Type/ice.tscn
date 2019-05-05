@@ -3,12 +3,10 @@
 [ext_resource path="res://Source/Type.gd" type="Script" id=1]
 
 [node name="ice" type="Node"]
-
 script = ExtResource( 1 )
-id = null
+id = 14
 very_effective = 34836
 neutral = -53013
 not_very_effective = 18176
 no_effect = 0
-
 

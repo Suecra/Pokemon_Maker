@@ -1,11 +1,12 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Source/Move.gd" type="Script" id=1]
-[ext_resource path="res://Source/Contest-Effect/contest_effect1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Type/fire.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Contest-Effect/contest_effect1.tscn" type="PackedScene" id=3]
 
 [node name="fire-punch" type="Node"]
 script = ExtResource( 1 )
-type = null
+type = ExtResource( 2 )
 damage_class = 0
 power = 75.0
 accuracy = 100.0
@@ -16,8 +17,16 @@ flags = 96
 hit_range = 0
 is_HM = false
 contest_type = 1
-contest_effect = ExtResource( 2 )
+contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The target is punched with a fiery fist. This may also
 leave the target with a burn."
+
+[node name="Normal" type="Node" parent="."]
+
+[node name="ice-punch" type="Node" parent="Normal"]
+
+[node name="thunder-punch" type="Node" parent="Normal"]
+
+[node name="sunny-day" type="Node" parent="Normal"]
 

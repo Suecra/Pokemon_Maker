@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Source/Pokemon.gd" type="Script" id=1]
+[ext_resource path="res://Source/Gender-Chance/Most-Likely-Male.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Growth-Rate/medium-slow.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Type/fire.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Type.gd" type="Script" id=5]
+[ext_resource path="res://Source/PokemonAbility.gd" type="Script" id=6]
+[ext_resource path="res://Source/Ability/solar-power.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Ability/blaze.tscn" type="PackedScene" id=8]
+
+[node name="charmeleon" type="Node"]
+script = ExtResource( 1 )
+regional_dex_nr = 0
+national_dex_nr = 5.0
+hp = 58.0
+attack = 64.0
+defense = 58.0
+special_attack = 80.0
+special_defense = 65.0
+speed = 80.0
+catch_rate = 45.0
+happiness = 70.0
+gender_chance = ExtResource( 2 )
+egg_cycles = 20.0
+base_xp = 142.0
+growth_rate = ExtResource( 3 )
+category = "Flame Pokémon"
+height = 11.0
+weight = 190.0
+color = null
+shape = null
+dex_entry = "Charmeleon mercilessly destroys its foes using its sharp
+claws. If it encounters a strong foe, it turns aggressive.
+In this excited state, the flame at the tip of its tail flares with
+a bluish white color."
+
+[node name="Types" type="Node" parent="."]
+
+[node name="fire" type="Node" parent="Types" instance=ExtResource( 4 )]
+script = ExtResource( 5 )
+id = 9
+very_effective = 18752
+neutral = -53089
+not_very_effective = 34336
+no_effect = 0
+
+[node name="Abilities" type="Node" parent="."]
+
+[node name="solar-power" type="Node" parent="Abilities"]
+script = ExtResource( 6 )
+ability = ExtResource( 7 )
+hidden_ability = true
+
+[node name="blaze" type="Node" parent="Abilities"]
+script = ExtResource( 6 )
+ability = ExtResource( 8 )
+hidden_ability = false
+

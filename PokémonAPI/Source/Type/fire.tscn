@@ -3,12 +3,10 @@
 [ext_resource path="res://Source/Type.gd" type="Script" id=1]
 
 [node name="fire" type="Node"]
-
 script = ExtResource( 1 )
-id = null
+id = 9
 very_effective = 18752
 neutral = -53089
 not_very_effective = 34336
 no_effect = 0
-
 

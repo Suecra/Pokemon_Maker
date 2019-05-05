@@ -3,12 +3,10 @@
 [ext_resource path="res://Source/Type.gd" type="Script" id=1]
 
 [node name="fighting" type="Node"]
-
 script = ExtResource( 1 )
-id = null
+id = 1
 very_effective = 82209
 neutral = -221678
 not_very_effective = 139340
 no_effect = 128
-
 

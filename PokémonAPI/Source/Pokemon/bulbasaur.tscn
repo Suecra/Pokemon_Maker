@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Source/Pokemon.gd" type="Script" id=1]
+[ext_resource path="res://Source/Gender-Chance/Most-Likely-Male.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Growth-Rate/medium-slow.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Type/grass.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Type.gd" type="Script" id=5]
+[ext_resource path="res://Source/Type/poison.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Source/PokemonAbility.gd" type="Script" id=7]
+[ext_resource path="res://Source/Ability/chlorophyll.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Source/Ability/overgrow.tscn" type="PackedScene" id=9]
+
+[node name="bulbasaur" type="Node"]
+script = ExtResource( 1 )
+regional_dex_nr = 0
+national_dex_nr = 1.0
+hp = 45.0
+attack = 49.0
+defense = 49.0
+special_attack = 65.0
+special_defense = 65.0
+speed = 45.0
+catch_rate = 45.0
+happiness = 70.0
+gender_chance = ExtResource( 2 )
+egg_cycles = 20.0
+base_xp = 64.0
+growth_rate = ExtResource( 3 )
+category = "Seed Pokémon"
+height = 7.0
+weight = 69.0
+color = null
+shape = null
+dex_entry = "Bulbasaur can be seen napping in bright sunlight.
+There is a seed on its back. By soaking up the sun’s rays,
+the seed grows progressively larger."
+
+[node name="Types" type="Node" parent="."]
+
+[node name="grass" type="Node" parent="Types" instance=ExtResource( 4 )]
+script = ExtResource( 5 )
+id = 11
+very_effective = 1072
+neutral = -36733
+not_very_effective = 35660
+no_effect = 0
+
+[node name="poison" type="Node" parent="Types" instance=ExtResource( 6 )]
+script = ExtResource( 5 )
+id = 3
+very_effective = 133120
+neutral = -133561
+not_very_effective = 184
+no_effect = 256
+
+[node name="Abilities" type="Node" parent="."]
+
+[node name="chlorophyll" type="Node" parent="Abilities"]
+script = ExtResource( 7 )
+ability = ExtResource( 8 )
+hidden_ability = true
+
+[node name="overgrow" type="Node" parent="Abilities"]
+script = ExtResource( 7 )
+ability = ExtResource( 9 )
+hidden_ability = false
+

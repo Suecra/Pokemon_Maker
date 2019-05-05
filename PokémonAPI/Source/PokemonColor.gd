@@ -1,3 +1,3 @@
 extends Node
 
-export(int) var value
+export(int) var color

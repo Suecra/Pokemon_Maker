@@ -11,14 +11,14 @@ export(int, 1, 255) var special_defense
 export(int, 1, 255) var speed
 
 export(int) var catch_rate
-export(int) var happyness
+export(int) var happiness
 export(PackedScene) var gender_chance
 
-export(int) var egg_cycle
-export(int) var base_ep
+export(int) var egg_cycles
+export(int) var base_xp
 export(PackedScene) var growth_rate
 export(String) var category = ""
-export(float) var size
+export(float) var height
 export(float) var weight
 export(PackedScene) var color
 export(PackedScene) var shape
