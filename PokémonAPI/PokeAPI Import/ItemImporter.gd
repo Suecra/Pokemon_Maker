@@ -17,7 +17,7 @@ func _get_path(directory_name, name):
 	elif pocket == "berries":
 		sub_folder_name = "Berry"
 	elif pocket == "machines":
-		sub_folder_name = "TMs"
+		sub_folder_name = "TM"
 	if sub_folder_name != "":
 		directory_name += "/" + sub_folder_name
 		if !directory.dir_exists(directory_name):

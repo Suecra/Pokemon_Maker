@@ -2,12 +2,17 @@ extends "Importer.gd"
 
 const Pokemon = preload("res://Source/Pokemon.gd")
 const PokemonAbility = preload("res://Source/PokemonAbility.gd")
+const WildPokemonItem = preload("res://Source/WildPokemonItem.gd")
+const LearnableMove = preload("res://Source/LearnableMove.gd")
 
 var species_list = []
 var gender_chances: Dictionary
 var growth_rates: Dictionary
 var types: Dictionary
 var abilities: Dictionary
+var wild_pokemon_items: Dictionary
+var egg_groups: Dictionary
+var moves: Dictionary
 
 func _create_item():
 	return Pokemon.new()
@@ -45,9 +50,15 @@ func _import_item(item):
 	
 	for i in api_item["types"].size():
 		add_type(item, api_item["types"][i]["type"]["name"], api_item["types"][i]["slot"])
-	
 	for i in api_item["abilities"].size():
 		add_ability(item, api_item["abilities"][i]["ability"]["name"], api_item["abilities"][i]["is_hidden"])
+	for i in api_item["held_items"].size():
+		add_wild_pokemon_item(item, i)
+	for i in species["egg_groups"].size():
+		add_egg_group(item, species["egg_groups"][i]["name"])
+	for i in api_item["moves"].size():
+		add_move(item, i)
+	
 
 func get_species(name):
 	for spec in species_list:
@@ -72,12 +83,7 @@ func get_growth_rate(name: String):
 	return growth_rates[name]
 
 func add_type(item, name: String, slot: int):
-	var node = item.get_node("Types")
-	if node == null:
-		node = Node.new()
-		node.name = "Types"
-		item.add_child(node)
-		node.owner = item
+	var node = get_or_add_node(item, "Types")
 	var type_node = node.get_node(name)
 	if type_node != null:
 		node.remove_child(type_node)
@@ -93,12 +99,7 @@ func add_type(item, name: String, slot: int):
 	node.move_child(type_node, slot - 1)
 
 func add_ability(item, name: String, hidden: bool):
-	var node = item.get_node("Abilities")
-	if node == null:
-		node = Node.new()
-		node.name = "Abilities"
-		item.add_child(node)
-		node.owner = item
+	var node = get_or_add_node(item, "Abilities")
 	var ability_node = node.get_node(name)
 	if ability_node != null:
 		node.remove_child(ability_node)
@@ -114,3 +115,73 @@ func add_ability(item, name: String, hidden: bool):
 	ability_node.hidden_ability = hidden
 	node.add_child(ability_node)
 	ability_node.owner = item
+
+func add_wild_pokemon_item(item, index: int):
+	var node = get_or_add_node(item, "Items")
+	var name = api_item["held_items"][index]["item"]["name"]
+	var item_node = node.get_node(name)
+	if item_node != null:
+		node.remove_child(item_node)
+	var wild_pokemon_item
+	if wild_pokemon_items.has(name):
+		wild_pokemon_item = wild_pokemon_items[name]
+	else:
+		if name.find("berry") != -1:
+			wild_pokemon_item = load("res://Source/Item/Berry/" + name + ".tscn")
+		elif name.find("ball") != -1:
+			wild_pokemon_item = load("res://Source/Item/Pokeball/" + name + ".tscn")
+		elif name.begins_with("tm") || name.begins_with("hm"):
+			wild_pokemon_item = load("res://Source/Item/TM/" + name + ".tscn")
+		else:
+			wild_pokemon_item = load("res://Source/Item/" + name + ".tscn")
+		wild_pokemon_items[name] = wild_pokemon_item
+	item_node = WildPokemonItem.new()
+	item_node.name = name
+	item_node.item = wild_pokemon_item
+	item_node.chance = api_item["held_items"][index]["version_details"][0]["rarity"]
+	node.add_child(item_node)
+	item_node.owner = item
+
+func add_egg_group(item, name: String):
+	var node = get_or_add_node(item, "Egg-Groups")
+	var egg_group_node = node.get_node(name)
+	if egg_group_node != null:
+		node.remove_child(egg_group_node)
+	var egg_group
+	if egg_groups.has(name):
+		egg_group = egg_groups[name]
+	else:
+		egg_group = load("res://Source/Egg-Group/" + name + ".tscn")
+		egg_groups[name] = egg_group
+	egg_group_node = egg_group.instance()
+	node.add_child(egg_group_node)
+	egg_group_node.owner = item
+
+func add_move(item, index: int):
+	var node = get_or_add_node(item, "Moves")
+	var name = api_item["moves"][index]["move"]["name"]
+	var move_node = node.get_node(name)
+	if move_node != null:
+		node.remove_child(move_node)
+	var level = -1
+	var method
+	for i in api_item["moves"][index]["version_group_details"].size():
+		if api_item["moves"][index]["version_group_details"][i]["version_group"]["name"] == "ultra-sun-ultra-moon":
+			level = api_item["moves"][index]["version_group_details"][i]["level_learned_at"]
+			method = api_item["moves"][index]["version_group_details"][i]["move_learn_method"]["name"]
+			break
+	if level != -1:
+		var move
+		if moves.has(name):
+			move = moves[name]
+		else:
+			move = load("res://Source/Move/" + name + ".tscn")
+			moves[name] = move
+		move_node = LearnableMove.new()
+		move_node.name = name
+		move_node.move = move
+		move_node.level = int(level)
+		move_node.egg = method == "egg"
+		move_node.tm = method == "machine"
+		node.add_child(move_node)
+		move_node.owner = item
