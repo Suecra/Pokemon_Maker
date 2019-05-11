@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+
+[node name="ghost-gem" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 0
+category = "Jewels"
+price = 200.0
+sell_price = 100.0
+stack_size = null
+holdable = null
+fling_power = null
+description = "A gem with a spectral essence. When held, it
+strengthens the power of a Ghost-type move
+one time."
+
+

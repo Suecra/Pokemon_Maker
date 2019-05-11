@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Ability.gd" type="Script" id=1]
+
+[node name="suction-cups" type="Node"]
+
+script = ExtResource( 1 )
+description = "This Pokémon uses suction cups to stay in one spot
+to negate all moves and items that force
+switching out."
+
+

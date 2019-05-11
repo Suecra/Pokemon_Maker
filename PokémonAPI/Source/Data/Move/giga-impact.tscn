@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Type/normal.tscn" type="PackedScene" id=2]
+
+[node name="giga-impact" type="Node"]
+script = ExtResource( 1 )
+type = ExtResource( 2 )
+damage_class = 0
+power = 150.0
+accuracy = 90.0
+priority = 0.0
+pp = 5.0
+z_power = 0
+flags = 32
+hit_range = 0
+is_HM = false
+contest_type = 1
+contest_effect = null
+battle_style = 0
+description = "The user charges at the target using every bit of its
+power. The user can’t move on the next turn."
+

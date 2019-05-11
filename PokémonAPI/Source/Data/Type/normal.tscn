@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Type.gd" type="Script" id=1]
+
+[node name="normal" type="Node"]
+script = ExtResource( 1 )
+id = 0
+very_effective = 0
+neutral = -417
+not_very_effective = 288
+no_effect = 128
+

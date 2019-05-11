@@ -1,0 +1,474 @@
+[gd_scene load_steps=64 format=2]
+
+[ext_resource path="res://Source/Pokemon.gd" type="Script" id=1]
+[ext_resource path="res://Source/Gender-Chance/Even-Chance.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Growth-Rate/medium.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Type/grass.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Type.gd" type="Script" id=5]
+[ext_resource path="res://Source/PokemonAbility.gd" type="Script" id=6]
+[ext_resource path="res://Source/Ability/storm-drain.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Ability/chlorophyll.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Source/Ability/water-absorb.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Source/WildPokemonItem.gd" type="Script" id=10]
+[ext_resource path="res://Source/Item/miracle-seed.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Source/Egg-Group/plant.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Source/EggGroup.gd" type="Script" id=13]
+[ext_resource path="res://Source/LearnableMove.gd" type="Script" id=14]
+[ext_resource path="res://Source/Move/pin-missile.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Source/Move/peck.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Source/Move/absorb.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Source/Move/mega-drain.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Source/Move/leech-seed.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Source/Move/growth.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Source/Move/solar-beam.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Source/Move/petal-dance.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Source/Move/toxic.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Source/Move/double-team.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Source/Move/rest.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Source/Move/substitute.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Source/Move/cotton-spore.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Source/Move/protect.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Source/Move/spikes.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Source/Move/giga-drain.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Source/Move/swagger.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Source/Move/attract.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Source/Move/sleep-talk.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Source/Move/return.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Source/Move/frustration.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Source/Move/safeguard.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Source/Move/sweet-scent.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Source/Move/synthesis.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Source/Move/hidden-power.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Source/Move/sunny-day.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Source/Move/facade.tscn" type="PackedScene" id=41]
+[ext_resource path="res://Source/Move/nature-power.tscn" type="PackedScene" id=42]
+[ext_resource path="res://Source/Move/ingrain.tscn" type="PackedScene" id=43]
+[ext_resource path="res://Source/Move/needle-arm.tscn" type="PackedScene" id=44]
+[ext_resource path="res://Source/Move/grass-whistle.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Source/Move/bullet-seed.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Source/Move/aerial-ace.tscn" type="PackedScene" id=47]
+[ext_resource path="res://Source/Move/bounce.tscn" type="PackedScene" id=48]
+[ext_resource path="res://Source/Move/acupressure.tscn" type="PackedScene" id=49]
+[ext_resource path="res://Source/Move/worry-seed.tscn" type="PackedScene" id=50]
+[ext_resource path="res://Source/Move/sucker-punch.tscn" type="PackedScene" id=51]
+[ext_resource path="res://Source/Move/poison-jab.tscn" type="PackedScene" id=52]
+[ext_resource path="res://Source/Move/seed-bomb.tscn" type="PackedScene" id=53]
+[ext_resource path="res://Source/Move/energy-ball.tscn" type="PackedScene" id=54]
+[ext_resource path="res://Source/Move/grass-knot.tscn" type="PackedScene" id=55]
+[ext_resource path="res://Source/Move/wood-hammer.tscn" type="PackedScene" id=56]
+[ext_resource path="res://Source/Move/after-you.tscn" type="PackedScene" id=57]
+[ext_resource path="res://Source/Move/round.tscn" type="PackedScene" id=58]
+[ext_resource path="res://Source/Move/cotton-guard.tscn" type="PackedScene" id=59]
+[ext_resource path="res://Source/Move/petal-blizzard.tscn" type="PackedScene" id=60]
+[ext_resource path="res://Source/Move/grassy-terrain.tscn" type="PackedScene" id=61]
+[ext_resource path="res://Source/Move/confide.tscn" type="PackedScene" id=62]
+[ext_resource path="res://Source/Move/spiky-shield.tscn" type="PackedScene" id=63]
+
+[node name="maractus" type="Node"]
+script = ExtResource( 1 )
+regional_dex_nr = 0
+national_dex_nr = 556.0
+hp = 75.0
+attack = 86.0
+defense = 67.0
+special_attack = 106.0
+special_defense = 67.0
+speed = 60.0
+catch_rate = 255.0
+happiness = 70.0
+gender_chance = ExtResource( 2 )
+egg_cycles = 20.0
+base_xp = 161.0
+growth_rate = ExtResource( 3 )
+category = "Cactus Pokémon"
+height = 10.0
+weight = 280.0
+color = null
+shape = null
+dex_entry = "Arid regions are their habitat. They move
+rhythmically, making a sound similar to maracas."
+
+[node name="Types" type="Node" parent="."]
+
+[node name="grass" type="Node" parent="Types" instance=ExtResource( 4 )]
+script = ExtResource( 5 )
+id = 11
+very_effective = 1072
+neutral = -36733
+not_very_effective = 35660
+no_effect = 0
+
+[node name="Abilities" type="Node" parent="."]
+
+[node name="storm-drain" type="Node" parent="Abilities"]
+script = ExtResource( 6 )
+ability = ExtResource( 7 )
+hidden_ability = true
+
+[node name="chlorophyll" type="Node" parent="Abilities"]
+script = ExtResource( 6 )
+ability = ExtResource( 8 )
+hidden_ability = false
+
+[node name="water-absorb" type="Node" parent="Abilities"]
+script = ExtResource( 6 )
+ability = ExtResource( 9 )
+hidden_ability = false
+
+[node name="Items" type="Node" parent="."]
+
+[node name="miracle-seed" type="Node" parent="Items"]
+script = ExtResource( 10 )
+item = ExtResource( 11 )
+chance = 5.0
+
+[node name="Egg-Groups" type="Node" parent="."]
+
+[node name="plant" type="Node" parent="Egg-Groups" instance=ExtResource( 12 )]
+script = ExtResource( 13 )
+
+[node name="Moves" type="Node" parent="."]
+
+[node name="pin-missile" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 15 )
+level = 10
+egg = false
+tm = false
+
+[node name="peck" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 16 )
+level = 1
+egg = false
+tm = false
+
+[node name="absorb" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 17 )
+level = 1
+egg = false
+tm = false
+
+[node name="mega-drain" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 18 )
+level = 13
+egg = false
+tm = false
+
+[node name="leech-seed" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 19 )
+level = 0
+egg = true
+tm = false
+
+[node name="growth" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 20 )
+level = 6
+egg = false
+tm = false
+
+[node name="solar-beam" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 21 )
+level = 0
+egg = false
+tm = true
+
+[node name="petal-dance" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 22 )
+level = 38
+egg = false
+tm = false
+
+[node name="toxic" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 23 )
+level = 0
+egg = false
+tm = true
+
+[node name="double-team" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 24 )
+level = 0
+egg = false
+tm = true
+
+[node name="rest" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 25 )
+level = 0
+egg = false
+tm = true
+
+[node name="substitute" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 26 )
+level = 0
+egg = false
+tm = true
+
+[node name="cotton-spore" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 27 )
+level = 18
+egg = false
+tm = false
+
+[node name="protect" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 28 )
+level = 0
+egg = false
+tm = true
+
+[node name="spikes" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 29 )
+level = 0
+egg = true
+tm = false
+
+[node name="giga-drain" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 30 )
+level = 26
+egg = false
+tm = false
+
+[node name="swagger" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 31 )
+level = 0
+egg = false
+tm = true
+
+[node name="attract" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 32 )
+level = 0
+egg = false
+tm = true
+
+[node name="sleep-talk" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 33 )
+level = 0
+egg = false
+tm = true
+
+[node name="return" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 34 )
+level = 0
+egg = false
+tm = true
+
+[node name="frustration" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 35 )
+level = 0
+egg = false
+tm = true
+
+[node name="safeguard" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 36 )
+level = 0
+egg = false
+tm = true
+
+[node name="sweet-scent" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 37 )
+level = 3
+egg = false
+tm = false
+
+[node name="synthesis" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 38 )
+level = 15
+egg = false
+tm = false
+
+[node name="hidden-power" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 39 )
+level = 0
+egg = false
+tm = true
+
+[node name="sunny-day" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 40 )
+level = 0
+egg = false
+tm = true
+
+[node name="facade" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 41 )
+level = 0
+egg = false
+tm = true
+
+[node name="nature-power" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 42 )
+level = 0
+egg = false
+tm = true
+
+[node name="ingrain" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 43 )
+level = 33
+egg = false
+tm = false
+
+[node name="needle-arm" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 44 )
+level = 22
+egg = false
+tm = false
+
+[node name="grass-whistle" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 45 )
+level = 0
+egg = true
+tm = false
+
+[node name="bullet-seed" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 46 )
+level = 0
+egg = true
+tm = false
+
+[node name="aerial-ace" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 47 )
+level = 0
+egg = false
+tm = true
+
+[node name="bounce" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 48 )
+level = 0
+egg = true
+tm = false
+
+[node name="acupressure" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 49 )
+level = 29
+egg = false
+tm = false
+
+[node name="worry-seed" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 50 )
+level = 0
+egg = true
+tm = false
+
+[node name="sucker-punch" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 51 )
+level = 42
+egg = false
+tm = false
+
+[node name="poison-jab" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 52 )
+level = 0
+egg = false
+tm = true
+
+[node name="seed-bomb" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 53 )
+level = 0
+egg = true
+tm = false
+
+[node name="energy-ball" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 54 )
+level = 0
+egg = false
+tm = true
+
+[node name="grass-knot" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 55 )
+level = 0
+egg = false
+tm = true
+
+[node name="wood-hammer" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 56 )
+level = 0
+egg = true
+tm = false
+
+[node name="after-you" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 57 )
+level = 57
+egg = false
+tm = false
+
+[node name="round" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 58 )
+level = 0
+egg = false
+tm = true
+
+[node name="cotton-guard" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 59 )
+level = 55
+egg = false
+tm = false
+
+[node name="petal-blizzard" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 60 )
+level = 48
+egg = false
+tm = false
+
+[node name="grassy-terrain" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 61 )
+level = 0
+egg = true
+tm = false
+
+[node name="confide" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 62 )
+level = 0
+egg = false
+tm = true
+
+[node name="spiky-shield" type="Node" parent="Moves"]
+script = ExtResource( 14 )
+move = ExtResource( 63 )
+level = 1
+egg = false
+tm = false
+

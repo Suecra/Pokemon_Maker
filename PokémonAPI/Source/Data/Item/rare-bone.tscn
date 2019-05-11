@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+
+[node name="rare-bone" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 0
+category = "Loot"
+price = 5000.0
+sell_price = 2500.0
+stack_size = null
+holdable = null
+fling_power = 100.0
+description = "A rare bone that is extremely valuable for the
+study of Pokémon archeology. It can be sold for a
+high price to shops."
+
+

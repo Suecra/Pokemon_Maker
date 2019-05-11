@@ -1,6 +1,6 @@
 extends "Importer.gd"
 
-const Nature = preload("res://Source/Nature.gd")
+const Nature = preload("res://Source/Data/Nature.gd")
 
 func _create_item():
 	return Nature.new()

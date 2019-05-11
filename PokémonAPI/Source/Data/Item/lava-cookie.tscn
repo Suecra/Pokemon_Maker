@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+
+[node name="lava-cookie" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 1
+category = "Status cures"
+price = 350.0
+sell_price = 175.0
+stack_size = null
+holdable = null
+fling_power = 30.0
+description = "Lavaridge Town’s local specialty. It can be used
+once to heal all the status conditions of a Pokémon."
+
+

@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+
+[node name="relic-crown" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 0
+category = "Loot"
+price = 0.0
+sell_price = 0.0
+stack_size = null
+holdable = null
+fling_power = 30.0
+description = "A heavy crown made by an ancient civilization
+about 3,000 years ago."
+
+

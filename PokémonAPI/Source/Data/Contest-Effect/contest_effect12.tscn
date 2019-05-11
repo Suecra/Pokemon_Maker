@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/ContestEffect.gd" type="Script" id=1]
+
+[node name="contest_effect12" type="Node"]
+
+script = ExtResource( 1 )
+appeal = 2.0
+jam = 0.0
+effect = "Works well if it's the same type as the one before."
+
+

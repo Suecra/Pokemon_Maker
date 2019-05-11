@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Type.gd" type="Script" id=1]
+
+[node name="water" type="Node"]
+script = ExtResource( 1 )
+id = 10
+very_effective = 560
+neutral = -36401
+not_very_effective = 35840
+no_effect = 0
+

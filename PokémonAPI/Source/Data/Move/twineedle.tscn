@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Type/bug.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Contest-Effect/contest_effect9.tscn" type="PackedScene" id=3]
+
+[node name="twineedle" type="Node"]
+script = ExtResource( 1 )
+type = ExtResource( 2 )
+damage_class = 0
+power = 25.0
+accuracy = 100.0
+priority = 0.0
+pp = 20.0
+z_power = 0
+flags = 96
+hit_range = 0
+is_HM = false
+contest_type = 0
+contest_effect = ExtResource( 3 )
+battle_style = 0
+description = "The user damages the target twice in succession
+by jabbing it with two spikes. This may also poison
+the target."
+

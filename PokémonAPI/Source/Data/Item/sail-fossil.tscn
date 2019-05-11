@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+
+[node name="sail-fossil" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 0
+category = "Dex completion"
+price = 7000.0
+sell_price = 3500.0
+stack_size = null
+holdable = null
+fling_power = 100.0
+description = "A fossil from a prehistoric Pokémon that once lived
+on the land. It looks like the impression from a
+skin sail."
+
+

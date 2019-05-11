@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Type/electric.tscn" type="PackedScene" id=2]
+
+[node name="magnetic-flux" type="Node"]
+script = ExtResource( 1 )
+type = ExtResource( 2 )
+damage_class = 2
+power = null
+accuracy = null
+priority = 0.0
+pp = 20.0
+z_power = 0
+flags = 0
+hit_range = 6
+is_HM = false
+contest_type = 0
+contest_effect = null
+battle_style = 0
+description = "The user manipulates magnetic fields, which raises
+the Defense and Sp. Def stats of ally Pokémon with
+the Plus or Minus Ability."
+

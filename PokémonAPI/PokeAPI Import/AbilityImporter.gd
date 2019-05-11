@@ -1,6 +1,6 @@
 extends "Importer.gd"
 
-const Ability = preload("res://Source/Ability.gd")
+const Ability = preload("res://Source/Data/Ability.gd")
 
 func _create_item():
 	return Ability.new()

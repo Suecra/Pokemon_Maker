@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Type/bug.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Contest-Effect/contest_effect7.tscn" type="PackedScene" id=3]
+
+[node name="fury-cutter" type="Node"]
+script = ExtResource( 1 )
+type = ExtResource( 2 )
+damage_class = 0
+power = 40.0
+accuracy = 95.0
+priority = 0.0
+pp = 20.0
+z_power = 0
+flags = 32
+hit_range = 0
+is_HM = false
+contest_type = 0
+contest_effect = ExtResource( 3 )
+battle_style = 0
+description = "The target is slashed with scythes or claws. This
+attack becomes more powerful if it hits
+in succession."
+
+[node name="Normal" type="Node" parent="."]
+
+[node name="swords-dance" type="Node" parent="Normal"]
+

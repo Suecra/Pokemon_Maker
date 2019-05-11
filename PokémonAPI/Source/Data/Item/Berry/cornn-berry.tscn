@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Source/Berry.gd" type="Script" id=1]
+[ext_resource path="res://Source/Type/bug.tscn" type="PackedScene" id=2]
+
+[node name="cornn-berry" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 4
+category = "Baking only"
+price = 20.0
+sell_price = 10.0
+stack_size = null
+holdable = null
+fling_power = 10.0
+description = "Used to make Pokéblocks that will enhance your
+Beauty, this Berry is rare in other regions."
+size = 75.0
+smoothness = 30.0
+soil_dryness = 10.0
+firmness = 2
+grow_time = 6.0
+max_harvest = 10.0
+flavor_spicy = 0.0
+flavor_dry = 20.0
+flavor_sweet = 10.0
+flavor_bitter = 0.0
+flavor_sour = 0.0
+natural_gift_type = ExtResource( 2 )
+natural_gift_power = 70.0
+
+

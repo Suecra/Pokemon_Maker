@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+
+[node name="dropped-item--yellow" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 7
+category = "Unused"
+price = 0.0
+sell_price = 0.0
+stack_size = null
+holdable = null
+fling_power = null
+description = "The Xtransceiver found at the Nimbasa City
+amusement park. It seems it belongs to a girl."
+
+

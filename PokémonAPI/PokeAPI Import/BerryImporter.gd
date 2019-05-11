@@ -1,6 +1,6 @@
 extends "Importer.gd"
 
-const Berry = preload("res://Source/Berry.gd")
+const Berry = preload("res://Source/Data/Berry.gd")
 
 func _get_name():
 	return api_item["item"]["name"]

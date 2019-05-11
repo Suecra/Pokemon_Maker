@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Type/electric.tscn" type="PackedScene" id=2]
+
+[node name="thunder-fang" type="Node"]
+script = ExtResource( 1 )
+type = ExtResource( 2 )
+damage_class = 0
+power = 65.0
+accuracy = 95.0
+priority = 0.0
+pp = 15.0
+z_power = 0
+flags = 96
+hit_range = 0
+is_HM = false
+contest_type = 3
+contest_effect = null
+battle_style = 0
+description = "The user bites with electrified fangs. This may also
+make the target flinch or leave it with paralysis."
+
+[node name="Super" type="Node" parent="."]
+
+[node name="charge" type="Node" parent="Super"]
+

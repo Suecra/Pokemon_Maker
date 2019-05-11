@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://Source/Gender-Chance/AlwaysFemale.gd" type="Script" id=1]
-
-[node name="Always-Female" type="Node"]
-script = ExtResource( 1 )
-

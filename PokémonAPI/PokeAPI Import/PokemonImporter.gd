@@ -1,9 +1,9 @@
 extends "Importer.gd"
 
-const Pokemon = preload("res://Source/Pokemon.gd")
-const PokemonAbility = preload("res://Source/PokemonAbility.gd")
-const WildPokemonItem = preload("res://Source/WildPokemonItem.gd")
-const LearnableMove = preload("res://Source/LearnableMove.gd")
+const Pokemon = preload("res://Source/Data/Pokemon.gd")
+const PokemonAbility = preload("res://Source/Data/PokemonAbility.gd")
+const WildPokemonItem = preload("res://Source/Data/WildPokemonItem.gd")
+const LearnableMove = preload("res://Source/Data/LearnableMove.gd")
 
 var species_list = []
 var gender_chances: Dictionary
@@ -72,13 +72,13 @@ func get_species(name):
 
 func get_gender_chance(name: String):
 	if !gender_chances.has(name):
-		var gender_chance = load("res://Source/Gender-Chance/" + name + ".tscn")
+		var gender_chance = load("res://Source/Data/Gender-Chance/" + name + ".tscn")
 		gender_chances[name] = gender_chance
 	return gender_chances[name]
 
 func get_growth_rate(name: String):
 	if !growth_rates.has(name):
-		var growth_rate = load("res://Source/Growth-Rate/" + name + ".tscn")
+		var growth_rate = load("res://Source/Data/Growth-Rate/" + name + ".tscn")
 		growth_rates[name] = growth_rate
 	return growth_rates[name]
 
@@ -91,7 +91,7 @@ func add_type(item, name: String, slot: int):
 	if types.has(name):
 		type = types[name]
 	else:
-		type = load("res://Source/Type/" + name + ".tscn")
+		type = load("res://Source/Data/Type/" + name + ".tscn")
 		types[name] = type
 	type_node = type.instance()
 	node.add_child(type_node)
@@ -107,7 +107,7 @@ func add_ability(item, name: String, hidden: bool):
 	if abilities.has(name):
 		ability = abilities[name]
 	else:
-		ability = load("res://Source/Ability/" + name + ".tscn")
+		ability = load("res://Source/Data/Ability/" + name + ".tscn")
 		abilities[name] = ability
 	ability_node = PokemonAbility.new()
 	ability_node.name = name
@@ -127,13 +127,13 @@ func add_wild_pokemon_item(item, index: int):
 		wild_pokemon_item = wild_pokemon_items[name]
 	else:
 		if name.find("berry") != -1:
-			wild_pokemon_item = load("res://Source/Item/Berry/" + name + ".tscn")
+			wild_pokemon_item = load("res://Source/Data/Item/Berry/" + name + ".tscn")
 		elif name.find("ball") != -1:
-			wild_pokemon_item = load("res://Source/Item/Pokeball/" + name + ".tscn")
+			wild_pokemon_item = load("res://Source/Data/Item/Pokeball/" + name + ".tscn")
 		elif name.begins_with("tm") || name.begins_with("hm"):
-			wild_pokemon_item = load("res://Source/Item/TM/" + name + ".tscn")
+			wild_pokemon_item = load("res://Source/Data/Item/TM/" + name + ".tscn")
 		else:
-			wild_pokemon_item = load("res://Source/Item/" + name + ".tscn")
+			wild_pokemon_item = load("res://Source/Data/Item/" + name + ".tscn")
 		wild_pokemon_items[name] = wild_pokemon_item
 	item_node = WildPokemonItem.new()
 	item_node.name = name
@@ -151,7 +151,7 @@ func add_egg_group(item, name: String):
 	if egg_groups.has(name):
 		egg_group = egg_groups[name]
 	else:
-		egg_group = load("res://Source/Egg-Group/" + name + ".tscn")
+		egg_group = load("res://Source/Data/Egg-Group/" + name + ".tscn")
 		egg_groups[name] = egg_group
 	egg_group_node = egg_group.instance()
 	node.add_child(egg_group_node)
@@ -175,7 +175,7 @@ func add_move(item, index: int):
 		if moves.has(name):
 			move = moves[name]
 		else:
-			move = load("res://Source/Move/" + name + ".tscn")
+			move = load("res://Source/Data/Move/" + name + ".tscn")
 			moves[name] = move
 		move_node = LearnableMove.new()
 		move_node.name = name

@@ -1,6 +1,6 @@
 extends "Importer.gd"
 
-const ContestEffect = preload("res://Source/ContestEffect.gd")
+const ContestEffect = preload("res://Source/Data/ContestEffect.gd")
 
 func _create_item():
 	return ContestEffect.new()

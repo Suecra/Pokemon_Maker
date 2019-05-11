@@ -1,0 +1,92 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Source/Pokemon.gd" type="Script" id=1]
+[ext_resource path="res://Source/Gender-Chance/Even-Chance.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Growth-Rate/medium.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Type/bug.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Type.gd" type="Script" id=5]
+[ext_resource path="res://Source/PokemonAbility.gd" type="Script" id=6]
+[ext_resource path="res://Source/Ability/run-away.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Ability/shield-dust.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Source/Egg-Group/bug.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Source/EggGroup.gd" type="Script" id=10]
+[ext_resource path="res://Source/LearnableMove.gd" type="Script" id=11]
+[ext_resource path="res://Source/Move/tackle.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Source/Move/string-shot.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Source/Move/bug-bite.tscn" type="PackedScene" id=14]
+
+[node name="caterpie" type="Node"]
+script = ExtResource( 1 )
+regional_dex_nr = 0
+national_dex_nr = 10.0
+hp = 45.0
+attack = 30.0
+defense = 35.0
+special_attack = 20.0
+special_defense = 20.0
+speed = 45.0
+catch_rate = 255.0
+happiness = 70.0
+gender_chance = ExtResource( 2 )
+egg_cycles = 15.0
+base_xp = 39.0
+growth_rate = ExtResource( 3 )
+category = "Worm Pokémon"
+height = 3.0
+weight = 29.0
+color = null
+shape = null
+dex_entry = "Perhaps because it would like to grow up
+quickly, it has a voracious appetite, eating
+a hundred leaves a day."
+
+[node name="Types" type="Node" parent="."]
+
+[node name="bug" type="Node" parent="Types" instance=ExtResource( 4 )]
+script = ExtResource( 5 )
+id = 6
+very_effective = 75776
+neutral = -207759
+not_very_effective = 131982
+no_effect = 0
+
+[node name="Abilities" type="Node" parent="."]
+
+[node name="run-away" type="Node" parent="Abilities"]
+script = ExtResource( 6 )
+ability = ExtResource( 7 )
+hidden_ability = true
+
+[node name="shield-dust" type="Node" parent="Abilities"]
+script = ExtResource( 6 )
+ability = ExtResource( 8 )
+hidden_ability = false
+
+[node name="Egg-Groups" type="Node" parent="."]
+
+[node name="bug" type="Node" parent="Egg-Groups" instance=ExtResource( 9 )]
+script = ExtResource( 10 )
+
+[node name="Moves" type="Node" parent="."]
+
+[node name="tackle" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 12 )
+level = 1
+egg = false
+tm = false
+
+[node name="string-shot" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 13 )
+level = 1
+egg = false
+tm = false
+
+[node name="bug-bite" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 14 )
+level = 9
+egg = false
+tm = false
+

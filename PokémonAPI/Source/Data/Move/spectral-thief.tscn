@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Type/ghost.tscn" type="PackedScene" id=2]
+
+[node name="spectral-thief" type="Node"]
+script = ExtResource( 1 )
+type = ExtResource( 2 )
+damage_class = 0
+power = 90.0
+accuracy = 100.0
+priority = 0.0
+pp = 10.0
+z_power = 0
+flags = 32
+hit_range = 0
+is_HM = false
+contest_type = 0
+contest_effect = null
+battle_style = 0
+description = "The user hides in the target’s shadow, steals
+the target’s stat boosts, and then attacks."
+

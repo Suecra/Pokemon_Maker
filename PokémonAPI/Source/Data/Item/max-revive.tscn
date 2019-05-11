@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+
+[node name="max-revive" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 1
+category = "Revival"
+price = 4000.0
+sell_price = 2000.0
+stack_size = null
+holdable = null
+fling_power = 30.0
+description = "A medicine that can revive fainted Pokémon. It also
+fully restores a fainted Pokémon’s maximum HP."
+
+

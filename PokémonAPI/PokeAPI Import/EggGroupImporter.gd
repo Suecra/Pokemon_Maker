@@ -1,6 +1,6 @@
 extends "Importer.gd"
 
-const EggGroup = preload("res://Source/EggGroup.gd")
+const EggGroup = preload("res://Source/Data/EggGroup.gd")
 
 func _create_item():
 	return EggGroup.new()

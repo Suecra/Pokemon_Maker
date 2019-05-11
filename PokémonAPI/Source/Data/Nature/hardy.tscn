@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Nature.gd" type="Script" id=1]
+
+[node name="hardy" type="Node"]
+
+script = ExtResource( 1 )
+inc_stat = null
+dec_stat = null
+likes_flavor = null
+hates_flavor = null
+high_hp_attack_chance = 61.0
+low_hp_attack_chance = 61.0
+high_hp_defense_chance = 7.0
+low_hp_defense_chance = 7.0
+high_hp_support_chance = 32.0
+low_hp_support_chance = 32.0
+
+

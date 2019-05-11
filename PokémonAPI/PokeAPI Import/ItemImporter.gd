@@ -1,9 +1,9 @@
 extends "Importer.gd"
 
-const Item = preload("res://Source/Item.gd")
-const Ball = preload("res://Source/Ball.gd")
-const TM = preload("res://Source/TM.gd")
-const Berry = preload("res://Source/Berry.gd")
+const Item = preload("res://Source/Data/Item.gd")
+const Ball = preload("res://Source/Data/Ball.gd")
+const TM = preload("res://Source/Data/TM.gd")
+const Berry = preload("res://Source/Data/Berry.gd")
 
 var pocket
 var categories = []

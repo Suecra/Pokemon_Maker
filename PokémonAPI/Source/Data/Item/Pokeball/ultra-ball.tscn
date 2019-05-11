@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/Ball.gd" type="Script" id=1]
+
+[node name="ultra-ball" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 2
+category = "Standard balls"
+price = 800.0
+sell_price = 400.0
+stack_size = null
+holdable = null
+fling_power = null
+description = "An ultra-high-performance Poké Ball that provides
+a higher success rate for catching Pokémon than
+a Great Ball."
+
+

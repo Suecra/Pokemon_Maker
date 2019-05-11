@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Source/TM.gd" type="Script" id=1]
+
+[node name="tm14" type="Node"]
+
+script = ExtResource( 1 )
+pocket = 3
+category = "All machines"
+price = 30000.0
+sell_price = 15000.0
+stack_size = null
+holdable = null
+fling_power = null
+description = "A howling blizzard is summoned to strike opposing
+Pokémon. This may also leave the opposing
+Pokémon frozen."
+move = null
+
+

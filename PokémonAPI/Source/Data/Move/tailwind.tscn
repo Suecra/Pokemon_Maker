@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Source/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Type/flying.tscn" type="PackedScene" id=2]
+
+[node name="tailwind" type="Node"]
+script = ExtResource( 1 )
+type = ExtResource( 2 )
+damage_class = 2
+power = null
+accuracy = null
+priority = 0.0
+pp = 15.0
+z_power = 0
+flags = 4096
+hit_range = 6
+is_HM = false
+contest_type = 3
+contest_effect = null
+battle_style = 0
+description = "The user whips up a turbulent whirlwind that ups
+the Speed stat of the user and its allies for
+four turns."
+
