@@ -1,1 +1,1 @@
-extends Node
+extends "res://Source/Scripts/Battle/BattleObject.gd"
