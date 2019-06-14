@@ -1,13 +1,14 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Common/Textboxes/Textbox.gd" type="Script" id=1]
+[ext_resource path="res://Common/Textboxes/MessageBox.gd" type="Script" id=1]
 [ext_resource path="res://Common/Textboxes/Styles/TextboxStyle2.tscn" type="PackedScene" id=2]
 
-[node name="Textbox" type="CanvasLayer"]
+[node name="MessageBox" type="CanvasLayer"]
 script = ExtResource( 1 )
 textbox_style = ExtResource( 2 )
 chars_per_second = 30.0
 skip = true
+auto_skip = true
 fast_forward = true
 
 [node name="Container" type="Control" parent="."]

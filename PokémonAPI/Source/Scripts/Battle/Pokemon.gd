@@ -1,4 +1,4 @@
-extends "res://Source/Scripts/Battle/BattleObject.gd"
+extends Node
 
 const Nature = preload("res://Source/Data/Nature.gd")
 const Utils = preload("res://Source/Scripts/Utils.gd")

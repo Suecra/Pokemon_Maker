@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
-[ext_resource path="res://Common/Textboxes/Textbox.tscn" type="PackedScene" id=2]
-[ext_resource path="res://TestChar.gd" type="Script" id=3]
-[ext_resource path="res://HGSS_170.png" type="Texture" id=4]
-[ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=5]
+[ext_resource path="res://Common/Textboxes/MessageBox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Common/Textboxes/Choicebox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TestChar.gd" type="Script" id=4]
+[ext_resource path="res://HGSS_170.png" type="Texture" id=5]
+[ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -79,17 +80,20 @@ tracks/0/keys = {
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
 
-[node name="Textbox" parent="." instance=ExtResource( 2 )]
+[node name="MessageBox" parent="." instance=ExtResource( 2 )]
+
+[node name="Choicebox" parent="." instance=ExtResource( 3 )]
+wrap = false
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 position = Vector2( 217.174, 165.097 )
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 128, 128, 64, 64 )
 
@@ -117,7 +121,7 @@ margin_right = 668.0
 margin_bottom = 278.0
 
 [node name="Test" type="Node" parent="."]
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 current_hp = 80
 
 [connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]

@@ -4,7 +4,7 @@
 [ext_resource path="res://Fonts/pkmndp.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
-size = 28
+size = 40
 extra_spacing_top = 10
 extra_spacing_bottom = 10
 font_data = ExtResource( 2 )
@@ -46,7 +46,7 @@ color = Color( 0.4, 0.4, 0.4, 1 )
 [node name="text" type="RichTextLabel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 10.0
+margin_left = 34.0
 margin_top = 9.0
 margin_right = -9.0
 margin_bottom = -10.0

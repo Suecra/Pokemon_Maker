@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Common/Textboxes/Cursors/Cursor.gd" type="Script" id=1]
+
+[node name="Cursor1" type="Node2D"]
+script = ExtResource( 1 )
+step = 40
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 6.58611, 7.79482 )
+color = Color( 0.223529, 0.223529, 0.223529, 1 )
+polygon = PoolVector2Array( -0.950256, 6.64524, -0.976299, 43.7434, 15.4275, 25.0231 )
+
