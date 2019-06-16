@@ -5,13 +5,16 @@ const Utils = preload("res://Source/Scripts/Utils.gd")
 
 enum Gender {Male, Female, Genderless}
 
-export(PackedScene) var species
 export(String) var nickname
 export(int, 1, 100) var level
 export(Gender) var gender
 export(int) var current_hp setget set_current_hp
 
-var hp: int = 100
+var species
+var nature
+var item
+
+var hp: int
 var attack: int
 var defense: int
 var special_attack: int
@@ -32,13 +35,24 @@ export(int, 0, 31) var special_attack_iv
 export(int, 0, 31) var special_defense_iv
 export(int, 0, 31) var speed_iv
 
-export(PackedScene) var nature
-export(PackedScene) var item
-
 export(bool) var shiny
 
 func set_current_hp(value: int):
 	current_hp = min(value, hp)
+
+func calculate_stats():
+	calculate_hp()
+	attack = calculate_stat(species.attack, attack_ev, attack_iv)
+	defense = calculate_stat(species.defense, defense_ev, defense_iv)
+	special_attack = calculate_stat(species.special_attack, special_attack_ev, special_attack_iv)
+	special_defense = calculate_stat(species.special_defense, special_defense_ev, special_defense_iv)
+	speed = calculate_stat(species.speed, defense_ev, defense_iv)
+
+func calculate_stat(base: int, ev: int, iv: int):
+	return floor((2 * base + iv + ev / 4) * level / 100 + 5)
+
+func calculate_hp():
+	hp = floor((2 * species.hp + hp_iv + hp_ev / 4) * level / 100 + level + 10)
 
 func _init():
 	Utils.add_node_if_not_exists(self, self, "Status")

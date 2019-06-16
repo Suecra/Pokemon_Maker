@@ -5,7 +5,7 @@
 [ext_resource path="res://Common/Textboxes/Choicebox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://TestChar.gd" type="Script" id=4]
 [ext_resource path="res://HGSS_170.png" type="Texture" id=5]
-[ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=6]
+[ext_resource path="res://Source/Scripts/Battle/HalfTurn.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -120,8 +120,25 @@ margin_top = 231.0
 margin_right = 668.0
 margin_bottom = 278.0
 
-[node name="Test" type="Node" parent="."]
+[node name="TestNodes" type="Node" parent="."]
+
+[node name="HalfTurn1" type="Node" parent="TestNodes"]
 script = ExtResource( 6 )
-current_hp = 80
+TEST_speed = 100
+
+[node name="HalfTurn2" type="Node" parent="TestNodes"]
+script = ExtResource( 6 )
+TEST_speed = 100
+
+[node name="HalfTurn3" type="Node" parent="TestNodes"]
+script = ExtResource( 6 )
+priority = 1
+TEST_speed = 100
+
+[node name="HalfTurn4" type="Node" parent="TestNodes"]
+script = ExtResource( 6 )
+priority = 2
+TEST_speed = 100
 
 [connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_Button2_button_down"]

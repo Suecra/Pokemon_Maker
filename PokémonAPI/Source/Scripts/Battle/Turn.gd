@@ -2,19 +2,34 @@ extends Node
 
 const Utils = preload("res://Source/Scripts/Utils.gd")
 
-export(PackedScene) var half_turn1
-export(PackedScene) var half_turn2
+var trainers = []
+var half_turns = []
+var battle
+var choices_made
 
 func register_action(action):
-	$RegisteredActions.add_child(action)
-	pass
+	$Actions.add_child(action)
 
 func do_actions(event: int):
 	var actions = $Actions.get_children()
 	for action in actions:
-		if action.event == event:
-			yield(action.battle_object._do_action(), "completed")
-			$RegisteredActions.remove_child(action)
+		yield(action._execute(), "completed")
+		$RegisteredActions.remove_child(action)
+
+func start():
+	choices_made = 0
+	for t in trainers:
+		t.do_half_turn()
+
+func trainer_choice_made(sender, half_turn):
+	add_child(half_turn)
+	choices_made += 1
+	if choices_made == trainers.size():
+		pass
 
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "Actions")
+	Utils.add_node_if_not_exists(self, self, "HalfTurns")
+	
+	for t in trainers:
+		t.connect("choice_made", self, "trainer_choice_made", [sender, half_turn])

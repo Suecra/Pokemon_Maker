@@ -1,6 +1,7 @@
 extends Node
 
 const MessageBox = preload("res://Common/Textboxes/MessageBox.gd")
+const PrioritySorter = preload("res://Source/Scripts/Battle/PrioritySorter.gd")
 
 func _on_Button_button_down():
 	$Test.current_hp = 70
@@ -11,4 +12,10 @@ func _on_Button_button_down():
 	$MessageBox.auto_skip = false
 	yield($Choicebox.display(["Auswahl1", "Auswahl2"]), "completed")
 	yield($MessageBox.display($Choicebox.selection), "completed")
-	pass
+
+
+func _on_Button2_button_down():
+	var list = $TestNodes.get_children()
+	PrioritySorter.sort2(list)
+	for item in list:
+		print(item.name)
