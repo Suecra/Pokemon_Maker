@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Source/Move.gd" type="Script" id=1]
-[ext_resource path="res://Source/Type/dark.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Source/Contest-Effect/contest_effect4.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Type/dark.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Data/Contest-Effect/contest_effect4.tscn" type="PackedScene" id=3]
 
 [node name="knock-off" type="Node"]
 script = ExtResource( 1 )
@@ -23,7 +23,7 @@ description = "The user slaps down the target’s held item, and that
 item can’t be used in that battle. The move does
 more damage if the target has a held item."
 
-[node name="Normal" type="Node" parent="."]
+[node name="normal" type="Node" parent="."]
 
-[node name="fake-out" type="Node" parent="Normal"]
+[node name="fake-out" type="Node" parent="normal"]
 

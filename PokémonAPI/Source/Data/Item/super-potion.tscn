@@ -1,18 +1,16 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Item.gd" type="Script" id=1]
 
 [node name="super-potion" type="Node"]
-
 script = ExtResource( 1 )
 pocket = 1
 category = "Healing"
 price = 700.0
 sell_price = 350.0
-stack_size = null
-holdable = null
+stack_size = 999
+holdable = true
 fling_power = 30.0
 description = "A spray-type medicine for treating wounds. It can
 be used to restore 60 HP to an injured Pokémon."
-
 

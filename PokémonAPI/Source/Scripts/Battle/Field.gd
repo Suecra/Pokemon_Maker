@@ -1,6 +1,6 @@
 extends Node
 
-var trainer = []
+var trainers = []
 
 func _ready():
 	pass

@@ -19,3 +19,4 @@ func _on_Button2_button_down():
 	PrioritySorter.sort2(list)
 	for item in list:
 		print(item.name)
+	print("---------------")

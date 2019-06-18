@@ -1,11 +1,9 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Ability.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Ability.gd" type="Script" id=1]
 
 [node name="no-guard" type="Node"]
-
 script = ExtResource( 1 )
 description = "The Pokémon employs no-guard tactics to ensure
 incoming and outgoing attacks always land."
-
 

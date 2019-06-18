@@ -1,18 +1,16 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Ball.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Ball.gd" type="Script" id=1]
 
 [node name="lure-ball" type="Node"]
-
 script = ExtResource( 1 )
 pocket = 2
 category = "Apricorn balls"
 price = 0.0
 sell_price = 0.0
-stack_size = null
-holdable = null
+stack_size = 999
+holdable = false
 fling_power = null
 description = "A Poké Ball that is good for catching Pokémon that
 you reel in with a rod while out fishing."
-
 

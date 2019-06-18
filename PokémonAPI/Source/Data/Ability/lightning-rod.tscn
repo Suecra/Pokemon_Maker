@@ -1,12 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Ability.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Ability.gd" type="Script" id=1]
 
 [node name="lightning-rod" type="Node"]
-
 script = ExtResource( 1 )
 description = "The Pokémon draws in all Electric-type moves. 
 Instead of being hit by Electric-type moves, 
 it boosts its Sp. Atk."
-
 

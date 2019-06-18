@@ -1,20 +1,18 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/TM.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/TM.gd" type="Script" id=1]
 
 [node name="tm86" type="Node"]
-
 script = ExtResource( 1 )
 pocket = 3
 category = "All machines"
 price = 10000.0
 sell_price = 5000.0
-stack_size = null
-holdable = null
+stack_size = 999
+holdable = false
 fling_power = null
 description = "The user snares the target with grass and trips it.
 The heavier the target, the greater the
 move’s power."
 move = null
-
 

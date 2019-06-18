@@ -11,7 +11,7 @@ export(Gender) var gender
 export(int) var current_hp setget set_current_hp
 
 var species
-var nature
+var nature: Nature
 var item
 
 var hp: int
@@ -47,6 +47,7 @@ func calculate_stats():
 	special_attack = calculate_stat(species.special_attack, special_attack_ev, special_attack_iv)
 	special_defense = calculate_stat(species.special_defense, special_defense_ev, special_defense_iv)
 	speed = calculate_stat(species.speed, defense_ev, defense_iv)
+	nature.change_stats(self)
 
 func calculate_stat(base: int, ev: int, iv: int):
 	return floor((2 * base + iv + ev / 4) * level / 100 + 5)

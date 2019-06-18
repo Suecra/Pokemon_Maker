@@ -1,16 +1,14 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Source/Pokemon.gd" type="Script" id=1]
-[ext_resource path="res://Source/Gender-Chance/Even-Chance.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Source/Growth-Rate/medium.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Source/Type/bug.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Source/Type.gd" type="Script" id=5]
-[ext_resource path="res://Source/PokemonAbility.gd" type="Script" id=6]
-[ext_resource path="res://Source/Ability/shed-skin.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Source/Egg-Group/bug.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Source/EggGroup.gd" type="Script" id=9]
-[ext_resource path="res://Source/LearnableMove.gd" type="Script" id=10]
-[ext_resource path="res://Source/Move/harden.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Source/Data/Pokemon.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Type/bug.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Data/Type.gd" type="Script" id=3]
+[ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=4]
+[ext_resource path="res://Source/Data/Ability/shed-skin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Source/Data/Egg-Group/bug.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Source/Data/EggGroup.gd" type="Script" id=7]
+[ext_resource path="res://Source/Data/LearnableMove.gd" type="Script" id=8]
+[ext_resource path="res://Source/Data/Move/harden.tscn" type="PackedScene" id=9]
 
 [node name="metapod" type="Node"]
 script = ExtResource( 1 )
@@ -24,10 +22,10 @@ special_defense = 25.0
 speed = 30.0
 catch_rate = 120.0
 happiness = 70.0
-gender_chance = ExtResource( 2 )
+gender_chance = null
 egg_cycles = 15.0
 base_xp = 72.0
-growth_rate = ExtResource( 3 )
+growth_rate = null
 category = "Cocoon Pokémon"
 height = 7.0
 weight = 99.0
@@ -39,8 +37,8 @@ preparation for evolution."
 
 [node name="Types" type="Node" parent="."]
 
-[node name="bug" type="Node" parent="Types" instance=ExtResource( 4 )]
-script = ExtResource( 5 )
+[node name="bug" type="Node" parent="Types" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
 id = 6
 very_effective = 75776
 neutral = -207759
@@ -50,20 +48,20 @@ no_effect = 0
 [node name="Abilities" type="Node" parent="."]
 
 [node name="shed-skin" type="Node" parent="Abilities"]
-script = ExtResource( 6 )
-ability = ExtResource( 7 )
+script = ExtResource( 4 )
+ability = ExtResource( 5 )
 hidden_ability = false
 
 [node name="Egg-Groups" type="Node" parent="."]
 
-[node name="bug" type="Node" parent="Egg-Groups" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
+[node name="bug" type="Node" parent="Egg-Groups" instance=ExtResource( 6 )]
+script = ExtResource( 7 )
 
 [node name="Moves" type="Node" parent="."]
 
 [node name="harden" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 11 )
+script = ExtResource( 8 )
+move = ExtResource( 9 )
 level = 1
 egg = false
 tm = false

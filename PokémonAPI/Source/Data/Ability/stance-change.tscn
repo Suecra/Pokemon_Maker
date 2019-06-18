@@ -1,12 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Ability.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Ability.gd" type="Script" id=1]
 
 [node name="stance-change" type="Node"]
-
 script = ExtResource( 1 )
 description = "The Pokémon changes its form to Blade Forme when
 it uses an attack move, and changes to Shield Forme
 when it uses King’s Shield."
-
 

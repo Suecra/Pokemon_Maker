@@ -1,18 +1,16 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Item.gd" type="Script" id=1]
 
 [node name="oval-stone" type="Node"]
-
 script = ExtResource( 1 )
 pocket = 0
 category = "Evolution"
 price = 2000.0
 sell_price = 1000.0
-stack_size = null
-holdable = null
+stack_size = 999
+holdable = false
 fling_power = 80.0
 description = "A peculiar stone that can make certain species of
 Pokémon evolve. It’s as round as a Pokémon Egg."
-
 

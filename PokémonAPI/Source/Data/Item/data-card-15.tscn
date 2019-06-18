@@ -1,19 +1,17 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Item.gd" type="Script" id=1]
 
 [node name="data-card-15" type="Node"]
-
 script = ExtResource( 1 )
 pocket = 7
 category = "Data Cards"
 price = 0.0
 sell_price = 0.0
-stack_size = null
-holdable = null
+stack_size = 999
+holdable = false
 fling_power = null
 description = "It holds Pokéathlon records. It is a card that shows
 how many times your Pokémon fell down in
 the Pokéathlon."
-
 

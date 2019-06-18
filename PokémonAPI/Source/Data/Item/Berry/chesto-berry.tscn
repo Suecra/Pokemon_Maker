@@ -1,17 +1,16 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Source/Berry.gd" type="Script" id=1]
-[ext_resource path="res://Source/Type/water.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Data/Berry.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Type/water.tscn" type="PackedScene" id=2]
 
 [node name="chesto-berry" type="Node"]
-
 script = ExtResource( 1 )
 pocket = 4
 category = "Medicine"
 price = 20.0
 sell_price = 10.0
-stack_size = null
-holdable = null
+stack_size = 999
+holdable = false
 fling_power = 10.0
 description = "A Berry to be consumed by Pokémon. If a Pokémon
 holds one, it can recover from sleep on its own
@@ -29,5 +28,4 @@ flavor_bitter = 0.0
 flavor_sour = 0.0
 natural_gift_type = ExtResource( 2 )
 natural_gift_power = 60.0
-
 

@@ -1,18 +1,16 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Item.gd" type="Script" id=1]
 
 [node name="red-flute" type="Node"]
-
 script = ExtResource( 1 )
 pocket = 6
 category = "Flutes"
 price = 20.0
 sell_price = 10.0
-stack_size = null
-holdable = null
+stack_size = 999
+holdable = true
 fling_power = 30.0
 description = "A flute made from red glass that snaps Pokémon
 out of infatuation."
-
 

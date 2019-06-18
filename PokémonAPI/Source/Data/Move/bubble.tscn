@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Source/Move.gd" type="Script" id=1]
-[ext_resource path="res://Source/Type/water.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Source/Contest-Effect/contest_effect8.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Type/water.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Data/Contest-Effect/contest_effect8.tscn" type="PackedScene" id=3]
 
 [node name="bubble" type="Node"]
 script = ExtResource( 1 )
@@ -23,7 +23,7 @@ description = "A spray of countless bubbles is jetted at the
 opposing Pokémon. This may also lower their
 Speed stat."
 
-[node name="Normal" type="Node" parent="."]
+[node name="normal" type="Node" parent="."]
 
-[node name="rain-dance" type="Node" parent="Normal"]
+[node name="rain-dance" type="Node" parent="normal"]
 

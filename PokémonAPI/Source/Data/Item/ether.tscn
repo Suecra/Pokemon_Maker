@@ -1,19 +1,17 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Item.gd" type="Script" id=1]
 
 [node name="ether" type="Node"]
-
 script = ExtResource( 1 )
 pocket = 1
 category = "PP recovery"
 price = 1200.0
 sell_price = 600.0
-stack_size = null
-holdable = null
+stack_size = 999
+holdable = true
 fling_power = 30.0
 description = "This medicine can restore 10 PP to a single
 selected move that has been learned by
 a Pokémon."
-
 

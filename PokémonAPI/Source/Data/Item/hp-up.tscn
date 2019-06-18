@@ -1,18 +1,16 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Item.gd" type="Script" id=1]
 
 [node name="hp-up" type="Node"]
-
 script = ExtResource( 1 )
 pocket = 1
 category = "Vitamins"
 price = 10000.0
 sell_price = 5000.0
-stack_size = null
-holdable = null
+stack_size = 999
+holdable = true
 fling_power = 30.0
 description = "A nutritious drink for Pokémon. When consumed,
 it raises the base HP of a single Pokémon."
-
 

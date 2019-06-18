@@ -24,11 +24,11 @@ func get_stat(property):
 		return null
 	var ret
 	match api_item[property]["name"]:
-		"attack": ret = Nature.Attack
-		"defense": ret = Nature.Defense
-		"special-attack": ret = Nature.Special_Attack
-		"special-defense": ret = Nature.Special_Defense
-		"speed": ret = Nature.Speed
+		"attack": ret = Nature.Stat.Attack
+		"defense": ret = Nature.Stat.Defense
+		"special-attack": ret = Nature.Stat.Special_Attack
+		"special-defense": ret = Nature.Stat.Special_Defense
+		"speed": ret = Nature.Stat.Speed
 	return ret
 
 func get_flavor(property):
@@ -36,9 +36,9 @@ func get_flavor(property):
 		return null
 	var ret
 	match api_item[property]["name"]:
-		"spicy": ret = Nature.Spicy
-		"dry": ret = Nature.Dry
-		"sweet": ret = Nature.Sweet
-		"bitter": ret = Nature.Bitter
-		"sour": ret = Nature.Sour
+		"spicy": ret = Nature.Flavor.Spicy
+		"dry": ret = Nature.Flavor.Dry
+		"sweet": ret = Nature.Flavor.Sweet
+		"bitter": ret = Nature.Flavor.Bitter
+		"sour": ret = Nature.Flavor.Sour
 	return ret

@@ -1,19 +1,17 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Item.gd" type="Script" id=1]
 
 [node name="sparkling-stone" type="Node"]
-
 script = ExtResource( 1 )
 pocket = 7
 category = "Plot advancement"
 price = 0.0
 sell_price = 0.0
-stack_size = null
-holdable = null
+stack_size = 999
+holdable = false
 fling_power = null
 description = "A stone entrusted by a Pokémon that has been
 venerated as a guardian deity in the Alola region.
 There is said to be some secret in how it sparkles."
-
 

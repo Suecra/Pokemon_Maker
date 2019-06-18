@@ -1,10 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Ability.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Ability.gd" type="Script" id=1]
 
 [node name="power-of-alchemy" type="Node"]
-
 script = ExtResource( 1 )
 description = "The Pokémon copies the Ability of a defeated ally."
-
 

@@ -64,7 +64,7 @@ func _import_item(item):
 	
 	if api_item["contest_effect"] != null:
 		yield(get_contest_effect(api_item["contest_effect"]["url"]), "completed")
-		item.contest_effect = load("res://Source/Contest-Effect/contest_effect" + str(result["id"]) + ".tscn")
+		item.contest_effect = load("res://Source/Data/Contest-Effect/contest_effect" + str(result["id"]) + ".tscn")
 	item.description = get_en_description(api_item["flavor_text_entries"], "flavor_text")
 	
 	moves.append(item)

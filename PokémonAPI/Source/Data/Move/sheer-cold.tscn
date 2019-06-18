@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Source/Move.gd" type="Script" id=1]
-[ext_resource path="res://Source/Type/ice.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Source/Contest-Effect/contest_effect4.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Type/ice.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Data/Contest-Effect/contest_effect4.tscn" type="PackedScene" id=3]
 
 [node name="sheer-cold" type="Node"]
 script = ExtResource( 1 )
@@ -22,9 +22,9 @@ battle_style = 0
 description = "The target faints instantly. It’s less likely to hit the
 target if it’s used by Pokémon other than Ice types."
 
-[node name="Normal" type="Node" parent="."]
+[node name="normal" type="Node" parent="."]
 
-[node name="mind-reader" type="Node" parent="Normal"]
+[node name="mind-reader" type="Node" parent="normal"]
 
-[node name="hail" type="Node" parent="Normal"]
+[node name="hail" type="Node" parent="normal"]
 

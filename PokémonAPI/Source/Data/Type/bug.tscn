@@ -8,4 +8,5 @@ id = 6
 very_effective = 75776
 neutral = -207759
 not_very_effective = 131982
+no_effect = 0
 

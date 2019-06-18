@@ -1,19 +1,17 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Item.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Item.gd" type="Script" id=1]
 
 [node name="adamant-orb" type="Node"]
-
 script = ExtResource( 1 )
 pocket = 0
 category = "Species-specific"
 price = 0.0
 sell_price = 0.0
-stack_size = null
-holdable = null
+stack_size = 999
+holdable = true
 fling_power = 60.0
 description = "A brightly gleaming orb to be held by Dialga.
 It boosts the power of Dragon- and Steel-type
 moves when it is held."
-
 

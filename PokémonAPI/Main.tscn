@@ -124,20 +124,20 @@ margin_bottom = 278.0
 
 [node name="HalfTurn1" type="Node" parent="TestNodes"]
 script = ExtResource( 6 )
-TEST_speed = 100
+priority = 1
+TEST_speed = 101
 
 [node name="HalfTurn2" type="Node" parent="TestNodes"]
 script = ExtResource( 6 )
-TEST_speed = 100
+TEST_speed = 102
 
 [node name="HalfTurn3" type="Node" parent="TestNodes"]
 script = ExtResource( 6 )
-priority = 1
-TEST_speed = 100
+TEST_speed = 103
 
 [node name="HalfTurn4" type="Node" parent="TestNodes"]
 script = ExtResource( 6 )
-priority = 2
+priority = 1
 TEST_speed = 100
 
 [connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]

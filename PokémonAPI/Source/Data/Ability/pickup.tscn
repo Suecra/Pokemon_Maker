@@ -1,12 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Ability.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Ability.gd" type="Script" id=1]
 
 [node name="pickup" type="Node"]
-
 script = ExtResource( 1 )
 description = "The Pokémon may pick up the item an opposing
 Pokémon used during a battle. It may pick up items
 outside of battle, too."
-
 

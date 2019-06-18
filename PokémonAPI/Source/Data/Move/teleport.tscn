@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Source/Move.gd" type="Script" id=1]
-[ext_resource path="res://Source/Type/psychic.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Source/Contest-Effect/contest_effect5.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Type/psychic.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Data/Contest-Effect/contest_effect5.tscn" type="PackedScene" id=3]
 
 [node name="teleport" type="Node"]
 script = ExtResource( 1 )
@@ -21,13 +21,13 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "Use it to flee from any wild Pokémon."
 
-[node name="Normal" type="Node" parent="."]
+[node name="normal" type="Node" parent="."]
 
-[node name="confusion" type="Node" parent="Normal"]
+[node name="confusion" type="Node" parent="normal"]
 
-[node name="psychic" type="Node" parent="Normal"]
+[node name="psychic" type="Node" parent="normal"]
 
-[node name="double-team" type="Node" parent="Normal"]
+[node name="double-team" type="Node" parent="normal"]
 
-[node name="kinesis" type="Node" parent="Normal"]
+[node name="kinesis" type="Node" parent="normal"]
 

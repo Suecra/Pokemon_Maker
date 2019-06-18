@@ -1,9 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Nature.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Nature.gd" type="Script" id=1]
 
 [node name="hasty" type="Node"]
-
 script = ExtResource( 1 )
 inc_stat = 4
 dec_stat = 1
@@ -15,5 +14,4 @@ high_hp_defense_chance = 37.0
 low_hp_defense_chance = 6.0
 high_hp_support_chance = 5.0
 low_hp_support_chance = 6.0
-
 
