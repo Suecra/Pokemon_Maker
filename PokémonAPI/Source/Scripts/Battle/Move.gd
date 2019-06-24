@@ -1,4 +1,4 @@
-extends Node
+extends "res://Source/Scripts/Battle/HalfTurn.gd"
 
 const MoveData = preload("res://Source/Data/Move.gd")
 
@@ -19,3 +19,12 @@ func get_move_data():
 		node.owner = self
 		return node
 	return null
+
+func can_use():
+	return current_pp > 0
+
+func _execute():
+	current_pp -= 1
+	var move_data = get_move_data()
+	if move_data != null:
+		turn.register_action(move_data) 

@@ -1,4 +1,4 @@
-extends Node
+extends "res://Source/Scripts/Battle/BattleAction.gd"
 
 enum DamageClass {Physical, Special, Status}
 enum Flags {Contact, Protect, Mirrorable, Kings_Rock, Sky_Battle, Damage, Ailment, Heal, Punch, Lower, Raise, OHKO, Field_Effect, Whole_Field_Effect}

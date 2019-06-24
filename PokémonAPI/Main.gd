@@ -16,7 +16,7 @@ func _on_Button_button_down():
 
 func _on_Button2_button_down():
 	var list = $TestNodes.get_children()
-	PrioritySorter.sort2(list)
+	PrioritySorter.sort(list)
 	for item in list:
 		print(item.name)
 	print("---------------")

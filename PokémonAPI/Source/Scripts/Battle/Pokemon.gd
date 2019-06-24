@@ -55,8 +55,18 @@ func calculate_stat(base: int, ev: int, iv: int):
 func calculate_hp():
 	hp = floor((2 * species.hp + hp_iv + hp_ev / 4) * level / 100 + level + 10)
 
+func get_status():
+	if has_node("Status"):
+		return $Status
+	return null
+
+func fainted():
+	var status = get_status()
+	if status != null:
+		return status._pokemon_fainted()
+	return false
+
 func _init():
-	Utils.add_node_if_not_exists(self, self, "Status")
 	Utils.add_node_if_not_exists(self, self, "SecondaryStatus")
 	Utils.add_node_if_not_exists(self, self, "Moves")
 	Utils.add_node_if_not_exists(self, self, "MoveArchive")

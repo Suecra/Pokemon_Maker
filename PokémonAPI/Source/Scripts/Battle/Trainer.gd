@@ -7,6 +7,9 @@ var pokemon_party
 var bag
 var field
 
+func has_pokemon_left():
+	return pokemon_party.get_pokemon_count() > 0
+
 func _do_half_turn():
 	pass
 

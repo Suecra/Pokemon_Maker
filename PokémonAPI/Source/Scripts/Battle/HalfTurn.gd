@@ -7,5 +7,8 @@ var trainer
 var pokemon
 var turn
 
+func _execute():
+	pass
+
 func _ready():
 	pass
