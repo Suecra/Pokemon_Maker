@@ -5,9 +5,12 @@ const MoveData = preload("res://Source/Data/Move.gd")
 export(PackedScene) var move
 export(int) var current_pp setget set_current_pp
 
+var targets = []
+
 func set_current_pp(value: int):
 	var data = get_move_data()
 	current_pp = min(value, data.pp)
+	current_pp = max(current_pp, 0)
 
 func get_move_data():
 	if has_node("Move"):
@@ -23,8 +26,15 @@ func get_move_data():
 func can_use():
 	return current_pp > 0
 
+func select_targets():
+	pass
+
 func _execute():
 	current_pp -= 1
-	var move_data = get_move_data()
-	if move_data != null:
-		turn.register_action(move_data) 
+	var move = get_move_data()
+	if move != null:
+		move.user = pokemon
+		move.battle = turn.battle
+		move.targets.clear()
+		move.targets.append(battle.battlefield.get_pokemon_at_position(3), pokemon)
+		move._execute()

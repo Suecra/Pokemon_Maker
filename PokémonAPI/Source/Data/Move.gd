@@ -1,4 +1,4 @@
-extends "res://Source/Scripts/Battle/BattleAction.gd"
+extends Node
 
 enum DamageClass {Physical, Special, Status}
 enum Flags {Contact, Protect, Mirrorable, Kings_Rock, Sky_Battle, Damage, Ailment, Heal, Punch, Lower, Raise, OHKO, Field_Effect, Whole_Field_Effect}
@@ -21,3 +21,24 @@ export(ContestType) var contest_type
 export(PackedScene) var contest_effect
 export(int, "Attack", "Defense", "Support") var battle_style
 export(String) var description
+
+var user
+var targets = []
+var battle
+
+func _execute():
+	pass
+
+func _get_base_damage():
+	return power
+
+func get_type():
+	if has_node("Type"):
+		return $Type
+	elif type != null:
+		var node = type.instance()
+		node.name = "Type"
+		add_child(node)
+		node.owner = self
+		return node
+	return null

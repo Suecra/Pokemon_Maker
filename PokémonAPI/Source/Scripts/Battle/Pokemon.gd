@@ -13,6 +13,11 @@ export(int) var current_hp setget set_current_hp
 var species
 var nature: Nature
 var item
+var party
+var trainer
+var field
+var battle
+var encounter
 
 var hp: int
 var attack: int
@@ -60,13 +65,20 @@ func get_status():
 		return $Status
 	return null
 
+func get_movepool():
+	if has_node("Movepool"):
+		return $Movepool
+	return null
+
+func get_types():
+	return species.get_node("Types").get_children()
+
 func fainted():
 	var status = get_status()
 	if status != null:
 		return status._pokemon_fainted()
 	return false
 
-func _init():
+func _ready():
 	Utils.add_node_if_not_exists(self, self, "SecondaryStatus")
-	Utils.add_node_if_not_exists(self, self, "Moves")
 	Utils.add_node_if_not_exists(self, self, "MoveArchive")

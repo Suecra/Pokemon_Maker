@@ -2,8 +2,13 @@ extends Node
 
 const Pokemon = preload("res://Source/Scripts/Battle/Pokemon.gd")
 
+var trainer
+
 func get_pokemon_count():
 	return get_child_count()
+
+func get_pokemon(index: int):
+	return get_child(index)
 
 func add_pokemon(pokemon: Pokemon):
 	add_child(pokemon)
@@ -23,3 +28,6 @@ func all_fainted():
 		if not pokemon.fainted():
 			return false
 	return true
+
+func _enter_tree():
+	trainer = get_parent()

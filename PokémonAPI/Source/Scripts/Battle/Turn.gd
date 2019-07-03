@@ -27,12 +27,13 @@ func do_actions():
 	for action in actions:
 		yield(action._execute(), "completed")
 		$RegisteredActions.remove_child(action)
+	yield(get_tree().create_timer(0.0), "timeout")
 
 func start():
 	print("Turn starts")
 	choices_made = 0
 	for t in trainers:
-		t.do_half_turn()
+		t._do_half_turn()
 	yield(self, "turn_end")
 
 func trainer_choice_made(sender, half_turn):
@@ -47,6 +48,8 @@ func trainer_choice_made(sender, half_turn):
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "Actions")
 	Utils.add_node_if_not_exists(self, self, "HalfTurns")
-	
 	for t in trainers:
-		t.connect("choice_made", self, "trainer_choice_made", [sender, half_turn])
+		t.connect("choice_made", self, "trainer_choice_made")
+
+func _enter_tree():
+	battle = get_parent()

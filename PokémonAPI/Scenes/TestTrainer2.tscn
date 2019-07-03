@@ -1,19 +1,24 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Source/Scripts/Battle/Trainer.gd" type="Script" id=1]
-[ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=2]
-[ext_resource path="res://Source/Data/Pokemon/pikachu.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Source/Data/Pokemon/charmander.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Source/Data/Pokemon/squirtle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Source/Scripts/Battle/Test/TestTrainer2.gd" type="Script" id=1]
+[ext_resource path="res://Source/Scripts/Battle/PokemonParty.gd" type="Script" id=2]
+[ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=3]
+[ext_resource path="res://Source/Data/Pokemon/pikachu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/TestMovepool.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Source/Data/Pokemon/charmander.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Source/Data/Pokemon/squirtle.tscn" type="PackedScene" id=7]
 
 [node name="TestTrainer2" type="Node"]
 script = ExtResource( 1 )
 
-[node name="Pikachu" type="Node" parent="."]
-editor/display_folded = true
+[node name="PokemonParty" type="Node" parent="."]
 script = ExtResource( 2 )
 
-[node name="pikachu" parent="Pikachu" instance=ExtResource( 3 )]
+[node name="Pikachu" type="Node" parent="PokemonParty"]
+editor/display_folded = true
+script = ExtResource( 3 )
+
+[node name="pikachu" parent="PokemonParty/Pikachu" instance=ExtResource( 4 )]
 national_dex_nr = 0
 hp = 0
 attack = 0
@@ -26,11 +31,13 @@ happiness = 0
 egg_cycles = 0
 base_xp = 0
 
-[node name="Charmander" type="Node" parent="."]
-editor/display_folded = true
-script = ExtResource( 2 )
+[node name="Movepool" parent="PokemonParty/Pikachu" instance=ExtResource( 5 )]
 
-[node name="charmander" parent="Charmander" instance=ExtResource( 4 )]
+[node name="Charmander" type="Node" parent="PokemonParty"]
+editor/display_folded = true
+script = ExtResource( 3 )
+
+[node name="charmander" parent="PokemonParty/Charmander" instance=ExtResource( 6 )]
 national_dex_nr = 0
 hp = 0
 attack = 0
@@ -43,11 +50,13 @@ happiness = 0
 egg_cycles = 0
 base_xp = 0
 
-[node name="Squirtle" type="Node" parent="."]
-editor/display_folded = true
-script = ExtResource( 2 )
+[node name="Movepool" parent="PokemonParty/Charmander" instance=ExtResource( 5 )]
 
-[node name="squirtle" parent="Squirtle" instance=ExtResource( 5 )]
+[node name="Squirtle" type="Node" parent="PokemonParty"]
+editor/display_folded = true
+script = ExtResource( 3 )
+
+[node name="squirtle" parent="PokemonParty/Squirtle" instance=ExtResource( 7 )]
 national_dex_nr = 0
 hp = 0
 attack = 0
@@ -59,4 +68,6 @@ catch_rate = 0
 happiness = 0
 egg_cycles = 0
 base_xp = 0
+
+[node name="Movepool" parent="PokemonParty/Squirtle" instance=ExtResource( 5 )]
 
