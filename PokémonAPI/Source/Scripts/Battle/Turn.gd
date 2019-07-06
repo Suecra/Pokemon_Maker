@@ -17,7 +17,6 @@ func register_action(action):
 
 func do_half_turns():
 	emit_signal("turn_start")
-	half_turns = $HalfTurns.get_children()
 	PrioritySorter.sort(half_turns)
 	for half_turn in half_turns:
 		half_turn._execute()
@@ -37,7 +36,10 @@ func start():
 	yield(self, "turn_end")
 
 func trainer_choice_made(sender, half_turn):
-	add_child(half_turn)
+	half_turn.turn = self
+	half_turn.battle = battle
+	half_turn.field = sender.field
+	half_turns.append(half_turn)
 	choices_made += 1
 	if choices_made == trainers.size():
 		print("Choices made")
@@ -47,9 +49,5 @@ func trainer_choice_made(sender, half_turn):
 
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "Actions")
-	Utils.add_node_if_not_exists(self, self, "HalfTurns")
 	for t in trainers:
 		t.connect("choice_made", self, "trainer_choice_made")
-
-func _enter_tree():
-	battle = get_parent()

@@ -5,6 +5,7 @@ export(int) var TEST_speed
 
 var trainer
 var pokemon
+var field
 var turn
 var battle
 
@@ -13,7 +14,3 @@ func _execute():
 
 func _ready():
 	pass
-
-func _enter_tree():
-	turn = get_parent()
-	battle = turn.battle

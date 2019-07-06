@@ -37,5 +37,4 @@ func _ready():
 	current_pokemon = pokemon_party.get_pokemon(0)
 
 func _enter_tree():
-	field = get_parent()
-	battle = field.battle
+	battle = get_parent()

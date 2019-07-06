@@ -36,5 +36,5 @@ func _execute():
 		move.user = pokemon
 		move.battle = turn.battle
 		move.targets.clear()
-		move.targets.append(battle.battlefield.get_pokemon_at_position(3), pokemon)
+		move.targets.append(battle.battlefield.get_pokemon_at_position(3, field))
 		move._execute()

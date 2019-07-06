@@ -15,10 +15,12 @@ var battlefield: Battlefield
 func add_ally_trainer(trainer):
 	get_node("Trainers").add_child(trainer)
 	ally_field.trainers.append(trainer)
+	trainer.field = ally_field
 
 func add_opponent_trainer(trainer):
 	get_node("Trainers").add_child(trainer)
 	opponent_field.trainers.append(trainer)
+	trainer.field = opponent_field
 
 func is_battle_ended():
 	var trainers = $Trainers.get_children()

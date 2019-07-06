@@ -45,6 +45,9 @@ export(bool) var shiny
 func set_current_hp(value: int):
 	current_hp = min(value, hp)
 
+func damage(hp: int):
+	self.current_hp = current_hp - hp
+
 func calculate_stats():
 	calculate_hp()
 	attack = calculate_stat(species.attack, attack_ev, attack_iv)
