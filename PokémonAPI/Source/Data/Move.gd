@@ -1,5 +1,7 @@
 extends Node
 
+const Utils = preload("res://Source/Scripts/Utils.gd")
+
 enum DamageClass {Physical, Special, Status}
 enum Flags {Contact, Protect, Mirrorable, Kings_Rock, Sky_Battle, Damage, Ailment, Heal, Punch, Lower, Raise, OHKO, Field_Effect, Whole_Field_Effect}
 enum HitRange {Opponent, All_Opponents, All, User, Partner, User_or_Partner, User_Field, Opponent_Field, Entire_Field}
@@ -27,10 +29,22 @@ var targets = []
 var battle
 
 func _execute():
-	pass
+	if _is_hit():
+		_hit()
+	else:
+		print("The attack missed")
+
+func _hit():
+	print("Move not implemented!")
 
 func _get_base_damage():
 	return power
+
+func _get_accuracy():
+	return accuracy
+
+func _is_hit():
+	return Utils.trigger(_get_accuracy() / 100)
 
 func get_type():
 	if has_node("Type"):

@@ -67,6 +67,16 @@
 
 [node name="bulbasaur" type="Node"]
 script = ExtResource( 1 )
+hp = 45
+attack = 49
+defense = 49
+special_attack = 65
+special_defense = 65
+speed = 45
+catch_rate = 45
+happiness = 70
+egg_cycles = 20
+base_xp = 64
 category = "Seed Pokémon"
 height = 7.0
 weight = 69.0

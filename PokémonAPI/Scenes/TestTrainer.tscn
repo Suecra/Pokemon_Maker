@@ -17,45 +17,27 @@ script = ExtResource( 2 )
 [node name="Bulbasaur" type="Node" parent="PokemonParty"]
 editor/display_folded = true
 script = ExtResource( 3 )
-
-[node name="bulbasaur" parent="PokemonParty/Bulbasaur" instance=ExtResource( 4 )]
+nickname = "Bulbasaur"
+level = 5
+species = ExtResource( 4 )
 
 [node name="Movepool" parent="PokemonParty/Bulbasaur" instance=ExtResource( 5 )]
 
 [node name="Ivysaur" type="Node" parent="PokemonParty"]
 editor/display_folded = true
 script = ExtResource( 3 )
-
-[node name="ivysaur" parent="PokemonParty/Ivysaur" instance=ExtResource( 6 )]
-national_dex_nr = 0
-hp = 0
-attack = 0
-defense = 0
-special_attack = 0
-special_defense = 0
-speed = 0
-catch_rate = 0
-happiness = 0
-egg_cycles = 0
-base_xp = 0
+nickname = "Ivysaur"
+level = 5
+species = ExtResource( 6 )
 
 [node name="Movepool" parent="PokemonParty/Ivysaur" instance=ExtResource( 5 )]
 
 [node name="Venusaur" type="Node" parent="PokemonParty"]
+editor/display_folded = true
 script = ExtResource( 3 )
-
-[node name="venusaur" parent="PokemonParty/Venusaur" instance=ExtResource( 7 )]
-national_dex_nr = 0
-hp = 0
-attack = 0
-defense = 0
-special_attack = 0
-special_defense = 0
-speed = 0
-catch_rate = 0
-happiness = 0
-egg_cycles = 0
-base_xp = 0
+nickname = "Venusaur"
+level = 5
+species = ExtResource( 7 )
 
 [node name="Movepool" parent="PokemonParty/Venusaur" instance=ExtResource( 5 )]
 

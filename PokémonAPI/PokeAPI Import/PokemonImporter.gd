@@ -20,17 +20,17 @@ func _create_item():
 func _import_item(item):
 	yield(get_species(api_item["species"]["name"]), "completed")
 	var species = result
-	item.national_dex_nr = species["pokedex_numbers"][species["pokedex_numbers"].size() - 1]["entry_number"]
+	item.national_dex_nr = int(species["pokedex_numbers"][species["pokedex_numbers"].size() - 1]["entry_number"])
 	
-	item.hp = api_item["stats"][5]["base_stat"]
-	item.attack = api_item["stats"][4]["base_stat"]
-	item.defense = api_item["stats"][3]["base_stat"]
-	item.special_attack = api_item["stats"][2]["base_stat"]
-	item.special_defense = api_item["stats"][1]["base_stat"]
-	item.speed = api_item["stats"][0]["base_stat"]
+	item.hp = int(api_item["stats"][5]["base_stat"])
+	item.attack = int(api_item["stats"][4]["base_stat"])
+	item.defense = int(api_item["stats"][3]["base_stat"])
+	item.special_attack = int(api_item["stats"][2]["base_stat"])
+	item.special_defense = int(api_item["stats"][1]["base_stat"])
+	item.speed = int(api_item["stats"][0]["base_stat"])
 	
-	item.catch_rate = species["capture_rate"]
-	item.happiness = species["base_happiness"]
+	item.catch_rate = int(species["capture_rate"])
+	item.happiness = int(species["base_happiness"])
 	match int(species["gender_rate"]):
 		-1: item.gender_chance = get_gender_chance("Genderless") 
 		0: item.gender_chance = get_gender_chance("Always-Male")
@@ -40,8 +40,8 @@ func _import_item(item):
 		6: item.gender_chance = get_gender_chance("Likely-Female") 
 		7: item.gender_chance = get_gender_chance("Most-Likely-Female")
 		8: item.gender_chance = get_gender_chance("Always-Female")
-	item.egg_cycles = species["hatch_counter"]
-	item.base_xp = api_item["base_experience"]
+	item.egg_cycles = int(species["hatch_counter"])
+	item.base_xp = int(api_item["base_experience"])
 	item.growth_rate = get_growth_rate(species["growth_rate"]["name"])
 	item.category = get_en_description(species["genera"], "genus")
 	item.height = api_item["height"]

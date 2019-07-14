@@ -27,12 +27,13 @@ func switch(pokemon_index: int):
 	current_pokemon = new_pokemon
 
 func move(move_index: int):
-	return current_pokemon.get_movepool().get_child(0)
+	return current_pokemon.get_movepool().get_move(move_index)
 
 func query_delete_move():
 	return false
 
 func _ready():
+	set_physics_process(false)
 	pokemon_party = $PokemonParty
 	current_pokemon = pokemon_party.get_pokemon(0)
 

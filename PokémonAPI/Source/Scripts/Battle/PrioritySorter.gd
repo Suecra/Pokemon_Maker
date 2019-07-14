@@ -3,7 +3,7 @@ extends Object
 class Sorter:
 	static func sort(a, b):
 		if a.priority == b.priority:
-			if a.TEST_speed > b.TEST_speed:
+			if a.get_pokemon_speed() > b.get_pokemon_speed():
 				return true
 			else:
 				return false
@@ -23,7 +23,7 @@ static func sort(list):
 		else:
 			var item1 = list[i - 1]
 			var item2 = list[i]
-			same_prio = item1.priority == item2.priority && item1.TEST_speed == item2.TEST_speed
+			same_prio = item1.same_priority(item2)
 			if same_prio:
 				same_prio_list.append(list[i])
 		if not same_prio || i == list.size() - 1:

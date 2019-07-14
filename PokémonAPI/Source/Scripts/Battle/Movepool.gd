@@ -5,6 +5,11 @@ const Move = preload("res://Source/Scripts/Battle/Move.gd")
 var pokemon
 var trainer
 
+func get_move(index: int):
+	var move = get_child(index)
+	move.pokemon = pokemon
+	return move
+
 func has_space():
 	return get_child_count() < 4
 
