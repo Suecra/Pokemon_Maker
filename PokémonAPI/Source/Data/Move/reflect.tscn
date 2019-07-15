@@ -25,4 +25,3 @@ from physical attacks for five turns."
 [node name="normal" type="Node" parent="."]
 
 [node name="calm-mind" type="Node" parent="normal"]
-

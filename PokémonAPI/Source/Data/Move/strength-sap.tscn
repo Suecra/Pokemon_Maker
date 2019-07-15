@@ -21,4 +21,3 @@ battle_style = 0
 description = "The user restores its HP by the same amount as the
 target’s Attack stat. It also lowers the target’s
 Attack stat."
-

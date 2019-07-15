@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user compresses its body to make itself look
 smaller, which sharply raises its evasiveness."
-

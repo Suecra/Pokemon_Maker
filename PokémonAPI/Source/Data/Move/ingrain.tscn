@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user lays roots that restore its HP on every turn.
 Because it’s rooted, it can’t switch out."
-

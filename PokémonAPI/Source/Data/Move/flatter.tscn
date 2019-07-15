@@ -25,4 +25,3 @@ this also raises the target’s Sp. Atk stat."
 [node name="normal" type="Node" parent="."]
 
 [node name="charm" type="Node" parent="normal"]
-

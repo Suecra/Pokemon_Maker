@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/SpecialMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/water.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Source/Data/Contest-Effect/contest_effect1.tscn" type="PackedScene" id=3]
 
@@ -29,4 +29,3 @@ launched under great pressure."
 [node name="super" type="Node" parent="."]
 
 [node name="psych-up" type="Node" parent="super"]
-

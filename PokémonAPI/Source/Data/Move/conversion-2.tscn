@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user changes its type to make itself resistant to
 the type of the attack the opponent used last."
-

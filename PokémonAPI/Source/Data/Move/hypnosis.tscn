@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user employs hypnotic suggestion to make the
 target fall into a deep sleep."
-

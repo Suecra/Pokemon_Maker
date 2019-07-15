@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/SpecialMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/psychic.tscn" type="PackedScene" id=2]
 
 [node name="light-that-burns-the-sky" type="Node"]
@@ -21,4 +21,3 @@ battle_style = 0
 description = "This attack inflicts Attack or Sp. Atk damage—
 whichever stat is higher for the user, Necrozma. 
 This move ignores the target’s Ability."
-

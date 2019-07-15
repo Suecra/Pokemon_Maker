@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user’s body grows all at once, raising the
 Attack and Sp. Atk stats."
-

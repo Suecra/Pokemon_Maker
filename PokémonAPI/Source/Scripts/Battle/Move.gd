@@ -1,6 +1,7 @@
 extends "res://Source/Scripts/Battle/HalfTurn.gd"
 
 const MoveData = preload("res://Source/Data/Move.gd")
+const Utils = preload("res://Source/Scripts/Utils.gd")
 
 export(PackedScene) var move
 export(int) var current_pp setget set_current_pp
@@ -13,15 +14,7 @@ func set_current_pp(value: int):
 	current_pp = max(current_pp, 0)
 
 func get_move_data():
-	if has_node("Move"):
-		return $Move
-	elif move != null:
-		var node = move.instance()
-		node.name = "Move"
-		add_child(node)
-		node.owner = self
-		return node
-	return null
+	return Utils.unpack(self, move, "Move")
 
 func can_use():
 	return current_pp > 0

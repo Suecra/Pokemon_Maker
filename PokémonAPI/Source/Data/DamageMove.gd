@@ -17,7 +17,7 @@ func _get_damage(target: int):
 	damage = floor(damage * _get_crit_multiplier())
 	damage = floor(damage * get_damage_roll())
 	damage = floor(damage * _get_STAB_multiplier())
-	damage = floor(damage * _get_damage_multiplier())
+	damage = floor(damage * _get_damage_multiplier(target))
 	return damage
 
 func _get_attack():
@@ -62,5 +62,5 @@ func _is_STAB():
 			return true
 	return false
 
-func _get_damage_multiplier():
-	return get_type().get_damage_multiplier(user.get_types())
+func _get_damage_multiplier(target):
+	return get_type().get_damage_multiplier(targets[target].get_types())

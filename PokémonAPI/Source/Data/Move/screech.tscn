@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "An earsplitting screech harshly lowers the target’s
 Defense stat."
-

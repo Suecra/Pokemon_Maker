@@ -30,4 +30,3 @@ description = "Use it to flee from any wild Pokémon."
 [node name="double-team" type="Node" parent="normal"]
 
 [node name="kinesis" type="Node" parent="normal"]
-

@@ -25,4 +25,3 @@ change among all the Pokémon engaged in battle."
 [node name="normal" type="Node" parent="."]
 
 [node name="hail" type="Node" parent="normal"]
-

@@ -25,4 +25,3 @@ its belly to cause paralysis."
 [node name="normal" type="Node" parent="."]
 
 [node name="leer" type="Node" parent="normal"]
-

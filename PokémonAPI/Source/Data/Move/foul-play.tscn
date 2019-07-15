@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/PhysicalMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/dark.tscn" type="PackedScene" id=2]
 
 [node name="foul-play" type="Node"]
@@ -21,4 +21,3 @@ battle_style = 0
 description = "The user turns the target’s power against it. The
 higher the target’s Attack stat, the greater the
 move’s power."
-

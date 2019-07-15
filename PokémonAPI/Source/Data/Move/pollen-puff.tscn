@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/SpecialMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/bug.tscn" type="PackedScene" id=2]
 
 [node name="pollen-puff" type="Node"]
@@ -21,4 +21,3 @@ battle_style = 0
 description = "The user attacks the enemy with a pollen puff that
 explodes. If the target is an ally, it gives the ally a
 pollen puff that restores its HP instead."
-

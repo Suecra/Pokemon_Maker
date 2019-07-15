@@ -29,4 +29,3 @@ weakens Electric-type moves for five turns."
 [node name="sandstorm" type="Node" parent="normal"]
 
 [node name="water-sport" type="Node" parent="normal"]
-

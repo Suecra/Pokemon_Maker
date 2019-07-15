@@ -47,12 +47,4 @@ func _is_hit():
 	return Utils.trigger(_get_accuracy() / 100)
 
 func get_type():
-	if has_node("Type"):
-		return $Type
-	elif type != null:
-		var node = type.instance()
-		node.name = "Type"
-		add_child(node)
-		node.owner = self
-		return node
-	return null
+	return Utils.unpack(self, type, "Type")

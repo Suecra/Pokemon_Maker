@@ -25,4 +25,3 @@ faster. This sharply raises the Speed stat."
 [node name="normal" type="Node" parent="."]
 
 [node name="double-team" type="Node" parent="normal"]
-

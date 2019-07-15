@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user releases a soothing scent that heals all
 status conditions affecting the user’s party."
-

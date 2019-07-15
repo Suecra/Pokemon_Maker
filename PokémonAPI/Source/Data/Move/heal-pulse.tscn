@@ -20,4 +20,3 @@ contest_effect = null
 battle_style = 0
 description = "The user emits a healing pulse that restores the
 target’s HP by up to half of its max HP."
-

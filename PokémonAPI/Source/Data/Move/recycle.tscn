@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user recycles a held item that has been used in
 battle so it can be used again."
-

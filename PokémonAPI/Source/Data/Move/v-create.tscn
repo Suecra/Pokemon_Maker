@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/PhysicalMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/fire.tscn" type="PackedScene" id=2]
 
 [node name="v-create" type="Node"]
@@ -21,4 +21,3 @@ battle_style = 0
 description = "With a hot flame on its forehead, the user hurls itself
 at its target. This lowers the user’s Defense, Sp. Def,
 and Speed stats."
-

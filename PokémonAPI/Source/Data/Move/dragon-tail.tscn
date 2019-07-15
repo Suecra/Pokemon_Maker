@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/PhysicalMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/dragon.tscn" type="PackedScene" id=2]
 
 [node name="dragon-tail" type="Node"]
@@ -21,4 +21,3 @@ battle_style = 0
 description = "The target is knocked away, and a different Pokémon
 is dragged out. In the wild, this ends a battle against
 a single Pokémon."
-

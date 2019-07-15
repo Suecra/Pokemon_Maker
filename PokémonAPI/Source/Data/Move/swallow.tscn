@@ -26,4 +26,3 @@ power heals more HP."
 [node name="normal" type="Node" parent="."]
 
 [node name="stockpile" type="Node" parent="normal"]
-

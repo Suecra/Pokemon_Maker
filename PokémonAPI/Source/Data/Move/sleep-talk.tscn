@@ -25,4 +25,3 @@ moves it knows."
 [node name="normal" type="Node" parent="."]
 
 [node name="rest" type="Node" parent="normal"]
-

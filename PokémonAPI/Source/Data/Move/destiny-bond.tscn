@@ -30,4 +30,3 @@ Its chance of failing rises if it is used in succession."
 [node name="endure" type="Node" parent="normal"]
 
 [node name="mean-look" type="Node" parent="normal"]
-

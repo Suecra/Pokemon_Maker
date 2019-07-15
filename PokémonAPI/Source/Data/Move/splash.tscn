@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user just flops and splashes around to no effect
 at all..."
-

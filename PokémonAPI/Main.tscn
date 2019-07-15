@@ -122,6 +122,5 @@ margin_right = 668.0
 margin_bottom = 278.0
 
 [node name="BattleBase" parent="." instance=ExtResource( 6 )]
-
 [connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
 [connection signal="button_down" from="Button2" to="." method="_on_Button2_button_down"]

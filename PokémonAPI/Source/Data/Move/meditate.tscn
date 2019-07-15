@@ -25,4 +25,3 @@ within its body and raise its Attack stat."
 [node name="normal" type="Node" parent="."]
 
 [node name="calm-mind" type="Node" parent="normal"]
-

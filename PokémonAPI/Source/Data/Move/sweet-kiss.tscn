@@ -25,4 +25,3 @@ cuteness that causes confusion."
 [node name="normal" type="Node" parent="."]
 
 [node name="charm" type="Node" parent="normal"]
-

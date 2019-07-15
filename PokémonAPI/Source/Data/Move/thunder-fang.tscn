@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/PhysicalMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/electric.tscn" type="PackedScene" id=2]
 
 [node name="thunder-fang" type="Node"]
@@ -24,4 +24,3 @@ make the target flinch or leave it with paralysis."
 [node name="super" type="Node" parent="."]
 
 [node name="charge" type="Node" parent="super"]
-

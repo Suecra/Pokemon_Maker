@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/PhysicalMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/fighting.tscn" type="PackedScene" id=2]
 
 [node name="power-up-punch" type="Node"]
@@ -20,4 +20,3 @@ contest_effect = null
 battle_style = 0
 description = "Striking opponents over and over makes the user’s
 fists harder. Hitting a target raises the Attack stat."
-

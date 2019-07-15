@@ -27,4 +27,3 @@ This lowers the target’s accuracy."
 [node name="confusion" type="Node" parent="normal"]
 
 [node name="psychic" type="Node" parent="normal"]
-

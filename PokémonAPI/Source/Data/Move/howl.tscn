@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user howls loudly to raise its spirit, which raises
 its Attack stat."
-

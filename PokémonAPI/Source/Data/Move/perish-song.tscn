@@ -27,4 +27,3 @@ turns, unless it switches out of battle."
 [node name="sing" type="Node" parent="normal"]
 
 [node name="mean-look" type="Node" parent="normal"]
-

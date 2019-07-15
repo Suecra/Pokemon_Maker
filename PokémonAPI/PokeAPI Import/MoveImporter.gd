@@ -1,13 +1,18 @@
 extends "Importer.gd"
 
 const Move = preload("res://Source/Data/Move.gd")
+const PhysicalMove = preload("res://Source/Data/PhysicalMove.gd")
+const SpecialMove = preload("res://Source/Data/SpecialMove.gd")
 
 var contest_effects = []
 var moves = []
 var api_items = []
 
 func _create_item():
-	return Move.new()
+	match api_item["damage_class"]["name"]:
+		"status": return Move.new()
+		"physical": return PhysicalMove.new()
+		"special": return SpecialMove.new()
 
 func _import_item(item):
 	item.type = load("res://Source/Data/Type/" + api_item["type"]["name"] + ".tscn")

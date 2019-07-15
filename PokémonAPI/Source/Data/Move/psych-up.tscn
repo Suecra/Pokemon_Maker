@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user hypnotizes itself into copying any stat
 change made by the target."
-

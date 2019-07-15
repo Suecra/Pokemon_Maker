@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/PhysicalMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/normal.tscn" type="PackedScene" id=2]
 
 [node name="chip-away" type="Node"]
@@ -21,4 +21,3 @@ battle_style = 0
 description = "Looking for an opening, the user strikes consistently.
 The target’s stat changes don’t affect this
 attack’s damage."
-

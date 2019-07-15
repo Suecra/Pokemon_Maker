@@ -20,4 +20,3 @@ contest_effect = null
 battle_style = 0
 description = "The user passes its held item to the target when the
 target isn’t holding an item."
-

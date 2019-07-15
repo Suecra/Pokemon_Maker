@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user covers the target’s body with a mass of
 down that harshly lowers its Attack stat."
-

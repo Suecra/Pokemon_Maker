@@ -11,10 +11,11 @@ export(Types, FLAGS) var no_effect
 func get_damage_multiplier(types):
 	var multiplier = 1.0
 	for type in types:
-		if type.id & very_effective == type.id:
+		var flag_id = int(pow(2, type.id))
+		if flag_id & very_effective == flag_id:
 			multiplier *= 2
-		elif type.id & not_very_effective == type.id:
+		elif flag_id & not_very_effective == flag_id:
 			multiplier *= 0.5
-		elif type.id & no_effect == type.id:
+		elif flag_id & no_effect == flag_id:
 			multiplier *= 0
 	return multiplier

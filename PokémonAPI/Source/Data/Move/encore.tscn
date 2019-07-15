@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user compels the target to keep using the move
 it encored for three turns."
-

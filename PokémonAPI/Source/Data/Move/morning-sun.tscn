@@ -25,4 +25,3 @@ regained varies with the weather."
 [node name="normal" type="Node" parent="."]
 
 [node name="sunny-day" type="Node" parent="normal"]
-

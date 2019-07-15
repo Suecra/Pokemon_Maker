@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/PhysicalMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/fighting.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Source/Data/Contest-Effect/contest_effect3.tscn" type="PackedScene" id=3]
 
@@ -25,4 +25,3 @@ If the kick misses, the user hurts itself."
 [node name="normal" type="Node" parent="."]
 
 [node name="mind-reader" type="Node" parent="normal"]
-

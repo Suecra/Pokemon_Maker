@@ -25,4 +25,3 @@ ink. This lowers the target’s accuracy."
 [node name="normal" type="Node" parent="."]
 
 [node name="smog" type="Node" parent="normal"]
-

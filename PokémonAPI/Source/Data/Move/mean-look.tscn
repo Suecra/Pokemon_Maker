@@ -25,4 +25,3 @@ The target becomes unable to flee."
 [node name="normal" type="Node" parent="."]
 
 [node name="curse" type="Node" parent="normal"]
-

@@ -25,4 +25,3 @@ damage every turn."
 [node name="normal" type="Node" parent="."]
 
 [node name="hypnosis" type="Node" parent="normal"]
-

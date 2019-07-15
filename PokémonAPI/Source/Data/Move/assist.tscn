@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user hurriedly and randomly uses a move among
 those known by ally Pokémon."
-

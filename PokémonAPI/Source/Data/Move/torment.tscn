@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user torments and enrages the target, making it
 incapable of using the same move twice in a row."
-

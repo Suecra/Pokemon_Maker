@@ -25,4 +25,3 @@ by the target by cutting 4 PP from it."
 [node name="normal" type="Node" parent="."]
 
 [node name="curse" type="Node" parent="normal"]
-

@@ -27,4 +27,3 @@ harshly lower its Speed stat."
 [node name="leer" type="Node" parent="normal"]
 
 [node name="rage" type="Node" parent="normal"]
-

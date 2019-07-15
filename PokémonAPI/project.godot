@@ -15,9 +15,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="PokémonAPI"
+config/name="Pokémon Maker"
 run/main_scene="res://Main.tscn"
-config/icon="res://pokeball-icon-transparent-9.jpg.png"
+config/icon="res://icon_new.png"
 
 [display]
 

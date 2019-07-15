@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user switches places with a party Pokémon in
 waiting and passes along any stat changes."
-

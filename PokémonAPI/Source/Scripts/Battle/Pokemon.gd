@@ -10,8 +10,8 @@ export(int, 1, 100) var level
 export(Gender) var gender
 export(int) var current_hp setget set_current_hp
 export(PackedScene) var species
+export(PackedScene) var nature
 
-var nature: Nature
 var item
 var party
 var trainer
@@ -56,7 +56,7 @@ func calculate_stats():
 	special_attack = calculate_stat(get_species().special_attack, special_attack_ev, special_attack_iv)
 	special_defense = calculate_stat(get_species().special_defense, special_defense_ev, special_defense_iv)
 	speed = calculate_stat(get_species().speed, defense_ev, defense_iv)
-	#nature.change_stats(self)
+	get_nature().change_stats(self)
 
 func calculate_stat(base: int, ev: int, iv: int):
 	return floor((2 * base + iv + ev / 4) * level / 100 + 5)
@@ -78,15 +78,10 @@ func get_types():
 	return get_species().get_node("Types").get_children()
 
 func get_species():
-	if has_node("Species"):
-		return $Species
-	elif species != null:
-		var node = species.instance()
-		node.name = "Species"
-		add_child(node)
-		node.owner = self
-		return node
-	return null
+	return Utils.unpack(self, species, "Species")
+
+func get_nature():
+	return Utils.unpack(self, nature, "Nature")
 
 func fainted():
 	var status = get_status()

@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user withdraws its body into its hard shell,
 raising its Defense stat."
-

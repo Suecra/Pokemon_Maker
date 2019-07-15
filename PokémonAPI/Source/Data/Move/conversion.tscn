@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user changes its type to become the same type
 as the move at the top of the list of moves it knows."
-

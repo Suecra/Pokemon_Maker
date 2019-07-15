@@ -27,4 +27,3 @@ weakens Fire-type moves for five turns."
 [node name="rain-dance" type="Node" parent="normal"]
 
 [node name="mud-sport" type="Node" parent="normal"]
-

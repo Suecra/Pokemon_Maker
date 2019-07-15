@@ -25,4 +25,3 @@ failing rises if it is used in succession."
 [node name="normal" type="Node" parent="."]
 
 [node name="harden" type="Node" parent="normal"]
-

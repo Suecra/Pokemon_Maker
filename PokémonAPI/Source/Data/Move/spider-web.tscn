@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user ensnares the target with thin, gooey silk
 so it can’t flee from battle."
-

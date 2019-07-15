@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/SpecialMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/ghost.tscn" type="PackedScene" id=2]
 
 [node name="ominous-wind" type="Node"]
@@ -20,4 +20,3 @@ contest_effect = null
 battle_style = 0
 description = "The user blasts the target with a gust of repulsive
 wind. This may also raise all the user’s stats at once."
-

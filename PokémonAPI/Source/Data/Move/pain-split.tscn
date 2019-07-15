@@ -25,4 +25,3 @@ shares the combined HP with the target."
 [node name="normal" type="Node" parent="."]
 
 [node name="endure" type="Node" parent="normal"]
-

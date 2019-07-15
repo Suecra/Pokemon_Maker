@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "With a scary face, the user tries to force a kiss on
 the target. If it succeeds, the target falls asleep."
-

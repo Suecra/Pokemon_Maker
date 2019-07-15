@@ -27,4 +27,3 @@ leer that lowers the Defense stat."
 [node name="rage" type="Node" parent="normal"]
 
 [node name="scary-face" type="Node" parent="normal"]
-

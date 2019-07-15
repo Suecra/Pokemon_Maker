@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/PhysicalMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/fighting.tscn" type="PackedScene" id=2]
 
 [node name="drain-punch" type="Node"]
@@ -20,4 +20,3 @@ contest_effect = null
 battle_style = 0
 description = "An energy-draining punch. The user’s HP is restored
 by half the damage taken by the target."
-

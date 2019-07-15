@@ -21,4 +21,3 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user blocks the target’s way with arms spread
 wide to prevent escape."
-

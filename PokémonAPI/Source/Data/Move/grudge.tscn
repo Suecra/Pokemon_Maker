@@ -25,4 +25,3 @@ the PP of the opponent’s move that knocked it out."
 [node name="normal" type="Node" parent="."]
 
 [node name="curse" type="Node" parent="normal"]
-
