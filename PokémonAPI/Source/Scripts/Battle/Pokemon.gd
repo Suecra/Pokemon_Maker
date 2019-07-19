@@ -44,10 +44,13 @@ export(bool) var shiny
 
 func set_current_hp(value: int):
 	current_hp = min(value, hp)
+	current_hp = max(current_hp, 0)
 
 func damage(hp: int):
 	self.current_hp = current_hp - hp
 	print(nickname + " took " + str(hp) + " HP Damage")
+	if current_hp == 0:
+		faint()
 
 func calculate_stats():
 	calculate_hp()
@@ -83,13 +86,27 @@ func get_species():
 func get_nature():
 	return Utils.unpack(self, nature, "Nature")
 
+func faint():
+	print(nickname + " has fainted!")
+	var status = load("res://Source/Scripts/Battle/StatusFainted.gd").new()
+	status.owner = self
+	status.name = "Status"
+	add_child(status)
+
 func fainted():
 	var status = get_status()
 	if status != null:
 		return status._pokemon_fainted()
 	return false
 
+func can_move():
+	var status = get_status()
+	if status != null:
+		return status._can_move()
+	return true
+
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "SecondaryStatus")
 	Utils.add_node_if_not_exists(self, self, "MoveArchive")
 	calculate_stats()
+	current_hp = hp

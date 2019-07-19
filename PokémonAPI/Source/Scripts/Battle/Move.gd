@@ -8,6 +8,9 @@ export(int) var current_pp setget set_current_pp
 
 var targets = []
 
+func _get_priority():
+	return get_move_data().priority
+
 func set_current_pp(value: int):
 	var data = get_move_data()
 	current_pp = min(value, data.pp)
@@ -26,8 +29,9 @@ func _execute():
 	current_pp -= 1
 	var move = get_move_data()
 	if move != null:
-		move.user = pokemon
-		move.battle = turn.battle
-		move.targets.clear()
-		move.targets.append(battle.battlefield.get_pokemon_at_position(3, field))
-		move._execute()
+		if pokemon.can_move():
+			move.user = pokemon
+			move.battle = turn.battle
+			move.targets.clear()
+			move.targets.append(battle.battlefield.get_pokemon_at_position(3, field))
+			move._execute()

@@ -1,5 +1,7 @@
 extends Node
 
+enum ChoiceType {Turn, SwitchInAfterFaint, SwitchInAfterUTurn}
+
 const Utils = preload("res://Source/Scripts/Utils.gd")
 const PrioritySorter = preload("res://Source/Scripts/Battle/PrioritySorter.gd")
 
@@ -11,6 +13,8 @@ var half_turns = []
 var battle
 var prev_turn
 var choices_made
+var required_choices
+var choice_type
 
 func register_action(action):
 	$Actions.add_child(action)
@@ -20,6 +24,7 @@ func do_half_turns():
 	PrioritySorter.sort(half_turns)
 	for half_turn in half_turns:
 		half_turn._execute()
+	half_turns.clear()
 
 func do_actions():
 	var actions = $Actions.get_children()
@@ -28,9 +33,26 @@ func do_actions():
 		$RegisteredActions.remove_child(action)
 	yield(get_tree().create_timer(0.0), "timeout")
 
+func force_switch_ins():
+	required_choices = 0
+	choice_type = ChoiceType.SwitchInAfterFaint
+	for t in trainers:
+		if not t.has_pokemon_left():
+			required_choices = 0
+			break
+		if t.current_pokemon.fainted():
+			required_choices += 1
+			t._force_switch_in()
+	if required_choices > 0:
+		yield(self, "turn_end")
+	else:
+		yield(get_tree().create_timer(0.0), "timeout")
+
 func start():
 	print("Turn starts")
 	choices_made = 0
+	required_choices = trainers.size()
+	choice_type = ChoiceType.Turn
 	for t in trainers:
 		t._do_half_turn()
 	yield(self, "turn_end")
@@ -41,13 +63,26 @@ func trainer_choice_made(sender, half_turn):
 	half_turn.field = sender.field
 	half_turns.append(half_turn)
 	choices_made += 1
-	if choices_made == trainers.size():
+	if choices_made == required_choices:
+		choices_made = 0
 		print("Choices made")
 		do_half_turns()
 		yield(do_actions(), "completed")
+		match choice_type:
+			ChoiceType.Turn:
+				yield(force_switch_ins(), "completed")
+		disconnect_trainers()
 		emit_signal("turn_end")
+
+func connect_trainers():
+	for t in trainers:
+		t.connect("choice_made", self, "trainer_choice_made")
+
+func disconnect_trainers():
+	for t in trainers:
+		t.disconnect("choice_made", self, "trainer_choice_made")
 
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "Actions")
-	for t in trainers:
-		t.connect("choice_made", self, "trainer_choice_made")
+	connect_trainers()
+	

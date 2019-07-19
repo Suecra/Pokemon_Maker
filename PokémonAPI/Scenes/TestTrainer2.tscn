@@ -36,6 +36,7 @@ speed_iv = 31
 [node name="Movepool" parent="PokemonParty/Charmander" instance=ExtResource( 6 )]
 
 [node name="Pikachu" type="Node" parent="PokemonParty"]
+editor/display_folded = true
 script = ExtResource( 3 )
 nickname = "Pikachu"
 level = 5

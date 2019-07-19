@@ -36,6 +36,7 @@ func start():
 	while not is_battle_ended():
 		yield(next_turn().start(), "completed");
 		current_turn += 1
+	print("Battle ended")
 
 func next_turn():
 	var Turn = load("res://Source/Scripts/Battle/Turn.gd")

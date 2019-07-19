@@ -10,6 +10,23 @@ func get_pokemon_count():
 func get_pokemon(index: int):
 	return get_child(index)
 
+func get_battler_count():
+	var count = 0
+	for pokemon in get_children():
+		if not pokemon.fainted():
+			count += 1
+	return count
+
+func get_battler(index: int):
+	var i = 0
+	for pokemon in get_children():
+		if not pokemon.fainted():
+			if i == index:
+				return pokemon
+			else:
+				i += 1
+	return null
+
 func add_pokemon(pokemon: Pokemon):
 	add_child(pokemon)
 

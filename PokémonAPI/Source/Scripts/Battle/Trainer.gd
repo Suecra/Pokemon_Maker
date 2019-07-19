@@ -11,23 +11,29 @@ var field
 var battle
 
 func has_pokemon_left():
-	return pokemon_party.get_pokemon_count() > 0
+	return pokemon_party.get_battler_count() > 0
 
 func _do_half_turn():
+	pass
+
+func _force_switch_in():
 	pass
 
 func _select_targets(move):
 	pass
 
-func switch(pokemon_index: int):
-	var new_pokemon = pokemon_party.get_pokemon(pokemon_index)
+func switch(battler_index: int):
+	var new_pokemon = pokemon_party.get_battler(battler_index)
 	var switch = Switch.new()
-	switch.from_pokemon = current_pokemon
+	switch.pokemon = current_pokemon
+	switch.trainer = self
 	switch.to_pokemon = new_pokemon
-	current_pokemon = new_pokemon
+	return switch
 
 func move(move_index: int):
-	return current_pokemon.get_movepool().get_move(move_index)
+	var move = current_pokemon.get_movepool().get_move(move_index)
+	move.trainer = self
+	return move
 
 func query_delete_move():
 	return false
