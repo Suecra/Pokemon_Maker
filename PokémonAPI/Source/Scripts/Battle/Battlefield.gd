@@ -24,5 +24,11 @@ func get_pokemon_at_position(position: int, attacker_field):
 		return attacker_field.get_pokemon_at_position(position)
 	return opponent_field.get_pokemon_at_position(position - MAX_POKEMON_COUNT_ON_FIELD)
 
+func get_status_bar(attacker_field):
+	if attacker_field == battle.ally_field:
+		return battle.get_node("PlayerStatusBar")
+	if attacker_field == battle.opponent_field:
+		return battle.get_node("EnemyStatusBar")
+
 func _enter_tree():
 	battle = get_parent()

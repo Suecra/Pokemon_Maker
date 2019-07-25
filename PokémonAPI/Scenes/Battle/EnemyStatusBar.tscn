@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Source/Scripts/Battle/StatusBar.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Battle/EnemyStatusBarBW.tscn" type="PackedScene" id=2]
+
+[node name="EnemyStatusBar" type="CanvasLayer"]
+scale = Vector2( 3, 3 )
+transform = Transform2D( 3, 0, 0, 3, 0, 0 )
+script = ExtResource( 1 )
+style = ExtResource( 2 )
+
+[node name="Style" parent="." instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 0.388794, 23.327 )

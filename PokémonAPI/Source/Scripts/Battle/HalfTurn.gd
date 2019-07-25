@@ -7,6 +7,7 @@ var pokemon
 var field
 var turn
 var battle
+var battlefield
 
 func _get_priority():
 	return priority

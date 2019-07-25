@@ -48,7 +48,7 @@ func force_switch_ins():
 	else:
 		yield(get_tree().create_timer(0.0), "timeout")
 
-func start():
+func _start():
 	print("Turn starts")
 	choices_made = 0
 	required_choices = trainers.size()
@@ -60,6 +60,7 @@ func start():
 func trainer_choice_made(sender, half_turn):
 	half_turn.turn = self
 	half_turn.battle = battle
+	half_turn.battlefield = battle.battlefield
 	half_turn.field = sender.field
 	half_turns.append(half_turn)
 	choices_made += 1

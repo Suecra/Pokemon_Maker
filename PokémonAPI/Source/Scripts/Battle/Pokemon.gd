@@ -17,7 +17,9 @@ var party
 var trainer
 var field
 var battle
+var battlefield
 var encounter
+var status_bar
 
 var hp: int
 var attack: int
@@ -110,3 +112,10 @@ func _ready():
 	Utils.add_node_if_not_exists(self, self, "MoveArchive")
 	calculate_stats()
 	current_hp = hp
+
+func init_battle():
+	party = get_parent()
+	trainer = party.trainer
+	field = trainer.field
+	battle = trainer.battle
+	battlefield = battle.battlefield

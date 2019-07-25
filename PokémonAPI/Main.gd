@@ -17,4 +17,6 @@ func _on_Button2_button_down():
 	var trainer2 = load("res://Scenes/TestTrainer2.tscn").instance()
 	$BattleBase.add_ally_trainer(trainer)
 	$BattleBase.add_opponent_trainer(trainer2)
+	$Button.visible = false
+	$Button2.visible = false
 	$BattleBase.start()

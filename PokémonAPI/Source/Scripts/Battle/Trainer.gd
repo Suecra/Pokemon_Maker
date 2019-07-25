@@ -22,6 +22,9 @@ func _force_switch_in():
 func _select_targets(move):
 	pass
 
+func _get_lead():
+	return pokemon_party.get_lead()
+
 func switch(battler_index: int):
 	var new_pokemon = pokemon_party.get_battler(battler_index)
 	var switch = Switch.new()
@@ -41,7 +44,9 @@ func query_delete_move():
 func _ready():
 	set_physics_process(false)
 	pokemon_party = $PokemonParty
-	current_pokemon = pokemon_party.get_pokemon(0)
+	#current_pokemon = pokemon_party.get_pokemon(0)
 
-func _enter_tree():
-	battle = get_parent()
+func init_battle():
+	for i in pokemon_party.get_pokemon_count():
+		pokemon_party.get_pokemon(i).init_battle()
+		

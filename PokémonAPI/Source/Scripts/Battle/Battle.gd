@@ -16,11 +16,15 @@ func add_ally_trainer(trainer):
 	get_node("Trainers").add_child(trainer)
 	ally_field.trainers.append(trainer)
 	trainer.field = ally_field
+	trainer.battle = self
+	trainer.init_battle()
 
 func add_opponent_trainer(trainer):
 	get_node("Trainers").add_child(trainer)
 	opponent_field.trainers.append(trainer)
 	trainer.field = opponent_field
+	trainer.battle = self
+	trainer.init_battle()
 
 func is_battle_ended():
 	var trainers = $Trainers.get_children()
@@ -33,14 +37,25 @@ func is_battle_ended():
 func start():
 	print("Battle starts")
 	current_turn = 0
+	yield(first_turn()._start(), "completed");
 	while not is_battle_ended():
-		yield(next_turn().start(), "completed");
+		yield(next_turn()._start(), "completed");
 		current_turn += 1
 	print("Battle ended")
 
 func next_turn():
 	var Turn = load("res://Source/Scripts/Battle/Turn.gd")
 	var turn = Turn.new()
+	init_turn(turn)
+	return turn
+
+func first_turn():
+	var FirstTurn = load("res://Source/Scripts/Battle/FirstTurn.gd")
+	var first_turn = FirstTurn.new()
+	init_turn(first_turn)
+	return first_turn
+
+func init_turn(turn):
 	turn.battle = self
 	var trainers = $Trainers.get_children()
 	for t in trainers:
@@ -50,7 +65,6 @@ func next_turn():
 		turn.prev_turn = prev_turns[prev_turns.size() - 1]
 	turn.owner = $Turns
 	$Turns.add_child(turn)
-	return turn
 
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "Trainers")

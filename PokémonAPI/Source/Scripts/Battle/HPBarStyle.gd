@@ -21,6 +21,7 @@ func _set_max_hp(value):
 	
 func _set_hp(value):
 	hp = value
+	print("set hp " + str(value))
 	set_percent((hp / float(max_hp)) * 100)
 
 func set_percent(value):

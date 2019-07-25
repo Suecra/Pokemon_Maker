@@ -18,6 +18,7 @@ func _get_damage(target: int):
 	damage = floor(damage * get_damage_roll())
 	damage = floor(damage * _get_STAB_multiplier())
 	damage = floor(damage * _get_damage_multiplier(target))
+	damage = max(damage, 1)
 	return damage
 
 func _get_attack():
@@ -46,9 +47,7 @@ func _is_critical_hit():
 		4: return true
 
 func get_damage_roll():
-	var roll = float(randi() % 16 + 85) / 100
-	print(roll)
-	return roll
+	return float(randi() % 16 + 85) / 100
 
 func _get_STAB_multiplier():
 	if _is_STAB():
