@@ -5,6 +5,7 @@
 
 [node name="zen-headbutt" type="Node"]
 script = ExtResource( 1 )
+move_name = "Zen-headbutt"
 type = ExtResource( 2 )
 damage_class = 0
 power = 80.0

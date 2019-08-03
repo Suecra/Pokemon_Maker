@@ -5,6 +5,7 @@
 
 [node name="air-slash" type="Node"]
 script = ExtResource( 1 )
+move_name = "Air-slash"
 type = ExtResource( 2 )
 damage_class = 1
 power = 75.0

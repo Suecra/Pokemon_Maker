@@ -5,6 +5,7 @@
 
 [node name="psystrike" type="Node"]
 script = ExtResource( 1 )
+move_name = "Psystrike"
 type = ExtResource( 2 )
 damage_class = 1
 power = 100.0

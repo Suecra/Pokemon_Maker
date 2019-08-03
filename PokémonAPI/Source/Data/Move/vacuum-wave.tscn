@@ -5,6 +5,7 @@
 
 [node name="vacuum-wave" type="Node"]
 script = ExtResource( 1 )
+move_name = "Vacuum-wave"
 type = ExtResource( 2 )
 damage_class = 1
 power = 40.0

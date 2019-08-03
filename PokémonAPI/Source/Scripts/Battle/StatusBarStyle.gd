@@ -9,6 +9,9 @@ var pokemon_name: String setget set_pokemon_name
 var gender setget set_gender
 var status: String setget set_status 
 
+func play_damage_animation(damage):
+	yield($HPBarStyle._play_damage_animation(max($HPBarStyle.hp - damage, 0)), "completed")
+
 func set_max_hp(value):
 	max_hp = value
 	$HPBarStyle.max_hp = max_hp

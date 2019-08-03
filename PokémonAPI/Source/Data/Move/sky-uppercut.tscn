@@ -6,6 +6,7 @@
 
 [node name="sky-uppercut" type="Node"]
 script = ExtResource( 1 )
+move_name = "Sky-uppercut"
 type = ExtResource( 2 )
 damage_class = 0
 power = 85.0

@@ -6,6 +6,7 @@
 
 [node name="odor-sleuth" type="Node"]
 script = ExtResource( 1 )
+move_name = "Odor-sleuth"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

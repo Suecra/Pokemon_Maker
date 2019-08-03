@@ -5,6 +5,7 @@
 
 [node name="stoked-sparksurfer" type="Node"]
 script = ExtResource( 1 )
+move_name = "Stoked-sparksurfer"
 type = ExtResource( 2 )
 damage_class = 1
 power = 175.0

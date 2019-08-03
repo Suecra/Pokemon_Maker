@@ -6,6 +6,7 @@
 
 [node name="blizzard" type="Node"]
 script = ExtResource( 1 )
+move_name = "Blizzard"
 type = ExtResource( 2 )
 damage_class = 1
 power = 110.0

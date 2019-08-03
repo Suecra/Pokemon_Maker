@@ -31,6 +31,12 @@ func learn(move: Move):
 		get_children()[0] = move
 		pass
 
+func to_string_array():
+	var moves = []
+	for move in get_children():
+		moves.append(move.get_move_data().move_name)
+	return moves
+
 func _enter_tree():
 	pokemon = get_parent()
 	trainer = pokemon.trainer

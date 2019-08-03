@@ -6,6 +6,7 @@
 
 [node name="seismic-toss" type="Node"]
 script = ExtResource( 1 )
+move_name = "Seismic-toss"
 type = ExtResource( 2 )
 damage_class = 0
 power = null

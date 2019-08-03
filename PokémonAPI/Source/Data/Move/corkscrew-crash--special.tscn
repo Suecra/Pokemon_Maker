@@ -5,6 +5,7 @@
 
 [node name="corkscrew-crash--special" type="Node"]
 script = ExtResource( 1 )
+move_name = "Corkscrew-crash--special"
 type = ExtResource( 2 )
 damage_class = 1
 power = null

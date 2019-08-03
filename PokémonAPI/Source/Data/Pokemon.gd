@@ -24,3 +24,8 @@ export(PackedScene) var color
 export(PackedScene) var shape
 
 export(String, MULTILINE) var dex_entry
+
+export(PackedScene) var sprite
+export(PackedScene) var back_sprite
+export(PackedScene) var shiny_sprite
+export(PackedScene) var shiny_back_sprite

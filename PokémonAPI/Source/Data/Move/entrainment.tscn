@@ -5,6 +5,7 @@
 
 [node name="entrainment" type="Node"]
 script = ExtResource( 1 )
+move_name = "Entrainment"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

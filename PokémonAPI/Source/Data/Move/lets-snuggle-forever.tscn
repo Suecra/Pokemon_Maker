@@ -5,6 +5,7 @@
 
 [node name="lets-snuggle-forever" type="Node"]
 script = ExtResource( 1 )
+move_name = "Lets-snuggle-forever"
 type = ExtResource( 2 )
 damage_class = 0
 power = 190.0

@@ -5,6 +5,7 @@
 
 [node name="crush-grip" type="Node"]
 script = ExtResource( 1 )
+move_name = "Crush-grip"
 type = ExtResource( 2 )
 damage_class = 0
 power = null

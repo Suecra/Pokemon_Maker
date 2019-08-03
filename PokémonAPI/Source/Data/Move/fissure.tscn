@@ -6,6 +6,7 @@
 
 [node name="fissure" type="Node"]
 script = ExtResource( 1 )
+move_name = "Fissure"
 type = ExtResource( 2 )
 damage_class = 0
 power = null

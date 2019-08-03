@@ -5,6 +5,7 @@
 
 [node name="searing-shot" type="Node"]
 script = ExtResource( 1 )
+move_name = "Searing-shot"
 type = ExtResource( 2 )
 damage_class = 1
 power = 100.0

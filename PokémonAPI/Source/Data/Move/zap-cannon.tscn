@@ -6,6 +6,7 @@
 
 [node name="zap-cannon" type="Node"]
 script = ExtResource( 1 )
+move_name = "Zap-cannon"
 type = ExtResource( 2 )
 damage_class = 1
 power = 120.0

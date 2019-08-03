@@ -5,6 +5,7 @@
 
 [node name="light-of-ruin" type="Node"]
 script = ExtResource( 1 )
+move_name = "Light-of-ruin"
 type = ExtResource( 2 )
 damage_class = 1
 power = 140.0

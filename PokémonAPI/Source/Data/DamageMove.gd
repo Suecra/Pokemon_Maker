@@ -1,11 +1,26 @@
 extends "res://Source/Data/Move.gd"
 
+const BattleAnimationDamage = preload("res://Source/Scripts/Battle/Animations/BattleAnimationDamage.gd")
+
 var crit_level
+var critical_hit
+var damage_multiplier
 
 func _hit():
 	crit_level = 1
 	for i in targets.size():
-		targets[i].damage(_get_damage(i))
+		var damage = _get_damage(i)
+		targets[i].damage(damage)
+		register_damage(targets[i], damage)
+		if critical_hit:
+			battle.register_message("Todkrank!")
+		match damage_multiplier:
+			0.25: battle.register_message("Schaden zu steigen gegen Dummies!")
+			0.5: battle.register_message("Schaden zu steigen gegen Dummies!")
+			2: battle.register_message("Schaden zu steigen gegen Profis!")
+			4: battle.register_message("Schaden zu steigen gegen Profis!")
+		if targets[i].fainted():
+			battle.register_message(targets[i].nickname + " has fainted!")
 
 func _get_damage(target: int):
 	var damage = floor(user.level * 2 / 5) + 2
@@ -34,17 +49,17 @@ func _get_factor1():
 
 func _get_crit_multiplier():
 	if _is_critical_hit():
-		print("A critical hit!")
 		return 1.5
 	return 1.0
 	pass
 
 func _is_critical_hit():
 	match crit_level:
-		1: return Utils.trigger(0.0416)
-		2: return Utils.trigger(0.125)
-		3: return Utils.trigger(0.5)
-		4: return true
+		1: critical_hit = Utils.trigger(0.0416)
+		2: critical_hit = Utils.trigger(0.125)
+		3: critical_hit = Utils.trigger(0.5)
+		4: critical_hit = true
+	return critical_hit
 
 func get_damage_roll():
 	return float(randi() % 16 + 85) / 100
@@ -62,4 +77,11 @@ func _is_STAB():
 	return false
 
 func _get_damage_multiplier(target):
-	return get_type().get_damage_multiplier(targets[target].get_types())
+	damage_multiplier = get_type().get_damage_multiplier(targets[target].get_types())
+	return damage_multiplier
+
+func register_damage(target, damage):
+	var damage_animation = BattleAnimationDamage.new()
+	damage_animation.status_bar = target.status_bar
+	damage_animation.damage = damage
+	turn.register_animation(damage_animation)

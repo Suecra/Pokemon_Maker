@@ -6,6 +6,7 @@
 
 [node name="hyper-beam" type="Node"]
 script = ExtResource( 1 )
+move_name = "Hyper-beam"
 type = ExtResource( 2 )
 damage_class = 1
 power = 150.0

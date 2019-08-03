@@ -5,9 +5,13 @@ const Trainer = preload("res://Source/Scripts/Battle/Trainer.gd")
 const Field = preload("res://Source/Scripts/Battle/Field.gd")
 const Battlefield = preload("res://Source/Scripts/Battle/Battlefield.gd")
 const HalfTurn = preload("res://Source/Scripts/Battle/HalfTurn.gd")
-const BattleAction = preload("res://Source/Scripts/Battle/BattleAction.gd")
+const BattleAnimation = preload("res://Source/Scripts/Battle/BattleAnimation.gd")
+const BattleAnimationMessage = preload("res://Source/Scripts/Battle/Animations/BattleAnimationMessage.gd")
 
-export(int) var current_turn
+export(int) var current_turn_nr
+export(Vector2) var ally_position
+export(Vector2) var opponent_position
+var current_turn
 var ally_field: Field
 var opponent_field: Field
 var battlefield: Battlefield
@@ -36,11 +40,14 @@ func is_battle_ended():
 
 func start():
 	print("Battle starts")
-	current_turn = 0
-	yield(first_turn()._start(), "completed");
+	current_turn_nr = 0
+	current_turn = first_turn()
+	yield(current_turn._start(), "completed");
+	current_turn_nr = 1
 	while not is_battle_ended():
-		yield(next_turn()._start(), "completed");
-		current_turn += 1
+		current_turn = next_turn()
+		yield(current_turn._start(), "completed");
+		current_turn_nr += 1
 	print("Battle ended")
 
 func next_turn():
@@ -65,6 +72,12 @@ func init_turn(turn):
 		turn.prev_turn = prev_turns[prev_turns.size() - 1]
 	turn.owner = $Turns
 	$Turns.add_child(turn)
+
+func register_message(message: String):
+	var msg = BattleAnimationMessage.new()
+	msg.battle = self
+	msg.message = message
+	current_turn.register_animation(msg)
 
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "Trainers")

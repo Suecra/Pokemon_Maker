@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Source/Scripts/Battle/HPBarStylePlayer.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/Battle/hp_bar_player_bw.png" type="Texture" id=2]
@@ -8,6 +8,22 @@
 size = 9
 outline_color = Color( 0.192157, 0.192157, 0.192157, 1 )
 font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "damage"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:hp")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 0 ]
+}
 
 [node name="PlayerHPBarBW" type="Node2D"]
 script = ExtResource( 1 )
@@ -38,3 +54,6 @@ margin_bottom = 18.0
 custom_fonts/font = SubResource( 1 )
 text = "0
 "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/damage = SubResource( 2 )

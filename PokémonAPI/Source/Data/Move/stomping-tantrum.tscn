@@ -5,6 +5,7 @@
 
 [node name="stomping-tantrum" type="Node"]
 script = ExtResource( 1 )
+move_name = "Stomping-tantrum"
 type = ExtResource( 2 )
 damage_class = 0
 power = 75.0

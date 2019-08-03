@@ -5,6 +5,7 @@
 
 [node name="relic-song" type="Node"]
 script = ExtResource( 1 )
+move_name = "Relic-song"
 type = ExtResource( 2 )
 damage_class = 1
 power = 75.0

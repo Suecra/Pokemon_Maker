@@ -5,6 +5,7 @@
 
 [node name="savage-spin-out--special" type="Node"]
 script = ExtResource( 1 )
+move_name = "Savage-spin-out--special"
 type = ExtResource( 2 )
 damage_class = 1
 power = null

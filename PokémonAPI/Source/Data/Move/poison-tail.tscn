@@ -6,6 +6,7 @@
 
 [node name="poison-tail" type="Node"]
 script = ExtResource( 1 )
+move_name = "Poison-tail"
 type = ExtResource( 2 )
 damage_class = 0
 power = 50.0

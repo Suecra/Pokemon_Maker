@@ -5,6 +5,7 @@
 
 [node name="water-pledge" type="Node"]
 script = ExtResource( 1 )
+move_name = "Water-pledge"
 type = ExtResource( 2 )
 damage_class = 1
 power = 80.0

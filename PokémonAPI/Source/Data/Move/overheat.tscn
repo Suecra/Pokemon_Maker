@@ -6,6 +6,7 @@
 
 [node name="overheat" type="Node"]
 script = ExtResource( 1 )
+move_name = "Overheat"
 type = ExtResource( 2 )
 damage_class = 1
 power = 130.0

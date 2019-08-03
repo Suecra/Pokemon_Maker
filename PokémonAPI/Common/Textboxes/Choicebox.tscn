@@ -11,8 +11,7 @@ cursor = ExtResource( 3 )
 wrap = true
 
 [node name="Container" type="Control" parent="."]
-margin_left = 746.158
-margin_top = 302.158
-margin_right = 990.158
-margin_bottom = 448.158
-
+margin_left = 708.0
+margin_top = 221.0
+margin_right = 981.0
+margin_bottom = 501.0

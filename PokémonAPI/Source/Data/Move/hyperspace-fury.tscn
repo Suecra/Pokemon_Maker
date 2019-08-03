@@ -5,6 +5,7 @@
 
 [node name="hyperspace-fury" type="Node"]
 script = ExtResource( 1 )
+move_name = "Hyperspace-fury"
 type = ExtResource( 2 )
 damage_class = 0
 power = 100.0

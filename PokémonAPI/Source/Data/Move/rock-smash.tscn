@@ -6,6 +6,7 @@
 
 [node name="rock-smash" type="Node"]
 script = ExtResource( 1 )
+move_name = "Rock-smash"
 type = ExtResource( 2 )
 damage_class = 0
 power = 40.0

@@ -5,6 +5,7 @@
 
 [node name="heart-swap" type="Node"]
 script = ExtResource( 1 )
+move_name = "Heart-swap"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

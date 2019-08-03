@@ -5,6 +5,7 @@
 
 [node name="breakneck-blitz--special" type="Node"]
 script = ExtResource( 1 )
+move_name = "Breakneck-blitz--special"
 type = ExtResource( 2 )
 damage_class = 1
 power = null

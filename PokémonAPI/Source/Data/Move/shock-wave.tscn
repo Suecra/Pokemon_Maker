@@ -6,6 +6,7 @@
 
 [node name="shock-wave" type="Node"]
 script = ExtResource( 1 )
+move_name = "Shock-wave"
 type = ExtResource( 2 )
 damage_class = 1
 power = 60.0

@@ -5,6 +5,7 @@
 
 [node name="sunsteel-strike" type="Node"]
 script = ExtResource( 1 )
+move_name = "Sunsteel-strike"
 type = ExtResource( 2 )
 damage_class = 0
 power = 100.0

@@ -6,6 +6,7 @@
 
 [node name="thunder" type="Node"]
 script = ExtResource( 1 )
+move_name = "Thunder"
 type = ExtResource( 2 )
 damage_class = 1
 power = 110.0

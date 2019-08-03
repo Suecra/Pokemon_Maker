@@ -5,6 +5,7 @@
 
 [node name="shadow-bone" type="Node"]
 script = ExtResource( 1 )
+move_name = "Shadow-bone"
 type = ExtResource( 2 )
 damage_class = 0
 power = 85.0

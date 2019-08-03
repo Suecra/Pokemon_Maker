@@ -5,6 +5,7 @@
 
 [node name="fling" type="Node"]
 script = ExtResource( 1 )
+move_name = "Fling"
 type = ExtResource( 2 )
 damage_class = 0
 power = null

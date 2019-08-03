@@ -5,6 +5,7 @@
 
 [node name="steam-eruption" type="Node"]
 script = ExtResource( 1 )
+move_name = "Steam-eruption"
 type = ExtResource( 2 )
 damage_class = 1
 power = 110.0

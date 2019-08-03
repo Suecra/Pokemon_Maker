@@ -5,6 +5,7 @@
 
 [node name="payback" type="Node"]
 script = ExtResource( 1 )
+move_name = "Payback"
 type = ExtResource( 2 )
 damage_class = 0
 power = 50.0

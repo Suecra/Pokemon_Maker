@@ -2,8 +2,10 @@ extends Node
 
 const Nature = preload("res://Source/Data/Nature.gd")
 const Utils = preload("res://Source/Scripts/Utils.gd")
+const Boosts = preload("res://Source/Scripts/Battle/Boosts.gd")
 
 enum Gender {Male, Female, Genderless}
+enum Stat {ATTACK, DEFENSE, SPECIAL_ATTACK, SPECIAL_DEFENSE, SPEED}
 
 export(String) var nickname
 export(int, 1, 100) var level
@@ -28,6 +30,12 @@ var special_attack: int
 var special_defense: int
 var speed: int
 
+var current_attack: int
+var current_defense: int
+var current_special_attack: int
+var current_special_defense: int
+var current_speed: int
+
 export(int, 0, 252) var hp_ev
 export(int, 0, 252) var attack_ev
 export(int, 0, 252) var defense_ev
@@ -50,7 +58,6 @@ func set_current_hp(value: int):
 
 func damage(hp: int):
 	self.current_hp = current_hp - hp
-	print(nickname + " took " + str(hp) + " HP Damage")
 	if current_hp == 0:
 		faint()
 
@@ -88,8 +95,25 @@ func get_species():
 func get_nature():
 	return Utils.unpack(self, nature, "Nature")
 
+func get_sprite():
+	var sprite
+	var base
+	if field == battle.ally_field:
+		base = battle.get_node("BasePlayer")
+		if shiny:
+			sprite = Utils.unpack(base, get_species().shiny_back_sprite, "PKMNSprite")
+		else:
+			sprite = Utils.unpack(base, get_species().back_sprite, "PKMNSprite")
+	elif field == battle.opponent_field:
+		base = battle.get_node("BaseOpponent")
+		if shiny:
+			sprite = Utils.unpack(base, get_species().shiny_sprite, "PKMNSprite")
+		else:
+			sprite = Utils.unpack(base, get_species().sprite, "PKMNSprite")
+	sprite.position = base.pokemon_position
+	return sprite
+
 func faint():
-	print(nickname + " has fainted!")
 	var status = load("res://Source/Scripts/Battle/StatusFainted.gd").new()
 	status.owner = self
 	status.name = "Status"
@@ -107,6 +131,15 @@ func can_move():
 		return status._can_move()
 	return true
 
+func boost_stat(stat, amount: int):
+	match stat:
+		Stat.ATTACK: $Boosts.attack_boost += amount
+		Stat.DEFENSE: $Boosts.defense_boost += amount
+		Stat.SPECIAL_ATTACK: $Boosts.special_attack_boost += amount
+		Stat.SPECIAL_DEFENSE: $Boosts.special_defense_boost += amount
+		Stat.SPEED: $Boosts.speed_boost += amount
+	$Boosts.boost_stats()
+
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "SecondaryStatus")
 	Utils.add_node_if_not_exists(self, self, "MoveArchive")
@@ -119,3 +152,7 @@ func init_battle():
 	field = trainer.field
 	battle = trainer.battle
 	battlefield = battle.battlefield
+	status_bar = battlefield.get_status_bar(field)
+	var boosts = Boosts.new()
+	boosts.name = "Boosts"
+	add_child(boosts)

@@ -5,6 +5,7 @@
 
 [node name="blue-flare" type="Node"]
 script = ExtResource( 1 )
+move_name = "Blue-flare"
 type = ExtResource( 2 )
 damage_class = 1
 power = 130.0

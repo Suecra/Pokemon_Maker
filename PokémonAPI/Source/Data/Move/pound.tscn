@@ -6,6 +6,7 @@
 
 [node name="pound" type="Node"]
 script = ExtResource( 1 )
+move_name = "Pound"
 type = ExtResource( 2 )
 damage_class = 0
 power = 40.0

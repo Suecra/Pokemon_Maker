@@ -5,6 +5,7 @@
 
 [node name="searing-sunraze-smash" type="Node"]
 script = ExtResource( 1 )
+move_name = "Searing-sunraze-smash"
 type = ExtResource( 2 )
 damage_class = 0
 power = 200.0

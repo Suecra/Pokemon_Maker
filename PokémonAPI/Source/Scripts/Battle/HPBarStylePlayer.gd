@@ -6,5 +6,5 @@ func _set_max_hp(value):
 
 func _set_hp(value):
 	._set_hp(value)
-	$HP.text = str(value)
+	$HP.text = str(int(value))
 

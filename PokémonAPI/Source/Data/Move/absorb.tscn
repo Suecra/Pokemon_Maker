@@ -6,6 +6,7 @@
 
 [node name="absorb" type="Node"]
 script = ExtResource( 1 )
+move_name = "Absorb"
 type = ExtResource( 2 )
 damage_class = 1
 power = 20.0

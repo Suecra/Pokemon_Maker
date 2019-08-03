@@ -31,6 +31,7 @@ func switch(battler_index: int):
 	switch.pokemon = current_pokemon
 	switch.trainer = self
 	switch.to_pokemon = new_pokemon
+	switch.turn = battle.current_turn
 	return switch
 
 func move(move_index: int):
@@ -44,7 +45,6 @@ func query_delete_move():
 func _ready():
 	set_physics_process(false)
 	pokemon_party = $PokemonParty
-	#current_pokemon = pokemon_party.get_pokemon(0)
 
 func init_battle():
 	for i in pokemon_party.get_pokemon_count():

@@ -6,6 +6,7 @@
 
 [node name="razor-leaf" type="Node"]
 script = ExtResource( 1 )
+move_name = "Razor-leaf"
 type = ExtResource( 2 )
 damage_class = 0
 power = 55.0

@@ -6,6 +6,7 @@
 
 [node name="fire-spin" type="Node"]
 script = ExtResource( 1 )
+move_name = "Fire-spin"
 type = ExtResource( 2 )
 damage_class = 1
 power = 35.0

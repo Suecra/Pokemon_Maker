@@ -5,6 +5,7 @@
 
 [node name="sinister-arrow-raid" type="Node"]
 script = ExtResource( 1 )
+move_name = "Sinister-arrow-raid"
 type = ExtResource( 2 )
 damage_class = 0
 power = 180.0

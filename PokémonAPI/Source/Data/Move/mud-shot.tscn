@@ -6,6 +6,7 @@
 
 [node name="mud-shot" type="Node"]
 script = ExtResource( 1 )
+move_name = "Mud-shot"
 type = ExtResource( 2 )
 damage_class = 1
 power = 55.0

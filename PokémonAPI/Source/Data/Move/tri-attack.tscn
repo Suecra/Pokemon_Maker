@@ -6,6 +6,7 @@
 
 [node name="tri-attack" type="Node"]
 script = ExtResource( 1 )
+move_name = "Tri-attack"
 type = ExtResource( 2 )
 damage_class = 1
 power = 80.0

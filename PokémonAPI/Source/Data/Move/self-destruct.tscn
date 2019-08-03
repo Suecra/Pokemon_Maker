@@ -6,6 +6,7 @@
 
 [node name="self-destruct" type="Node"]
 script = ExtResource( 1 )
+move_name = "Self-destruct"
 type = ExtResource( 2 )
 damage_class = 0
 power = 200.0

@@ -6,6 +6,7 @@
 
 [node name="uproar" type="Node"]
 script = ExtResource( 1 )
+move_name = "Uproar"
 type = ExtResource( 2 )
 damage_class = 1
 power = 90.0

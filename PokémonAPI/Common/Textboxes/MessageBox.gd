@@ -7,6 +7,7 @@ export(float) var chars_per_second = 15
 export(bool) var instant
 export(bool) var skip
 export(bool) var auto_skip
+export(bool) var auto_hide
 export(bool) var fast_forward
 export(float) var display_time = 1.5
 
@@ -58,14 +59,16 @@ func display_async(text: String, bb_code := false):
 	display_next_page()
 
 func close():
-	style_container._hide()
+	if auto_hide:
+		text_label.clear()
+		style_container._hide()
 	emit_signal("finished")
 
 func display_next_page():
 	counter = 0
 	page_index += 1
-	text_label.clear()
 	if page_index < page_list.pages.size():
+		text_label.clear()
 		for i in page_list.pages[page_index].lines.size():
 			text_label.add_text(page_list.pages[page_index].lines[i])
 			text_label.newline()

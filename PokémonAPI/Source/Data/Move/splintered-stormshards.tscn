@@ -5,6 +5,7 @@
 
 [node name="splintered-stormshards" type="Node"]
 script = ExtResource( 1 )
+move_name = "Splintered-stormshards"
 type = ExtResource( 2 )
 damage_class = 0
 power = 190.0

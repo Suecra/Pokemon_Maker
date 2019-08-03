@@ -6,6 +6,7 @@
 
 [node name="slack-off" type="Node"]
 script = ExtResource( 1 )
+move_name = "Slack-off"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

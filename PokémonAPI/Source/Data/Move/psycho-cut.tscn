@@ -5,6 +5,7 @@
 
 [node name="psycho-cut" type="Node"]
 script = ExtResource( 1 )
+move_name = "Psycho-cut"
 type = ExtResource( 2 )
 damage_class = 0
 power = 70.0

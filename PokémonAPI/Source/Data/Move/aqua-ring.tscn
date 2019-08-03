@@ -5,6 +5,7 @@
 
 [node name="aqua-ring" type="Node"]
 script = ExtResource( 1 )
+move_name = "Aqua-ring"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

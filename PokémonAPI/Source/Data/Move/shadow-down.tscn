@@ -5,6 +5,7 @@
 
 [node name="shadow-down" type="Node"]
 script = ExtResource( 1 )
+move_name = "Shadow-down"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

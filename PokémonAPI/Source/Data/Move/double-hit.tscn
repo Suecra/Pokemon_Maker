@@ -5,6 +5,7 @@
 
 [node name="double-hit" type="Node"]
 script = ExtResource( 1 )
+move_name = "Double-hit"
 type = ExtResource( 2 )
 damage_class = 0
 power = 35.0

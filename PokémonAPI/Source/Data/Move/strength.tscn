@@ -6,6 +6,7 @@
 
 [node name="strength" type="Node"]
 script = ExtResource( 1 )
+move_name = "Strength"
 type = ExtResource( 2 )
 damage_class = 0
 power = 80.0

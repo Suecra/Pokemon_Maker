@@ -5,6 +5,7 @@
 
 [node name="dragon-rush" type="Node"]
 script = ExtResource( 1 )
+move_name = "Dragon-rush"
 type = ExtResource( 2 )
 damage_class = 0
 power = 100.0

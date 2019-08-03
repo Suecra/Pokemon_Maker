@@ -6,6 +6,7 @@
 
 [node name="giga-drain" type="Node"]
 script = ExtResource( 1 )
+move_name = "Giga-drain"
 type = ExtResource( 2 )
 damage_class = 1
 power = 75.0

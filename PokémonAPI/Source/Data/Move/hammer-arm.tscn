@@ -5,6 +5,7 @@
 
 [node name="hammer-arm" type="Node"]
 script = ExtResource( 1 )
+move_name = "Hammer-arm"
 type = ExtResource( 2 )
 damage_class = 0
 power = 100.0

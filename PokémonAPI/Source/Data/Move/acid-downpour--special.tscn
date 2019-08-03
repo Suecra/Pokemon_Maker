@@ -5,6 +5,7 @@
 
 [node name="acid-downpour--special" type="Node"]
 script = ExtResource( 1 )
+move_name = "Acid-downpour--special"
 type = ExtResource( 2 )
 damage_class = 1
 power = null

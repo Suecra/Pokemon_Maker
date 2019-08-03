@@ -6,6 +6,7 @@
 
 [node name="heat-wave" type="Node"]
 script = ExtResource( 1 )
+move_name = "Heat-wave"
 type = ExtResource( 2 )
 damage_class = 1
 power = 95.0

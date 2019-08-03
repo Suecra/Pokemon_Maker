@@ -5,6 +5,7 @@
 
 [node name="spacial-rend" type="Node"]
 script = ExtResource( 1 )
+move_name = "Spacial-rend"
 type = ExtResource( 2 )
 damage_class = 1
 power = 100.0

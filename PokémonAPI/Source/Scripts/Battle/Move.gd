@@ -31,11 +31,9 @@ func _execute():
 	if move != null:
 		if pokemon.can_move():
 			move.user = pokemon
+			move.turn = turn
 			move.battle = turn.battle
 			move.targets.clear()
 			move.targets.append(battle.battlefield.get_pokemon_at_position(3, field))
+			battle.register_message(pokemon.nickname + " uses " + move.move_name + "!")
 			move._execute()
-			var status_bar
-			for target in move.targets:
-				status_bar = battlefield.get_status_bar(target.field)
-				status_bar.update()

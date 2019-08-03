@@ -6,6 +6,7 @@
 
 [node name="blast-burn" type="Node"]
 script = ExtResource( 1 )
+move_name = "Blast-burn"
 type = ExtResource( 2 )
 damage_class = 1
 power = 150.0

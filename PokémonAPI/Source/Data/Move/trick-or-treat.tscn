@@ -5,6 +5,7 @@
 
 [node name="trick-or-treat" type="Node"]
 script = ExtResource( 1 )
+move_name = "Trick-or-treat"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

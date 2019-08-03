@@ -6,6 +6,7 @@
 
 [node name="luster-purge" type="Node"]
 script = ExtResource( 1 )
+move_name = "Luster-purge"
 type = ExtResource( 2 )
 damage_class = 1
 power = 70.0

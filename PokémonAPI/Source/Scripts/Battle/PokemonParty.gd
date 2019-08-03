@@ -41,10 +41,19 @@ func get_lead():
 	return null
 
 func all_fainted():
+	return get_battler_count() == 0
+
+func to_string_array():
+	var arr = []
 	for pokemon in get_children():
-		if not pokemon.fainted():
-			return false
-	return true
+		arr.append(pokemon.nickname)
+	return arr
+
+func to_string_array_battler():
+	var arr = []
+	for i in range(get_battler_count()):
+		arr.append(get_battler(i).nickname)
+	return arr
 
 func _enter_tree():
 	trainer = get_parent()

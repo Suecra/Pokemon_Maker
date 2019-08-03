@@ -5,6 +5,7 @@
 
 [node name="natural-gift" type="Node"]
 script = ExtResource( 1 )
+move_name = "Natural-gift"
 type = ExtResource( 2 )
 damage_class = 0
 power = null

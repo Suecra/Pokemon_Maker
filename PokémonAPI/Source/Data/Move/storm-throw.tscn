@@ -5,6 +5,7 @@
 
 [node name="storm-throw" type="Node"]
 script = ExtResource( 1 )
+move_name = "Storm-throw"
 type = ExtResource( 2 )
 damage_class = 0
 power = 60.0

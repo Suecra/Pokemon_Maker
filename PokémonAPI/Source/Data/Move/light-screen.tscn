@@ -6,6 +6,7 @@
 
 [node name="light-screen" type="Node"]
 script = ExtResource( 1 )
+move_name = "Light-screen"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

@@ -5,6 +5,7 @@
 
 [node name="continental-crush--special" type="Node"]
 script = ExtResource( 1 )
+move_name = "Continental-crush--special"
 type = ExtResource( 2 )
 damage_class = 1
 power = null

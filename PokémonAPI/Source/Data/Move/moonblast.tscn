@@ -5,6 +5,7 @@
 
 [node name="moonblast" type="Node"]
 script = ExtResource( 1 )
+move_name = "Moonblast"
 type = ExtResource( 2 )
 damage_class = 1
 power = 95.0

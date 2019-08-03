@@ -5,6 +5,7 @@
 
 [node name="shadow-chill" type="Node"]
 script = ExtResource( 1 )
+move_name = "Shadow-chill"
 type = ExtResource( 2 )
 damage_class = 1
 power = 75.0

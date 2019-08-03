@@ -5,6 +5,7 @@
 
 [node name="drill-run" type="Node"]
 script = ExtResource( 1 )
+move_name = "Drill-run"
 type = ExtResource( 2 )
 damage_class = 0
 power = 80.0

@@ -6,6 +6,7 @@
 
 [node name="assist" type="Node"]
 script = ExtResource( 1 )
+move_name = "Assist"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

@@ -5,6 +5,7 @@
 
 [node name="bug-bite" type="Node"]
 script = ExtResource( 1 )
+move_name = "Bug-bite"
 type = ExtResource( 2 )
 damage_class = 0
 power = 60.0

@@ -5,6 +5,7 @@
 
 [node name="trump-card" type="Node"]
 script = ExtResource( 1 )
+move_name = "Trump-card"
 type = ExtResource( 2 )
 damage_class = 1
 power = null

@@ -6,6 +6,7 @@
 
 [node name="poison-sting" type="Node"]
 script = ExtResource( 1 )
+move_name = "Poison-sting"
 type = ExtResource( 2 )
 damage_class = 0
 power = 15.0

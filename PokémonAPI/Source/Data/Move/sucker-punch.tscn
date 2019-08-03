@@ -5,6 +5,7 @@
 
 [node name="sucker-punch" type="Node"]
 script = ExtResource( 1 )
+move_name = "Sucker-punch"
 type = ExtResource( 2 )
 damage_class = 0
 power = 70.0

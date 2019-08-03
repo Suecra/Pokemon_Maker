@@ -6,6 +6,7 @@
 
 [node name="hydro-cannon" type="Node"]
 script = ExtResource( 1 )
+move_name = "Hydro-cannon"
 type = ExtResource( 2 )
 damage_class = 1
 power = 150.0

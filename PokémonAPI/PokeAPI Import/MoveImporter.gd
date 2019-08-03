@@ -15,6 +15,7 @@ func _create_item():
 		"special": return SpecialMove.new()
 
 func _import_item(item):
+	item.move_name = api_item["name"].capitalize()
 	item.type = load("res://Source/Data/Type/" + api_item["type"]["name"] + ".tscn")
 	match api_item["damage_class"]["name"]:
 		"status": item.damage_class = Move.DamageClass.Status

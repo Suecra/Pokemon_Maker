@@ -5,6 +5,7 @@
 
 [node name="natures-madness" type="Node"]
 script = ExtResource( 1 )
+move_name = "Natures-madness"
 type = ExtResource( 2 )
 damage_class = 1
 power = null

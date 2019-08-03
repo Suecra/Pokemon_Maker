@@ -6,6 +6,7 @@
 
 [node name="shadow-punch" type="Node"]
 script = ExtResource( 1 )
+move_name = "Shadow-punch"
 type = ExtResource( 2 )
 damage_class = 0
 power = 60.0

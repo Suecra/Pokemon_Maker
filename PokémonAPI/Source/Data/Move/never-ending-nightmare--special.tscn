@@ -5,6 +5,7 @@
 
 [node name="never-ending-nightmare--special" type="Node"]
 script = ExtResource( 1 )
+move_name = "Never-ending-nightmare--special"
 type = ExtResource( 2 )
 damage_class = 1
 power = null

@@ -5,6 +5,7 @@
 
 [node name="infestation" type="Node"]
 script = ExtResource( 1 )
+move_name = "Infestation"
 type = ExtResource( 2 )
 damage_class = 1
 power = 20.0

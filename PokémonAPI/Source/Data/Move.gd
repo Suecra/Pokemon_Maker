@@ -7,6 +7,7 @@ enum Flags {Contact, Protect, Mirrorable, Kings_Rock, Sky_Battle, Damage, Ailmen
 enum HitRange {Opponent, All_Opponents, All, User, Partner, User_or_Partner, User_Field, Opponent_Field, Entire_Field}
 enum ContestType {Cool, Beauty, Cute, Smart, Tough}
 
+export(String) var move_name
 export(PackedScene) var type
 export(DamageClass) var damage_class
 export(int, 1, 255) var power
@@ -27,15 +28,16 @@ export(String) var description
 var user
 var targets = []
 var battle
+var turn
 
 func _execute():
 	if _is_hit():
 		_hit()
 	else:
-		print("The attack missed")
+		battle.register_message(user.nickname + "s attack missed!")
 
 func _hit():
-	print("Move not implemented!")
+	battle.register_message("But the move isn't implemented yet!")
 
 func _get_base_damage():
 	return power

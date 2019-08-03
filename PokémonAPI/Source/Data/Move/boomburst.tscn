@@ -5,6 +5,7 @@
 
 [node name="boomburst" type="Node"]
 script = ExtResource( 1 )
+move_name = "Boomburst"
 type = ExtResource( 2 )
 damage_class = 1
 power = 140.0

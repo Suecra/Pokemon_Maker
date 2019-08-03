@@ -5,6 +5,7 @@
 
 [node name="brave-bird" type="Node"]
 script = ExtResource( 1 )
+move_name = "Brave-bird"
 type = ExtResource( 2 )
 damage_class = 0
 power = 120.0

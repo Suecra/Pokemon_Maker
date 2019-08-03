@@ -5,6 +5,7 @@
 
 [node name="venoshock" type="Node"]
 script = ExtResource( 1 )
+move_name = "Venoshock"
 type = ExtResource( 2 )
 damage_class = 1
 power = 65.0

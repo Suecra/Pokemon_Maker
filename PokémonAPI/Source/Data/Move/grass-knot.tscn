@@ -5,6 +5,7 @@
 
 [node name="grass-knot" type="Node"]
 script = ExtResource( 1 )
+move_name = "Grass-knot"
 type = ExtResource( 2 )
 damage_class = 1
 power = null

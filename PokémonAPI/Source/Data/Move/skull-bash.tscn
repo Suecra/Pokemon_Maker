@@ -6,6 +6,7 @@
 
 [node name="skull-bash" type="Node"]
 script = ExtResource( 1 )
+move_name = "Skull-bash"
 type = ExtResource( 2 )
 damage_class = 0
 power = 130.0

@@ -5,6 +5,7 @@
 
 [node name="subzero-slammer--physical" type="Node"]
 script = ExtResource( 1 )
+move_name = "Subzero-slammer--physical"
 type = ExtResource( 2 )
 damage_class = 0
 power = null

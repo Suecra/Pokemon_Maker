@@ -6,6 +6,7 @@
 
 [node name="bubble-beam" type="Node"]
 script = ExtResource( 1 )
+move_name = "Bubble-beam"
 type = ExtResource( 2 )
 damage_class = 1
 power = 65.0

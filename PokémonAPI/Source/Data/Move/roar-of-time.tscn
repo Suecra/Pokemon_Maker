@@ -5,6 +5,7 @@
 
 [node name="roar-of-time" type="Node"]
 script = ExtResource( 1 )
+move_name = "Roar-of-time"
 type = ExtResource( 2 )
 damage_class = 1
 power = 150.0

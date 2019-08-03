@@ -6,6 +6,7 @@
 
 [node name="knock-off" type="Node"]
 script = ExtResource( 1 )
+move_name = "Knock-off"
 type = ExtResource( 2 )
 damage_class = 0
 power = 65.0

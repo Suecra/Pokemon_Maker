@@ -6,6 +6,7 @@
 
 [node name="role-play" type="Node"]
 script = ExtResource( 1 )
+move_name = "Role-play"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

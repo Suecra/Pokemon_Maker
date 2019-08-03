@@ -5,6 +5,7 @@
 
 [node name="prismatic-laser" type="Node"]
 script = ExtResource( 1 )
+move_name = "Prismatic-laser"
 type = ExtResource( 2 )
 damage_class = 1
 power = 160.0

@@ -5,6 +5,7 @@
 
 [node name="ice-burn" type="Node"]
 script = ExtResource( 1 )
+move_name = "Ice-burn"
 type = ExtResource( 2 )
 damage_class = 1
 power = 140.0

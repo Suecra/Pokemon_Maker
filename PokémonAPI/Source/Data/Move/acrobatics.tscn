@@ -5,6 +5,7 @@
 
 [node name="acrobatics" type="Node"]
 script = ExtResource( 1 )
+move_name = "Acrobatics"
 type = ExtResource( 2 )
 damage_class = 0
 power = 55.0

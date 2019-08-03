@@ -5,6 +5,7 @@
 
 [node name="nasty-plot" type="Node"]
 script = ExtResource( 1 )
+move_name = "Nasty-plot"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

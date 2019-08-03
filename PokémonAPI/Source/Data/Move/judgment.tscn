@@ -5,6 +5,7 @@
 
 [node name="judgment" type="Node"]
 script = ExtResource( 1 )
+move_name = "Judgment"
 type = ExtResource( 2 )
 damage_class = 1
 power = 100.0

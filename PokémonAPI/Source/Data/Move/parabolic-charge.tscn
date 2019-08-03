@@ -5,6 +5,7 @@
 
 [node name="parabolic-charge" type="Node"]
 script = ExtResource( 1 )
+move_name = "Parabolic-charge"
 type = ExtResource( 2 )
 damage_class = 1
 power = 65.0

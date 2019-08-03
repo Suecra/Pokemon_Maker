@@ -6,6 +6,7 @@
 
 [node name="acid" type="Node"]
 script = ExtResource( 1 )
+move_name = "Acid"
 type = ExtResource( 2 )
 damage_class = 1
 power = 40.0

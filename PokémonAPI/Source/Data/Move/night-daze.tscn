@@ -5,6 +5,7 @@
 
 [node name="night-daze" type="Node"]
 script = ExtResource( 1 )
+move_name = "Night-daze"
 type = ExtResource( 2 )
 damage_class = 1
 power = 85.0

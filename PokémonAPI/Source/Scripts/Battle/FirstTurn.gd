@@ -11,7 +11,8 @@ func _start():
 		switch.battle = battle
 		switch.battlefield = battle.battlefield
 		switch.field = t.field
+		switch.turn = battle.current_turn
 		half_turns.append(switch)
 	do_half_turns()
-	yield(do_actions(), "completed")
+	yield(do_animations(), "completed")
 	disconnect_trainers()

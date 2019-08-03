@@ -5,6 +5,7 @@
 
 [node name="flame-burst" type="Node"]
 script = ExtResource( 1 )
+move_name = "Flame-burst"
 type = ExtResource( 2 )
 damage_class = 1
 power = 70.0

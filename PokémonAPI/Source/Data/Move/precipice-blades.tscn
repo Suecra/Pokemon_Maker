@@ -5,6 +5,7 @@
 
 [node name="precipice-blades" type="Node"]
 script = ExtResource( 1 )
+move_name = "Precipice-blades"
 type = ExtResource( 2 )
 damage_class = 0
 power = 120.0

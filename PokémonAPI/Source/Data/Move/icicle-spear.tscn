@@ -6,6 +6,7 @@
 
 [node name="icicle-spear" type="Node"]
 script = ExtResource( 1 )
+move_name = "Icicle-spear"
 type = ExtResource( 2 )
 damage_class = 0
 power = 25.0

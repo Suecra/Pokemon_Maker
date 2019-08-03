@@ -6,6 +6,7 @@
 
 [node name="flamethrower" type="Node"]
 script = ExtResource( 1 )
+move_name = "Flamethrower"
 type = ExtResource( 2 )
 damage_class = 1
 power = 90.0

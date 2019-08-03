@@ -6,6 +6,7 @@
 
 [node name="fury-attack" type="Node"]
 script = ExtResource( 1 )
+move_name = "Fury-attack"
 type = ExtResource( 2 )
 damage_class = 0
 power = 15.0

@@ -6,6 +6,7 @@
 
 [node name="sandstorm" type="Node"]
 script = ExtResource( 1 )
+move_name = "Sandstorm"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

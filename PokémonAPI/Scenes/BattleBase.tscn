@@ -1,13 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Source/Scripts/Battle/Battle.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/Battlefield.gd" type="Script" id=2]
 [ext_resource path="res://Common/Textboxes/MessageBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Battle/PlayerStatusBar.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Battle/EnemyStatusBar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Common/Textboxes/Choicebox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Battle/Bases/BattleBaseHGSSOpponent.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Battle/Bases/BattleBaseHGSSPlayer.tscn" type="PackedScene" id=8]
 
-[node name="BattleBase" type="Node"]
+[node name="Battle" type="Node2D"]
 script = ExtResource( 1 )
+ally_position = Vector2( 100, 400 )
+opponent_position = Vector2( 650, 100 )
 
 [node name="Battlefield" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -19,3 +24,11 @@ script = ExtResource( 2 )
 [node name="PlayerStatusBar" parent="." instance=ExtResource( 4 )]
 
 [node name="EnemyStatusBar" parent="." instance=ExtResource( 5 )]
+
+[node name="Choicebox" parent="." instance=ExtResource( 6 )]
+
+[node name="BaseOpponent" parent="." instance=ExtResource( 7 )]
+position = Vector2( 574.078, 125.154 )
+
+[node name="BasePlayer" parent="." instance=ExtResource( 8 )]
+position = Vector2( -66.6584, 387.707 )

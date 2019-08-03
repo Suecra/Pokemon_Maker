@@ -3,9 +3,11 @@ extends "res://Source/Scripts/Battle/Trainer.gd"
 enum State {SELECT_OPTION, SELECT_MOVE, SELECT_POKEMON}
 
 var state
+var choicebox
 
 func _do_half_turn():
-	set_physics_process(true)
+	choicebox = battle.get_node("Choicebox")
+	choicebox.connect("selected", self, "option_selected")
 	select_option()
 
 func _physics_process(delta):
@@ -52,14 +54,32 @@ func _physics_process(delta):
 			emit_signal("choice_made", self, switch(5))
 			set_physics_process(false)
 
+func option_selected():
+	if state == State.SELECT_OPTION:
+		match choicebox.item_index:
+			0: select_move()
+			1: select_pokemon()
+	elif state == State.SELECT_MOVE:
+		choicebox.disconnect("selected", self, "option_selected")
+		emit_signal("choice_made", self, move(choicebox.item_index))
+	elif state == State.SELECT_POKEMON:
+		choicebox.disconnect("selected", self, "option_selected")
+		emit_signal("choice_made", self, switch(choicebox.item_index))
+
 func select_option():
-	print("Select option [1]Attack [2]Switch [3]Run...")
+	battle.get_node("MessageBox").display_async("What will 'Player' do?")
+	choicebox.display_async(["Attack", "Switch", "Run"])
 	state = State.SELECT_OPTION
 
 func select_move():
-	print("Select move [1] [2] [3] [4]")
+	choicebox.display_async(current_pokemon.get_movepool().to_string_array())
 	state = State.SELECT_MOVE
 
 func select_pokemon():
-	print("Select pokemon [1] [2] [3] [4] [5] [6]")
+	choicebox.display_async(pokemon_party.to_string_array())
 	state = State.SELECT_POKEMON
+
+func _force_switch_in():
+	choicebox.connect("selected", self, "option_selected")
+	select_pokemon()
+	pass

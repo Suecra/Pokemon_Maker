@@ -5,6 +5,7 @@
 
 [node name="dragon-tail" type="Node"]
 script = ExtResource( 1 )
+move_name = "Dragon-tail"
 type = ExtResource( 2 )
 damage_class = 0
 power = 60.0

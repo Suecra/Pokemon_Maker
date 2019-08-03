@@ -5,6 +5,7 @@
 
 [node name="disarming-voice" type="Node"]
 script = ExtResource( 1 )
+move_name = "Disarming-voice"
 type = ExtResource( 2 )
 damage_class = 1
 power = 40.0

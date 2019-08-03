@@ -5,6 +5,7 @@
 
 [node name="high-horsepower" type="Node"]
 script = ExtResource( 1 )
+move_name = "High-horsepower"
 type = ExtResource( 2 )
 damage_class = 0
 power = 95.0

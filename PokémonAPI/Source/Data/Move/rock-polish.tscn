@@ -5,6 +5,7 @@
 
 [node name="rock-polish" type="Node"]
 script = ExtResource( 1 )
+move_name = "Rock-polish"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

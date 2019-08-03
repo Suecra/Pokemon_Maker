@@ -6,6 +6,7 @@
 
 [node name="mind-reader" type="Node"]
 script = ExtResource( 1 )
+move_name = "Mind-reader"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

@@ -6,6 +6,7 @@
 
 [node name="cross-chop" type="Node"]
 script = ExtResource( 1 )
+move_name = "Cross-chop"
 type = ExtResource( 2 )
 damage_class = 0
 power = 100.0

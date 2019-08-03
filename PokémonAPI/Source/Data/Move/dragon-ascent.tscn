@@ -5,6 +5,7 @@
 
 [node name="dragon-ascent" type="Node"]
 script = ExtResource( 1 )
+move_name = "Dragon-ascent"
 type = ExtResource( 2 )
 damage_class = 0
 power = 120.0

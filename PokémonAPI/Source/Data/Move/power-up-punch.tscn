@@ -5,6 +5,7 @@
 
 [node name="power-up-punch" type="Node"]
 script = ExtResource( 1 )
+move_name = "Power-up-punch"
 type = ExtResource( 2 )
 damage_class = 0
 power = 40.0

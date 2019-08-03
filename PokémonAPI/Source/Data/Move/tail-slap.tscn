@@ -5,6 +5,7 @@
 
 [node name="tail-slap" type="Node"]
 script = ExtResource( 1 )
+move_name = "Tail-slap"
 type = ExtResource( 2 )
 damage_class = 0
 power = 25.0

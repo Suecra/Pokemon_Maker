@@ -5,6 +5,7 @@
 
 [node name="fire-lash" type="Node"]
 script = ExtResource( 1 )
+move_name = "Fire-lash"
 type = ExtResource( 2 )
 damage_class = 0
 power = 80.0

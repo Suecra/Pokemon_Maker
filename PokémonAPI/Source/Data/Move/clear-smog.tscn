@@ -5,6 +5,7 @@
 
 [node name="clear-smog" type="Node"]
 script = ExtResource( 1 )
+move_name = "Clear-smog"
 type = ExtResource( 2 )
 damage_class = 1
 power = 50.0

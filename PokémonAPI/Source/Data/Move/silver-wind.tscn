@@ -6,6 +6,7 @@
 
 [node name="silver-wind" type="Node"]
 script = ExtResource( 1 )
+move_name = "Silver-wind"
 type = ExtResource( 2 )
 damage_class = 1
 power = 60.0

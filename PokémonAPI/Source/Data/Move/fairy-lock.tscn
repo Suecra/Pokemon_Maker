@@ -5,6 +5,7 @@
 
 [node name="fairy-lock" type="Node"]
 script = ExtResource( 1 )
+move_name = "Fairy-lock"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

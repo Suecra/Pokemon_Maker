@@ -5,6 +5,7 @@
 
 [node name="inferno-overdrive--physical" type="Node"]
 script = ExtResource( 1 )
+move_name = "Inferno-overdrive--physical"
 type = ExtResource( 2 )
 damage_class = 0
 power = null

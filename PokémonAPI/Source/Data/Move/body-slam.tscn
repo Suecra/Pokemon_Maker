@@ -6,6 +6,7 @@
 
 [node name="body-slam" type="Node"]
 script = ExtResource( 1 )
+move_name = "Body-slam"
 type = ExtResource( 2 )
 damage_class = 0
 power = 85.0

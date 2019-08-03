@@ -6,6 +6,7 @@
 
 [node name="torment" type="Node"]
 script = ExtResource( 1 )
+move_name = "Torment"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

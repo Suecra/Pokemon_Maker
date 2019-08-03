@@ -5,6 +5,7 @@
 
 [node name="energy-ball" type="Node"]
 script = ExtResource( 1 )
+move_name = "Energy-ball"
 type = ExtResource( 2 )
 damage_class = 1
 power = 90.0

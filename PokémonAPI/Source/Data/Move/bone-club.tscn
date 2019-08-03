@@ -6,6 +6,7 @@
 
 [node name="bone-club" type="Node"]
 script = ExtResource( 1 )
+move_name = "Bone-club"
 type = ExtResource( 2 )
 damage_class = 0
 power = 65.0

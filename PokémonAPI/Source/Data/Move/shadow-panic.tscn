@@ -5,6 +5,7 @@
 
 [node name="shadow-panic" type="Node"]
 script = ExtResource( 1 )
+move_name = "Shadow-panic"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

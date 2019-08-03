@@ -44,14 +44,17 @@ func prepare_text():
 	return text
 
 func display(items: Array):
+	display_async(items)
+	yield(self, "selected")
+
+func display_async(items: Array):
 	self.items = items
 	count = items.size()
 	text_label.text = prepare_text()
-	item_index = 0
+	self.item_index = 0
 	style_container._show()
 	cursor_node._show()
 	set_process(true)
-	yield(self, "selected")
 
 func close():
 	style_container._hide()

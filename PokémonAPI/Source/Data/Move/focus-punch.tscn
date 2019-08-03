@@ -6,6 +6,7 @@
 
 [node name="focus-punch" type="Node"]
 script = ExtResource( 1 )
+move_name = "Focus-punch"
 type = ExtResource( 2 )
 damage_class = 0
 power = 150.0

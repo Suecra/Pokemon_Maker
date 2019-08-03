@@ -5,6 +5,7 @@
 
 [node name="hurricane" type="Node"]
 script = ExtResource( 1 )
+move_name = "Hurricane"
 type = ExtResource( 2 )
 damage_class = 1
 power = 110.0

@@ -6,6 +6,7 @@
 
 [node name="fake-tears" type="Node"]
 script = ExtResource( 1 )
+move_name = "Fake-tears"
 type = ExtResource( 2 )
 damage_class = 2
 power = null

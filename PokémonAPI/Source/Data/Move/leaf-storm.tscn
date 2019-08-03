@@ -5,6 +5,7 @@
 
 [node name="leaf-storm" type="Node"]
 script = ExtResource( 1 )
+move_name = "Leaf-storm"
 type = ExtResource( 2 )
 damage_class = 1
 power = 130.0

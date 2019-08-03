@@ -5,6 +5,7 @@
 
 [node name="soul-stealing-7-star-strike" type="Node"]
 script = ExtResource( 1 )
+move_name = "Soul-stealing- 7 -star-strike"
 type = ExtResource( 2 )
 damage_class = 0
 power = 195.0
