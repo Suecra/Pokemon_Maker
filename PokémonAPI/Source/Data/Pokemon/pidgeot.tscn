@@ -53,7 +53,7 @@
 [node name="pidgeot" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 18.0
+national_dex_nr = 18
 hp = 83
 attack = 80
 defense = 75
@@ -75,6 +75,10 @@ dex_entry = "This Pokémon has a dazzling plumage of beautifully
 glossy feathers. Many Trainers are captivated by the
 striking beauty of the feathers on its head, compelling
 them to choose Pidgeot as their Pokémon."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -383,4 +387,3 @@ move = ExtResource( 49 )
 level = 0
 egg = false
 tm = true
-

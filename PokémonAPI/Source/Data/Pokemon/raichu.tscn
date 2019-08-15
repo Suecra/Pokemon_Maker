@@ -49,7 +49,7 @@
 [node name="raichu" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 26.0
+national_dex_nr = 26
 hp = 60
 attack = 90
 defense = 55
@@ -70,6 +70,10 @@ shape = null
 dex_entry = "As electricity builds up inside its body, it
 becomes more aggressive. One theory is that
 the electricity buildup is actually causing stress."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -340,4 +344,3 @@ move = ExtResource( 45 )
 level = 0
 egg = false
 tm = true
-

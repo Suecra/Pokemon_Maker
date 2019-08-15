@@ -84,8 +84,10 @@ func get_en_description(entries, property_name):
 	return ""
 
 func get_or_add_node(parent: Node, name: String):
-	var node = parent.get_node(name)
-	if node == null:
+	var node
+	if parent.has_node(name):
+		node = parent.get_node(name)
+	else:
 		node = Node.new()
 		node.name = name
 		parent.add_child(node)

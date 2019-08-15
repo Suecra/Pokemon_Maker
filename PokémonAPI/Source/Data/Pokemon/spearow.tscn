@@ -61,7 +61,7 @@
 [node name="spearow" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 21.0
+national_dex_nr = 21
 hp = 40
 attack = 60
 defense = 30
@@ -82,6 +82,10 @@ shape = null
 dex_entry = "Its reckless nature leads it to stand up to
 others—even large Pokémon—if it has to protect
 its territory."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -441,4 +445,3 @@ move = ExtResource( 57 )
 level = 0
 egg = false
 tm = true
-

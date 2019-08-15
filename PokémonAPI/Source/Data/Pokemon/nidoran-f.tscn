@@ -69,7 +69,7 @@
 [node name="nidoran-f" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 29.0
+national_dex_nr = 29
 hp = 55
 attack = 47
 defense = 52
@@ -91,6 +91,10 @@ dex_entry = "Nidoran♀ has barbs that secrete a powerful poison.
 They are thought to have developed as protection for
 this small-bodied Pokémon. When enraged, it releases
 a horrible toxin from its horn."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -506,4 +510,3 @@ move = ExtResource( 65 )
 level = 0
 egg = true
 tm = false
-

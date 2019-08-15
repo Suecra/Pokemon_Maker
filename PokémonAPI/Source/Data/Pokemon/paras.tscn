@@ -77,7 +77,7 @@
 [node name="paras" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 46.0
+national_dex_nr = 46
 hp = 35
 attack = 70
 defense = 55
@@ -98,6 +98,10 @@ shape = null
 dex_entry = "Whether it’s due to a lack of moisture or a lack
 of nutrients, in Alola the mushrooms on Paras
 don’t grow up quite right."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -559,4 +563,3 @@ move = ExtResource( 73 )
 level = 0
 egg = false
 tm = true
-

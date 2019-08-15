@@ -59,7 +59,7 @@
 [node name="venonat" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 48.0
+national_dex_nr = 48
 hp = 60
 attack = 55
 defense = 50
@@ -80,6 +80,10 @@ shape = null
 dex_entry = "Venonat is said to have evolved with a coat of thin, stiff hair
 that covers its entire body for protection. It possesses large
 eyes that never fail to spot even minuscule prey."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -430,4 +434,3 @@ move = ExtResource( 55 )
 level = 0
 egg = false
 tm = true
-

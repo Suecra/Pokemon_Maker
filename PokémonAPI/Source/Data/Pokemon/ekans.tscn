@@ -74,7 +74,7 @@
 [node name="ekans" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 23.0
+national_dex_nr = 23
 hp = 35
 attack = 60
 defense = 44
@@ -94,6 +94,10 @@ color = null
 shape = null
 dex_entry = "By dislocating its jaw, it can swallow prey larger
 than itself. After a meal, it curls up and rests."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -544,4 +548,3 @@ move = ExtResource( 70 )
 level = 0
 egg = false
 tm = true
-

@@ -69,7 +69,7 @@
 [node name="squirtle" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 7.0
+national_dex_nr = 7
 hp = 44
 attack = 48
 defense = 65
@@ -91,6 +91,10 @@ dex_entry = "Squirtle’s shell is not merely used for protection.
 The shell’s rounded shape and the grooves on its
 surface help minimize resistance in water,
 enabling this Pokémon to swim at high speeds."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -508,4 +512,3 @@ move = ExtResource( 65 )
 level = 0
 egg = false
 tm = true
-

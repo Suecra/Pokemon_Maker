@@ -101,15 +101,15 @@ func get_sprite():
 	if field == battle.ally_field:
 		base = battle.get_node("BasePlayer")
 		if shiny:
-			sprite = Utils.unpack(base, get_species().shiny_back_sprite, "PKMNSprite")
+			sprite = Utils.unpack(base, get_species().get_sprite_collection().shiny_back_sprite, "PKMNSprite")
 		else:
-			sprite = Utils.unpack(base, get_species().back_sprite, "PKMNSprite")
+			sprite = Utils.unpack(base, get_species().get_sprite_collection().back_sprite, "PKMNSprite")
 	elif field == battle.opponent_field:
 		base = battle.get_node("BaseOpponent")
 		if shiny:
-			sprite = Utils.unpack(base, get_species().shiny_sprite, "PKMNSprite")
+			sprite = Utils.unpack(base, get_species().get_sprite_collection().shiny_sprite, "PKMNSprite")
 		else:
-			sprite = Utils.unpack(base, get_species().sprite, "PKMNSprite")
+			sprite = Utils.unpack(base, get_species().get_sprite_collection().front_sprite, "PKMNSprite")
 	sprite.position = base.pokemon_position
 	return sprite
 

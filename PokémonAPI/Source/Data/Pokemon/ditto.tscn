@@ -1,0 +1,92 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Source/Data/Pokemon.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Type/normal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Data/Type.gd" type="Script" id=3]
+[ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=4]
+[ext_resource path="res://Source/Data/Ability/imposter.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Source/Data/Ability/limber.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Source/Data/WildPokemonItem.gd" type="Script" id=7]
+[ext_resource path="res://Source/Data/Item/metal-powder.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Source/Data/Item/quick-powder.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Source/Data/Egg-Group/ditto.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Source/Data/EggGroup.gd" type="Script" id=11]
+[ext_resource path="res://Source/Data/LearnableMove.gd" type="Script" id=12]
+[ext_resource path="res://Source/Data/Move/transform.tscn" type="PackedScene" id=13]
+
+[node name="ditto" type="Node"]
+script = ExtResource( 1 )
+regional_dex_nr = 0
+national_dex_nr = 132
+hp = 48
+attack = 48
+defense = 48
+special_attack = 48
+special_defense = 48
+speed = 48
+catch_rate = 35
+happiness = 70
+gender_chance = null
+egg_cycles = 20
+base_xp = 101
+growth_rate = null
+category = "Transform Pokémon"
+height = 3.0
+weight = 40.0
+color = null
+shape = null
+dex_entry = "While it can transform into anything, each Ditto
+apparently has its own strengths and
+weaknesses when it comes to transformations."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
+
+[node name="Types" type="Node" parent="."]
+
+[node name="normal" type="Node" parent="Types" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+id = 0
+very_effective = 0
+neutral = -417
+not_very_effective = 288
+no_effect = 128
+
+[node name="Abilities" type="Node" parent="."]
+
+[node name="imposter" type="Node" parent="Abilities"]
+script = ExtResource( 4 )
+ability = ExtResource( 5 )
+hidden_ability = true
+
+[node name="limber" type="Node" parent="Abilities"]
+script = ExtResource( 4 )
+ability = ExtResource( 6 )
+hidden_ability = false
+
+[node name="Items" type="Node" parent="."]
+
+[node name="metal-powder" type="Node" parent="Items"]
+script = ExtResource( 7 )
+item = ExtResource( 8 )
+chance = 5.0
+
+[node name="quick-powder" type="Node" parent="Items"]
+script = ExtResource( 7 )
+item = ExtResource( 9 )
+chance = 50.0
+
+[node name="Egg-Groups" type="Node" parent="."]
+
+[node name="ditto" type="Node" parent="Egg-Groups" instance=ExtResource( 10 )]
+script = ExtResource( 11 )
+
+[node name="Moves" type="Node" parent="."]
+
+[node name="transform" type="Node" parent="Moves"]
+script = ExtResource( 12 )
+move = ExtResource( 13 )
+level = 1
+egg = false
+tm = false

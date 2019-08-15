@@ -60,7 +60,7 @@
 [node name="golbat" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 42.0
+national_dex_nr = 42
 hp = 75
 attack = 80
 defense = 70
@@ -81,6 +81,10 @@ shape = null
 dex_entry = "Every once in a while, you’ll see a Golbat that’s
 missing some fangs. This happens when hunger
 drives it to try biting a Steel-type Pokémon."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -440,4 +444,3 @@ move = ExtResource( 56 )
 level = 0
 egg = false
 tm = true
-

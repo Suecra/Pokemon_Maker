@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Source/Data/Pokemon.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Type/normal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Data/Type.gd" type="Script" id=3]
+[ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=4]
+[ext_resource path="res://Source/Data/Ability/moody.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Source/Data/Ability/technician.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Source/Data/Ability/own-tempo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Data/Egg-Group/ground.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Source/Data/EggGroup.gd" type="Script" id=9]
+[ext_resource path="res://Source/Data/LearnableMove.gd" type="Script" id=10]
+[ext_resource path="res://Source/Data/Move/sketch.tscn" type="PackedScene" id=11]
+
+[node name="smeargle" type="Node"]
+script = ExtResource( 1 )
+regional_dex_nr = 0
+national_dex_nr = 235
+hp = 55
+attack = 20
+defense = 35
+special_attack = 20
+special_defense = 45
+speed = 75
+catch_rate = 45
+happiness = 70
+gender_chance = null
+egg_cycles = 20
+base_xp = 88
+growth_rate = null
+category = "Painter Pokémon"
+height = 12.0
+weight = 580.0
+color = null
+shape = null
+dex_entry = "The fluid of Smeargle’s tail secretions changes
+in the intensity of its hue as the Pokémon’s
+emotions change."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
+
+[node name="Types" type="Node" parent="."]
+
+[node name="normal" type="Node" parent="Types" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+id = 0
+very_effective = 0
+neutral = -417
+not_very_effective = 288
+no_effect = 128
+
+[node name="Abilities" type="Node" parent="."]
+
+[node name="moody" type="Node" parent="Abilities"]
+script = ExtResource( 4 )
+ability = ExtResource( 5 )
+hidden_ability = true
+
+[node name="technician" type="Node" parent="Abilities"]
+script = ExtResource( 4 )
+ability = ExtResource( 6 )
+hidden_ability = false
+
+[node name="own-tempo" type="Node" parent="Abilities"]
+script = ExtResource( 4 )
+ability = ExtResource( 7 )
+hidden_ability = false
+
+[node name="Egg-Groups" type="Node" parent="."]
+
+[node name="ground" type="Node" parent="Egg-Groups" instance=ExtResource( 8 )]
+script = ExtResource( 9 )
+
+[node name="Moves" type="Node" parent="."]
+
+[node name="sketch" type="Node" parent="Moves"]
+script = ExtResource( 10 )
+move = ExtResource( 11 )
+level = 91
+egg = false
+tm = false

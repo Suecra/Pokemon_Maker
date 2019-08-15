@@ -70,7 +70,7 @@
 [node name="zubat" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 41.0
+national_dex_nr = 41
 hp = 40
 attack = 45
 defense = 35
@@ -91,6 +91,10 @@ shape = null
 dex_entry = "It has no eyeballs, so it can’t see. It checks its
 surroundings via the ultrasonic waves it emits
 from its mouth."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -520,4 +524,3 @@ move = ExtResource( 66 )
 level = 0
 egg = true
 tm = false
-

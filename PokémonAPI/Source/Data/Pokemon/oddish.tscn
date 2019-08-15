@@ -65,7 +65,7 @@
 [node name="oddish" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 43.0
+national_dex_nr = 43
 hp = 45
 attack = 50
 defense = 55
@@ -87,6 +87,10 @@ dex_entry = "Oddish searches for fertile, nutrient-rich soil, then plants itself
 During the daytime, while it is planted, this Pokémon’s feet
 are thought to change shape and become similar to the roots
 of trees."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -474,4 +478,3 @@ move = ExtResource( 61 )
 level = 0
 egg = true
 tm = false
-

@@ -55,7 +55,7 @@
 [node name="ivysaur" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 2.0
+national_dex_nr = 2
 hp = 60
 attack = 62
 defense = 63
@@ -77,6 +77,10 @@ dex_entry = "There is a bud on this Pokémon’s back. To support its weight,
 Ivysaur’s legs and trunk grow thick and strong.
 If it starts spending more time lying in the sunlight,
 it’s a sign that the bud will bloom into a large flower soon."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -397,4 +401,3 @@ move = ExtResource( 51 )
 level = 0
 egg = false
 tm = true
-

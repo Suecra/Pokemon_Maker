@@ -58,7 +58,7 @@
 [node name="pidgey" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 16.0
+national_dex_nr = 16
 hp = 40
 attack = 45
 defense = 40
@@ -79,6 +79,10 @@ shape = null
 dex_entry = "Pidgey has an extremely sharp sense of direction.
 It is capable of unerringly returning home to its nest,
 however far it may be removed from its familiar surroundings."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -422,4 +426,3 @@ move = ExtResource( 54 )
 level = 0
 egg = false
 tm = true
-

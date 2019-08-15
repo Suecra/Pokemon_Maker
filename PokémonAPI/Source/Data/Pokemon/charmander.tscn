@@ -1,7 +1,7 @@
 [gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://Source/Data/Pokemon.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Pokemon_Sprites/Charmander.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Sprite_Collections/BW/Charmander.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Source/Data/Type/fire.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=4]
 [ext_resource path="res://Source/Data/Ability/solar-power.tscn" type="PackedScene" id=5]
@@ -68,6 +68,7 @@
 
 [node name="charmander" type="Node"]
 script = ExtResource( 1 )
+national_dex_nr = 4
 hp = 39
 attack = 52
 defense = 43
@@ -85,7 +86,7 @@ dex_entry = "The flame that burns at the tip of its tail is an indication
 of its emotions. The flame wavers when Charmander
 is enjoying itself. If the Pokémon becomes enraged,
 the flame burns fiercely."
-sprite = ExtResource( 2 )
+sprite_collection = ExtResource( 2 )
 
 [node name="Types" type="Node" parent="."]
 

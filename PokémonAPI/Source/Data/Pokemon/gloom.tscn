@@ -56,7 +56,7 @@
 [node name="gloom" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 44.0
+national_dex_nr = 44
 hp = 60
 attack = 65
 defense = 70
@@ -77,6 +77,10 @@ shape = null
 dex_entry = "From its mouth Gloom drips honey that smells absolutely
 horrible. Apparently, it loves the horrid stench. It sniffs the
 noxious fumes and then drools even more of its honey."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -401,4 +405,3 @@ move = ExtResource( 52 )
 level = 0
 egg = false
 tm = true
-

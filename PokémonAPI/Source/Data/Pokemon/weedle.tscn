@@ -17,7 +17,7 @@
 [node name="weedle" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 13.0
+national_dex_nr = 13
 hp = 40
 attack = 35
 defense = 30
@@ -38,6 +38,10 @@ shape = null
 dex_entry = "Weedle has an extremely acute sense of smell. It is capable
 of distinguishing its favorite kinds of leaves from those it
 dislikes just by sniffing with its big red proboscis (nose)."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -96,4 +100,3 @@ move = ExtResource( 13 )
 level = 9
 egg = false
 tm = false
-

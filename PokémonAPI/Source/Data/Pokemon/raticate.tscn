@@ -65,7 +65,7 @@
 [node name="raticate" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 20.0
+national_dex_nr = 20
 hp = 55
 attack = 81
 defense = 60
@@ -86,6 +86,10 @@ shape = null
 dex_entry = "People say that it fled from its enemies by
 using its small webbed hind feet to swim
 from island to island in Alola."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -466,4 +470,3 @@ move = ExtResource( 61 )
 level = 0
 egg = false
 tm = true
-

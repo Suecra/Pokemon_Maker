@@ -52,7 +52,7 @@
 [node name="ninetales" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 38.0
+national_dex_nr = 38
 hp = 73
 attack = 76
 defense = 75
@@ -73,6 +73,10 @@ shape = null
 dex_entry = "It is vindictive and relentless by nature.
 Those who cross it even once will be cursed for
 a thousand years, along with their descendants."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -366,4 +370,3 @@ move = ExtResource( 48 )
 level = 0
 egg = false
 tm = true
-

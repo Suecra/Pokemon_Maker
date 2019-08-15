@@ -60,7 +60,7 @@
 [node name="beedrill" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 15.0
+national_dex_nr = 15
 hp = 65
 attack = 90
 defense = 40
@@ -81,6 +81,10 @@ shape = null
 dex_entry = "Beedrill is extremely territorial. No one should ever approach
 its nest—this is for their own safety. If angered, they will attack
 in a furious swarm."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -433,4 +437,3 @@ move = ExtResource( 56 )
 level = 0
 egg = false
 tm = true
-

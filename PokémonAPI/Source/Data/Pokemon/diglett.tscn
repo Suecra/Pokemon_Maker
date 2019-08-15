@@ -64,7 +64,7 @@
 [node name="diglett" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 50.0
+national_dex_nr = 50
 hp = 10
 attack = 55
 defense = 25
@@ -85,6 +85,10 @@ shape = null
 dex_entry = "It travels through tunnels that it digs
 underground. It hates sunlight, so it comes
 out only after the sun goes down."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -462,4 +466,3 @@ move = ExtResource( 60 )
 level = 0
 egg = false
 tm = true
-

@@ -16,7 +16,7 @@
 [node name="caterpie" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 10.0
+national_dex_nr = 10
 hp = 45
 attack = 30
 defense = 35
@@ -37,6 +37,10 @@ shape = null
 dex_entry = "Perhaps because it would like to grow up
 quickly, it has a voracious appetite, eating
 a hundred leaves a day."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -87,4 +91,3 @@ move = ExtResource( 12 )
 level = 9
 egg = false
 tm = false
-

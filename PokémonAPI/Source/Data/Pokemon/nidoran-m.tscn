@@ -68,7 +68,7 @@
 [node name="nidoran-m" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 32.0
+national_dex_nr = 32
 hp = 46
 attack = 57
 defense = 40
@@ -89,6 +89,10 @@ shape = null
 dex_entry = "Nidoran♂ has developed muscles for moving its ears. Thanks
 to them, the ears can be freely moved in any direction. Even
 the slightest sound does not escape this Pokémon’s notice."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -497,4 +501,3 @@ move = ExtResource( 64 )
 level = 0
 egg = false
 tm = true
-

@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Source/Data/Pokemon.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Type/steel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Data/Type.gd" type="Script" id=3]
+[ext_resource path="res://Source/Data/Type/psychic.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=5]
+[ext_resource path="res://Source/Data/Ability/light-metal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Source/Data/Ability/clear-body.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Data/WildPokemonItem.gd" type="Script" id=8]
+[ext_resource path="res://Source/Data/Item/metal-coat.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Source/Data/Egg-Group/mineral.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Source/Data/EggGroup.gd" type="Script" id=11]
+[ext_resource path="res://Source/Data/LearnableMove.gd" type="Script" id=12]
+[ext_resource path="res://Source/Data/Move/take-down.tscn" type="PackedScene" id=13]
+
+[node name="beldum" type="Node"]
+script = ExtResource( 1 )
+regional_dex_nr = 0
+national_dex_nr = 374
+hp = 40
+attack = 55
+defense = 80
+special_attack = 35
+special_defense = 60
+speed = 30
+catch_rate = 3
+happiness = 35
+gender_chance = null
+egg_cycles = 40
+base_xp = 60
+growth_rate = null
+category = "Iron Ball Pokémon"
+height = 6.0
+weight = 952.0
+color = null
+shape = null
+dex_entry = "Instead of blood, magnetism flows through its
+body. When it’s feeling bad, try giving it
+a magnet."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
+
+[node name="Types" type="Node" parent="."]
+
+[node name="steel" type="Node" parent="Types" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+id = 8
+very_effective = 147488
+neutral = -153377
+not_very_effective = 5888
+no_effect = 0
+
+[node name="psychic" type="Node" parent="Types" instance=ExtResource( 4 )]
+script = ExtResource( 3 )
+id = 13
+very_effective = 10
+neutral = -73995
+not_very_effective = 8448
+no_effect = 65536
+
+[node name="Abilities" type="Node" parent="."]
+
+[node name="light-metal" type="Node" parent="Abilities"]
+script = ExtResource( 5 )
+ability = ExtResource( 6 )
+hidden_ability = true
+
+[node name="clear-body" type="Node" parent="Abilities"]
+script = ExtResource( 5 )
+ability = ExtResource( 7 )
+hidden_ability = false
+
+[node name="Items" type="Node" parent="."]
+
+[node name="metal-coat" type="Node" parent="Items"]
+script = ExtResource( 8 )
+item = ExtResource( 9 )
+chance = 5.0
+
+[node name="Egg-Groups" type="Node" parent="."]
+
+[node name="mineral" type="Node" parent="Egg-Groups" instance=ExtResource( 10 )]
+script = ExtResource( 11 )
+
+[node name="Moves" type="Node" parent="."]
+
+[node name="take-down" type="Node" parent="Moves"]
+script = ExtResource( 12 )
+move = ExtResource( 13 )
+level = 1
+egg = false
+tm = false

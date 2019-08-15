@@ -73,7 +73,7 @@
 [node name="nidoking" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 34.0
+national_dex_nr = 34
 hp = 81
 attack = 102
 defense = 77
@@ -94,6 +94,10 @@ shape = null
 dex_entry = "Nidoking’s thick tail packs enormously destructive power.
 With one swing, it can topple a metal transmission tower. Once
 this Pokémon goes on a rampage, there is no stopping it."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -538,4 +542,3 @@ move = ExtResource( 69 )
 level = 0
 egg = false
 tm = true
-

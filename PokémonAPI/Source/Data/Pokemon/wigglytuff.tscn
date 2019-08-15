@@ -67,7 +67,7 @@
 [node name="wigglytuff" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 40.0
+national_dex_nr = 40
 hp = 140
 attack = 70
 defense = 45
@@ -88,6 +88,10 @@ shape = null
 dex_entry = "Thanks to its bouncy body and fine fur,
 this Pokémon is sought after. Holding one
 in your arms while you sleep feels great."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -485,4 +489,3 @@ move = ExtResource( 63 )
 level = 0
 egg = false
 tm = true
-

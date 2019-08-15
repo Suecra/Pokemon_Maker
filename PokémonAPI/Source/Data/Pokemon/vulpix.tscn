@@ -66,7 +66,7 @@
 [node name="vulpix" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 37.0
+national_dex_nr = 37
 hp = 38
 attack = 41
 defense = 40
@@ -87,6 +87,10 @@ shape = null
 dex_entry = "Its beautiful tails have made it very popular.
 However, if it’s not brushed diligently, it will
 be a mass of tangles before you know it."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -478,4 +482,3 @@ move = ExtResource( 62 )
 level = 9
 egg = false
 tm = false
-

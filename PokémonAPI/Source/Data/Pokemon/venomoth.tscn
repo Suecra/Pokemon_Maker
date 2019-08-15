@@ -63,7 +63,7 @@
 [node name="venomoth" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 49.0
+national_dex_nr = 49
 hp = 70
 attack = 65
 defense = 60
@@ -84,6 +84,10 @@ shape = null
 dex_entry = "Venomoth is nocturnal—it is a Pokémon that only becomes
 active at night. Its favorite prey are small insects that gather
 around streetlights, attracted by the light in the darkness."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -453,4 +457,3 @@ move = ExtResource( 59 )
 level = 0
 egg = false
 tm = true
-

@@ -13,7 +13,7 @@
 [node name="metapod" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 11.0
+national_dex_nr = 11
 hp = 50
 attack = 20
 defense = 55
@@ -34,6 +34,10 @@ shape = null
 dex_entry = "Its shell is filled with a thick liquid. All of the
 cells throughout its body are being rebuilt in
 preparation for evolution."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -65,4 +69,3 @@ move = ExtResource( 9 )
 level = 1
 egg = false
 tm = false
-

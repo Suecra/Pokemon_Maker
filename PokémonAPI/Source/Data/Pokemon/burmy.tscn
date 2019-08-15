@@ -1,0 +1,100 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Source/Data/Pokemon.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Type/bug.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Data/Type.gd" type="Script" id=3]
+[ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=4]
+[ext_resource path="res://Source/Data/Ability/overcoat.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Source/Data/Ability/shed-skin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Source/Data/Egg-Group/bug.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Data/EggGroup.gd" type="Script" id=8]
+[ext_resource path="res://Source/Data/LearnableMove.gd" type="Script" id=9]
+[ext_resource path="res://Source/Data/Move/tackle.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Source/Data/Move/protect.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Source/Data/Move/hidden-power.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Source/Data/Move/bug-bite.tscn" type="PackedScene" id=13]
+
+[node name="burmy" type="Node"]
+script = ExtResource( 1 )
+regional_dex_nr = 0
+national_dex_nr = 412
+hp = 40
+attack = 29
+defense = 45
+special_attack = 29
+special_defense = 45
+speed = 36
+catch_rate = 120
+happiness = 70
+gender_chance = null
+egg_cycles = 15
+base_xp = 45
+growth_rate = null
+category = "Bagworm Pokémon"
+height = 2.0
+weight = 34.0
+color = null
+shape = null
+dex_entry = "If its cloak is broken in battle, it quickly remakes
+the cloak with materials nearby."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
+
+[node name="Types" type="Node" parent="."]
+
+[node name="bug" type="Node" parent="Types" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+id = 6
+very_effective = 75776
+neutral = -207759
+not_very_effective = 131982
+no_effect = 0
+
+[node name="Abilities" type="Node" parent="."]
+
+[node name="overcoat" type="Node" parent="Abilities"]
+script = ExtResource( 4 )
+ability = ExtResource( 5 )
+hidden_ability = true
+
+[node name="shed-skin" type="Node" parent="Abilities"]
+script = ExtResource( 4 )
+ability = ExtResource( 6 )
+hidden_ability = false
+
+[node name="Egg-Groups" type="Node" parent="."]
+
+[node name="bug" type="Node" parent="Egg-Groups" instance=ExtResource( 7 )]
+script = ExtResource( 8 )
+
+[node name="Moves" type="Node" parent="."]
+
+[node name="tackle" type="Node" parent="Moves"]
+script = ExtResource( 9 )
+move = ExtResource( 10 )
+level = 10
+egg = false
+tm = false
+
+[node name="protect" type="Node" parent="Moves"]
+script = ExtResource( 9 )
+move = ExtResource( 11 )
+level = 0
+egg = false
+tm = true
+
+[node name="hidden-power" type="Node" parent="Moves"]
+script = ExtResource( 9 )
+move = ExtResource( 12 )
+level = 0
+egg = false
+tm = true
+
+[node name="bug-bite" type="Node" parent="Moves"]
+script = ExtResource( 9 )
+move = ExtResource( 13 )
+level = 15
+egg = false
+tm = false

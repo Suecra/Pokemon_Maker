@@ -51,7 +51,7 @@
 [node name="pidgeotto" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 17.0
+national_dex_nr = 17
 hp = 63
 attack = 60
 defense = 55
@@ -73,6 +73,10 @@ dex_entry = "Pidgeotto claims a large area as its own territory. This
 Pokémon flies around, patrolling its living space. If its territory
 is violated, it shows no mercy in thoroughly punishing the foe
 with its sharp claws."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -367,4 +371,3 @@ move = ExtResource( 47 )
 level = 0
 egg = false
 tm = true
-

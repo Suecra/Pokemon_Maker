@@ -71,12 +71,14 @@ func get_species(name):
 	species_list.append(result)
 
 func get_gender_chance(name: String):
+	return null
 	if !gender_chances.has(name):
 		var gender_chance = load("res://Source/Data/Gender-Chance/" + name + ".tscn")
 		gender_chances[name] = gender_chance
 	return gender_chances[name]
 
 func get_growth_rate(name: String):
+	return null
 	if !growth_rates.has(name):
 		var growth_rate = load("res://Source/Data/Growth-Rate/" + name + ".tscn")
 		growth_rates[name] = growth_rate
@@ -84,9 +86,9 @@ func get_growth_rate(name: String):
 
 func add_type(item, name: String, slot: int):
 	var node = get_or_add_node(item, "Types")
-	var type_node = node.get_node(name)
-	if type_node != null:
-		node.remove_child(type_node)
+	var type_node
+	if node.find_node(name):
+		node.remove_child(node.get_node(name))
 	var type
 	if types.has(name):
 		type = types[name]
@@ -100,9 +102,9 @@ func add_type(item, name: String, slot: int):
 
 func add_ability(item, name: String, hidden: bool):
 	var node = get_or_add_node(item, "Abilities")
-	var ability_node = node.get_node(name)
-	if ability_node != null:
-		node.remove_child(ability_node)
+	var ability_node
+	if node.find_node(name):
+		node.remove_child(node.get_node(name))
 	var ability
 	if abilities.has(name):
 		ability = abilities[name]
@@ -144,9 +146,9 @@ func add_wild_pokemon_item(item, index: int):
 
 func add_egg_group(item, name: String):
 	var node = get_or_add_node(item, "Egg-Groups")
-	var egg_group_node = node.get_node(name)
-	if egg_group_node != null:
-		node.remove_child(egg_group_node)
+	var egg_group_node
+	if node.find_node(name):
+		node.remove_child(node.get_node(name))
 	var egg_group
 	if egg_groups.has(name):
 		egg_group = egg_groups[name]
@@ -160,8 +162,9 @@ func add_egg_group(item, name: String):
 func add_move(item, index: int):
 	var node = get_or_add_node(item, "Moves")
 	var name = api_item["moves"][index]["move"]["name"]
-	var move_node = node.get_node(name)
-	if move_node != null:
+	var move_node
+	if node.has_node(name):
+		move_node = node.get_node(name)
 		node.remove_child(move_node)
 	var level = -1
 	var method

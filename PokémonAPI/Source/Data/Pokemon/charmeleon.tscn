@@ -56,7 +56,7 @@
 [node name="charmeleon" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 5.0
+national_dex_nr = 5
 hp = 58
 attack = 64
 defense = 58
@@ -78,6 +78,10 @@ dex_entry = "Charmeleon mercilessly destroys its foes using its sharp
 claws. If it encounters a strong foe, it turns aggressive.
 In this excited state, the flame at the tip of its tail flares with
 a bluish white color."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -404,4 +408,3 @@ move = ExtResource( 52 )
 level = 0
 egg = false
 tm = true
-

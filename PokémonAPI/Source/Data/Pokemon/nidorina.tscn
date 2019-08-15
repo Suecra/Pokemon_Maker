@@ -54,7 +54,7 @@
 [node name="nidorina" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 30.0
+national_dex_nr = 30
 hp = 70
 attack = 62
 defense = 67
@@ -76,6 +76,10 @@ dex_entry = "When Nidorina are with their friends or family, they keep
 their barbs tucked away to prevent hurting each other.
 This Pokémon appears to become nervous if separated
 from the others."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -390,4 +394,3 @@ move = ExtResource( 50 )
 level = 0
 egg = false
 tm = true
-

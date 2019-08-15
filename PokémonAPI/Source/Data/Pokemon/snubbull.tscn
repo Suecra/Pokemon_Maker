@@ -1,0 +1,591 @@
+[gd_scene load_steps=76 format=2]
+
+[ext_resource path="res://Source/Data/Pokemon.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Type/fairy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Data/Type.gd" type="Script" id=3]
+[ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=4]
+[ext_resource path="res://Source/Data/Ability/rattled.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Source/Data/Ability/run-away.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Source/Data/Ability/intimidate.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Data/Egg-Group/fairy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Source/Data/EggGroup.gd" type="Script" id=9]
+[ext_resource path="res://Source/Data/Egg-Group/ground.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Source/Data/LearnableMove.gd" type="Script" id=11]
+[ext_resource path="res://Source/Data/Move/headbutt.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Source/Data/Move/tackle.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Source/Data/Move/double-edge.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Source/Data/Move/tail-whip.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Source/Data/Move/bite.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Source/Data/Move/roar.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Source/Data/Move/flamethrower.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Source/Data/Move/solar-beam.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Source/Data/Move/thunderbolt.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Source/Data/Move/thunder-wave.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Source/Data/Move/thunder.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Source/Data/Move/earthquake.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Source/Data/Move/toxic.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Source/Data/Move/rage.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Source/Data/Move/mimic.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Source/Data/Move/double-team.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Source/Data/Move/reflect.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Source/Data/Move/metronome.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Source/Data/Move/lick.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Source/Data/Move/fire-blast.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Source/Data/Move/rest.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Source/Data/Move/substitute.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Source/Data/Move/thief.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Source/Data/Move/snore.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Source/Data/Move/protect.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Source/Data/Move/scary-face.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Source/Data/Move/feint-attack.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Source/Data/Move/sludge-bomb.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Source/Data/Move/charm.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Source/Data/Move/swagger.tscn" type="PackedScene" id=41]
+[ext_resource path="res://Source/Data/Move/attract.tscn" type="PackedScene" id=42]
+[ext_resource path="res://Source/Data/Move/sleep-talk.tscn" type="PackedScene" id=43]
+[ext_resource path="res://Source/Data/Move/heal-bell.tscn" type="PackedScene" id=44]
+[ext_resource path="res://Source/Data/Move/return.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Source/Data/Move/present.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Source/Data/Move/frustration.tscn" type="PackedScene" id=47]
+[ext_resource path="res://Source/Data/Move/hidden-power.tscn" type="PackedScene" id=48]
+[ext_resource path="res://Source/Data/Move/rain-dance.tscn" type="PackedScene" id=49]
+[ext_resource path="res://Source/Data/Move/sunny-day.tscn" type="PackedScene" id=50]
+[ext_resource path="res://Source/Data/Move/crunch.tscn" type="PackedScene" id=51]
+[ext_resource path="res://Source/Data/Move/shadow-ball.tscn" type="PackedScene" id=52]
+[ext_resource path="res://Source/Data/Move/torment.tscn" type="PackedScene" id=53]
+[ext_resource path="res://Source/Data/Move/facade.tscn" type="PackedScene" id=54]
+[ext_resource path="res://Source/Data/Move/focus-punch.tscn" type="PackedScene" id=55]
+[ext_resource path="res://Source/Data/Move/smelling-salts.tscn" type="PackedScene" id=56]
+[ext_resource path="res://Source/Data/Move/taunt.tscn" type="PackedScene" id=57]
+[ext_resource path="res://Source/Data/Move/brick-break.tscn" type="PackedScene" id=58]
+[ext_resource path="res://Source/Data/Move/fake-tears.tscn" type="PackedScene" id=59]
+[ext_resource path="res://Source/Data/Move/overheat.tscn" type="PackedScene" id=60]
+[ext_resource path="res://Source/Data/Move/bulk-up.tscn" type="PackedScene" id=61]
+[ext_resource path="res://Source/Data/Move/close-combat.tscn" type="PackedScene" id=62]
+[ext_resource path="res://Source/Data/Move/payback.tscn" type="PackedScene" id=63]
+[ext_resource path="res://Source/Data/Move/fling.tscn" type="PackedScene" id=64]
+[ext_resource path="res://Source/Data/Move/thunder-fang.tscn" type="PackedScene" id=65]
+[ext_resource path="res://Source/Data/Move/ice-fang.tscn" type="PackedScene" id=66]
+[ext_resource path="res://Source/Data/Move/fire-fang.tscn" type="PackedScene" id=67]
+[ext_resource path="res://Source/Data/Move/round.tscn" type="PackedScene" id=68]
+[ext_resource path="res://Source/Data/Move/bulldoze.tscn" type="PackedScene" id=69]
+[ext_resource path="res://Source/Data/Move/work-up.tscn" type="PackedScene" id=70]
+[ext_resource path="res://Source/Data/Move/wild-charge.tscn" type="PackedScene" id=71]
+[ext_resource path="res://Source/Data/Move/snarl.tscn" type="PackedScene" id=72]
+[ext_resource path="res://Source/Data/Move/play-rough.tscn" type="PackedScene" id=73]
+[ext_resource path="res://Source/Data/Move/confide.tscn" type="PackedScene" id=74]
+[ext_resource path="res://Source/Data/Move/dazzling-gleam.tscn" type="PackedScene" id=75]
+
+[node name="snubbull" type="Node"]
+script = ExtResource( 1 )
+regional_dex_nr = 0
+national_dex_nr = 209
+hp = 60
+attack = 80
+defense = 50
+special_attack = 40
+special_defense = 40
+speed = 30
+catch_rate = 190
+happiness = 70
+gender_chance = null
+egg_cycles = 20
+base_xp = 60
+growth_rate = null
+category = "Fairy Pokémon"
+height = 6.0
+weight = 78.0
+color = null
+shape = null
+dex_entry = "It grows close to others easily and is also easily
+spoiled. The disparity between its face and its
+actions makes many young people wild about it."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
+
+[node name="Types" type="Node" parent="."]
+
+[node name="fairy" type="Node" parent="Types" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+id = 17
+very_effective = 98306
+neutral = -99083
+not_very_effective = 776
+no_effect = 0
+
+[node name="Abilities" type="Node" parent="."]
+
+[node name="rattled" type="Node" parent="Abilities"]
+script = ExtResource( 4 )
+ability = ExtResource( 5 )
+hidden_ability = true
+
+[node name="run-away" type="Node" parent="Abilities"]
+script = ExtResource( 4 )
+ability = ExtResource( 6 )
+hidden_ability = false
+
+[node name="intimidate" type="Node" parent="Abilities"]
+script = ExtResource( 4 )
+ability = ExtResource( 7 )
+hidden_ability = false
+
+[node name="Egg-Groups" type="Node" parent="."]
+
+[node name="fairy" type="Node" parent="Egg-Groups" instance=ExtResource( 8 )]
+script = ExtResource( 9 )
+
+[node name="ground" type="Node" parent="Egg-Groups" instance=ExtResource( 10 )]
+script = ExtResource( 9 )
+
+[node name="Moves" type="Node" parent="."]
+
+[node name="headbutt" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 12 )
+level = 19
+egg = false
+tm = false
+
+[node name="tackle" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 13 )
+level = 1
+egg = false
+tm = false
+
+[node name="double-edge" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 14 )
+level = 0
+egg = true
+tm = false
+
+[node name="tail-whip" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 15 )
+level = 1
+egg = false
+tm = false
+
+[node name="bite" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 16 )
+level = 7
+egg = false
+tm = false
+
+[node name="roar" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 17 )
+level = 0
+egg = false
+tm = true
+
+[node name="flamethrower" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 18 )
+level = 0
+egg = false
+tm = true
+
+[node name="solar-beam" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 19 )
+level = 0
+egg = false
+tm = true
+
+[node name="thunderbolt" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 20 )
+level = 0
+egg = false
+tm = true
+
+[node name="thunder-wave" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 21 )
+level = 0
+egg = false
+tm = true
+
+[node name="thunder" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 22 )
+level = 0
+egg = false
+tm = true
+
+[node name="earthquake" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 23 )
+level = 0
+egg = false
+tm = true
+
+[node name="toxic" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 24 )
+level = 0
+egg = false
+tm = true
+
+[node name="rage" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 25 )
+level = 31
+egg = false
+tm = false
+
+[node name="mimic" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 26 )
+level = 0
+egg = true
+tm = false
+
+[node name="double-team" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 27 )
+level = 0
+egg = false
+tm = true
+
+[node name="reflect" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 28 )
+level = 0
+egg = false
+tm = true
+
+[node name="metronome" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 29 )
+level = 0
+egg = true
+tm = false
+
+[node name="lick" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 30 )
+level = 13
+egg = false
+tm = false
+
+[node name="fire-blast" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 31 )
+level = 0
+egg = false
+tm = true
+
+[node name="rest" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 32 )
+level = 0
+egg = false
+tm = true
+
+[node name="substitute" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 33 )
+level = 0
+egg = false
+tm = true
+
+[node name="thief" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 34 )
+level = 0
+egg = false
+tm = true
+
+[node name="snore" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 35 )
+level = 0
+egg = true
+tm = false
+
+[node name="protect" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 36 )
+level = 0
+egg = false
+tm = true
+
+[node name="scary-face" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 37 )
+level = 1
+egg = false
+tm = false
+
+[node name="feint-attack" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 38 )
+level = 0
+egg = true
+tm = false
+
+[node name="sludge-bomb" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 39 )
+level = 0
+egg = false
+tm = true
+
+[node name="charm" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 40 )
+level = 1
+egg = false
+tm = false
+
+[node name="swagger" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 41 )
+level = 0
+egg = false
+tm = true
+
+[node name="attract" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 42 )
+level = 0
+egg = false
+tm = true
+
+[node name="sleep-talk" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 43 )
+level = 0
+egg = false
+tm = true
+
+[node name="heal-bell" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 44 )
+level = 0
+egg = true
+tm = false
+
+[node name="return" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 45 )
+level = 0
+egg = false
+tm = true
+
+[node name="present" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 46 )
+level = 0
+egg = true
+tm = false
+
+[node name="frustration" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 47 )
+level = 0
+egg = false
+tm = true
+
+[node name="hidden-power" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 48 )
+level = 0
+egg = false
+tm = true
+
+[node name="rain-dance" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 49 )
+level = 0
+egg = false
+tm = true
+
+[node name="sunny-day" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 50 )
+level = 0
+egg = false
+tm = true
+
+[node name="crunch" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 51 )
+level = 0
+egg = true
+tm = false
+
+[node name="shadow-ball" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 52 )
+level = 0
+egg = false
+tm = true
+
+[node name="torment" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 53 )
+level = 0
+egg = false
+tm = true
+
+[node name="facade" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 54 )
+level = 0
+egg = false
+tm = true
+
+[node name="focus-punch" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 55 )
+level = 0
+egg = true
+tm = false
+
+[node name="smelling-salts" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 56 )
+level = 0
+egg = true
+tm = false
+
+[node name="taunt" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 57 )
+level = 0
+egg = false
+tm = true
+
+[node name="brick-break" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 58 )
+level = 0
+egg = false
+tm = true
+
+[node name="fake-tears" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 59 )
+level = 0
+egg = true
+tm = false
+
+[node name="overheat" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 60 )
+level = 0
+egg = false
+tm = true
+
+[node name="bulk-up" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 61 )
+level = 0
+egg = false
+tm = true
+
+[node name="close-combat" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 62 )
+level = 0
+egg = true
+tm = false
+
+[node name="payback" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 63 )
+level = 0
+egg = false
+tm = true
+
+[node name="fling" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 64 )
+level = 0
+egg = false
+tm = true
+
+[node name="thunder-fang" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 65 )
+level = 0
+egg = true
+tm = false
+
+[node name="ice-fang" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 66 )
+level = 0
+egg = true
+tm = false
+
+[node name="fire-fang" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 67 )
+level = 0
+egg = true
+tm = false
+
+[node name="round" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 68 )
+level = 0
+egg = false
+tm = true
+
+[node name="bulldoze" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 69 )
+level = 0
+egg = false
+tm = true
+
+[node name="work-up" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 70 )
+level = 0
+egg = false
+tm = true
+
+[node name="wild-charge" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 71 )
+level = 0
+egg = false
+tm = true
+
+[node name="snarl" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 72 )
+level = 0
+egg = false
+tm = true
+
+[node name="play-rough" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 73 )
+level = 37
+egg = false
+tm = false
+
+[node name="confide" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 74 )
+level = 0
+egg = false
+tm = true
+
+[node name="dazzling-gleam" type="Node" parent="Moves"]
+script = ExtResource( 11 )
+move = ExtResource( 75 )
+level = 0
+egg = false
+tm = true

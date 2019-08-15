@@ -75,7 +75,7 @@
 [node name="charizard" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 6.0
+national_dex_nr = 6
 hp = 78
 attack = 84
 defense = 78
@@ -97,6 +97,10 @@ dex_entry = "Charizard flies around the sky in search of powerful opponents.
 It breathes fire of such great heat that it melts anything.
 However, it never turns its fiery breath on any opponent
 weaker than itself."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -557,4 +561,3 @@ move = ExtResource( 71 )
 level = 0
 egg = false
 tm = true
-

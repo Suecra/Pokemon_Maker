@@ -70,7 +70,7 @@
 [node name="sandshrew" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 27.0
+national_dex_nr = 27
 hp = 50
 attack = 75
 defense = 85
@@ -91,6 +91,10 @@ shape = null
 dex_entry = "It lives in areas of limited rainfall. When danger
 approaches, it curls up into a ball to protect its
 soft stomach."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -510,4 +514,3 @@ move = ExtResource( 66 )
 level = 0
 egg = false
 tm = true
-

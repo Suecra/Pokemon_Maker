@@ -1,5 +1,7 @@
 extends Node
 
+const Utils = preload("res://Source/Scripts/Utils.gd")
+
 export(int) var regional_dex_nr
 export(int) var national_dex_nr
 
@@ -25,7 +27,7 @@ export(PackedScene) var shape
 
 export(String, MULTILINE) var dex_entry
 
-export(PackedScene) var sprite
-export(PackedScene) var back_sprite
-export(PackedScene) var shiny_sprite
-export(PackedScene) var shiny_back_sprite
+export(PackedScene) var sprite_collection
+
+func get_sprite_collection():
+	return Utils.unpack(self, sprite_collection, "Sprites")

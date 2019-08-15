@@ -70,6 +70,7 @@ func _process(delta):
 		close()
 
 func _ready():
+	set_process(false)
 	set_cursor(cursor)
 	cursor_node._hide()
 	._ready()

@@ -50,7 +50,7 @@
 [node name="vileplume" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 45.0
+national_dex_nr = 45
 hp = 75
 attack = 80
 defense = 85
@@ -71,6 +71,10 @@ shape = null
 dex_entry = "Vileplume has the world’s largest petals. They are used to
 attract prey that are then doused with toxic spores. Once the
 prey are immobilized, this Pokémon catches and devours them."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -353,4 +357,3 @@ move = ExtResource( 46 )
 level = 0
 egg = false
 tm = true
-

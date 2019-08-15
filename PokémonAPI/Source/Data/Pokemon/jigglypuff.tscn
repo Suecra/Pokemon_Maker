@@ -74,7 +74,7 @@
 [node name="jigglypuff" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 39.0
+national_dex_nr = 39
 hp = 115
 attack = 45
 defense = 20
@@ -95,6 +95,10 @@ shape = null
 dex_entry = "Recordings of Jigglypuff’s strange lullabies can
 be purchased from department stores. These
 CDs can be found near the bedding area."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -541,4 +545,3 @@ move = ExtResource( 70 )
 level = 0
 egg = false
 tm = true
-

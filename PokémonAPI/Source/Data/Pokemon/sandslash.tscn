@@ -65,7 +65,7 @@
 [node name="sandslash" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 28.0
+national_dex_nr = 28
 hp = 75
 attack = 100
 defense = 110
@@ -86,6 +86,10 @@ shape = null
 dex_entry = "Its claws and horns often break off. The broken
 claws and horns can be used to carve plows for
 tilling farm fields."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -468,4 +472,3 @@ move = ExtResource( 61 )
 level = 0
 egg = false
 tm = true
-

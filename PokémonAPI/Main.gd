@@ -4,8 +4,14 @@ const MessageBox = preload("res://Common/Textboxes/MessageBox.gd")
 const PrioritySorter = preload("res://Source/Scripts/Battle/PrioritySorter.gd")
 
 func _on_Button_button_down():
-	var text = "Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht hatte und mit der Beute verschwinden wollte! Hatte einer seiner"
-	yield($MessageBox.display(text), "completed")
+	#var text = "Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht hatte und mit der Beute verschwinden wollte! Hatte einer seiner"
+	#yield($MessageBox.display(text), "completed")
+	var arr = Input.get_connected_joypads()
+	for joypad in arr:
+		print(Input.get_joy_name(joypad))
+	print(Input.get_accelerometer())
+	print(Input.get_gyroscope())
+	print(Input.get_gravity())
 
 func _on_Button2_button_down():
 	var trainer = load("res://Scenes/TestTrainer.tscn").instance()

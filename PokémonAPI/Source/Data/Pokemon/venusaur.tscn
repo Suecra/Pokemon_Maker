@@ -1,7 +1,7 @@
 [gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Source/Data/Pokemon.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Pokemon_Sprites/Venusaur-Back.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Sprite_Collections/BW/Venusaur.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Source/Data/Type/grass.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Source/Data/Type/poison.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=5]
@@ -61,6 +61,7 @@
 
 [node name="venusaur" type="Node"]
 script = ExtResource( 1 )
+national_dex_nr = 3
 hp = 80
 attack = 82
 defense = 83
@@ -77,7 +78,7 @@ weight = 1000.0
 dex_entry = "There is a large flower on Venusaur’s back. The flower is said
 to take on vivid colors if it gets plenty of nutrition and sunlight.
 The flower’s aroma soothes the emotions of people."
-back_sprite = ExtResource( 2 )
+sprite_collection = ExtResource( 2 )
 
 [node name="Types" type="Node" parent="."]
 

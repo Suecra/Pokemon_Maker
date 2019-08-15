@@ -81,7 +81,7 @@
 [node name="clefairy" type="Node"]
 script = ExtResource( 1 )
 regional_dex_nr = 0
-national_dex_nr = 35.0
+national_dex_nr = 35
 hp = 70
 attack = 45
 defense = 48
@@ -102,6 +102,10 @@ shape = null
 dex_entry = "They’re popular, but they’re rare. Trainers who
 show them off recklessly may be targeted
 by thieves."
+sprite = null
+back_sprite = null
+shiny_sprite = null
+shiny_back_sprite = null
 
 [node name="Types" type="Node" parent="."]
 
@@ -594,4 +598,3 @@ move = ExtResource( 77 )
 level = 1
 egg = false
 tm = false
-
