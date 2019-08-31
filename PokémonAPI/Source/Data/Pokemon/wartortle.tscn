@@ -1,54 +1,72 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://Source/Data/Pokemon.gd" type="Script" id=1]
-[ext_resource path="res://Source/Data/Type/water.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Source/Data/Type.gd" type="Script" id=3]
-[ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=4]
-[ext_resource path="res://Source/Data/Ability/rain-dish.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Source/Data/Ability/torrent.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Source/Data/Egg-Group/water1.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Source/Data/EggGroup.gd" type="Script" id=8]
-[ext_resource path="res://Source/Data/Egg-Group/monster.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Source/Data/LearnableMove.gd" type="Script" id=10]
-[ext_resource path="res://Source/Data/Move/tackle.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Source/Data/Move/tail-whip.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Source/Data/Move/bite.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Source/Data/Move/water-gun.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Source/Data/Move/hydro-pump.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Source/Data/Move/surf.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Source/Data/Move/ice-beam.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Source/Data/Move/blizzard.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Source/Data/Move/toxic.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Source/Data/Move/double-team.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Source/Data/Move/withdraw.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Source/Data/Move/waterfall.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Source/Data/Move/skull-bash.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Source/Data/Move/bubble.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Source/Data/Move/rest.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Source/Data/Move/substitute.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Source/Data/Move/protect.tscn" type="PackedScene" id=27]
-[ext_resource path="res://Source/Data/Move/swagger.tscn" type="PackedScene" id=28]
-[ext_resource path="res://Source/Data/Move/attract.tscn" type="PackedScene" id=29]
-[ext_resource path="res://Source/Data/Move/sleep-talk.tscn" type="PackedScene" id=30]
-[ext_resource path="res://Source/Data/Move/return.tscn" type="PackedScene" id=31]
-[ext_resource path="res://Source/Data/Move/frustration.tscn" type="PackedScene" id=32]
-[ext_resource path="res://Source/Data/Move/rapid-spin.tscn" type="PackedScene" id=33]
-[ext_resource path="res://Source/Data/Move/hidden-power.tscn" type="PackedScene" id=34]
-[ext_resource path="res://Source/Data/Move/rain-dance.tscn" type="PackedScene" id=35]
-[ext_resource path="res://Source/Data/Move/hail.tscn" type="PackedScene" id=36]
-[ext_resource path="res://Source/Data/Move/facade.tscn" type="PackedScene" id=37]
-[ext_resource path="res://Source/Data/Move/brick-break.tscn" type="PackedScene" id=38]
-[ext_resource path="res://Source/Data/Move/rock-tomb.tscn" type="PackedScene" id=39]
-[ext_resource path="res://Source/Data/Move/iron-defense.tscn" type="PackedScene" id=40]
-[ext_resource path="res://Source/Data/Move/water-pulse.tscn" type="PackedScene" id=41]
-[ext_resource path="res://Source/Data/Move/gyro-ball.tscn" type="PackedScene" id=42]
-[ext_resource path="res://Source/Data/Move/fling.tscn" type="PackedScene" id=43]
-[ext_resource path="res://Source/Data/Move/aqua-tail.tscn" type="PackedScene" id=44]
-[ext_resource path="res://Source/Data/Move/round.tscn" type="PackedScene" id=45]
-[ext_resource path="res://Source/Data/Move/scald.tscn" type="PackedScene" id=46]
-[ext_resource path="res://Source/Data/Move/water-pledge.tscn" type="PackedScene" id=47]
-[ext_resource path="res://Source/Data/Move/work-up.tscn" type="PackedScene" id=48]
-[ext_resource path="res://Source/Data/Move/confide.tscn" type="PackedScene" id=49]
+[ext_resource path="res://Source/Scripts/Common/PokemonSpriteCollection.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Sprites/BW/0008_front.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Sprites/BW/0008_shiny_front.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Sprites/BW/0008_back.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Sprites/BW/0008_shiny_back.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Source/Data/Type/water.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Data/Type.gd" type="Script" id=8]
+[ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=9]
+[ext_resource path="res://Source/Data/Ability/rain-dish.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Source/Data/Ability/torrent.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Source/Data/Egg-Group/water1.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Source/Data/EggGroup.gd" type="Script" id=13]
+[ext_resource path="res://Source/Data/Egg-Group/monster.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Source/Data/LearnableMove.gd" type="Script" id=15]
+[ext_resource path="res://Source/Data/Move/tackle.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Source/Data/Move/tail-whip.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Source/Data/Move/bite.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Source/Data/Move/water-gun.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Source/Data/Move/hydro-pump.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Source/Data/Move/surf.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Source/Data/Move/ice-beam.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Source/Data/Move/blizzard.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Source/Data/Move/toxic.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Source/Data/Move/double-team.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Source/Data/Move/withdraw.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Source/Data/Move/waterfall.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Source/Data/Move/skull-bash.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Source/Data/Move/bubble.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Source/Data/Move/rest.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Source/Data/Move/substitute.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Source/Data/Move/protect.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Source/Data/Move/swagger.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Source/Data/Move/attract.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Source/Data/Move/sleep-talk.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Source/Data/Move/return.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Source/Data/Move/frustration.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Source/Data/Move/rapid-spin.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Source/Data/Move/hidden-power.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Source/Data/Move/rain-dance.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Source/Data/Move/hail.tscn" type="PackedScene" id=41]
+[ext_resource path="res://Source/Data/Move/facade.tscn" type="PackedScene" id=42]
+[ext_resource path="res://Source/Data/Move/brick-break.tscn" type="PackedScene" id=43]
+[ext_resource path="res://Source/Data/Move/rock-tomb.tscn" type="PackedScene" id=44]
+[ext_resource path="res://Source/Data/Move/iron-defense.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Source/Data/Move/water-pulse.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Source/Data/Move/gyro-ball.tscn" type="PackedScene" id=47]
+[ext_resource path="res://Source/Data/Move/fling.tscn" type="PackedScene" id=48]
+[ext_resource path="res://Source/Data/Move/aqua-tail.tscn" type="PackedScene" id=49]
+[ext_resource path="res://Source/Data/Move/round.tscn" type="PackedScene" id=50]
+[ext_resource path="res://Source/Data/Move/scald.tscn" type="PackedScene" id=51]
+[ext_resource path="res://Source/Data/Move/water-pledge.tscn" type="PackedScene" id=52]
+[ext_resource path="res://Source/Data/Move/work-up.tscn" type="PackedScene" id=53]
+[ext_resource path="res://Source/Data/Move/confide.tscn" type="PackedScene" id=54]
+
+[sub_resource type="PackedScene" id=1]
+_bundled = {
+"conn_count": 0,
+"conns": PoolIntArray(  ),
+"editable_instances": [  ],
+"names": PoolStringArray( "0008", "script", "front_sprite", "female_front_sprite", "shiny_front_sprite", "shiny_female_front_sprite", "back_sprite", "female_back_sprite", "shiny_back_sprite", "shiny_female_back_sprite", "Node" ),
+"node_count": 1,
+"node_paths": [  ],
+"nodes": PoolIntArray( -1, -1, 10, 0, -1, 9, 1, 0, 2, 1, 3, 2, 4, 3, 5, 2, 6, 4, 7, 2, 8, 5, 9, 2, 0 ),
+"variants": [ ExtResource( 2 ), ExtResource( 3 ), null, ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"version": 2
+}
 
 [node name="wartortle" type="Node"]
 script = ExtResource( 1 )
@@ -75,15 +93,12 @@ dex_entry = "Its tail is large and covered with a rich, thick fur. The tail
 becomes increasingly deeper in color as Wartortle ages.
 The scratches on its shell are evidence of this Pokémon’s
 toughness as a battler."
-sprite = null
-back_sprite = null
-shiny_sprite = null
-shiny_back_sprite = null
+sprite_collection = SubResource( 1 )
 
 [node name="Types" type="Node" parent="."]
 
-[node name="water" type="Node" parent="Types" instance=ExtResource( 2 )]
-script = ExtResource( 3 )
+[node name="water" type="Node" parent="Types" instance=ExtResource( 7 )]
+script = ExtResource( 8 )
 id = 10
 very_effective = 560
 neutral = -36401
@@ -93,294 +108,294 @@ no_effect = 0
 [node name="Abilities" type="Node" parent="."]
 
 [node name="rain-dish" type="Node" parent="Abilities"]
-script = ExtResource( 4 )
-ability = ExtResource( 5 )
+script = ExtResource( 9 )
+ability = ExtResource( 10 )
 hidden_ability = true
 
 [node name="torrent" type="Node" parent="Abilities"]
-script = ExtResource( 4 )
-ability = ExtResource( 6 )
+script = ExtResource( 9 )
+ability = ExtResource( 11 )
 hidden_ability = false
 
 [node name="Egg-Groups" type="Node" parent="."]
 
-[node name="water1" type="Node" parent="Egg-Groups" instance=ExtResource( 7 )]
-script = ExtResource( 8 )
+[node name="water1" type="Node" parent="Egg-Groups" instance=ExtResource( 12 )]
+script = ExtResource( 13 )
 
-[node name="monster" type="Node" parent="Egg-Groups" instance=ExtResource( 9 )]
-script = ExtResource( 8 )
+[node name="monster" type="Node" parent="Egg-Groups" instance=ExtResource( 14 )]
+script = ExtResource( 13 )
 
 [node name="Moves" type="Node" parent="."]
 
 [node name="tackle" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 11 )
+script = ExtResource( 15 )
+move = ExtResource( 16 )
 level = 1
 egg = false
 tm = false
 
 [node name="tail-whip" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 12 )
+script = ExtResource( 15 )
+move = ExtResource( 17 )
 level = 4
 egg = false
 tm = false
 
 [node name="bite" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 13 )
+script = ExtResource( 15 )
+move = ExtResource( 18 )
 level = 17
 egg = false
 tm = false
 
 [node name="water-gun" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 14 )
+script = ExtResource( 15 )
+move = ExtResource( 19 )
 level = 7
 egg = false
 tm = false
 
 [node name="hydro-pump" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 15 )
+script = ExtResource( 15 )
+move = ExtResource( 20 )
 level = 49
 egg = false
 tm = false
 
 [node name="surf" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 16 )
+script = ExtResource( 15 )
+move = ExtResource( 21 )
 level = 0
 egg = false
 tm = true
 
 [node name="ice-beam" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 17 )
-level = 0
-egg = false
-tm = true
-
-[node name="blizzard" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 18 )
-level = 0
-egg = false
-tm = true
-
-[node name="toxic" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 19 )
-level = 0
-egg = false
-tm = true
-
-[node name="double-team" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 20 )
-level = 0
-egg = false
-tm = true
-
-[node name="withdraw" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 21 )
-level = 10
-egg = false
-tm = false
-
-[node name="waterfall" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+script = ExtResource( 15 )
 move = ExtResource( 22 )
 level = 0
 egg = false
 tm = true
 
-[node name="skull-bash" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="blizzard" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 23 )
-level = 37
+level = 0
 egg = false
-tm = false
+tm = true
 
-[node name="bubble" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="toxic" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 24 )
-level = 13
+level = 0
 egg = false
-tm = false
+tm = true
 
-[node name="rest" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="double-team" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 25 )
 level = 0
 egg = false
 tm = true
 
-[node name="substitute" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="withdraw" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 26 )
-level = 0
+level = 10
 egg = false
-tm = true
+tm = false
 
-[node name="protect" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="waterfall" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 27 )
 level = 0
 egg = false
 tm = true
 
-[node name="swagger" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="skull-bash" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 28 )
-level = 0
+level = 37
 egg = false
-tm = true
+tm = false
 
-[node name="attract" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="bubble" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 29 )
-level = 0
+level = 13
 egg = false
-tm = true
+tm = false
 
-[node name="sleep-talk" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="rest" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 30 )
 level = 0
 egg = false
 tm = true
 
-[node name="return" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="substitute" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 31 )
 level = 0
 egg = false
 tm = true
 
-[node name="frustration" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="protect" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 32 )
 level = 0
 egg = false
 tm = true
 
-[node name="rapid-spin" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="swagger" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 33 )
-level = 21
+level = 0
 egg = false
-tm = false
+tm = true
 
-[node name="hidden-power" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="attract" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 34 )
 level = 0
 egg = false
 tm = true
 
-[node name="rain-dance" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="sleep-talk" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 35 )
-level = 45
+level = 0
 egg = false
-tm = false
+tm = true
 
-[node name="hail" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="return" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 36 )
 level = 0
 egg = false
 tm = true
 
-[node name="facade" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="frustration" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 37 )
 level = 0
 egg = false
 tm = true
 
-[node name="brick-break" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="rapid-spin" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 38 )
-level = 0
+level = 21
 egg = false
-tm = true
+tm = false
 
-[node name="rock-tomb" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="hidden-power" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 39 )
 level = 0
 egg = false
 tm = true
 
-[node name="iron-defense" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="rain-dance" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 40 )
-level = 41
+level = 45
 egg = false
 tm = false
 
-[node name="water-pulse" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="hail" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 41 )
-level = 29
+level = 0
 egg = false
-tm = false
+tm = true
 
-[node name="gyro-ball" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="facade" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 42 )
 level = 0
 egg = false
 tm = true
 
-[node name="fling" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="brick-break" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 43 )
 level = 0
 egg = false
 tm = true
 
-[node name="aqua-tail" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="rock-tomb" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 44 )
-level = 33
+level = 0
+egg = false
+tm = true
+
+[node name="iron-defense" type="Node" parent="Moves"]
+script = ExtResource( 15 )
+move = ExtResource( 45 )
+level = 41
 egg = false
 tm = false
 
-[node name="round" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 45 )
-level = 0
-egg = false
-tm = true
-
-[node name="scald" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="water-pulse" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 46 )
-level = 0
+level = 29
 egg = false
-tm = true
+tm = false
 
-[node name="water-pledge" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="gyro-ball" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 47 )
 level = 0
 egg = false
-tm = false
+tm = true
 
-[node name="work-up" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="fling" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 48 )
 level = 0
 egg = false
 tm = true
 
-[node name="confide" type="Node" parent="Moves"]
-script = ExtResource( 10 )
+[node name="aqua-tail" type="Node" parent="Moves"]
+script = ExtResource( 15 )
 move = ExtResource( 49 )
+level = 33
+egg = false
+tm = false
+
+[node name="round" type="Node" parent="Moves"]
+script = ExtResource( 15 )
+move = ExtResource( 50 )
+level = 0
+egg = false
+tm = true
+
+[node name="scald" type="Node" parent="Moves"]
+script = ExtResource( 15 )
+move = ExtResource( 51 )
+level = 0
+egg = false
+tm = true
+
+[node name="water-pledge" type="Node" parent="Moves"]
+script = ExtResource( 15 )
+move = ExtResource( 52 )
+level = 0
+egg = false
+tm = false
+
+[node name="work-up" type="Node" parent="Moves"]
+script = ExtResource( 15 )
+move = ExtResource( 53 )
+level = 0
+egg = false
+tm = true
+
+[node name="confide" type="Node" parent="Moves"]
+script = ExtResource( 15 )
+move = ExtResource( 54 )
 level = 0
 egg = false
 tm = true

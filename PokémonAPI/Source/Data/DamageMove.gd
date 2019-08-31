@@ -1,6 +1,7 @@
 extends "res://Source/Data/Move.gd"
 
 const BattleAnimationDamage = preload("res://Source/Scripts/Battle/Animations/BattleAnimationDamage.gd")
+const BattleAnimationFaint = preload("res://Source/Scripts/Battle/Animations/BattleAnimationFaint.gd")
 
 var crit_level
 var critical_hit
@@ -20,6 +21,7 @@ func _hit():
 			2: battle.register_message("Schaden zu steigen gegen Profis!")
 			4: battle.register_message("Schaden zu steigen gegen Profis!")
 		if targets[i].fainted():
+			register_faint(targets[i])
 			battle.register_message(targets[i].nickname + " has fainted!")
 
 func _get_damage(target: int):
@@ -85,3 +87,8 @@ func register_damage(target, damage):
 	damage_animation.status_bar = target.status_bar
 	damage_animation.damage = damage
 	turn.register_animation(damage_animation)
+
+func register_faint(target):
+	var animation = BattleAnimationFaint.new()
+	animation.pokemon = target
+	battle.current_turn.register_animation(animation)

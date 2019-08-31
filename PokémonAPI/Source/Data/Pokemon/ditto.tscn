@@ -1,18 +1,36 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Source/Data/Pokemon.gd" type="Script" id=1]
-[ext_resource path="res://Source/Data/Type/normal.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Source/Data/Type.gd" type="Script" id=3]
-[ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=4]
-[ext_resource path="res://Source/Data/Ability/imposter.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Source/Data/Ability/limber.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Source/Data/WildPokemonItem.gd" type="Script" id=7]
-[ext_resource path="res://Source/Data/Item/metal-powder.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Source/Data/Item/quick-powder.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Source/Data/Egg-Group/ditto.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Source/Data/EggGroup.gd" type="Script" id=11]
-[ext_resource path="res://Source/Data/LearnableMove.gd" type="Script" id=12]
-[ext_resource path="res://Source/Data/Move/transform.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Source/Scripts/Common/PokemonSpriteCollection.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Sprites/BW/0132_front.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Sprites/BW/0132_shiny_front.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Sprites/BW/0132_back.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Sprites/BW/0132_shiny_back.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Source/Data/Type/normal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Data/Type.gd" type="Script" id=8]
+[ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=9]
+[ext_resource path="res://Source/Data/Ability/imposter.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Source/Data/Ability/limber.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Source/Data/WildPokemonItem.gd" type="Script" id=12]
+[ext_resource path="res://Source/Data/Item/metal-powder.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Source/Data/Item/quick-powder.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Source/Data/Egg-Group/ditto.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Source/Data/EggGroup.gd" type="Script" id=16]
+[ext_resource path="res://Source/Data/LearnableMove.gd" type="Script" id=17]
+[ext_resource path="res://Source/Data/Move/transform.tscn" type="PackedScene" id=18]
+
+[sub_resource type="PackedScene" id=1]
+_bundled = {
+"conn_count": 0,
+"conns": PoolIntArray(  ),
+"editable_instances": [  ],
+"names": PoolStringArray( "0132", "script", "front_sprite", "female_front_sprite", "shiny_front_sprite", "shiny_female_front_sprite", "back_sprite", "female_back_sprite", "shiny_back_sprite", "shiny_female_back_sprite", "Node" ),
+"node_count": 1,
+"node_paths": [  ],
+"nodes": PoolIntArray( -1, -1, 10, 0, -1, 9, 1, 0, 2, 1, 3, 2, 4, 3, 5, 2, 6, 4, 7, 2, 8, 5, 9, 2, 0 ),
+"variants": [ ExtResource( 2 ), ExtResource( 3 ), null, ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"version": 2
+}
 
 [node name="ditto" type="Node"]
 script = ExtResource( 1 )
@@ -38,15 +56,12 @@ shape = null
 dex_entry = "While it can transform into anything, each Ditto
 apparently has its own strengths and
 weaknesses when it comes to transformations."
-sprite = null
-back_sprite = null
-shiny_sprite = null
-shiny_back_sprite = null
+sprite_collection = SubResource( 1 )
 
 [node name="Types" type="Node" parent="."]
 
-[node name="normal" type="Node" parent="Types" instance=ExtResource( 2 )]
-script = ExtResource( 3 )
+[node name="normal" type="Node" parent="Types" instance=ExtResource( 7 )]
+script = ExtResource( 8 )
 id = 0
 very_effective = 0
 neutral = -417
@@ -56,37 +71,37 @@ no_effect = 128
 [node name="Abilities" type="Node" parent="."]
 
 [node name="imposter" type="Node" parent="Abilities"]
-script = ExtResource( 4 )
-ability = ExtResource( 5 )
+script = ExtResource( 9 )
+ability = ExtResource( 10 )
 hidden_ability = true
 
 [node name="limber" type="Node" parent="Abilities"]
-script = ExtResource( 4 )
-ability = ExtResource( 6 )
+script = ExtResource( 9 )
+ability = ExtResource( 11 )
 hidden_ability = false
 
 [node name="Items" type="Node" parent="."]
 
 [node name="metal-powder" type="Node" parent="Items"]
-script = ExtResource( 7 )
-item = ExtResource( 8 )
+script = ExtResource( 12 )
+item = ExtResource( 13 )
 chance = 5.0
 
 [node name="quick-powder" type="Node" parent="Items"]
-script = ExtResource( 7 )
-item = ExtResource( 9 )
+script = ExtResource( 12 )
+item = ExtResource( 14 )
 chance = 50.0
 
 [node name="Egg-Groups" type="Node" parent="."]
 
-[node name="ditto" type="Node" parent="Egg-Groups" instance=ExtResource( 10 )]
-script = ExtResource( 11 )
+[node name="ditto" type="Node" parent="Egg-Groups" instance=ExtResource( 15 )]
+script = ExtResource( 16 )
 
 [node name="Moves" type="Node" parent="."]
 
 [node name="transform" type="Node" parent="Moves"]
-script = ExtResource( 12 )
-move = ExtResource( 13 )
+script = ExtResource( 17 )
+move = ExtResource( 18 )
 level = 1
 egg = false
 tm = false

@@ -100,12 +100,14 @@ func get_sprite():
 	var base
 	if field == battle.ally_field:
 		base = battle.get_node("BasePlayer")
+		base.remove_child(base.get_node("PKMNSprite"))
 		if shiny:
 			sprite = Utils.unpack(base, get_species().get_sprite_collection().shiny_back_sprite, "PKMNSprite")
 		else:
 			sprite = Utils.unpack(base, get_species().get_sprite_collection().back_sprite, "PKMNSprite")
 	elif field == battle.opponent_field:
 		base = battle.get_node("BaseOpponent")
+		base.remove_child(base.get_node("PKMNSprite"))
 		if shiny:
 			sprite = Utils.unpack(base, get_species().get_sprite_collection().shiny_sprite, "PKMNSprite")
 		else:

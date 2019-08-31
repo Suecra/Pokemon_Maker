@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Source/Scripts/Common/PokemonSpriteCollection.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Sprites/BW/0273_front.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Sprites/BW/0273_shiny_front.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Sprites/BW/0273_back.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Sprites/BW/0273_shiny_back.tscn" type="PackedScene" id=5]
+
+[node name="0273" type="Node"]
+script = ExtResource( 1 )
+front_sprite = ExtResource( 2 )
+female_front_sprite = null
+shiny_front_sprite = ExtResource( 3 )
+shiny_female_front_sprite = null
+back_sprite = ExtResource( 4 )
+female_back_sprite = null
+shiny_back_sprite = ExtResource( 5 )
+shiny_female_back_sprite = null

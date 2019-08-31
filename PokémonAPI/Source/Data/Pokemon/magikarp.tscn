@@ -1,18 +1,40 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Source/Data/Pokemon.gd" type="Script" id=1]
-[ext_resource path="res://Source/Data/Type/water.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Source/Data/Type.gd" type="Script" id=3]
-[ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=4]
-[ext_resource path="res://Source/Data/Ability/rattled.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Source/Data/Ability/swift-swim.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Source/Data/Egg-Group/dragon.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Source/Data/EggGroup.gd" type="Script" id=8]
-[ext_resource path="res://Source/Data/Egg-Group/water2.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Source/Data/LearnableMove.gd" type="Script" id=10]
-[ext_resource path="res://Source/Data/Move/tackle.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Source/Data/Move/splash.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Source/Data/Move/flail.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Source/Scripts/Common/PokemonSpriteCollection.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Sprites/BW/0129_front.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Sprites/BW/0129_female_front.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Sprites/BW/0129_shiny_front.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Sprites/BW/0129_shiny_female_front.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Sprites/BW/0129_back.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Sprites/BW/0129_female_back.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Sprites/BW/0129_shiny_back.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Sprites/BW/0129_shiny_female_back.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Source/Data/Type/water.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Source/Data/Type.gd" type="Script" id=12]
+[ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=13]
+[ext_resource path="res://Source/Data/Ability/rattled.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Source/Data/Ability/swift-swim.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Source/Data/Egg-Group/dragon.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Source/Data/EggGroup.gd" type="Script" id=17]
+[ext_resource path="res://Source/Data/Egg-Group/water2.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Source/Data/LearnableMove.gd" type="Script" id=19]
+[ext_resource path="res://Source/Data/Move/tackle.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Source/Data/Move/splash.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Source/Data/Move/flail.tscn" type="PackedScene" id=22]
+
+[sub_resource type="PackedScene" id=1]
+_bundled = {
+"conn_count": 0,
+"conns": PoolIntArray(  ),
+"editable_instances": [  ],
+"names": PoolStringArray( "0129", "script", "front_sprite", "female_front_sprite", "shiny_front_sprite", "shiny_female_front_sprite", "back_sprite", "female_back_sprite", "shiny_back_sprite", "shiny_female_back_sprite", "Node" ),
+"node_count": 1,
+"node_paths": [  ],
+"nodes": PoolIntArray( -1, -1, 10, 0, -1, 9, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 5, 7, 6, 8, 7, 9, 8, 0 ),
+"variants": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"version": 2
+}
 
 [node name="magikarp" type="Node"]
 script = ExtResource( 1 )
@@ -37,15 +59,12 @@ color = null
 shape = null
 dex_entry = "In the distant past, they were fairly strong, but
 they have become gradually weaker over time."
-sprite = null
-back_sprite = null
-shiny_sprite = null
-shiny_back_sprite = null
+sprite_collection = SubResource( 1 )
 
 [node name="Types" type="Node" parent="."]
 
-[node name="water" type="Node" parent="Types" instance=ExtResource( 2 )]
-script = ExtResource( 3 )
+[node name="water" type="Node" parent="Types" instance=ExtResource( 11 )]
+script = ExtResource( 12 )
 id = 10
 very_effective = 560
 neutral = -36401
@@ -55,42 +74,42 @@ no_effect = 0
 [node name="Abilities" type="Node" parent="."]
 
 [node name="rattled" type="Node" parent="Abilities"]
-script = ExtResource( 4 )
-ability = ExtResource( 5 )
+script = ExtResource( 13 )
+ability = ExtResource( 14 )
 hidden_ability = true
 
 [node name="swift-swim" type="Node" parent="Abilities"]
-script = ExtResource( 4 )
-ability = ExtResource( 6 )
+script = ExtResource( 13 )
+ability = ExtResource( 15 )
 hidden_ability = false
 
 [node name="Egg-Groups" type="Node" parent="."]
 
-[node name="dragon" type="Node" parent="Egg-Groups" instance=ExtResource( 7 )]
-script = ExtResource( 8 )
+[node name="dragon" type="Node" parent="Egg-Groups" instance=ExtResource( 16 )]
+script = ExtResource( 17 )
 
-[node name="water2" type="Node" parent="Egg-Groups" instance=ExtResource( 9 )]
-script = ExtResource( 8 )
+[node name="water2" type="Node" parent="Egg-Groups" instance=ExtResource( 18 )]
+script = ExtResource( 17 )
 
 [node name="Moves" type="Node" parent="."]
 
 [node name="tackle" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 11 )
+script = ExtResource( 19 )
+move = ExtResource( 20 )
 level = 15
 egg = false
 tm = false
 
 [node name="splash" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 12 )
+script = ExtResource( 19 )
+move = ExtResource( 21 )
 level = 1
 egg = false
 tm = false
 
 [node name="flail" type="Node" parent="Moves"]
-script = ExtResource( 10 )
-move = ExtResource( 13 )
+script = ExtResource( 19 )
+move = ExtResource( 22 )
 level = 30
 egg = false
 tm = false

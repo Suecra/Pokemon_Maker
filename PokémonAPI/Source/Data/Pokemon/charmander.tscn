@@ -1,7 +1,7 @@
 [gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://Source/Data/Pokemon.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Sprite_Collections/BW/Charmander.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Sprite_Collections/BW/0004.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Source/Data/Type/fire.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=4]
 [ext_resource path="res://Source/Data/Ability/solar-power.tscn" type="PackedScene" id=5]

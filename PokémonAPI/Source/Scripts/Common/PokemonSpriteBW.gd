@@ -9,3 +9,8 @@ func _into_pokeball():
 	_hide()
 	$AnimationPlayer.stop()
 	yield(get_tree().create_timer(0.0), "timeout")
+
+func _faint():
+	_hide()
+	$AnimationPlayer.stop()
+	yield(get_tree().create_timer(0.0), "timeout")

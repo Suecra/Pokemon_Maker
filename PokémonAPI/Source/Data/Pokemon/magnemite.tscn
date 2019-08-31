@@ -1,59 +1,77 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://Source/Data/Pokemon.gd" type="Script" id=1]
-[ext_resource path="res://Source/Data/Type/electric.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Source/Data/Type.gd" type="Script" id=3]
-[ext_resource path="res://Source/Data/Type/steel.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=5]
-[ext_resource path="res://Source/Data/Ability/analytic.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Source/Data/Ability/sturdy.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Source/Data/Ability/magnet-pull.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Source/Data/WildPokemonItem.gd" type="Script" id=9]
-[ext_resource path="res://Source/Data/Item/metal-coat.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Source/Data/Egg-Group/mineral.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Source/Data/EggGroup.gd" type="Script" id=12]
-[ext_resource path="res://Source/Data/LearnableMove.gd" type="Script" id=13]
-[ext_resource path="res://Source/Data/Move/tackle.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Source/Data/Move/supersonic.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Source/Data/Move/sonic-boom.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Source/Data/Move/thunder-shock.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Source/Data/Move/thunderbolt.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Source/Data/Move/thunder-wave.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Source/Data/Move/thunder.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Source/Data/Move/toxic.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Source/Data/Move/screech.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Source/Data/Move/double-team.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Source/Data/Move/light-screen.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Source/Data/Move/reflect.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Source/Data/Move/explosion.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Source/Data/Move/rest.tscn" type="PackedScene" id=27]
-[ext_resource path="res://Source/Data/Move/substitute.tscn" type="PackedScene" id=28]
-[ext_resource path="res://Source/Data/Move/protect.tscn" type="PackedScene" id=29]
-[ext_resource path="res://Source/Data/Move/zap-cannon.tscn" type="PackedScene" id=30]
-[ext_resource path="res://Source/Data/Move/lock-on.tscn" type="PackedScene" id=31]
-[ext_resource path="res://Source/Data/Move/swagger.tscn" type="PackedScene" id=32]
-[ext_resource path="res://Source/Data/Move/spark.tscn" type="PackedScene" id=33]
-[ext_resource path="res://Source/Data/Move/sleep-talk.tscn" type="PackedScene" id=34]
-[ext_resource path="res://Source/Data/Move/return.tscn" type="PackedScene" id=35]
-[ext_resource path="res://Source/Data/Move/frustration.tscn" type="PackedScene" id=36]
-[ext_resource path="res://Source/Data/Move/hidden-power.tscn" type="PackedScene" id=37]
-[ext_resource path="res://Source/Data/Move/rain-dance.tscn" type="PackedScene" id=38]
-[ext_resource path="res://Source/Data/Move/sunny-day.tscn" type="PackedScene" id=39]
-[ext_resource path="res://Source/Data/Move/psych-up.tscn" type="PackedScene" id=40]
-[ext_resource path="res://Source/Data/Move/facade.tscn" type="PackedScene" id=41]
-[ext_resource path="res://Source/Data/Move/metal-sound.tscn" type="PackedScene" id=42]
-[ext_resource path="res://Source/Data/Move/gyro-ball.tscn" type="PackedScene" id=43]
-[ext_resource path="res://Source/Data/Move/magnet-rise.tscn" type="PackedScene" id=44]
-[ext_resource path="res://Source/Data/Move/mirror-shot.tscn" type="PackedScene" id=45]
-[ext_resource path="res://Source/Data/Move/flash-cannon.tscn" type="PackedScene" id=46]
-[ext_resource path="res://Source/Data/Move/discharge.tscn" type="PackedScene" id=47]
-[ext_resource path="res://Source/Data/Move/magnet-bomb.tscn" type="PackedScene" id=48]
-[ext_resource path="res://Source/Data/Move/charge-beam.tscn" type="PackedScene" id=49]
-[ext_resource path="res://Source/Data/Move/electro-ball.tscn" type="PackedScene" id=50]
-[ext_resource path="res://Source/Data/Move/round.tscn" type="PackedScene" id=51]
-[ext_resource path="res://Source/Data/Move/volt-switch.tscn" type="PackedScene" id=52]
-[ext_resource path="res://Source/Data/Move/wild-charge.tscn" type="PackedScene" id=53]
-[ext_resource path="res://Source/Data/Move/confide.tscn" type="PackedScene" id=54]
+[ext_resource path="res://Source/Scripts/Common/PokemonSpriteCollection.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Sprites/BW/0081_front.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Sprites/BW/0081_shiny_front.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Sprites/BW/0081_back.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Sprites/BW/0081_shiny_back.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Source/Data/Type/electric.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Data/Type.gd" type="Script" id=8]
+[ext_resource path="res://Source/Data/Type/steel.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Source/Data/PokemonAbility.gd" type="Script" id=10]
+[ext_resource path="res://Source/Data/Ability/analytic.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Source/Data/Ability/sturdy.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Source/Data/Ability/magnet-pull.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Source/Data/WildPokemonItem.gd" type="Script" id=14]
+[ext_resource path="res://Source/Data/Item/metal-coat.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Source/Data/Egg-Group/mineral.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Source/Data/EggGroup.gd" type="Script" id=17]
+[ext_resource path="res://Source/Data/LearnableMove.gd" type="Script" id=18]
+[ext_resource path="res://Source/Data/Move/tackle.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Source/Data/Move/supersonic.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Source/Data/Move/sonic-boom.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Source/Data/Move/thunder-shock.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Source/Data/Move/thunderbolt.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Source/Data/Move/thunder-wave.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Source/Data/Move/thunder.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Source/Data/Move/toxic.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Source/Data/Move/screech.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Source/Data/Move/double-team.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Source/Data/Move/light-screen.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Source/Data/Move/reflect.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Source/Data/Move/explosion.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Source/Data/Move/rest.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Source/Data/Move/substitute.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Source/Data/Move/protect.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Source/Data/Move/zap-cannon.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Source/Data/Move/lock-on.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Source/Data/Move/swagger.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Source/Data/Move/spark.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Source/Data/Move/sleep-talk.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Source/Data/Move/return.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Source/Data/Move/frustration.tscn" type="PackedScene" id=41]
+[ext_resource path="res://Source/Data/Move/hidden-power.tscn" type="PackedScene" id=42]
+[ext_resource path="res://Source/Data/Move/rain-dance.tscn" type="PackedScene" id=43]
+[ext_resource path="res://Source/Data/Move/sunny-day.tscn" type="PackedScene" id=44]
+[ext_resource path="res://Source/Data/Move/psych-up.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Source/Data/Move/facade.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Source/Data/Move/metal-sound.tscn" type="PackedScene" id=47]
+[ext_resource path="res://Source/Data/Move/gyro-ball.tscn" type="PackedScene" id=48]
+[ext_resource path="res://Source/Data/Move/magnet-rise.tscn" type="PackedScene" id=49]
+[ext_resource path="res://Source/Data/Move/mirror-shot.tscn" type="PackedScene" id=50]
+[ext_resource path="res://Source/Data/Move/flash-cannon.tscn" type="PackedScene" id=51]
+[ext_resource path="res://Source/Data/Move/discharge.tscn" type="PackedScene" id=52]
+[ext_resource path="res://Source/Data/Move/magnet-bomb.tscn" type="PackedScene" id=53]
+[ext_resource path="res://Source/Data/Move/charge-beam.tscn" type="PackedScene" id=54]
+[ext_resource path="res://Source/Data/Move/electro-ball.tscn" type="PackedScene" id=55]
+[ext_resource path="res://Source/Data/Move/round.tscn" type="PackedScene" id=56]
+[ext_resource path="res://Source/Data/Move/volt-switch.tscn" type="PackedScene" id=57]
+[ext_resource path="res://Source/Data/Move/wild-charge.tscn" type="PackedScene" id=58]
+[ext_resource path="res://Source/Data/Move/confide.tscn" type="PackedScene" id=59]
+
+[sub_resource type="PackedScene" id=1]
+_bundled = {
+"conn_count": 0,
+"conns": PoolIntArray(  ),
+"editable_instances": [  ],
+"names": PoolStringArray( "0081", "script", "front_sprite", "female_front_sprite", "shiny_front_sprite", "shiny_female_front_sprite", "back_sprite", "female_back_sprite", "shiny_back_sprite", "shiny_female_back_sprite", "Node" ),
+"node_count": 1,
+"node_paths": [  ],
+"nodes": PoolIntArray( -1, -1, 10, 0, -1, 9, 1, 0, 2, 1, 3, 2, 4, 3, 5, 2, 6, 4, 7, 2, 8, 5, 9, 2, 0 ),
+"variants": [ ExtResource( 2 ), ExtResource( 3 ), null, ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"version": 2
+}
 
 [node name="magnemite" type="Node"]
 script = ExtResource( 1 )
@@ -79,23 +97,20 @@ shape = null
 dex_entry = "It’s frequently the cause of power outages,
 which is why some power plants send out
 electrical signals that it can’t stand."
-sprite = null
-back_sprite = null
-shiny_sprite = null
-shiny_back_sprite = null
+sprite_collection = SubResource( 1 )
 
 [node name="Types" type="Node" parent="."]
 
-[node name="electric" type="Node" parent="Types" instance=ExtResource( 2 )]
-script = ExtResource( 3 )
+[node name="electric" type="Node" parent="Types" instance=ExtResource( 7 )]
+script = ExtResource( 8 )
 id = 12
 very_effective = 1028
 neutral = -39957
 not_very_effective = 38912
 no_effect = 16
 
-[node name="steel" type="Node" parent="Types" instance=ExtResource( 4 )]
-script = ExtResource( 3 )
+[node name="steel" type="Node" parent="Types" instance=ExtResource( 9 )]
+script = ExtResource( 8 )
 id = 8
 very_effective = 147488
 neutral = -153377
@@ -105,317 +120,317 @@ no_effect = 0
 [node name="Abilities" type="Node" parent="."]
 
 [node name="analytic" type="Node" parent="Abilities"]
-script = ExtResource( 5 )
-ability = ExtResource( 6 )
+script = ExtResource( 10 )
+ability = ExtResource( 11 )
 hidden_ability = true
 
 [node name="sturdy" type="Node" parent="Abilities"]
-script = ExtResource( 5 )
-ability = ExtResource( 7 )
+script = ExtResource( 10 )
+ability = ExtResource( 12 )
 hidden_ability = false
 
 [node name="magnet-pull" type="Node" parent="Abilities"]
-script = ExtResource( 5 )
-ability = ExtResource( 8 )
+script = ExtResource( 10 )
+ability = ExtResource( 13 )
 hidden_ability = false
 
 [node name="Items" type="Node" parent="."]
 
 [node name="metal-coat" type="Node" parent="Items"]
-script = ExtResource( 9 )
-item = ExtResource( 10 )
+script = ExtResource( 14 )
+item = ExtResource( 15 )
 chance = 5.0
 
 [node name="Egg-Groups" type="Node" parent="."]
 
-[node name="mineral" type="Node" parent="Egg-Groups" instance=ExtResource( 11 )]
-script = ExtResource( 12 )
+[node name="mineral" type="Node" parent="Egg-Groups" instance=ExtResource( 16 )]
+script = ExtResource( 17 )
 
 [node name="Moves" type="Node" parent="."]
 
 [node name="tackle" type="Node" parent="Moves"]
-script = ExtResource( 13 )
-move = ExtResource( 14 )
+script = ExtResource( 18 )
+move = ExtResource( 19 )
 level = 1
 egg = false
 tm = false
 
 [node name="supersonic" type="Node" parent="Moves"]
-script = ExtResource( 13 )
-move = ExtResource( 15 )
+script = ExtResource( 18 )
+move = ExtResource( 20 )
 level = 1
 egg = false
 tm = false
 
 [node name="sonic-boom" type="Node" parent="Moves"]
-script = ExtResource( 13 )
-move = ExtResource( 16 )
+script = ExtResource( 18 )
+move = ExtResource( 21 )
 level = 17
 egg = false
 tm = false
 
 [node name="thunder-shock" type="Node" parent="Moves"]
-script = ExtResource( 13 )
-move = ExtResource( 17 )
+script = ExtResource( 18 )
+move = ExtResource( 22 )
 level = 5
 egg = false
 tm = false
 
 [node name="thunderbolt" type="Node" parent="Moves"]
-script = ExtResource( 13 )
-move = ExtResource( 18 )
-level = 0
-egg = false
-tm = true
-
-[node name="thunder-wave" type="Node" parent="Moves"]
-script = ExtResource( 13 )
-move = ExtResource( 19 )
-level = 0
-egg = false
-tm = true
-
-[node name="thunder" type="Node" parent="Moves"]
-script = ExtResource( 13 )
-move = ExtResource( 20 )
-level = 0
-egg = false
-tm = true
-
-[node name="toxic" type="Node" parent="Moves"]
-script = ExtResource( 13 )
-move = ExtResource( 21 )
-level = 0
-egg = false
-tm = true
-
-[node name="screech" type="Node" parent="Moves"]
-script = ExtResource( 13 )
-move = ExtResource( 22 )
-level = 35
-egg = false
-tm = false
-
-[node name="double-team" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+script = ExtResource( 18 )
 move = ExtResource( 23 )
 level = 0
 egg = false
 tm = true
 
-[node name="light-screen" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="thunder-wave" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 24 )
 level = 0
 egg = false
 tm = true
 
-[node name="reflect" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="thunder" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 25 )
 level = 0
 egg = false
 tm = true
 
-[node name="explosion" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="toxic" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 26 )
 level = 0
 egg = false
 tm = true
 
-[node name="rest" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="screech" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 27 )
-level = 0
+level = 35
 egg = false
-tm = true
+tm = false
 
-[node name="substitute" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="double-team" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 28 )
 level = 0
 egg = false
 tm = true
 
-[node name="protect" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="light-screen" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 29 )
 level = 0
 egg = false
 tm = true
 
-[node name="zap-cannon" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="reflect" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 30 )
-level = 49
+level = 0
 egg = false
-tm = false
+tm = true
 
-[node name="lock-on" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="explosion" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 31 )
-level = 41
+level = 0
 egg = false
-tm = false
+tm = true
 
-[node name="swagger" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="rest" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 32 )
 level = 0
 egg = false
 tm = true
 
-[node name="spark" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="substitute" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 33 )
-level = 19
+level = 0
 egg = false
-tm = false
+tm = true
 
-[node name="sleep-talk" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="protect" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 34 )
 level = 0
 egg = false
 tm = true
 
-[node name="return" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="zap-cannon" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 35 )
-level = 0
+level = 49
 egg = false
-tm = true
+tm = false
 
-[node name="frustration" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="lock-on" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 36 )
-level = 0
+level = 41
 egg = false
-tm = true
+tm = false
 
-[node name="hidden-power" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="swagger" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 37 )
 level = 0
 egg = false
 tm = true
 
-[node name="rain-dance" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="spark" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 38 )
-level = 0
+level = 19
 egg = false
-tm = true
+tm = false
 
-[node name="sunny-day" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="sleep-talk" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 39 )
 level = 0
 egg = false
 tm = true
 
-[node name="psych-up" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="return" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 40 )
 level = 0
 egg = false
 tm = true
 
-[node name="facade" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="frustration" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 41 )
 level = 0
 egg = false
 tm = true
 
-[node name="metal-sound" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="hidden-power" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 42 )
-level = 25
+level = 0
 egg = false
-tm = false
+tm = true
 
-[node name="gyro-ball" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="rain-dance" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 43 )
 level = 0
 egg = false
 tm = true
 
-[node name="magnet-rise" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="sunny-day" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 44 )
-level = 43
+level = 0
 egg = false
-tm = false
+tm = true
 
-[node name="mirror-shot" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="psych-up" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 45 )
-level = 23
+level = 0
 egg = false
-tm = false
+tm = true
 
-[node name="flash-cannon" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="facade" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 46 )
 level = 0
 egg = false
 tm = true
 
-[node name="discharge" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="metal-sound" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 47 )
-level = 37
+level = 25
 egg = false
 tm = false
 
-[node name="magnet-bomb" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="gyro-ball" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 48 )
-level = 11
-egg = false
-tm = false
-
-[node name="charge-beam" type="Node" parent="Moves"]
-script = ExtResource( 13 )
-move = ExtResource( 49 )
 level = 0
 egg = false
 tm = true
 
-[node name="electro-ball" type="Node" parent="Moves"]
-script = ExtResource( 13 )
-move = ExtResource( 50 )
-level = 29
+[node name="magnet-rise" type="Node" parent="Moves"]
+script = ExtResource( 18 )
+move = ExtResource( 49 )
+level = 43
 egg = false
 tm = false
 
-[node name="round" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="mirror-shot" type="Node" parent="Moves"]
+script = ExtResource( 18 )
+move = ExtResource( 50 )
+level = 23
+egg = false
+tm = false
+
+[node name="flash-cannon" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 51 )
 level = 0
 egg = false
 tm = true
 
-[node name="volt-switch" type="Node" parent="Moves"]
-script = ExtResource( 13 )
+[node name="discharge" type="Node" parent="Moves"]
+script = ExtResource( 18 )
 move = ExtResource( 52 )
+level = 37
+egg = false
+tm = false
+
+[node name="magnet-bomb" type="Node" parent="Moves"]
+script = ExtResource( 18 )
+move = ExtResource( 53 )
+level = 11
+egg = false
+tm = false
+
+[node name="charge-beam" type="Node" parent="Moves"]
+script = ExtResource( 18 )
+move = ExtResource( 54 )
+level = 0
+egg = false
+tm = true
+
+[node name="electro-ball" type="Node" parent="Moves"]
+script = ExtResource( 18 )
+move = ExtResource( 55 )
+level = 29
+egg = false
+tm = false
+
+[node name="round" type="Node" parent="Moves"]
+script = ExtResource( 18 )
+move = ExtResource( 56 )
+level = 0
+egg = false
+tm = true
+
+[node name="volt-switch" type="Node" parent="Moves"]
+script = ExtResource( 18 )
+move = ExtResource( 57 )
 level = 0
 egg = false
 tm = true
 
 [node name="wild-charge" type="Node" parent="Moves"]
-script = ExtResource( 13 )
-move = ExtResource( 53 )
+script = ExtResource( 18 )
+move = ExtResource( 58 )
 level = 0
 egg = false
 tm = true
 
 [node name="confide" type="Node" parent="Moves"]
-script = ExtResource( 13 )
-move = ExtResource( 54 )
+script = ExtResource( 18 )
+move = ExtResource( 59 )
 level = 0
 egg = false
 tm = true

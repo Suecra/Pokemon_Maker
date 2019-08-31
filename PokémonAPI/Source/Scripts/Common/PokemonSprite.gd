@@ -14,3 +14,6 @@ func _into_pokeball():
 
 func _out_of_pokeball():
 	pass
+
+func _faint():
+	pass

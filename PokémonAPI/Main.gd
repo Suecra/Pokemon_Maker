@@ -15,4 +15,7 @@ func _on_Button2_button_down():
 	$Button.visible = false
 	$Button2.visible = false
 	$Battle.visible = true
-	$Battle.start()
+	yield($Battle.start(), "completed")
+	$Battle.visible = false
+	$Button.visible = true
+	$Button2.visible = true

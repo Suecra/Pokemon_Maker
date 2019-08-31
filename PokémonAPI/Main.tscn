@@ -11,10 +11,10 @@ script = ExtResource( 1 )
 auto_hide = true
 
 [node name="Button" type="Button" parent="."]
-margin_left = 469.0
-margin_top = 97.0
-margin_right = 684.0
-margin_bottom = 194.0
+margin_left = 467.834
+margin_top = 95.8336
+margin_right = 682.834
+margin_bottom = 192.834
 
 [node name="Button2" type="Button" parent="."]
 margin_left = 470.0

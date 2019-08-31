@@ -3,7 +3,7 @@
 [ext_resource path="res://Source/Scripts/Battle/Test/TestTrainer2.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/PokemonParty.gd" type="Script" id=2]
 [ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=3]
-[ext_resource path="res://Source/Data/Pokemon/charmander.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Data/Pokemon/beautifly.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Source/Data/Nature/bold.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/TestMovepool.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Source/Data/Pokemon/pikachu.tscn" type="PackedScene" id=7]
@@ -17,10 +17,9 @@ script = ExtResource( 1 )
 [node name="PokemonParty" type="Node" parent="."]
 script = ExtResource( 2 )
 
-[node name="Charmander" type="Node" parent="PokemonParty"]
-editor/display_folded = true
+[node name="Beautifly" type="Node" parent="PokemonParty"]
 script = ExtResource( 3 )
-nickname = "Charmander"
+nickname = "Beautifly"
 level = 30
 species = ExtResource( 4 )
 nature = ExtResource( 5 )
@@ -33,7 +32,7 @@ special_attack_iv = 31
 special_defense_iv = 31
 speed_iv = 31
 
-[node name="Movepool" parent="PokemonParty/Charmander" instance=ExtResource( 6 )]
+[node name="Movepool" parent="PokemonParty/Beautifly" instance=ExtResource( 6 )]
 
 [node name="Pikachu" type="Node" parent="PokemonParty"]
 editor/display_folded = true
