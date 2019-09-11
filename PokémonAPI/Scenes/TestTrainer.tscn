@@ -20,7 +20,7 @@ script = ExtResource( 2 )
 [node name="Carracosta" type="Node" parent="PokemonParty"]
 script = ExtResource( 3 )
 nickname = "Carracosta"
-level = 42
+level = 60
 species = ExtResource( 4 )
 nature = ExtResource( 5 )
 attack_ev = 252

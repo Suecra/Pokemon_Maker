@@ -12,6 +12,7 @@ const MAX_POKEMON_COUNT_ON_FIELD = 3
 var weather
 var field_effect
 var battle
+# TODO: Add "Field" references
 
 func get_pokemon_at_position(position: int, attacker_field):
 	var opponent_field
@@ -29,6 +30,14 @@ func get_status_bar(attacker_field):
 		return battle.get_node("PlayerStatusBar")
 	if attacker_field == battle.opponent_field:
 		return battle.get_node("EnemyStatusBar")
+
+func begin_of_turn():
+	battle.ally_field.begin_of_turn()
+	battle.opponent_field.begin_of_turn()
+
+func end_of_turn():
+	battle.ally_field.end_of_turn()
+	battle.opponent_field.end_of_turn()
 
 func _enter_tree():
 	battle = get_parent()

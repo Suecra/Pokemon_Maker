@@ -20,7 +20,6 @@ func register_animation(animation):
 	$Animations.add_child(animation)
 
 func do_half_turns():
-	emit_signal("turn_start")
 	PrioritySorter.sort(half_turns)
 	for half_turn in half_turns:
 		half_turn._execute()
@@ -49,7 +48,6 @@ func force_switch_ins():
 		yield(get_tree().create_timer(0.0), "timeout")
 
 func _start():
-	print("Turn starts")
 	choices_made = 0
 	required_choices = trainers.size()
 	choice_type = ChoiceType.Turn
@@ -66,11 +64,15 @@ func trainer_choice_made(sender, half_turn):
 	choices_made += 1
 	if choices_made == required_choices:
 		choices_made = 0
-		print("Choices made")
+		
+		if choice_type == ChoiceType.Turn:
+			battle.battlefield.begin_of_turn()
 		do_half_turns()
+		if choice_type == ChoiceType.Turn:
+			battle.battlefield.end_of_turn()
+		
 		yield(do_animations(), "completed")
-		match choice_type:
-			ChoiceType.Turn:
+		if choice_type == ChoiceType.Turn:
 				yield(force_switch_ins(), "completed")
 		disconnect_trainers()
 		emit_signal("turn_end")

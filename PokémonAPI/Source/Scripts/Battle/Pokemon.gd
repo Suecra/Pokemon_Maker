@@ -61,6 +61,11 @@ func damage(hp: int):
 	if current_hp == 0:
 		faint()
 
+func damage_percent(percent: float):
+	var damage = int(hp * percent)
+	damage(damage)
+	return damage
+
 func calculate_stats():
 	calculate_hp()
 	attack = calculate_stat(get_species().attack, attack_ev, attack_iv)
@@ -115,10 +120,34 @@ func get_sprite():
 	sprite.position = base.pokemon_position
 	return sprite
 
+func burn():
+	change_status(load("res://Source/Scripts/Battle/StatusBurn.gd").new())
+
+func paralyse():
+	change_status(load("res://Source/Scripts/Battle/StatusParalysis.gd").new())
+
+func poison():
+	change_status(load("res://Source/Scripts/Battle/StatusNormalPoison.gd").new())
+
+func badly_poison():
+	change_status(load("res://Source/Scripts/Battle/StatusBadPoison.gd").new())
+
+func sleep():
+	change_status(load("res://Source/Scripts/Battle/StatusSleep.gd").new())
+
+func freeze():
+	change_status(load("res://Source/Scripts/Battle/StatusFreeze.gd").new())
+
 func faint():
-	var status = load("res://Source/Scripts/Battle/StatusFainted.gd").new()
-	status.owner = self
+	change_status(load("res://Source/Scripts/Battle/StatusFaint.gd").new())
+
+func change_status(status):
+	if has_node("Status"):
+		remove_child($Status)
 	status.name = "Status"
+	status.pokemon = self
+	status.battle = battle
+	status.owner = self
 	add_child(status)
 
 func fainted():
@@ -142,6 +171,16 @@ func boost_stat(stat, amount: int):
 		Stat.SPEED: $Boosts.speed_boost += amount
 	$Boosts.boost_stats()
 
+func begin_of_turn():
+	var status = get_status()
+	if status != null:
+		status._begin_of_turn()
+
+func end_of_turn():
+	var status = get_status()
+	if status != null:
+		status._end_of_turn()
+
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "SecondaryStatus")
 	Utils.add_node_if_not_exists(self, self, "MoveArchive")
@@ -157,4 +196,6 @@ func init_battle():
 	status_bar = battlefield.get_status_bar(field)
 	var boosts = Boosts.new()
 	boosts.name = "Boosts"
+	boosts.pokemon = self
+	boosts.boost_stats()
 	add_child(boosts)

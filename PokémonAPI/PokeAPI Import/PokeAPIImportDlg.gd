@@ -28,3 +28,7 @@ func _on_DirectoryDialog_dir_selected(dir):
 
 func do_log(entry):
 	$Log.text += entry + "\n"
+
+func _on_ButtonDest_pressed():
+	edit = $DestinationDirectory
+	$DirectoryDialog.popup()

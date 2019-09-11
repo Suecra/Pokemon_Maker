@@ -34,3 +34,4 @@ func set_gender(value):
 
 func set_status(value):
 	status = value
+	$StatusIcon.status = status

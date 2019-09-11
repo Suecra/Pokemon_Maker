@@ -18,8 +18,8 @@ func _hit():
 		match damage_multiplier:
 			0.25: battle.register_message("Schaden zu steigen gegen Dummies!")
 			0.5: battle.register_message("Schaden zu steigen gegen Dummies!")
-			2: battle.register_message("Schaden zu steigen gegen Profis!")
-			4: battle.register_message("Schaden zu steigen gegen Profis!")
+			2.0: battle.register_message("Schaden zu steigen gegen Profis!")
+			4.0: battle.register_message("Schaden zu steigen gegen Profis!")
 		if targets[i].fainted():
 			register_faint(targets[i])
 			battle.register_message(targets[i].nickname + " has fainted!")
@@ -64,7 +64,9 @@ func _is_critical_hit():
 	return critical_hit
 
 func get_damage_roll():
-	return float(randi() % 16 + 85) / 100
+	var roll = float(randi() % 16 + 85) / 100
+	print(roll)
+	return roll
 
 func _get_STAB_multiplier():
 	if _is_STAB():

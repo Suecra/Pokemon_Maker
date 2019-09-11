@@ -31,10 +31,11 @@ var battle
 var turn
 
 func _execute():
-	if _is_hit():
-		_hit()
-	else:
-		battle.register_message(user.nickname + "s attack missed!")
+	if user.can_move():
+		if _is_hit():
+			_hit()
+		else:
+			battle.register_message(user.nickname + "s attack missed!")
 
 func _hit():
 	battle.register_message("But the move isn't implemented yet!")
@@ -43,7 +44,7 @@ func _get_base_damage():
 	return power
 
 func _get_accuracy():
-	return accuracy
+	return float(accuracy)
 
 func _is_hit():
 	return Utils.trigger(_get_accuracy() / 100)

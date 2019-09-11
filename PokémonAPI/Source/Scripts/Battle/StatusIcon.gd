@@ -9,11 +9,11 @@ func set_status(value):
 		status = value
 		update_visiblity(false)
 		match status:
-			"burn": last_visible_node = $Burn
-			"freeze": last_visible_node = $Freeze
-			"paralysis": last_visible_node = $Paralysis
-			"poison": last_visible_node = $Poison
-			"sleep": last_visible_node = $Sleep
+			"Burn": last_visible_node = $Burn
+			"Freeze": last_visible_node = $Freeze
+			"Paralysis": last_visible_node = $Paralysis
+			"Poison", "Bad Poison": last_visible_node = $Poison
+			"Sleep": last_visible_node = $Sleep
 			"": last_visible_node = null
 		update_visiblity(true)
 

@@ -19,3 +19,6 @@ func _on_Button2_button_down():
 	$Battle.visible = false
 	$Button.visible = true
 	$Button2.visible = true
+
+func _ready():
+	randomize()

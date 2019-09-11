@@ -1,27 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
-[ext_resource path="res://Source/Data/Type/normal.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Source/Data/Contest-Effect/contest_effect28.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Data/BoostMove.gd" type="Script" id=1]
 
 [node name="tail-whip" type="Node"]
 script = ExtResource( 1 )
 move_name = "Tail-whip"
-type = ExtResource( 2 )
-damage_class = 2
-power = null
-accuracy = 100.0
-priority = 0.0
-pp = 30.0
-z_power = 0
-flags = 0
-hit_range = 1
-is_HM = false
-contest_type = 2
-contest_effect = ExtResource( 3 )
-battle_style = 0
-description = "The user wags its tail cutely, making opposing
-Pokémon less wary and lowering their Defense stat."
+accuracy = 100
+defense_boost = -1
 
 [node name="normal" type="Node" parent="."]
 

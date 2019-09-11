@@ -3,6 +3,8 @@ extends "Importer.gd"
 const Move = preload("res://Source/Data/Move.gd")
 const PhysicalMove = preload("res://Source/Data/PhysicalMove.gd")
 const SpecialMove = preload("res://Source/Data/SpecialMove.gd")
+const StatusMove = preload("res://Source/Data/StatusMove.gd")
+const BoostMove = preload("res://Source/Data/BoostMove.gd")
 
 var contest_effects = []
 var moves = []
@@ -10,7 +12,11 @@ var api_items = []
 
 func _create_item():
 	match api_item["damage_class"]["name"]:
-		"status": return Move.new()
+		"status":
+			if api_item["stat_changes"] == null:
+				return StatusMove.new()
+			else:
+				return BoostMove.new()
 		"physical": return PhysicalMove.new()
 		"special": return SpecialMove.new()
 
@@ -59,6 +65,15 @@ func _import_item(item):
 		item.hit_range |= Move.HitRange.Opponent_Field
 	if api_item["target"]["name"] == "entire-field" || api_item["target"]["name"] == "all-pokemon":
 		item.hit_range |= Move.HitRange.Entire_Field
+	
+	if api_item["stat_changes"] != null && item is BoostMove:
+		for stat_change in api_item["stat_changes"]:
+			match stat_change["stat"]["name"]:
+				"attack": item.attack_boost = stat_change.change
+				"defense": item.defense_boost = stat_change.change
+				"special-attack": item.special_attack_boost = stat_change.change
+				"special-denfense": item.special_defense_boost = stat_change.change
+				"speed": item.speed_boost = stat_change.change
 	
 	if api_item["contest_type"] != null:
 		match api_item["contest_type"]["name"]:

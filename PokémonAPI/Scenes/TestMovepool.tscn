@@ -3,8 +3,8 @@
 [ext_resource path="res://Source/Scripts/Battle/Movepool.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/Move.gd" type="Script" id=2]
 [ext_resource path="res://Source/Data/Move/wood-hammer.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Source/Data/Move/sludge-bomb.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Source/Data/Move/close-combat.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Source/Data/Move/tail-whip.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Data/Move/toxic.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Source/Data/Move/fire-blast.tscn" type="PackedScene" id=6]
 
 [node name="Movepool" type="Node"]
@@ -15,12 +15,12 @@ script = ExtResource( 2 )
 move = ExtResource( 3 )
 current_pp = 99
 
-[node name="Sludge-Bomb" type="Node" parent="."]
+[node name="Tail-Whip" type="Node" parent="."]
 script = ExtResource( 2 )
 move = ExtResource( 4 )
 current_pp = 99
 
-[node name="Close-Combat" type="Node" parent="."]
+[node name="Toxic" type="Node" parent="."]
 script = ExtResource( 2 )
 move = ExtResource( 5 )
 current_pp = 99
