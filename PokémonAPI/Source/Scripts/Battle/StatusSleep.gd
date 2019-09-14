@@ -14,6 +14,7 @@ func _heal():
 
 func _ready():
 	status_name = "Sleep"
+	battle.register_message(pokemon.nickname + " fell asleep!")
 	counter = randi() % 3 + 1
 
 func _begin_of_turn():

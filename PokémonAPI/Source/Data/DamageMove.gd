@@ -64,9 +64,7 @@ func _is_critical_hit():
 	return critical_hit
 
 func get_damage_roll():
-	var roll = float(randi() % 16 + 85) / 100
-	print(roll)
-	return roll
+	return float(randi() % 16 + 85) / 100
 
 func _get_STAB_multiplier():
 	if _is_STAB():

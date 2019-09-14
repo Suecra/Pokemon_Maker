@@ -171,6 +171,18 @@ func boost_stat(stat, amount: int):
 		Stat.SPEED: $Boosts.speed_boost += amount
 	$Boosts.boost_stats()
 
+func get_last_learnable_moves():
+	var moves = []
+	var last_added_move
+	var species = get_species()
+	if species.has_node("Moves"):
+		for m in species.get_node("Moves").get_children():
+			if not m.egg && not m.tm && m.level <= level:
+				if last_added_move != null || m.level >= last_added_move.level:
+					moves.insert(0, m.move)
+					last_added_move = m
+	return moves
+
 func begin_of_turn():
 	var status = get_status()
 	if status != null:

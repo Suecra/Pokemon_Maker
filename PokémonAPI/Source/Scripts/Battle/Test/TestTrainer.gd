@@ -76,7 +76,7 @@ func select_move():
 	state = State.SELECT_MOVE
 
 func select_pokemon():
-	choicebox.display_async(pokemon_party.to_string_array())
+	choicebox.display_async(pokemon_party.to_string_array_battler())
 	state = State.SELECT_POKEMON
 
 func _force_switch_in():

@@ -25,7 +25,9 @@ func update_pokemon_name():
 
 func update_status():
 	var status = pokemon.get_status()
-	if status != null:
+	if status == null:
+		$Style.status = ""
+	else:
 		$Style.status = status.status_name
 
 func update():

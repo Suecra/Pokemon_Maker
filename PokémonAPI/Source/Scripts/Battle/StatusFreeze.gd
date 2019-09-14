@@ -14,3 +14,4 @@ func _heal():
 
 func _ready():
 	status_name = "Freeze"
+	battle.register_message(pokemon.nickname + " was frozen!")

@@ -26,7 +26,7 @@ func _get_lead():
 	return pokemon_party.get_lead()
 
 func switch(battler_index: int):
-	var new_pokemon = pokemon_party.get_pokemon(battler_index)
+	var new_pokemon = pokemon_party.get_battler(battler_index)
 	var switch = Switch.new()
 	switch.pokemon = current_pokemon
 	switch.trainer = self

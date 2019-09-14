@@ -5,6 +5,7 @@ var damage
 
 func _ready():
 	status_name = "Bad Poison"
+	battle.register_message(pokemon.nickname + " was badly poisoned!")
 	damage = 0
 
 func increase_damage():
@@ -12,6 +13,7 @@ func increase_damage():
 
 func _end_of_turn():
 	increase_damage()
+	battle.register_message(pokemon.nickname + " was hurt from it's poision!")
 	register_damage(pokemon.damage_percent(damage))
 	if pokemon.fainted():
 		register_faint(pokemon)

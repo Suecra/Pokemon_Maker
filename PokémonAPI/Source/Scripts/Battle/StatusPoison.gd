@@ -3,7 +3,7 @@ extends "res://Source/Scripts/Battle/Status.gd"
 const BattleAnimationDamage = preload("res://Source/Scripts/Battle/Animations/BattleAnimationDamage.gd")
 const BattleAnimationFaint = preload("res://Source/Scripts/Battle/Animations/BattleAnimationFaint.gd")
 
-func heal():
+func _heal():
 	battle.register_message(pokemon.nickname + " was cured from it's poison!")
 
 func register_damage(damage):
