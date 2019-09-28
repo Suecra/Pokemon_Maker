@@ -73,7 +73,7 @@ func trainer_choice_made(sender, half_turn):
 		
 		yield(do_animations(), "completed")
 		if choice_type == ChoiceType.Turn:
-				yield(force_switch_ins(), "completed")
+			yield(force_switch_ins(), "completed")
 		disconnect_trainers()
 		emit_signal("turn_end")
 

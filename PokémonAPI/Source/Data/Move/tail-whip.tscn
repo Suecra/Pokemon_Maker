@@ -1,11 +1,14 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Source/Data/BoostMove.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/Type/normal.tscn" type="PackedScene" id=2]
 
 [node name="tail-whip" type="Node"]
 script = ExtResource( 1 )
 move_name = "Tail-whip"
+type = ExtResource( 2 )
 accuracy = 100
+pp = 40
 defense_boost = -1
 
 [node name="normal" type="Node" parent="."]

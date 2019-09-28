@@ -4,10 +4,13 @@ enum State {SELECT_OPTION, SELECT_MOVE, SELECT_POKEMON}
 
 var state
 var choicebox
+var move_selection
 
 func _do_half_turn():
 	choicebox = battle.get_node("Choicebox")
 	choicebox.connect("selected", self, "option_selected")
+	move_selection = battle.get_node("MoveSelection")
+	move_selection.connect("move_selected", self, "move_selected")
 	select_option()
 
 func _physics_process(delta):
@@ -59,9 +62,6 @@ func option_selected():
 		match choicebox.item_index:
 			0: select_move()
 			1: select_pokemon()
-	elif state == State.SELECT_MOVE:
-		choicebox.disconnect("selected", self, "option_selected")
-		emit_signal("choice_made", self, move(choicebox.item_index))
 	elif state == State.SELECT_POKEMON:
 		choicebox.disconnect("selected", self, "option_selected")
 		emit_signal("choice_made", self, switch(choicebox.item_index))
@@ -71,8 +71,14 @@ func select_option():
 	choicebox.display_async(["Attack", "Switch", "Run"])
 	state = State.SELECT_OPTION
 
+func move_selected(index):
+	move_selection.disconnect("move_selected", self, "move_selected")
+	choicebox.disconnect("selected", self, "option_selected")
+	emit_signal("choice_made", self, move(index))
+
 func select_move():
-	choicebox.display_async(current_pokemon.get_movepool().to_string_array())
+	battle.get_node("MoveSelection").show_moves(current_pokemon.get_movepool())
+	#choicebox.display_async(current_pokemon.get_movepool().to_string_array())
 	state = State.SELECT_MOVE
 
 func select_pokemon():

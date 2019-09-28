@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Source/Scripts/Battle/Battle.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/Battlefield.gd" type="Script" id=2]
@@ -6,8 +6,10 @@
 [ext_resource path="res://Scenes/Battle/PlayerStatusBar.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Battle/EnemyStatusBar.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Common/Textboxes/Choicebox.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Battle/Bases/BattleBaseHGSSOpponent.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Battle/Bases/BattleBaseHGSSPlayer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Graphics/Battle/Background_Field_Day.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Battle/Bases/BattleBaseHGSSOpponent.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Battle/Bases/BattleBaseHGSSPlayer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Battle/MoveButtonStyles/MoveSelectionDP.tscn" type="PackedScene" id=10]
 
 [node name="Battle" type="Node2D"]
 script = ExtResource( 1 )
@@ -27,8 +29,15 @@ script = ExtResource( 2 )
 
 [node name="Choicebox" parent="." instance=ExtResource( 6 )]
 
-[node name="BaseOpponent" parent="." instance=ExtResource( 7 )]
+[node name="Background_Field_Day" type="Sprite" parent="."]
+position = Vector2( 511.292, 284.867 )
+scale = Vector2( 4.5, 4.5 )
+texture = ExtResource( 7 )
+
+[node name="BaseOpponent" parent="." instance=ExtResource( 8 )]
 position = Vector2( 574.078, 125.154 )
 
-[node name="BasePlayer" parent="." instance=ExtResource( 8 )]
+[node name="BasePlayer" parent="." instance=ExtResource( 9 )]
 position = Vector2( -66.6584, 387.707 )
+
+[node name="MoveSelection" parent="." instance=ExtResource( 10 )]

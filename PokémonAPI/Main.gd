@@ -8,8 +8,8 @@ func _on_Button_button_down():
 	yield($MessageBox.display(text), "completed")
 
 func _on_Button2_button_down():
-	var trainer = load("res://Scenes/TestTrainer.tscn").instance()
-	var trainer2 = load("res://Scenes/TestTrainer2.tscn").instance()
+	var trainer = load("res://Scenes/Trainer/TestTrainer.tscn").instance()
+	var trainer2 = load("res://Scenes/Trainer/TestTrainer2.tscn").instance()
 	$Battle.add_ally_trainer(trainer)
 	$Battle.add_opponent_trainer(trainer2)
 	$Button.visible = false
