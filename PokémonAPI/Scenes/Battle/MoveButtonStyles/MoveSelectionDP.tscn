@@ -1,8 +1,94 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Source/Scripts/Battle/MoveSelection.gd" type="Script" id=1]
+[ext_resource path="res://Source/Scripts/Battle/MoveButtonStyles/MoveSelectionDP.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Battle/MoveButtonStyles/MoveButtonStyleDP.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Graphics/Battle/FightButton.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/Battle/PokemonButton.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/Battle/BagButton.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/Battle/RunButton.png" type="Texture" id=6]
+[ext_resource path="res://Graphics/Battle/CancelButton.png" type="Texture" id=7]
 
 [node name="MoveSelectionDP" type="CanvasLayer"]
 script = ExtResource( 1 )
-button_style = ExtResource( 2 )
+move_button_style = ExtResource( 2 )
+
+[node name="MovePosition1" type="Node2D" parent="."]
+position = Vector2( 500, 400 )
+
+[node name="FightButton" type="Button" parent="MovePosition1"]
+visible = false
+margin_left = 9.0
+margin_top = 17.0
+margin_right = 147.0
+margin_bottom = 84.0
+
+[node name="Sprite" type="Sprite" parent="MovePosition1/FightButton"]
+position = Vector2( -9, -17 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="MovePosition2" type="Node2D" parent="."]
+position = Vector2( 750, 400 )
+
+[node name="SwitchButton" type="Button" parent="MovePosition2"]
+visible = false
+margin_left = 9.0
+margin_top = 18.0
+margin_right = 147.0
+margin_bottom = 84.0
+
+[node name="Sprite" type="Sprite" parent="MovePosition2/SwitchButton"]
+position = Vector2( -9, -18 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="MovePosition3" type="Node2D" parent="."]
+position = Vector2( 500, 500 )
+
+[node name="BagButton" type="Button" parent="MovePosition3"]
+visible = false
+margin_left = 10.0
+margin_top = 18.0
+margin_right = 147.0
+margin_bottom = 83.0
+
+[node name="Sprite" type="Sprite" parent="MovePosition3/BagButton"]
+position = Vector2( -10, -18 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="MovePosition4" type="Node2D" parent="."]
+position = Vector2( 750, 500 )
+
+[node name="RunButton" type="Button" parent="MovePosition4"]
+visible = false
+margin_left = 10.0
+margin_top = 20.0
+margin_right = 147.0
+margin_bottom = 84.0
+
+[node name="Sprite" type="Sprite" parent="MovePosition4/RunButton"]
+position = Vector2( -10, -20 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="CancelButton" type="Button" parent="."]
+visible = false
+margin_left = 349.644
+margin_top = 518.288
+margin_right = 489.644
+margin_bottom = 584.288
+
+[node name="Sprite" type="Sprite" parent="CancelButton"]
+position = Vector2( 69.636, 28.15 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+[connection signal="button_down" from="MovePosition1/FightButton" to="." method="_on_FightButton_button_down"]
+[connection signal="button_down" from="MovePosition2/SwitchButton" to="." method="_on_SwitchButton_button_down"]
+[connection signal="button_down" from="MovePosition3/BagButton" to="." method="_on_BagButton_button_down"]
+[connection signal="button_down" from="MovePosition4/RunButton" to="." method="_on_RunButton_button_down"]
+[connection signal="button_down" from="CancelButton" to="." method="_on_CancelButton_button_down"]

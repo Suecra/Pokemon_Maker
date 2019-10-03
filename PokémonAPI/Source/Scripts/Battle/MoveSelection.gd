@@ -1,38 +1,64 @@
 extends CanvasLayer
 
-const MOVE_1_POSITION = Vector2(500, 400)
-const MOVE_2_POSITION = Vector2(750, 400)
-const MOVE_3_POSITION = Vector2(500, 500)
-const MOVE_4_POSITION = Vector2(750, 500)
+export(PackedScene) var move_button_style
 
-export(PackedScene) var button_style
+enum SelectionState {SELECT_OPTION, SELECT_MOVE}
+
+const SEL_CANCEL = -1
+const SEL_MOVE_1 = 0
+const SEL_MOVE_2 = 1
+const SEL_MOVE_3 = 2
+const SEL_MOVE_4 = 3
+const SEL_MOVE = 4
+const SEL_RUN = 5
+const SEL_BAG = 6
+const SEL_SWITCH = 7
 
 signal move_selected
+signal switch_selected
+signal bag_selected
+signal run_selected
+signal canceled
 
-func show_moves(movepool):
-	for i in movepool.get_child_count():
-		var style = button_style.instance()
-		var move = movepool.get_child(i)
-		match i:
-			0: style.position = MOVE_1_POSITION
-			1: style.position = MOVE_2_POSITION
-			2: style.position = MOVE_3_POSITION
-			3: style.position = MOVE_4_POSITION
-		style.move_name = move.get_move_data().move_name
-		style.max_pp = move.get_move_data().pp
-		style.pp = move.current_pp
-		style.type_id = move.get_move_data().get_type().id
-		style.move_id = i
-		add_child(style)
-		style.owner = self
-		style.connect("selected", self, "selected")
-		move_child(style, 0)
+var movepool
+var state
+
+func show_selection():
+	state = SelectionState.SELECT_OPTION
+	_show_options()
 	pass
 
-func hide_moves():
-	while get_child_count() > 0:
-		remove_child(get_child(0))
+func _show_options():
+	pass
 
-func selected(move_id):
-	hide_moves()
-	emit_signal("move_selected", move_id)
+func _hide_options():
+	pass
+
+func _show_moves():
+	pass
+	
+func _hide_moves():
+	pass
+
+func selected(id):
+	if state == SelectionState.SELECT_OPTION:
+		_hide_options()
+		match id:
+			SEL_CANCEL: emit_signal("canceled")
+			SEL_MOVE:
+				state = SelectionState.SELECT_MOVE
+				_show_moves()
+			SEL_RUN: emit_signal("run_selected")
+			SEL_BAG: emit_signal("bag_selected")
+			SEL_SWITCH: emit_signal("switch_selected")
+	elif state == SelectionState.SELECT_MOVE:
+		_hide_moves()
+		match id:
+			SEL_CANCEL:
+				state = SelectionState.SELECT_OPTION
+				_show_options()
+			SEL_MOVE_1: emit_signal("move_selected", 0)
+			SEL_MOVE_2: emit_signal("move_selected", 1)
+			SEL_MOVE_3: emit_signal("move_selected", 2)
+			SEL_MOVE_4: emit_signal("move_selected", 3)
+	pass
