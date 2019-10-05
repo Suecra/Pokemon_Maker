@@ -18,3 +18,6 @@ func _end_of_turn():
 	if pokemon.fainted():
 		register_faint(pokemon)
 		battle.register_message(pokemon.nickname + " has fainted!")
+
+func _switch_in():
+	damage = 0

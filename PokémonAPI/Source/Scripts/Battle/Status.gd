@@ -19,3 +19,6 @@ func _begin_of_turn():
 
 func _end_of_turn():
 	pass
+
+func _switch_in():
+	pass

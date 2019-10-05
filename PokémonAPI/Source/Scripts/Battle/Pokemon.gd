@@ -211,3 +211,8 @@ func init_battle():
 	boosts.pokemon = self
 	boosts.boost_stats()
 	add_child(boosts)
+
+func switch_in():
+	var status = get_status()
+	if status != null:
+		status._switch_in()

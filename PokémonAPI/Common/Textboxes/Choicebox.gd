@@ -62,6 +62,12 @@ func close():
 	emit_signal("selected")
 
 func _process(delta):
+	var mouse_position = $Container.get_local_mouse_position()
+	var mouse_index: int
+	if mouse_position.x > 0 && mouse_position.x < $Container.rect_size.x:
+		if mouse_position.y > 0 && mouse_position.y < cursor_node.step * count:
+			mouse_index = int(mouse_position.y / cursor_node.step)
+			set_item_index(mouse_index)
 	if Input.is_action_just_pressed("ui_down"):
 		set_item_index(item_index + 1)
 	if Input.is_action_just_pressed("ui_up"):
