@@ -21,14 +21,12 @@ func add_ally_trainer(trainer):
 	ally_field.trainers.append(trainer)
 	trainer.field = ally_field
 	trainer.battle = self
-	trainer.init_battle()
 
 func add_opponent_trainer(trainer):
 	get_node("Trainers").add_child(trainer)
 	opponent_field.trainers.append(trainer)
 	trainer.field = opponent_field
 	trainer.battle = self
-	trainer.init_battle()
 
 func is_battle_ended():
 	var trainers = $Trainers.get_children()
@@ -39,7 +37,8 @@ func is_battle_ended():
 	return count <= 1
 
 func start():
-	print("Battle starts")
+	for t in $Trainers.get_children():
+		t.init_battle()
 	current_turn_nr = 0
 	current_turn = first_turn()
 	yield(current_turn._start(), "completed");
@@ -48,7 +47,6 @@ func start():
 		current_turn = next_turn()
 		yield(current_turn._start(), "completed");
 		current_turn_nr += 1
-	print("Battle ended")
 
 func next_turn():
 	var Turn = load("res://Source/Scripts/Battle/Turn.gd")

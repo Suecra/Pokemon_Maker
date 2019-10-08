@@ -6,7 +6,7 @@
 [node name="BattleBaseHGSSPlayer" type="Node2D"]
 scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 1 )
-pokemon_position = Vector2( 204, 0 )
+pokemon_position = Vector2( 204, 30 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 2, 2 )

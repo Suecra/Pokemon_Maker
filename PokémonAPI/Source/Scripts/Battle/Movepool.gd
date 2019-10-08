@@ -23,13 +23,12 @@ func swap(index1: int, index2: int):
 	var move = get_child(index1)
 	move_child(move, index2)
 
-func learn(move: Move):
-	if has_space():
-		pass
-	elif true: #should learn query
-		#show Movepool
-		get_children()[0] = move
-		pass
+func add_move(move):
+	var move_node = Move.new()
+	move_node.move = move
+	move_node.current_pp = 99
+	add_child(move_node)
+	move_node.owner = self
 
 func to_string_array():
 	var moves = []

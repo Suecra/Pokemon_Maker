@@ -47,7 +47,9 @@ func _on_SwitchButton_button_down():
 	selected(SEL_SWITCH)
 
 func _on_BagButton_button_down():
-	selected(SEL_BAG)
+	#selected(SEL_BAG)
+	pass
 
 func _on_RunButton_button_down():
-	selected(SEL_RUN)
+	#selected(SEL_RUN)
+	pass

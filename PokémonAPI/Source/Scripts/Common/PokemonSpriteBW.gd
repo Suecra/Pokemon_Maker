@@ -14,3 +14,6 @@ func _faint():
 	_hide()
 	$AnimationPlayer.stop()
 	yield(get_tree().create_timer(0.0), "timeout")
+
+func _get_height():
+	return $Sprite.texture.get_height() / $Sprite.vframes

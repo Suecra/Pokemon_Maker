@@ -1,15 +1,16 @@
 extends "res://Source/Scripts/Battle/HalfTurn.gd"
 
-const MoveData = preload("res://Source/Data/Move.gd")
 const Utils = preload("res://Source/Scripts/Utils.gd")
 
 export(PackedScene) var move
-export(int) var current_pp setget set_current_pp
+export(int) var current_pp = 0 setget set_current_pp
 
 var targets = []
 
 func _get_priority():
-	return get_move_data().priority
+	var data = get_move_data()
+	if data != null:
+		return data.priority
 
 func set_current_pp(value: int):
 	var data = get_move_data()

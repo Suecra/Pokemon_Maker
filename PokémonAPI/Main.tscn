@@ -1,21 +1,68 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
-[ext_resource path="res://Common/Textboxes/MessageBox.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/BattleBase.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/BattleBase.tscn" type="PackedScene" id=2]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
 
-[node name="MessageBox" parent="." instance=ExtResource( 2 )]
-auto_hide = true
-
-[node name="Button2" type="Button" parent="."]
-margin_left = 470.0
-margin_top = 231.0
-margin_right = 668.0
-margin_bottom = 278.0
-
-[node name="Battle" parent="." instance=ExtResource( 3 )]
+[node name="Battle" parent="." instance=ExtResource( 2 )]
 visible = false
-[connection signal="button_down" from="Button2" to="." method="_on_Button2_button_down"]
+
+[node name="Interface" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="StartBattle" type="Button" parent="Interface"]
+margin_left = 428.257
+margin_top = 418.844
+margin_right = 626.257
+margin_bottom = 465.844
+text = "Start Battle"
+
+[node name="AddPlayerPokemon" type="Button" parent="Interface"]
+margin_left = 100.228
+margin_top = 262.733
+margin_right = 305.228
+margin_bottom = 304.733
+text = "Add Pokémon"
+
+[node name="AddPlayerPokemon2" type="Button" parent="Interface"]
+margin_left = 656.578
+margin_top = 261.567
+margin_right = 861.578
+margin_bottom = 303.567
+text = "Add Pokémon"
+
+[node name="PokemonName" type="LineEdit" parent="Interface"]
+margin_left = 101.0
+margin_top = 215.772
+margin_right = 304.0
+margin_bottom = 248.772
+text = "bulbasaur"
+
+[node name="PokemonName2" type="LineEdit" parent="Interface"]
+margin_left = 657.349
+margin_top = 214.606
+margin_right = 860.349
+margin_bottom = 247.606
+text = "bulbasaur"
+
+[node name="PokemonLevel" type="SpinBox" parent="Interface"]
+margin_left = 320.0
+margin_top = 215.0
+margin_right = 394.0
+margin_bottom = 249.0
+min_value = 1.0
+value = 20.0
+
+[node name="PokemonLevel2" type="SpinBox" parent="Interface"]
+margin_left = 876.349
+margin_top = 213.834
+margin_right = 950.349
+margin_bottom = 247.834
+min_value = 1.0
+value = 20.0
+[connection signal="button_down" from="Interface/StartBattle" to="." method="_on_Button2_button_down"]
+[connection signal="button_down" from="Interface/AddPlayerPokemon" to="." method="_on_AddPlayerPokemon_button_down"]
+[connection signal="button_down" from="Interface/AddPlayerPokemon2" to="." method="_on_AddPlayerPokemon2_button_down"]

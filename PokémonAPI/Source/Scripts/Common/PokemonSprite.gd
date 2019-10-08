@@ -17,3 +17,6 @@ func _out_of_pokeball():
 
 func _faint():
 	pass
+
+func _get_height():
+	pass

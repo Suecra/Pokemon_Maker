@@ -14,12 +14,12 @@ func _hit():
 		targets[i].damage(damage)
 		register_damage(targets[i], damage)
 		if critical_hit:
-			battle.register_message("Todkrank!")
+			battle.register_message("A critical hit!")
 		match damage_multiplier:
-			0.25: battle.register_message("Schaden zu steigen gegen Dummies!")
-			0.5: battle.register_message("Schaden zu steigen gegen Dummies!")
-			2.0: battle.register_message("Schaden zu steigen gegen Profis!")
-			4.0: battle.register_message("Schaden zu steigen gegen Profis!")
+			0.25: battle.register_message("It's not very effective!")
+			0.5: battle.register_message("It's not very effective!")
+			2.0: battle.register_message("It's very effective!")
+			4.0: battle.register_message("It's very effective!")
 		if targets[i].fainted():
 			register_faint(targets[i])
 			battle.register_message(targets[i].nickname + " has fainted!")

@@ -117,7 +117,7 @@ func get_sprite():
 			sprite = Utils.unpack(base, get_species().get_sprite_collection().shiny_sprite, "PKMNSprite")
 		else:
 			sprite = Utils.unpack(base, get_species().get_sprite_collection().front_sprite, "PKMNSprite")
-	sprite.position = base.pokemon_position
+	sprite.position = base.calculate_pokemon_position(sprite._get_height())
 	return sprite
 
 func burn():
@@ -173,15 +173,29 @@ func boost_stat(stat, amount: int):
 
 func get_last_learnable_moves():
 	var moves = []
-	var last_added_move
 	var species = get_species()
 	if species.has_node("Moves"):
 		for m in species.get_node("Moves").get_children():
 			if not m.egg && not m.tm && m.level <= level:
-				if last_added_move != null || m.level >= last_added_move.level:
-					moves.insert(0, m.move)
-					last_added_move = m
+				var added = false
+				for i in moves.size():
+					if m.level >= moves[i].level:
+						moves.insert(i, m)
+						added = true
+						break
+				if not added && moves.size() < 4:
+					moves.append(m)
+				if moves.size() > 4:
+					moves.remove(4)
 	return moves
+
+func get_random_ivs():
+	hp_iv = randi() % 31
+	attack_iv = randi() % 31
+	defense_iv = randi() % 31
+	special_attack_iv = randi() % 31
+	special_defense_iv = randi() % 31
+	speed_iv = randi() % 31 
 
 func begin_of_turn():
 	var status = get_status()
@@ -196,7 +210,6 @@ func end_of_turn():
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "SecondaryStatus")
 	Utils.add_node_if_not_exists(self, self, "MoveArchive")
-	calculate_stats()
 	current_hp = hp
 
 func init_battle():
@@ -206,6 +219,7 @@ func init_battle():
 	battle = trainer.battle
 	battlefield = battle.battlefield
 	status_bar = battlefield.get_status_bar(field)
+	calculate_stats()
 	var boosts = Boosts.new()
 	boosts.name = "Boosts"
 	boosts.pokemon = self
