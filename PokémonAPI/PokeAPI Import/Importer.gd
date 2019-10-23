@@ -45,6 +45,7 @@ func import(base_url, destination):
 				scene = PackedScene.new()
 				item = _create_item()
 				item.name = name
+			_on_import_item()
 			yield(_import_item(item), "completed")
 			scene.pack(item)
 			ResourceSaver.save(path, scene)
@@ -67,8 +68,8 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 	request_result = result
 
 func do_log(entry):
-	var l = get_node("/root/Panel/TabContainer/Api/Log")
-	l.text += entry + "\n"
+	var api = get_node("/root/Panel/TabContainer/API")
+	api.do_log(entry)
 
 func _get_name():
 	return api_item["name"]
@@ -96,6 +97,9 @@ func get_or_add_node(parent: Node, name: String):
 
 func _before_import():
 	pass
+
+func _on_import_item():
+	do_log("importing " + api_item["name"])
 
 func _after_import():
 	pass

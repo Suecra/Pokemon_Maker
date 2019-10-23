@@ -27,10 +27,15 @@ func _import_item(item):
 		"status": item.damage_class = Move.DamageClass.Status
 		"physical": item.damage_class = Move.DamageClass.Physical
 		"special": item.damage_class = Move.DamageClass.Special
-	item.power = api_item["power"]
-	item.accuracy = api_item["accuracy"]
-	item.priority = api_item["priority"]
-	item.pp = api_item["pp"]
+		
+	if api_item["power"] != null:
+		item.power = int(api_item["power"])
+	if api_item["accuracy"] != null:
+		item.accuracy = int(api_item["accuracy"])
+	if api_item["priority"] != null:
+		item.priority = int(api_item["priority"])
+	if api_item["pp"] != null:
+		item.pp = int(api_item["pp"])
 	
 	if api_item["meta"] != null:
 		item.flags = 0
@@ -93,6 +98,7 @@ func _import_item(item):
 	yield(get_tree().create_timer(0), "timeout")
 
 func _after_import():
+	._after_import()
 	var item
 	var scene
 	var path 

@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Source/Scripts/Common/Textboxes/TextboxStyle.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/pkmndp.ttf" type="DynamicFontData" id=2]
+
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+extra_spacing_top = 10
+extra_spacing_bottom = 10
+font_data = ExtResource( 2 )
+
+[node name="TextboxStyle1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+text_node = NodePath("text")
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="top" type="ColorRect" parent="background"]
+anchor_right = 1.0
+margin_bottom = 4.0
+color = Color( 0.4, 0.4, 0.4, 1 )
+
+[node name="left" type="ColorRect" parent="background"]
+anchor_bottom = 1.0
+margin_right = 4.0
+color = Color( 0.4, 0.4, 0.4, 1 )
+
+[node name="right" type="ColorRect" parent="background"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -4.0
+color = Color( 0.4, 0.4, 0.4, 1 )
+
+[node name="bottom" type="ColorRect" parent="background"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -4.0
+color = Color( 0.4, 0.4, 0.4, 1 )
+
+[node name="text" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 34.0
+margin_top = 9.0
+margin_right = -9.0
+margin_bottom = -10.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Dies ist ein Test
+"
+

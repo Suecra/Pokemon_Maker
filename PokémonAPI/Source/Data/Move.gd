@@ -44,6 +44,8 @@ func _get_base_damage():
 	return power
 
 func _get_accuracy():
+	if accuracy == null:
+		return 100.0
 	return float(accuracy)
 
 func _is_hit():

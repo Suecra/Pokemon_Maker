@@ -9,17 +9,12 @@ script = ExtResource( 1 )
 move_name = "Ember"
 type = ExtResource( 2 )
 damage_class = 1
-power = 40.0
-accuracy = 100.0
-priority = 0.0
-pp = 25.0
-z_power = 0
+power = 40
+accuracy = 100
+pp = 25
 flags = 96
-hit_range = 0
-is_HM = false
 contest_type = 1
 contest_effect = ExtResource( 3 )
-battle_style = 0
 description = "The target is attacked with small flames. This may
 also leave the target with a burn."
 
