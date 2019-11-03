@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/BoostMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/dark.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Source/Data/Contest-Effect/contest_effect8.tscn" type="PackedScene" id=3]
 
@@ -9,7 +9,7 @@ script = ExtResource( 1 )
 move_name = "Torment"
 type = ExtResource( 2 )
 damage_class = 2
-power = null
+power = 0
 accuracy = 100
 priority = 0
 pp = 15
@@ -22,3 +22,10 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user torments and enrages the target, making it
 incapable of using the same move twice in a row."
+attack_boost = 0
+defense_boost = 0
+special_attack_boost = 0
+special_defense_boost = 0
+speed_boost = 0
+accuracy_boost = 0
+evasion_boost = 0

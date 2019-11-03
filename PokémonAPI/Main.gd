@@ -62,4 +62,7 @@ func _on_AddPlayerPokemon2_button_down():
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventScreenTouch:
-		Input.action_press("ui_accept")
+		if event.pressed:
+			Input.action_press("ui_accept")
+		else:
+			Input.action_release("ui_accept")

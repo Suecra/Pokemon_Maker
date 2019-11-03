@@ -11,7 +11,7 @@ export(String) var move_name
 export(PackedScene) var type
 export(DamageClass) var damage_class
 export(int, 1, 255) var power
-export(int, 1, 100) var accuracy
+export(int, 0, 100) var accuracy
 export(int, -7, 7) var priority
 export(int) var pp
 export(int, 1, 255) var z_power
@@ -44,7 +44,7 @@ func _get_base_damage():
 	return power
 
 func _get_accuracy():
-	if accuracy == null:
+	if accuracy == 0:
 		return 100.0
 	return float(accuracy)
 

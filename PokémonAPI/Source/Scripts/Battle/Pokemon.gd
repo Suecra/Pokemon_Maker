@@ -72,7 +72,7 @@ func calculate_stats():
 	defense = calculate_stat(get_species().defense, defense_ev, defense_iv)
 	special_attack = calculate_stat(get_species().special_attack, special_attack_ev, special_attack_iv)
 	special_defense = calculate_stat(get_species().special_defense, special_defense_ev, special_defense_iv)
-	speed = calculate_stat(get_species().speed, defense_ev, defense_iv)
+	speed = calculate_stat(get_species().speed, speed_ev, speed_iv)
 	get_nature().change_stats(self)
 
 func calculate_stat(base: int, ev: int, iv: int):

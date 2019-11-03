@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "WATTest",
+"language": "GDScript",
+"path": "res://addons/WAT/test/test.gd"
+} ]
 _global_script_class_icons={
-
+"WATTest": ""
 }
 
 [application]
@@ -26,7 +31,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "Pokemon" )
+enabled=PoolStringArray( "Pokemon", "WAT" )
 
 [importer_defaults]
 

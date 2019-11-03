@@ -47,6 +47,7 @@ func start():
 		current_turn = next_turn()
 		yield(current_turn._start(), "completed");
 		current_turn_nr += 1
+	$MessageBox.close()
 
 func next_turn():
 	var Turn = load("res://Source/Scripts/Battle/Turn.gd")

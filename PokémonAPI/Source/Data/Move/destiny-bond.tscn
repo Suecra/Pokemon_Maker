@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Source/Data/Move.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/BoostMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/ghost.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Source/Data/Contest-Effect/contest_effect7.tscn" type="PackedScene" id=3]
 
@@ -9,8 +9,8 @@ script = ExtResource( 1 )
 move_name = "Destiny-bond"
 type = ExtResource( 2 )
 damage_class = 2
-power = null
-accuracy = null
+power = 0
+accuracy = 0
 priority = 0
 pp = 5
 z_power = 0
@@ -23,6 +23,13 @@ battle_style = 0
 description = "After using this move, if the user faints, the
 Pokémon that landed the knockout hit also faints.
 Its chance of failing rises if it is used in succession."
+attack_boost = 0
+defense_boost = 0
+special_attack_boost = 0
+special_defense_boost = 0
+speed_boost = 0
+accuracy_boost = 0
+evasion_boost = 0
 
 [node name="normal" type="Node" parent="."]
 
