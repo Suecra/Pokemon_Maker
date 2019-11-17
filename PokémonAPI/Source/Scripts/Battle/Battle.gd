@@ -49,6 +49,23 @@ func start():
 		current_turn_nr += 1
 	$MessageBox.close()
 
+func start_async():
+	for t in $Trainers.get_children():
+		t.init_battle()
+	current_turn_nr = 0
+	current_turn = first_turn()
+	current_turn.connect("turn_end", self, "turn_end")
+	current_turn._start_async()
+	turn_end()
+
+func turn_end():
+	current_turn_nr += 1
+	current_turn.disconnect("turn_end", self, "turn_end")
+	if not is_battle_ended():
+		current_turn = next_turn()
+		current_turn.connect("turn_end", self, "turn_end")
+		current_turn._start_async()
+
 func next_turn():
 	var Turn = load("res://Source/Scripts/Battle/Turn.gd")
 	var turn = Turn.new()

@@ -246,7 +246,7 @@ tm = false
 [node name="dream-eater" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 29 )
-level = 0
+level = 33
 egg = false
 tm = true
 
@@ -414,7 +414,7 @@ tm = true
 [node name="shadow-ball" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 53 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -463,7 +463,7 @@ tm = false
 [node name="payback" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 60 )
-level = 0
+level = 26
 egg = false
 tm = true
 
@@ -486,7 +486,7 @@ script = ExtResource( 14 )
 move = ExtResource( 63 )
 level = 36
 egg = false
-tm = false
+tm = true
 
 [node name="energy-ball" type="Node" parent="Moves"]
 script = ExtResource( 14 )

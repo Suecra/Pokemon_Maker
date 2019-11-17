@@ -55,7 +55,6 @@ func custom_switch(name: String):
 	if index != -1:
 		var switch = switch(index)
 		emit_signal("choice_made", self, switch)
-	pass
 
 func custom_item(name: String):
 	pass

@@ -178,7 +178,7 @@ tm = false
 [node name="bite" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 25 )
-level = 0
+level = 10
 egg = true
 tm = false
 

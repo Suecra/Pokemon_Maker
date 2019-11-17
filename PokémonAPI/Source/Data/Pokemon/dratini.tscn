@@ -213,7 +213,7 @@ tm = true
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 27 )
-level = 0
+level = 61
 egg = false
 tm = true
 
@@ -234,7 +234,7 @@ tm = true
 [node name="thunder-wave" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 30 )
-level = 0
+level = 5
 egg = false
 tm = true
 
@@ -360,7 +360,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 48 )
-level = 0
+level = 45
 egg = false
 tm = true
 
@@ -431,7 +431,7 @@ tm = true
 script = ExtResource( 17 )
 move = ExtResource( 58 )
 level = 51
-egg = false
+egg = true
 tm = false
 
 [node name="water-pulse" type="Node" parent="Moves"]
@@ -459,7 +459,7 @@ tm = false
 script = ExtResource( 17 )
 move = ExtResource( 62 )
 level = 41
-egg = false
+egg = true
 tm = false
 
 [node name="draco-meteor" type="Node" parent="Moves"]
@@ -488,7 +488,7 @@ script = ExtResource( 17 )
 move = ExtResource( 66 )
 level = 31
 egg = false
-tm = false
+tm = true
 
 [node name="confide" type="Node" parent="Moves"]
 script = ExtResource( 17 )

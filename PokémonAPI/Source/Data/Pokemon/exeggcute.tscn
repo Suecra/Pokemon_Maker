@@ -173,7 +173,7 @@ tm = false
 [node name="solar-beam" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 20 )
-level = 0
+level = 43
 egg = false
 tm = true
 
@@ -243,7 +243,7 @@ tm = true
 [node name="reflect" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 30 )
-level = 0
+level = 7
 egg = false
 tm = true
 
@@ -412,7 +412,7 @@ tm = true
 script = ExtResource( 17 )
 move = ExtResource( 54 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="ingrain" type="Node" parent="Moves"]
@@ -453,7 +453,7 @@ tm = false
 [node name="natural-gift" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 60 )
-level = 0
+level = 37
 egg = true
 tm = false
 

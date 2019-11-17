@@ -234,7 +234,7 @@ tm = true
 [node name="ice-beam" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 29 )
-level = 0
+level = 32
 egg = false
 tm = true
 
@@ -375,7 +375,7 @@ tm = true
 script = ExtResource( 19 )
 move = ExtResource( 49 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]
@@ -395,7 +395,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 52 )
-level = 0
+level = 43
 egg = false
 tm = true
 
@@ -409,7 +409,7 @@ tm = true
 [node name="rain-dance" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 54 )
-level = 0
+level = 22
 egg = false
 tm = true
 

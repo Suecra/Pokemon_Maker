@@ -163,28 +163,28 @@ tm = false
 [node name="thunder-shock" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 21 )
-level = 1
+level = 5
 egg = false
 tm = false
 
 [node name="thunderbolt" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 22 )
-level = 0
+level = 49
 egg = false
 tm = true
 
 [node name="thunder-wave" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 23 )
-level = 0
+level = 19
 egg = false
 tm = true
 
 [node name="thunder" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 24 )
-level = 0
+level = 55
 egg = false
 tm = true
 
@@ -226,7 +226,7 @@ tm = true
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 30 )
-level = 0
+level = 26
 egg = false
 tm = true
 

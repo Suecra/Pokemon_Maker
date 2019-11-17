@@ -187,7 +187,7 @@ tm = true
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 24 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -208,7 +208,7 @@ tm = false
 [node name="explosion" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 27 )
-level = 0
+level = 41
 egg = false
 tm = true
 
@@ -334,7 +334,7 @@ tm = true
 [node name="gyro-ball" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 45 )
-level = 0
+level = 46
 egg = false
 tm = true
 
@@ -355,7 +355,7 @@ tm = false
 [node name="charge-beam" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 48 )
-level = 0
+level = 16
 egg = false
 tm = true
 

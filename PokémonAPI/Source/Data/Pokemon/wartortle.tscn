@@ -137,7 +137,7 @@ tm = false
 [node name="tail-whip" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 17 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -151,7 +151,7 @@ tm = false
 [node name="water-gun" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 19 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -242,7 +242,7 @@ tm = true
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 32 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -300,7 +300,7 @@ script = ExtResource( 15 )
 move = ExtResource( 40 )
 level = 45
 egg = false
-tm = false
+tm = true
 
 [node name="hail" type="Node" parent="Moves"]
 script = ExtResource( 15 )

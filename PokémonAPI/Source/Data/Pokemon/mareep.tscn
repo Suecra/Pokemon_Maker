@@ -156,7 +156,7 @@ tm = false
 [node name="take-down" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 19 )
-level = 0
+level = 18
 egg = true
 tm = false
 
@@ -184,14 +184,14 @@ tm = true
 [node name="thunder-wave" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 23 )
-level = 0
+level = 4
 egg = false
 tm = true
 
 [node name="thunder" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 24 )
-level = 0
+level = 46
 egg = false
 tm = true
 
@@ -233,7 +233,7 @@ tm = false
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 30 )
-level = 0
+level = 43
 egg = false
 tm = true
 
@@ -345,7 +345,7 @@ tm = true
 [node name="charge" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 46 )
-level = 0
+level = 15
 egg = true
 tm = false
 

@@ -223,7 +223,7 @@ tm = false
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 26 )
-level = 0
+level = 49
 egg = false
 tm = true
 
@@ -314,7 +314,7 @@ tm = true
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 39 )
-level = 0
+level = 45
 egg = false
 tm = true
 
@@ -377,7 +377,7 @@ tm = true
 [node name="psych-up" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 48 )
-level = 0
+level = 33
 egg = false
 tm = true
 
@@ -490,7 +490,7 @@ tm = false
 script = ExtResource( 15 )
 move = ExtResource( 64 )
 level = 53
-egg = false
+egg = true
 tm = false
 
 [node name="psycho-cut" type="Node" parent="Moves"]
@@ -533,7 +533,7 @@ script = ExtResource( 15 )
 move = ExtResource( 70 )
 level = 57
 egg = false
-tm = false
+tm = true
 
 [node name="synchronoise" type="Node" parent="Moves"]
 script = ExtResource( 15 )

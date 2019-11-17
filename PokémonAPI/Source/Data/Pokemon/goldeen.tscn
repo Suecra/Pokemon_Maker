@@ -263,7 +263,7 @@ tm = false
 [node name="waterfall" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 38 )
-level = 0
+level = 32
 egg = false
 tm = true
 
@@ -327,7 +327,7 @@ tm = true
 script = ExtResource( 21 )
 move = ExtResource( 47 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]

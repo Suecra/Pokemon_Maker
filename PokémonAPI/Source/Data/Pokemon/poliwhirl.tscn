@@ -154,7 +154,7 @@ tm = false
 [node name="water-gun" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 20 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -217,7 +217,7 @@ tm = true
 [node name="hypnosis" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 29 )
-level = 8
+level = 1
 egg = false
 tm = false
 
@@ -322,7 +322,7 @@ tm = true
 [node name="rain-dance" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 44 )
-level = 0
+level = 18
 egg = false
 tm = true
 

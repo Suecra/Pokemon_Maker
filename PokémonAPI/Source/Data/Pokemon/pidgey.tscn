@@ -271,7 +271,7 @@ tm = true
 script = ExtResource( 16 )
 move = ExtResource( 35 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="attract" type="Node" parent="Moves"]
@@ -375,7 +375,7 @@ tm = true
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 50 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -396,7 +396,7 @@ tm = true
 [node name="air-slash" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 53 )
-level = 0
+level = 49
 egg = true
 tm = false
 

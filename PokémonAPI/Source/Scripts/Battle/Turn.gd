@@ -15,6 +15,7 @@ var prev_turn
 var choices_made
 var required_choices
 var choice_type
+var async = false
 
 func register_animation(animation):
 	$Animations.add_child(animation)
@@ -42,10 +43,11 @@ func force_switch_ins():
 		if t.current_pokemon.fainted():
 			required_choices += 1
 			t._force_switch_in()
-	if required_choices > 0:
-		yield(self, "turn_end")
-	else:
-		yield(get_tree().create_timer(0.0), "timeout")
+	if not async:
+		if required_choices > 0:
+			yield(self, "turn_end")
+		else:
+			yield(get_tree().create_timer(0.0), "timeout")
 
 func _start():
 	choices_made = 0
@@ -54,6 +56,14 @@ func _start():
 	for t in trainers:
 		t._do_half_turn()
 	yield(self, "turn_end")
+
+func _start_async():
+	async = true
+	choices_made = 0
+	required_choices = trainers.size()
+	choice_type = ChoiceType.Turn
+	for t in trainers:
+		t._do_half_turn()
 
 func trainer_choice_made(sender, half_turn):
 	half_turn.turn = self
@@ -71,9 +81,13 @@ func trainer_choice_made(sender, half_turn):
 		if choice_type == ChoiceType.Turn:
 			battle.battlefield.end_of_turn()
 		
-		yield(do_animations(), "completed")
+		if not async:
+			yield(do_animations(), "completed")
 		if choice_type == ChoiceType.Turn:
-			yield(force_switch_ins(), "completed")
+			if async:
+				force_switch_ins()
+			else:
+				yield(force_switch_ins(), "completed")
 		disconnect_trainers()
 		emit_signal("turn_end")
 

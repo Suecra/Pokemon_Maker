@@ -187,14 +187,14 @@ tm = true
 [node name="thunder-wave" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 23 )
-level = 0
+level = 8
 egg = false
 tm = true
 
 [node name="thunder" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 24 )
-level = 0
+level = 78
 egg = false
 tm = true
 
@@ -222,7 +222,7 @@ tm = true
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 28 )
-level = 0
+level = 64
 egg = false
 tm = true
 
@@ -313,7 +313,7 @@ tm = true
 [node name="rain-dance" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 41 )
-level = 0
+level = 57
 egg = false
 tm = true
 
@@ -355,7 +355,7 @@ tm = true
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 47 )
-level = 0
+level = 85
 egg = false
 tm = true
 

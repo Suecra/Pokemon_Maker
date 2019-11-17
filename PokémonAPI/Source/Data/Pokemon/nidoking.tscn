@@ -365,7 +365,7 @@ tm = true
 [node name="megahorn" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 47 )
-level = 1
+level = 58
 egg = false
 tm = false
 

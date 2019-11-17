@@ -338,7 +338,7 @@ tm = true
 script = ExtResource( 16 )
 move = ExtResource( 43 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]
@@ -386,7 +386,7 @@ tm = true
 [node name="psych-up" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 50 )
-level = 0
+level = 34
 egg = false
 tm = true
 

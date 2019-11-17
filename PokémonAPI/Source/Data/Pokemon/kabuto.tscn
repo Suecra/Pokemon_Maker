@@ -458,7 +458,7 @@ tm = true
 script = ExtResource( 17 )
 move = ExtResource( 61 )
 level = 16
-egg = false
+egg = true
 tm = false
 
 [node name="wring-out" type="Node" parent="Moves"]

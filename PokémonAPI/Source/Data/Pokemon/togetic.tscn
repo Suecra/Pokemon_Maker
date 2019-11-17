@@ -246,7 +246,7 @@ tm = true
 [node name="metronome" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 30 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -288,7 +288,7 @@ tm = true
 [node name="sweet-kiss" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 36 )
-level = 9
+level = 1
 egg = false
 tm = false
 
@@ -344,7 +344,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 44 )
-level = 0
+level = 37
 egg = false
 tm = true
 

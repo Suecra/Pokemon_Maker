@@ -260,7 +260,7 @@ tm = true
 [node name="reflect" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 32 )
-level = 0
+level = 28
 egg = false
 tm = true
 
@@ -274,7 +274,7 @@ tm = false
 [node name="dream-eater" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 34 )
-level = 0
+level = 46
 egg = false
 tm = true
 
@@ -449,7 +449,7 @@ tm = true
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 59 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -498,7 +498,7 @@ tm = true
 [node name="echoed-voice" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 66 )
-level = 0
+level = 13
 egg = false
 tm = true
 

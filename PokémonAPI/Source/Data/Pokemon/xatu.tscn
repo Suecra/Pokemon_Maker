@@ -208,21 +208,21 @@ tm = true
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 28 )
-level = 0
+level = 35
 egg = false
 tm = true
 
 [node name="teleport" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 29 )
-level = 9
+level = 1
 egg = false
 tm = false
 
 [node name="night-shade" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 30 )
-level = 6
+level = 1
 egg = false
 tm = false
 
@@ -467,7 +467,7 @@ tm = false
 [node name="air-slash" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 65 )
-level = 1
+level = 0
 egg = false
 tm = false
 

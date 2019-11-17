@@ -139,7 +139,7 @@ script = ExtResource( 14 )
 [node name="comet-punch" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 16 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -174,7 +174,7 @@ tm = false
 [node name="counter" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 21 )
-level = 61
+level = 1
 egg = false
 tm = false
 
@@ -195,7 +195,7 @@ tm = true
 [node name="agility" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 24 )
-level = 6
+level = 1
 egg = false
 tm = false
 
@@ -244,7 +244,7 @@ tm = true
 [node name="mach-punch" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 31 )
-level = 16
+level = 1
 egg = false
 tm = false
 
@@ -293,7 +293,7 @@ tm = true
 [node name="pursuit" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 38 )
-level = 11
+level = 1
 egg = false
 tm = false
 
@@ -328,7 +328,7 @@ tm = true
 [node name="focus-punch" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 43 )
-level = 56
+level = 1
 egg = false
 tm = false
 
@@ -377,7 +377,7 @@ tm = false
 [node name="close-combat" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 50 )
-level = 66
+level = 1
 egg = false
 tm = false
 

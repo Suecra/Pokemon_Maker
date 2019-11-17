@@ -445,7 +445,7 @@ script = ExtResource( 16 )
 move = ExtResource( 59 )
 level = 37
 egg = false
-tm = false
+tm = true
 
 [node name="shadow-claw" type="Node" parent="Moves"]
 script = ExtResource( 16 )

@@ -196,7 +196,7 @@ tm = true
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 26 )
-level = 0
+level = 75
 egg = false
 tm = true
 
@@ -217,7 +217,7 @@ tm = true
 [node name="thunder-wave" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 29 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -336,7 +336,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 46 )
-level = 0
+level = 53
 egg = false
 tm = true
 
@@ -350,7 +350,7 @@ tm = true
 [node name="twister" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 48 )
-level = 11
+level = 1
 egg = false
 tm = false
 
@@ -420,7 +420,7 @@ tm = true
 [node name="dragon-tail" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 58 )
-level = 0
+level = 33
 egg = false
 tm = true
 

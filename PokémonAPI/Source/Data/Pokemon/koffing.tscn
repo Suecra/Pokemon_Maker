@@ -257,7 +257,7 @@ tm = false
 [node name="explosion" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 31 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -306,14 +306,14 @@ tm = true
 [node name="sludge-bomb" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 38 )
-level = 0
+level = 34
 egg = false
 tm = true
 
 [node name="destiny-bond" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 39 )
-level = 0
+level = 40
 egg = true
 tm = false
 
@@ -453,7 +453,7 @@ tm = false
 [node name="gyro-ball" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 59 )
-level = 0
+level = 29
 egg = false
 tm = true
 

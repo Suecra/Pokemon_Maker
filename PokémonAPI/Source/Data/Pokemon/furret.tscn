@@ -236,14 +236,14 @@ tm = true
 [node name="agility" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 30 )
-level = 1
+level = 0
 egg = false
 tm = false
 
 [node name="quick-attack" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 31 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -257,7 +257,7 @@ tm = true
 [node name="defense-curl" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 33 )
-level = 1
+level = 4
 egg = false
 tm = false
 
@@ -278,7 +278,7 @@ tm = false
 [node name="rest" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 36 )
-level = 0
+level = 32
 egg = false
 tm = true
 

@@ -326,7 +326,7 @@ tm = true
 [node name="rest" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 42 )
-level = 0
+level = 30
 egg = false
 tm = true
 
@@ -482,7 +482,7 @@ script = ExtResource( 19 )
 move = ExtResource( 64 )
 level = 35
 egg = false
-tm = false
+tm = true
 
 [node name="fling" type="Node" parent="Moves"]
 script = ExtResource( 19 )
@@ -508,7 +508,7 @@ tm = true
 [node name="round" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 68 )
-level = 0
+level = 22
 egg = false
 tm = true
 

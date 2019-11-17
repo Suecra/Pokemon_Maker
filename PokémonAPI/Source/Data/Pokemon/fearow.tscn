@@ -157,7 +157,7 @@ tm = false
 [node name="leer" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 20 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -304,7 +304,7 @@ tm = true
 [node name="pursuit" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 41 )
-level = 8
+level = 1
 egg = false
 tm = false
 
@@ -339,14 +339,14 @@ tm = true
 [node name="aerial-ace" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 46 )
-level = 0
+level = 15
 egg = false
 tm = true
 
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 47 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -402,7 +402,7 @@ tm = true
 [node name="drill-run" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 55 )
-level = 45
+level = 1
 egg = false
 tm = false
 

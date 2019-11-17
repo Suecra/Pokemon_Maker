@@ -352,7 +352,7 @@ tm = false
 [node name="poison-jab" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 48 )
-level = 0
+level = 43
 egg = false
 tm = true
 

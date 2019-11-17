@@ -167,7 +167,7 @@ tm = true
 script = ExtResource( 15 )
 move = ExtResource( 19 )
 level = 35
-egg = false
+egg = true
 tm = false
 
 [node name="stomp" type="Node" parent="Moves"]
@@ -307,13 +307,13 @@ tm = true
 script = ExtResource( 15 )
 move = ExtResource( 39 )
 level = 45
-egg = false
+egg = true
 tm = false
 
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 40 )
-level = 0
+level = 29
 egg = false
 tm = true
 

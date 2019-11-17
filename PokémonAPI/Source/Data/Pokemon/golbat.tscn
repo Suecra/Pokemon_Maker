@@ -157,14 +157,14 @@ tm = true
 [node name="bite" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 20 )
-level = 11
+level = 1
 egg = false
 tm = false
 
 [node name="supersonic" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 21 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -227,7 +227,7 @@ tm = false
 [node name="leech-life" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 30 )
-level = 0
+level = 35
 egg = false
 tm = true
 
@@ -374,7 +374,7 @@ tm = false
 [node name="astonish" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 51 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -430,7 +430,7 @@ tm = true
 [node name="venoshock" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 59 )
-level = 0
+level = 43
 egg = false
 tm = true
 

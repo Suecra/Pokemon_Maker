@@ -163,7 +163,7 @@ tm = true
 [node name="ember" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 20 )
-level = 1
+level = 0
 egg = false
 tm = false
 

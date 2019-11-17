@@ -231,7 +231,7 @@ tm = false
 [node name="toxic" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 29 )
-level = 0
+level = 35
 egg = false
 tm = true
 
@@ -373,7 +373,7 @@ script = ExtResource( 17 )
 move = ExtResource( 49 )
 level = 0
 egg = true
-tm = false
+tm = true
 
 [node name="ingrain" type="Node" parent="Moves"]
 script = ExtResource( 17 )

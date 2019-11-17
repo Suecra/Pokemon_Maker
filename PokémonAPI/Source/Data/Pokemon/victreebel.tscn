@@ -379,7 +379,7 @@ tm = true
 [node name="leaf-tornado" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 51 )
-level = 1
+level = 0
 egg = false
 tm = false
 

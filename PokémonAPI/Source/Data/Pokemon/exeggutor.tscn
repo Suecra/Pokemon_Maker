@@ -143,7 +143,7 @@ tm = true
 [node name="stomp" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 17 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -395,7 +395,7 @@ tm = false
 [node name="psyshock" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 53 )
-level = 0
+level = 17
 egg = false
 tm = true
 

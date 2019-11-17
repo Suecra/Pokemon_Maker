@@ -149,7 +149,7 @@ script = ExtResource( 16 )
 [node name="karate-chop" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 18 )
-level = 1
+level = 7
 egg = false
 tm = false
 
@@ -219,7 +219,7 @@ tm = true
 [node name="focus-energy" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 28 )
-level = 1
+level = 3
 egg = false
 tm = false
 
@@ -396,7 +396,7 @@ script = ExtResource( 17 )
 move = ExtResource( 53 )
 level = 43
 egg = false
-tm = false
+tm = true
 
 [node name="wake-up-slap" type="Node" parent="Moves"]
 script = ExtResource( 17 )
@@ -445,7 +445,7 @@ script = ExtResource( 17 )
 move = ExtResource( 60 )
 level = 13
 egg = false
-tm = false
+tm = true
 
 [node name="round" type="Node" parent="Moves"]
 script = ExtResource( 17 )

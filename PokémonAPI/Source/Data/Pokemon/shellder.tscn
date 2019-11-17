@@ -210,7 +210,7 @@ tm = true
 [node name="ice-beam" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 27 )
-level = 0
+level = 52
 egg = false
 tm = true
 
@@ -301,7 +301,7 @@ tm = true
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 40 )
-level = 0
+level = 16
 egg = false
 tm = true
 
@@ -386,7 +386,7 @@ tm = true
 script = ExtResource( 18 )
 move = ExtResource( 52 )
 level = 13
-egg = false
+egg = true
 tm = false
 
 [node name="iron-defense" type="Node" parent="Moves"]

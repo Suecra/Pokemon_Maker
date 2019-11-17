@@ -390,7 +390,7 @@ tm = false
 [node name="false-swipe" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 51 )
-level = 0
+level = 27
 egg = false
 tm = true
 
@@ -488,7 +488,7 @@ tm = true
 [node name="fling" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 65 )
-level = 0
+level = 33
 egg = false
 tm = true
 

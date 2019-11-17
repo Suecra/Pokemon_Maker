@@ -335,7 +335,7 @@ tm = false
 [node name="sludge-bomb" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 43 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -496,7 +496,7 @@ tm = true
 [node name="fling" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 66 )
-level = 0
+level = 26
 egg = false
 tm = true
 
@@ -540,7 +540,7 @@ script = ExtResource( 18 )
 move = ExtResource( 72 )
 level = 32
 egg = false
-tm = false
+tm = true
 
 [node name="acid-spray" type="Node" parent="Moves"]
 script = ExtResource( 18 )

@@ -176,7 +176,7 @@ func get_last_learnable_moves():
 	var species = get_species()
 	if species.has_node("Moves"):
 		for m in species.get_node("Moves").get_children():
-			if not m.egg && not m.tm && m.level <= level:
+			if m.level > 0 && m.level <= level:
 				var added = false
 				for i in moves.size():
 					if m.level >= moves[i].level:

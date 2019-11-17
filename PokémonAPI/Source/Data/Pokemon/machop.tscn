@@ -450,7 +450,7 @@ tm = true
 [node name="knock-off" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 59 )
-level = 0
+level = 21
 egg = true
 tm = false
 
@@ -473,7 +473,7 @@ script = ExtResource( 17 )
 move = ExtResource( 62 )
 level = 37
 egg = false
-tm = false
+tm = true
 
 [node name="wake-up-slap" type="Node" parent="Moves"]
 script = ExtResource( 17 )
@@ -550,7 +550,7 @@ script = ExtResource( 17 )
 move = ExtResource( 73 )
 level = 13
 egg = false
-tm = false
+tm = true
 
 [node name="round" type="Node" parent="Moves"]
 script = ExtResource( 17 )

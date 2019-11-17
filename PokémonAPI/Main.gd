@@ -15,8 +15,8 @@ func _on_Button2_button_down():
 
 func _ready():
 	randomize()
-	playerTrainer = load("res://Scenes/Trainer/TestTrainer.tscn").instance()
-	opponentTrainer = load("res://Scenes/Trainer/TestTrainer2.tscn").instance()
+	playerTrainer = load("res://Scenes/Trainer/PlayerTrainer.tscn").instance()
+	opponentTrainer = load("res://Scenes/Trainer/WildPokemonTrainer.tscn").instance()
 	$Battle.add_ally_trainer(playerTrainer)
 	$Battle.add_opponent_trainer(opponentTrainer)
 

@@ -20,7 +20,7 @@ func _create_item():
 func _import_item(item):
 	yield(get_species(api_item["species"]["name"]), "completed")
 	var species = result
-	item.national_dex_nr = int(species["pokedex_numbers"][species["pokedex_numbers"].size() - 1]["entry_number"])
+	item.national_dex_nr = int(species["id"])
 	
 	item.hp = int(api_item["stats"][5]["base_stat"])
 	item.attack = int(api_item["stats"][4]["base_stat"])
@@ -165,26 +165,26 @@ func add_move(item, index: int):
 	var move_node
 	if node.has_node(name):
 		move_node = node.get_node(name)
-		node.remove_child(move_node)
-	var level = -1
+		#node.remove_child(move_node)
+	var level
 	var method
 	for i in api_item["moves"][index]["version_group_details"].size():
 		if api_item["moves"][index]["version_group_details"][i]["version_group"]["name"] == "ultra-sun-ultra-moon":
 			level = api_item["moves"][index]["version_group_details"][i]["level_learned_at"]
 			method = api_item["moves"][index]["version_group_details"][i]["move_learn_method"]["name"]
-			break
-	if level != -1:
-		var move
-		if moves.has(name):
-			move = moves[name]
-		else:
-			move = load("res://Source/Data/Move/" + name + ".tscn")
-			moves[name] = move
-		move_node = LearnableMove.new()
-		move_node.name = name
-		move_node.move = move
-		move_node.level = int(level)
-		move_node.egg = method == "egg"
-		move_node.tm = method == "machine"
-		node.add_child(move_node)
-		move_node.owner = item
+			var move
+			if moves.has(name):
+				move = moves[name]
+			else:
+				move = load("res://Source/Data/Move/" + name + ".tscn")
+				moves[name] = move
+			if move_node == null:
+				move_node = LearnableMove.new()
+				move_node.name = name
+				node.add_child(move_node)
+				move_node.owner = item
+				move_node.move = move
+			match method:
+				"egg": move_node.egg = true
+				"machine": move_node.tm = true
+				"level-up": move_node.level = int(level)

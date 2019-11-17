@@ -493,7 +493,7 @@ script = ExtResource( 21 )
 move = ExtResource( 66 )
 level = 54
 egg = false
-tm = false
+tm = true
 
 [node name="energy-ball" type="Node" parent="Moves"]
 script = ExtResource( 21 )

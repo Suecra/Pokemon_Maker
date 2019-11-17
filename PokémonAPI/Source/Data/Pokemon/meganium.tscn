@@ -173,28 +173,28 @@ tm = true
 [node name="razor-leaf" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 25 )
-level = 6
+level = 1
 egg = false
 tm = false
 
 [node name="solar-beam" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 26 )
-level = 0
+level = 66
 egg = false
 tm = true
 
 [node name="poison-powder" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 27 )
-level = 9
+level = 1
 egg = false
 tm = false
 
 [node name="petal-dance" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 28 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -222,14 +222,14 @@ tm = true
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 32 )
-level = 0
+level = 40
 egg = false
 tm = true
 
 [node name="reflect" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 33 )
-level = 0
+level = 18
 egg = false
 tm = true
 
@@ -292,7 +292,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 42 )
-level = 0
+level = 54
 egg = false
 tm = true
 
@@ -432,7 +432,7 @@ tm = true
 [node name="petal-blizzard" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 62 )
-level = 70
+level = 1
 egg = false
 tm = false
 

@@ -410,7 +410,7 @@ tm = true
 [node name="superpower" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 53 )
-level = 1
+level = 58
 egg = false
 tm = false
 

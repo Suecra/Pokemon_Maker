@@ -271,7 +271,7 @@ tm = true
 [node name="rest" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 35 )
-level = 0
+level = 19
 egg = false
 tm = true
 
@@ -313,7 +313,7 @@ tm = true
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 41 )
-level = 0
+level = 48
 egg = false
 tm = true
 
@@ -390,14 +390,14 @@ tm = true
 [node name="payback" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 52 )
-level = 0
+level = 24
 egg = false
 tm = true
 
 [node name="giga-impact" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 53 )
-level = 0
+level = 71
 egg = false
 tm = true
 
@@ -434,7 +434,7 @@ script = ExtResource( 15 )
 move = ExtResource( 58 )
 level = 29
 egg = false
-tm = false
+tm = true
 
 [node name="wild-charge" type="Node" parent="Moves"]
 script = ExtResource( 15 )

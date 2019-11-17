@@ -158,7 +158,7 @@ tm = false
 [node name="roar" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 19 )
-level = 0
+level = 7
 egg = false
 tm = true
 
@@ -179,7 +179,7 @@ tm = false
 [node name="flamethrower" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 22 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -228,7 +228,7 @@ tm = false
 [node name="fire-blast" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 29 )
-level = 0
+level = 42
 egg = false
 tm = true
 
@@ -270,7 +270,7 @@ tm = true
 [node name="feint-attack" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 35 )
-level = 0
+level = 23
 egg = true
 tm = false
 
@@ -312,7 +312,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 41 )
-level = 0
+level = 34
 egg = false
 tm = true
 
@@ -347,7 +347,7 @@ tm = false
 [node name="will-o-wisp" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 46 )
-level = 0
+level = 20
 egg = false
 tm = true
 
@@ -389,7 +389,7 @@ tm = true
 [node name="extrasensory" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 52 )
-level = 0
+level = 31
 egg = true
 tm = false
 
@@ -403,7 +403,7 @@ tm = false
 [node name="payback" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 54 )
-level = 0
+level = 18
 egg = false
 tm = true
 
@@ -438,7 +438,7 @@ tm = true
 [node name="captivate" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 59 )
-level = 0
+level = 47
 egg = true
 tm = false
 
@@ -466,7 +466,7 @@ tm = true
 [node name="hex" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 63 )
-level = 0
+level = 26
 egg = true
 tm = false
 

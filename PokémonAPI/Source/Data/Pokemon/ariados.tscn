@@ -176,7 +176,7 @@ tm = true
 [node name="absorb" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 21 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -204,7 +204,7 @@ tm = true
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 25 )
-level = 0
+level = 46
 egg = false
 tm = true
 
@@ -372,7 +372,7 @@ tm = false
 [node name="poison-jab" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 49 )
-level = 0
+level = 50
 egg = false
 tm = true
 
@@ -456,7 +456,7 @@ tm = false
 [node name="infestation" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 61 )
-level = 0
+level = 8
 egg = false
 tm = true
 

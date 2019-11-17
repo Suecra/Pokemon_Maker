@@ -196,7 +196,7 @@ tm = false
 [node name="roar" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 22 )
-level = 0
+level = 9
 egg = false
 tm = true
 
@@ -217,7 +217,7 @@ tm = true
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 25 )
-level = 0
+level = 65
 egg = false
 tm = true
 
@@ -266,7 +266,7 @@ tm = true
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 32 )
-level = 0
+level = 73
 egg = false
 tm = true
 
@@ -331,7 +331,7 @@ script = ExtResource( 16 )
 move = ExtResource( 41 )
 level = 0
 egg = true
-tm = false
+tm = true
 
 [node name="attract" type="Node" parent="Moves"]
 script = ExtResource( 16 )
@@ -457,7 +457,7 @@ script = ExtResource( 16 )
 move = ExtResource( 59 )
 level = 0
 egg = true
-tm = false
+tm = true
 
 [node name="tailwind" type="Node" parent="Moves"]
 script = ExtResource( 16 )
@@ -490,7 +490,7 @@ tm = true
 [node name="giga-impact" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 64 )
-level = 0
+level = 81
 egg = false
 tm = true
 
@@ -518,7 +518,7 @@ tm = false
 [node name="iron-head" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 68 )
-level = 1
+level = 57
 egg = false
 tm = false
 
@@ -555,7 +555,7 @@ script = ExtResource( 16 )
 move = ExtResource( 73 )
 level = 49
 egg = false
-tm = false
+tm = true
 
 [node name="bulldoze" type="Node" parent="Moves"]
 script = ExtResource( 16 )

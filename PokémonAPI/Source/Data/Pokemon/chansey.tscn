@@ -207,7 +207,7 @@ tm = false
 [node name="double-edge" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 23 )
-level = 65
+level = 1
 egg = false
 tm = false
 
@@ -347,7 +347,7 @@ tm = false
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 43 )
-level = 0
+level = 50
 egg = false
 tm = true
 
@@ -599,7 +599,7 @@ tm = false
 [node name="fling" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 79 )
-level = 0
+level = 35
 egg = false
 tm = true
 

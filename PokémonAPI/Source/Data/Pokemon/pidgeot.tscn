@@ -140,7 +140,7 @@ script = ExtResource( 15 )
 [node name="gust" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 17 )
-level = 9
+level = 1
 egg = false
 tm = false
 
@@ -168,7 +168,7 @@ tm = true
 [node name="sand-attack" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 21 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -203,7 +203,7 @@ tm = false
 [node name="quick-attack" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 26 )
-level = 13
+level = 1
 egg = false
 tm = false
 
@@ -343,7 +343,7 @@ tm = true
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 46 )
-level = 0
+level = 44
 egg = false
 tm = true
 
@@ -392,7 +392,7 @@ tm = true
 [node name="hurricane" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 53 )
-level = 68
+level = 1
 egg = false
 tm = false
 

@@ -421,7 +421,7 @@ tm = true
 script = ExtResource( 16 )
 move = ExtResource( 55 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="ingrain" type="Node" parent="Moves"]

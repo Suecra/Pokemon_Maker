@@ -170,7 +170,7 @@ tm = true
 script = ExtResource( 15 )
 move = ExtResource( 19 )
 level = 41
-egg = false
+egg = true
 tm = false
 
 [node name="leer" type="Node" parent="Moves"]
@@ -198,7 +198,7 @@ tm = false
 script = ExtResource( 15 )
 move = ExtResource( 23 )
 level = 50
-egg = false
+egg = true
 tm = false
 
 [node name="surf" type="Node" parent="Moves"]
@@ -366,7 +366,7 @@ tm = true
 script = ExtResource( 15 )
 move = ExtResource( 47 )
 level = 27
-egg = false
+egg = true
 tm = false
 
 [node name="ancient-power" type="Node" parent="Moves"]

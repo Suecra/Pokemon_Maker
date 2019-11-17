@@ -168,7 +168,7 @@ tm = false
 [node name="bite" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 23 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -217,7 +217,7 @@ tm = true
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 30 )
-level = 0
+level = 54
 egg = false
 tm = true
 
@@ -371,7 +371,7 @@ tm = false
 [node name="rain-dance" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 52 )
-level = 0
+level = 51
 egg = false
 tm = true
 

@@ -165,14 +165,14 @@ tm = false
 [node name="ice-beam" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 20 )
-level = 0
+level = 71
 egg = false
 tm = true
 
 [node name="blizzard" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 21 )
-level = 0
+level = 78
 egg = false
 tm = true
 
@@ -207,7 +207,7 @@ tm = true
 [node name="reflect" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 26 )
-level = 0
+level = 50
 egg = false
 tm = true
 
@@ -319,7 +319,7 @@ tm = false
 [node name="hail" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 42 )
-level = 0
+level = 57
 egg = false
 tm = true
 
@@ -347,7 +347,7 @@ tm = true
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 46 )
-level = 0
+level = 85
 egg = false
 tm = true
 

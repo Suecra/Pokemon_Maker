@@ -169,7 +169,7 @@ tm = false
 [node name="body-slam" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 21 )
-level = 0
+level = 34
 egg = true
 tm = false
 
@@ -204,7 +204,7 @@ tm = false
 [node name="solar-beam" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 26 )
-level = 0
+level = 45
 egg = false
 tm = true
 
@@ -232,14 +232,14 @@ tm = true
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 30 )
-level = 0
+level = 31
 egg = false
 tm = true
 
 [node name="reflect" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 31 )
-level = 0
+level = 17
 egg = false
 tm = true
 
@@ -309,7 +309,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 41 )
-level = 0
+level = 39
 egg = false
 tm = true
 
@@ -359,7 +359,7 @@ tm = true
 script = ExtResource( 17 )
 move = ExtResource( 48 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="ingrain" type="Node" parent="Moves"]
@@ -379,7 +379,7 @@ tm = false
 [node name="aromatherapy" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 51 )
-level = 0
+level = 42
 egg = true
 tm = false
 

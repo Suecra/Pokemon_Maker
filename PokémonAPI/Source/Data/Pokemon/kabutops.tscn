@@ -176,7 +176,7 @@ tm = false
 [node name="leer" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 21 )
-level = 11
+level = 1
 egg = false
 tm = false
 
@@ -211,7 +211,7 @@ tm = true
 [node name="absorb" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 26 )
-level = 6
+level = 1
 egg = false
 tm = false
 
@@ -267,7 +267,7 @@ tm = true
 [node name="slash" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 34 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -442,7 +442,7 @@ tm = true
 [node name="night-slash" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 59 )
-level = 72
+level = 1
 egg = false
 tm = false
 

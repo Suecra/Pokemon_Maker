@@ -229,7 +229,7 @@ tm = true
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 30 )
-level = 0
+level = 42
 egg = false
 tm = true
 
@@ -271,7 +271,7 @@ tm = false
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 36 )
-level = 0
+level = 46
 egg = false
 tm = true
 
@@ -411,7 +411,7 @@ tm = false
 [node name="gyro-ball" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 56 )
-level = 0
+level = 24
 egg = false
 tm = true
 

@@ -157,7 +157,7 @@ tm = false
 [node name="double-edge" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 18 )
-level = 0
+level = 55
 egg = true
 tm = false
 
@@ -178,7 +178,7 @@ tm = false
 [node name="flamethrower" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 21 )
-level = 0
+level = 40
 egg = false
 tm = true
 
@@ -192,7 +192,7 @@ tm = true
 [node name="quick-attack" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 23 )
-level = 0
+level = 13
 egg = true
 tm = false
 
@@ -354,7 +354,7 @@ tm = true
 script = ExtResource( 14 )
 move = ExtResource( 46 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="eruption" type="Node" parent="Moves"]
@@ -430,7 +430,7 @@ tm = false
 [node name="flame-charge" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 57 )
-level = 0
+level = 28
 egg = false
 tm = true
 

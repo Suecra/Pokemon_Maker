@@ -204,7 +204,7 @@ tm = true
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 23 )
-level = 0
+level = 33
 egg = false
 tm = true
 
@@ -318,7 +318,7 @@ script = ExtResource( 16 )
 move = ExtResource( 39 )
 level = 0
 egg = true
-tm = false
+tm = true
 
 [node name="attract" type="Node" parent="Moves"]
 script = ExtResource( 16 )
@@ -444,7 +444,7 @@ script = ExtResource( 16 )
 move = ExtResource( 57 )
 level = 0
 egg = true
-tm = false
+tm = true
 
 [node name="miracle-eye" type="Node" parent="Moves"]
 script = ExtResource( 16 )

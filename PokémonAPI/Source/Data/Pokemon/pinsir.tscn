@@ -160,7 +160,7 @@ tm = false
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 18 )
-level = 0
+level = 40
 egg = false
 tm = true
 
@@ -377,7 +377,7 @@ tm = true
 [node name="superpower" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 49 )
-level = 0
+level = 47
 egg = true
 tm = false
 
@@ -391,7 +391,7 @@ tm = false
 [node name="brick-break" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 51 )
-level = 0
+level = 26
 egg = false
 tm = true
 
@@ -440,7 +440,7 @@ tm = false
 [node name="x-scissor" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 58 )
-level = 0
+level = 29
 egg = false
 tm = true
 

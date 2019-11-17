@@ -90,6 +90,44 @@ func test_modified_pokemon():
 	expect.is_equal(129, seviper.defense, "Seviper has 129 defense")
 	expect.is_equal(109, seviper.special_defense, "Seviper has 109 special_defense")
 
+func test_get_last_moves():
+	var scizor = create_basic_pokemon("scizor", 60, [], "hardy")
+	var moves = scizor.get_last_learnable_moves()
+	var movepool = scizor.get_movepool()
+	for m in moves:
+		movepool.add_move(m.move)
+	
+	expect.is_equal("Night-slash", movepool.get_move(3).get_move_data().move_name, "Scizor learned Night Slash")
+	expect.is_equal("Double-hit", movepool.get_move(2).get_move_data().move_name, "Scizor learned Double Hit")
+	expect.is_equal("Iron-head", movepool.get_move(1).get_move_data().move_name, "Scizor learned Iron Head")
+	expect.is_equal("Swords-dance", movepool.get_move(0).get_move_data().move_name, "Scizor learned Swords Dance")
+	
+	var aggron = create_basic_pokemon("aggron", 40, [], "hardy")
+	moves = aggron.get_last_learnable_moves()
+	movepool = aggron.get_movepool()
+	for m in moves:
+		movepool.add_move(m.move)
+	
+	expect.is_equal("Take-down", movepool.get_move(3).get_move_data().move_name, "Aggron learned Take Down")
+	expect.is_equal("Metal-sound", movepool.get_move(2).get_move_data().move_name, "Aggron learned Metal Sound")
+	expect.is_equal("Iron-tail", movepool.get_move(1).get_move_data().move_name, "Aggron learned Iron Tail")
+	expect.is_equal("Iron-defense", movepool.get_move(0).get_move_data().move_name, "Aggron learned Iron Defense")
+
+func test_damage():
+	var pidgeotto = create_basic_pokemon("pidgeotto", 25, ["gust", "tackle", "twister", "sand-attack"], "modest")
+	var breloom = create_basic_pokemon("breloom", 35, ["seed-bomb", "mach-punch", "tackle", "swords-dance"], "gentle")
+	trainer1.pokemon_party.add_child(pidgeotto)
+	trainer2.pokemon_party.add_child(breloom)
+	pidgeotto.calculate_stats()
+	breloom.calculate_stats()
+	battle.start_async()
+	expect.is_equal(pidgeotto, trainer1.current_pokemon, "Trainer1's first pokemon is Pidgeotto")
+	expect.is_equal(breloom, trainer2.current_pokemon, "Trainer2's first pokemon is Breloom")
+	trainer1.custom_move("Gust", "")
+	trainer2.custom_move("Tackle", "")
+	expect.is_less_than(breloom.current_hp, 69, "Breloom's HP lower than 69")
+	expect.is_less_than(pidgeotto.current_hp, 33, "Pidgeotto's's HP lower than 33")
+
 func pre():
 	set_up()
 

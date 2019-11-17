@@ -177,7 +177,7 @@ tm = true
 [node name="thunder-shock" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 22 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -191,14 +191,14 @@ tm = true
 [node name="thunder-wave" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 24 )
-level = 0
+level = 33
 egg = false
 tm = true
 
 [node name="thunder" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 25 )
-level = 0
+level = 45
 egg = false
 tm = true
 

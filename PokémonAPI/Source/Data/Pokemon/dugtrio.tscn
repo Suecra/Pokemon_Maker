@@ -160,7 +160,7 @@ tm = false
 [node name="growl" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 20 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -174,7 +174,7 @@ tm = true
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 22 )
-level = 0
+level = 47
 egg = false
 tm = true
 
@@ -356,7 +356,7 @@ tm = true
 [node name="sand-tomb" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 48 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -440,7 +440,7 @@ tm = true
 [node name="bulldoze" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 60 )
-level = 0
+level = 18
 egg = false
 tm = true
 

@@ -190,7 +190,7 @@ tm = false
 [node name="mega-drain" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 22 )
-level = 0
+level = 23
 egg = true
 tm = false
 
@@ -323,7 +323,7 @@ tm = true
 [node name="giga-drain" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 41 )
-level = 0
+level = 36
 egg = true
 tm = false
 
@@ -401,7 +401,7 @@ tm = true
 script = ExtResource( 15 )
 move = ExtResource( 52 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="ingrain" type="Node" parent="Moves"]
@@ -442,7 +442,7 @@ tm = false
 [node name="natural-gift" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 58 )
-level = 0
+level = 33
 egg = true
 tm = false
 

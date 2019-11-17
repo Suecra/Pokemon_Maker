@@ -195,7 +195,7 @@ tm = false
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 24 )
-level = 0
+level = 34
 egg = false
 tm = true
 
@@ -237,7 +237,7 @@ tm = true
 [node name="explosion" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 30 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -440,7 +440,7 @@ tm = true
 [node name="rock-polish" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 59 )
-level = 0
+level = 6
 egg = false
 tm = true
 
@@ -454,7 +454,7 @@ tm = false
 [node name="stone-edge" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 61 )
-level = 0
+level = 42
 egg = false
 tm = true
 
@@ -482,7 +482,7 @@ tm = false
 [node name="smack-down" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 65 )
-level = 0
+level = 18
 egg = false
 tm = true
 
@@ -496,7 +496,7 @@ tm = true
 [node name="bulldoze" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 67 )
-level = 0
+level = 22
 egg = false
 tm = true
 

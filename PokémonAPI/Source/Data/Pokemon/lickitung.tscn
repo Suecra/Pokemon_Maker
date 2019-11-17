@@ -429,7 +429,7 @@ tm = true
 script = ExtResource( 17 )
 move = ExtResource( 55 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]

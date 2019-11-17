@@ -4,6 +4,7 @@ export(String) var api_endpoint
 export(String) var folder_name
 export(bool) var enabled = true
 export(int) var max_amount = -1
+export(int) var offset = 0
 
 var base_url
 var destination
@@ -21,7 +22,7 @@ func import(base_url, destination):
 	var directory_name = destination + "/" + folder_name
 	if !directory.dir_exists(directory_name):
 		directory.make_dir(directory_name)
-	yield(do_request(api_endpoint + "?limit=9999"), "completed")
+	yield(do_request(api_endpoint + "?limit=9999&offset=" + str(offset)), "completed")
 	api_item_list = json.result
 	if api_item_list != null:
 		var count = api_item_list["count"]

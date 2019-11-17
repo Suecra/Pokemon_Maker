@@ -318,7 +318,7 @@ tm = true
 script = ExtResource( 17 )
 move = ExtResource( 42 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="attract" type="Node" parent="Moves"]
@@ -408,14 +408,14 @@ tm = false
 [node name="aerial-ace" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 55 )
-level = 0
+level = 15
 egg = false
 tm = true
 
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 56 )
-level = 0
+level = 32
 egg = false
 tm = true
 

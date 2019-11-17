@@ -279,7 +279,7 @@ tm = false
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 35 )
-level = 0
+level = 22
 egg = false
 tm = true
 
@@ -344,7 +344,7 @@ script = ExtResource( 15 )
 move = ExtResource( 44 )
 level = 37
 egg = false
-tm = false
+tm = true
 
 [node name="mirror-coat" type="Node" parent="Moves"]
 script = ExtResource( 15 )

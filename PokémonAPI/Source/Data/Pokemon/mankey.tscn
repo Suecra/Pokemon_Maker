@@ -335,7 +335,7 @@ tm = false
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 42 )
-level = 0
+level = 19
 egg = false
 tm = true
 
@@ -350,7 +350,7 @@ tm = true
 script = ExtResource( 17 )
 move = ExtResource( 44 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]
@@ -504,7 +504,7 @@ tm = true
 script = ExtResource( 17 )
 move = ExtResource( 66 )
 level = 36
-egg = false
+egg = true
 tm = false
 
 [node name="payback" type="Node" parent="Moves"]

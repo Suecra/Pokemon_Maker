@@ -245,7 +245,7 @@ tm = true
 [node name="thunder-wave" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 31 )
-level = 0
+level = 6
 egg = false
 tm = true
 
@@ -329,7 +329,7 @@ tm = true
 [node name="flail" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 43 )
-level = 0
+level = 31
 egg = true
 tm = false
 

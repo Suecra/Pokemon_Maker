@@ -162,7 +162,7 @@ tm = false
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 19 )
-level = 0
+level = 38
 egg = false
 tm = true
 
@@ -190,7 +190,7 @@ tm = false
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 23 )
-level = 0
+level = 46
 egg = false
 tm = true
 
@@ -288,7 +288,7 @@ tm = true
 [node name="sandstorm" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 37 )
-level = 0
+level = 42
 egg = false
 tm = true
 
@@ -366,7 +366,7 @@ tm = false
 script = ExtResource( 17 )
 move = ExtResource( 48 )
 level = 9
-egg = false
+egg = true
 tm = false
 
 [node name="metal-claw" type="Node" parent="Moves"]
@@ -444,7 +444,7 @@ script = ExtResource( 17 )
 move = ExtResource( 59 )
 level = 34
 egg = false
-tm = false
+tm = true
 
 [node name="fling" type="Node" parent="Moves"]
 script = ExtResource( 17 )

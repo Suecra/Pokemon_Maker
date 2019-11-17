@@ -91,6 +91,6 @@ script = ExtResource( 13 )
 [node name="harden" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 15 )
-level = 1
+level = 0
 egg = false
 tm = false
