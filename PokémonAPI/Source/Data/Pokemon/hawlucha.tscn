@@ -174,7 +174,7 @@ tm = false
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 16 )
-level = 0
+level = 60
 egg = false
 tm = true
 
@@ -412,7 +412,7 @@ tm = true
 [node name="aerial-ace" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 50 )
-level = 0
+level = 16
 egg = false
 tm = true
 
@@ -433,7 +433,7 @@ tm = false
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 53 )
-level = 0
+level = 12
 egg = false
 tm = true
 
@@ -461,7 +461,7 @@ tm = true
 [node name="fling" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 57 )
-level = 0
+level = 24
 egg = false
 tm = true
 
@@ -559,7 +559,7 @@ tm = false
 [node name="sky-drop" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 71 )
-level = 0
+level = 55
 egg = false
 tm = true
 

@@ -322,7 +322,7 @@ tm = true
 [node name="torment" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 41 )
-level = 0
+level = 33
 egg = false
 tm = true
 
@@ -343,7 +343,7 @@ tm = true
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 44 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -406,7 +406,7 @@ tm = true
 [node name="embargo" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 53 )
-level = 0
+level = 41
 egg = false
 tm = true
 
@@ -442,7 +442,7 @@ tm = false
 script = ExtResource( 13 )
 move = ExtResource( 58 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="nasty-plot" type="Node" parent="Moves"]

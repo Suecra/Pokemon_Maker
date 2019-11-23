@@ -147,14 +147,14 @@ tm = false
 [node name="sand-attack" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 17 )
-level = 10
+level = 1
 egg = false
 tm = false
 
 [node name="growl" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 18 )
-level = 3
+level = 1
 egg = false
 tm = false
 
@@ -322,7 +322,7 @@ tm = false
 [node name="torment" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 42 )
-level = 0
+level = 19
 egg = false
 tm = true
 
@@ -336,14 +336,14 @@ tm = true
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 44 )
-level = 0
+level = 38
 egg = false
 tm = true
 
 [node name="assist" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 45 )
-level = 6
+level = 1
 egg = false
 tm = false
 

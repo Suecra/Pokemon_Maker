@@ -153,7 +153,7 @@ tm = false
 [node name="sand-attack" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 21 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -370,7 +370,7 @@ tm = true
 [node name="astonish" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 52 )
-level = 8
+level = 1
 egg = false
 tm = false
 
@@ -405,7 +405,7 @@ tm = true
 [node name="fling" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 57 )
-level = 0
+level = 36
 egg = false
 tm = true
 

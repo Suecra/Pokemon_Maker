@@ -143,14 +143,14 @@ tm = false
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 17 )
-level = 0
+level = 41
 egg = false
 tm = true
 
 [node name="sand-attack" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 18 )
-level = 9
+level = 1
 egg = false
 tm = false
 
@@ -164,7 +164,7 @@ tm = true
 [node name="absorb" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 20 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -192,7 +192,7 @@ tm = false
 [node name="screech" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 24 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -290,7 +290,7 @@ tm = true
 [node name="fury-cutter" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 38 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -381,7 +381,7 @@ tm = true
 [node name="x-scissor" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 51 )
-level = 0
+level = 47
 egg = false
 tm = true
 

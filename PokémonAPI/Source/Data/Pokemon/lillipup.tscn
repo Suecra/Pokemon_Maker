@@ -178,7 +178,7 @@ tm = false
 [node name="roar" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 21 )
-level = 0
+level = 26
 egg = false
 tm = true
 
@@ -402,7 +402,7 @@ tm = false
 [node name="giga-impact" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 53 )
-level = 0
+level = 40
 egg = false
 tm = true
 
@@ -451,7 +451,7 @@ tm = false
 [node name="work-up" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 60 )
-level = 0
+level = 19
 egg = false
 tm = true
 

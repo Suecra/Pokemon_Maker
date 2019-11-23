@@ -197,7 +197,7 @@ tm = true
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 24 )
-level = 0
+level = 32
 egg = false
 tm = true
 
@@ -239,7 +239,7 @@ tm = false
 [node name="rest" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 30 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -393,7 +393,7 @@ tm = true
 [node name="muddy-water" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 52 )
-level = 0
+level = 35
 egg = true
 tm = false
 

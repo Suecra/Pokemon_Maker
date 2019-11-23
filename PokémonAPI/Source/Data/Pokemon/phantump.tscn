@@ -340,7 +340,7 @@ tm = true
 [node name="will-o-wisp" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 41 )
-level = 0
+level = 31
 egg = false
 tm = true
 

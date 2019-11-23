@@ -141,7 +141,7 @@ script = ExtResource( 15 )
 [node name="wing-attack" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 18 )
-level = 9
+level = 1
 egg = false
 tm = false
 
@@ -274,7 +274,7 @@ tm = true
 [node name="rain-dance" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 37 )
-level = 0
+level = 34
 egg = false
 tm = true
 
@@ -302,14 +302,14 @@ tm = false
 [node name="aerial-ace" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 41 )
-level = 0
+level = 15
 egg = false
 tm = true
 
 [node name="water-sport" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 42 )
-level = 3
+level = 1
 egg = false
 tm = false
 
@@ -323,7 +323,7 @@ tm = false
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 44 )
-level = 0
+level = 30
 egg = false
 tm = true
 
@@ -365,7 +365,7 @@ tm = true
 [node name="defog" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 50 )
-level = 6
+level = 1
 egg = false
 tm = false
 

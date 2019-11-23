@@ -161,7 +161,7 @@ script = ExtResource( 15 )
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 18 )
-level = 0
+level = 19
 egg = false
 tm = true
 
@@ -385,7 +385,7 @@ tm = true
 [node name="calm-mind" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 50 )
-level = 0
+level = 47
 egg = false
 tm = true
 
@@ -427,7 +427,7 @@ tm = false
 [node name="aura-sphere" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 56 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -525,7 +525,7 @@ tm = true
 [node name="work-up" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 70 )
-level = 0
+level = 42
 egg = false
 tm = true
 

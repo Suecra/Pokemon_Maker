@@ -378,7 +378,7 @@ tm = false
 [node name="hidden-power" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 51 )
-level = 0
+level = 20
 egg = false
 tm = true
 
@@ -399,7 +399,7 @@ tm = true
 [node name="psych-up" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 54 )
-level = 0
+level = 31
 egg = false
 tm = true
 
@@ -455,7 +455,7 @@ tm = true
 [node name="calm-mind" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 62 )
-level = 0
+level = 23
 egg = false
 tm = true
 

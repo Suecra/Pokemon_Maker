@@ -155,28 +155,28 @@ tm = true
 [node name="leech-seed" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 21 )
-level = 10
+level = 1
 egg = false
 tm = false
 
 [node name="growth" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 22 )
-level = 7
+level = 1
 egg = false
 tm = false
 
 [node name="solar-beam" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 23 )
-level = 0
+level = 43
 egg = false
 tm = true
 
 [node name="petal-dance" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 24 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -274,7 +274,7 @@ tm = true
 [node name="sunny-day" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 38 )
-level = 0
+level = 22
 egg = false
 tm = true
 

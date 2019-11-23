@@ -257,7 +257,7 @@ tm = true
 script = ExtResource( 16 )
 move = ExtResource( 32 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="mean-look" type="Node" parent="Moves"]
@@ -390,7 +390,7 @@ tm = true
 script = ExtResource( 16 )
 move = ExtResource( 51 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="pluck" type="Node" parent="Moves"]
@@ -424,7 +424,7 @@ tm = true
 [node name="embargo" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 56 )
-level = 0
+level = 50
 egg = false
 tm = true
 
@@ -438,7 +438,7 @@ tm = false
 [node name="dark-pulse" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 58 )
-level = 0
+level = 46
 egg = false
 tm = true
 

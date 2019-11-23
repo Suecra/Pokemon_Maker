@@ -316,7 +316,7 @@ tm = false
 [node name="torment" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 41 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -421,7 +421,7 @@ tm = true
 [node name="fling" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 56 )
-level = 0
+level = 28
 egg = false
 tm = true
 
@@ -463,7 +463,7 @@ tm = false
 [node name="grass-knot" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 62 )
-level = 0
+level = 34
 egg = false
 tm = true
 
@@ -484,7 +484,7 @@ tm = true
 [node name="acrobatics" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 65 )
-level = 0
+level = 31
 egg = false
 tm = true
 

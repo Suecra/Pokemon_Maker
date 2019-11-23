@@ -167,7 +167,7 @@ tm = true
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 21 )
-level = 0
+level = 39
 egg = false
 tm = true
 
@@ -188,14 +188,14 @@ tm = false
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 24 )
-level = 0
+level = 16
 egg = false
 tm = true
 
 [node name="reflect" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 25 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -258,7 +258,7 @@ tm = false
 [node name="rollout" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 34 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -314,7 +314,7 @@ tm = false
 [node name="hidden-power" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 42 )
-level = 0
+level = 14
 egg = false
 tm = true
 
@@ -370,7 +370,7 @@ tm = false
 [node name="snatch" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 50 )
-level = 10
+level = 1
 egg = false
 tm = false
 
@@ -440,7 +440,7 @@ tm = false
 [node name="psyshock" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 60 )
-level = 0
+level = 25
 egg = false
 tm = true
 

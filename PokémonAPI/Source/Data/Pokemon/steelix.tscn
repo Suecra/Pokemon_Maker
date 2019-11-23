@@ -283,7 +283,7 @@ tm = true
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 39 )
-level = 0
+level = 34
 egg = false
 tm = true
 
@@ -311,7 +311,7 @@ tm = true
 [node name="sandstorm" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 43 )
-level = 0
+level = 52
 egg = false
 tm = true
 
@@ -430,7 +430,7 @@ tm = false
 [node name="rock-tomb" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 60 )
-level = 0
+level = 10
 egg = false
 tm = true
 
@@ -439,7 +439,7 @@ script = ExtResource( 22 )
 move = ExtResource( 61 )
 level = 20
 egg = false
-tm = false
+tm = true
 
 [node name="payback" type="Node" parent="Moves"]
 script = ExtResource( 22 )
@@ -500,7 +500,7 @@ tm = true
 [node name="stone-edge" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 70 )
-level = 0
+level = 46
 egg = false
 tm = true
 
@@ -523,7 +523,7 @@ script = ExtResource( 22 )
 move = ExtResource( 73 )
 level = 22
 egg = false
-tm = false
+tm = true
 
 [node name="round" type="Node" parent="Moves"]
 script = ExtResource( 22 )

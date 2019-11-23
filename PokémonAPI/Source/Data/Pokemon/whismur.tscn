@@ -173,7 +173,7 @@ tm = false
 [node name="roar" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 22 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -250,7 +250,7 @@ tm = true
 [node name="rest" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 33 )
-level = 0
+level = 32
 egg = false
 tm = true
 
@@ -292,7 +292,7 @@ tm = true
 [node name="sleep-talk" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 39 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -432,7 +432,7 @@ tm = true
 [node name="echoed-voice" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 59 )
-level = 0
+level = 4
 egg = false
 tm = true
 

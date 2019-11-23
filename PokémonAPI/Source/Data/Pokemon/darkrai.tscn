@@ -219,7 +219,7 @@ tm = false
 [node name="double-team" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 26 )
-level = 0
+level = 47
 egg = false
 tm = true
 
@@ -233,7 +233,7 @@ tm = false
 [node name="dream-eater" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 28 )
-level = 0
+level = 84
 egg = false
 tm = true
 
@@ -443,7 +443,7 @@ tm = true
 [node name="dark-pulse" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 58 )
-level = 0
+level = 93
 egg = false
 tm = true
 

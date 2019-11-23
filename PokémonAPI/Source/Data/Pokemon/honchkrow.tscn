@@ -236,7 +236,7 @@ tm = true
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 30 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -390,14 +390,14 @@ tm = false
 [node name="dark-pulse" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 52 )
-level = 0
+level = 75
 egg = false
 tm = true
 
 [node name="night-slash" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 53 )
-level = 55
+level = 1
 egg = false
 tm = false
 
@@ -432,7 +432,7 @@ tm = true
 [node name="quash" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 58 )
-level = 0
+level = 65
 egg = false
 tm = true
 

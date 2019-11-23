@@ -274,7 +274,7 @@ tm = true
 script = ExtResource( 18 )
 move = ExtResource( 36 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="attract" type="Node" parent="Moves"]
@@ -288,7 +288,7 @@ tm = true
 script = ExtResource( 18 )
 move = ExtResource( 38 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]
@@ -357,7 +357,7 @@ tm = true
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 48 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -371,7 +371,7 @@ tm = false
 [node name="hyper-voice" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 50 )
-level = 57
+level = 1
 egg = false
 tm = false
 
@@ -392,7 +392,7 @@ tm = true
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 53 )
-level = 0
+level = 41
 egg = false
 tm = true
 
@@ -420,7 +420,7 @@ tm = false
 [node name="chatter" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 57 )
-level = 21
+level = 1
 egg = false
 tm = false
 
@@ -434,14 +434,14 @@ tm = false
 [node name="round" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 59 )
-level = 0
+level = 29
 egg = false
 tm = true
 
 [node name="echoed-voice" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 60 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -462,6 +462,6 @@ tm = false
 [node name="confide" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 63 )
-level = 0
+level = 1
 egg = false
 tm = true

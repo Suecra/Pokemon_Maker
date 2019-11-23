@@ -277,7 +277,7 @@ tm = true
 [node name="pursuit" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 36 )
-level = 1
+level = 0
 egg = false
 tm = false
 

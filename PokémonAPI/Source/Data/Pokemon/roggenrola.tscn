@@ -204,7 +204,7 @@ tm = false
 [node name="explosion" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 27 )
-level = 0
+level = 40
 egg = false
 tm = true
 
@@ -218,7 +218,7 @@ tm = true
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 29 )
-level = 0
+level = 27
 egg = false
 tm = true
 
@@ -260,7 +260,7 @@ tm = false
 [node name="sandstorm" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 35 )
-level = 0
+level = 33
 egg = false
 tm = true
 
@@ -331,7 +331,7 @@ tm = true
 script = ExtResource( 18 )
 move = ExtResource( 45 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="iron-defense" type="Node" parent="Moves"]
@@ -372,7 +372,7 @@ tm = true
 [node name="stone-edge" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 51 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -400,7 +400,7 @@ tm = false
 [node name="smack-down" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 55 )
-level = 0
+level = 23
 egg = false
 tm = true
 

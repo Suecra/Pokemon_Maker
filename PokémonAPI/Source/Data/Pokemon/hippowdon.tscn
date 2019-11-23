@@ -154,7 +154,7 @@ tm = false
 [node name="bite" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 23 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -175,7 +175,7 @@ tm = true
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 26 )
-level = 0
+level = 40
 egg = false
 tm = true
 
@@ -308,7 +308,7 @@ tm = true
 [node name="yawn" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 45 )
-level = 13
+level = 1
 egg = false
 tm = false
 

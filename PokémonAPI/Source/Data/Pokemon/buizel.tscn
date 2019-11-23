@@ -457,7 +457,7 @@ tm = false
 [node name="aqua-tail" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 65 )
-level = 0
+level = 38
 egg = true
 tm = false
 

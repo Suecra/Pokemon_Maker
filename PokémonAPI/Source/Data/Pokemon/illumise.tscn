@@ -314,7 +314,7 @@ tm = false
 [node name="encore" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 41 )
-level = 0
+level = 26
 egg = true
 tm = false
 
@@ -461,7 +461,7 @@ tm = true
 [node name="bug-buzz" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 62 )
-level = 0
+level = 40
 egg = true
 tm = false
 
@@ -538,6 +538,6 @@ tm = true
 [node name="infestation" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 73 )
-level = 0
+level = 50
 egg = false
 tm = true

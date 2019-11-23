@@ -141,7 +141,7 @@ tm = false
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 18 )
-level = 0
+level = 57
 egg = false
 tm = true
 
@@ -316,7 +316,7 @@ tm = false
 [node name="charge-beam" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 43 )
-level = 0
+level = 26
 egg = false
 tm = true
 

@@ -264,7 +264,7 @@ tm = true
 [node name="fury-cutter" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 39 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -327,7 +327,7 @@ tm = true
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 48 )
-level = 0
+level = 38
 egg = false
 tm = true
 
@@ -355,7 +355,7 @@ tm = false
 [node name="x-scissor" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 52 )
-level = 0
+level = 30
 egg = false
 tm = true
 

@@ -454,7 +454,7 @@ tm = true
 [node name="wake-up-slap" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 60 )
-level = 0
+level = 34
 egg = true
 tm = false
 

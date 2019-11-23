@@ -242,7 +242,7 @@ tm = true
 [node name="steel-wing" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 28 )
-level = 0
+level = 48
 egg = false
 tm = true
 
@@ -326,7 +326,7 @@ tm = true
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 40 )
-level = 0
+level = 21
 egg = false
 tm = true
 
@@ -340,7 +340,7 @@ tm = false
 [node name="tailwind" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 42 )
-level = 0
+level = 45
 egg = true
 tm = false
 
@@ -361,7 +361,7 @@ tm = false
 [node name="flame-charge" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 45 )
-level = 0
+level = 34
 egg = false
 tm = true
 
@@ -382,7 +382,7 @@ tm = false
 [node name="acrobatics" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 48 )
-level = 0
+level = 39
 egg = false
 tm = true
 

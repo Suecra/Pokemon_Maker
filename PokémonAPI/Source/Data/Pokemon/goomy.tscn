@@ -239,7 +239,7 @@ tm = false
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 29 )
-level = 0
+level = 9
 egg = false
 tm = true
 
@@ -316,7 +316,7 @@ tm = true
 [node name="rain-dance" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 40 )
-level = 0
+level = 25
 egg = false
 tm = true
 

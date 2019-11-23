@@ -150,7 +150,7 @@ tm = false
 [node name="flamethrower" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 14 )
-level = 0
+level = 35
 egg = false
 tm = true
 
@@ -185,7 +185,7 @@ tm = true
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 19 )
-level = 0
+level = 41
 egg = false
 tm = true
 
@@ -206,14 +206,14 @@ tm = true
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 22 )
-level = 0
+level = 27
 egg = false
 tm = true
 
 [node name="fire-blast" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 23 )
-level = 0
+level = 48
 egg = false
 tm = true
 
@@ -311,7 +311,7 @@ tm = true
 [node name="sunny-day" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 37 )
-level = 0
+level = 43
 egg = false
 tm = true
 
@@ -332,7 +332,7 @@ tm = false
 [node name="will-o-wisp" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 40 )
-level = 0
+level = 38
 egg = false
 tm = true
 
@@ -395,7 +395,7 @@ tm = true
 [node name="psyshock" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 49 )
-level = 0
+level = 31
 egg = false
 tm = true
 
@@ -409,7 +409,7 @@ tm = false
 [node name="flame-charge" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 51 )
-level = 0
+level = 14
 egg = false
 tm = true
 

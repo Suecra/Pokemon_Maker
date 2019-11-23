@@ -389,7 +389,7 @@ tm = true
 script = ExtResource( 17 )
 move = ExtResource( 50 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="heal-bell" type="Node" parent="Moves"]
@@ -502,7 +502,7 @@ script = ExtResource( 17 )
 move = ExtResource( 66 )
 level = 41
 egg = false
-tm = false
+tm = true
 
 [node name="natural-gift" type="Node" parent="Moves"]
 script = ExtResource( 17 )

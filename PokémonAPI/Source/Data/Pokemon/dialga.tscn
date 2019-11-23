@@ -408,7 +408,7 @@ tm = true
 [node name="dragon-claw" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 53 )
-level = 0
+level = 28
 egg = false
 tm = true
 
@@ -464,7 +464,7 @@ tm = true
 [node name="flash-cannon" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 61 )
-level = 0
+level = 50
 egg = false
 tm = true
 

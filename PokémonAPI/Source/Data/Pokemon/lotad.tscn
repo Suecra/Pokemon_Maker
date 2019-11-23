@@ -316,7 +316,7 @@ tm = true
 [node name="giga-drain" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 42 )
-level = 0
+level = 30
 egg = true
 tm = false
 
@@ -379,7 +379,7 @@ tm = true
 [node name="rain-dance" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 51 )
-level = 0
+level = 27
 egg = false
 tm = true
 
@@ -407,7 +407,7 @@ tm = true
 [node name="nature-power" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 55 )
-level = 0
+level = 24
 egg = false
 tm = true
 
@@ -442,7 +442,7 @@ tm = false
 [node name="energy-ball" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 60 )
-level = 0
+level = 36
 egg = false
 tm = true
 

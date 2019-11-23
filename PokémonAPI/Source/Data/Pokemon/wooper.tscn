@@ -233,7 +233,7 @@ tm = false
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 32 )
-level = 0
+level = 33
 egg = false
 tm = true
 
@@ -339,7 +339,7 @@ tm = true
 script = ExtResource( 21 )
 move = ExtResource( 47 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]
@@ -380,7 +380,7 @@ tm = true
 [node name="rain-dance" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 53 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -436,7 +436,7 @@ tm = false
 [node name="mud-sport" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 61 )
-level = 0
+level = 5
 egg = true
 tm = false
 

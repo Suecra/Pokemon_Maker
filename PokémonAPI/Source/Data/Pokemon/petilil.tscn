@@ -335,7 +335,7 @@ tm = true
 [node name="sunny-day" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 45 )
-level = 0
+level = 40
 egg = false
 tm = true
 
@@ -412,7 +412,7 @@ tm = false
 [node name="energy-ball" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 56 )
-level = 0
+level = 35
 egg = false
 tm = true
 

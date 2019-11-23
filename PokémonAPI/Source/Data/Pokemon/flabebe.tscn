@@ -145,7 +145,7 @@ tm = false
 [node name="solar-beam" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 14 )
-level = 0
+level = 48
 egg = false
 tm = true
 

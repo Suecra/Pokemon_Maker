@@ -158,7 +158,7 @@ tm = false
 [node name="poison-sting" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 21 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -172,7 +172,7 @@ tm = true
 [node name="toxic" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 23 )
-level = 0
+level = 41
 egg = false
 tm = true
 
@@ -186,7 +186,7 @@ tm = false
 [node name="screech" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 25 )
-level = 8
+level = 1
 egg = false
 tm = false
 
@@ -221,7 +221,7 @@ tm = true
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 30 )
-level = 0
+level = 15
 egg = false
 tm = true
 
@@ -305,7 +305,7 @@ tm = true
 [node name="iron-defense" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 42 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -354,7 +354,7 @@ tm = false
 [node name="venoshock" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 49 )
-level = 0
+level = 28
 egg = false
 tm = true
 

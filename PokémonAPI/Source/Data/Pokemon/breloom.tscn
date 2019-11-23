@@ -223,7 +223,7 @@ tm = false
 [node name="leech-seed" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 29 )
-level = 8
+level = 1
 egg = false
 tm = false
 
@@ -237,7 +237,7 @@ tm = true
 [node name="stun-spore" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 31 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -293,7 +293,7 @@ tm = true
 [node name="mach-punch" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 39 )
-level = 1
+level = 0
 egg = false
 tm = false
 

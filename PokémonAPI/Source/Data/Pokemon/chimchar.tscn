@@ -195,7 +195,7 @@ tm = false
 [node name="flamethrower" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 23 )
-level = 0
+level = 47
 egg = false
 tm = true
 
@@ -356,7 +356,7 @@ tm = false
 [node name="torment" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 46 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -370,7 +370,7 @@ tm = true
 [node name="facade" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 48 )
-level = 0
+level = 31
 egg = false
 tm = true
 
@@ -384,7 +384,7 @@ tm = false
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 50 )
-level = 0
+level = 9
 egg = false
 tm = true
 
@@ -510,7 +510,7 @@ tm = false
 [node name="acrobatics" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 68 )
-level = 0
+level = 39
 egg = false
 tm = true
 

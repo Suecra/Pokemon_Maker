@@ -187,7 +187,7 @@ tm = false
 [node name="flamethrower" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 19 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -369,7 +369,7 @@ tm = false
 [node name="overheat" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 45 )
-level = 0
+level = 50
 egg = false
 tm = true
 
@@ -425,7 +425,7 @@ tm = true
 [node name="echoed-voice" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 53 )
-level = 0
+level = 33
 egg = false
 tm = true
 
@@ -446,7 +446,7 @@ tm = true
 [node name="work-up" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 56 )
-level = 0
+level = 8
 egg = false
 tm = true
 

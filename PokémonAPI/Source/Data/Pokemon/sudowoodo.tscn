@@ -152,7 +152,7 @@ script = ExtResource( 18 )
 [node name="slam" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 20 )
-level = 0
+level = 1
 egg = false
 tm = false
 
@@ -173,7 +173,7 @@ tm = false
 [node name="low-kick" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 23 )
-level = 1
+level = 8
 egg = false
 tm = false
 
@@ -187,7 +187,7 @@ tm = false
 [node name="rock-throw" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 25 )
-level = 1
+level = 12
 egg = false
 tm = false
 
@@ -257,7 +257,7 @@ tm = true
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 35 )
-level = 0
+level = 33
 egg = false
 tm = true
 
@@ -285,7 +285,7 @@ tm = false
 [node name="flail" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 39 )
-level = 1
+level = 5
 egg = false
 tm = false
 
@@ -418,7 +418,7 @@ tm = true
 [node name="rock-tomb" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 58 )
-level = 0
+level = 26
 egg = false
 tm = true
 
@@ -481,7 +481,7 @@ tm = true
 [node name="stone-edge" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 67 )
-level = 0
+level = 47
 egg = false
 tm = true
 

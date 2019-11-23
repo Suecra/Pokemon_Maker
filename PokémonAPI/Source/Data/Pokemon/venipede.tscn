@@ -196,7 +196,7 @@ tm = true
 [node name="toxic" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 26 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -245,7 +245,7 @@ tm = true
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 33 )
-level = 0
+level = 15
 egg = false
 tm = true
 
@@ -371,7 +371,7 @@ tm = true
 [node name="rock-climb" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 51 )
-level = 0
+level = 40
 egg = true
 tm = false
 
@@ -385,7 +385,7 @@ tm = false
 [node name="venoshock" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 53 )
-level = 0
+level = 26
 egg = false
 tm = true
 

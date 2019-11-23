@@ -151,7 +151,7 @@ tm = true
 [node name="flamethrower" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 16 )
-level = 0
+level = 22
 egg = false
 tm = true
 
@@ -214,7 +214,7 @@ tm = true
 [node name="fire-blast" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 25 )
-level = 0
+level = 78
 egg = false
 tm = true
 

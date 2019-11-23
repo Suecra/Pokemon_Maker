@@ -153,21 +153,21 @@ script = ExtResource( 17 )
 [node name="leer" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 20 )
-level = 9
+level = 1
 egg = false
 tm = false
 
 [node name="water-gun" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 21 )
-level = 13
+level = 1
 egg = false
 tm = false
 
 [node name="hydro-pump" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 22 )
-level = 60
+level = 1
 egg = false
 tm = false
 
@@ -230,7 +230,7 @@ tm = true
 [node name="smokescreen" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 31 )
-level = 5
+level = 1
 egg = false
 tm = false
 

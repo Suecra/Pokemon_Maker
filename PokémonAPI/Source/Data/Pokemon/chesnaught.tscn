@@ -161,7 +161,7 @@ tm = true
 [node name="vine-whip" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 13 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -308,7 +308,7 @@ tm = true
 [node name="rollout" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 34 )
-level = 8
+level = 1
 egg = false
 tm = false
 
@@ -434,7 +434,7 @@ tm = false
 [node name="bulk-up" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 52 )
-level = 0
+level = 48
 egg = false
 tm = true
 
@@ -448,7 +448,7 @@ tm = false
 [node name="hammer-arm" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 54 )
-level = 72
+level = 1
 egg = false
 tm = false
 
@@ -511,7 +511,7 @@ tm = true
 [node name="giga-impact" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 63 )
-level = 0
+level = 78
 egg = false
 tm = true
 
@@ -595,6 +595,6 @@ tm = true
 [node name="spiky-shield" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 75 )
-level = 1
+level = 0
 egg = false
 tm = false

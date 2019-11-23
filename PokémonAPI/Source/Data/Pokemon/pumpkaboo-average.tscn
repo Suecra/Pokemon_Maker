@@ -366,7 +366,7 @@ tm = true
 [node name="shadow-ball" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 44 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -499,7 +499,7 @@ tm = false
 [node name="trick-or-treat" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 63 )
-level = 40
+level = 6
 egg = false
 tm = false
 

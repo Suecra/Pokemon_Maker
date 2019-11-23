@@ -181,14 +181,14 @@ tm = false
 [node name="thunderbolt" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 19 )
-level = 0
+level = 49
 egg = false
 tm = true
 
 [node name="thunder-wave" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 20 )
-level = 0
+level = 31
 egg = false
 tm = true
 
@@ -412,14 +412,14 @@ tm = true
 [node name="volt-switch" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 52 )
-level = 0
+level = 40
 egg = false
 tm = true
 
 [node name="bulldoze" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 53 )
-level = 0
+level = 35
 egg = false
 tm = true
 

@@ -233,7 +233,7 @@ tm = true
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 30 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -408,7 +408,7 @@ tm = false
 [node name="rock-polish" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 55 )
-level = 0
+level = 19
 egg = false
 tm = true
 
@@ -429,7 +429,7 @@ tm = false
 [node name="x-scissor" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 58 )
-level = 0
+level = 35
 egg = false
 tm = true
 
@@ -478,7 +478,7 @@ tm = false
 [node name="smack-down" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 65 )
-level = 0
+level = 17
 egg = false
 tm = true
 

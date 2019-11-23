@@ -241,7 +241,7 @@ tm = false
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 31 )
-level = 0
+level = 28
 egg = false
 tm = true
 

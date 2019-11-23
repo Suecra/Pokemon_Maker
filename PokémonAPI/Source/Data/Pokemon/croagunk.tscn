@@ -269,7 +269,7 @@ tm = false
 [node name="sludge-bomb" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 36 )
-level = 0
+level = 45
 egg = false
 tm = true
 
@@ -283,7 +283,7 @@ tm = false
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 38 )
-level = 0
+level = 24
 egg = false
 tm = true
 
@@ -402,7 +402,7 @@ tm = false
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 55 )
-level = 0
+level = 10
 egg = false
 tm = true
 
@@ -500,7 +500,7 @@ tm = false
 [node name="poison-jab" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 69 )
-level = 0
+level = 43
 egg = false
 tm = true
 
@@ -563,7 +563,7 @@ tm = false
 [node name="venoshock" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 78 )
-level = 0
+level = 36
 egg = false
 tm = true
 

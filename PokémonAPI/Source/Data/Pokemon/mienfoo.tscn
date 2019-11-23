@@ -428,7 +428,7 @@ tm = false
 [node name="calm-mind" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 56 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -442,7 +442,7 @@ tm = false
 [node name="u-turn" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 58 )
-level = 0
+level = 41
 egg = false
 tm = true
 

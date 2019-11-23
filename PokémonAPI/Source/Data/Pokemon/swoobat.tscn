@@ -157,7 +157,7 @@ script = ExtResource( 15 )
 [node name="gust" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 18 )
-level = 8
+level = 1
 egg = false
 tm = false
 
@@ -199,7 +199,7 @@ tm = false
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 24 )
-level = 0
+level = 41
 egg = false
 tm = true
 
@@ -283,7 +283,7 @@ tm = true
 [node name="attract" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 36 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -395,7 +395,7 @@ tm = false
 [node name="odor-sleuth" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 52 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -409,7 +409,7 @@ tm = true
 [node name="calm-mind" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 54 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -437,7 +437,7 @@ tm = true
 [node name="assurance" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 58 )
-level = 12
+level = 1
 egg = false
 tm = false
 

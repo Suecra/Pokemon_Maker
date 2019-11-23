@@ -195,7 +195,7 @@ tm = false
 [node name="roar" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 22 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -433,7 +433,7 @@ tm = true
 [node name="crunch" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 56 )
-level = 0
+level = 49
 egg = true
 tm = false
 
@@ -517,7 +517,7 @@ tm = false
 [node name="payback" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 68 )
-level = 0
+level = 43
 egg = false
 tm = true
 
@@ -531,21 +531,21 @@ tm = true
 [node name="thunder-fang" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 70 )
-level = 0
+level = 1
 egg = true
 tm = false
 
 [node name="ice-fang" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 71 )
-level = 0
+level = 1
 egg = true
 tm = false
 
 [node name="fire-fang" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 72 )
-level = 0
+level = 1
 egg = true
 tm = false
 

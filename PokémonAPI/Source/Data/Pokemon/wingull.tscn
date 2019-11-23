@@ -194,7 +194,7 @@ tm = false
 [node name="mist" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 25 )
-level = 0
+level = 12
 egg = true
 tm = false
 
@@ -229,7 +229,7 @@ tm = true
 [node name="agility" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 30 )
-level = 0
+level = 36
 egg = true
 tm = false
 
@@ -376,7 +376,7 @@ tm = false
 [node name="aerial-ace" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 51 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -397,8 +397,8 @@ tm = false
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 54 )
-level = 0
-egg = false
+level = 33
+egg = true
 tm = true
 
 [node name="brine" type="Node" parent="Moves"]

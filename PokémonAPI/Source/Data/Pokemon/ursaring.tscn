@@ -239,7 +239,7 @@ tm = false
 [node name="rest" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 34 )
-level = 0
+level = 47
 egg = false
 tm = true
 
@@ -428,7 +428,7 @@ tm = false
 [node name="hammer-arm" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 61 )
-level = 67
+level = 1
 egg = false
 tm = false
 

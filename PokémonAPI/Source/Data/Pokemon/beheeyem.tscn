@@ -152,7 +152,7 @@ tm = false
 [node name="growl" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 17 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -201,7 +201,7 @@ tm = false
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 24 )
-level = 0
+level = 39
 egg = false
 tm = true
 
@@ -327,7 +327,7 @@ tm = true
 [node name="hidden-power" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 42 )
-level = 0
+level = 22
 egg = false
 tm = true
 
@@ -341,7 +341,7 @@ tm = true
 [node name="psych-up" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 44 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -376,14 +376,14 @@ tm = true
 [node name="calm-mind" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 49 )
-level = 0
+level = 45
 egg = false
 tm = true
 
 [node name="miracle-eye" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 50 )
-level = 11
+level = 1
 egg = false
 tm = false
 
@@ -397,7 +397,7 @@ tm = true
 [node name="heal-block" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 52 )
-level = 8
+level = 1
 egg = false
 tm = false
 
@@ -460,7 +460,7 @@ tm = false
 [node name="wonder-room" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 61 )
-level = 68
+level = 1
 egg = false
 tm = false
 
@@ -474,7 +474,7 @@ tm = true
 [node name="synchronoise" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 63 )
-level = 63
+level = 1
 egg = false
 tm = false
 

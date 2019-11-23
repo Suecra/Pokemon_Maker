@@ -521,7 +521,7 @@ tm = true
 [node name="work-up" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 67 )
-level = 0
+level = 10
 egg = false
 tm = true
 

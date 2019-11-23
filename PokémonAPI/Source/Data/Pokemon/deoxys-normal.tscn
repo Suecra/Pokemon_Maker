@@ -161,7 +161,7 @@ tm = true
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 17 )
-level = 0
+level = 73
 egg = false
 tm = true
 
@@ -203,7 +203,7 @@ tm = true
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 23 )
-level = 0
+level = 31
 egg = false
 tm = true
 

@@ -157,7 +157,7 @@ tm = false
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 19 )
-level = 0
+level = 50
 egg = false
 tm = true
 
@@ -178,14 +178,14 @@ tm = true
 [node name="confusion" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 22 )
-level = 1
+level = 0
 egg = false
 tm = false
 
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 23 )
-level = 0
+level = 38
 egg = false
 tm = true
 
@@ -311,7 +311,7 @@ tm = false
 [node name="metal-claw" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 41 )
-level = 1
+level = 0
 egg = false
 tm = false
 

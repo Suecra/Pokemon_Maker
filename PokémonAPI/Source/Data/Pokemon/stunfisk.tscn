@@ -199,7 +199,7 @@ tm = false
 [node name="thunderbolt" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 24 )
-level = 0
+level = 45
 egg = false
 tm = true
 
@@ -227,7 +227,7 @@ tm = true
 [node name="fissure" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 28 )
-level = 61
+level = 1
 egg = false
 tm = false
 
@@ -283,7 +283,7 @@ tm = false
 [node name="flail" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 36 )
-level = 55
+level = 1
 egg = false
 tm = false
 
@@ -354,7 +354,7 @@ tm = true
 script = ExtResource( 19 )
 move = ExtResource( 46 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]

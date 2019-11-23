@@ -180,7 +180,7 @@ tm = false
 [node name="solar-beam" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 23 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -299,7 +299,7 @@ tm = true
 [node name="sunny-day" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 40 )
-level = 0
+level = 22
 egg = false
 tm = true
 
@@ -314,7 +314,7 @@ tm = true
 script = ExtResource( 16 )
 move = ExtResource( 42 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="helping-hand" type="Node" parent="Moves"]

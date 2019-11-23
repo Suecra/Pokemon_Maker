@@ -180,14 +180,14 @@ tm = false
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 19 )
-level = 0
+level = 60
 egg = false
 tm = true
 
 [node name="reflect" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 20 )
-level = 0
+level = 18
 egg = false
 tm = true
 
@@ -278,7 +278,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 33 )
-level = 0
+level = 70
 egg = false
 tm = true
 
@@ -383,7 +383,7 @@ tm = true
 [node name="stone-edge" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 48 )
-level = 0
+level = 49
 egg = false
 tm = true
 
@@ -404,7 +404,7 @@ tm = false
 [node name="smack-down" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 51 )
-level = 0
+level = 12
 egg = false
 tm = true
 

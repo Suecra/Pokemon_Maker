@@ -395,7 +395,7 @@ tm = false
 script = ExtResource( 9 )
 move = ExtResource( 49 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="wild-charge" type="Node" parent="Moves"]

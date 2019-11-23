@@ -375,7 +375,7 @@ tm = true
 [node name="megahorn" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 51 )
-level = 0
+level = 37
 egg = true
 tm = false
 
@@ -431,7 +431,7 @@ tm = false
 [node name="brick-break" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 59 )
-level = 0
+level = 28
 egg = false
 tm = true
 
@@ -459,7 +459,7 @@ tm = false
 [node name="aerial-ace" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 63 )
-level = 0
+level = 10
 egg = false
 tm = true
 

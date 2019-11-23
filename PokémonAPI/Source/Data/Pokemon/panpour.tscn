@@ -359,7 +359,7 @@ tm = true
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 47 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -443,7 +443,7 @@ tm = true
 [node name="fling" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 59 )
-level = 0
+level = 28
 egg = false
 tm = true
 
@@ -499,14 +499,14 @@ tm = true
 [node name="scald" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 67 )
-level = 0
+level = 22
 egg = false
 tm = true
 
 [node name="acrobatics" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 68 )
-level = 0
+level = 31
 egg = false
 tm = true
 

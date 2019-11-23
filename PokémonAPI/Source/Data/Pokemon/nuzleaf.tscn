@@ -198,7 +198,7 @@ tm = false
 [node name="razor-leaf" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 29 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -289,7 +289,7 @@ tm = true
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 42 )
-level = 0
+level = 32
 egg = false
 tm = true
 
@@ -359,7 +359,7 @@ tm = false
 [node name="torment" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 52 )
-level = 0
+level = 9
 egg = false
 tm = true
 
@@ -373,7 +373,7 @@ tm = true
 [node name="nature-power" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 54 )
-level = 0
+level = 16
 egg = false
 tm = true
 

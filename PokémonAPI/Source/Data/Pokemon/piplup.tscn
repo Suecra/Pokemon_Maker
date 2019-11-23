@@ -179,7 +179,7 @@ tm = false
 [node name="hydro-pump" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 21 )
-level = 0
+level = 43
 egg = true
 tm = false
 
@@ -249,7 +249,7 @@ tm = true
 [node name="bide" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 31 )
-level = 0
+level = 22
 egg = true
 tm = false
 

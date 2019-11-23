@@ -234,7 +234,7 @@ tm = true
 [node name="recover" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 32 )
-level = 0
+level = 17
 egg = true
 tm = false
 
@@ -367,7 +367,7 @@ tm = true
 [node name="rain-dance" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 51 )
-level = 0
+level = 37
 egg = false
 tm = true
 

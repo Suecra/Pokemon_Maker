@@ -248,7 +248,7 @@ tm = false
 [node name="bide" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 31 )
-level = 0
+level = 1
 egg = true
 tm = false
 
@@ -269,7 +269,7 @@ tm = true
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 34 )
-level = 0
+level = 45
 egg = false
 tm = true
 
@@ -297,7 +297,7 @@ tm = false
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 38 )
-level = 0
+level = 11
 egg = false
 tm = true
 
@@ -360,7 +360,7 @@ tm = true
 [node name="rain-dance" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 47 )
-level = 0
+level = 48
 egg = false
 tm = true
 
@@ -472,7 +472,7 @@ tm = false
 [node name="smack-down" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 63 )
-level = 0
+level = 31
 egg = false
 tm = true
 

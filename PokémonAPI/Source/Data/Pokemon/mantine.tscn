@@ -192,14 +192,14 @@ tm = false
 [node name="supersonic" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 22 )
-level = 3
+level = 1
 egg = false
 tm = false
 
 [node name="hydro-pump" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 23 )
-level = 0
+level = 49
 egg = true
 tm = false
 
@@ -234,7 +234,7 @@ tm = false
 [node name="bubble-beam" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 28 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -479,7 +479,7 @@ tm = false
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 63 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -507,7 +507,7 @@ tm = true
 [node name="wide-guard" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 67 )
-level = 0
+level = 23
 egg = true
 tm = false
 

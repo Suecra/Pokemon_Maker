@@ -440,14 +440,14 @@ tm = false
 [node name="u-turn" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 58 )
-level = 0
+level = 37
 egg = false
 tm = true
 
 [node name="worry-seed" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 59 )
-level = 0
+level = 40
 egg = true
 tm = false
 
@@ -489,7 +489,7 @@ tm = true
 [node name="acrobatics" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 65 )
-level = 0
+level = 28
 egg = false
 tm = true
 

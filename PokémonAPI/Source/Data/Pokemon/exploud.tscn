@@ -174,7 +174,7 @@ tm = false
 [node name="roar" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 21 )
-level = 0
+level = 32
 egg = false
 tm = true
 
@@ -216,7 +216,7 @@ tm = true
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 27 )
-level = 0
+level = 64
 egg = false
 tm = true
 
@@ -265,7 +265,7 @@ tm = true
 [node name="rest" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 34 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -307,7 +307,7 @@ tm = true
 [node name="sleep-talk" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 40 )
-level = 0
+level = 42
 egg = false
 tm = true
 
@@ -349,7 +349,7 @@ tm = true
 [node name="crunch" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 46 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -405,7 +405,7 @@ tm = false
 [node name="astonish" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 54 )
-level = 9
+level = 1
 egg = false
 tm = false
 
@@ -426,7 +426,7 @@ tm = true
 [node name="howl" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 57 )
-level = 11
+level = 1
 egg = false
 tm = false
 
@@ -496,7 +496,7 @@ tm = true
 [node name="echoed-voice" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 67 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -517,7 +517,7 @@ tm = true
 [node name="boomburst" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 70 )
-level = 58
+level = 1
 egg = false
 tm = false
 

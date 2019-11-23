@@ -139,7 +139,7 @@ script = ExtResource( 13 )
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 15 )
-level = 0
+level = 41
 egg = false
 tm = true
 

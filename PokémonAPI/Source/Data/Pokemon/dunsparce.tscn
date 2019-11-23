@@ -429,7 +429,7 @@ tm = true
 script = ExtResource( 15 )
 move = ExtResource( 54 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]
@@ -485,7 +485,7 @@ tm = true
 script = ExtResource( 15 )
 move = ExtResource( 62 )
 level = 18
-egg = false
+egg = true
 tm = false
 
 [node name="shadow-ball" type="Node" parent="Moves"]
@@ -556,7 +556,7 @@ script = ExtResource( 15 )
 move = ExtResource( 72 )
 level = 26
 egg = false
-tm = false
+tm = true
 
 [node name="gyro-ball" type="Node" parent="Moves"]
 script = ExtResource( 15 )

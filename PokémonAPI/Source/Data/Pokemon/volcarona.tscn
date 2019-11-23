@@ -155,7 +155,7 @@ script = ExtResource( 16 )
 [node name="gust" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 18 )
-level = 20
+level = 1
 egg = false
 tm = false
 
@@ -204,7 +204,7 @@ tm = true
 [node name="absorb" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 25 )
-level = 10
+level = 1
 egg = false
 tm = false
 
@@ -358,7 +358,7 @@ tm = true
 [node name="heat-wave" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 47 )
-level = 60
+level = 1
 egg = false
 tm = false
 
@@ -435,7 +435,7 @@ tm = true
 [node name="bug-buzz" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 58 )
-level = 70
+level = 1
 egg = false
 tm = false
 
@@ -449,14 +449,14 @@ tm = true
 [node name="rage-powder" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 60 )
-level = 80
+level = 1
 egg = false
 tm = false
 
 [node name="quiver-dance" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 61 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -491,14 +491,14 @@ tm = true
 [node name="hurricane" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 66 )
-level = 90
+level = 1
 egg = false
 tm = false
 
 [node name="fiery-dance" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 67 )
-level = 100
+level = 1
 egg = false
 tm = false
 

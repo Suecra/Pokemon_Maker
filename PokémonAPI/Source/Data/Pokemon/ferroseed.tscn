@@ -216,7 +216,7 @@ tm = false
 [node name="explosion" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 28 )
-level = 0
+level = 55
 egg = false
 tm = true
 
@@ -356,14 +356,14 @@ tm = false
 [node name="gyro-ball" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 48 )
-level = 0
+level = 21
 egg = false
 tm = true
 
 [node name="payback" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 49 )
-level = 0
+level = 47
 egg = false
 tm = true
 
@@ -412,7 +412,7 @@ tm = false
 [node name="flash-cannon" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 56 )
-level = 0
+level = 52
 egg = false
 tm = true
 

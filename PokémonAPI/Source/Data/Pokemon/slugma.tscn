@@ -157,7 +157,7 @@ tm = false
 [node name="flamethrower" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 18 )
-level = 0
+level = 48
 egg = false
 tm = true
 
@@ -255,7 +255,7 @@ tm = true
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 32 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -430,7 +430,7 @@ tm = false
 [node name="earth-power" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 57 )
-level = 0
+level = 50
 egg = true
 tm = false
 

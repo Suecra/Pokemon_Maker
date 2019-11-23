@@ -170,7 +170,7 @@ script = ExtResource( 14 )
 move = ExtResource( 21 )
 level = 45
 egg = false
-tm = false
+tm = true
 
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 14 )
@@ -231,7 +231,7 @@ tm = true
 [node name="icy-wind" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 30 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -308,7 +308,7 @@ tm = true
 [node name="hail" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 41 )
-level = 0
+level = 37
 egg = false
 tm = true
 

@@ -144,7 +144,7 @@ script = ExtResource( 14 )
 [node name="disable" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 17 )
-level = 0
+level = 5
 egg = true
 tm = false
 
@@ -228,7 +228,7 @@ tm = false
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 29 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -319,14 +319,14 @@ tm = true
 [node name="shadow-ball" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 42 )
-level = 0
+level = 37
 egg = false
 tm = true
 
 [node name="will-o-wisp" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 43 )
-level = 0
+level = 21
 egg = false
 tm = true
 

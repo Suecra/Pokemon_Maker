@@ -150,7 +150,7 @@ script = ExtResource( 20 )
 [node name="sand-attack" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 23 )
-level = 3
+level = 1
 egg = false
 tm = false
 
@@ -185,7 +185,7 @@ tm = true
 [node name="dragon-rage" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 28 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -262,7 +262,7 @@ tm = true
 [node name="sandstorm" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 39 )
-level = 0
+level = 13
 egg = false
 tm = true
 
@@ -353,7 +353,7 @@ tm = true
 [node name="dragon-claw" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 52 )
-level = 0
+level = 33
 egg = false
 tm = true
 
@@ -402,7 +402,7 @@ tm = true
 [node name="dual-chop" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 59 )
-level = 1
+level = 0
 egg = false
 tm = false
 

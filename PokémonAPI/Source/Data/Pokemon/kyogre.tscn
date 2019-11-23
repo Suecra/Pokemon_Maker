@@ -161,7 +161,7 @@ tm = true
 [node name="ice-beam" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 19 )
-level = 0
+level = 35
 egg = false
 tm = true
 
@@ -378,7 +378,7 @@ tm = false
 [node name="calm-mind" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 50 )
-level = 0
+level = 50
 egg = false
 tm = true
 

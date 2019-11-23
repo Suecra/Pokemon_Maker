@@ -181,7 +181,7 @@ tm = true
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 18 )
-level = 0
+level = 49
 egg = false
 tm = true
 
@@ -363,7 +363,7 @@ tm = true
 [node name="facade" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 44 )
-level = 0
+level = 47
 egg = false
 tm = true
 

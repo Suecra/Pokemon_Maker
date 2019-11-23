@@ -185,7 +185,7 @@ tm = true
 [node name="blizzard" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 24 )
-level = 0
+level = 46
 egg = false
 tm = true
 
@@ -199,7 +199,7 @@ tm = true
 [node name="double-team" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 26 )
-level = 0
+level = 5
 egg = false
 tm = true
 
@@ -241,7 +241,7 @@ tm = false
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 32 )
-level = 0
+level = 32
 egg = false
 tm = true
 
@@ -339,7 +339,7 @@ tm = true
 [node name="hail" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 46 )
-level = 0
+level = 50
 egg = false
 tm = true
 
@@ -416,7 +416,7 @@ tm = false
 [node name="frost-breath" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 57 )
-level = 0
+level = 37
 egg = false
 tm = true
 

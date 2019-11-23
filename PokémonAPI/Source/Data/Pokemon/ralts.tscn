@@ -205,7 +205,7 @@ tm = false
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 23 )
-level = 0
+level = 27
 egg = false
 tm = true
 
@@ -226,7 +226,7 @@ tm = false
 [node name="double-team" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 26 )
-level = 0
+level = 6
 egg = false
 tm = true
 
@@ -254,7 +254,7 @@ tm = true
 [node name="dream-eater" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 30 )
-level = 0
+level = 39
 egg = false
 tm = true
 
@@ -464,7 +464,7 @@ tm = false
 [node name="calm-mind" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 60 )
-level = 0
+level = 24
 egg = false
 tm = true
 

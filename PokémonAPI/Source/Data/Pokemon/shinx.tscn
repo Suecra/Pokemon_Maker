@@ -178,7 +178,7 @@ tm = false
 [node name="roar" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 25 )
-level = 0
+level = 21
 egg = false
 tm = true
 
@@ -276,7 +276,7 @@ tm = false
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 39 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -395,7 +395,7 @@ tm = false
 [node name="thunder-fang" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 56 )
-level = 0
+level = 29
 egg = true
 tm = false
 
@@ -444,7 +444,7 @@ tm = true
 [node name="wild-charge" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 63 )
-level = 0
+level = 45
 egg = false
 tm = true
 

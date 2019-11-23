@@ -175,21 +175,21 @@ tm = false
 [node name="growth" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 23 )
-level = 6
+level = 1
 egg = false
 tm = false
 
 [node name="solar-beam" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 24 )
-level = 0
+level = 49
 egg = false
 tm = true
 
 [node name="toxic" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 25 )
-level = 0
+level = 32
 egg = false
 tm = true
 
@@ -203,7 +203,7 @@ tm = true
 [node name="bide" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 27 )
-level = 12
+level = 1
 egg = false
 tm = false
 
@@ -350,7 +350,7 @@ tm = false
 [node name="astonish" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 48 )
-level = 8
+level = 1
 egg = false
 tm = false
 

@@ -124,7 +124,7 @@ script = ExtResource( 9 )
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 11 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -285,14 +285,14 @@ tm = true
 [node name="metal-sound" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 34 )
-level = 0
+level = 8
 egg = true
 tm = false
 
 [node name="aerial-ace" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 35 )
-level = 0
+level = 22
 egg = false
 tm = true
 
@@ -334,7 +334,7 @@ tm = true
 [node name="shadow-sneak" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 41 )
-level = 0
+level = 20
 egg = true
 tm = false
 

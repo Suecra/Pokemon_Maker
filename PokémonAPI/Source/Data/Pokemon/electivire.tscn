@@ -180,35 +180,35 @@ tm = true
 [node name="low-kick" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 22 )
-level = 8
+level = 1
 egg = false
 tm = false
 
 [node name="thunder-shock" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 23 )
-level = 5
+level = 1
 egg = false
 tm = false
 
 [node name="thunderbolt" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 24 )
-level = 0
+level = 49
 egg = false
 tm = true
 
 [node name="thunder-wave" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 25 )
-level = 0
+level = 19
 egg = false
 tm = true
 
 [node name="thunder" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 26 )
-level = 0
+level = 55
 egg = false
 tm = true
 
@@ -257,7 +257,7 @@ tm = true
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 33 )
-level = 0
+level = 26
 egg = false
 tm = true
 
@@ -411,7 +411,7 @@ tm = true
 [node name="giga-impact" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 55 )
-level = 0
+level = 62
 egg = false
 tm = true
 
@@ -488,6 +488,6 @@ tm = true
 [node name="electric-terrain" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 66 )
-level = 65
+level = 1
 egg = false
 tm = false

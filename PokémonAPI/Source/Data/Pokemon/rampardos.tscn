@@ -252,7 +252,7 @@ tm = true
 [node name="focus-energy" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 31 )
-level = 6
+level = 1
 egg = false
 tm = false
 
@@ -350,7 +350,7 @@ tm = true
 [node name="pursuit" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 45 )
-level = 10
+level = 1
 egg = false
 tm = false
 
@@ -399,7 +399,7 @@ tm = true
 [node name="endeavor" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 52 )
-level = 1
+level = 0
 egg = false
 tm = false
 

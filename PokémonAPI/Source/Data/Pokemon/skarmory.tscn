@@ -348,7 +348,7 @@ tm = true
 [node name="steel-wing" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 45 )
-level = 0
+level = 34
 egg = false
 tm = true
 

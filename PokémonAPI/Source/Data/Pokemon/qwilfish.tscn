@@ -212,7 +212,7 @@ tm = false
 [node name="hydro-pump" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 25 )
-level = 1
+level = 57
 egg = false
 tm = false
 
@@ -352,7 +352,7 @@ tm = false
 [node name="destiny-bond" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 45 )
-level = 1
+level = 53
 egg = false
 tm = false
 
@@ -493,7 +493,7 @@ tm = true
 script = ExtResource( 18 )
 move = ExtResource( 65 )
 level = 33
-egg = false
+egg = true
 tm = false
 
 [node name="payback" type="Node" parent="Moves"]
@@ -515,7 +515,7 @@ script = ExtResource( 18 )
 move = ExtResource( 68 )
 level = 49
 egg = false
-tm = false
+tm = true
 
 [node name="aqua-tail" type="Node" parent="Moves"]
 script = ExtResource( 18 )
@@ -569,7 +569,7 @@ tm = true
 [node name="fell-stinger" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 76 )
-level = 1
+level = 60
 egg = false
 tm = false
 

@@ -184,7 +184,7 @@ tm = true
 [node name="toxic" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 27 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -275,7 +275,7 @@ tm = true
 [node name="sludge-bomb" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 40 )
-level = 0
+level = 33
 egg = false
 tm = true
 
@@ -422,7 +422,7 @@ tm = false
 [node name="gunk-shot" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 61 )
-level = 0
+level = 49
 egg = true
 tm = false
 

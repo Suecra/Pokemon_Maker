@@ -265,7 +265,7 @@ tm = false
 [node name="solar-beam" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 33 )
-level = 0
+level = 56
 egg = false
 tm = true
 
@@ -377,7 +377,7 @@ tm = false
 [node name="synthesis" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 49 )
-level = 0
+level = 50
 egg = true
 tm = false
 
@@ -406,7 +406,7 @@ tm = true
 script = ExtResource( 17 )
 move = ExtResource( 53 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="bullet-seed" type="Node" parent="Moves"]
@@ -454,7 +454,7 @@ tm = true
 [node name="natural-gift" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 60 )
-level = 0
+level = 30
 egg = true
 tm = false
 
@@ -482,7 +482,7 @@ tm = true
 [node name="leaf-storm" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 64 )
-level = 0
+level = 1
 egg = true
 tm = false
 

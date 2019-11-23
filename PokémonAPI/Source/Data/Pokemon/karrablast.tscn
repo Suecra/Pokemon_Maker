@@ -134,7 +134,7 @@ script = ExtResource( 14 )
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 16 )
-level = 0
+level = 52
 egg = false
 tm = true
 
@@ -274,7 +274,7 @@ tm = false
 [node name="false-swipe" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 36 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -379,7 +379,7 @@ tm = true
 [node name="x-scissor" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 51 )
-level = 0
+level = 44
 egg = false
 tm = true
 

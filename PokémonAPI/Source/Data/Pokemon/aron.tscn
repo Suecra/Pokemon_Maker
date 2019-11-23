@@ -203,7 +203,7 @@ tm = false
 [node name="roar" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 25 )
-level = 0
+level = 19
 egg = false
 tm = true
 
@@ -252,7 +252,7 @@ tm = true
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 32 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -280,7 +280,7 @@ tm = false
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 36 )
-level = 0
+level = 16
 egg = false
 tm = true
 
@@ -399,7 +399,7 @@ tm = false
 [node name="rock-tomb" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 53 )
-level = 0
+level = 13
 egg = false
 tm = true
 
@@ -455,7 +455,7 @@ tm = true
 [node name="iron-head" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 61 )
-level = 0
+level = 22
 egg = true
 tm = false
 

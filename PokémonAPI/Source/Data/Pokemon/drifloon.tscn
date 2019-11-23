@@ -266,7 +266,7 @@ tm = true
 [node name="explosion" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 33 )
-level = 0
+level = 50
 egg = false
 tm = true
 
@@ -378,7 +378,7 @@ tm = true
 [node name="shadow-ball" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 49 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -462,7 +462,7 @@ tm = false
 [node name="payback" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 61 )
-level = 0
+level = 16
 egg = false
 tm = true
 

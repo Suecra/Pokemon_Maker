@@ -185,7 +185,7 @@ tm = true
 [node name="thunder-shock" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 23 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -199,7 +199,7 @@ tm = true
 [node name="thunder-wave" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 25 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -241,7 +241,7 @@ tm = false
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 31 )
-level = 0
+level = 13
 egg = false
 tm = true
 
@@ -290,7 +290,7 @@ tm = true
 [node name="zap-cannon" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 38 )
-level = 63
+level = 1
 egg = false
 tm = false
 
@@ -388,7 +388,7 @@ tm = false
 [node name="gyro-ball" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 52 )
-level = 0
+level = 59
 egg = false
 tm = true
 
@@ -416,7 +416,7 @@ tm = false
 [node name="flash-cannon" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 56 )
-level = 0
+level = 33
 egg = false
 tm = true
 

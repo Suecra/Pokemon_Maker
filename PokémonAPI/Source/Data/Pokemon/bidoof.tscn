@@ -151,7 +151,7 @@ script = ExtResource( 18 )
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 21 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -249,7 +249,7 @@ tm = true
 [node name="defense-curl" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 35 )
-level = 0
+level = 5
 egg = true
 tm = false
 
@@ -333,7 +333,7 @@ tm = false
 [node name="rollout" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 47 )
-level = 0
+level = 9
 egg = true
 tm = false
 
@@ -355,7 +355,7 @@ tm = true
 script = ExtResource( 20 )
 move = ExtResource( 50 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]

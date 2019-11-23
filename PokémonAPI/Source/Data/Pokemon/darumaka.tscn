@@ -318,7 +318,7 @@ tm = true
 script = ExtResource( 16 )
 move = ExtResource( 41 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]
@@ -373,7 +373,7 @@ tm = true
 [node name="facade" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 49 )
-level = 0
+level = 19
 egg = false
 tm = true
 
@@ -387,7 +387,7 @@ tm = false
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 51 )
-level = 0
+level = 35
 egg = false
 tm = true
 
@@ -422,7 +422,7 @@ tm = false
 [node name="overheat" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 56 )
-level = 0
+level = 42
 egg = false
 tm = true
 
@@ -513,7 +513,7 @@ tm = false
 [node name="work-up" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 69 )
-level = 0
+level = 25
 egg = false
 tm = true
 

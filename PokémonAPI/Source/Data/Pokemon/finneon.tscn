@@ -300,7 +300,7 @@ tm = true
 [node name="attract" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 43 )
-level = 0
+level = 10
 egg = false
 tm = true
 
@@ -328,7 +328,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 47 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -342,7 +342,7 @@ tm = true
 [node name="rain-dance" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 49 )
-level = 0
+level = 13
 egg = false
 tm = true
 
@@ -426,7 +426,7 @@ tm = false
 [node name="u-turn" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 61 )
-level = 0
+level = 42
 egg = false
 tm = true
 

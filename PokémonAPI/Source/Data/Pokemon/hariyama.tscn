@@ -159,7 +159,7 @@ tm = false
 [node name="sand-attack" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 19 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -369,7 +369,7 @@ tm = false
 [node name="arm-thrust" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 49 )
-level = 7
+level = 1
 egg = false
 tm = false
 

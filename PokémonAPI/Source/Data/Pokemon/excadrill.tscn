@@ -153,14 +153,14 @@ tm = false
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 18 )
-level = 0
+level = 42
 egg = false
 tm = true
 
 [node name="horn-drill" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 19 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -174,7 +174,7 @@ tm = true
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 21 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -223,7 +223,7 @@ tm = true
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 28 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -258,14 +258,14 @@ tm = true
 [node name="mud-slap" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 33 )
-level = 8
+level = 1
 egg = false
 tm = false
 
 [node name="sandstorm" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 34 )
-level = 0
+level = 49
 egg = false
 tm = true
 
@@ -307,7 +307,7 @@ tm = true
 [node name="rapid-spin" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 40 )
-level = 5
+level = 1
 egg = false
 tm = false
 

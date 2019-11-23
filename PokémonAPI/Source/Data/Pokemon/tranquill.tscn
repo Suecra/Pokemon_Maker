@@ -157,14 +157,14 @@ tm = true
 [node name="leer" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 20 )
-level = 8
+level = 1
 egg = false
 tm = false
 
 [node name="growl" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 21 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -178,7 +178,7 @@ tm = true
 [node name="quick-attack" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 23 )
-level = 11
+level = 1
 egg = false
 tm = false
 
@@ -227,7 +227,7 @@ tm = false
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 30 )
-level = 0
+level = 45
 egg = false
 tm = true
 
@@ -290,14 +290,14 @@ tm = true
 [node name="facade" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 39 )
-level = 0
+level = 50
 egg = false
 tm = true
 
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 40 )
-level = 0
+level = 27
 egg = false
 tm = true
 
@@ -325,7 +325,7 @@ tm = true
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 44 )
-level = 0
+level = 18
 egg = false
 tm = true
 

@@ -176,7 +176,7 @@ tm = true
 [node name="thunder-wave" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 22 )
-level = 0
+level = 13
 egg = false
 tm = true
 
@@ -232,14 +232,14 @@ tm = true
 [node name="rest" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 30 )
-level = 0
+level = 16
 egg = false
 tm = true
 
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 31 )
-level = 0
+level = 22
 egg = false
 tm = true
 
@@ -274,7 +274,7 @@ tm = false
 [node name="sandstorm" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 36 )
-level = 0
+level = 34
 egg = false
 tm = true
 
@@ -386,7 +386,7 @@ tm = true
 [node name="block" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 52 )
-level = 0
+level = 7
 egg = true
 tm = false
 
@@ -428,7 +428,7 @@ tm = false
 [node name="stone-edge" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 58 )
-level = 0
+level = 40
 egg = false
 tm = true
 

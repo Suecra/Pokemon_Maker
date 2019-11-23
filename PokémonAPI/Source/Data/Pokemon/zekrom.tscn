@@ -166,7 +166,7 @@ tm = false
 [node name="thunderbolt" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 18 )
-level = 0
+level = 22
 egg = false
 tm = true
 
@@ -180,7 +180,7 @@ tm = true
 [node name="thunder" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 20 )
-level = 0
+level = 78
 egg = false
 tm = true
 
@@ -376,7 +376,7 @@ tm = true
 [node name="dragon-claw" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 48 )
-level = 0
+level = 54
 egg = false
 tm = true
 

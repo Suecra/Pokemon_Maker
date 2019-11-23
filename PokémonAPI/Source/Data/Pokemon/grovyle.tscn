@@ -164,7 +164,7 @@ tm = false
 [node name="absorb" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 20 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -199,7 +199,7 @@ tm = false
 [node name="quick-attack" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 25 )
-level = 9
+level = 1
 egg = false
 tm = false
 
@@ -255,7 +255,7 @@ tm = false
 [node name="false-swipe" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 33 )
-level = 0
+level = 48
 egg = false
 tm = true
 
@@ -269,7 +269,7 @@ tm = true
 [node name="fury-cutter" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 35 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -381,7 +381,7 @@ tm = true
 [node name="x-scissor" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 51 )
-level = 0
+level = 43
 egg = false
 tm = true
 

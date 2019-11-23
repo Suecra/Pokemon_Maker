@@ -367,7 +367,7 @@ tm = true
 [node name="nature-power" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 50 )
-level = 0
+level = 28
 egg = false
 tm = true
 

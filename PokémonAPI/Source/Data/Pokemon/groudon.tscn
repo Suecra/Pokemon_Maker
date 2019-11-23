@@ -161,7 +161,7 @@ tm = true
 [node name="solar-beam" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 18 )
-level = 0
+level = 60
 egg = false
 tm = true
 
@@ -189,7 +189,7 @@ tm = true
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 22 )
-level = 0
+level = 35
 egg = false
 tm = true
 
@@ -217,14 +217,14 @@ tm = true
 [node name="fire-blast" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 26 )
-level = 0
+level = 75
 egg = false
 tm = true
 
 [node name="rest" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 27 )
-level = 0
+level = 30
 egg = false
 tm = true
 
@@ -380,7 +380,7 @@ script = ExtResource( 13 )
 move = ExtResource( 49 )
 level = 50
 egg = false
-tm = false
+tm = true
 
 [node name="mud-shot" type="Node" parent="Moves"]
 script = ExtResource( 13 )

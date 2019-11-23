@@ -168,7 +168,7 @@ tm = false
 [node name="ember" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 20 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -252,7 +252,7 @@ tm = true
 [node name="mach-punch" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 32 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -308,7 +308,7 @@ tm = true
 [node name="torment" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 40 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -329,7 +329,7 @@ tm = true
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 43 )
-level = 0
+level = 9
 egg = false
 tm = true
 
@@ -462,7 +462,7 @@ tm = true
 [node name="acrobatics" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 62 )
-level = 0
+level = 46
 egg = false
 tm = true
 

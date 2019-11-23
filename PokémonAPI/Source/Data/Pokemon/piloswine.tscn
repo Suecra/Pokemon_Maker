@@ -164,7 +164,7 @@ script = ExtResource( 22 )
 [node name="fury-attack" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 24 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -206,7 +206,7 @@ tm = true
 [node name="blizzard" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 30 )
-level = 0
+level = 52
 egg = false
 tm = true
 
@@ -227,7 +227,7 @@ tm = false
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 33 )
-level = 0
+level = 46
 egg = false
 tm = true
 
@@ -290,7 +290,7 @@ tm = true
 [node name="powder-snow" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 42 )
-level = 8
+level = 1
 egg = false
 tm = false
 
@@ -402,7 +402,7 @@ tm = true
 [node name="mud-sport" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 58 )
-level = 5
+level = 1
 egg = false
 tm = false
 

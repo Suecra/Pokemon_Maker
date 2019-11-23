@@ -175,14 +175,14 @@ tm = false
 [node name="ice-beam" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 16 )
-level = 0
+level = 56
 egg = false
 tm = true
 
 [node name="blizzard" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 17 )
-level = 0
+level = 74
 egg = false
 tm = true
 
@@ -196,7 +196,7 @@ tm = false
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 19 )
-level = 0
+level = 63
 egg = false
 tm = true
 
@@ -210,7 +210,7 @@ tm = true
 [node name="thunder-wave" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 21 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -224,7 +224,7 @@ tm = true
 [node name="rock-throw" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 23 )
-level = 10
+level = 1
 egg = false
 tm = false
 
@@ -259,7 +259,7 @@ tm = true
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 28 )
-level = 0
+level = 50
 egg = false
 tm = true
 
@@ -406,7 +406,7 @@ tm = false
 [node name="hail" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 49 )
-level = 0
+level = 38
 egg = false
 tm = true
 
@@ -420,7 +420,7 @@ tm = true
 [node name="nature-power" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 51 )
-level = 0
+level = 43
 egg = false
 tm = true
 
@@ -490,7 +490,7 @@ tm = true
 [node name="round" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 61 )
-level = 0
+level = 30
 egg = false
 tm = true
 
@@ -525,7 +525,7 @@ tm = true
 [node name="freeze-dry" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 66 )
-level = 1
+level = 0
 egg = false
 tm = false
 

@@ -177,7 +177,7 @@ tm = true
 [node name="ice-beam" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 25 )
-level = 0
+level = 40
 egg = false
 tm = true
 
@@ -191,7 +191,7 @@ tm = true
 [node name="psybeam" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 27 )
-level = 1
+level = 10
 egg = false
 tm = false
 
@@ -205,14 +205,14 @@ tm = false
 [node name="aurora-beam" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 29 )
-level = 1
+level = 14
 egg = false
 tm = false
 
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 30 )
-level = 0
+level = 58
 egg = false
 tm = true
 
@@ -268,7 +268,7 @@ tm = true
 [node name="constrict" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 38 )
-level = 1
+level = 6
 egg = false
 tm = false
 
@@ -310,7 +310,7 @@ tm = true
 [node name="octazooka" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 44 )
-level = 0
+level = 1
 egg = false
 tm = false
 

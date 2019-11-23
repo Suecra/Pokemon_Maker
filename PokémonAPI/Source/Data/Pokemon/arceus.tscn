@@ -209,7 +209,7 @@ tm = true
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 21 )
-level = 0
+level = 80
 egg = false
 tm = true
 

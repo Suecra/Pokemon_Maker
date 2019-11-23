@@ -367,7 +367,7 @@ tm = true
 [node name="shadow-ball" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 48 )
-level = 0
+level = 30
 egg = false
 tm = true
 
@@ -383,7 +383,7 @@ script = ExtResource( 17 )
 move = ExtResource( 50 )
 level = 16
 egg = false
-tm = false
+tm = true
 
 [node name="facade" type="Node" parent="Moves"]
 script = ExtResource( 17 )
@@ -460,7 +460,7 @@ script = ExtResource( 17 )
 move = ExtResource( 61 )
 level = 34
 egg = false
-tm = false
+tm = true
 
 [node name="sucker-punch" type="Node" parent="Moves"]
 script = ExtResource( 17 )
@@ -480,7 +480,7 @@ tm = true
 script = ExtResource( 17 )
 move = ExtResource( 64 )
 level = 13
-egg = false
+egg = true
 tm = false
 
 [node name="trick-room" type="Node" parent="Moves"]
@@ -529,7 +529,7 @@ tm = false
 script = ExtResource( 17 )
 move = ExtResource( 71 )
 level = 54
-egg = false
+egg = true
 tm = false
 
 [node name="confide" type="Node" parent="Moves"]

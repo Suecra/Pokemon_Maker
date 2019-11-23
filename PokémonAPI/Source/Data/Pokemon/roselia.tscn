@@ -262,7 +262,7 @@ tm = false
 [node name="toxic" type="Node" parent="Moves"]
 script = ExtResource( 24 )
 move = ExtResource( 37 )
-level = 0
+level = 40
 egg = false
 tm = true
 
@@ -325,7 +325,7 @@ tm = false
 [node name="giga-drain" type="Node" parent="Moves"]
 script = ExtResource( 24 )
 move = ExtResource( 46 )
-level = 0
+level = 25
 egg = true
 tm = false
 
@@ -374,7 +374,7 @@ tm = false
 [node name="synthesis" type="Node" parent="Moves"]
 script = ExtResource( 24 )
 move = ExtResource( 53 )
-level = 0
+level = 46
 egg = true
 tm = false
 
@@ -444,7 +444,7 @@ tm = false
 [node name="grass-whistle" type="Node" parent="Moves"]
 script = ExtResource( 24 )
 move = ExtResource( 63 )
-level = 0
+level = 22
 egg = true
 tm = false
 

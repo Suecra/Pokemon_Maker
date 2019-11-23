@@ -121,7 +121,7 @@ tm = false
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 19 )
-level = 0
+level = 15
 egg = false
 tm = true
 

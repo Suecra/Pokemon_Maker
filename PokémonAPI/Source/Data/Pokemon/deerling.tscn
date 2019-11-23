@@ -212,7 +212,7 @@ tm = false
 [node name="solar-beam" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 26 )
-level = 0
+level = 51
 egg = false
 tm = true
 
@@ -304,7 +304,7 @@ tm = true
 script = ExtResource( 16 )
 move = ExtResource( 39 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]
@@ -380,7 +380,7 @@ tm = true
 [node name="nature-power" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 50 )
-level = 0
+level = 41
 egg = false
 tm = true
 
@@ -436,7 +436,7 @@ tm = false
 [node name="energy-ball" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 58 )
-level = 0
+level = 32
 egg = false
 tm = true
 

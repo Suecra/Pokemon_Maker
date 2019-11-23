@@ -195,14 +195,14 @@ tm = true
 [node name="focus-energy" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 24 )
-level = 4
+level = 1
 egg = false
 tm = false
 
 [node name="bide" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 25 )
-level = 8
+level = 1
 egg = false
 tm = false
 
@@ -216,7 +216,7 @@ tm = true
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 27 )
-level = 0
+level = 33
 egg = false
 tm = true
 
@@ -349,7 +349,7 @@ tm = true
 [node name="bulk-up" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 46 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -405,7 +405,7 @@ tm = true
 [node name="stone-edge" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 54 )
-level = 0
+level = 49
 egg = false
 tm = true
 

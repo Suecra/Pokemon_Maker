@@ -174,7 +174,7 @@ tm = false
 [node name="roar" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 20 )
-level = 0
+level = 20
 egg = false
 tm = true
 
@@ -385,7 +385,7 @@ tm = false
 script = ExtResource( 14 )
 move = ExtResource( 50 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="dragon-pulse" type="Node" parent="Moves"]
@@ -468,7 +468,7 @@ tm = true
 [node name="work-up" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 62 )
-level = 0
+level = 38
 egg = false
 tm = true
 

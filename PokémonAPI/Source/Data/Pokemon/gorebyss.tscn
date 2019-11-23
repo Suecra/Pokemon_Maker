@@ -186,7 +186,7 @@ tm = false
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 24 )
-level = 0
+level = 34
 egg = false
 tm = true
 

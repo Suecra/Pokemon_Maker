@@ -157,7 +157,7 @@ script = ExtResource( 17 )
 [node name="sand-attack" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 19 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -178,7 +178,7 @@ tm = false
 [node name="bite" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 22 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -192,7 +192,7 @@ tm = true
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 24 )
-level = 0
+level = 48
 egg = false
 tm = true
 
@@ -283,14 +283,14 @@ tm = false
 [node name="sandstorm" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 37 )
-level = 0
+level = 44
 egg = false
 tm = true
 
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 38 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -339,7 +339,7 @@ tm = false
 [node name="torment" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 45 )
-level = 0
+level = 10
 egg = false
 tm = true
 
@@ -395,7 +395,7 @@ tm = false
 [node name="embargo" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 53 )
-level = 0
+level = 22
 egg = false
 tm = true
 

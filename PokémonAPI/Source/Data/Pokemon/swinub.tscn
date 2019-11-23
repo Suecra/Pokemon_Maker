@@ -175,7 +175,7 @@ tm = false
 [node name="take-down" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 21 )
-level = 0
+level = 28
 egg = true
 tm = false
 
@@ -217,14 +217,14 @@ tm = true
 [node name="blizzard" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 27 )
-level = 0
+level = 44
 egg = false
 tm = true
 
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 28 )
-level = 0
+level = 37
 egg = false
 tm = true
 

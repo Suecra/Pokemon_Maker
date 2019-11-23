@@ -435,7 +435,7 @@ tm = false
 [node name="head-smash" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 59 )
-level = 0
+level = 46
 egg = true
 tm = false
 

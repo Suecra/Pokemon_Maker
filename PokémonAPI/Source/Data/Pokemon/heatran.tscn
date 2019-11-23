@@ -177,7 +177,7 @@ tm = true
 [node name="fire-spin" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 21 )
-level = 57
+level = 1
 egg = false
 tm = false
 
@@ -317,7 +317,7 @@ tm = false
 [node name="heat-wave" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 41 )
-level = 81
+level = 1
 egg = false
 tm = false
 
@@ -394,7 +394,7 @@ tm = true
 [node name="earth-power" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 52 )
-level = 73
+level = 1
 egg = false
 tm = false
 
@@ -429,21 +429,21 @@ tm = false
 [node name="iron-head" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 57 )
-level = 65
+level = 1
 egg = false
 tm = false
 
 [node name="stone-edge" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 58 )
-level = 0
+level = 88
 egg = false
 tm = true
 
 [node name="magma-storm" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 59 )
-level = 96
+level = 1
 egg = false
 tm = false
 

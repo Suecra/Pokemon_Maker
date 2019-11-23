@@ -187,7 +187,7 @@ tm = false
 [node name="double-team" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 19 )
-level = 0
+level = 43
 egg = false
 tm = true
 
@@ -236,7 +236,7 @@ tm = true
 [node name="substitute" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 26 )
-level = 0
+level = 35
 egg = false
 tm = true
 
@@ -383,7 +383,7 @@ tm = true
 [node name="fling" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 47 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -404,14 +404,14 @@ tm = true
 [node name="smack-down" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 50 )
-level = 0
+level = 29
 egg = false
 tm = true
 
 [node name="round" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 51 )
-level = 0
+level = 21
 egg = false
 tm = true
 

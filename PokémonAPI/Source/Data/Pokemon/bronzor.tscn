@@ -320,7 +320,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 42 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -418,14 +418,14 @@ tm = true
 [node name="gyro-ball" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 56 )
-level = 0
+level = 35
 egg = false
 tm = true
 
 [node name="payback" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 57 )
-level = 0
+level = 41
 egg = false
 tm = true
 

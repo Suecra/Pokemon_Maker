@@ -145,14 +145,14 @@ script = ExtResource( 15 )
 [node name="wing-attack" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 17 )
-level = 10
+level = 1
 egg = false
 tm = false
 
 [node name="whirlwind" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 18 )
-level = 57
+level = 1
 egg = false
 tm = false
 
@@ -166,14 +166,14 @@ tm = true
 [node name="fury-attack" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 20 )
-level = 5
+level = 1
 egg = false
 tm = false
 
 [node name="thrash" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 21 )
-level = 70
+level = 1
 egg = false
 tm = false
 
@@ -327,7 +327,7 @@ tm = true
 [node name="superpower" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 43 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -348,7 +348,7 @@ tm = true
 [node name="aerial-ace" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 46 )
-level = 0
+level = 23
 egg = false
 tm = true
 
@@ -390,7 +390,7 @@ tm = false
 [node name="brave-bird" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 52 )
-level = 63
+level = 1
 egg = false
 tm = false
 
@@ -432,7 +432,7 @@ tm = true
 [node name="sky-drop" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 58 )
-level = 0
+level = 50
 egg = false
 tm = true
 

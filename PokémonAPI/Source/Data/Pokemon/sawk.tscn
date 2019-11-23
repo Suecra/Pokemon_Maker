@@ -333,7 +333,7 @@ tm = true
 [node name="brick-break" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 45 )
-level = 0
+level = 21
 egg = false
 tm = true
 
@@ -347,7 +347,7 @@ tm = true
 [node name="bulk-up" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 47 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -410,7 +410,7 @@ tm = true
 [node name="low-sweep" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 56 )
-level = 0
+level = 9
 egg = false
 tm = true
 

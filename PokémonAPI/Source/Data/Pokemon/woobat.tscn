@@ -208,7 +208,7 @@ tm = false
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 24 )
-level = 0
+level = 41
 egg = false
 tm = true
 
@@ -299,7 +299,7 @@ tm = true
 [node name="attract" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 37 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -453,7 +453,7 @@ tm = true
 [node name="calm-mind" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 59 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -461,7 +461,7 @@ tm = true
 script = ExtResource( 17 )
 move = ExtResource( 60 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="gyro-ball" type="Node" parent="Moves"]

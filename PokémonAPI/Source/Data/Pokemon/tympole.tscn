@@ -269,7 +269,7 @@ tm = true
 script = ExtResource( 18 )
 move = ExtResource( 36 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]
@@ -296,7 +296,7 @@ tm = true
 [node name="rain-dance" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 40 )
-level = 0
+level = 31
 egg = false
 tm = true
 
@@ -401,14 +401,14 @@ tm = false
 [node name="round" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 55 )
-level = 0
+level = 9
 egg = false
 tm = true
 
 [node name="echoed-voice" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 56 )
-level = 0
+level = 38
 egg = false
 tm = true
 

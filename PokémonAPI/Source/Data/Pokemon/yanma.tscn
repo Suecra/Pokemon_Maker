@@ -242,7 +242,7 @@ tm = false
 [node name="double-team" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 31 )
-level = 0
+level = 11
 egg = false
 tm = true
 
@@ -361,7 +361,7 @@ tm = true
 [node name="pursuit" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 48 )
-level = 0
+level = 30
 egg = true
 tm = false
 
@@ -452,7 +452,7 @@ tm = false
 [node name="u-turn" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 61 )
-level = 0
+level = 49
 egg = false
 tm = true
 

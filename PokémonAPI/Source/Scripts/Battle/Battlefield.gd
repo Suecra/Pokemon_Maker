@@ -14,6 +14,13 @@ var field_effect
 var battle
 # TODO: Add "Field" references
 
+# Opponent side
+#  ___________
+# |_3_|_4_|_5_|
+# |_0_|_1_|_2_|
+#
+# Player side
+
 func get_pokemon_at_position(position: int, attacker_field):
 	var opponent_field
 	if attacker_field == battle.ally_field:
@@ -24,6 +31,12 @@ func get_pokemon_at_position(position: int, attacker_field):
 	if position < MAX_POKEMON_COUNT_ON_FIELD:
 		return attacker_field.get_pokemon_at_position(position)
 	return opponent_field.get_pokemon_at_position(position - MAX_POKEMON_COUNT_ON_FIELD)
+
+func get_targets(target_positions, attacker_field):
+	var result = []
+	for pos in target_positions:
+		result.append(get_pokemon_at_position(pos, attacker_field))
+	return result
 
 func get_status_bar(attacker_field):
 	if attacker_field == battle.ally_field:

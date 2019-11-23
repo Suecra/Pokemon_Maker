@@ -193,7 +193,7 @@ tm = true
 [node name="blizzard" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 28 )
-level = 0
+level = 47
 egg = false
 tm = true
 
@@ -207,7 +207,7 @@ tm = true
 [node name="razor-leaf" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 30 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -284,14 +284,14 @@ tm = true
 [node name="icy-wind" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 41 )
-level = 9
+level = 1
 egg = false
 tm = false
 
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 42 )
-level = 0
+level = 17
 egg = false
 tm = true
 

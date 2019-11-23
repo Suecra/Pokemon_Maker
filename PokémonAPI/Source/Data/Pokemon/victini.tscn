@@ -386,7 +386,7 @@ tm = true
 [node name="overheat" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 49 )
-level = 0
+level = 97
 egg = false
 tm = true
 
@@ -484,7 +484,7 @@ tm = false
 [node name="flame-charge" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 63 )
-level = 0
+level = 25
 egg = false
 tm = true
 

@@ -157,14 +157,14 @@ tm = false
 [node name="bite" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 19 )
-level = 8
+level = 1
 egg = false
 tm = false
 
 [node name="roar" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 20 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -332,7 +332,7 @@ tm = false
 [node name="odor-sleuth" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 44 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -367,7 +367,7 @@ tm = false
 [node name="giga-impact" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 49 )
-level = 0
+level = 59
 egg = false
 tm = true
 
@@ -409,7 +409,7 @@ tm = false
 [node name="work-up" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 55 )
-level = 0
+level = 20
 egg = false
 tm = true
 

@@ -164,7 +164,7 @@ script = ExtResource( 19 )
 script = ExtResource( 20 )
 move = ExtResource( 21 )
 level = 15
-egg = false
+egg = true
 tm = false
 
 [node name="whirlwind" type="Node" parent="Moves"]
@@ -304,7 +304,7 @@ tm = true
 script = ExtResource( 20 )
 move = ExtResource( 41 )
 level = 35
-egg = false
+egg = true
 tm = false
 
 [node name="perish-song" type="Node" parent="Moves"]
@@ -408,7 +408,7 @@ tm = true
 [node name="torment" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 56 )
-level = 0
+level = 61
 egg = false
 tm = true
 
@@ -429,7 +429,7 @@ tm = true
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 59 )
-level = 0
+level = 31
 egg = false
 tm = true
 
@@ -466,7 +466,7 @@ script = ExtResource( 20 )
 move = ExtResource( 64 )
 level = 0
 egg = true
-tm = false
+tm = true
 
 [node name="tailwind" type="Node" parent="Moves"]
 script = ExtResource( 20 )
@@ -486,7 +486,7 @@ tm = true
 script = ExtResource( 20 )
 move = ExtResource( 67 )
 level = 25
-egg = false
+egg = true
 tm = false
 
 [node name="embargo" type="Node" parent="Moves"]
@@ -550,7 +550,7 @@ script = ExtResource( 20 )
 move = ExtResource( 76 )
 level = 65
 egg = false
-tm = false
+tm = true
 
 [node name="snarl" type="Node" parent="Moves"]
 script = ExtResource( 20 )

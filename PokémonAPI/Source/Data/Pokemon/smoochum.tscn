@@ -193,7 +193,7 @@ tm = true
 [node name="blizzard" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 23 )
-level = 0
+level = 48
 egg = false
 tm = true
 
@@ -214,7 +214,7 @@ tm = false
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 26 )
-level = 0
+level = 38
 egg = false
 tm = true
 

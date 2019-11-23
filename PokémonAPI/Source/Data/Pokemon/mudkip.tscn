@@ -306,7 +306,7 @@ tm = false
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 39 )
-level = 0
+level = 28
 egg = false
 tm = true
 
@@ -391,7 +391,7 @@ tm = false
 script = ExtResource( 15 )
 move = ExtResource( 51 )
 level = 33
-egg = false
+egg = true
 tm = false
 
 [node name="uproar" type="Node" parent="Moves"]

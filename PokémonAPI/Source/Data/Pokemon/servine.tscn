@@ -147,7 +147,7 @@ tm = false
 [node name="vine-whip" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 18 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -161,14 +161,14 @@ tm = false
 [node name="wrap" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 20 )
-level = 10
+level = 1
 egg = false
 tm = false
 
 [node name="leer" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 21 )
-level = 4
+level = 1
 egg = false
 tm = false
 

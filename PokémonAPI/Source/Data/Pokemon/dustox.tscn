@@ -154,7 +154,7 @@ script = ExtResource( 21 )
 [node name="gust" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 23 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -196,7 +196,7 @@ tm = false
 [node name="toxic" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 29 )
-level = 0
+level = 32
 egg = false
 tm = true
 
@@ -224,7 +224,7 @@ tm = true
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 33 )
-level = 0
+level = 27
 egg = false
 tm = true
 
@@ -252,7 +252,7 @@ tm = true
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 37 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -385,7 +385,7 @@ tm = true
 [node name="venoshock" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 56 )
-level = 0
+level = 20
 egg = false
 tm = true
 

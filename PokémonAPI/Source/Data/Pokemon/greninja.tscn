@@ -202,14 +202,14 @@ tm = true
 [node name="quick-attack" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 20 )
-level = 8
+level = 1
 egg = false
 tm = false
 
 [node name="double-team" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 21 )
-level = 0
+level = 56
 egg = false
 tm = true
 
@@ -223,7 +223,7 @@ tm = false
 [node name="haze" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 23 )
-level = 70
+level = 1
 egg = false
 tm = false
 
@@ -244,7 +244,7 @@ tm = true
 [node name="bubble" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 26 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -265,7 +265,7 @@ tm = true
 [node name="substitute" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 29 )
-level = 0
+level = 42
 egg = false
 tm = true
 
@@ -426,7 +426,7 @@ tm = true
 [node name="night-slash" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 52 )
-level = 77
+level = 1
 egg = false
 tm = false
 
@@ -517,7 +517,7 @@ tm = true
 [node name="water-shuriken" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 65 )
-level = 1
+level = 0
 egg = false
 tm = false
 

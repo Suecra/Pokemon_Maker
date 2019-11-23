@@ -32,12 +32,13 @@ var turn
 
 func _execute():
 	if user.can_move():
-		if _is_hit():
-			_hit()
-		else:
-			battle.register_message(user.nickname + "s attack missed!")
+		for t in targets:
+			if _is_hit(t):
+				_hit(t)
+			else:
+				battle.register_message(t.nickname + " avoided the attack!")
 
-func _hit():
+func _hit(target):
 	battle.register_message("But the move isn't implemented yet!")
 
 func _get_base_damage():
@@ -48,8 +49,33 @@ func _get_accuracy():
 		return 100.0
 	return float(accuracy)
 
-func _is_hit():
+func _is_hit(target):
 	return Utils.trigger(_get_accuracy() / 100)
 
 func get_type():
 	return Utils.unpack(self, type, "Type")
+
+func get_possible_target_positions(user_position: int):
+	var result = []
+	if hit_range == HitRange.Opponent:
+		result.append(user_position + 3)
+	elif hit_range == HitRange.User:
+		result.append(user_position)
+	else:
+		result.append(user_position + 3)
+	return result
+
+func get_target_positions(user_position: int, index: int):
+	var result = []
+	var possible_target_positions = get_possible_target_positions(user_position)
+	if has_target_choice():
+		if index < possible_target_positions.size():
+			result.append(possible_target_positions[index])
+	else:
+		result = possible_target_positions
+	return result
+
+func has_target_choice():
+	match hit_range:
+		HitRange.Opponent, HitRange.User_or_Partner: return true
+	return false

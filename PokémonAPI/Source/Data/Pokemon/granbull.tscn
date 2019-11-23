@@ -184,7 +184,7 @@ tm = false
 [node name="roar" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 21 )
-level = 0
+level = 27
 egg = false
 tm = true
 
@@ -331,7 +331,7 @@ tm = true
 [node name="outrage" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 42 )
-level = 1
+level = 67
 egg = false
 tm = false
 
@@ -464,7 +464,7 @@ tm = true
 [node name="payback" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 61 )
-level = 0
+level = 51
 egg = false
 tm = true
 

@@ -175,7 +175,7 @@ tm = true
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 18 )
-level = 0
+level = 58
 egg = false
 tm = true
 
@@ -266,7 +266,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 31 )
-level = 0
+level = 67
 egg = false
 tm = true
 
@@ -364,7 +364,7 @@ tm = false
 [node name="energy-ball" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 45 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -378,7 +378,7 @@ tm = false
 [node name="round" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 47 )
-level = 0
+level = 13
 egg = false
 tm = true
 

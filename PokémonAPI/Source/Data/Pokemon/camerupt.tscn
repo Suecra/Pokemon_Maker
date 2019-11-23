@@ -191,7 +191,7 @@ tm = true
 [node name="ember" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 27 )
-level = 1
+level = 8
 egg = false
 tm = false
 
@@ -219,14 +219,14 @@ tm = true
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 31 )
-level = 0
+level = 46
 egg = false
 tm = true
 
 [node name="fissure" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 32 )
-level = 1
+level = 59
 egg = false
 tm = false
 
@@ -247,7 +247,7 @@ tm = true
 [node name="focus-energy" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 35 )
-level = 1
+level = 8
 egg = false
 tm = false
 
@@ -401,7 +401,7 @@ tm = false
 [node name="eruption" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 57 )
-level = 1
+level = 52
 egg = false
 tm = false
 

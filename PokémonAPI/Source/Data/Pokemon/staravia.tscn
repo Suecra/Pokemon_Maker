@@ -197,14 +197,14 @@ tm = false
 [node name="quick-attack" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 30 )
-level = 5
+level = 1
 egg = false
 tm = false
 
 [node name="double-team" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 31 )
-level = 0
+level = 13
 egg = false
 tm = true
 
@@ -316,7 +316,7 @@ tm = false
 [node name="aerial-ace" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 47 )
-level = 0
+level = 28
 egg = false
 tm = true
 

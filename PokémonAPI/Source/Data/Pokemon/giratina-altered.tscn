@@ -380,7 +380,7 @@ tm = true
 [node name="dragon-claw" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 49 )
-level = 0
+level = 28
 egg = false
 tm = true
 
@@ -436,7 +436,7 @@ tm = true
 [node name="shadow-claw" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 57 )
-level = 0
+level = 42
 egg = false
 tm = true
 

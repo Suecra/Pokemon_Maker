@@ -331,7 +331,7 @@ tm = true
 [node name="aerial-ace" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 44 )
-level = 0
+level = 23
 egg = false
 tm = true
 
@@ -408,7 +408,7 @@ tm = true
 [node name="sky-drop" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 55 )
-level = 0
+level = 50
 egg = false
 tm = true
 

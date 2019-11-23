@@ -134,7 +134,7 @@ script = ExtResource( 13 )
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 15 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -218,7 +218,7 @@ tm = true
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 27 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -344,7 +344,7 @@ tm = true
 [node name="close-combat" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 45 )
-level = 61
+level = 1
 egg = false
 tm = false
 
@@ -386,14 +386,14 @@ tm = true
 [node name="stone-edge" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 51 )
-level = 0
+level = 55
 egg = false
 tm = true
 
 [node name="smack-down" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 52 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -428,7 +428,7 @@ tm = true
 [node name="work-up" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 57 )
-level = 0
+level = 49
 egg = false
 tm = true
 

@@ -171,7 +171,7 @@ tm = false
 [node name="roar" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 19 )
-level = 0
+level = 13
 egg = false
 tm = true
 
@@ -185,7 +185,7 @@ tm = false
 [node name="flamethrower" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 21 )
-level = 0
+level = 44
 egg = false
 tm = true
 
@@ -388,7 +388,7 @@ tm = true
 [node name="beat-up" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 50 )
-level = 0
+level = 25
 egg = true
 tm = false
 
@@ -458,7 +458,7 @@ tm = true
 [node name="embargo" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 60 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -486,7 +486,7 @@ tm = true
 [node name="nasty-plot" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 64 )
-level = 0
+level = 52
 egg = true
 tm = false
 
@@ -500,7 +500,7 @@ tm = false
 [node name="fire-fang" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 66 )
-level = 0
+level = 28
 egg = true
 tm = false
 

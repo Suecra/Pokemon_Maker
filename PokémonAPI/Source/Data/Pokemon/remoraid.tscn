@@ -184,7 +184,7 @@ tm = true
 [node name="ice-beam" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 23 )
-level = 0
+level = 34
 egg = false
 tm = true
 
@@ -212,14 +212,14 @@ tm = false
 [node name="aurora-beam" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 27 )
-level = 0
+level = 14
 egg = true
 tm = false
 
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 28 )
-level = 0
+level = 46
 egg = false
 tm = true
 
@@ -450,7 +450,7 @@ tm = false
 [node name="water-pulse" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 61 )
-level = 0
+level = 26
 egg = true
 tm = false
 

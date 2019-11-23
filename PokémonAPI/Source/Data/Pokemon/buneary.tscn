@@ -374,7 +374,7 @@ tm = true
 [node name="frustration" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 49 )
-level = 0
+level = 1
 egg = false
 tm = true
 

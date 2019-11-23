@@ -208,7 +208,7 @@ tm = true
 [node name="absorb" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 30 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -222,7 +222,7 @@ tm = false
 [node name="growth" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 32 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -292,14 +292,14 @@ tm = false
 [node name="destiny-bond" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 42 )
-level = 59
+level = 1
 egg = false
 tm = false
 
 [node name="sandstorm" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 43 )
-level = 0
+level = 54
 egg = false
 tm = true
 
@@ -397,7 +397,7 @@ tm = false
 [node name="payback" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 57 )
-level = 0
+level = 26
 egg = false
 tm = true
 
@@ -446,7 +446,7 @@ tm = true
 [node name="energy-ball" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 64 )
-level = 0
+level = 44
 egg = false
 tm = true
 
@@ -488,6 +488,6 @@ tm = true
 [node name="spiky-shield" type="Node" parent="Moves"]
 script = ExtResource( 23 )
 move = ExtResource( 70 )
-level = 1
+level = 0
 egg = false
 tm = false

@@ -175,7 +175,7 @@ tm = false
 [node name="growl" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 20 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -203,7 +203,7 @@ tm = true
 [node name="confusion" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 24 )
-level = 10
+level = 1
 egg = false
 tm = false
 
@@ -343,7 +343,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 44 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -441,7 +441,7 @@ tm = false
 [node name="astonish" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 58 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -469,7 +469,7 @@ tm = true
 [node name="healing-wish" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 62 )
-level = 57
+level = 1
 egg = false
 tm = false
 
@@ -511,7 +511,7 @@ tm = true
 [node name="synchronoise" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 68 )
-level = 52
+level = 1
 egg = false
 tm = false
 

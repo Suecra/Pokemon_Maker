@@ -308,7 +308,7 @@ tm = false
 [node name="sandstorm" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 44 )
-level = 0
+level = 13
 egg = false
 tm = true
 
@@ -413,7 +413,7 @@ tm = true
 [node name="sand-tomb" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 59 )
-level = 0
+level = 19
 egg = true
 tm = false
 
@@ -427,7 +427,7 @@ tm = true
 [node name="dragon-claw" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 61 )
-level = 0
+level = 27
 egg = false
 tm = true
 

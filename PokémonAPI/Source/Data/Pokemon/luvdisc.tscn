@@ -281,7 +281,7 @@ tm = true
 [node name="attract" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 37 )
-level = 0
+level = 20
 egg = false
 tm = true
 
@@ -309,7 +309,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 41 )
-level = 0
+level = 49
 egg = false
 tm = true
 
@@ -386,14 +386,14 @@ tm = false
 [node name="aqua-ring" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 52 )
-level = 0
+level = 40
 egg = true
 tm = false
 
 [node name="captivate" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 53 )
-level = 0
+level = 37
 egg = true
 tm = false
 

@@ -122,7 +122,7 @@ script = ExtResource( 9 )
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 11 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -206,7 +206,7 @@ tm = true
 [node name="fury-cutter" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 23 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -283,7 +283,7 @@ tm = false
 [node name="aerial-ace" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 34 )
-level = 0
+level = 22
 egg = false
 tm = true
 

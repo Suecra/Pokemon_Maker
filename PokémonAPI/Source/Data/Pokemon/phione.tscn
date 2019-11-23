@@ -259,7 +259,7 @@ tm = true
 [node name="rain-dance" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 35 )
-level = 0
+level = 69
 egg = false
 tm = true
 

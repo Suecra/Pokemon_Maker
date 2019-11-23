@@ -10,13 +10,12 @@ export(int, -6, 6) var speed_boost = 0
 export(int, -6, 6) var accuracy_boost = 0
 export(int, -6, 6) var evasion_boost = 0
 
-func _hit():
-	for t in targets:
-		boost_stat(t, 0, attack_boost)
-		boost_stat(t, 1, defense_boost)
-		boost_stat(t, 2, special_attack_boost)
-		boost_stat(t, 3, special_defense_boost)
-		boost_stat(t, 4, speed_boost)
+func _hit(target):
+	boost_stat(target, 0, attack_boost)
+	boost_stat(target, 1, defense_boost)
+	boost_stat(target, 2, special_attack_boost)
+	boost_stat(target, 3, special_defense_boost)
+	boost_stat(target, 4, speed_boost)
 
 func boost_stat(target, stat, amount):
 	if amount != 0:

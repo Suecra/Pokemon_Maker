@@ -183,14 +183,14 @@ tm = false
 [node name="roar" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 19 )
-level = 0
+level = 6
 egg = false
 tm = true
 
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 20 )
-level = 0
+level = 44
 egg = false
 tm = true
 
@@ -365,7 +365,7 @@ tm = true
 [node name="dragon-claw" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 45 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -380,7 +380,7 @@ tm = false
 script = ExtResource( 12 )
 move = ExtResource( 47 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="dark-pulse" type="Node" parent="Moves"]
@@ -449,7 +449,7 @@ tm = true
 [node name="dragon-tail" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 57 )
-level = 0
+level = 30
 egg = false
 tm = true
 

@@ -243,7 +243,7 @@ tm = true
 [node name="explosion" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 30 )
-level = 0
+level = 46
 egg = false
 tm = true
 
@@ -285,7 +285,7 @@ tm = false
 [node name="sandstorm" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 36 )
-level = 0
+level = 40
 egg = false
 tm = true
 
@@ -390,7 +390,7 @@ tm = false
 [node name="rock-tomb" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 51 )
-level = 0
+level = 13
 egg = false
 tm = true
 

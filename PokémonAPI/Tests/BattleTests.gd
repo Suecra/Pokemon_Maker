@@ -128,6 +128,27 @@ func test_damage():
 	expect.is_less_than(breloom.current_hp, 69, "Breloom's HP lower than 69")
 	expect.is_less_than(pidgeotto.current_hp, 33, "Pidgeotto's's HP lower than 33")
 
+func test_stat_change_damage():
+	var milotic = create_basic_pokemon("milotic", 38, ["surf", "fake-tears"], "hardy")
+	var furret = create_basic_pokemon("furret", 55, ["headbutt", "sharpen"], "hardy")
+	trainer1.pokemon_party.add_child(milotic)
+	trainer2.pokemon_party.add_child(furret)
+	milotic.calculate_stats()
+	furret.calculate_stats()
+	battle.start_async()
+	trainer1.custom_move("Fake-tears", "")
+	trainer2.custom_move("Sharpen", "")
+	trainer1.custom_move("Surf", "")
+	trainer2.custom_move("Headbutt", "")
+	print(milotic.current_defense)
+	print(furret.current_attack)
+	print(milotic.current_special_attack)
+	print(furret.current_special_defense)
+	expect.is_less_than(milotic.current_hp, 33, "Milotic's HP lower than 33")
+	expect.is_less_than(furret.current_hp, 59, "Furret's's HP lower than 59")
+	print(furret.current_hp)
+	print(milotic.current_hp)
+
 func pre():
 	set_up()
 

@@ -170,14 +170,14 @@ tm = false
 [node name="leer" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 20 )
-level = 3
+level = 1
 egg = false
 tm = false
 
 [node name="bite" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 21 )
-level = 6
+level = 1
 egg = false
 tm = false
 
@@ -247,7 +247,7 @@ tm = true
 [node name="confuse-ray" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 31 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -401,7 +401,7 @@ tm = false
 [node name="psych-up" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 53 )
-level = 0
+level = 32
 egg = false
 tm = true
 

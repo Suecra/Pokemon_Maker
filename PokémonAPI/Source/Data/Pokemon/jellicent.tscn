@@ -195,7 +195,7 @@ tm = true
 [node name="absorb" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 27 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -216,7 +216,7 @@ tm = true
 [node name="night-shade" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 30 )
-level = 9
+level = 1
 egg = false
 tm = false
 
@@ -335,7 +335,7 @@ tm = true
 [node name="rain-dance" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 47 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -384,7 +384,7 @@ tm = true
 [node name="water-spout" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 54 )
-level = 69
+level = 1
 egg = false
 tm = false
 
@@ -412,7 +412,7 @@ tm = false
 [node name="wring-out" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 58 )
-level = 61
+level = 1
 egg = false
 tm = false
 

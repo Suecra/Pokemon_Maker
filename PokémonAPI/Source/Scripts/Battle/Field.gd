@@ -2,6 +2,7 @@ extends Node
 
 const SpeedSorter = preload("res://Source/Scripts/Battle/SpeedSorter.gd")
 
+var size: int
 var trainers = []
 var battle
 
@@ -13,6 +14,10 @@ func get_all_fighting_pokemon():
 	return list
 
 func get_pokemon_at_position(position: int):
+	if position > size:
+		return null
+	if trainers.size() >= position:
+		return trainers[position].current_pokemon
 	return trainers[0].current_pokemon
 
 func begin_of_turn():

@@ -293,7 +293,7 @@ tm = true
 script = ExtResource( 17 )
 move = ExtResource( 38 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]
@@ -467,7 +467,7 @@ tm = true
 [node name="echoed-voice" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 63 )
-level = 0
+level = 33
 egg = false
 tm = true
 

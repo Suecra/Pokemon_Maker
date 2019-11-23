@@ -224,7 +224,7 @@ tm = false
 [node name="rage" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 28 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -245,7 +245,7 @@ tm = true
 [node name="focus-energy" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 31 )
-level = 8
+level = 1
 egg = false
 tm = false
 
@@ -273,7 +273,7 @@ tm = true
 [node name="slash" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 35 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -308,7 +308,7 @@ tm = false
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 40 )
-level = 0
+level = 22
 egg = false
 tm = true
 
@@ -385,7 +385,7 @@ tm = true
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 51 )
-level = 0
+level = 56
 egg = false
 tm = true
 
@@ -441,7 +441,7 @@ tm = true
 [node name="night-slash" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 59 )
-level = 62
+level = 1
 egg = false
 tm = false
 

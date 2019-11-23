@@ -501,7 +501,7 @@ tm = true
 script = ExtResource( 21 )
 move = ExtResource( 66 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="ingrain" type="Node" parent="Moves"]
@@ -584,7 +584,7 @@ tm = false
 [node name="aqua-ring" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 78 )
-level = 0
+level = 38
 egg = true
 tm = false
 

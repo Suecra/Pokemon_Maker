@@ -172,7 +172,7 @@ tm = false
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 19 )
-level = 0
+level = 57
 egg = false
 tm = true
 
@@ -354,7 +354,7 @@ tm = true
 [node name="torment" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 45 )
-level = 0
+level = 14
 egg = false
 tm = true
 
@@ -431,7 +431,7 @@ tm = false
 [node name="embargo" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 56 )
-level = 0
+level = 41
 egg = false
 tm = true
 

@@ -160,7 +160,7 @@ tm = true
 [node name="thrash" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 17 )
-level = 79
+level = 1
 egg = false
 tm = false
 
@@ -202,7 +202,7 @@ tm = true
 [node name="thunder" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 23 )
-level = 0
+level = 61
 egg = false
 tm = true
 
@@ -272,7 +272,7 @@ tm = true
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 33 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -398,7 +398,7 @@ tm = false
 [node name="hammer-arm" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 51 )
-level = 73
+level = 1
 egg = false
 tm = false
 
@@ -440,7 +440,7 @@ tm = false
 [node name="dark-pulse" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 57 )
-level = 0
+level = 67
 egg = false
 tm = true
 
@@ -461,7 +461,7 @@ tm = true
 [node name="nasty-plot" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 60 )
-level = 55
+level = 1
 egg = false
 tm = false
 

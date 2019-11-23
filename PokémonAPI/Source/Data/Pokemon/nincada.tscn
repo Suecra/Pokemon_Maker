@@ -283,7 +283,7 @@ tm = false
 [node name="false-swipe" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 38 )
-level = 0
+level = 33
 egg = false
 tm = true
 

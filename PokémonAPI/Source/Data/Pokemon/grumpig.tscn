@@ -158,7 +158,7 @@ script = ExtResource( 17 )
 [node name="psybeam" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 19 )
-level = 14
+level = 1
 egg = false
 tm = false
 
@@ -186,7 +186,7 @@ tm = true
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 23 )
-level = 0
+level = 52
 egg = false
 tm = true
 
@@ -228,7 +228,7 @@ tm = true
 [node name="psywave" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 29 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -242,7 +242,7 @@ tm = false
 [node name="rest" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 31 )
-level = 0
+level = 35
 egg = false
 tm = true
 
@@ -333,7 +333,7 @@ tm = true
 [node name="psych-up" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 44 )
-level = 0
+level = 15
 egg = false
 tm = true
 
@@ -382,14 +382,14 @@ tm = true
 [node name="teeter-dance" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 51 )
-level = 1
+level = 0
 egg = false
 tm = false
 
 [node name="odor-sleuth" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 52 )
-level = 10
+level = 1
 egg = false
 tm = false
 
@@ -410,7 +410,7 @@ tm = true
 [node name="payback" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 55 )
-level = 0
+level = 46
 egg = false
 tm = true
 
@@ -480,7 +480,7 @@ tm = true
 [node name="psyshock" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 65 )
-level = 0
+level = 42
 egg = false
 tm = true
 

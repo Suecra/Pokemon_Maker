@@ -184,7 +184,7 @@ tm = true
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 27 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -276,7 +276,7 @@ tm = true
 script = ExtResource( 18 )
 move = ExtResource( 40 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]
@@ -373,7 +373,7 @@ tm = true
 [node name="sand-tomb" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 54 )
-level = 0
+level = 25
 egg = true
 tm = false
 

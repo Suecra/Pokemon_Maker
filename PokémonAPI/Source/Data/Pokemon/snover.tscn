@@ -185,7 +185,7 @@ tm = false
 [node name="mist" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 27 )
-level = 0
+level = 21
 egg = true
 tm = false
 
@@ -199,7 +199,7 @@ tm = true
 [node name="blizzard" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 29 )
-level = 0
+level = 41
 egg = false
 tm = true
 
@@ -297,7 +297,7 @@ tm = false
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 43 )
-level = 0
+level = 17
 egg = false
 tm = true
 

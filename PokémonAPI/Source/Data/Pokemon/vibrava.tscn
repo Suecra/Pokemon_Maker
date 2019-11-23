@@ -157,7 +157,7 @@ tm = false
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 19 )
-level = 0
+level = 43
 egg = false
 tm = true
 
@@ -171,7 +171,7 @@ tm = true
 [node name="earthquake" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 21 )
-level = 0
+level = 33
 egg = false
 tm = true
 
@@ -213,7 +213,7 @@ tm = true
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 27 )
-level = 0
+level = 15
 egg = false
 tm = true
 
@@ -248,7 +248,7 @@ tm = false
 [node name="sandstorm" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 32 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -297,7 +297,7 @@ tm = true
 [node name="dragon-breath" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 39 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -388,7 +388,7 @@ tm = true
 [node name="bulldoze" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 52 )
-level = 0
+level = 8
 egg = false
 tm = true
 

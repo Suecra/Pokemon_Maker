@@ -232,7 +232,7 @@ tm = false
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 29 )
-level = 0
+level = 49
 egg = false
 tm = true
 
@@ -414,7 +414,7 @@ tm = true
 [node name="x-scissor" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 55 )
-level = 0
+level = 44
 egg = false
 tm = true
 
@@ -442,7 +442,7 @@ tm = false
 [node name="smack-down" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 59 )
-level = 0
+level = 13
 egg = false
 tm = true
 

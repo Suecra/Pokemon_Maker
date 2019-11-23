@@ -171,7 +171,7 @@ tm = true
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 19 )
-level = 0
+level = 73
 egg = false
 tm = true
 
@@ -423,7 +423,7 @@ tm = true
 [node name="x-scissor" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 55 )
-level = 0
+level = 51
 egg = false
 tm = true
 
@@ -479,7 +479,7 @@ tm = true
 [node name="flame-charge" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 63 )
-level = 0
+level = 18
 egg = false
 tm = true
 

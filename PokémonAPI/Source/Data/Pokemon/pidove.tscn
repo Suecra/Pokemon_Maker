@@ -240,7 +240,7 @@ tm = false
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 31 )
-level = 0
+level = 39
 egg = false
 tm = true
 
@@ -248,7 +248,7 @@ tm = true
 script = ExtResource( 16 )
 move = ExtResource( 32 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="attract" type="Node" parent="Moves"]
@@ -317,14 +317,14 @@ tm = false
 [node name="facade" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 42 )
-level = 0
+level = 43
 egg = false
 tm = true
 
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 43 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -359,7 +359,7 @@ tm = true
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 48 )
-level = 0
+level = 18
 egg = false
 tm = true
 

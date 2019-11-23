@@ -399,7 +399,7 @@ tm = true
 [node name="endeavor" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 52 )
-level = 0
+level = 45
 egg = true
 tm = false
 
@@ -476,7 +476,7 @@ tm = false
 [node name="energy-ball" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 63 )
-level = 0
+level = 37
 egg = false
 tm = true
 

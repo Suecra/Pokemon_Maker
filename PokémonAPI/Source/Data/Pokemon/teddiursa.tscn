@@ -256,7 +256,7 @@ tm = false
 [node name="rest" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 32 )
-level = 0
+level = 43
 egg = false
 tm = true
 
@@ -341,7 +341,7 @@ tm = true
 script = ExtResource( 18 )
 move = ExtResource( 44 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]
@@ -445,7 +445,7 @@ tm = false
 [node name="fake-tears" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 59 )
-level = 0
+level = 1
 egg = true
 tm = false
 
@@ -494,7 +494,7 @@ tm = true
 [node name="fling" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 66 )
-level = 0
+level = 1
 egg = false
 tm = true
 

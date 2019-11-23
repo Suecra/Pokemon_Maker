@@ -165,7 +165,7 @@ script = ExtResource( 17 )
 [node name="sand-attack" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 20 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -270,7 +270,7 @@ tm = false
 [node name="feint-attack" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 35 )
-level = 9
+level = 1
 egg = false
 tm = false
 
@@ -284,7 +284,7 @@ tm = true
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 37 )
-level = 0
+level = 12
 egg = false
 tm = true
 
@@ -354,7 +354,7 @@ tm = true
 [node name="facade" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 47 )
-level = 0
+level = 45
 egg = false
 tm = true
 
@@ -375,7 +375,7 @@ tm = true
 [node name="brick-break" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 50 )
-level = 0
+level = 23
 egg = false
 tm = true
 
@@ -403,7 +403,7 @@ tm = true
 [node name="payback" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 54 )
-level = 0
+level = 20
 egg = false
 tm = true
 

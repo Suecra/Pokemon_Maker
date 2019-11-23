@@ -307,7 +307,7 @@ tm = true
 [node name="attract" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 40 )
-level = 0
+level = 44
 egg = false
 tm = true
 

@@ -183,7 +183,7 @@ tm = false
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 17 )
-level = 0
+level = 75
 egg = false
 tm = true
 
@@ -197,7 +197,7 @@ tm = true
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 19 )
-level = 0
+level = 15
 egg = false
 tm = true
 
@@ -316,7 +316,7 @@ tm = true
 [node name="shadow-ball" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 36 )
-level = 0
+level = 55
 egg = false
 tm = true
 
@@ -442,7 +442,7 @@ tm = false
 [node name="trick-room" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 54 )
-level = 0
+level = 50
 egg = false
 tm = true
 
@@ -526,6 +526,6 @@ tm = true
 [node name="hyperspace-hole" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 66 )
-level = 85
+level = 1
 egg = false
 tm = false

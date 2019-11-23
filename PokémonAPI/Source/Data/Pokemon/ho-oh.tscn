@@ -281,7 +281,7 @@ tm = true
 [node name="fire-blast" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 35 )
-level = 0
+level = 37
 egg = false
 tm = true
 
@@ -365,7 +365,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 47 )
-level = 0
+level = 65
 egg = false
 tm = true
 
@@ -393,7 +393,7 @@ tm = true
 [node name="sunny-day" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 51 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -470,7 +470,7 @@ tm = true
 [node name="calm-mind" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 62 )
-level = 0
+level = 93
 egg = false
 tm = true
 

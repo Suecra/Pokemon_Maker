@@ -186,7 +186,7 @@ tm = true
 [node name="solar-beam" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 22 )
-level = 0
+level = 41
 egg = false
 tm = true
 
@@ -228,7 +228,7 @@ tm = false
 [node name="psychic" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 28 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -284,7 +284,7 @@ tm = false
 [node name="explosion" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 36 )
-level = 0
+level = 45
 egg = false
 tm = true
 
@@ -298,7 +298,7 @@ tm = true
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 38 )
-level = 0
+level = 21
 egg = false
 tm = true
 
@@ -440,7 +440,7 @@ script = ExtResource( 18 )
 move = ExtResource( 58 )
 level = 17
 egg = false
-tm = false
+tm = true
 
 [node name="heal-block" type="Node" parent="Moves"]
 script = ExtResource( 18 )
@@ -461,7 +461,7 @@ script = ExtResource( 18 )
 move = ExtResource( 61 )
 level = 9
 egg = false
-tm = false
+tm = true
 
 [node name="giga-impact" type="Node" parent="Moves"]
 script = ExtResource( 18 )
@@ -480,7 +480,7 @@ tm = true
 [node name="stone-edge" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 64 )
-level = 0
+level = 37
 egg = false
 tm = true
 

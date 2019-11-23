@@ -268,7 +268,7 @@ tm = true
 [node name="milk-drink" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 31 )
-level = 0
+level = 50
 egg = true
 tm = false
 
@@ -352,7 +352,7 @@ tm = true
 [node name="bulk-up" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 43 )
-level = 0
+level = 34
 egg = false
 tm = true
 
@@ -408,7 +408,7 @@ tm = true
 [node name="bulldoze" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 51 )
-level = 0
+level = 26
 egg = false
 tm = true
 

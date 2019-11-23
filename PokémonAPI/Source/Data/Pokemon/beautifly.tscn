@@ -155,7 +155,7 @@ script = ExtResource( 21 )
 [node name="gust" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 23 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -274,7 +274,7 @@ tm = true
 [node name="attract" type="Node" parent="Moves"]
 script = ExtResource( 22 )
 move = ExtResource( 40 )
-level = 0
+level = 27
 egg = false
 tm = true
 

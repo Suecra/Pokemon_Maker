@@ -181,14 +181,14 @@ tm = false
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 18 )
-level = 0
+level = 60
 egg = false
 tm = true
 
 [node name="reflect" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 19 )
-level = 0
+level = 12
 egg = false
 tm = true
 
@@ -279,7 +279,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 32 )
-level = 0
+level = 70
 egg = false
 tm = true
 
@@ -384,14 +384,14 @@ tm = true
 [node name="trick-room" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 47 )
-level = 0
+level = 46
 egg = false
 tm = true
 
 [node name="stone-edge" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 48 )
-level = 0
+level = 49
 egg = false
 tm = true
 
@@ -419,7 +419,7 @@ tm = true
 [node name="smack-down" type="Node" parent="Moves"]
 script = ExtResource( 10 )
 move = ExtResource( 52 )
-level = 0
+level = 8
 egg = false
 tm = true
 

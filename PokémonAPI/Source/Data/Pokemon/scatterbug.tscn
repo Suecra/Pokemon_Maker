@@ -108,7 +108,7 @@ tm = false
 [node name="stun-spore" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 14 )
-level = 0
+level = 6
 egg = true
 tm = false
 

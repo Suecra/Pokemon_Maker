@@ -176,7 +176,7 @@ tm = false
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 19 )
-level = 0
+level = 47
 egg = false
 tm = true
 
@@ -367,7 +367,7 @@ script = ExtResource( 16 )
 move = ExtResource( 46 )
 level = 29
 egg = false
-tm = false
+tm = true
 
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 16 )
@@ -470,7 +470,7 @@ tm = true
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 61 )
-level = 0
+level = 43
 egg = false
 tm = true
 
@@ -535,7 +535,7 @@ script = ExtResource( 16 )
 move = ExtResource( 70 )
 level = 33
 egg = false
-tm = false
+tm = true
 
 [node name="fling" type="Node" parent="Moves"]
 script = ExtResource( 16 )
@@ -563,7 +563,7 @@ script = ExtResource( 16 )
 move = ExtResource( 74 )
 level = 40
 egg = false
-tm = false
+tm = true
 
 [node name="focus-blast" type="Node" parent="Moves"]
 script = ExtResource( 16 )

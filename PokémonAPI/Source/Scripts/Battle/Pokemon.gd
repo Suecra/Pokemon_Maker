@@ -22,6 +22,7 @@ var battle
 var battlefield
 var encounter
 var status_bar
+var position
 
 var hp: int
 var attack: int
@@ -227,6 +228,7 @@ func init_battle():
 	add_child(boosts)
 
 func switch_in():
+	position = 0
 	var status = get_status()
 	if status != null:
 		status._switch_in()

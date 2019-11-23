@@ -191,7 +191,7 @@ tm = false
 [node name="solar-beam" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 24 )
-level = 0
+level = 50
 egg = false
 tm = true
 
@@ -324,7 +324,7 @@ tm = true
 [node name="sunny-day" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 43 )
-level = 0
+level = 45
 egg = false
 tm = true
 
@@ -443,7 +443,7 @@ tm = false
 [node name="after-you" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 60 )
-level = 57
+level = 1
 egg = false
 tm = false
 
@@ -457,7 +457,7 @@ tm = true
 [node name="cotton-guard" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 62 )
-level = 55
+level = 1
 egg = false
 tm = false
 

@@ -341,7 +341,7 @@ tm = true
 [node name="payback" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 45 )
-level = 0
+level = 65
 egg = false
 tm = true
 
@@ -369,7 +369,7 @@ tm = true
 [node name="giga-impact" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 49 )
-level = 0
+level = 100
 egg = false
 tm = true
 
@@ -390,7 +390,7 @@ tm = true
 [node name="crush-grip" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 52 )
-level = 75
+level = 1
 egg = false
 tm = false
 
@@ -411,7 +411,7 @@ tm = true
 [node name="heavy-slam" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 55 )
-level = 90
+level = 1
 egg = false
 tm = false
 

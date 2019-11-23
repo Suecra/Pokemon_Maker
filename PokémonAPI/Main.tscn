@@ -13,6 +13,7 @@ script = ExtResource( 1 )
 visible = false
 
 [node name="Interface" type="Control" parent="."]
+editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 

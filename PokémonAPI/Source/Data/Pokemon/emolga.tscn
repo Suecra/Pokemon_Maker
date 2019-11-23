@@ -209,14 +209,14 @@ tm = false
 [node name="double-team" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 26 )
-level = 0
+level = 19
 egg = false
 tm = true
 
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 27 )
-level = 0
+level = 34
 egg = false
 tm = true
 
@@ -384,7 +384,7 @@ tm = false
 [node name="shock-wave" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 51 )
-level = 0
+level = 22
 egg = true
 tm = false
 
@@ -392,7 +392,7 @@ tm = false
 script = ExtResource( 17 )
 move = ExtResource( 52 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="u-turn" type="Node" parent="Moves"]
@@ -447,14 +447,14 @@ tm = true
 [node name="acrobatics" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 60 )
-level = 0
+level = 30
 egg = false
 tm = true
 
 [node name="volt-switch" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 61 )
-level = 0
+level = 42
 egg = false
 tm = true
 

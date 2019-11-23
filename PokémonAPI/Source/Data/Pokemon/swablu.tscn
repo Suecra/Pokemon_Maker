@@ -306,7 +306,7 @@ tm = true
 script = ExtResource( 16 )
 move = ExtResource( 39 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="attract" type="Node" parent="Moves"]
@@ -340,7 +340,7 @@ tm = true
 [node name="safeguard" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 44 )
-level = 0
+level = 9
 egg = false
 tm = true
 
@@ -425,7 +425,7 @@ tm = true
 script = ExtResource( 16 )
 move = ExtResource( 56 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="natural-gift" type="Node" parent="Moves"]
@@ -459,7 +459,7 @@ tm = false
 [node name="round" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 61 )
-level = 0
+level = 17
 egg = false
 tm = true
 

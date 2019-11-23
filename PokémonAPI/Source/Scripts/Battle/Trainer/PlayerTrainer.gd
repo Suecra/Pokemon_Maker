@@ -2,6 +2,7 @@ extends "res://Source/Scripts/Battle/Trainer.gd"
 
 var choicebox
 var move_selection
+var selected_move
 
 func _do_half_turn():
 	choicebox = battle.get_node("Choicebox")

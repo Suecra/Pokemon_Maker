@@ -142,14 +142,14 @@ tm = false
 [node name="ice-beam" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 19 )
-level = 0
+level = 36
 egg = false
 tm = true
 
 [node name="blizzard" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 20 )
-level = 0
+level = 53
 egg = false
 tm = true
 
@@ -170,7 +170,7 @@ tm = true
 [node name="harden" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 23 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -282,14 +282,14 @@ tm = false
 [node name="uproar" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 39 )
-level = 10
+level = 1
 egg = false
 tm = false
 
 [node name="hail" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 40 )
-level = 0
+level = 42
 egg = false
 tm = true
 
@@ -303,14 +303,14 @@ tm = true
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 42 )
-level = 0
+level = 22
 egg = false
 tm = true
 
 [node name="astonish" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 43 )
-level = 7
+level = 1
 egg = false
 tm = false
 

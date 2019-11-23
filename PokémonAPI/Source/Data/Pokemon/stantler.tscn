@@ -482,15 +482,15 @@ tm = false
 [node name="calm-mind" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 63 )
-level = 0
+level = 27
 egg = false
 tm = true
 
 [node name="me-first" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 64 )
-level = 1
-egg = false
+level = 55
+egg = true
 tm = false
 
 [node name="energy-ball" type="Node" parent="Moves"]
@@ -511,7 +511,7 @@ tm = true
 script = ExtResource( 15 )
 move = ExtResource( 67 )
 level = 38
-egg = false
+egg = true
 tm = false
 
 [node name="trick-room" type="Node" parent="Moves"]

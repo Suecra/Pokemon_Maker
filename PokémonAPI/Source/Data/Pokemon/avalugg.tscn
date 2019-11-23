@@ -146,7 +146,7 @@ tm = false
 [node name="body-slam" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 13 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -195,7 +195,7 @@ tm = true
 [node name="blizzard" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 20 )
-level = 0
+level = 46
 egg = false
 tm = true
 
@@ -244,7 +244,7 @@ tm = false
 [node name="skull-bash" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 27 )
-level = 60
+level = 1
 egg = false
 tm = false
 
@@ -286,7 +286,7 @@ tm = false
 [node name="powder-snow" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 33 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -370,7 +370,7 @@ tm = true
 [node name="crunch" type="Node" parent="Moves"]
 script = ExtResource( 11 )
 move = ExtResource( 45 )
-level = 65
+level = 1
 egg = false
 tm = false
 

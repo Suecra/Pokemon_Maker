@@ -183,7 +183,7 @@ tm = true
 [node name="blizzard" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 23 )
-level = 0
+level = 45
 egg = false
 tm = true
 
@@ -218,7 +218,7 @@ tm = false
 [node name="rest" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 28 )
-level = 0
+level = 41
 egg = false
 tm = true
 
@@ -296,7 +296,7 @@ tm = true
 script = ExtResource( 17 )
 move = ExtResource( 39 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="return" type="Node" parent="Moves"]
@@ -337,7 +337,7 @@ tm = true
 [node name="hail" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 45 )
-level = 0
+level = 49
 egg = false
 tm = true
 

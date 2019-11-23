@@ -491,7 +491,7 @@ tm = true
 [node name="rock-polish" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 60 )
-level = 0
+level = 24
 egg = false
 tm = true
 

@@ -182,7 +182,7 @@ tm = false
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 18 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -196,7 +196,7 @@ tm = false
 [node name="leer" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 20 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -266,14 +266,14 @@ tm = true
 [node name="quick-attack" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 30 )
-level = 7
+level = 1
 egg = false
 tm = false
 
 [node name="double-team" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 31 )
-level = 0
+level = 19
 egg = false
 tm = true
 
@@ -350,8 +350,8 @@ tm = false
 [node name="perish-song" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 42 )
-level = 1
-egg = false
+level = 57
+egg = true
 tm = false
 
 [node name="detect" type="Node" parent="Moves"]
@@ -476,7 +476,7 @@ tm = true
 [node name="future-sight" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 60 )
-level = 1
+level = 53
 egg = false
 tm = false
 
@@ -511,7 +511,7 @@ tm = true
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 65 )
-level = 0
+level = 13
 egg = false
 tm = true
 
@@ -568,7 +568,7 @@ tm = false
 script = ExtResource( 15 )
 move = ExtResource( 73 )
 level = 41
-egg = false
+egg = true
 tm = false
 
 [node name="punishment" type="Node" parent="Moves"]
@@ -582,7 +582,7 @@ tm = false
 script = ExtResource( 15 )
 move = ExtResource( 75 )
 level = 45
-egg = false
+egg = true
 tm = false
 
 [node name="dark-pulse" type="Node" parent="Moves"]

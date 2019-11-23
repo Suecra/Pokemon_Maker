@@ -5,6 +5,7 @@ const Utils = preload("res://Source/Scripts/Utils.gd")
 export(PackedScene) var move
 export(int) var current_pp = 0 setget set_current_pp
 
+var target_index: int
 var targets = []
 
 func _get_priority():
@@ -23,18 +24,15 @@ func get_move_data():
 func can_use():
 	return current_pp > 0
 
-func select_targets():
-	pass
-
 func _execute():
 	current_pp -= 1
 	var move = get_move_data()
 	if move != null:
 		if pokemon.can_move():
+			var target_positions = move.get_target_positions(pokemon.position, target_index)
 			move.user = pokemon
 			move.turn = turn
 			move.battle = turn.battle
-			move.targets.clear()
-			move.targets.append(battle.battlefield.get_pokemon_at_position(3, field))
+			move.targets = battle.battlefield.get_targets(target_positions, field)
 			battle.register_message(pokemon.nickname + " uses " + move.move_name + "!")
 			move._execute()

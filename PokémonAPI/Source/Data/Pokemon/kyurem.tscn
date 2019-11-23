@@ -150,14 +150,14 @@ tm = true
 [node name="ice-beam" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 16 )
-level = 0
+level = 22
 egg = false
 tm = true
 
 [node name="blizzard" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 17 )
-level = 0
+level = 78
 egg = false
 tm = true
 

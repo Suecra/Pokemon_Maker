@@ -352,7 +352,7 @@ tm = false
 [node name="torment" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 45 )
-level = 0
+level = 19
 egg = false
 tm = true
 

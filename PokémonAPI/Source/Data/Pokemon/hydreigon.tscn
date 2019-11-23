@@ -179,14 +179,14 @@ tm = false
 [node name="bite" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 19 )
-level = 9
+level = 1
 egg = false
 tm = false
 
 [node name="roar" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 20 )
-level = 0
+level = 20
 egg = false
 tm = true
 
@@ -256,7 +256,7 @@ tm = true
 [node name="focus-energy" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 30 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -319,7 +319,7 @@ tm = false
 [node name="outrage" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 39 )
-level = 79
+level = 1
 egg = false
 tm = false
 
@@ -431,7 +431,7 @@ tm = true
 [node name="hyper-voice" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 55 )
-level = 68
+level = 1
 egg = false
 tm = false
 
@@ -564,7 +564,7 @@ tm = true
 [node name="work-up" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 74 )
-level = 0
+level = 38
 egg = false
 tm = true
 

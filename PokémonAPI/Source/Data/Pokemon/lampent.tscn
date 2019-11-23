@@ -204,7 +204,7 @@ tm = true
 [node name="minimize" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 25 )
-level = 3
+level = 1
 egg = false
 tm = false
 
@@ -218,7 +218,7 @@ tm = false
 [node name="smog" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 27 )
-level = 5
+level = 1
 egg = false
 tm = false
 
@@ -344,14 +344,14 @@ tm = true
 [node name="shadow-ball" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 45 )
-level = 0
+level = 53
 egg = false
 tm = true
 
 [node name="will-o-wisp" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 46 )
-level = 0
+level = 16
 egg = false
 tm = true
 
@@ -393,7 +393,7 @@ tm = false
 [node name="overheat" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 52 )
-level = 0
+level = 69
 egg = false
 tm = true
 

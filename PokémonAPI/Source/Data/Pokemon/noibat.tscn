@@ -424,14 +424,14 @@ tm = true
 [node name="roost" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 52 )
-level = 0
+level = 27
 egg = false
 tm = true
 
 [node name="tailwind" type="Node" parent="Moves"]
 script = ExtResource( 12 )
 move = ExtResource( 53 )
-level = 0
+level = 35
 egg = true
 tm = false
 

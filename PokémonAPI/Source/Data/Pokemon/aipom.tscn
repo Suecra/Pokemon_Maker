@@ -233,14 +233,14 @@ tm = true
 [node name="agility" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 31 )
-level = 0
+level = 29
 egg = true
 tm = false
 
 [node name="screech" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 32 )
-level = 0
+level = 25
 egg = true
 tm = false
 
@@ -478,7 +478,7 @@ tm = true
 [node name="fling" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 66 )
-level = 0
+level = 36
 egg = false
 tm = true
 

@@ -140,7 +140,7 @@ tm = false
 [node name="ice-beam" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 16 )
-level = 0
+level = 43
 egg = false
 tm = true
 
@@ -154,7 +154,7 @@ tm = true
 [node name="hyper-beam" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 18 )
-level = 0
+level = 67
 egg = false
 tm = true
 
@@ -210,7 +210,7 @@ tm = false
 [node name="explosion" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 26 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -259,7 +259,7 @@ tm = false
 [node name="icy-wind" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 33 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -413,7 +413,7 @@ tm = true
 [node name="charge-beam" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 55 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -427,7 +427,7 @@ tm = true
 [node name="bulldoze" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 57 )
-level = 0
+level = 1
 egg = false
 tm = true
 

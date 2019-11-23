@@ -180,7 +180,7 @@ tm = true
 [node name="thunder-wave" type="Node" parent="Moves"]
 script = ExtResource( 20 )
 move = ExtResource( 25 )
-level = 0
+level = 33
 egg = false
 tm = true
 

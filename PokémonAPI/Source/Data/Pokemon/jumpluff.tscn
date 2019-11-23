@@ -165,7 +165,7 @@ tm = false
 [node name="tail-whip" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 20 )
-level = 6
+level = 1
 egg = false
 tm = false
 
@@ -326,7 +326,7 @@ tm = true
 [node name="synthesis" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 43 )
-level = 4
+level = 1
 egg = false
 tm = false
 
@@ -389,7 +389,7 @@ tm = false
 [node name="u-turn" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 52 )
-level = 0
+level = 49
 egg = false
 tm = true
 
@@ -438,7 +438,7 @@ tm = true
 [node name="acrobatics" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 59 )
-level = 0
+level = 34
 egg = false
 tm = true
 

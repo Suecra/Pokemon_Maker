@@ -144,7 +144,7 @@ script = ExtResource( 14 )
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 16 )
-level = 0
+level = 56
 egg = false
 tm = true
 
@@ -424,7 +424,7 @@ tm = true
 [node name="giga-impact" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 56 )
-level = 0
+level = 61
 egg = false
 tm = true
 

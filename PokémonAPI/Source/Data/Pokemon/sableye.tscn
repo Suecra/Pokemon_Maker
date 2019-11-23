@@ -302,7 +302,7 @@ tm = true
 script = ExtResource( 18 )
 move = ExtResource( 37 )
 level = 46
-egg = false
+egg = true
 tm = false
 
 [node name="attract" type="Node" parent="Moves"]
@@ -371,7 +371,7 @@ tm = true
 [node name="shadow-ball" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 47 )
-level = 0
+level = 39
 egg = false
 tm = true
 
@@ -553,7 +553,7 @@ tm = false
 [node name="shadow-claw" type="Node" parent="Moves"]
 script = ExtResource( 18 )
 move = ExtResource( 73 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -604,7 +604,7 @@ script = ExtResource( 18 )
 move = ExtResource( 80 )
 level = 44
 egg = false
-tm = false
+tm = true
 
 [node name="snarl" type="Node" parent="Moves"]
 script = ExtResource( 18 )

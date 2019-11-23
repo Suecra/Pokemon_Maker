@@ -237,7 +237,7 @@ tm = false
 [node name="double-team" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 34 )
-level = 0
+level = 13
 egg = false
 tm = true
 
@@ -301,7 +301,7 @@ tm = true
 script = ExtResource( 21 )
 move = ExtResource( 43 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="attract" type="Node" parent="Moves"]
@@ -405,7 +405,7 @@ tm = false
 [node name="aerial-ace" type="Node" parent="Moves"]
 script = ExtResource( 21 )
 move = ExtResource( 58 )
-level = 0
+level = 25
 egg = false
 tm = true
 
@@ -413,7 +413,7 @@ tm = true
 script = ExtResource( 21 )
 move = ExtResource( 59 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="u-turn" type="Node" parent="Moves"]

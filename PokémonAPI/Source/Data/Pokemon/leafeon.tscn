@@ -128,7 +128,7 @@ script = ExtResource( 13 )
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 15 )
-level = 0
+level = 29
 egg = false
 tm = true
 
@@ -170,7 +170,7 @@ tm = true
 [node name="razor-leaf" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 21 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -289,7 +289,7 @@ tm = true
 [node name="sunny-day" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 38 )
-level = 0
+level = 37
 egg = false
 tm = true
 

@@ -7,24 +7,23 @@ var crit_level
 var critical_hit
 var damage_multiplier
 
-func _hit():
+func _hit(target):
 	crit_level = 1
-	for i in targets.size():
-		var damage = _get_damage(i)
-		targets[i].damage(damage)
-		register_damage(targets[i], damage)
-		if critical_hit:
-			battle.register_message("A critical hit!")
-		match damage_multiplier:
-			0.25: battle.register_message("It's not very effective!")
-			0.5: battle.register_message("It's not very effective!")
-			2.0: battle.register_message("It's very effective!")
-			4.0: battle.register_message("It's very effective!")
-		if targets[i].fainted():
-			register_faint(targets[i])
-			battle.register_message(targets[i].nickname + " has fainted!")
+	var damage = _get_damage(target)
+	target.damage(damage)
+	register_damage(target, damage)
+	if critical_hit:
+		battle.register_message("A critical hit!")
+	match damage_multiplier:
+		0.25: battle.register_message("It's not very effective!")
+		0.5: battle.register_message("It's not very effective!")
+		2.0: battle.register_message("It's very effective!")
+		4.0: battle.register_message("It's very effective!")
+	if target.fainted():
+		register_faint(target)
+		battle.register_message(target.nickname + " has fainted!")
 
-func _get_damage(target: int):
+func _get_damage(target):
 	var damage = floor(user.level * 2 / 5) + 2
 	damage *= _get_base_damage()
 	damage *= _get_attack()
@@ -41,7 +40,7 @@ func _get_damage(target: int):
 func _get_attack():
 	pass
 
-func _get_defense(target: int):
+func _get_defense(target):
 	pass
 
 func _get_factor1():
@@ -79,7 +78,7 @@ func _is_STAB():
 	return false
 
 func _get_damage_multiplier(target):
-	damage_multiplier = get_type().get_damage_multiplier(targets[target].get_types())
+	damage_multiplier = get_type().get_damage_multiplier(target.get_types())
 	return damage_multiplier
 
 func register_damage(target, damage):

@@ -418,7 +418,7 @@ tm = false
 [node name="wring-out" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 56 )
-level = 0
+level = 52
 egg = true
 tm = false
 
@@ -439,7 +439,7 @@ tm = true
 [node name="energy-ball" type="Node" parent="Moves"]
 script = ExtResource( 17 )
 move = ExtResource( 59 )
-level = 0
+level = 41
 egg = false
 tm = true
 

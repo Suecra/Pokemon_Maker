@@ -187,7 +187,7 @@ tm = true
 [node name="thunder-wave" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 23 )
-level = 0
+level = 13
 egg = false
 tm = true
 
@@ -229,21 +229,21 @@ tm = true
 [node name="rest" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 29 )
-level = 0
+level = 16
 egg = false
 tm = true
 
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 30 )
-level = 0
+level = 22
 egg = false
 tm = true
 
 [node name="tri-attack" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 31 )
-level = 1
+level = 0
 egg = false
 tm = false
 
@@ -278,7 +278,7 @@ tm = false
 [node name="sandstorm" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 36 )
-level = 0
+level = 34
 egg = false
 tm = true
 
@@ -369,14 +369,14 @@ tm = true
 [node name="iron-defense" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 49 )
-level = 4
+level = 1
 egg = false
 tm = false
 
 [node name="block" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 50 )
-level = 7
+level = 1
 egg = false
 tm = false
 
@@ -446,14 +446,14 @@ tm = false
 [node name="magnet-bomb" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 60 )
-level = 10
+level = 1
 egg = false
 tm = false
 
 [node name="stone-edge" type="Node" parent="Moves"]
 script = ExtResource( 19 )
 move = ExtResource( 61 )
-level = 0
+level = 40
 egg = false
 tm = true
 

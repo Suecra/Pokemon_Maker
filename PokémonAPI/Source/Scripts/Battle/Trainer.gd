@@ -20,8 +20,8 @@ func _do_half_turn():
 func _force_switch_in():
 	pass
 
-func _select_targets(move):
-	pass
+func _select_target():
+	return 0
 
 func _get_lead():
 	return pokemon_party.get_lead()
@@ -38,6 +38,7 @@ func switch(battler_index: int):
 func move(move_index: int):
 	var move = current_pokemon.get_movepool().get_move(move_index)
 	move.trainer = self
+	move.target_index = _select_target()
 	return move
 
 func custom_move(name: String, target: String):

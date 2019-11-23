@@ -216,7 +216,7 @@ tm = false
 [node name="double-team" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 26 )
-level = 0
+level = 8
 egg = false
 tm = true
 
@@ -230,7 +230,7 @@ tm = true
 [node name="rock-slide" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 28 )
-level = 0
+level = 45
 egg = false
 tm = true
 
@@ -273,7 +273,7 @@ tm = true
 script = ExtResource( 15 )
 move = ExtResource( 34 )
 level = 0
-egg = false
+egg = true
 tm = true
 
 [node name="attract" type="Node" parent="Moves"]
@@ -384,7 +384,7 @@ tm = true
 [node name="dragon-claw" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 50 )
-level = 0
+level = 48
 egg = false
 tm = true
 
@@ -405,7 +405,7 @@ tm = false
 [node name="u-turn" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 53 )
-level = 0
+level = 41
 egg = false
 tm = true
 
@@ -496,7 +496,7 @@ tm = false
 [node name="acrobatics" type="Node" parent="Moves"]
 script = ExtResource( 15 )
 move = ExtResource( 66 )
-level = 0
+level = 28
 egg = false
 tm = true
 

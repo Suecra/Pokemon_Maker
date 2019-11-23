@@ -96,14 +96,14 @@ tm = false
 [node name="protect" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 16 )
-level = 0
+level = 1
 egg = false
 tm = true
 
 [node name="hidden-power" type="Node" parent="Moves"]
 script = ExtResource( 14 )
 move = ExtResource( 17 )
-level = 0
+level = 20
 egg = false
 tm = true
 

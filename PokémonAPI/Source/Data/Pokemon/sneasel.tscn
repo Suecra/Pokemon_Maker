@@ -500,7 +500,7 @@ script = ExtResource( 23 )
 move = ExtResource( 68 )
 level = 1
 egg = false
-tm = false
+tm = true
 
 [node name="assist" type="Node" parent="Moves"]
 script = ExtResource( 23 )
@@ -576,7 +576,7 @@ tm = true
 script = ExtResource( 23 )
 move = ExtResource( 79 )
 level = 44
-egg = false
+egg = true
 tm = false
 
 [node name="poison-jab" type="Node" parent="Moves"]
@@ -611,7 +611,7 @@ tm = false
 script = ExtResource( 23 )
 move = ExtResource( 84 )
 level = 47
-egg = false
+egg = true
 tm = false
 
 [node name="shadow-claw" type="Node" parent="Moves"]

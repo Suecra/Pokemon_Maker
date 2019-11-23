@@ -223,14 +223,14 @@ tm = true
 [node name="light-screen" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 24 )
-level = 0
+level = 31
 egg = false
 tm = true
 
 [node name="reflect" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 25 )
-level = 0
+level = 1
 egg = false
 tm = true
 
@@ -300,7 +300,7 @@ tm = true
 [node name="swagger" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 35 )
-level = 0
+level = 12
 egg = false
 tm = true
 
@@ -412,7 +412,7 @@ tm = false
 [node name="payback" type="Node" parent="Moves"]
 script = ExtResource( 13 )
 move = ExtResource( 51 )
-level = 0
+level = 27
 egg = false
 tm = true
 

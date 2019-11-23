@@ -166,7 +166,7 @@ tm = false
 [node name="swords-dance" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 20 )
-level = 0
+level = 46
 egg = false
 tm = true
 
@@ -285,7 +285,7 @@ tm = false
 [node name="false-swipe" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 37 )
-level = 0
+level = 24
 egg = false
 tm = true
 
@@ -362,7 +362,7 @@ tm = true
 [node name="taunt" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 48 )
-level = 0
+level = 36
 egg = false
 tm = true
 
@@ -390,7 +390,7 @@ tm = true
 [node name="dragon-claw" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 52 )
-level = 0
+level = 28
 egg = false
 tm = true
 
@@ -446,14 +446,14 @@ tm = true
 [node name="dragon-pulse" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 60 )
-level = 0
+level = 41
 egg = true
 tm = false
 
 [node name="giga-impact" type="Node" parent="Moves"]
 script = ExtResource( 16 )
 move = ExtResource( 61 )
-level = 0
+level = 61
 egg = false
 tm = true
 
