@@ -16,6 +16,7 @@ func _hit(target):
 	boost_stat(target, 2, special_attack_boost)
 	boost_stat(target, 3, special_defense_boost)
 	boost_stat(target, 4, speed_boost)
+	._hit(target)
 
 func boost_stat(target, stat, amount):
 	if amount != 0:

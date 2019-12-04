@@ -170,7 +170,25 @@ func boost_stat(stat, amount: int):
 		Stat.SPECIAL_ATTACK: $Boosts.special_attack_boost += amount
 		Stat.SPECIAL_DEFENSE: $Boosts.special_defense_boost += amount
 		Stat.SPEED: $Boosts.speed_boost += amount
+	if amount != 0:
+		var base_message = nickname + "'s " + get_stat_name(stat)
+		if amount > 1:
+			battle.register_message(base_message + " rose harshly!")
+		elif amount > 0:
+			battle.register_message(base_message + " rose!")
+		elif amount < -1:
+			battle.register_message(base_message + " harshly fell!")
+		else:
+			battle.register_message(base_message + " fell!")
 	$Boosts.boost_stats()
+	
+func get_stat_name(stat):
+	match stat:
+		Stat.ATTACK: return "attack"
+		Stat.DEFENSE: return "defense"
+		Stat.SPECIAL_ATTACK: return "special_attack"
+		Stat.SPECIAL_DEFENSE: return "special_defense"
+		Stat.SPEED: return "speed"
 
 func get_last_learnable_moves():
 	var moves = []

@@ -39,7 +39,15 @@ func _execute():
 				battle.register_message(t.nickname + " avoided the attack!")
 
 func _hit(target):
-	battle.register_message("But the move isn't implemented yet!")
+	trigger_effects(target)
+
+func trigger_effects(target):
+	if has_node("Effects"):
+		var effects = $Effects.get_children()
+		for e in effects:
+			e.user = user
+			e.target = target
+			e.trigger()
 
 func _get_base_damage():
 	return power

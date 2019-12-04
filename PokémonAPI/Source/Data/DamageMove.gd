@@ -22,6 +22,7 @@ func _hit(target):
 	if target.fainted():
 		register_faint(target)
 		battle.register_message(target.nickname + " has fainted!")
+	._hit(target)
 
 func _get_damage(target):
 	var damage = floor(user.level * 2 / 5) + 2

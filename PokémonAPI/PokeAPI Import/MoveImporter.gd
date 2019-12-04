@@ -4,7 +4,9 @@ const Move = preload("res://Source/Data/Move.gd")
 const PhysicalMove = preload("res://Source/Data/PhysicalMove.gd")
 const SpecialMove = preload("res://Source/Data/SpecialMove.gd")
 const StatusMove = preload("res://Source/Data/StatusMove.gd")
-const BoostMove = preload("res://Source/Data/BoostMove.gd")
+
+const EffectBoost = preload("res://Source/Scripts/Battle/Effects/EffectBoost.gd")
+const Utils = preload("res://Source/Scripts/Utils.gd")
 
 var contest_effects = []
 var moves = []
@@ -12,11 +14,7 @@ var api_items = []
 
 func _create_item():
 	match api_item["damage_class"]["name"]:
-		"status":
-			if api_item["stat_changes"] == null:
-				return StatusMove.new()
-			else:
-				return BoostMove.new()
+		"status": return StatusMove.new()
 		"physical": return PhysicalMove.new()
 		"special": return SpecialMove.new()
 
@@ -39,18 +37,23 @@ func _import_item(item):
 	
 	if api_item["meta"] != null:
 		item.flags = 0
-		if api_item["meta"]["category"]["name"].find("damage") != -1:
+		var cat_name = api_item["meta"]["category"]["name"]
+		if cat_name.find("damage") != -1:
 			item.flags |= int(pow(2, 5))
-		if api_item["meta"]["category"]["name"].find("ailment") != -1:
+		if cat_name.find("ailment") != -1:
 			item.flags |= int(pow(2, 6))
-		if api_item["meta"]["category"]["name"].find("heal") != -1:
+		if cat_name.find("heal") != -1:
 			item.flags |= int(pow(2, 7))
-		if api_item["meta"]["category"]["name"] == "ohko":
+		if cat_name == "ohko":
 			item.flags |= int(pow(2, 11))
-		if api_item["meta"]["category"]["name"] == "field-effect":
+		if cat_name == "field-effect":
 			item.flags |= int(pow(2, 12))
-		if api_item["meta"]["category"]["name"] == "whole_field_effect":
+		if cat_name == "whole_field_effect":
 			item.flags |= int(pow(2, 13))
+		if cat_name == "damage+lower":
+			item.flags |= int(pow(2, 9))
+		if cat_name == "damage+raise":
+			item.flags |= int(pow(2, 10))
 	
 	if api_item["target"]["name"].find("selected-pokemon") != -1:
 		item.hit_range = Move.HitRange.Opponent
@@ -71,14 +74,7 @@ func _import_item(item):
 	if api_item["target"]["name"] == "entire-field" || api_item["target"]["name"] == "all-pokemon":
 		item.hit_range |= Move.HitRange.Entire_Field
 	
-	if api_item["stat_changes"] != null && item is BoostMove:
-		for stat_change in api_item["stat_changes"]:
-			match stat_change["stat"]["name"]:
-				"attack": item.attack_boost = stat_change.change
-				"defense": item.defense_boost = stat_change.change
-				"special-attack": item.special_attack_boost = stat_change.change
-				"special-denfense": item.special_defense_boost = stat_change.change
-				"speed": item.speed_boost = stat_change.change
+	import_effects(item)
 	
 	if api_item["contest_type"] != null:
 		match api_item["contest_type"]["name"]:
@@ -114,6 +110,30 @@ func _after_import():
 			path = directory_name + "/" + moves[i].name + ".tscn"
 			ResourceSaver.save(path, scene)
 			pass
+
+func import_effects(item):
+	var effects
+	if api_item["stat_changes"] != null:
+		effects = Utils.add_node_if_not_exists(self, self, "Effects")
+		var effect = EffectBoost.new()
+		effect.owner = self
+		effects.add_child(effect)
+		if api_item["meta"]["stat_chance"] == 0:
+			effect.guaranteed = true
+		else:
+			effect.chance = api_item["meta"]["stat_chance"]
+		var flag_raise = int(pow(2, 10))
+		if item.flags & flag_raise == flag_raise:
+			effect.EffectedPokemon = 0
+		else:
+			effect.EffectedPokemon = 1
+		for stat_change in api_item["stat_changes"]:
+			match stat_change["stat"]["name"]:
+				"attack": effect.attack_boost = stat_change.change
+				"defense": effect.defense_boost = stat_change.change
+				"special-attack": effect.special_attack_boost = stat_change.change
+				"special-denfense": effect.special_defense_boost = stat_change.change
+				"speed": effect.speed_boost = stat_change.change
 
 func import_combos(contest: String, index: int):
 	var item
