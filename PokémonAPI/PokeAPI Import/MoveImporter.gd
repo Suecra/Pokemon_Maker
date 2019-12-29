@@ -5,7 +5,14 @@ const PhysicalMove = preload("res://Source/Data/PhysicalMove.gd")
 const SpecialMove = preload("res://Source/Data/SpecialMove.gd")
 const StatusMove = preload("res://Source/Data/StatusMove.gd")
 
+const Effect = preload("res://Source/Scripts/Battle/Effect.gd")
 const EffectBoost = preload("res://Source/Scripts/Battle/Effects/EffectBoost.gd")
+const EffectParalysis = preload("res://Source/Scripts/Battle/Effects/EffectParalysis.gd")
+const EffectBurn = preload("res://Source/Scripts/Battle/Effects/EffectBurn.gd")
+const EffectPoison = preload("res://Source/Scripts/Battle/Effects/EffectPoison.gd")
+const EffectBadPoison = preload("res://Source/Scripts/Battle/Effects/EffectBadPoison.gd")
+const EffectSleep = preload("res://Source/Scripts/Battle/Effects/EffectSleep.gd")
+const EffectFreeze = preload("res://Source/Scripts/Battle/Effects/EffectFreeze.gd")
 const Utils = preload("res://Source/Scripts/Utils.gd")
 
 var contest_effects = []
@@ -113,27 +120,45 @@ func _after_import():
 
 func import_effects(item):
 	var effects
-	if api_item["stat_changes"] != null:
-		effects = Utils.add_node_if_not_exists(self, self, "Effects")
-		var effect = EffectBoost.new()
-		effect.owner = self
-		effects.add_child(effect)
-		if api_item["meta"]["stat_chance"] == 0:
-			effect.guaranteed = true
-		else:
-			effect.chance = api_item["meta"]["stat_chance"]
-		var flag_raise = int(pow(2, 10))
-		if item.flags & flag_raise == flag_raise:
-			effect.EffectedPokemon = 0
-		else:
-			effect.EffectedPokemon = 1
-		for stat_change in api_item["stat_changes"]:
-			match stat_change["stat"]["name"]:
-				"attack": effect.attack_boost = stat_change.change
-				"defense": effect.defense_boost = stat_change.change
-				"special-attack": effect.special_attack_boost = stat_change.change
-				"special-denfense": effect.special_defense_boost = stat_change.change
-				"speed": effect.speed_boost = stat_change.change
+	if has_effect():
+		effects = Utils.add_node_if_not_exists(item, item, "Effects")
+		if api_item["stat_changes"].size() > 0:
+			var effect = Utils.add_typed_node_if_not_exists(EffectBoost, effects, item, "Boosts")
+			if api_item["meta"]["stat_chance"] == 0:
+				effect.guaranteed = true
+			else:
+				effect.chance = api_item["meta"]["stat_chance"]
+			var flag_raise = int(pow(2, 10))
+			if item.flags & flag_raise == flag_raise:
+				effect.effected_pokemon = Effect.EffectedPokemon.User
+			else:
+				effect.effected_pokemon = Effect.EffectedPokemon.Target
+			for stat_change in api_item["stat_changes"]:
+				match stat_change["stat"]["name"]:
+					"attack": effect.attack_boost = stat_change.change
+					"defense": effect.defense_boost = stat_change.change
+					"special-attack": effect.special_attack_boost = stat_change.change
+					"special-denfense": effect.special_defense_boost = stat_change.change
+					"speed": effect.speed_boost = stat_change.change
+		if api_item["meta"]["ailment"]["name"] != "none":
+			var effect
+			match api_item["meta"]["ailment"]["name"]:
+				"paralysis": effect = Utils.add_typed_node_if_not_exists(EffectParalysis, effects, item, "paralysis")
+				"burn": effect = Utils.add_typed_node_if_not_exists(EffectBurn, effects, item, "burn")
+				"poison": effect = Utils.add_typed_node_if_not_exists(EffectPoison, effects, item, "poison")
+				"sleep": effect = Utils.add_typed_node_if_not_exists(EffectSleep, effects, item, "sleep")
+				"freeze": effect = Utils.add_typed_node_if_not_exists(EffectFreeze, effects, item, "freeze")
+			if effect != null:
+				effect.effected_pokemon = Effect.EffectedPokemon.Target
+				if api_item["effect_chance"] == null:
+					effect.guaranteed = true
+					effect.chance = 0
+				else:
+					effect.guaranteed = false
+					effect.chance = api_item["effect_chance"]
+
+func has_effect() -> bool:
+	return api_item["stat_changes"] != null || api_item["meta"]["ailment"]["name"] != "none"
 
 func import_combos(contest: String, index: int):
 	var item

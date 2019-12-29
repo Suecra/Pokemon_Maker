@@ -27,3 +27,5 @@ target flinch."
 [node name="normal" type="Node" parent="."]
 
 [node name="pound" type="Node" parent="normal"]
+
+[node name="Effects" type="Node" parent="."]

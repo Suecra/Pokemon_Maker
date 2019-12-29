@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "A gust of wind is whipped up by wings and launched
 at the target to inflict damage."
+
+[node name="Effects" type="Node" parent="."]

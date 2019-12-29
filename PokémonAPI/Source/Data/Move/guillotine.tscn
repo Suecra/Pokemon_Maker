@@ -26,3 +26,5 @@ faints instantly if this attack hits."
 [node name="normal" type="Node" parent="."]
 
 [node name="vice-grip" type="Node" parent="normal"]
+
+[node name="Effects" type="Node" parent="."]

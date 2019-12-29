@@ -26,3 +26,5 @@ hits land more easily."
 [node name="normal" type="Node" parent="."]
 
 [node name="focus-energy" type="Node" parent="normal"]
+
+[node name="Effects" type="Node" parent="."]

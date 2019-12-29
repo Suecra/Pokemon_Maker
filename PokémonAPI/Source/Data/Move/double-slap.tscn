@@ -28,3 +28,5 @@ two to five times in a row."
 [node name="pound" type="Node" parent="normal"]
 
 [node name="rain-dance" type="Node" parent="normal"]
+
+[node name="Effects" type="Node" parent="."]

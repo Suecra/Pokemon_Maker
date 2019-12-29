@@ -26,3 +26,5 @@ If the kick misses, the user hurts itself."
 [node name="normal" type="Node" parent="."]
 
 [node name="mind-reader" type="Node" parent="normal"]
+
+[node name="Effects" type="Node" parent="."]

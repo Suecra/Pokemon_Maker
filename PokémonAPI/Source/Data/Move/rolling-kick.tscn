@@ -26,3 +26,5 @@ This may also make the target flinch."
 [node name="normal" type="Node" parent="."]
 
 [node name="sunny-day" type="Node" parent="normal"]
+
+[node name="Effects" type="Node" parent="."]

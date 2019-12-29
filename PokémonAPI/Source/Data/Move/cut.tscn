@@ -25,3 +25,5 @@ description = "The target is cut with a scythe or claw."
 [node name="normal" type="Node" parent="."]
 
 [node name="swords-dance" type="Node" parent="normal"]
+
+[node name="Effects" type="Node" parent="."]

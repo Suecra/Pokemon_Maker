@@ -28,3 +28,5 @@ muscle-packed power."
 [node name="focus-energy" type="Node" parent="normal"]
 
 [node name="mind-reader" type="Node" parent="normal"]
+
+[node name="Effects" type="Node" parent="."]

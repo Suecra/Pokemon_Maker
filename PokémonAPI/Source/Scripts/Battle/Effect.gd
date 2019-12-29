@@ -16,7 +16,8 @@ func trigger():
 		if effected_pokemon == EffectedPokemon.User:
 			_execute(user)
 		elif effected_pokemon == EffectedPokemon.Target:
-			_execute(target)
+			if not target.fainted():
+				_execute(target)
 
 func _execute(pokemon):
 	pass

@@ -26,3 +26,5 @@ bind and squeeze the target for four to five turns."
 [node name="normal" type="Node" parent="."]
 
 [node name="vice-grip" type="Node" parent="normal"]
+
+[node name="Effects" type="Node" parent="."]

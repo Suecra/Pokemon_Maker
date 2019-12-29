@@ -30,3 +30,5 @@ special_defense_boost = 0
 speed_boost = 0
 accuracy_boost = 0
 evasion_boost = 0
+
+[node name="Effects" type="Node" parent="."]

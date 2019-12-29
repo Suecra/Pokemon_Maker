@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The target is hit with a flurry of punches that strike
 two to five times in a row."
+
+[node name="Effects" type="Node" parent="."]

@@ -26,3 +26,5 @@ inflict damage."
 [node name="normal" type="Node" parent="."]
 
 [node name="growth" type="Node" parent="normal"]
+
+[node name="Effects" type="Node" parent="."]

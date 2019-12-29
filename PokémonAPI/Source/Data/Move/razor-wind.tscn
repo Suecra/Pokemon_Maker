@@ -23,3 +23,5 @@ battle_style = 0
 description = "In this two-turn attack, blades of wind hit opposing
 Pokémon on the second turn. Critical hits land
 more easily."
+
+[node name="Effects" type="Node" parent="."]
