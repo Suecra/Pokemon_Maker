@@ -127,7 +127,7 @@ func import_effects(item):
 			if api_item["meta"]["stat_chance"] == 0:
 				effect.guaranteed = true
 			else:
-				effect.chance = api_item["meta"]["stat_chance"]
+				effect.chance = api_item["meta"]["stat_chance"] / 100
 			var flag_raise = int(pow(2, 10))
 			if item.flags & flag_raise == flag_raise:
 				effect.effected_pokemon = Effect.EffectedPokemon.User
@@ -155,7 +155,7 @@ func import_effects(item):
 					effect.chance = 0
 				else:
 					effect.guaranteed = false
-					effect.chance = api_item["effect_chance"]
+					effect.chance = api_item["effect_chance"] / 100
 
 func has_effect() -> bool:
 	return api_item["stat_changes"] != null || api_item["meta"]["ailment"]["name"] != "none"

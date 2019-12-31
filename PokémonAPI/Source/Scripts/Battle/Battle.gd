@@ -89,6 +89,7 @@ func init_turn(turn):
 	turn.owner = $Turns
 	$Turns.add_child(turn)
 
+#rename to "register_text_message"
 func register_message(message: String):
 	var msg = BattleAnimationMessage.new()
 	msg.battle = self

@@ -1,4 +1,4 @@
-extends Node
+extends "res://Source/Scripts/Battle/Observable.gd"
 
 const Nature = preload("res://Source/Data/Nature.gd")
 const Utils = preload("res://Source/Scripts/Utils.gd")
@@ -144,9 +144,10 @@ func faint():
 
 func change_status(status):
 	if has_node("Status"):
+		$Status.unregister_all()
 		remove_child($Status)
 	status.name = "Status"
-	status.pokemon = self
+	status.subject_owner = self
 	status.battle = battle
 	status.owner = self
 	add_child(status)
@@ -217,14 +218,16 @@ func get_random_ivs():
 	speed_iv = randi() % 31 
 
 func begin_of_turn():
-	var status = get_status()
-	if status != null:
-		status._begin_of_turn()
+	notify("TURN_STARTS")
+	#var status = get_status()
+	#if status != null:
+	#	status._begin_of_turn()
 
 func end_of_turn():
-	var status = get_status()
-	if status != null:
-		status._end_of_turn()
+	notify("TURN_ENDS")
+	#var status = get_status()
+	#if status != null:
+	#	status._end_of_turn()
 
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "SecondaryStatus")
