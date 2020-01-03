@@ -2,15 +2,15 @@ extends Node
 
 var battle
 var subject_owner
-var registered_messages = []
+var observables = []
 
 func register(observable, message: String, method: String, priority: int = 1):
 	observable.register(self, message, method, priority)
-	registered_messages.append(message)
+	observables.append(observable)
 
 func get_pokemon_speed():
 	return subject_owner.current_speed
 
 func unregister_all():
-	for message in registered_messages:
-		battle.unregister(self, message)
+	for observable in observables:
+		observable.unregister_all(self)

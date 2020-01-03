@@ -23,6 +23,17 @@ func unregister(subject, message: String):
 				subjects.erase(s)
 				break
 
+func unregister_all(subject):
+	for i in registered_subjects.size():
+		var subjects = registered_subjects.values()[i]
+		for registered_subject in subjects:
+			var idx = 0
+			while idx < subjects.size():
+				if registered_subject[idx].subject == subject:
+					subject.remove(idx)
+				else:
+					idx += 1
+
 func notify(message: String):
 	if registered_subjects.has(message):
 		var subjects = registered_subjects[message]

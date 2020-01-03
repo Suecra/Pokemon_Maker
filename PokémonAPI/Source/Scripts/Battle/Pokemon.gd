@@ -122,25 +122,31 @@ func get_sprite():
 	return sprite
 
 func burn():
-	change_status(load("res://Source/Scripts/Battle/StatusBurn.gd").new())
+	return change_status_no_override(load("res://Source/Scripts/Battle/StatusBurn.gd").new())
 
 func paralyse():
-	change_status(load("res://Source/Scripts/Battle/StatusParalysis.gd").new())
+	return change_status_no_override(load("res://Source/Scripts/Battle/StatusParalysis.gd").new())
 
 func poison():
-	change_status(load("res://Source/Scripts/Battle/StatusNormalPoison.gd").new())
+	return change_status_no_override(load("res://Source/Scripts/Battle/StatusNormalPoison.gd").new())
 
 func badly_poison():
-	change_status(load("res://Source/Scripts/Battle/StatusBadPoison.gd").new())
+	return change_status_no_override(load("res://Source/Scripts/Battle/StatusBadPoison.gd").new())
 
 func sleep():
-	change_status(load("res://Source/Scripts/Battle/StatusSleep.gd").new())
+	return change_status_no_override(load("res://Source/Scripts/Battle/StatusSleep.gd").new())
 
 func freeze():
-	change_status(load("res://Source/Scripts/Battle/StatusFreeze.gd").new())
+	return change_status_no_override(load("res://Source/Scripts/Battle/StatusFreeze.gd").new())
 
 func faint():
 	change_status(load("res://Source/Scripts/Battle/StatusFaint.gd").new())
+
+func change_status_no_override(status) -> bool:
+	if has_node("Status"):
+		return false
+	change_status(status)
+	return true
 
 func change_status(status):
 	if has_node("Status"):
