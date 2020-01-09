@@ -29,8 +29,8 @@ func unregister_all(subject):
 		for registered_subject in subjects:
 			var idx = 0
 			while idx < subjects.size():
-				if registered_subject[idx].subject == subject:
-					subject.remove(idx)
+				if subjects[idx].subject == subject:
+					subjects.remove(idx)
 				else:
 					idx += 1
 
