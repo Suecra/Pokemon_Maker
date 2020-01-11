@@ -10,5 +10,5 @@ func _can_move():
 
 func _ready():
 	var animation_status = BattleAnimationStatus.new()
-	animation_status.pokemon = subject_owner
+	animation_status.pokemon = pokemon
 	battle.current_turn.register_animation(animation_status)

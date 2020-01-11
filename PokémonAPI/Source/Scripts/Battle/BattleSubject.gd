@@ -1,7 +1,7 @@
 extends "res://Source/Scripts/Common/Subject.gd"
 
 var battle
-var subject_owner
+var pokemon
 
 func _get_priority():
-	return subject_owner.current_speed
+	return pokemon.current_speed

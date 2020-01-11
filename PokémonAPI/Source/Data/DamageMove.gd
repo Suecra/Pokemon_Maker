@@ -1,27 +1,21 @@
 extends "res://Source/Data/Move.gd"
 
-const BattleAnimationDamage = preload("res://Source/Scripts/Battle/Animations/BattleAnimationDamage.gd")
-const BattleAnimationFaint = preload("res://Source/Scripts/Battle/Animations/BattleAnimationFaint.gd")
-
 var crit_level
 var critical_hit
 var damage_multiplier
 
 func _hit(target):
 	crit_level = 1
+	var messages = []
 	var damage = _get_damage(target)
-	target.damage(damage)
-	register_damage(target, damage)
 	if critical_hit:
-		battle.register_message("A critical hit!")
+		messages.append("A critical hit!")
 	match damage_multiplier:
-		0.25: battle.register_message("It's not very effective!")
-		0.5: battle.register_message("It's not very effective!")
-		2.0: battle.register_message("It's very effective!")
-		4.0: battle.register_message("It's very effective!")
-	if target.fainted():
-		register_faint(target)
-		battle.register_message(target.nickname + " has fainted!")
+		0.25: messages.append("It's not very effective!")
+		0.5: messages.append("It's not very effective!")
+		2.0: messages.append("It's very effective!")
+		4.0: messages.append("It's very effective!")
+	target.damage(damage, messages)
 	._hit(target)
 
 func _get_damage(target):
@@ -81,14 +75,3 @@ func _is_STAB():
 func _get_damage_multiplier(target):
 	damage_multiplier = get_type().get_damage_multiplier(target.get_types())
 	return damage_multiplier
-
-func register_damage(target, damage):
-	var damage_animation = BattleAnimationDamage.new()
-	damage_animation.status_bar = target.status_bar
-	damage_animation.damage = damage
-	turn.register_animation(damage_animation)
-
-func register_faint(target):
-	var animation = BattleAnimationFaint.new()
-	animation.pokemon = target
-	battle.current_turn.register_animation(animation)

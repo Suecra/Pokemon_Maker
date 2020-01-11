@@ -3,6 +3,8 @@ extends "res://Source/Scripts/Battle/Observable.gd"
 const Nature = preload("res://Source/Data/Nature.gd")
 const Utils = preload("res://Source/Scripts/Utils.gd")
 const Boosts = preload("res://Source/Scripts/Battle/Boosts.gd")
+const BattleAnimationDamage = preload("res://Source/Scripts/Battle/Animations/BattleAnimationDamage.gd")
+const BattleAnimationFaint = preload("res://Source/Scripts/Battle/Animations/BattleAnimationFaint.gd")
 
 enum Gender {Male, Female, Genderless}
 enum Stat {ATTACK, DEFENSE, SPECIAL_ATTACK, SPECIAL_DEFENSE, SPEED}
@@ -57,8 +59,14 @@ func set_current_hp(value: int):
 	current_hp = min(value, hp)
 	current_hp = max(current_hp, 0)
 
-func damage(hp: int):
+func damage(hp: int, messages = []):
 	self.current_hp = current_hp - hp
+	var damage_animation = BattleAnimationDamage.new()
+	damage_animation.status_bar = status_bar
+	damage_animation.damage = hp
+	battle.current_turn.register_animation(damage_animation)
+	for m in messages:
+		battle.register_message(m)
 	if current_hp == 0:
 		faint()
 
@@ -140,7 +148,12 @@ func freeze():
 	return change_status_no_override(load("res://Source/Scripts/Battle/StatusFreeze.gd").new())
 
 func faint():
-	change_status(load("res://Source/Scripts/Battle/StatusFaint.gd").new())
+	if get_status() == null || get_status().status_name != "Faint":
+		change_status(load("res://Source/Scripts/Battle/StatusFaint.gd").new())
+		var animation = BattleAnimationFaint.new()
+		animation.pokemon = self
+		battle.current_turn.register_animation(animation)
+		battle.register_message(nickname + " has fainted!")
 
 func change_status_no_override(status) -> bool:
 	if has_node("Status"):
@@ -153,7 +166,7 @@ func change_status(status):
 		$Status.unregister_all()
 		remove_child($Status)
 	status.name = "Status"
-	status.subject_owner = self
+	status.pokemon = self
 	status.battle = battle
 	status.owner = self
 	add_child(status)
@@ -225,15 +238,9 @@ func get_random_ivs():
 
 func begin_of_turn():
 	notify("TURN_STARTS")
-	#var status = get_status()
-	#if status != null:
-	#	status._begin_of_turn()
 
 func end_of_turn():
 	notify("TURN_ENDS")
-	#var status = get_status()
-	#if status != null:
-	#	status._end_of_turn()
 
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "SecondaryStatus")
