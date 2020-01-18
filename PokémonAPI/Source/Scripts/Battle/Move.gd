@@ -28,11 +28,8 @@ func _execute():
 	current_pp -= 1
 	var move = get_move_data()
 	if move != null:
-		if pokemon.can_move():
-			var target_positions = move.get_target_positions(pokemon.position, target_index)
-			move.user = pokemon
-			move.turn = turn
-			move.battle = turn.battle
-			move.targets = battle.battlefield.get_targets(target_positions, field)
-			battle.register_message(pokemon.nickname + " uses " + move.move_name + "!")
-			move._execute()
+		var target_positions = move.get_target_positions(pokemon.position, target_index)
+		move.targets = battle.battlefield.get_targets(target_positions, field)
+		move.turn = turn
+		move.battle = turn.battle
+		pokemon.do_move(move)

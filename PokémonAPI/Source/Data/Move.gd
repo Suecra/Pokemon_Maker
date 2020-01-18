@@ -31,12 +31,11 @@ var battle
 var turn
 
 func _execute():
-	if user.can_move():
-		for t in targets:
-			if _is_hit(t):
-				_hit(t)
-			else:
-				battle.register_message(t.nickname + " avoided the attack!")
+	for t in targets:
+		if _is_hit(t):
+			_hit(t)
+		else:
+			battle.register_message(t.nickname + " avoided the attack!")
 
 func _hit(target):
 	trigger_effects(target)

@@ -34,9 +34,9 @@ func unregister_all(subject):
 				else:
 					idx += 1
 
-func notify(message: String):
+func notify(message: String, args = null):
 	if registered_subjects.has(message):
 		var subjects = registered_subjects[message]
 		PrioritySorter.sort(subjects)
 		for s in subjects:
-			s.notify()
+			s.notify(args)

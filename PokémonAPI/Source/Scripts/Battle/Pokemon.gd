@@ -5,6 +5,7 @@ const Utils = preload("res://Source/Scripts/Utils.gd")
 const Boosts = preload("res://Source/Scripts/Battle/Boosts.gd")
 const BattleAnimationDamage = preload("res://Source/Scripts/Battle/Animations/BattleAnimationDamage.gd")
 const BattleAnimationFaint = preload("res://Source/Scripts/Battle/Animations/BattleAnimationFaint.gd")
+const CanMoveEventArgs = preload("res://Source/Scripts/Battle/EventArgs/CanMoveEventArgs.gd")
 
 enum Gender {Male, Female, Genderless}
 enum Stat {ATTACK, DEFENSE, SPECIAL_ATTACK, SPECIAL_DEFENSE, SPEED}
@@ -174,7 +175,7 @@ func change_status(status):
 func fainted():
 	var status = get_status()
 	if status != null:
-		return status._pokemon_fainted()
+		return status.status_name == "Faint"
 	return false
 
 func can_move():
@@ -182,6 +183,14 @@ func can_move():
 	if status != null:
 		return status._can_move()
 	return true
+
+func do_move(move):
+	var args = CanMoveEventArgs.new()
+	notify("CAN_MOVE", args)
+	if args.can_move:
+		move.user = self
+		battle.register_message(nickname + " uses " + move.move_name + "!")
+		move._execute()
 
 func boost_stat(stat, amount: int):
 	match stat:
@@ -263,6 +272,4 @@ func init_battle():
 
 func switch_in():
 	position = 0
-	var status = get_status()
-	if status != null:
-		status._switch_in()
+	notify("SWITCH_IN")

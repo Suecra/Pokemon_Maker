@@ -5,17 +5,18 @@ var damage
 
 func _ready():
 	status_name = "Bad Poison"
-	register(pokemon, "TURN_ENDS", "_end_of_turn")
+	register(pokemon, "TURN_ENDS", "end_of_turn")
+	register(pokemon, "SWITCH_IN", "switch_in")
 	battle.register_message(pokemon.nickname + " was badly poisoned!")
 	damage = 0
 
 func increase_damage():
 	damage = min(damage + BASE_DAMAGE, 15.0 / 16.0)
 
-func _end_of_turn():
+func end_of_turn():
 	increase_damage()
 	battle.register_message(pokemon.nickname + " was hurt from it's poision!")
-	register_damage(pokemon.damage_percent(damage))
+	pokemon.damage_percent(damage)
 
-func _switch_in():
+func switch_in():
 	damage = 0
