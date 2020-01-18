@@ -178,14 +178,9 @@ func fainted():
 		return status.status_name == "Faint"
 	return false
 
-func can_move():
-	var status = get_status()
-	if status != null:
-		return status._can_move()
-	return true
-
 func do_move(move):
 	var args = CanMoveEventArgs.new()
+	args.move_name = move.move_name
 	notify("CAN_MOVE", args)
 	if args.can_move:
 		move.user = self
