@@ -51,13 +51,29 @@ func trigger_effects(target):
 func _get_base_damage():
 	return power
 
-func _get_accuracy():
-	if accuracy == 0:
-		return 100.0
-	return float(accuracy)
+func _get_accuracy(accuracy_level):
+	var acc = accuracy
+	if acc == 0:
+		acc = 100
+	var actual_accuracy = 1.0
+	match accuracy_level:
+		-6: actual_accuracy = 0.33
+		-5: actual_accuracy = 0.38
+		-4: actual_accuracy = 0.43
+		-3: actual_accuracy = 0.5
+		-2: actual_accuracy = 0.6
+		-1: actual_accuracy = 0.75
+		0: actual_accuracy = 1.0
+		1: actual_accuracy = 1.33
+		2: actual_accuracy = 1.67
+		3: actual_accuracy = 2
+		4: actual_accuracy = 2.33
+		5: actual_accuracy = 2.67
+		6: actual_accuracy = 3
+	return min(100, actual_accuracy * acc)
 
 func _is_hit(target):
-	return Utils.trigger(_get_accuracy() / 100)
+	return Utils.trigger(_get_accuracy(user.accuracy_level - target.evasion_level) / 100)
 
 func get_type():
 	return Utils.unpack(self, type, "Type")

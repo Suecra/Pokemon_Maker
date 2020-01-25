@@ -7,8 +7,6 @@ var defense_boost: int
 var special_attack_boost: int
 var special_defense_boost: int
 var speed_boost: int
-var accuracy_boost: int
-var evasion_boost: int
 
 var pokemon
 
@@ -27,6 +25,22 @@ func get_boosted_stat(stat: int, amount: int):
 		4: return int(floor(stat * 3))
 		3: return int(floor(stat * 3.5))
 		4: return int(floor(stat * 4))
+
+func get_boosted_stat_acc_eva(amount: int):
+	match amount:
+		-6: return 0.33
+		-5: return 0.38
+		-4: return 0.43
+		-3: return 0.5
+		-2: return 0.6
+		-1: return 0.75
+		0: return 1.0
+		1: return 1.33
+		2: return 1.67
+		3: return 2
+		4: return 2.33
+		5: return 2.67
+		6: return 3
 
 func boost_stats():
 	pokemon.current_attack = get_boosted_stat(pokemon.attack, attack_boost)

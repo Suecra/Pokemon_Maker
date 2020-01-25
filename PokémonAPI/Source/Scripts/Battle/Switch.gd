@@ -9,6 +9,8 @@ func _init():
 
 func _execute():
 	battle.register_message("Sent out " + to_pokemon.nickname + "!")
+	if trainer.current_pokemon != null:
+		trainer.current_pokemon.switch_out()
 	trainer.current_pokemon = to_pokemon
 	to_pokemon.switch_in()
 	register_switch_in()

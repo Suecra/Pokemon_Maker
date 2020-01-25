@@ -11,4 +11,7 @@ func same_priority(other_subject):
 	return priority == other_subject.priority && get_pokemon_speed() == other_subject.get_pokemon_speed()
 
 func notify(args = null):
-	subject.call(method, args)
+	if args == null:
+		subject.call(method)
+	else:
+		subject.call(method, args)

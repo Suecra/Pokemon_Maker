@@ -5,10 +5,11 @@ const Utils = preload("res://Source/Scripts/Utils.gd")
 const Boosts = preload("res://Source/Scripts/Battle/Boosts.gd")
 const BattleAnimationDamage = preload("res://Source/Scripts/Battle/Animations/BattleAnimationDamage.gd")
 const BattleAnimationFaint = preload("res://Source/Scripts/Battle/Animations/BattleAnimationFaint.gd")
+const BattleAnimationStatus = preload("res://Source/Scripts/Battle/Animations/BattleAnimationStatus.gd")
 const CanMoveEventArgs = preload("res://Source/Scripts/Battle/EventArgs/CanMoveEventArgs.gd")
 
 enum Gender {Male, Female, Genderless}
-enum Stat {ATTACK, DEFENSE, SPECIAL_ATTACK, SPECIAL_DEFENSE, SPEED}
+enum Stat {ATTACK, DEFENSE, SPECIAL_ATTACK, SPECIAL_DEFENSE, SPEED, ACCURACY, EVASION}
 
 export(String) var nickname
 export(int, 1, 100) var level
@@ -39,6 +40,9 @@ var current_defense: int
 var current_special_attack: int
 var current_special_defense: int
 var current_speed: int
+
+var accuracy_level: float
+var evasion_level: float
 
 export(int, 0, 252) var hp_ev
 export(int, 0, 252) var attack_ev
@@ -164,13 +168,34 @@ func change_status_no_override(status) -> bool:
 
 func change_status(status):
 	if has_node("Status"):
-		$Status.unregister_all()
-		remove_child($Status)
+		$Status._heal_silent()
 	status.name = "Status"
 	status.pokemon = self
 	status.battle = battle
 	status.owner = self
 	add_child(status)
+	var animation_status = BattleAnimationStatus.new()
+	animation_status.pokemon = self
+	battle.current_turn.register_animation(animation_status)
+
+func remove_primary_status():
+	if has_node("Status"):
+		remove_child($Status)
+		var animation_status = BattleAnimationStatus.new()
+		animation_status.pokemon = self
+		battle.current_turn.register_animation(animation_status)
+
+func add_secondary_status(status):
+	if not $SecondaryStatus.has_node(status.status_name):
+		status.name = status.status_name
+		status.pokemon = self
+		status.battle = battle
+		status.owner = self
+		$SecondaryStatus.add_child(status)
+
+func remove_secondary_status(status):
+	if $SecondaryStatus.has_node(status.status_name):
+		$SecondaryStatus.remove_child(status)
 
 func fainted():
 	var status = get_status()
@@ -194,6 +219,8 @@ func boost_stat(stat, amount: int):
 		Stat.SPECIAL_ATTACK: $Boosts.special_attack_boost += amount
 		Stat.SPECIAL_DEFENSE: $Boosts.special_defense_boost += amount
 		Stat.SPEED: $Boosts.speed_boost += amount
+		Stat.ACCURACY: accuracy_level += amount
+		Stat.EVASION: evasion_level += amount
 	if amount != 0:
 		var base_message = nickname + "'s " + get_stat_name(stat)
 		if amount > 1:
@@ -213,6 +240,8 @@ func get_stat_name(stat):
 		Stat.SPECIAL_ATTACK: return "special_attack"
 		Stat.SPECIAL_DEFENSE: return "special_defense"
 		Stat.SPEED: return "speed"
+		Stat.ACCURACY: return "accuracy"
+		Stat.EVASION: return "evasion"
 
 func get_last_learnable_moves():
 	var moves = []
@@ -267,4 +296,11 @@ func init_battle():
 
 func switch_in():
 	position = 0
+	accuracy_level = 0
+	evasion_level = 0
 	notify("SWITCH_IN")
+
+func switch_out():
+	for status in $SecondaryStatus.get_children():
+		status.heal_silent()
+	notify("SWITCH_OUT")
