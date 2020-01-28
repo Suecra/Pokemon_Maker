@@ -5,7 +5,7 @@ const RegisteredSubject = preload("res://Source/Scripts/Battle/RegisteredSubject
 
 var registered_subjects: Dictionary = {}
 
-func register(subject, message: String, method: String, priority: int = 1):
+func register(subject, message: String, method: String, priority: int = 0):
 	var registered_subject = RegisteredSubject.new()
 	registered_subject.priority = priority
 	registered_subject.subject = subject
