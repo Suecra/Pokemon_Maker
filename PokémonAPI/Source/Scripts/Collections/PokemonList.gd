@@ -816,7 +816,7 @@ static func get_pokemon_filter_dict(filter: String):
 	var result = {}
 	filter = filter.to_lower()
 	for key in POKEMON.keys():
-		if key.to_lower().begins_with(filter):
+		if key.to_lower().begins_with(filter.to_lower()):
 			result[key] = POKEMON[key]
 	return result
 

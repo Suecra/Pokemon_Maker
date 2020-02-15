@@ -31,3 +31,6 @@ func _on_Slider_value_changed(val):
 
 func _on_LineEdit_text_entered(new_text):
 	$Slider.value = new_text.to_int()
+
+func _ready():
+	$LineEdit.text = str(value)

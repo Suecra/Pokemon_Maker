@@ -1,9 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Source/Scripts/Simulator/SpeciesEdit.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/Icons/single/001.png" type="Texture" id=2]
-[ext_resource path="res://Graphics/Icons/single/004.png" type="Texture" id=3]
-[ext_resource path="res://Graphics/Icons/single/007.png" type="Texture" id=4]
 
 [node name="EditSpecies" type="LineEdit"]
 margin_left = 118.0
@@ -11,14 +8,10 @@ margin_top = 328.0
 margin_right = 361.0
 margin_bottom = 360.0
 script = ExtResource( 1 )
+item_height = 36
 
-[node name="PokemonList" type="PopupMenu" parent="."]
+[node name="List" type="PopupMenu" parent="."]
 margin_left = 1.0
 margin_top = 33.0
 margin_right = 243.0
 margin_bottom = 244.0
-items = [ "Bulbasaur", ExtResource( 2 ), 0, false, false, 0, 0, null, "", false, "Charmander", ExtResource( 3 ), 0, false, false, 1, 0, null, "", false, "Squirtle", ExtResource( 4 ), 0, false, false, 2, 0, null, "", false ]
-[connection signal="gui_input" from="." to="." method="_on_EditSpecies_gui_input"]
-[connection signal="text_changed" from="." to="." method="_on_EditSpecies_text_changed"]
-[connection signal="text_entered" from="." to="." method="_on_EditSpecies_text_entered"]
-[connection signal="index_pressed" from="PokemonList" to="." method="_on_PokemonList_index_pressed"]

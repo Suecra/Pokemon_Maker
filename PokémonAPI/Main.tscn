@@ -83,7 +83,7 @@ margin_bottom = 332.501
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 513.194, 298.586 )
+position = Vector2( 513.194, 297.294 )
 shape = SubResource( 1 )
 [connection signal="button_down" from="Interface/StartBattle" to="." method="_on_Button2_button_down"]
 [connection signal="button_down" from="Interface/AddPlayerPokemon" to="." method="_on_AddPlayerPokemon_button_down"]
