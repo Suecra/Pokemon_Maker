@@ -16,7 +16,6 @@ margin_left = 190.0
 margin_top = 2.0
 margin_right = -6.0
 margin_bottom = -4.0
-value = 1.0
 
 [node name="Label" type="Label" parent="."]
 margin_top = 1.0
@@ -28,3 +27,5 @@ margin_left = 110.0
 margin_right = 180.0
 margin_bottom = 32.0
 [connection signal="value_changed" from="Slider" to="." method="_on_Slider_value_changed"]
+[connection signal="text_changed" from="LineEdit" to="." method="_on_LineEdit_text_changed"]
+[connection signal="text_entered" from="LineEdit" to="." method="_on_LineEdit_text_entered"]

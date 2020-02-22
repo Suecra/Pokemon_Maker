@@ -3,7 +3,6 @@ extends Node
 const Move = preload("res://Source/Scripts/Battle/Move.gd")
 
 var pokemon
-var trainer
 
 func get_move(index: int):
 	var move = get_child(index)
@@ -36,6 +35,8 @@ func to_string_array():
 		moves.append(move.get_move_data().move_name)
 	return moves
 
-func _enter_tree():
-	pokemon = get_parent()
-	trainer = pokemon.trainer
+func fill_from_last_learnable_moves():
+	while get_child_count() > 0:
+		remove_child(get_child(0))
+	for m in pokemon.get_last_learnable_moves():
+		add_move(m.move)

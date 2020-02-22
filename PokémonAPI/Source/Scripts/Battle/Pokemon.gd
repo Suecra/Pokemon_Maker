@@ -7,6 +7,7 @@ const BattleAnimationDamage = preload("res://Source/Scripts/Battle/Animations/Ba
 const BattleAnimationFaint = preload("res://Source/Scripts/Battle/Animations/BattleAnimationFaint.gd")
 const BattleAnimationStatus = preload("res://Source/Scripts/Battle/Animations/BattleAnimationStatus.gd")
 const CanMoveEventArgs = preload("res://Source/Scripts/Battle/EventArgs/CanMoveEventArgs.gd")
+const Movepool = preload("res://Source/Scripts/Battle/Movepool.gd")
 
 enum Gender {Male, Female, Genderless}
 enum Stat {ATTACK, DEFENSE, SPECIAL_ATTACK, SPECIAL_DEFENSE, SPEED, ACCURACY, EVASION}
@@ -27,6 +28,7 @@ var battlefield
 var encounter
 var status_bar
 var position
+var movepool
 
 var hp: int
 var attack: int
@@ -278,6 +280,11 @@ func end_of_turn():
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "SecondaryStatus")
 	Utils.add_node_if_not_exists(self, self, "MoveArchive")
+	movepool = Movepool.new()
+	movepool.name = "Movepool"
+	movepool.owner = self
+	movepool.pokemon = self
+	add_child(movepool)
 	current_hp = hp
 
 func init_battle():

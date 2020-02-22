@@ -33,3 +33,4 @@ margin_bottom = -8.0
 [connection signal="button_down" from="BtnAdd" to="." method="_on_BtnAdd_button_down"]
 [connection signal="button_down" from="BtnRemove" to="." method="_on_BtnRemove_button_down"]
 [connection signal="size_flags_changed" from="BtnRemove" to="." method="_on_BtnRemove_size_flags_changed"]
+[connection signal="item_selected" from="ItemList" to="." method="_on_ItemList_item_selected"]

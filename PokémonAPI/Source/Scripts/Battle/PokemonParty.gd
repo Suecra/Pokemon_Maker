@@ -30,6 +30,9 @@ func get_battler(index: int):
 func add_pokemon(pokemon: Pokemon):
 	add_child(pokemon)
 
+func remove_pokemon(pokemon: Pokemon):
+	remove_child(pokemon)
+
 func exchange(pokemon1: Pokemon, pokemon2: Pokemon):
 	var index = pokemon2.get_index()
 	move_child(pokemon2, pokemon1.get_index())
