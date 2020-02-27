@@ -4,6 +4,7 @@
 
 [node name="bold" type="Node"]
 script = ExtResource( 1 )
+nature_name = "bold"
 inc_stat = 1
 dec_stat = 0
 likes_flavor = 4
@@ -14,4 +15,3 @@ high_hp_defense_chance = 20.0
 low_hp_defense_chance = 58.0
 high_hp_support_chance = 50.0
 low_hp_support_chance = 10.0
-

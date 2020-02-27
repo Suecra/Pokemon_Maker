@@ -4,6 +4,7 @@
 
 [node name="brave" type="Node"]
 script = ExtResource( 1 )
+nature_name = "brave"
 inc_stat = 0
 dec_stat = 4
 likes_flavor = 0
@@ -14,4 +15,3 @@ high_hp_defense_chance = 15.0
 low_hp_defense_chance = 60.0
 high_hp_support_chance = 15.0
 low_hp_support_chance = 8.0
-

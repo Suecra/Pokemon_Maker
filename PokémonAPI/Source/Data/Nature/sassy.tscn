@@ -4,6 +4,7 @@
 
 [node name="sassy" type="Node"]
 script = ExtResource( 1 )
+nature_name = "sassy"
 inc_stat = 3
 dec_stat = 4
 likes_flavor = 3
@@ -14,4 +15,3 @@ high_hp_defense_chance = 6.0
 low_hp_defense_chance = 20.0
 high_hp_support_chance = 6.0
 low_hp_support_chance = 58.0
-

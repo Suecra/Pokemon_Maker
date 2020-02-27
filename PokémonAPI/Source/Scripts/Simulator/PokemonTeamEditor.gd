@@ -46,8 +46,10 @@ func _on_PokemonList_select(index: int):
 		$PnlPlayer/InitIV.value = selected_pokemon.speed_iv
 		
 		var nature = selected_pokemon.get_nature()
-		if nature != null:
-			$PnlPlayer/Nature.text = nature.name
+		if nature == null:
+			$PnlPlayer/Nature.text = ""
+		else:
+			$PnlPlayer/Nature.text = nature.nature_name
 		
 		update_moves()
 

@@ -4,6 +4,7 @@
 
 [node name="gentle" type="Node"]
 script = ExtResource( 1 )
+nature_name = "gentle"
 inc_stat = 3
 dec_stat = 1
 likes_flavor = 3
@@ -14,4 +15,3 @@ high_hp_defense_chance = 70.0
 low_hp_defense_chance = 5.0
 high_hp_support_chance = 12.0
 low_hp_support_chance = 5.0
-

@@ -4,6 +4,7 @@
 
 [node name="quirky" type="Node"]
 script = ExtResource( 1 )
+nature_name = "quirky"
 inc_stat = null
 dec_stat = null
 likes_flavor = null
@@ -14,4 +15,3 @@ high_hp_defense_chance = 22.0
 low_hp_defense_chance = 22.0
 high_hp_support_chance = 22.0
 low_hp_support_chance = 22.0
-

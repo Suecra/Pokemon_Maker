@@ -4,6 +4,7 @@
 
 [node name="lonely" type="Node"]
 script = ExtResource( 1 )
+nature_name = "lonely"
 inc_stat = 0
 dec_stat = 1
 likes_flavor = 0
@@ -14,4 +15,3 @@ high_hp_defense_chance = 25.0
 low_hp_defense_chance = 8.0
 high_hp_support_chance = 55.0
 low_hp_support_chance = 8.0
-

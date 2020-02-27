@@ -4,6 +4,7 @@
 
 [node name="adamant" type="Node"]
 script = ExtResource( 1 )
+nature_name = "adamant"
 inc_stat = 0
 dec_stat = 2
 likes_flavor = 0
@@ -14,4 +15,3 @@ high_hp_defense_chance = 31.0
 low_hp_defense_chance = 15.0
 high_hp_support_chance = 31.0
 low_hp_support_chance = 15.0
-

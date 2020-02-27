@@ -4,6 +4,7 @@
 
 [node name="naughty" type="Node"]
 script = ExtResource( 1 )
+nature_name = "naughty"
 inc_stat = 0
 dec_stat = 3
 likes_flavor = 0
@@ -14,4 +15,3 @@ high_hp_defense_chance = 70.0
 low_hp_defense_chance = 22.0
 high_hp_support_chance = 10.0
 low_hp_support_chance = 8.0
-

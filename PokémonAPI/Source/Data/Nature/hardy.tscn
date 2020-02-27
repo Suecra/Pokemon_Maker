@@ -4,6 +4,7 @@
 
 [node name="hardy" type="Node"]
 script = ExtResource( 1 )
+nature_name = "hardy"
 inc_stat = null
 dec_stat = null
 likes_flavor = null
@@ -14,4 +15,3 @@ high_hp_defense_chance = 7.0
 low_hp_defense_chance = 7.0
 high_hp_support_chance = 32.0
 low_hp_support_chance = 32.0
-

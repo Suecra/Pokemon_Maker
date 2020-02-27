@@ -4,6 +4,7 @@
 
 [node name="hasty" type="Node"]
 script = ExtResource( 1 )
+nature_name = "hasty"
 inc_stat = 4
 dec_stat = 1
 likes_flavor = 2
@@ -14,4 +15,3 @@ high_hp_defense_chance = 37.0
 low_hp_defense_chance = 6.0
 high_hp_support_chance = 5.0
 low_hp_support_chance = 6.0
-

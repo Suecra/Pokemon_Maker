@@ -4,6 +4,7 @@
 
 [node name="rash" type="Node"]
 script = ExtResource( 1 )
+nature_name = "rash"
 inc_stat = 2
 dec_stat = 3
 likes_flavor = 1
@@ -14,4 +15,3 @@ high_hp_defense_chance = 13.0
 low_hp_defense_chance = 6.0
 high_hp_support_chance = 57.0
 low_hp_support_chance = 67.0
-

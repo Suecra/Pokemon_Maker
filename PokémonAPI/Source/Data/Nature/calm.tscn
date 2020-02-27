@@ -4,6 +4,7 @@
 
 [node name="calm" type="Node"]
 script = ExtResource( 1 )
+nature_name = "calm"
 inc_stat = 3
 dec_stat = 0
 likes_flavor = 3
@@ -14,4 +15,3 @@ high_hp_defense_chance = 50.0
 low_hp_defense_chance = 62.0
 high_hp_support_chance = 10.0
 low_hp_support_chance = 13.0
-

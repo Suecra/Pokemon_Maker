@@ -6,6 +6,7 @@ const DEC_MULTIPLIER = 0.9
 enum Stat {Attack, Defense, Special_Attack, Special_Defense, Speed}
 enum Flavor {Spicy, Dry, Sweet, Bitter, Sour}
 
+export(String) var nature_name
 export(Stat) var inc_stat
 export(Stat) var dec_stat
 export(Flavor) var likes_flavor

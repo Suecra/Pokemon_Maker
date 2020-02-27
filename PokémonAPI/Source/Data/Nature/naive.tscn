@@ -4,6 +4,7 @@
 
 [node name="naive" type="Node"]
 script = ExtResource( 1 )
+nature_name = "naive"
 inc_stat = 4
 dec_stat = 3
 likes_flavor = 2
@@ -14,4 +15,3 @@ high_hp_defense_chance = 22.0
 low_hp_defense_chance = 22.0
 high_hp_support_chance = 22.0
 low_hp_support_chance = 22.0
-

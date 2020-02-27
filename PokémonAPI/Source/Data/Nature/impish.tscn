@@ -4,6 +4,7 @@
 
 [node name="impish" type="Node"]
 script = ExtResource( 1 )
+nature_name = "impish"
 inc_stat = 1
 dec_stat = 2
 likes_flavor = 4
@@ -14,4 +15,3 @@ high_hp_defense_chance = 6.0
 low_hp_defense_chance = 55.0
 high_hp_support_chance = 25.0
 low_hp_support_chance = 17.0
-

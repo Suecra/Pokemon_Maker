@@ -2,6 +2,7 @@ extends Node
 
 const Utils = preload("res://Source/Scripts/Utils.gd")
 
+export(String) var pokemon_name
 export(int) var regional_dex_nr
 export(int) var national_dex_nr
 

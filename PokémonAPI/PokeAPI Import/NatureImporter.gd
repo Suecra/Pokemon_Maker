@@ -6,6 +6,7 @@ func _create_item():
 	return Nature.new()
 
 func _import_item(item):
+	item.nature_name = api_item["name"]
 	item.inc_stat = get_stat("increased_stat")
 	item.dec_stat = get_stat("decreased_stat")
 	item.likes_flavor = get_flavor("likes_flavor")
