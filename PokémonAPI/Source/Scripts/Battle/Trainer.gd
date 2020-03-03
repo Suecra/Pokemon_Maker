@@ -65,7 +65,8 @@ func query_delete_move():
 
 func _ready():
 	set_physics_process(false)
-	pokemon_party = $PokemonParty
+	if has_node("PokemonParty"):
+		pokemon_party = $PokemonParty
 
 func init_battle():
 	for i in pokemon_party.get_pokemon_count():

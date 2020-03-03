@@ -23,16 +23,19 @@ func load_from_strings(strings):
 	$ItemList.clear()
 	for s in strings:
 		$ItemList.add_item(s)
+	selected_index = $ItemList.get_item_count() - 1
+	$ItemList.select(selected_index)
 
 func set_selected_text(text: String):
 	var item_index = get_item_index()
 	if item_index != -1:
 		$ItemList.set_item_text(item_index, text)
 
-func set_selected_icon(icon: Texture):
-	var item_index = get_item_index()
-	if item_index != -1:
-		$ItemList.set_item_icon(item_index, icon)
+func set_selected_icon(icon: Texture, index: int = -1):
+	if index == -1:
+		index = get_item_index()
+	if index != -1:
+		$ItemList.set_item_icon(index, icon)
 
 func _on_BtnAdd_button_down():
 	if $ItemList.get_item_count() < max_amount:
