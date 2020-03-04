@@ -2,6 +2,7 @@ extends Control
 
 const WildPokemonTrainer = preload("res://Source/Scripts/Battle/Trainer/WildPokemonTrainer.gd")
 const PlayerTrainer = preload("res://Source/Scripts/Battle/Trainer/PlayerTrainer.gd")
+const Battle = preload("res://Scenes/BattleBase.tscn")
 
 var pokemon_party1
 var pokemon_party2
@@ -25,23 +26,43 @@ func _on_CbPlayer2_button_down():
 	player_index = 2
 
 func _on_BtnStartBattle_button_down():
+	var battle = Battle.instance()
+	add_child(battle)
+	battle.owner = self
 	var trainer1
 	var trainer2
 	if player_index == 1:
 		trainer1 = PlayerTrainer.new()
-		$Battle.add_ally_trainer(trainer1)
+		battle.add_ally_trainer(trainer1)
 		trainer2 = WildPokemonTrainer.new()
-		$Battle.add_opponent_trainer(trainer2)
+		battle.add_opponent_trainer(trainer2)
 	if player_index == 2:
 		trainer1 = WildPokemonTrainer.new()
-		$Battle.add_opponent_trainer(trainer1)
+		battle.add_opponent_trainer(trainer1)
 		trainer2 = PlayerTrainer.new()
-		$Battle.add_ally_trainer(trainer2)
+		battle.add_ally_trainer(trainer2)
+	pokemon_party1.trainer = trainer1
+	pokemon_party2.trainer = trainer2
 	trainer1.pokemon_party = pokemon_party1
 	trainer2.pokemon_party = pokemon_party2
 	
+	prepare_pokemon()
 	$Panel.visible = false
-	$Battle.visible = true
-	yield($Battle.start(), "completed")
-	$Battle.visible = false
+	yield(battle.start(), "completed")
+	remove_child(battle)
 	$Panel.visible = true
+
+func prepare_pokemon():
+	for pokemon in pokemon_party1.get_children():
+		pokemon.calculate_stats()
+		pokemon.full_heal()
+	for pokemon in pokemon_party2.get_children():
+		pokemon.calculate_stats()
+		pokemon.full_heal()
+
+func _on_Area2D_input_event(viewport, event, shape_idx):
+	if event is InputEventScreenTouch:
+		if event.pressed:
+			Input.action_press("ui_accept")
+		else:
+			Input.action_release("ui_accept")

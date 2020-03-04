@@ -82,6 +82,10 @@ func damage_percent(percent: float):
 	damage(damage)
 	return damage
 
+func full_heal():
+	current_hp = hp
+	remove_primary_status()
+
 func calculate_stats():
 	calculate_hp()
 	attack = calculate_stat(get_species().attack, attack_ev, attack_iv)

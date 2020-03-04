@@ -9,10 +9,10 @@ func _ready():
 func show_battle_simulator():
 	var battle_simulator = BattleSimulator.instance()
 	battle_simulator.name = "BattleSimulator"
-	battle_simulator.owner = self
 	battle_simulator.pokemon_party1 = $PokemonParty1
 	battle_simulator.pokemon_party2 = $PokemonParty2
 	add_child(battle_simulator)
+	battle_simulator.owner = self
 	battle_simulator.connect("edit_party", self, "edit_party")
 
 func edit_party(pokemon_party):
