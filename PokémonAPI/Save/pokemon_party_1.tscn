@@ -1,0 +1,303 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Source/Scripts/Battle/PokemonParty.gd" type="Script" id=1]
+[ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=2]
+[ext_resource path="res://Source/Data/Pokemon/taillow.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Data/Nature/adamant.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Scripts/Battle/Movepool.gd" type="Script" id=5]
+[ext_resource path="res://Source/Scripts/Battle/Move.gd" type="Script" id=6]
+[ext_resource path="res://Source/Data/Move/aerial-ace.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Data/PhysicalMove.gd" type="Script" id=8]
+[ext_resource path="res://Source/Data/Type/flying.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Source/Data/Contest-Effect/contest_effect7.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Source/Data/Move/double-team.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Source/Data/BoostMove.gd" type="Script" id=12]
+[ext_resource path="res://Source/Data/Type/normal.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Source/Data/Contest-Effect/contest_effect6.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Source/Data/Move/wing-attack.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Source/Data/Contest-Effect/contest_effect2.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Source/Data/Move/quick-attack.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Source/Data/Contest-Effect/contest_effect30.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Source/Data/Pokemon/darkrai.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Source/Data/Nature/modest.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Source/Data/Move/nightmare.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Source/Data/Type/ghost.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Source/Data/Contest-Effect/contest_effect5.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Source/Data/Move/feint-attack.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Source/Data/Type/dark.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Source/Data/Move/hypnosis.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Source/Data/Type/psychic.tscn" type="PackedScene" id=27]
+
+[node name="PokemonParty1" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Pokemon1" type="Node" parent="."]
+script = ExtResource( 2 )
+nickname = "taillow"
+level = 22.0
+gender = 0
+current_hp = 0
+species = ExtResource( 3 )
+nature = ExtResource( 4 )
+hp_ev = 0.0
+attack_ev = 0.0
+defense_ev = 0.0
+special_attack_ev = 0.0
+special_defense_ev = 0.0
+speed_ev = 252.0
+hp_iv = 0.0
+attack_iv = 0.0
+defense_iv = 0.0
+special_attack_iv = 0.0
+special_defense_iv = 0.0
+speed_iv = 0.0
+shiny = false
+
+[node name="Movepool" type="Node" parent="Pokemon1"]
+script = ExtResource( 5 )
+
+[node name="@@55" type="Node" parent="Pokemon1/Movepool"]
+script = ExtResource( 6 )
+priority = 0
+move = ExtResource( 7 )
+current_pp = 20
+
+[node name="Move" type="Node" parent="Pokemon1/Movepool/@@55" instance=ExtResource( 7 )]
+script = ExtResource( 8 )
+move_name = "Aerial-ace"
+type = ExtResource( 9 )
+damage_class = 0
+power = 60
+accuracy = 0
+priority = 0
+pp = 20
+z_power = 0
+flags = 32
+hit_range = 0
+is_HM = false
+contest_type = 0
+contest_effect = ExtResource( 10 )
+battle_style = 0
+description = "The user confounds the target with speed, then
+slashes. This attack never misses."
+
+[node name="@@56" type="Node" parent="Pokemon1/Movepool"]
+script = ExtResource( 6 )
+priority = 0
+move = ExtResource( 11 )
+current_pp = 15
+
+[node name="Move" type="Node" parent="Pokemon1/Movepool/@@56" instance=ExtResource( 11 )]
+script = ExtResource( 12 )
+move_name = "Double-team"
+type = ExtResource( 13 )
+damage_class = 2
+power = 0
+accuracy = 0
+priority = 0
+pp = 15
+z_power = 0
+flags = 0
+hit_range = 3
+is_HM = false
+contest_type = 0
+contest_effect = ExtResource( 14 )
+battle_style = 0
+description = "By moving rapidly, the user makes illusory copies of
+itself to raise its evasiveness."
+attack_boost = 0
+defense_boost = 0
+special_attack_boost = 0
+special_defense_boost = 0
+speed_boost = 0
+accuracy_boost = 0
+evasion_boost = 0
+
+[node name="@@57" type="Node" parent="Pokemon1/Movepool"]
+script = ExtResource( 6 )
+priority = 0
+move = ExtResource( 15 )
+current_pp = 35
+
+[node name="Move" type="Node" parent="Pokemon1/Movepool/@@57" instance=ExtResource( 15 )]
+script = ExtResource( 8 )
+move_name = "Wing-attack"
+type = ExtResource( 9 )
+damage_class = 0
+power = 60
+accuracy = 100
+priority = 0
+pp = 35
+z_power = 0
+flags = 32
+hit_range = 0
+is_HM = false
+contest_type = 0
+contest_effect = ExtResource( 16 )
+battle_style = 0
+description = "The target is struck with large, imposing wings
+spread wide to inflict damage."
+
+[node name="@@58" type="Node" parent="Pokemon1/Movepool"]
+script = ExtResource( 6 )
+priority = 1
+move = ExtResource( 17 )
+current_pp = 30
+
+[node name="Move" type="Node" parent="Pokemon1/Movepool/@@58" instance=ExtResource( 17 )]
+script = ExtResource( 8 )
+move_name = "Quick-attack"
+type = ExtResource( 13 )
+damage_class = 0
+power = 40
+accuracy = 100
+priority = 1
+pp = 30
+z_power = 0
+flags = 32
+hit_range = 0
+is_HM = false
+contest_type = 0
+contest_effect = ExtResource( 18 )
+battle_style = 0
+description = "The user lunges at the target at a speed that makes
+it almost invisible. This move always goes first."
+
+[node name="Pokemon2" type="Node" parent="."]
+script = ExtResource( 2 )
+nickname = "darkrai"
+level = 43.0
+gender = 0
+current_hp = 0
+species = ExtResource( 19 )
+nature = ExtResource( 20 )
+hp_ev = 0.0
+attack_ev = 0.0
+defense_ev = 0.0
+special_attack_ev = 0.0
+special_defense_ev = 0.0
+speed_ev = 0.0
+hp_iv = 31.0
+attack_iv = 0.0
+defense_iv = 0.0
+special_attack_iv = 0.0
+special_defense_iv = 0.0
+speed_iv = 0.0
+shiny = false
+
+[node name="Movepool" type="Node" parent="Pokemon2"]
+script = ExtResource( 5 )
+
+[node name="@@59" type="Node" parent="Pokemon2/Movepool"]
+script = ExtResource( 6 )
+priority = 0
+move = ExtResource( 21 )
+current_pp = 15
+
+[node name="Move" type="Node" parent="Pokemon2/Movepool/@@59" instance=ExtResource( 21 )]
+script = ExtResource( 12 )
+move_name = "Nightmare"
+type = ExtResource( 22 )
+damage_class = 2
+power = 0
+accuracy = 100
+priority = 0
+pp = 15
+z_power = 0
+flags = 64
+hit_range = 0
+is_HM = false
+contest_type = 3
+contest_effect = ExtResource( 23 )
+battle_style = 0
+description = "A sleeping target sees a nightmare that inflicts some
+damage every turn."
+attack_boost = 0
+defense_boost = 0
+special_attack_boost = 0
+special_defense_boost = 0
+speed_boost = 0
+accuracy_boost = 0
+evasion_boost = 0
+
+[node name="@@60" type="Node" parent="Pokemon2/Movepool"]
+script = ExtResource( 6 )
+priority = 0
+move = ExtResource( 24 )
+current_pp = 20
+
+[node name="Move" type="Node" parent="Pokemon2/Movepool/@@60" instance=ExtResource( 24 )]
+script = ExtResource( 8 )
+move_name = "Feint-attack"
+type = ExtResource( 25 )
+damage_class = 0
+power = 60
+accuracy = 0
+priority = 0
+pp = 20
+z_power = 0
+flags = 32
+hit_range = 0
+is_HM = false
+contest_type = 3
+contest_effect = ExtResource( 10 )
+battle_style = 0
+description = "The user approaches the target disarmingly, then
+throws a sucker punch. This attack never misses."
+
+[node name="@@61" type="Node" parent="Pokemon2/Movepool"]
+script = ExtResource( 6 )
+priority = 0
+move = ExtResource( 26 )
+current_pp = 20
+
+[node name="Move" type="Node" parent="Pokemon2/Movepool/@@61" instance=ExtResource( 26 )]
+script = ExtResource( 12 )
+move_name = "Hypnosis"
+type = ExtResource( 27 )
+damage_class = 2
+power = 0
+accuracy = 60
+priority = 0
+pp = 20
+z_power = 0
+flags = 64
+hit_range = 0
+is_HM = false
+contest_type = 3
+contest_effect = ExtResource( 23 )
+battle_style = 0
+description = "The user employs hypnotic suggestion to make the
+target fall into a deep sleep."
+attack_boost = 0
+defense_boost = 0
+special_attack_boost = 0
+special_defense_boost = 0
+speed_boost = 0
+accuracy_boost = 0
+evasion_boost = 0
+
+[node name="@@62" type="Node" parent="Pokemon2/Movepool"]
+script = ExtResource( 6 )
+priority = 1
+move = ExtResource( 17 )
+current_pp = 30
+
+[node name="Move" type="Node" parent="Pokemon2/Movepool/@@62" instance=ExtResource( 17 )]
+script = ExtResource( 8 )
+move_name = "Quick-attack"
+type = ExtResource( 13 )
+damage_class = 0
+power = 40
+accuracy = 100
+priority = 1
+pp = 30
+z_power = 0
+flags = 32
+hit_range = 0
+is_HM = false
+contest_type = 0
+contest_effect = ExtResource( 18 )
+battle_style = 0
+description = "The user lunges at the target at a speed that makes
+it almost invisible. This move always goes first."

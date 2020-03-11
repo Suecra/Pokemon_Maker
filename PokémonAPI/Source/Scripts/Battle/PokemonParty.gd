@@ -29,6 +29,7 @@ func get_battler(index: int):
 
 func add_pokemon(pokemon: Pokemon):
 	add_child(pokemon)
+	pokemon.owner = self
 
 func remove_pokemon(pokemon: Pokemon):
 	remove_child(pokemon)
@@ -57,6 +58,13 @@ func to_string_array_battler():
 	for i in range(get_battler_count()):
 		arr.append(get_battler(i).nickname)
 	return arr
+
+func save(path):
+	for pokemon in get_children():
+		pokemon.prepare_for_save(self)
+	var scene = PackedScene.new()
+	scene.pack(self)
+	ResourceSaver.save(path, scene)
 
 func _enter_tree():
 	trainer = get_parent()

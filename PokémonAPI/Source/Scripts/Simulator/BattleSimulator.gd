@@ -2,7 +2,10 @@ extends Control
 
 const WildPokemonTrainer = preload("res://Source/Scripts/Battle/Trainer/WildPokemonTrainer.gd")
 const PlayerTrainer = preload("res://Source/Scripts/Battle/Trainer/PlayerTrainer.gd")
+const Utils = preload("res://Source/Scripts/Utils.gd")
 const Battle = preload("res://Scenes/BattleBase.tscn")
+const PARTY_PATH_1 = "res://Save/pokemon_party_1.tscn"
+const PARTY_PATH_2 = "res://Save/pokemon_party_2.tscn"
 
 var pokemon_party1
 var pokemon_party2
@@ -18,6 +21,12 @@ func _on_BtnTeam1_button_down():
 
 func _on_BtnTeam2_button_down():
 	emit_signal("edit_party", pokemon_party2)
+
+func save_party(pokemon_party):
+	if pokemon_party == pokemon_party1:
+		pokemon_party.save(PARTY_PATH_1)
+	if pokemon_party == pokemon_party2:
+		pokemon_party.save(PARTY_PATH_2)
 
 func _on_CbPlayer1_button_down():
 	player_index = 1

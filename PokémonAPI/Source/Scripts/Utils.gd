@@ -27,3 +27,15 @@ static func unpack(parent: Node, scene: PackedScene, name: String):
 			node.owner = parent
 			return node
 	return null
+
+static func save_node_and_children(node: Node, path: String):
+	set_node_owner(node, node)
+	var scene = PackedScene.new()
+	scene.pack(node)
+	ResourceSaver.save(path, scene)
+
+static func set_node_owner(node: Node, owner: Node):
+	node.owner = owner
+	#print(node.name + " | " + owner.name)
+	for child in node.get_children():
+		set_node_owner(child, owner)

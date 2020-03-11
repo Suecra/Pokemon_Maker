@@ -30,6 +30,7 @@ func _process(delta):
 
 func _on_PokemonList_add():
 	var pokemon = Pokemon.new()
+	pokemon.name = "Pokemon" + str(pokemon_party.get_pokemon_count() + 1)
 	pokemon.nature = load("res://Source/Data/Nature/hardy.tscn")
 	pokemon_party.add_pokemon(pokemon)
 	_on_PokemonList_select(pokemon_party.get_pokemon_count() - 1)

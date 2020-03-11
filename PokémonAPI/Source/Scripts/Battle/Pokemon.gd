@@ -16,8 +16,8 @@ export(String) var nickname
 export(int, 1, 100) var level
 export(Gender) var gender
 export(int) var current_hp setget set_current_hp
-export(PackedScene) var species
-export(PackedScene) var nature
+export(PackedScene) var species setget set_species
+export(PackedScene) var nature setget set_nature
 
 var item
 var party
@@ -61,6 +61,16 @@ export(int, 0, 31) var special_defense_iv
 export(int, 0, 31) var speed_iv
 
 export(bool) var shiny
+
+func set_species(value):
+	species = value
+	if has_node("Species"):
+		remove_child($Species)
+
+func set_nature(value):
+	nature = value
+	if has_node("Nature"):
+		remove_child($Nature)
 
 func set_current_hp(value: int):
 	current_hp = min(value, hp)
@@ -284,11 +294,12 @@ func end_of_turn():
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "SecondaryStatus")
 	Utils.add_node_if_not_exists(self, self, "MoveArchive")
-	movepool = Movepool.new()
-	movepool.name = "Movepool"
-	movepool.owner = self
-	movepool.pokemon = self
-	add_child(movepool)
+	if not has_node("Movepool"):
+		movepool = Movepool.new()
+		movepool.name = "Movepool"
+		movepool.owner = self
+		add_child(movepool)
+	$Movepool.pokemon = self
 	current_hp = hp
 
 func init_battle():
@@ -315,3 +326,14 @@ func switch_out():
 	for status in $SecondaryStatus.get_children():
 		status.heal_silent()
 	notify("SWITCH_OUT")
+
+func prepare_for_save(new_owner):
+	if has_node("Species"):
+		remove_child($Species)
+	if has_node("Nature"):
+		remove_child($Nature)
+	if has_node("Movepool"):
+		$Movepool.owner = new_owner
+		for move in $Movepool.get_children():
+			move.owner = new_owner
+			move.get_node("Move").owner = new_owner

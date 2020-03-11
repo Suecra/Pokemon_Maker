@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Pokémon Maker"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://Scenes/Simulator/BattleSimulatorMain.tscn"
 config/icon="res://godochu.png"
 
 [display]
