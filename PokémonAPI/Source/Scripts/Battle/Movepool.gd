@@ -24,6 +24,7 @@ func swap(index1: int, index2: int):
 
 func add_move(move):
 	var move_node = Move.new()
+	move_node.name = "Move" + str(get_child_count() + 1)
 	move_node.move = move
 	move_node.current_pp = 99
 	add_child(move_node)
@@ -40,3 +41,10 @@ func fill_from_last_learnable_moves():
 		remove_child(get_child(0))
 	for m in pokemon.get_last_learnable_moves():
 		add_move(m.move)
+
+func prepare_for_save(new_owner):
+	owner = new_owner
+	for move in get_children():
+		if move.has_node("Move"):
+			move.remove_child($Move)
+		move.owner = new_owner

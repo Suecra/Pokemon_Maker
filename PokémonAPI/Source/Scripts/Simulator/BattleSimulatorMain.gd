@@ -15,6 +15,7 @@ func _ready():
 		party.name = "PokemonParty1"
 		add_child(party)
 	if ResourceLoader.exists(PARTY_PATH_2):
+		remove_child($PokemonParty2)
 		party = load(PARTY_PATH_2).instance()
 		party.name = "PokemonParty2"
 		add_child(party)

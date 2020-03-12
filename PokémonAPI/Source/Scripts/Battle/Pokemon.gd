@@ -333,7 +333,4 @@ func prepare_for_save(new_owner):
 	if has_node("Nature"):
 		remove_child($Nature)
 	if has_node("Movepool"):
-		$Movepool.owner = new_owner
-		for move in $Movepool.get_children():
-			move.owner = new_owner
-			move.get_node("Move").owner = new_owner
+		$Movepool.prepare_for_save(new_owner)
