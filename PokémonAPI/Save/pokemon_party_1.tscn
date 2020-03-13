@@ -2,28 +2,28 @@
 
 [ext_resource path="res://Source/Scripts/Battle/PokemonParty.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=2]
-[ext_resource path="res://Source/Data/Pokemon/ferrothorn.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Data/Pokemon/meganium.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Source/Data/Nature/bold.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Source/Scripts/Battle/Movepool.gd" type="Script" id=5]
 [ext_resource path="res://Source/Scripts/Battle/Move.gd" type="Script" id=6]
-[ext_resource path="res://Source/Data/Move/mirror-shot.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Source/Data/Move/iron-defense.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Source/Data/Move/gyro-ball.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Source/Data/Move/pin-missile.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Source/Data/Pokemon/conkeldurr.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Source/Data/Move/light-screen.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Data/Move/sweet-scent.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Source/Data/Move/natural-gift.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Source/Data/Move/magical-leaf.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Source/Data/Pokemon/zangoose.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Source/Data/Nature/hardy.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Source/Data/Move/dynamic-punch.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Source/Data/Move/rock-slide.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Source/Data/Move/bulk-up.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Source/Data/Move/chip-away.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Source/Data/Move/taunt.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Source/Data/Move/x-scissor.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Source/Data/Move/detect.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Source/Data/Move/embargo.tscn" type="PackedScene" id=16]
 
 [node name="PokemonParty1" type="Node"]
 script = ExtResource( 1 )
 
 [node name="Pokemon1" type="Node" parent="."]
 script = ExtResource( 2 )
-nickname = "ferrothorn"
-level = 31.0
+nickname = "meganium"
+level = 45.0
 gender = 0
 current_hp = 0
 species = ExtResource( 3 )
@@ -49,30 +49,30 @@ script = ExtResource( 5 )
 script = ExtResource( 6 )
 priority = 0
 move = ExtResource( 7 )
-current_pp = 10
+current_pp = 29
 
 [node name="Move2" type="Node" parent="Pokemon1/Movepool"]
 script = ExtResource( 6 )
 priority = 0
 move = ExtResource( 8 )
-current_pp = 15
+current_pp = 20
 
 [node name="Move3" type="Node" parent="Pokemon1/Movepool"]
 script = ExtResource( 6 )
 priority = 0
 move = ExtResource( 9 )
-current_pp = 5
+current_pp = 15
 
 [node name="Move4" type="Node" parent="Pokemon1/Movepool"]
 script = ExtResource( 6 )
 priority = 0
 move = ExtResource( 10 )
-current_pp = 20
+current_pp = 14
 
 [node name="Pokemon2" type="Node" parent="."]
 script = ExtResource( 2 )
-nickname = "conkeldurr"
-level = 40.0
+nickname = "zangoose"
+level = 42.0
 gender = 0
 current_hp = 0
 species = ExtResource( 11 )
@@ -83,12 +83,12 @@ defense_ev = 0.0
 special_attack_ev = 0.0
 special_defense_ev = 0.0
 speed_ev = 0.0
-hp_iv = 4.0
-attack_iv = 8.0
-defense_iv = 13.0
-special_attack_iv = 19.0
-special_defense_iv = 25.0
-speed_iv = 31.0
+hp_iv = 0.0
+attack_iv = 0.0
+defense_iv = 0.0
+special_attack_iv = 0.0
+special_defense_iv = 0.0
+speed_iv = 0.0
 shiny = false
 
 [node name="Movepool" type="Node" parent="Pokemon2"]
@@ -98,22 +98,22 @@ script = ExtResource( 5 )
 script = ExtResource( 6 )
 priority = 0
 move = ExtResource( 13 )
-current_pp = 5
+current_pp = 20
 
 [node name="Move2" type="Node" parent="Pokemon2/Movepool"]
 script = ExtResource( 6 )
 priority = 0
 move = ExtResource( 14 )
-current_pp = 10
+current_pp = 15
 
 [node name="Move3" type="Node" parent="Pokemon2/Movepool"]
 script = ExtResource( 6 )
-priority = 0
+priority = 4
 move = ExtResource( 15 )
-current_pp = 20
+current_pp = 5
 
 [node name="Move4" type="Node" parent="Pokemon2/Movepool"]
 script = ExtResource( 6 )
 priority = 0
 move = ExtResource( 16 )
-current_pp = 20
+current_pp = 15

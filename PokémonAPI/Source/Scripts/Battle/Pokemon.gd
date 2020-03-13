@@ -94,7 +94,7 @@ func damage_percent(percent: float):
 
 func full_heal():
 	current_hp = hp
-	remove_primary_status()
+	remove_primary_status_if_exists(true)
 
 func calculate_stats():
 	calculate_hp()
@@ -183,8 +183,7 @@ func change_status_no_override(status) -> bool:
 	return true
 
 func change_status(status):
-	if has_node("Status"):
-		$Status._heal_silent()
+	remove_primary_status_if_exists(true)
 	status.name = "Status"
 	status.pokemon = self
 	status.battle = battle
@@ -195,11 +194,20 @@ func change_status(status):
 	battle.current_turn.register_animation(animation_status)
 
 func remove_primary_status():
-	if has_node("Status"):
-		remove_child($Status)
+	if remove_primary_status_if_exists(false):
 		var animation_status = BattleAnimationStatus.new()
 		animation_status.pokemon = self
 		battle.current_turn.register_animation(animation_status)
+
+func remove_primary_status_if_exists(silent: bool):
+	if has_node("Status"):
+		if silent:
+			$Status._heal_silent()
+		else:
+			$Status._heal()
+		remove_child($Status)
+		return true
+	return false
 
 func add_secondary_status(status):
 	if not $SecondaryStatus.has_node(status.status_name):
