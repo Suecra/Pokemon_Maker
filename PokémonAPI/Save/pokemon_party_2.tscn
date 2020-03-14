@@ -1,23 +1,20 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Source/Scripts/Battle/PokemonParty.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=2]
-[ext_resource path="res://Source/Data/Pokemon/diglett.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Source/Data/Nature/modest.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Data/Pokemon/kricketune.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Data/Nature/hardy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Source/Scripts/Battle/Movepool.gd" type="Script" id=5]
 [ext_resource path="res://Source/Scripts/Battle/Move.gd" type="Script" id=6]
-[ext_resource path="res://Source/Data/Move/magnitude.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Source/Data/Move/mud-slap.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Source/Data/Move/astonish.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Source/Data/Move/growl.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Source/Data/Move/sing.tscn" type="PackedScene" id=7]
 
 [node name="PokemonParty2" type="Node"]
 script = ExtResource( 1 )
 
-[node name="Pokemon1" type="Node" parent="."]
+[node name="Pokemon2" type="Node" parent="."]
 script = ExtResource( 2 )
-nickname = "diglett"
-level = 15.0
+nickname = "kricketune"
+level = 31.0
 gender = 0
 current_hp = 0
 species = ExtResource( 3 )
@@ -26,8 +23,8 @@ hp_ev = 0.0
 attack_ev = 0.0
 defense_ev = 0.0
 special_attack_ev = 0.0
-special_defense_ev = 252.0
-speed_ev = 252.0
+special_defense_ev = 0.0
+speed_ev = 0.0
 hp_iv = 0.0
 attack_iv = 0.0
 defense_iv = 0.0
@@ -36,29 +33,14 @@ special_defense_iv = 0.0
 speed_iv = 0.0
 shiny = false
 
-[node name="Movepool" type="Node" parent="Pokemon1"]
+[node name="Movepool" type="Node" parent="Pokemon2"]
 script = ExtResource( 5 )
 
-[node name="Move1" type="Node" parent="Pokemon1/Movepool"]
+[node name="Move4" type="Node" parent="Pokemon2/Movepool"]
 script = ExtResource( 6 )
 priority = 0
 move = ExtResource( 7 )
-current_pp = 24
+current_pp = 13
 
-[node name="Move2" type="Node" parent="Pokemon1/Movepool"]
-script = ExtResource( 6 )
-priority = 0
-move = ExtResource( 8 )
-current_pp = 7
-
-[node name="Move3" type="Node" parent="Pokemon1/Movepool"]
-script = ExtResource( 6 )
-priority = 0
-move = ExtResource( 9 )
-current_pp = 14
-
-[node name="Move4" type="Node" parent="Pokemon1/Movepool"]
-script = ExtResource( 6 )
-priority = 0
-move = ExtResource( 10 )
-current_pp = 38
+[node name="Movepool" type="Node" parent="Pokemon2"]
+script = ExtResource( 5 )

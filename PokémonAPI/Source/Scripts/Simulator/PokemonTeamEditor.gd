@@ -66,7 +66,11 @@ func _on_PokemonList_select(index: int):
 			$Panel/Nature.text = ""
 		else:
 			$Panel/Nature.text = nature.nature_name
-		
+		var species = selected_pokemon.get_species()
+		if species == null:
+			$Panel/SpeciesEdit.text = ""
+		else:
+			$Panel/SpeciesEdit.text = selected_pokemon.nickname
 		update_moves()
 
 func update_moves():

@@ -94,7 +94,11 @@ func damage_percent(percent: float):
 
 func full_heal():
 	current_hp = hp
-	remove_primary_status_if_exists(true)
+	heal_primary_status(true)
+	var movepool = get_movepool()
+	if movepool != null:
+		for move in movepool.get_children():
+			move.restore_pp()
 
 func calculate_stats():
 	calculate_hp()
@@ -183,7 +187,7 @@ func change_status_no_override(status) -> bool:
 	return true
 
 func change_status(status):
-	remove_primary_status_if_exists(true)
+	heal_primary_status(true)
 	status.name = "Status"
 	status.pokemon = self
 	status.battle = battle
@@ -194,20 +198,18 @@ func change_status(status):
 	battle.current_turn.register_animation(animation_status)
 
 func remove_primary_status():
-	if remove_primary_status_if_exists(false):
+	if has_node("Status"):
+		remove_child($Status)
 		var animation_status = BattleAnimationStatus.new()
 		animation_status.pokemon = self
 		battle.current_turn.register_animation(animation_status)
 
-func remove_primary_status_if_exists(silent: bool):
+func heal_primary_status(silent: bool):
 	if has_node("Status"):
 		if silent:
 			$Status._heal_silent()
 		else:
 			$Status._heal()
-		remove_child($Status)
-		return true
-	return false
 
 func add_secondary_status(status):
 	if not $SecondaryStatus.has_node(status.status_name):
@@ -293,6 +295,13 @@ func get_random_ivs():
 	special_defense_iv = randi() % 31
 	speed_iv = randi() % 31 
 
+func add_movepool_if_not_exists():
+	if not has_node("Movepool"):
+		movepool = Movepool.new()
+		movepool.name = "Movepool"
+		movepool.owner = self
+		add_child(movepool)
+
 func begin_of_turn():
 	notify("TURN_STARTS")
 
@@ -302,13 +311,12 @@ func end_of_turn():
 func _ready():
 	Utils.add_node_if_not_exists(self, self, "SecondaryStatus")
 	Utils.add_node_if_not_exists(self, self, "MoveArchive")
-	if not has_node("Movepool"):
-		movepool = Movepool.new()
-		movepool.name = "Movepool"
-		movepool.owner = self
-		add_child(movepool)
+	add_movepool_if_not_exists()
 	$Movepool.pokemon = self
 	current_hp = hp
+
+func _init():
+	add_movepool_if_not_exists()
 
 func init_battle():
 	party = get_parent()

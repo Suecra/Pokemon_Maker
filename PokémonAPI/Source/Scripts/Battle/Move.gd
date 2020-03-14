@@ -24,6 +24,11 @@ func get_move_data():
 func can_use():
 	return current_pp > 0
 
+func restore_pp():
+	var data = get_move_data()
+	if data != null:
+		current_pp = data.pp
+
 func _execute():
 	current_pp -= 1
 	var move = get_move_data()

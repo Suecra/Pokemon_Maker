@@ -1,4 +1,4 @@
-extends "res://Source/Scripts/Battle/Status.gd"
+extends "res://Source/Scripts/Battle/PrimaryStatus.gd"
 
 func _can_move(args):
 	args.can_move = false

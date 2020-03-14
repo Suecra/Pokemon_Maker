@@ -30,14 +30,10 @@ func create_basic_pokemon(name: String, level: int, moves: Array, nature: String
 	pokemon.species = load(SPECIES_PATH + name + ".tscn")
 	pokemon.nature = load(NATURE_PATH + nature + ".tscn")
 	pokemon.level = level
-	var movepool = Movepool.new()
-	movepool.owner = pokemon
-	movepool.name = "Movepool"
-	pokemon.add_child(movepool)
 	pokemon.calculate_stats()
-	pokemon.current_hp = 9999
+	pokemon.full_heal()
 	for move in moves:
-		movepool.add_move(load(MOVE_PATH + move + ".tscn"))
+		pokemon.get_movepool().add_move(load(MOVE_PATH + move + ".tscn"))
 	return pokemon
 
 func test_add_pokemon():
