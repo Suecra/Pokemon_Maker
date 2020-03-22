@@ -2,8 +2,8 @@ extends Node
 
 const BattleSimulator = preload("res://Scenes/Simulator/BattleSimulator.tscn")
 const PokemonTeamEditor = preload("res://Scenes/Simulator/PokemonTeamEditor.tscn")
-const PARTY_PATH_1 = "res://Save/pokemon_party_1.tscn"
-const PARTY_PATH_2 = "res://Save/pokemon_party_2.tscn"
+const PARTY_PATH_1 = "user://pokemon_party_1.tscn"
+const PARTY_PATH_2 = "user://pokemon_party_2.tscn"
 
 var pokemon_party
 

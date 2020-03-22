@@ -4,8 +4,8 @@ const WildPokemonTrainer = preload("res://Source/Scripts/Battle/Trainer/WildPoke
 const PlayerTrainer = preload("res://Source/Scripts/Battle/Trainer/PlayerTrainer.gd")
 const Utils = preload("res://Source/Scripts/Utils.gd")
 const Battle = preload("res://Scenes/BattleBase.tscn")
-const PARTY_PATH_1 = "res://Save/pokemon_party_1.tscn"
-const PARTY_PATH_2 = "res://Save/pokemon_party_2.tscn"
+const PARTY_PATH_1 = "user://pokemon_party_1.tscn"
+const PARTY_PATH_2 = "user://pokemon_party_2.tscn"
 
 var pokemon_party1
 var pokemon_party2
