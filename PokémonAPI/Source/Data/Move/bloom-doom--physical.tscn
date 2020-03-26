@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user collects energy from plants using its
 Z-Power and attacks the target with full force.
 The power varies, depending on the original move."
+
+[node name="Effects" type="Node" parent="."]

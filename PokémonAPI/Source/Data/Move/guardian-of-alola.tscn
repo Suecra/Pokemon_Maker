@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user, the Land Spirit Pokémon, obtains Alola’s
 energy using its Z-Power and attacks the target with
 full force. This reduces the target’s HP greatly."
+
+[node name="Effects" type="Node" parent="."]

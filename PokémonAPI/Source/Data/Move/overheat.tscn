@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Source/Data/SpecialMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/fire.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Source/Data/Contest-Effect/contest_effect3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Scripts/Battle/Effects/EffectBoost.gd" type="Script" id=4]
 
 [node name="overheat" type="Node"]
 script = ExtResource( 1 )
@@ -14,7 +15,7 @@ accuracy = 90
 priority = 0
 pp = 5
 z_power = 0
-flags = 32
+flags = 1056
 hit_range = 0
 is_HM = false
 contest_type = 1
@@ -23,6 +24,17 @@ battle_style = 0
 description = "The user attacks the target at full power. The
 attack’s recoil harshly lowers the user’s Sp. Atk stat."
 
-[node name="normal" type="Node" parent="."]
+[node name="Effects" type="Node" parent="."]
 
-[node name="sunny-day" type="Node" parent="normal"]
+[node name="Boosts" type="Node" parent="Effects"]
+script = ExtResource( 4 )
+effected_pokemon = 0
+guaranteed = true
+chance = 1.0
+attack_boost = 0
+defense_boost = 0
+special_attack_boost = -2
+special_defense_boost = 0
+speed_boost = 0
+accuracy_boost = 0
+evasion_boost = 0

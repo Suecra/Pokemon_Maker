@@ -24,10 +24,4 @@ description = "The user attacks opposing Pokémon with explosive
 fury. The lower the user’s HP, the lower the
 move’s power."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="earthquake" type="Node" parent="normal"]
-
-[node name="endure" type="Node" parent="normal"]
-
-[node name="sunny-day" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

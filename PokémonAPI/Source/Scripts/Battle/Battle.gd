@@ -32,6 +32,8 @@ func is_battle_ended():
 	var trainers = $Trainers.get_children()
 	var count = 0
 	for t in trainers:
+		if t.resigned:
+			return true
 		if t.has_pokemon_left():
 			count = count + 1
 	return count <= 1

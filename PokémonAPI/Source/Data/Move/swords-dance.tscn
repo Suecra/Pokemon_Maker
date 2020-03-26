@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Source/Data/BoostMove.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/StatusMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/normal.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Source/Data/Contest-Effect/contest_effect2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Data/Contest-Effect/contest_effect32.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Source/Scripts/Battle/Effects/EffectBoost.gd" type="Script" id=4]
 
 [node name="swords-dance" type="Node"]
@@ -23,13 +23,6 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "A frenetic dance to uplift the fighting spirit.
 This sharply raises the user’s Attack stat."
-attack_boost = 2.0
-defense_boost = 0
-special_attack_boost = 0
-special_defense_boost = 0
-speed_boost = 0
-accuracy_boost = 0
-evasion_boost = 0
 
 [node name="Effects" type="Node" parent="."]
 
@@ -38,7 +31,7 @@ script = ExtResource( 4 )
 effected_pokemon = 1
 guaranteed = true
 chance = 0.0
-attack_boost = 2.0
+attack_boost = 2
 defense_boost = 0
 special_attack_boost = 0
 special_defense_boost = 0

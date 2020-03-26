@@ -23,3 +23,5 @@ battle_style = 0
 description = "This attack’s power is doubled when used on a
 target with paralysis. This also cures the target’s
 paralysis, however."
+
+[node name="Effects" type="Node" parent="."]

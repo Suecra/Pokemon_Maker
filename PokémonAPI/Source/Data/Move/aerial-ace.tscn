@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user confounds the target with speed, then
 slashes. This attack never misses."
+
+[node name="Effects" type="Node" parent="."]

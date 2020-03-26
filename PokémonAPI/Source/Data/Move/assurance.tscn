@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "If the target has already taken some damage in the
 same turn, this attack’s power is doubled."
+
+[node name="Effects" type="Node" parent="."]

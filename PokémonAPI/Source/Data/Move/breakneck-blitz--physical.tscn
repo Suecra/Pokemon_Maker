@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user builds up its momentum using its Z-Power
 and crashes into the target at full speed. The power
 varies, depending on the original move."
+
+[node name="Effects" type="Node" parent="."]

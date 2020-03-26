@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Source/Data/PhysicalMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/electric.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Scripts/Battle/Effects/EffectParalysis.gd" type="Script" id=3]
+[ext_resource path="res://Source/Scripts/Battle/Effects/EffectFlinch.gd" type="Script" id=4]
 
 [node name="thunder-fang" type="Node"]
 script = ExtResource( 1 )
@@ -22,6 +24,16 @@ battle_style = 0
 description = "The user bites with electrified fangs. This may also
 make the target flinch or leave it with paralysis."
 
-[node name="super" type="Node" parent="."]
+[node name="Effects" type="Node" parent="."]
 
-[node name="charge" type="Node" parent="super"]
+[node name="paralysis" type="Node" parent="Effects"]
+script = ExtResource( 3 )
+effected_pokemon = 1
+guaranteed = false
+chance = 0.1
+
+[node name="flinch" type="Node" parent="Effects"]
+script = ExtResource( 4 )
+effected_pokemon = 1
+guaranteed = false
+chance = 0.1

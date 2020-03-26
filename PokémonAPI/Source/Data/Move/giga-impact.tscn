@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user charges at the target using every bit of its
 power. The user can’t move on the next turn."
+
+[node name="Effects" type="Node" parent="."]

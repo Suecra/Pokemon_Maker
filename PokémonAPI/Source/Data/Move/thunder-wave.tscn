@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Source/Data/BoostMove.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/StatusMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/electric.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Source/Data/Contest-Effect/contest_effect4.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Source/Scripts/Battle/Effects/EffectParalysis.gd" type="Script" id=4]
@@ -10,19 +10,24 @@ script = ExtResource( 1 )
 move_name = "Thunder-wave"
 type = ExtResource( 2 )
 damage_class = 2
+power = 0
 accuracy = 90
+priority = 0
 pp = 20
+z_power = 0
 flags = 64
+hit_range = 0
+is_HM = false
+contest_type = 0
 contest_effect = ExtResource( 3 )
+battle_style = 0
 description = "The user launches a weak jolt of electricity that
 paralyzes the target."
-
-[node name="normal" type="Node" parent="."]
-
-[node name="charge" type="Node" parent="normal"]
 
 [node name="Effects" type="Node" parent="."]
 
 [node name="paralysis" type="Node" parent="Effects"]
 script = ExtResource( 4 )
 effected_pokemon = 1
+guaranteed = true
+chance = 0

@@ -22,3 +22,5 @@ battle_style = 0
 description = "If the Pokémon the user has inflicted damage on
 have already used their moves, this move eliminates
 the effect of the target’s Ability."
+
+[node name="Effects" type="Node" parent="."]

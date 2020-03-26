@@ -23,12 +23,4 @@ battle_style = 0
 description = "Two turns after this move is used, a hunk of psychic
 energy attacks the target."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="confusion" type="Node" parent="normal"]
-
-[node name="psychic" type="Node" parent="normal"]
-
-[node name="kinesis" type="Node" parent="normal"]
-
-[node name="calm-mind" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

@@ -13,7 +13,7 @@ accuracy = 0
 priority = 0
 pp = 1
 z_power = 0
-flags = 32
+flags = 1056
 hit_range = 1
 is_HM = false
 contest_type = 0
@@ -22,3 +22,5 @@ battle_style = 0
 description = "After obtaining Z-Power, the user, Kommo-o,
 attacks the opposing Pokémon with full force. This
 move boosts the user’s stats."
+
+[node name="Effects" type="Node" parent="."]

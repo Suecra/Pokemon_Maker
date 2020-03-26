@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Source/Data/BoostMove.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/StatusMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/bug.tscn" type="PackedScene" id=2]
 
 [node name="sticky-web" type="Node"]
@@ -22,10 +22,5 @@ battle_style = 0
 description = "The user weaves a sticky net around the opposing
 team, which lowers their Speed stat upon switching
 into battle."
-attack_boost = 0
-defense_boost = 0
-special_attack_boost = 0
-special_defense_boost = 0
-speed_boost = 0
-accuracy_boost = 0
-evasion_boost = 0
+
+[node name="Effects" type="Node" parent="."]

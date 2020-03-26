@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user stabs the target with a sharp horn. This
 attack never misses."
+
+[node name="Effects" type="Node" parent="."]

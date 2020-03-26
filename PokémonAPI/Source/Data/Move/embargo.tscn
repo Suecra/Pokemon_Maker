@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Source/Data/BoostMove.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/StatusMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/dark.tscn" type="PackedScene" id=2]
 
 [node name="embargo" type="Node"]
@@ -22,10 +22,5 @@ battle_style = 0
 description = "This move prevents the target from using its held
 item for five turns. Its Trainer is also prevented from
 using items on it."
-attack_boost = 0
-defense_boost = 0
-special_attack_boost = 0
-special_defense_boost = 0
-speed_boost = 0
-accuracy_boost = 0
-evasion_boost = 0
+
+[node name="Effects" type="Node" parent="."]

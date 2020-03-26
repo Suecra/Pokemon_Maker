@@ -21,3 +21,5 @@ contest_type = 3
 contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user burrows, then attacks on the next turn."
+
+[node name="Effects" type="Node" parent="."]

@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user attacks with electrically charged fists.
 This move changes Normal-type moves to
 Electric-type moves."
+
+[node name="Effects" type="Node" parent="."]

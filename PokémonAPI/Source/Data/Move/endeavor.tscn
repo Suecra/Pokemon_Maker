@@ -23,6 +23,4 @@ battle_style = 0
 description = "This attack move cuts down the target’s HP to equal
 the user’s HP."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="endure" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

@@ -23,6 +23,4 @@ battle_style = 0
 description = "The user attacks last. In return, this throw move
 never misses."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="fake-out" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

@@ -13,7 +13,7 @@ accuracy = 100
 priority = 0
 pp = 15
 z_power = 0
-flags = 32
+flags = 544
 hit_range = 0
 is_HM = false
 contest_type = 0
@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user strikes the target with a burning lash. This
 also lowers the target’s Defense stat."
+
+[node name="Effects" type="Node" parent="."]

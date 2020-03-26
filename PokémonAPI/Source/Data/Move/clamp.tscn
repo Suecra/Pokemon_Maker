@@ -23,6 +23,4 @@ battle_style = 0
 description = "The target is clamped and squeezed by the user’s
 very thick and sturdy shell for four to five turns."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="rain-dance" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

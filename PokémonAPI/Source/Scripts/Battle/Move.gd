@@ -21,7 +21,7 @@ func set_current_pp(value: int):
 func get_move_data():
 	return Utils.unpack(self, move, "Move")
 
-func can_use():
+func _can_use():
 	return current_pp > 0
 
 func restore_pp():

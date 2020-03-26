@@ -23,6 +23,4 @@ battle_style = 0
 description = "The user chomps hard on the target with its sharp
 front fangs. This cuts the target’s HP in half."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="scary-face" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user charges its head into its target, using its
 powerful guard hair. This also damages the user
 a little."
+
+[node name="Effects" type="Node" parent="."]

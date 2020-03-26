@@ -13,7 +13,7 @@ accuracy = 100
 priority = 0
 pp = 5
 z_power = 0
-flags = 32
+flags = 1056
 hit_range = 0
 is_HM = false
 contest_type = 0
@@ -22,3 +22,5 @@ battle_style = 0
 description = "After soaring upward, the user attacks its target by
 dropping out of the sky at high speeds. But it lowers
 its own Defense and Sp. Def stats in the process."
+
+[node name="Effects" type="Node" parent="."]

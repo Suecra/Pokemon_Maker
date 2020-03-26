@@ -22,3 +22,5 @@ battle_style = 0
 description = "A column of grass hits the target. When used with
 its water equivalent, its power increases and a vast
 swamp appears."
+
+[node name="Effects" type="Node" parent="."]

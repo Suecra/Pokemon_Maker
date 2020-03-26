@@ -22,3 +22,5 @@ battle_style = 0
 description = "Deep-seated grudges summoned by the user’s
 Z-Power trap the target. The power varies,
 depending on the original move."
+
+[node name="Effects" type="Node" parent="."]

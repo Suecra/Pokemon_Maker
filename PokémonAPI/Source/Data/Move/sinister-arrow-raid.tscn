@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user, Decidueye, creates countless arrows
 using its Z-Power and shoots the target with
 full force."
+
+[node name="Effects" type="Node" parent="."]

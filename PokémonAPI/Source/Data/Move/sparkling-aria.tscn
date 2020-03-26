@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user bursts into song, emitting many bubbles.
 Any Pokémon suffering from a burn will be healed
 by the touch of these bubbles."
+
+[node name="Effects" type="Node" parent="."]

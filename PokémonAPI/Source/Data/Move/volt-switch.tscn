@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "After making its attack, the user rushes back to
 switch places with a party Pokémon in waiting."
+
+[node name="Effects" type="Node" parent="."]

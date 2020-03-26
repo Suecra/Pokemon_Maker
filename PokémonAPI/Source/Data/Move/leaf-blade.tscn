@@ -23,3 +23,5 @@ battle_style = 0
 description = "The user handles a sharp leaf like a sword and
 attacks by cutting its target. Critical hits land
 more easily."
+
+[node name="Effects" type="Node" parent="."]

@@ -23,3 +23,5 @@ battle_style = 0
 description = "The user attacks everything around it by causing a
 tremendous explosion. The user faints upon using
 this move."
+
+[node name="Effects" type="Node" parent="."]

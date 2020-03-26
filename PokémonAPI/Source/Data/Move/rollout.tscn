@@ -23,12 +23,4 @@ battle_style = 0
 description = "The user continually rolls into the target over five
 turns. It becomes more powerful each time it hits."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="harden" type="Node" parent="normal"]
-
-[node name="defense-curl" type="Node" parent="normal"]
-
-[node name="super" type="Node" parent="."]
-
-[node name="defense-curl" type="Node" parent="super"]
+[node name="Effects" type="Node" parent="."]

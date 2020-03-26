@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user throws a punch at blinding speed. This
 move always goes first."
+
+[node name="Effects" type="Node" parent="."]

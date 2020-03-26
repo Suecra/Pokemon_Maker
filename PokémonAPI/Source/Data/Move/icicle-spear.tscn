@@ -23,6 +23,4 @@ battle_style = 0
 description = "The user launches sharp icicles at the target two to
 five times in a row."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="hail" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

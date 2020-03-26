@@ -23,8 +23,4 @@ battle_style = 0
 description = "The target is jabbed with a sharply pointed horn to
 inflict damage."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="leer" type="Node" parent="normal"]
-
 [node name="Effects" type="Node" parent="."]

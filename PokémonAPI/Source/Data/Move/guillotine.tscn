@@ -23,8 +23,4 @@ battle_style = 0
 description = "A vicious, tearing attack with big pincers. The target
 faints instantly if this attack hits."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="vice-grip" type="Node" parent="normal"]
-
 [node name="Effects" type="Node" parent="."]

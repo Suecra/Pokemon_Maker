@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user attacks by slicing with a long horn. The
 target’s stat changes don’t affect this
 attack’s damage."
+
+[node name="Effects" type="Node" parent="."]

@@ -24,6 +24,4 @@ description = "The power stored using the move Stockpile is
 released at once in an attack. The more power
 is stored, the greater the move’s power."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="stockpile" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

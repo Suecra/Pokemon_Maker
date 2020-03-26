@@ -23,3 +23,5 @@ battle_style = 0
 description = "As long as this move is in use, the power of rage
 raises the Attack stat each time the user is hit
 in battle."
+
+[node name="Effects" type="Node" parent="."]

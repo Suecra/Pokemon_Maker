@@ -22,3 +22,5 @@ battle_style = 0
 description = "In this two-turn attack, the user gathers light and
 fills a blade with the light’s energy, attacking the
 target on the next turn."
+
+[node name="Effects" type="Node" parent="."]

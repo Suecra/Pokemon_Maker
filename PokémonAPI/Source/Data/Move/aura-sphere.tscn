@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user lets loose a blast of aura power from deep
 within its body at the target. This attack
 never misses."
+
+[node name="Effects" type="Node" parent="."]

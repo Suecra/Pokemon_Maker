@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user, Pikachu wearing a cap, powers up a jolt of
 electricity using its Z-Power and unleashes it.
 Critical hits land more easily."
+
+[node name="Effects" type="Node" parent="."]

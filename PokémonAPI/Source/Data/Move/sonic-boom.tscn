@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The target is hit with a destructive shock wave that
 always inflicts 20 HP damage."
+
+[node name="Effects" type="Node" parent="."]

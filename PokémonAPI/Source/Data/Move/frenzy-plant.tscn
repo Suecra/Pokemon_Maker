@@ -23,6 +23,4 @@ battle_style = 0
 description = "The user slams the target with an enormous tree.
 The user can’t move on the next turn."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="growth" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

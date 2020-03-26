@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Source/Data/SpecialMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/fighting.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Scripts/Battle/Effects/EffectBoost.gd" type="Script" id=3]
 
 [node name="focus-blast" type="Node"]
 script = ExtResource( 1 )
@@ -13,7 +14,7 @@ accuracy = 70
 priority = 0
 pp = 5
 z_power = 0
-flags = 32
+flags = 544
 hit_range = 0
 is_HM = false
 contest_type = 0
@@ -22,3 +23,18 @@ battle_style = 0
 description = "The user heightens its mental focus and unleashes
 its power. This may also lower the target’s 
 Sp. Def stat."
+
+[node name="Effects" type="Node" parent="."]
+
+[node name="Boosts" type="Node" parent="Effects"]
+script = ExtResource( 3 )
+effected_pokemon = 1
+guaranteed = true
+chance = 0.1
+attack_boost = 0
+defense_boost = 0
+special_attack_boost = 0
+special_defense_boost = 0
+speed_boost = 0
+accuracy_boost = 0
+evasion_boost = 0

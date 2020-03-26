@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user throws a stone or similar projectile to
 attack an opponent. A flying Pokémon will fall to the
 ground when it’s hit."
+
+[node name="Effects" type="Node" parent="."]

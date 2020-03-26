@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user hits the target with a powerful electric
 current collected by its Z-Power. The power varies,
 depending on the original move."
+
+[node name="Effects" type="Node" parent="."]

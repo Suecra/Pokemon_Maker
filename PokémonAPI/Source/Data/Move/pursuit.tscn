@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The power of this attack move is doubled if it’s used
 on a target that’s switching out of battle."
+
+[node name="Effects" type="Node" parent="."]

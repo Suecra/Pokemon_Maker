@@ -23,8 +23,4 @@ battle_style = 0
 description = "The target is attacked with a slash of claws or
 blades. Critical hits land more easily."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="scratch" type="Node" parent="normal"]
-
-[node name="swords-dance" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

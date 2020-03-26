@@ -23,10 +23,4 @@ battle_style = 0
 description = "The user strikes the target with a hard bone two to
 five times in a row."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="focus-energy" type="Node" parent="normal"]
-
-[node name="bone-club" type="Node" parent="normal"]
-
-[node name="bonemerang" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

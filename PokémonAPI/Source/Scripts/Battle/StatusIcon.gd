@@ -20,6 +20,3 @@ func set_status(value):
 func update_visiblity(visible):
 	if last_visible_node != null:
 		last_visible_node.visible = visible
-
-func _ready():
-	pass

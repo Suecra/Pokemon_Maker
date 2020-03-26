@@ -23,6 +23,4 @@ battle_style = 0
 description = "The user grabs the target and recklessly dives for
 the ground. This also damages the user a little."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="mind-reader" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

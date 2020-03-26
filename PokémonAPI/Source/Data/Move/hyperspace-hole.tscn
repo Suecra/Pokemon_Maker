@@ -22,3 +22,5 @@ battle_style = 0
 description = "Using a hyperspace hole, the user appears right
 next to the target and strikes. This also hits a target
 using a move such as Protect or Detect."
+
+[node name="Effects" type="Node" parent="."]

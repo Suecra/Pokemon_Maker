@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user attacks its target by hitting it with brutal
 strikes. The target is hit twice in a row."
+
+[node name="Effects" type="Node" parent="."]

@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user attacks opposing Pokémon by manifesting
 the power of the land in fearsome blades of stone."
+
+[node name="Effects" type="Node" parent="."]

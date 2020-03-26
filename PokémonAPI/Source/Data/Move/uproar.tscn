@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user attacks in an uproar for three turns.
 During that time, no Pokémon can fall asleep."
+
+[node name="Effects" type="Node" parent="."]

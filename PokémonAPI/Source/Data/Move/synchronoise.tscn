@@ -22,3 +22,5 @@ battle_style = 0
 description = "Using an odd shock wave, the user inflicts damage
 on any Pokémon of the same type in the area
 around it."
+
+[node name="Effects" type="Node" parent="."]

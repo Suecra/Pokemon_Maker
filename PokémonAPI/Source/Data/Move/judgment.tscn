@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user releases countless shots of light at the
 target. This move’s type varies depending on the
 kind of Plate the user is holding."
+
+[node name="Effects" type="Node" parent="."]

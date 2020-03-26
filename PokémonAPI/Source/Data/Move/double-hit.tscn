@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user slams the target with a long tail, vines, or a
 tentacle. The target is hit twice in a row."
+
+[node name="Effects" type="Node" parent="."]

@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user attacks a target with a pillar of light. This
 move inflicts Attack or Sp. Atk damage—whichever
 stat is higher for the user."
+
+[node name="Effects" type="Node" parent="."]

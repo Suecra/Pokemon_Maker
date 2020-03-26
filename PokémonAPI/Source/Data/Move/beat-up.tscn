@@ -23,3 +23,5 @@ battle_style = 0
 description = "The user gets all party Pokémon to attack the target.
 The more party Pokémon, the greater the number
 of attacks."
+
+[node name="Effects" type="Node" parent="."]

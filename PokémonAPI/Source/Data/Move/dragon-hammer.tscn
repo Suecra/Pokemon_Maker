@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user uses its body like a hammer to attack the
 target and inflict damage."
+
+[node name="Effects" type="Node" parent="."]

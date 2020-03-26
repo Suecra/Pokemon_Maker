@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "A unique attack that varies in type depending on the
 Pokémon using it."
+
+[node name="Effects" type="Node" parent="."]

@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "This move can be used only after the user has used
 all the other moves it knows in the battle."
+
+[node name="Effects" type="Node" parent="."]

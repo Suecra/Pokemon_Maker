@@ -23,3 +23,5 @@ battle_style = 0
 description = "The user tucks in its head to raise its Defense
 stat on the first turn, then rams the target on the
 next turn."
+
+[node name="Effects" type="Node" parent="."]

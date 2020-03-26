@@ -23,8 +23,4 @@ battle_style = 0
 description = "Hard, pointed, sharp claws rake the target to
 inflict damage."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="leer" type="Node" parent="normal"]
-
 [node name="Effects" type="Node" parent="."]

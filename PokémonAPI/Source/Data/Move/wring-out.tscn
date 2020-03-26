@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user powerfully wrings the target. The more HP
 the target has, the greater the move’s power."
+
+[node name="Effects" type="Node" parent="."]

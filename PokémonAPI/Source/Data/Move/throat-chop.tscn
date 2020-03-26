@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user attacks the target’s throat, and the
 resultant suffering prevents the target from using
 moves that emit sound for two turns."
+
+[node name="Effects" type="Node" parent="."]

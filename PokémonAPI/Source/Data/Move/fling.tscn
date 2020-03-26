@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user flings its held item at the target to attack.
 This move’s power and effects depend on the item."
+
+[node name="Effects" type="Node" parent="."]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Source/Data/PhysicalMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/normal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Source/Data/Contest-Effect/contest_effect4.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Scripts/Battle/Effects/EffectParalysis.gd" type="Script" id=4]
 
 [node name="body-slam" type="Node"]
 script = ExtResource( 1 )
@@ -22,3 +23,11 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user drops onto the target with its full body
 weight. This may also leave the target with paralysis."
+
+[node name="Effects" type="Node" parent="."]
+
+[node name="paralysis" type="Node" parent="Effects"]
+script = ExtResource( 4 )
+effected_pokemon = 1
+guaranteed = false
+chance = 0.3

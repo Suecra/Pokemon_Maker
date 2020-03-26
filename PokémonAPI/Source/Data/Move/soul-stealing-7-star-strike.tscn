@@ -22,3 +22,5 @@ battle_style = 0
 description = "After obtaining Z-Power, the user, Marshadow,
 punches and kicks the target consecutively
 with full force."
+
+[node name="Effects" type="Node" parent="."]

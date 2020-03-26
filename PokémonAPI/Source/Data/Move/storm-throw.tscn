@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user strikes the target with a fierce blow. This
 attack always results in a critical hit."
+
+[node name="Effects" type="Node" parent="."]

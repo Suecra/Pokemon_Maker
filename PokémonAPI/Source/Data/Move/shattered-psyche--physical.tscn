@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user controls the target with its Z-Power and
 hurts the target with full force. The power varies,
 depending on the original move."
+
+[node name="Effects" type="Node" parent="."]

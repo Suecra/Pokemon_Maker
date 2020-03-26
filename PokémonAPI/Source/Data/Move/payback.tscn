@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user stores power, then attacks. If the user
 moves after the target, this attack’s power will
 be doubled."
+
+[node name="Effects" type="Node" parent="."]

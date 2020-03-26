@@ -22,3 +22,5 @@ battle_style = 0
 description = "Driven by frustration, the user attacks the target. If
 the user’s previous move has failed, the power of
 this move doubles."
+
+[node name="Effects" type="Node" parent="."]

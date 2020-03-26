@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user retaliates with much greater force against
 the opponent that last inflicted damage on it."
+
+[node name="Effects" type="Node" parent="."]

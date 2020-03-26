@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user attacks while simultaneously stitching the
 target’s shadow to the ground to prevent the target
 from escaping."
+
+[node name="Effects" type="Node" parent="."]

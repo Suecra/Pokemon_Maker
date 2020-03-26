@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "This move enables the user to attack first. This move
 fails if the target is not readying an attack."
+
+[node name="Effects" type="Node" parent="."]

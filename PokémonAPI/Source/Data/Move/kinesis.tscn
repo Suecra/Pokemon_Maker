@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Source/Data/BoostMove.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/StatusMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/psychic.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Source/Data/Contest-Effect/contest_effect4.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Scripts/Battle/Effects/EffectBoost.gd" type="Script" id=4]
 
 [node name="kinesis" type="Node"]
 script = ExtResource( 1 )
@@ -22,6 +23,14 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user distracts the target by bending a spoon.
 This lowers the target’s accuracy."
+
+[node name="Effects" type="Node" parent="."]
+
+[node name="Boosts" type="Node" parent="Effects"]
+script = ExtResource( 4 )
+effected_pokemon = 1
+guaranteed = true
+chance = 0.0
 attack_boost = 0
 defense_boost = 0
 special_attack_boost = 0
@@ -29,9 +38,3 @@ special_defense_boost = 0
 speed_boost = 0
 accuracy_boost = 0
 evasion_boost = 0
-
-[node name="normal" type="Node" parent="."]
-
-[node name="confusion" type="Node" parent="normal"]
-
-[node name="psychic" type="Node" parent="normal"]

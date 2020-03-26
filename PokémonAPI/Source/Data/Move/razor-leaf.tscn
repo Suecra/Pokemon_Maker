@@ -23,6 +23,4 @@ battle_style = 0
 description = "Sharp-edged leaves are launched to slash at the
 opposing Pokémon. Critical hits land more easily."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="growth" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

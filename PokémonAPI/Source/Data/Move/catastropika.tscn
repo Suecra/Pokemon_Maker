@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user, Pikachu, surrounds itself with the
 maximum amount of electricity using its Z-Power
 and pounces on its target with full force."
+
+[node name="Effects" type="Node" parent="."]

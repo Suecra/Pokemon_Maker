@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user brings down a giant flame. This move’s
 power is increased when influenced by an enormous
 lightning bolt."
+
+[node name="Effects" type="Node" parent="."]

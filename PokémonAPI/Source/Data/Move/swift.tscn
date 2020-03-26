@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "Star-shaped rays are shot at the opposing Pokémon.
 This attack never misses."
+
+[node name="Effects" type="Node" parent="."]

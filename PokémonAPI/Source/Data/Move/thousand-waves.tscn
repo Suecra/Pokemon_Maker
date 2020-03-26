@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user attacks with a wave that crawls along the
 ground. Those hit can’t flee from battle."
+
+[node name="Effects" type="Node" parent="."]

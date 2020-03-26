@@ -23,8 +23,4 @@ battle_style = 0
 description = "A reckless, life-risking tackle. This also damages the
 user quite a lot."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="harden" type="Node" parent="normal"]
-
-[node name="focus-energy" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

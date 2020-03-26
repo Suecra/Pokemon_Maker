@@ -11,6 +11,7 @@ func _init():
 func _ready():
 	counter = randi() % 4 + 2
 	register(pokemon, "CAN_MOVE", "can_move", -1)
+	battle.register_message(pokemon.nickname + " became confused!")
 
 func can_move(args):
 	if args.can_move:
@@ -30,7 +31,7 @@ func do_self_hit():
 	self_hit.targets.append(pokemon)
 	self_hit.turn = battle.current_turn
 	battle.register_message(pokemon.nickname + " hit itself by it's confusion!")
-	self_hit._hit()
+	self_hit._hit(pokemon)
 
 func _heal():
 	battle.register_message(pokemon.nickname + " is no longer confused!")

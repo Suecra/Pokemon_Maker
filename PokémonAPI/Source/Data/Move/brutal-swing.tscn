@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user swings its body around violently to inflict
 damage on everything in its vicinity."
+
+[node name="Effects" type="Node" parent="."]

@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user attacks the target with a hazardous,
 full-power headbutt. This also damages the
 user terribly."
+
+[node name="Effects" type="Node" parent="."]

@@ -13,7 +13,7 @@ accuracy = 0
 priority = 0
 pp = 5
 z_power = 0
-flags = 32
+flags = 1056
 hit_range = 0
 is_HM = false
 contest_type = 0
@@ -22,3 +22,5 @@ battle_style = 0
 description = "Using its many arms, the user unleashes a barrage of
 attacks that ignore the effects of moves like Protect
 and Detect. But the user’s Defense stat falls."
+
+[node name="Effects" type="Node" parent="."]

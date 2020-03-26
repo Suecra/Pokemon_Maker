@@ -23,8 +23,4 @@ battle_style = 0
 description = "The user lets loose a flurry of open-palmed arm
 thrusts that hit two to five times in a row."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="focus-energy" type="Node" parent="normal"]
-
-[node name="fake-out" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

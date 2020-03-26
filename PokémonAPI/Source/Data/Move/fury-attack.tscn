@@ -23,8 +23,4 @@ battle_style = 0
 description = "The target is jabbed repeatedly with a horn or beak
 two to five times in a row."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="horn-attack" type="Node" parent="normal"]
-
-[node name="peck" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

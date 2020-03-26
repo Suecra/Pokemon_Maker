@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user gets revenge for a fainted ally. If an ally
 fainted in the previous turn, this move’s power
 is increased."
+
+[node name="Effects" type="Node" parent="."]

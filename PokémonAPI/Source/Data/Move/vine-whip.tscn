@@ -23,8 +23,4 @@ battle_style = 0
 description = "The target is struck with slender, whiplike vines to
 inflict damage."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="growth" type="Node" parent="normal"]
-
 [node name="Effects" type="Node" parent="."]

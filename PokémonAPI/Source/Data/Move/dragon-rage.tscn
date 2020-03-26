@@ -23,8 +23,4 @@ battle_style = 0
 description = "This attack hits the target with a shock wave of
 pure rage. This attack always inflicts 40 HP damage."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="dragon-breath" type="Node" parent="normal"]
-
-[node name="dragon-dance" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

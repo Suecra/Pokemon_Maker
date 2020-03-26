@@ -22,3 +22,5 @@ battle_style = 0
 description = "Drawing power from the Eternal Flower, the user
 fires a powerful beam of light. This also damages the
 user quite a lot."
+
+[node name="Effects" type="Node" parent="."]

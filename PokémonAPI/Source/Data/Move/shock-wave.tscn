@@ -23,6 +23,4 @@ battle_style = 0
 description = "The user strikes the target with a quick jolt of
 electricity. This attack never misses."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="charge" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

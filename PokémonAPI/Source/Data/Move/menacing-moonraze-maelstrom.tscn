@@ -22,3 +22,5 @@ battle_style = 0
 description = "After obtaining Z-Power, the user, Lunala,
 attacks the target with full force. This move can
 ignore the effect of the target’s Ability."
+
+[node name="Effects" type="Node" parent="."]

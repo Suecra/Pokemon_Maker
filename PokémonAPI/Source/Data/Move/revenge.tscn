@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "This attack move’s power is doubled if the user has
 been hurt by the opponent in the same turn."
+
+[node name="Effects" type="Node" parent="."]

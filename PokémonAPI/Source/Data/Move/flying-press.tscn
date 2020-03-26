@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user dives down onto the target from the sky.
 This move is Fighting and Flying type simultaneously."
+
+[node name="Effects" type="Node" parent="."]

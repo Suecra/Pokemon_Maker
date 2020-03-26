@@ -23,10 +23,4 @@ battle_style = 0
 description = "A physical attack in which the user charges and
 slams into the target with its whole body."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="leer" type="Node" parent="normal"]
-
-[node name="harden" type="Node" parent="normal"]
-
-[node name="defense-curl" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user slashes at the target by crossing its
 scythes or claws as if they were a pair of scissors."
+
+[node name="Effects" type="Node" parent="."]

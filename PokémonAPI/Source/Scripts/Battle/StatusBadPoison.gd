@@ -15,7 +15,7 @@ func increase_damage():
 
 func end_of_turn():
 	increase_damage()
-	battle.register_message(pokemon.nickname + " was hurt from it's poision!")
+	battle.register_message(pokemon.nickname + " was hurt from it's poison!")
 	pokemon.damage_percent(damage)
 
 func switch_in():

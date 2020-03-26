@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user attacks opposing Pokémon with fire.
 If a Pokémon is holding a certain item, such as a
 Berry, the item becomes burned up and unusable."
+
+[node name="Effects" type="Node" parent="."]

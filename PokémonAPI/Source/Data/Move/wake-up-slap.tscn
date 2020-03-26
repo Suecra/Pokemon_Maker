@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "This attack inflicts big damage on a sleeping target.
 This also wakes the target up, however."
+
+[node name="Effects" type="Node" parent="."]

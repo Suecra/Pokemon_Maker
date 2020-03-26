@@ -24,6 +24,4 @@ description = "The target is slashed with scythes or claws. This
 attack becomes more powerful if it hits
 in succession."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="swords-dance" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

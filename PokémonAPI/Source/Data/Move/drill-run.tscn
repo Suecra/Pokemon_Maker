@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user crashes into its target while rotating its
 body like a drill. Critical hits land more easily."
+
+[node name="Effects" type="Node" parent="."]

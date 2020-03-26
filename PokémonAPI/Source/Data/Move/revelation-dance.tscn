@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user attacks the target by dancing very hard.
 The user’s type determines the type of this move."
+
+[node name="Effects" type="Node" parent="."]

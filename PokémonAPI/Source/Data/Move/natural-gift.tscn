@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user draws power to attack by using its held
 Berry. The Berry determines the move’s type
 and power."
+
+[node name="Effects" type="Node" parent="."]

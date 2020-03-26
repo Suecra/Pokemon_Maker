@@ -2,6 +2,7 @@ extends Node
 
 const Switch = preload("res://Source/Scripts/Battle/Switch.gd")
 const Utils = preload("res://Source/Scripts/Utils.gd")
+const Move = preload("res://Source/Scripts/Battle/Move.gd")
 
 signal choice_made(sender, half_turn)
 
@@ -10,6 +11,7 @@ var pokemon_party
 var bag
 var field
 var battle
+var resigned: bool
 
 func has_pokemon_left():
 	return pokemon_party.get_battler_count() > 0
@@ -36,8 +38,18 @@ func switch(battler_index: int):
 	return switch
 
 func move(move_index: int):
+	if move_index == -1:
+		return struggle()
 	var move = current_pokemon.get_movepool().get_move(move_index)
 	move.trainer = self
+	move.target_index = _select_target()
+	return move
+
+func struggle():
+	var move = Move.new()
+	move.move = load("res://Source/Data/Move/struggle.tscn")
+	move.trainer = self
+	move.pokemon = current_pokemon
 	move.target_index = _select_target()
 	return move
 
@@ -69,6 +81,7 @@ func _ready():
 		pokemon_party = $PokemonParty
 
 func init_battle():
+	resigned = false
 	for i in pokemon_party.get_pokemon_count():
 		pokemon_party.get_pokemon(i).init_battle()
 		

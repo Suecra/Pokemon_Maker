@@ -30,10 +30,4 @@ leave the target frozen."
 script = ExtResource( 4 )
 effected_pokemon = 1
 guaranteed = false
-chance = 10.0
-
-[node name="normal" type="Node" parent="."]
-
-[node name="fire-punch" type="Node" parent="normal"]
-
-[node name="thunder-punch" type="Node" parent="normal"]
+chance = 0.1

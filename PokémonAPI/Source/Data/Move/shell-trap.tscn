@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user sets a shell trap. If the user is hit by a
 physical move, the trap will explode and inflict
 damage on the opposing Pokémon."
+
+[node name="Effects" type="Node" parent="."]

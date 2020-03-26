@@ -340,7 +340,7 @@ func switch_in():
 
 func switch_out():
 	for status in $SecondaryStatus.get_children():
-		status.heal_silent()
+		status._heal_silent()
 	notify("SWITCH_OUT")
 
 func prepare_for_save(new_owner):

@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user slams a barrage of hard-shelled seeds
 down on the target from above."
+
+[node name="Effects" type="Node" parent="."]

@@ -13,6 +13,10 @@ const EffectPoison = preload("res://Source/Scripts/Battle/Effects/EffectPoison.g
 const EffectBadPoison = preload("res://Source/Scripts/Battle/Effects/EffectBadPoison.gd")
 const EffectSleep = preload("res://Source/Scripts/Battle/Effects/EffectSleep.gd")
 const EffectFreeze = preload("res://Source/Scripts/Battle/Effects/EffectFreeze.gd")
+
+const EffectConfusion = preload("res://Source/Scripts/Battle/Effects/EffectConfusion.gd")
+const EffectFlinch = preload("res://Source/Scripts/Battle/Effects/EffectFlinch.gd")
+
 const Utils = preload("res://Source/Scripts/Utils.gd")
 
 var contest_effects = []
@@ -135,11 +139,11 @@ func import_effects(item):
 				effect.effected_pokemon = Effect.EffectedPokemon.Target
 			for stat_change in api_item["stat_changes"]:
 				match stat_change["stat"]["name"]:
-					"attack": effect.attack_boost = stat_change.change
-					"defense": effect.defense_boost = stat_change.change
-					"special-attack": effect.special_attack_boost = stat_change.change
-					"special-denfense": effect.special_defense_boost = stat_change.change
-					"speed": effect.speed_boost = stat_change.change
+					"attack": effect.attack_boost = int(stat_change["change"])
+					"defense": effect.defense_boost = int(stat_change["change"])
+					"special-attack": effect.special_attack_boost = int(stat_change["change"])
+					"special-denfense": effect.special_defense_boost = int(stat_change["change"])
+					"speed": effect.speed_boost = int(stat_change["change"])
 		if api_item["meta"]["ailment"]["name"] != "none":
 			var effect
 			match api_item["meta"]["ailment"]["name"]:
@@ -148,6 +152,7 @@ func import_effects(item):
 				"poison": effect = Utils.add_typed_node_if_not_exists(EffectPoison, effects, item, "poison")
 				"sleep": effect = Utils.add_typed_node_if_not_exists(EffectSleep, effects, item, "sleep")
 				"freeze": effect = Utils.add_typed_node_if_not_exists(EffectFreeze, effects, item, "freeze")
+				"confusion": effect = Utils.add_typed_node_if_not_exists(EffectConfusion, effects, item, "confusion")
 			if effect != null:
 				effect.effected_pokemon = Effect.EffectedPokemon.Target
 				if api_item["effect_chance"] == null:
@@ -156,6 +161,15 @@ func import_effects(item):
 				else:
 					effect.guaranteed = false
 					effect.chance = api_item["effect_chance"] / 100
+		if api_item["meta"]["flinch_chance"] > 0:
+			var effect = Utils.add_typed_node_if_not_exists(EffectFlinch, effects, item, "flinch")
+			effect.effected_pokemon = Effect.EffectedPokemon.Target
+			if api_item["meta"]["flinch_chance"] == 100:
+				effect.guaranteed = true
+				effect.chance = 0
+			else:
+				effect.guaranteed = false
+				effect.chance = api_item["meta"]["flinch_chance"] / 100
 
 func has_effect() -> bool:
 	return api_item["stat_changes"] != null || api_item["meta"]["ailment"]["name"] != "none"

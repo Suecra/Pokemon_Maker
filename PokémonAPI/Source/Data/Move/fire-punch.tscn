@@ -9,22 +9,20 @@
 script = ExtResource( 1 )
 move_name = "Fire-punch"
 type = ExtResource( 2 )
+damage_class = 0
 power = 75
 accuracy = 100
+priority = 0
 pp = 15
+z_power = 0
 flags = 96
+hit_range = 0
+is_HM = false
 contest_type = 1
 contest_effect = ExtResource( 3 )
+battle_style = 0
 description = "The target is punched with a fiery fist. This may also
 leave the target with a burn."
-
-[node name="normal" type="Node" parent="."]
-
-[node name="ice-punch" type="Node" parent="normal"]
-
-[node name="thunder-punch" type="Node" parent="normal"]
-
-[node name="sunny-day" type="Node" parent="normal"]
 
 [node name="Effects" type="Node" parent="."]
 
@@ -32,4 +30,4 @@ leave the target with a burn."
 script = ExtResource( 4 )
 effected_pokemon = 1
 guaranteed = false
-chance = 10.0
+chance = 0.1

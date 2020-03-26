@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user entangles the target with its anchor chain
 while attacking. The target becomes unable to flee."
+
+[node name="Effects" type="Node" parent="."]

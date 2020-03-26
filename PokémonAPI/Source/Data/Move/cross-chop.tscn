@@ -23,6 +23,4 @@ battle_style = 0
 description = "The user delivers a double chop with its forearms
 crossed. Critical hits land more easily."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="focus-energy" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

@@ -23,6 +23,4 @@ battle_style = 0
 description = "A retaliation move that counters any physical attack,
 inflicting double the damage taken."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="taunt" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

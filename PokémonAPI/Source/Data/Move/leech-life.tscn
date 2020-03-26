@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user drains the target’s blood. The user’s HP is
 restored by half the damage taken by the target."
+
+[node name="Effects" type="Node" parent="."]

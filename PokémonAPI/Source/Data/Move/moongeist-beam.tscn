@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user emits a sinister ray to attack the target.
 This move can be used on the target regardless of 
 its Abilities."
+
+[node name="Effects" type="Node" parent="."]

@@ -23,6 +23,4 @@ battle_style = 0
 description = "The user rampages and attacks for two to three
 turns. The user then becomes confused."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="rage" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

@@ -22,3 +22,5 @@ battle_style = 0
 description = "After obtaining Z-Power, the user, Lycanroc,
 attacks the target with full force. This move negates
 the effect on the battlefield."
+
+[node name="Effects" type="Node" parent="."]

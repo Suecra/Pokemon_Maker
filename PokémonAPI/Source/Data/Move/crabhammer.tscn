@@ -23,8 +23,4 @@ battle_style = 0
 description = "The target is hammered with a large pincer. Critical
 hits land more easily."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="swords-dance" type="Node" parent="normal"]
-
-[node name="rain-dance" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

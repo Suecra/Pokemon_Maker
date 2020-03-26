@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user creates a poisonous swamp using its
 Z-Power and sinks the target into it at full force.
 The power varies, depending on the original move."
+
+[node name="Effects" type="Node" parent="."]

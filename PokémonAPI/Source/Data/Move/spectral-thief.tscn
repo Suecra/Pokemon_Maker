@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user hides in the target’s shadow, steals
 the target’s stat boosts, and then attacks."
+
+[node name="Effects" type="Node" parent="."]

@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user extends its shadow and attacks the target
 from behind. This move always goes first."
+
+[node name="Effects" type="Node" parent="."]

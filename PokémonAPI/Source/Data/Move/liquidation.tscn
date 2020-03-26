@@ -13,7 +13,7 @@ accuracy = 100
 priority = 0
 pp = 10
 z_power = 0
-flags = 32
+flags = 544
 hit_range = 0
 is_HM = false
 contest_type = 0
@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user slams into the target using a full-force
 blast of water. This may also lower the target’s
 Defense stat."
+
+[node name="Effects" type="Node" parent="."]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Source/Data/PhysicalMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/fighting.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Source/Data/Contest-Effect/contest_effect3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Scripts/Battle/Effects/EffectBoost.gd" type="Script" id=4]
 
 [node name="superpower" type="Node"]
 script = ExtResource( 1 )
@@ -14,7 +15,7 @@ accuracy = 100
 priority = 0
 pp = 5
 z_power = 0
-flags = 32
+flags = 1056
 hit_range = 0
 is_HM = false
 contest_type = 4
@@ -24,8 +25,17 @@ description = "The user attacks the target with great power.
 However, this also lowers the user’s Attack and
 Defense stats."
 
-[node name="normal" type="Node" parent="."]
+[node name="Effects" type="Node" parent="."]
 
-[node name="mind-reader" type="Node" parent="normal"]
-
-[node name="lock-on" type="Node" parent="normal"]
+[node name="Boosts" type="Node" parent="Effects"]
+script = ExtResource( 4 )
+effected_pokemon = 0
+guaranteed = true
+chance = 1.0
+attack_boost = -1
+defense_boost = -1
+special_attack_boost = 0
+special_defense_boost = 0
+speed_boost = 0
+accuracy_boost = 0
+evasion_boost = 0

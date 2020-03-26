@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user creates a very charming space using its
 Z-Power and totally toys with the target. The power
 varies, depending on the original move."
+
+[node name="Effects" type="Node" parent="."]

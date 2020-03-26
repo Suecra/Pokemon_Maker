@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user gathers the energy of the land and focuses
 that power on opposing Pokémon to damage them."
+
+[node name="Effects" type="Node" parent="."]

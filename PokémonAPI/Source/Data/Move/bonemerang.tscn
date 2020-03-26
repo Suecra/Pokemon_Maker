@@ -23,8 +23,4 @@ battle_style = 0
 description = "The user throws the bone it holds. The bone loops
 around to hit the target twice—coming and going."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="bone-club" type="Node" parent="normal"]
-
-[node name="bone-rush" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

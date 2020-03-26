@@ -22,10 +22,4 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user slashes the target with huge sharp claws."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="dragon-rage" type="Node" parent="normal"]
-
-[node name="dragon-breath" type="Node" parent="normal"]
-
-[node name="dragon-dance" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

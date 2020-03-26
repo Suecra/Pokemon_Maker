@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user bites the target with its psychic
 capabilities. This can also destroy Light Screen
 and Reflect."
+
+[node name="Effects" type="Node" parent="."]

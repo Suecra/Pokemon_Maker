@@ -22,3 +22,5 @@ battle_style = 0
 description = "A column of water strikes the target. When combined
 with its fire equivalent, its power increases and a
 rainbow appears."
+
+[node name="Effects" type="Node" parent="."]

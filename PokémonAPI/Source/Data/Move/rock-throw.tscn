@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user picks up and throws a small rock at the
 target to attack."
+
+[node name="Effects" type="Node" parent="."]

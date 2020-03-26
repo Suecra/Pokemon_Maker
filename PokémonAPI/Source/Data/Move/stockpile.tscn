@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Source/Data/BoostMove.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/StatusMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/normal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Source/Data/Contest-Effect/contest_effect6.tscn" type="PackedScene" id=3]
 
@@ -23,10 +23,5 @@ battle_style = 0
 description = "The user charges up power and raises both its
 Defense and Sp. Def stats. The move can be used
 three times."
-attack_boost = 0
-defense_boost = 0
-special_attack_boost = 0
-special_defense_boost = 0
-speed_boost = 0
-accuracy_boost = 0
-evasion_boost = 0
+
+[node name="Effects" type="Node" parent="."]

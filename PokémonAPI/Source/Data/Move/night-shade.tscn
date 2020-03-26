@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user makes the target see a frightening mirage.
 It inflicts damage equal to the user’s level."
+
+[node name="Effects" type="Node" parent="."]

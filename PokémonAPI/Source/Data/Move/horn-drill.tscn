@@ -24,6 +24,4 @@ description = "The user stabs the target with a horn that rotates
 like a drill. The target faints instantly if this
 attack hits."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="horn-attack" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

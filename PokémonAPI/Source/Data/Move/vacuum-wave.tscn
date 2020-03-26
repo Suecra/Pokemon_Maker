@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user whirls its fists to send a wave of pure
 vacuum at the target. This move always goes first."
+
+[node name="Effects" type="Node" parent="."]

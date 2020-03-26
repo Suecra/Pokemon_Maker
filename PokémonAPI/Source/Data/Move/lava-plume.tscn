@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Source/Data/SpecialMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/fire.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Scripts/Battle/Effects/EffectBurn.gd" type="Script" id=3]
 
 [node name="lava-plume" type="Node"]
 script = ExtResource( 1 )
@@ -22,3 +23,11 @@ battle_style = 0
 description = "The user torches everything around it in an inferno
 of scarlet flames. This may also leave those it hits
 with a burn."
+
+[node name="Effects" type="Node" parent="."]
+
+[node name="burn" type="Node" parent="Effects"]
+script = ExtResource( 3 )
+effected_pokemon = 1
+guaranteed = false
+chance = 0.3

@@ -22,10 +22,4 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The target is blasted with a forceful shot of water."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="rain-dance" type="Node" parent="normal"]
-
-[node name="mud-sport" type="Node" parent="normal"]
-
-[node name="water-sport" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

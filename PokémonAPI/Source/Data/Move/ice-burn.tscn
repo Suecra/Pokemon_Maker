@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Source/Data/SpecialMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/ice.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Scripts/Battle/Effects/EffectBurn.gd" type="Script" id=3]
 
 [node name="ice-burn" type="Node"]
 script = ExtResource( 1 )
@@ -22,3 +23,11 @@ battle_style = 0
 description = "On the second turn, an ultracold, freezing wind
 surrounds the target. This may leave the target with
 a burn."
+
+[node name="Effects" type="Node" parent="."]
+
+[node name="burn" type="Node" parent="Effects"]
+script = ExtResource( 3 )
+effected_pokemon = 1
+guaranteed = false
+chance = 0.3

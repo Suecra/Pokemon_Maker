@@ -20,3 +20,5 @@ contest_type = 0
 contest_effect = null
 battle_style = 0
 description = "The user attacks by pelting the target with leaves."
+
+[node name="Effects" type="Node" parent="."]

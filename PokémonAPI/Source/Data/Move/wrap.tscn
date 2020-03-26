@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "A long body, vines, or the like are used to wrap and 
 squeeze the target for four to five turns."
+
+[node name="Effects" type="Node" parent="."]

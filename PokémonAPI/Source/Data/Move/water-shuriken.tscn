@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user hits the target with throwing stars two to
 five times in a row. This move always goes first."
+
+[node name="Effects" type="Node" parent="."]

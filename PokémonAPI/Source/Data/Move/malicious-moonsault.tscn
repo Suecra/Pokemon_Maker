@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user, Incineroar, strengthens its body using
 its Z-Power and crashes into the target with
 full force."
+
+[node name="Effects" type="Node" parent="."]

@@ -24,18 +24,10 @@ battle_style = 0
 description = "The target is punched with an electrified fist.
 This may also leave the target with paralysis."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="fire-punch" type="Node" parent="normal"]
-
-[node name="ice-punch" type="Node" parent="normal"]
-
-[node name="charge" type="Node" parent="normal"]
-
 [node name="Effects" type="Node" parent="."]
 
 [node name="paralysis" type="Node" parent="Effects"]
 script = ExtResource( 4 )
 effected_pokemon = 1
 guaranteed = false
-chance = 10.0
+chance = 0.1

@@ -22,3 +22,5 @@ battle_style = 0
 description = "Looking for an opening, the user strikes consistently.
 The target’s stat changes don’t affect this
 attack’s damage."
+
+[node name="Effects" type="Node" parent="."]

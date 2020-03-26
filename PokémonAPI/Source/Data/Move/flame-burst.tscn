@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user attacks the target with a bursting flame.
 The bursting flame damages Pokémon next to the
 target as well."
+
+[node name="Effects" type="Node" parent="."]

@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user nimbly strikes the target. If the user is not
 holding an item, this attack inflicts massive damage."
+
+[node name="Effects" type="Node" parent="."]

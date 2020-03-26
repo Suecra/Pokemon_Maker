@@ -23,6 +23,4 @@ battle_style = 0
 description = "The user lunges at the target at a speed that makes
 it almost invisible. This move always goes first."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="double-team" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

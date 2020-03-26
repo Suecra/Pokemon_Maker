@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user gathers dark energy using its Z-Power
 and sucks the target into it. The power varies,
 depending on the original move."
+
+[node name="Effects" type="Node" parent="."]

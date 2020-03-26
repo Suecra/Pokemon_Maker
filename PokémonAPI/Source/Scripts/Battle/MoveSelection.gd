@@ -13,6 +13,7 @@ const SEL_MOVE = 4
 const SEL_RUN = 5
 const SEL_BAG = 6
 const SEL_SWITCH = 7
+const STRUGGLE = -1
 
 signal move_selected
 signal switch_selected
@@ -26,7 +27,6 @@ var state
 func show_selection():
 	state = SelectionState.SELECT_OPTION
 	_show_options()
-	pass
 
 func _show_options():
 	pass
@@ -46,19 +46,27 @@ func selected(id):
 		match id:
 			SEL_CANCEL: emit_signal("canceled")
 			SEL_MOVE:
-				state = SelectionState.SELECT_MOVE
-				_show_moves()
+				if movepool.has_moves_left():
+					state = SelectionState.SELECT_MOVE
+					_show_moves()
+				else:
+					emit_signal("move_selected", STRUGGLE)
 			SEL_RUN: emit_signal("run_selected")
 			SEL_BAG: emit_signal("bag_selected")
 			SEL_SWITCH: emit_signal("switch_selected")
 	elif state == SelectionState.SELECT_MOVE:
-		_hide_moves()
 		match id:
 			SEL_CANCEL:
+				_hide_moves()
 				state = SelectionState.SELECT_OPTION
 				_show_options()
-			SEL_MOVE_1: emit_signal("move_selected", 0)
-			SEL_MOVE_2: emit_signal("move_selected", 1)
-			SEL_MOVE_3: emit_signal("move_selected", 2)
-			SEL_MOVE_4: emit_signal("move_selected", 3)
-	pass
+			SEL_MOVE_1: move_selected(0)
+			SEL_MOVE_2: move_selected(1)
+			SEL_MOVE_3: move_selected(2)
+			SEL_MOVE_4: move_selected(3)
+
+func move_selected(id):
+	var move = movepool.get_move(id)
+	if move._can_use():
+		_hide_moves()
+		emit_signal("move_selected", id)

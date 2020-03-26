@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user soars up with its Z-Power and plummets
 toward the target at full speed. The power varies,
 depending on the original move."
+
+[node name="Effects" type="Node" parent="."]

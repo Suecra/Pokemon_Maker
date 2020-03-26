@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user attacks everything around it with the
 destructive power of a terrible, explosive sound."
+
+[node name="Effects" type="Node" parent="."]

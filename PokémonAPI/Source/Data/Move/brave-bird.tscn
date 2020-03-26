@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user tucks in its wings and charges from a low
 altitude. This also damages the user quite a lot."
+
+[node name="Effects" type="Node" parent="."]

@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user fires a beam of light at its target. The
 move’s type changes depending on the Drive the
 user holds."
+
+[node name="Effects" type="Node" parent="."]

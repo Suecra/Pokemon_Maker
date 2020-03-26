@@ -8,5 +8,6 @@ func _ready():
 	register(pokemon, "CAN_MOVE", "can_move")
 
 func can_move(args):
-	args.can_move = false
-	battle.register_message(pokemon.nickname + " flinched and couldn't move!")
+	if args.can_move:
+		args.can_move = false
+		battle.register_message(pokemon.nickname + " flinched and couldn't move!")

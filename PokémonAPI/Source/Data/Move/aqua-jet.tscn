@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user lunges at the target at a speed that makes
 it almost invisible. This move always goes first."
+
+[node name="Effects" type="Node" parent="."]

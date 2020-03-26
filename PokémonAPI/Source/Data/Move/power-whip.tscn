@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user violently whirls its vines, tentacles, or the 
 like to harshly lash the target."
+
+[node name="Effects" type="Node" parent="."]

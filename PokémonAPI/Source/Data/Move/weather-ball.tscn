@@ -23,12 +23,4 @@ battle_style = 0
 description = "This attack move varies in power and type
 depending on the weather."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="sandstorm" type="Node" parent="normal"]
-
-[node name="rain-dance" type="Node" parent="normal"]
-
-[node name="sunny-day" type="Node" parent="normal"]
-
-[node name="hail" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

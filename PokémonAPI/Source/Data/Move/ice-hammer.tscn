@@ -13,7 +13,7 @@ accuracy = 90
 priority = 0
 pp = 10
 z_power = 0
-flags = 32
+flags = 1056
 hit_range = 0
 is_HM = false
 contest_type = 0
@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The user swings and hits with its strong, heavy fist.
 It lowers the user’s Speed, however."
+
+[node name="Effects" type="Node" parent="."]

@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "This attack move doubles its power if the user is
 poisoned, burned, or paralyzed."
+
+[node name="Effects" type="Node" parent="."]

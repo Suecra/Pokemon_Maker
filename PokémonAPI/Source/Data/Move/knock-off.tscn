@@ -24,6 +24,4 @@ description = "The user slaps down the target’s held item, and that
 item can’t be used in that battle. The move does
 more damage if the target has a held item."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="fake-out" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

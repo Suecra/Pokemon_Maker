@@ -23,8 +23,4 @@ battle_style = 0
 description = "The user eats the dreams of a sleeping target. It
 absorbs half the damage caused to heal its own HP."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="hypnosis" type="Node" parent="normal"]
-
-[node name="calm-mind" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

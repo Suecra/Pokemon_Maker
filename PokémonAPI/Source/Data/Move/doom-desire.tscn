@@ -23,3 +23,5 @@ battle_style = 0
 description = "Two turns after this move is used, a concentrated
 bundle of light blasts the target.
 "
+
+[node name="Effects" type="Node" parent="."]

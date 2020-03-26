@@ -22,6 +22,4 @@ battle_style = 0
 description = "The user slashes the target the instant an
 opportunity arises. Critical hits land more easily."
 
-[node name="super" type="Node" parent="."]
-
-[node name="focus-energy" type="Node" parent="super"]
+[node name="Effects" type="Node" parent="."]

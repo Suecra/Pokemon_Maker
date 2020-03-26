@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "The target is crushed with great force. The more HP
 the target has left, the greater this move’s power."
+
+[node name="Effects" type="Node" parent="."]

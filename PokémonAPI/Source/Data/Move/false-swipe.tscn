@@ -23,6 +23,4 @@ battle_style = 0
 description = "A restrained attack that prevents the target from
 fainting. The target is left with at least 1 HP."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="swords-dance" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

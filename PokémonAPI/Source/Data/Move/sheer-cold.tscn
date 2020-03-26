@@ -23,8 +23,4 @@ battle_style = 0
 description = "The target faints instantly. It’s less likely to hit the
 target if it’s used by Pokémon other than Ice types."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="mind-reader" type="Node" parent="normal"]
-
-[node name="hail" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

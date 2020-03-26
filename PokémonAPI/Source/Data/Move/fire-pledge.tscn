@@ -22,3 +22,5 @@ battle_style = 0
 description = "A column of fire hits the target. When used with its
 grass equivalent, its power increases and a vast sea
 of fire appears."
+
+[node name="Effects" type="Node" parent="."]

@@ -23,6 +23,4 @@ battle_style = 0
 description = "The target is hit with a watery blast. The user can’t
 move on the next turn."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="rain-dance" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

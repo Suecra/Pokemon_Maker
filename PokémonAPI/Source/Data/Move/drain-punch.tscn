@@ -21,3 +21,5 @@ contest_effect = null
 battle_style = 0
 description = "An energy-draining punch. The user’s HP is restored
 by half the damage taken by the target."
+
+[node name="Effects" type="Node" parent="."]

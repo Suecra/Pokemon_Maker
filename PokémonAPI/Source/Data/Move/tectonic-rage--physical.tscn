@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user burrows deep into the ground and slams
 into the target with the full force of its Z-Power.
 The power varies, depending on the original move."
+
+[node name="Effects" type="Node" parent="."]

@@ -22,3 +22,5 @@ battle_style = 0
 description = "This attack hits a target using a move such as
 Protect or Detect.
 This also lifts the effects of those moves."
+
+[node name="Effects" type="Node" parent="."]

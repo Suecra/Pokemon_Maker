@@ -51,5 +51,4 @@ func _on_BagButton_button_down():
 	pass
 
 func _on_RunButton_button_down():
-	#selected(SEL_RUN)
-	pass
+	selected(SEL_RUN)

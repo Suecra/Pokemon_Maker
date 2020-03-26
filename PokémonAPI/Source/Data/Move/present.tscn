@@ -22,3 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "The user attacks by giving the target a gift with a
 hidden trap. It restores HP sometimes, however."
+
+[node name="Effects" type="Node" parent="."]

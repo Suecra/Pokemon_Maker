@@ -22,3 +22,5 @@ battle_style = 0
 description = "This attack inflicts Attack or Sp. Atk damage—
 whichever stat is higher for the user, Necrozma. 
 This move ignores the target’s Ability."
+
+[node name="Effects" type="Node" parent="."]

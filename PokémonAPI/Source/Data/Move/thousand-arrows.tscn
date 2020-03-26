@@ -22,3 +22,5 @@ battle_style = 0
 description = "This move also hits opposing Pokémon that are in
 the air. Those Pokémon are knocked down to
 the ground."
+
+[node name="Effects" type="Node" parent="."]

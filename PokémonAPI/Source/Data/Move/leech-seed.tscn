@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Source/Data/BoostMove.gd" type="Script" id=1]
+[ext_resource path="res://Source/Data/StatusMove.gd" type="Script" id=1]
 [ext_resource path="res://Source/Data/Type/grass.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Source/Data/Contest-Effect/contest_effect8.tscn" type="PackedScene" id=3]
 
@@ -22,14 +22,5 @@ contest_effect = ExtResource( 3 )
 battle_style = 0
 description = "A seed is planted on the target. It steals some HP
 from the target every turn."
-attack_boost = 0
-defense_boost = 0
-special_attack_boost = 0
-special_defense_boost = 0
-speed_boost = 0
-accuracy_boost = 0
-evasion_boost = 0
 
-[node name="normal" type="Node" parent="."]
-
-[node name="growth" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

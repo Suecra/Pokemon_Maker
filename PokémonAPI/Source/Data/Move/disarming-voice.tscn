@@ -22,3 +22,5 @@ battle_style = 0
 description = "Letting out a charming cry, the user does emotional
 damage to opposing Pokémon. This attack
 never misses."
+
+[node name="Effects" type="Node" parent="."]

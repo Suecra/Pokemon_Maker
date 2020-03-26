@@ -24,7 +24,10 @@ func do_half_turns():
 	PrioritySorter.sort(half_turns)
 	for half_turn in half_turns:
 		half_turn._execute()
+		if half_turn.trainer.resigned:
+			return false
 	half_turns.clear()
+	return true
 
 func do_animations():
 	var animations = $Animations.get_children()
@@ -77,8 +80,7 @@ func trainer_choice_made(sender, half_turn):
 		
 		if choice_type == ChoiceType.Turn:
 			battle.battlefield.begin_of_turn()
-		do_half_turns()
-		if choice_type == ChoiceType.Turn:
+		if do_half_turns() && choice_type == ChoiceType.Turn:
 			battle.battlefield.end_of_turn()
 		
 		if not async:

@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user vanishes somewhere, then strikes the
 target on the next turn. This move hits even if the
 target protects itself."
+
+[node name="Effects" type="Node" parent="."]

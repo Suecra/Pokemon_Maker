@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user attacks the target with stored power. The
 more the user’s stats are raised, the greater the
 move’s power."
+
+[node name="Effects" type="Node" parent="."]

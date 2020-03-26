@@ -23,6 +23,4 @@ battle_style = 0
 description = "A nutrient-draining attack. The user’s HP is restored
 by half the damage taken by the target."
 
-[node name="normal" type="Node" parent="."]
-
-[node name="growth" type="Node" parent="normal"]
+[node name="Effects" type="Node" parent="."]

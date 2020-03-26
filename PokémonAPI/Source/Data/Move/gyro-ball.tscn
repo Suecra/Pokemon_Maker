@@ -22,3 +22,5 @@ battle_style = 0
 description = "The user tackles the target with a high-speed spin.
 The slower the user compared to the target, the
 greater the move’s power."
+
+[node name="Effects" type="Node" parent="."]
