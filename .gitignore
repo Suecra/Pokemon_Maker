@@ -1,12 +1,5 @@
 *.apk
 *.import
 *.png
-Graphics/DS DSi - Pokemon HeartGold SoulSilver - Pokemon Icons.png
-Graphics/DS DSi - Pokemon Black 2 White 2 - Pokemon Icons.png
-Graphics/5Gen Icons.png
-Graphics/1-4Gen Icons.png
-PokémonAPI/Save/pokemon_party_1.tscn
-PokémonAPI/Save/pokemon_party_2.tscn
-PokémonAPI/Graphics/Animated Sprites/
-PokémonAPI/PokemonMakerBattleSimulatorV2.exe
-PokémonAPI/PokemonMakerBattleSimulatorV2.pck
+Graphics/
+Scenes/Test/

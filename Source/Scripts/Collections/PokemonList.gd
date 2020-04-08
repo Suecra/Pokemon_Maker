@@ -1,5 +1,5 @@
-const SINGLE_ICON_PATH = "res://Graphics/Icons/Single/"
-const DOUBLE_ICON_PATH = "res://Graphics/Icons/Double/"
+const SINGLE_ICON_PATH = "res://Graphics/Icons/single/"
+const DOUBLE_ICON_PATH = "res://Graphics/Icons/animated/"
 const ICON_NAME_DIGITS = 3
 
 const POKEMON = {
