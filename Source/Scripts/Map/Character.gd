@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 var status setget set_status
 var movement
@@ -38,7 +38,8 @@ func change_direction(direction: Vector2):
 	return false
 
 func look(direction: Vector2):
-	change_direction(direction)
+	if change_direction(direction):
+		sprite.direction = direction
 
 func step():
 	movement.step()
