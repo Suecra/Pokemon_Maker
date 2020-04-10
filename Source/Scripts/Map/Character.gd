@@ -31,11 +31,7 @@ func can_move():
 	return false
 
 func change_direction(direction: Vector2):
-	var dir = direction.normalized()
-	if dir != movement.direction:
-		movement.direction = dir
-		return true
-	return false
+	return movement._change_direction(direction.normalized())
 
 func look(direction: Vector2):
 	if change_direction(direction):

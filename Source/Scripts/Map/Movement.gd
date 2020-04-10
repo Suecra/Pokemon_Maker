@@ -17,6 +17,7 @@ func step_taken():
 		remaining_steps -= 1
 	if remaining_steps == 0:
 		character.stop()
+	print("step taken")
 	emit_signal("step_taken")
 
 func step():
@@ -28,20 +29,25 @@ func step():
 
 func walk(steps: int):
 	if character.can_move() && state != WALKING:
-		state = WALKING
-		return _walk(steps)
+		if _walk(steps):
+			state = WALKING
+			remaining_steps = steps
+			return true
 	return false
 
 func run(steps: int):
 	if character.can_move() && state != RUNNING:
-		state = RUNNING
-		return _run(steps)
+		if _run(steps):
+			state = RUNNING
+			remaining_steps = steps
+			return true
 	return false
 
 func stop():
 	if state != STANDING:
-		state = STANDING
-		return _stop()
+		if _stop():
+			state = STANDING
+			return true
 	return false
 
 func _walk(steps: int):
@@ -51,4 +57,7 @@ func _run(steps: int):
 	pass
 
 func _stop():
+	pass
+
+func _change_direction(direction: Vector2):
 	pass

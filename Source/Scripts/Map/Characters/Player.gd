@@ -2,12 +2,13 @@ extends "res://Source/Scripts/Map/Character.gd"
 
 const StatusFreeMovement = preload("res://Source/Scripts/Map/CharacterStatus/StatusFreeMovement.gd")
 const MovementFree = preload("res://Source/Scripts/Map/Movements/MovementFree.gd")
+const MovementTileBased = preload("res://Source/Scripts/Map/Movements/MovementTileBased.gd")
 const PlayerController = preload("res://Source/Scripts/Map/CharacterController/PlayerController.gd")
 
 func _ready():
 	self.status = StatusFreeMovement.new()
 	
-	movement = MovementFree.new()
+	movement = MovementTileBased.new()
 	movement.character = self
 	movement.body = $Body
 	movement.name = "Movement"
