@@ -8,13 +8,17 @@ const PREPARING_WALK = 3
 var walking_time = 0.0
 var stop_requested = false
 var walk_requested = false
+var change_direction_requested = false
+var running_against_wall = false
 var is_stepping = false
 var velocity: Vector2
 var last_direction: Vector2
 var current_step_size = 0
 
 func _walk(steps):
-	if steps > 0 || walking_time >= STEP_DELAY:
+	if (steps > 0 || walking_time >= STEP_DELAY):
+		if check_path():
+			running_against_wall = false
 		walk_requested = false
 		return true
 	walk_requested = true
@@ -27,11 +31,24 @@ func _run(steps):
 func _stop():
 	stop_requested = true
 	walk_requested = false
+	if running_against_wall:
+		is_stepping = false
+		return true
 	return not is_stepping
 
 func _change_direction(direction: Vector2):
-	var old_direction = last_direction
-	return get_tile_based_direction(direction) != old_direction
+	var new_direction = get_tile_based_direction(direction)
+	if new_direction != last_direction:
+		if is_stepping && not running_against_wall:
+			change_direction_requested = true
+		else:
+			last_direction = new_direction
+			if check_path():
+				running_against_wall = false
+			else:
+				running_against_wall = true
+			return true
+	return false
 
 func _physics_process(delta):
 	if state == STANDING || state == PREPARING_WALK:
@@ -45,7 +62,7 @@ func _physics_process(delta):
 	elif state == RUNNING:
 		velocity = character.running_speed * last_direction
 		is_stepping = true
-	if is_stepping:
+	if is_stepping && not running_against_wall:
 		body.move_and_slide(velocity)
 		current_step_size += velocity.length() * delta
 		if current_step_size >= STEP_SIZE:
@@ -60,16 +77,24 @@ func get_tile_based_direction(direction: Vector2):
 			y = 0
 		else:
 			x = 0
-	last_direction = Vector2(x, y)
-	return last_direction
+	return Vector2(x, y)
 
 func complete_step():
 	step_taken()
+	if check_path():
+		running_against_wall = false
+	else:
+		adjust_position()
+		running_against_wall = true
 	if stop_requested:
 		adjust_position()
 		is_stepping = false
 		character.stop()
 		stop_requested = false
+	if change_direction_requested:
+		adjust_position()
+		is_stepping = false
+		change_direction_requested = false
 
 func adjust_position():
 	var tile_x = (body.global_position.x + SPRITE_OFFSET) / STEP_SIZE
@@ -78,7 +103,10 @@ func adjust_position():
 	tile_y = round(tile_y)
 	body.global_position.x = tile_x * STEP_SIZE - SPRITE_OFFSET
 	body.global_position.y = tile_y * STEP_SIZE - SPRITE_OFFSET
-	print(str(tile_x) + ", " + str(tile_y))
+
+func check_path():
+	var transf = body.global_transform.translated(last_direction * STEP_SIZE / 2)
+	return not body.test_move(transf, last_direction)
 
 func _ready():
 	adjust_position()

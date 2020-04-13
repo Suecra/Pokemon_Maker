@@ -12,10 +12,10 @@ script = ExtResource( 2 )
 [node name="Body" type="KinematicBody2D" parent="."]
 
 [node name="Collision" type="CollisionShape2D" parent="Body"]
-position = Vector2( 0, 5 )
 shape = SubResource( 1 )
 
 [node name="PlayerSprite" parent="Body" instance=ExtResource( 1 )]
+position = Vector2( 0, -5 )
 
 [node name="Camera2D" type="Camera2D" parent="Body"]
 current = true
