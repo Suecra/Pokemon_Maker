@@ -19,4 +19,7 @@ func _physics_process(delta):
 		character.stop()
 	else:
 		character.look(Vector2(x, y))
-		character.walk()
+		if Input.is_action_pressed("run|back"):
+			character.run()
+		else:
+			character.walk()
