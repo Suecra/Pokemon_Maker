@@ -9,12 +9,24 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Reference",
+"class": "Global",
+"language": "GDScript",
+"path": "res://Source/Scripts/Global.gd"
+}, {
+"base": "Node2D",
+"class": "MapObject",
+"language": "GDScript",
+"path": "res://Source/Scripts/Map/MapObject.gd"
+}, {
 "base": "Node",
 "class": "WATTest",
 "language": "GDScript",
 "path": "res://addons/WAT/test/test.gd"
 } ]
 _global_script_class_icons={
+"Global": "",
+"MapObject": "",
 "WATTest": ""
 }
 

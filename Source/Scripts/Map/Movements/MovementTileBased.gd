@@ -1,7 +1,6 @@
 extends "res://Source/Scripts/Map/Movement.gd"
 
 const STEP_DELAY = 0.1
-const STEP_SIZE = 16
 const SPRITE_OFFSET = 8
 const PREPARING_WALK = 3
 
@@ -65,8 +64,8 @@ func _physics_process(delta):
 	if is_stepping && not running_against_wall:
 		body.move_and_slide(velocity)
 		current_step_size += velocity.length() * delta
-		if current_step_size >= STEP_SIZE:
-			current_step_size -= STEP_SIZE
+		if current_step_size >= Global.TILE_SIZE:
+			current_step_size -= Global.TILE_SIZE
 			complete_step()
 
 func get_tile_based_direction(direction: Vector2):
@@ -97,15 +96,15 @@ func complete_step():
 		change_direction_requested = false
 
 func adjust_position():
-	var tile_x = (body.global_position.x + SPRITE_OFFSET) / STEP_SIZE
-	var tile_y = (body.global_position.y + SPRITE_OFFSET) / STEP_SIZE
+	var tile_x = (body.global_position.x + SPRITE_OFFSET) / Global.TILE_SIZE
+	var tile_y = (body.global_position.y + SPRITE_OFFSET) / Global.TILE_SIZE
 	tile_x = round(tile_x)
 	tile_y = round(tile_y)
-	body.global_position.x = tile_x * STEP_SIZE - SPRITE_OFFSET
-	body.global_position.y = tile_y * STEP_SIZE - SPRITE_OFFSET
+	body.global_position.x = tile_x * Global.TILE_SIZE - SPRITE_OFFSET
+	body.global_position.y = tile_y * Global.TILE_SIZE - SPRITE_OFFSET
 
 func check_path():
-	var transf = body.global_transform.translated(last_direction * STEP_SIZE / 2)
+	var transf = body.global_transform.translated(last_direction * Global.TILE_SIZE / 2)
 	return not body.test_move(transf, last_direction)
 
 func _ready():

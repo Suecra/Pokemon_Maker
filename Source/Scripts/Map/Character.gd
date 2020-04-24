@@ -7,6 +7,8 @@ var sprite
 var walking_speed
 var running_speed
 
+signal step_taken
+
 func set_status(value):
 	if status != null:
 		status._exit()

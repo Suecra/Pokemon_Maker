@@ -1,7 +1,5 @@
 extends "res://Source/Scripts/Map/Movement.gd"
 
-const STEP_SIZE = 16
-
 var current_step_size = 0
 var velocity: Vector2
 
@@ -29,7 +27,7 @@ func _physics_process(delta):
 	elif state == RUNNING:
 		velocity = character.running_speed * direction
 	current_step_size += velocity.length() * delta
-	if current_step_size >= STEP_SIZE:
-		current_step_size -= STEP_SIZE
+	if current_step_size >= Global.TILE_SIZE:
+		current_step_size -= Global.TILE_SIZE
 		step_taken()
 	velocity = body.move_and_slide(velocity)

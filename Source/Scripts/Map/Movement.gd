@@ -17,7 +17,7 @@ func step_taken():
 		remaining_steps -= 1
 	if remaining_steps == 0:
 		character.stop()
-	emit_signal("step_taken")
+	character.emit_signal("step_taken")
 
 func step():
 	if character.can_move():

@@ -8,7 +8,10 @@ const PlayerController = preload("res://Source/Scripts/Map/CharacterController/P
 func _ready():
 	self.status = StatusFreeMovement.new()
 	
-	movement = MovementTileBased.new()
+	if Global.MOVEMENT == Global.MOVEMENT_TYPE.FREE:
+		movement = MovementFree.new()
+	else:
+		movement = MovementTileBased.new()
 	movement.character = self
 	movement.body = $Body
 	movement.name = "Movement"
