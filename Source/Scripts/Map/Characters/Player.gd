@@ -5,6 +5,8 @@ const MovementFree = preload("res://Source/Scripts/Map/Movements/MovementFree.gd
 const MovementTileBased = preload("res://Source/Scripts/Map/Movements/MovementTileBased.gd")
 const PlayerController = preload("res://Source/Scripts/Map/CharacterController/PlayerController.gd")
 
+signal action
+
 func _ready():
 	self.status = StatusFreeMovement.new()
 	
@@ -28,3 +30,7 @@ func _ready():
 	
 	add_child(movement)
 	add_child(controller)
+
+func _physics_process(delta):
+	if status.can_move() && Input.is_action_just_pressed("select|action"):
+		emit_signal("action")

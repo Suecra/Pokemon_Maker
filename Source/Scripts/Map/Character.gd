@@ -8,6 +8,7 @@ var controller
 var sprite
 var walking_speed
 var running_speed
+var direction: Vector2
 
 signal step_taken
 
@@ -38,7 +39,8 @@ func can_move():
 	return false
 
 func change_direction(direction: Vector2):
-	return movement._change_direction(direction.normalized())
+	self.direction = direction.normalized()
+	return movement._change_direction(self.direction)
 
 func look(direction: Vector2):
 	if change_direction(direction):
@@ -65,3 +67,12 @@ func teleport(pos: Vector2):
 
 func teleport_tile(x_tile: int, y_tile: int):
 	teleport(Utils.pixel_pos(Vector2(x_tile, y_tile)))
+
+func is_facing(position: Vector2):
+	var delta_pos = position - self.position
+	delta_pos = delta_pos.normalized()
+	var angle = direction.angle_to(delta_pos)
+	if abs(angle) > 10:
+		return true
+	return false
+	

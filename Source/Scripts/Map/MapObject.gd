@@ -44,11 +44,15 @@ func check_spawn():
 
 func _spawn():
 	spawned = true
-	set_physics_process(true)
+	map.player.connect("action", self, "player_action")
 
 func _despawn():
 	spawned = false
-	set_physics_process(false)
+	map.player.disconnect("action", self, "player_action")
+
+func player_action():
+	if trigger_type == TriggerType.ActionPress:
+		pass
 
 func _ready():
 	_despawn()
