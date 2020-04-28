@@ -60,3 +60,6 @@ func _stop():
 
 func _change_direction(direction: Vector2):
 	pass
+
+func _after_teleport():
+	pass

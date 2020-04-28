@@ -1,5 +1,7 @@
 extends Node2D
 
+const Utils = preload("res://Source/Scripts/Utils.gd")
+
 var status setget set_status
 var movement
 var controller
@@ -8,6 +10,9 @@ var walking_speed
 var running_speed
 
 signal step_taken
+
+func get_position():
+	return movement.body.global_position
 
 func set_status(value):
 	if status != null:
@@ -53,3 +58,10 @@ func run(steps: int = -1):
 func stop():
 	if movement.stop():
 		sprite.play_animation("stop")
+
+func teleport(pos: Vector2):
+	position = pos
+	movement._after_teleport()
+
+func teleport_tile(x_tile: int, y_tile: int):
+	teleport(Utils.pixel_pos(Vector2(x_tile, y_tile)))

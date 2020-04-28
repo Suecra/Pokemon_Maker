@@ -39,3 +39,9 @@ static func set_node_owner(node: Node, owner: Node):
 	#print(node.name + " | " + owner.name)
 	for child in node.get_children():
 		set_node_owner(child, owner)
+
+static func tile_pos(pixel_pos: Vector2):
+	return pixel_pos / Global.TILE_SIZE
+
+static func pixel_pos(tile_pos: Vector2):
+	return tile_pos * Global.TILE_SIZE

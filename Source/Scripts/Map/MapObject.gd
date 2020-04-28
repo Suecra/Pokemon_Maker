@@ -2,6 +2,11 @@ extends Node2D
 
 class_name MapObject
 
+enum TriggerType {Ground, ActionPress}
+
+export(TriggerType) var trigger_type
+export(int) var trigger_range
+
 var spawn_radius: int
 var spawned: bool
 var map
@@ -28,18 +33,22 @@ func player_leave_map():
 	_save()
 
 func on_player_step_taken():
-	pass
+	check_spawn()
 
 func check_spawn():
-	var spawn = false
-	var distance = map.player.global_position - position
+	var distance = map.player.get_position() - _get_position()
 	if distance.length() > spawn_radius && spawned:
 		_despawn()
 	elif distance.length() < spawn_radius && not spawned:
 		_spawn()
 
 func _spawn():
-	pass
+	spawned = true
+	set_physics_process(true)
 
 func _despawn():
-	pass
+	spawned = false
+	set_physics_process(false)
+
+func _ready():
+	_despawn()

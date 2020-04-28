@@ -1,5 +1,7 @@
 extends "res://Source/Scripts/Map/Movement.gd"
 
+const Utils = preload("res://Source/Scripts/Utils.gd")
+
 const STEP_DELAY = 0.1
 const SPRITE_OFFSET = 8
 const PREPARING_WALK = 3
@@ -96,16 +98,17 @@ func complete_step():
 		change_direction_requested = false
 
 func adjust_position():
-	var tile_x = (body.global_position.x + SPRITE_OFFSET) / Global.TILE_SIZE
-	var tile_y = (body.global_position.y + SPRITE_OFFSET) / Global.TILE_SIZE
-	tile_x = round(tile_x)
-	tile_y = round(tile_y)
-	body.global_position.x = tile_x * Global.TILE_SIZE - SPRITE_OFFSET
-	body.global_position.y = tile_y * Global.TILE_SIZE - SPRITE_OFFSET
+	var offset = Vector2(SPRITE_OFFSET, SPRITE_OFFSET)
+	var tile_pos = Utils.tile_pos(body.global_position + offset)
+	tile_pos = Vector2(round(tile_pos.x), round(tile_pos.y))
+	body.global_position = Utils.pixel_pos(tile_pos) - offset
 
 func check_path():
 	var transf = body.global_transform.translated(last_direction * Global.TILE_SIZE / 2)
 	return not body.test_move(transf, last_direction)
+
+func _after_teleport():
+	adjust_position()
 
 func _ready():
 	adjust_position()
