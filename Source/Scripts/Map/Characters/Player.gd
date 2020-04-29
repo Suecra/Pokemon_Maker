@@ -7,6 +7,8 @@ const PlayerController = preload("res://Source/Scripts/Map/CharacterController/P
 
 signal action
 
+var triggered_map_object: MapObject
+
 func _ready():
 	self.status = StatusFreeMovement.new()
 	
@@ -33,4 +35,12 @@ func _ready():
 
 func _physics_process(delta):
 	if status.can_move() && Input.is_action_just_pressed("select|action"):
+		triggered_map_object = null
 		emit_signal("action")
+		if triggered_map_object != null:
+			triggered_map_object._trigger()
+
+func request_trigger(mapObject: MapObject):
+	if triggered_map_object == null:
+		#TODO: Check if nearest object
+		triggered_map_object = mapObject

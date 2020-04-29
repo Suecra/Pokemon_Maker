@@ -30,8 +30,17 @@ func enter_tile(player, x_tile: int, y_tile: int):
 func leave():
 	deinit_map_objects(self)
 
-func _ready():
-	get_tree().create_timer(1).connect("timeout", self, "timer_timeout")
+func get_message_box():
+	if not has_node("MessageBox"):
+		var message_box = Global.create_message_box()
+		message_box.name = "MessageBox"
+		message_box.auto_hide = true
+		message_box.auto_skip = false
+		add_child(message_box)
+		message_box.owner = self
+		return message_box
+	return $MessageBox
 
-func timer_timeout():
+func _ready():
+	yield(get_tree().create_timer(1), "timeout")
 	enter_tile($Player, 0, 0)

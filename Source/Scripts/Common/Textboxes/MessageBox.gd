@@ -23,7 +23,7 @@ signal finsihed_display
 func _physics_process(delta):
 	counter += delta
 	if displaying:
-		if fast_forward && Input.is_action_pressed("ui_accept"):
+		if fast_forward && Input.is_action_pressed("select|action"):
 			actual_chars_per_second = chars_per_second * 4
 		else:
 			actual_chars_per_second = chars_per_second
@@ -42,7 +42,7 @@ func _physics_process(delta):
 		if auto_skip && counter >= display_time:
 			counter = 0
 			display_next_page()
-		if skip && Input.is_action_just_pressed("ui_accept"):
+		if skip && Input.is_action_just_pressed("select|action"):
 			display_next_page()
 
 func display(text: String, bb_code := false):

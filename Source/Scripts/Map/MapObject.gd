@@ -52,7 +52,9 @@ func _despawn():
 
 func player_action():
 	if trigger_type == TriggerType.ActionPress:
-		pass
+		if map.player.is_facing(_get_position()):
+			if map.player.get_distance(_get_position()) <= trigger_range:
+				map.player.request_trigger(self)
 
 func _ready():
-	_despawn()
+	spawned = false

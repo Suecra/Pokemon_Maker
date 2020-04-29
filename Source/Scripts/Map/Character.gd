@@ -69,10 +69,13 @@ func teleport_tile(x_tile: int, y_tile: int):
 	teleport(Utils.pixel_pos(Vector2(x_tile, y_tile)))
 
 func is_facing(position: Vector2):
-	var delta_pos = position - self.position
+	var delta_pos = position - get_position()
 	delta_pos = delta_pos.normalized()
 	var angle = direction.angle_to(delta_pos)
-	if abs(angle) > 10:
+	if abs(angle) < PI / 4:
 		return true
 	return false
-	
+
+func get_distance(position: Vector2):
+	var delta_pos = position - get_position()
+	return delta_pos.length()
