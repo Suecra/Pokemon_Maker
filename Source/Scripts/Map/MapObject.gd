@@ -2,6 +2,9 @@ extends Node2D
 
 class_name MapObject
 
+const Utils = preload("res://Source/Scripts/Utils.gd")
+const SPRITE_OFFSET = 8
+
 enum TriggerType {Ground, ActionPress}
 
 export(TriggerType) var trigger_type
@@ -22,6 +25,13 @@ func _save():
 
 func _get_position():
 	return position
+
+func adjust_position():
+	if Global.MOVEMENT == Global.MOVEMENT_TYPE.TILE:
+		var offset = Vector2(SPRITE_OFFSET, SPRITE_OFFSET)
+		var tile_pos = Utils.tile_pos(position + offset)
+		tile_pos = Vector2(round(tile_pos.x), round(tile_pos.y))
+		position = Utils.pixel_pos(tile_pos) - offset
 
 func player_enter_map(map):
 	self.map = map
@@ -44,6 +54,7 @@ func check_spawn():
 
 func _spawn():
 	spawned = true
+	adjust_position()
 	map.player.connect("action", self, "player_action")
 
 func _despawn():
