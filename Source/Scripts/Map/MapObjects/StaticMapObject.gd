@@ -4,7 +4,11 @@ export(String, MULTILINE) var text
 
 func _ready():
 	._ready()
-	spawn_radius = 96
+	spawn_radius = 15 * 16
 
 func _trigger():
-	yield(map.get_message_box().display(text), "completed")
+	var event = map.get_event()
+	var event_action = EventActionMessage.new()
+	event_action.message = text
+	event.add_action(event_action)
+	event.start()

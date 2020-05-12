@@ -20,14 +20,13 @@ func step_taken():
 	character.emit_signal("step_taken")
 
 func step():
-	if character.can_move():
-		if state == WALKING:
-			character.walk(1)
-		elif state == RUNNING:
-			character.run(1)
+	if state == WALKING:
+		character.walk(1)
+	elif state == RUNNING:
+		character.run(1)
 
 func walk(steps: int):
-	if character.can_move() && state != WALKING:
+	if state != WALKING:
 		if _walk(steps):
 			state = WALKING
 			remaining_steps = steps
@@ -35,7 +34,7 @@ func walk(steps: int):
 	return false
 
 func run(steps: int):
-	if character.can_move() && state != RUNNING:
+	if state != RUNNING:
 		if _run(steps):
 			state = RUNNING
 			remaining_steps = steps

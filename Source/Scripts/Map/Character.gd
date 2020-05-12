@@ -62,7 +62,7 @@ func stop():
 		sprite.play_animation("stop")
 
 func teleport(pos: Vector2):
-	position = pos
+	movement.body.global_position = pos
 	movement._after_teleport()
 
 func teleport_tile(x_tile: int, y_tile: int):

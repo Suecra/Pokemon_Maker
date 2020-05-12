@@ -44,6 +44,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteRun/Head:region_rect")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 46, 0, 46, 20 ), Rect2( 92, 0, 46, 20 ), Rect2( 138, 0, 46, 20 ), Rect2( 0, 0, 46, 20 ) ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "run_left"
@@ -84,6 +96,18 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteRun/Head:region_rect")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 46, 52, 46, 20 ), Rect2( 92, 52, 46, 20 ), Rect2( 138, 52, 46, 20 ), Rect2( 0, 52, 46, 20 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -126,6 +150,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteRun/Head:region_rect")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 46, 104, 46, 20 ), Rect2( 92, 104, 46, 20 ), Rect2( 138, 104, 46, 20 ), Rect2( 0, 104, 46, 20 ) ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "run_up"
@@ -166,6 +202,18 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteRun/Head:region_rect")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 46, 156, 46, 20 ), Rect2( 92, 156, 46, 20 ), Rect2( 138, 156, 46, 20 ), Rect2( 0, 156, 46, 20 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -621,3 +669,10 @@ vframes = 4
 hframes = 4
 frame = 13
 
+[node name="Head" type="Sprite" parent="SpriteRun"]
+position = Vector2( -23, -26 )
+z_index = 1
+texture = ExtResource( 3 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 46, 156, 46, 20 )

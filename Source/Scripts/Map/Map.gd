@@ -41,6 +41,16 @@ func get_message_box():
 		return message_box
 	return $MessageBox
 
+func get_event():
+	if not has_node("Event"):
+		var event = Event.new()
+		event.map = self
+		event.name = "Event"
+		add_child(event)
+		event.owner = self
+	$Event.clear()
+	return $Event
+
 func _ready():
 	yield(get_tree().create_timer(1), "timeout")
-	enter_tile($Player, 0, 0)
+	enter_tile($Player, 7, 13)

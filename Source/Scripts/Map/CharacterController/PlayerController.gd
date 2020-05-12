@@ -23,3 +23,5 @@ func _physics_process(delta):
 			character.run()
 		else:
 			character.walk()
+	if Input.is_action_just_pressed("select|action"):
+		character.action_pressed()

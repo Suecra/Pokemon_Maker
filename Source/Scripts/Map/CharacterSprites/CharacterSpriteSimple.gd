@@ -26,3 +26,6 @@ func _has_animation(name):
 func _play_animation(name):
 	animation_name = name
 	$AnimationPlayer.play(animation_name + "_" + direction_string)
+
+func _stop_animation():
+	$AnimationPlayer.stop()
