@@ -667,7 +667,7 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 vframes = 4
 hframes = 4
-frame = 13
+frame = 1
 
 [node name="Head" type="Sprite" parent="SpriteRun"]
 position = Vector2( -23, -26 )
@@ -675,4 +675,4 @@ z_index = 1
 texture = ExtResource( 3 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 46, 156, 46, 20 )
+region_rect = Rect2( 46, 0, 46, 20 )

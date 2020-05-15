@@ -1,6 +1,9 @@
 extends Node2D
 
 const Utils = preload("res://Source/Scripts/Utils.gd")
+const StatusFreeMovement = preload("res://Source/Scripts/Map/CharacterStatus/StatusFreeMovement.gd")
+const MovementTileBased = preload("res://Source/Scripts/Map/Movements/MovementTileBased.gd")
+const MovementFree = preload("res://Source/Scripts/Map/Movements/MovementFree.gd")
 
 var status setget set_status
 var movement
@@ -46,6 +49,10 @@ func look(direction: Vector2):
 	if change_direction(direction):
 		sprite.direction = direction
 
+func look_at(position: Vector2):
+	var direction = position - get_position()
+	look(direction.normalized())
+
 func step():
 	movement.step()
 
@@ -79,3 +86,22 @@ func is_facing(position: Vector2):
 func get_distance(position: Vector2):
 	var delta_pos = position - get_position()
 	return delta_pos.length()
+
+func _ready():
+	self.status = StatusFreeMovement.new()
+	
+	if Global.MOVEMENT == Global.MOVEMENT_TYPE.FREE:
+		movement = MovementFree.new()
+	else:
+		movement = MovementTileBased.new()
+	movement.character = self
+	movement.body = $Body
+	movement.name = "Movement"
+	
+	sprite = $Body/Sprite
+	sprite.direction = Vector2(0, 1)
+	
+	walking_speed = 64
+	running_speed = 128
+	
+	add_child(movement)

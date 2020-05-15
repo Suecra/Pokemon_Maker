@@ -26,10 +26,10 @@ func _save():
 func _get_position():
 	return position
 
-func adjust_position():
+func _adjust_position():
 	if Global.MOVEMENT == Global.MOVEMENT_TYPE.TILE:
 		var offset = Vector2(SPRITE_OFFSET, SPRITE_OFFSET)
-		var tile_pos = Utils.tile_pos(_get_position() + offset)
+		var tile_pos = Utils.tile_pos(position + offset)
 		tile_pos = Vector2(round(tile_pos.x), round(tile_pos.y))
 		position = Utils.pixel_pos(tile_pos) - offset
 
@@ -54,7 +54,7 @@ func check_spawn():
 
 func _spawn():
 	spawned = true
-	adjust_position()
+	_adjust_position()
 	map.player.connect("action", self, "player_action")
 
 func _despawn():

@@ -1,7 +1,7 @@
 extends "res://Source/Scripts/Map/CharacterSprite.gd"
 
 var direction_string = ""
-var animation_name = ""
+var animation_name = "stop"
 
 func _set_direction(value):
 	._set_direction(value)
