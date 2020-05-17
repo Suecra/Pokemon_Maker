@@ -25,3 +25,7 @@ func _physics_process(delta):
 			character.walk()
 	if Input.is_action_just_pressed("select|action"):
 		character.action_pressed()
+	if Input.is_key_pressed(KEY_CONTROL):
+		character.movement.body.get_node("Collision").disabled = true
+	else:
+		character.movement.body.get_node("Collision").disabled = false

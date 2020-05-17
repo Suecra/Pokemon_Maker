@@ -7,11 +7,13 @@ var event
 signal finished
 
 func execute():
-	_execute()
-	yield(self, "finished")
+	if _execute():
+		yield(self, "finished")
+	else:
+		yield(get_tree().create_timer(0.0), "timeout")
 
 func _execute():
-	pass
+	return false
 
 func finish():
 	emit_signal("finished")

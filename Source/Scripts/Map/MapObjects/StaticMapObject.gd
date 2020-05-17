@@ -7,8 +7,6 @@ func _ready():
 	spawn_radius = 15 * 16
 
 func _trigger():
-	var event = map.get_event()
-	var event_action = EventActionMessage.new()
-	event_action.message = text
-	event.add_action(event_action)
+	var event = map.get_event(self)
+	event.add_action(EventActionMessage.new(text))
 	event.start()

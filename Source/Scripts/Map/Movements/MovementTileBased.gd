@@ -85,19 +85,19 @@ func complete_step():
 	if check_path():
 		running_against_wall = false
 	else:
-		adjust_position()
+		_adjust_position()
 		running_against_wall = true
 	if stop_requested:
-		adjust_position()
+		_adjust_position()
 		is_stepping = false
 		character.stop()
 		stop_requested = false
 	if change_direction_requested:
-		adjust_position()
+		_adjust_position()
 		is_stepping = false
 		change_direction_requested = false
 
-func adjust_position():
+func _adjust_position():
 	var offset = Vector2(SPRITE_OFFSET, SPRITE_OFFSET)
 	var tile_pos = Utils.tile_pos(character.get_position() + offset)
 	tile_pos = Vector2(round(tile_pos.x), round(tile_pos.y))
@@ -108,7 +108,7 @@ func check_path():
 	return not body.test_move(transf, last_direction)
 
 func _after_teleport():
-	adjust_position()
+	_adjust_position()
 
 func _ready():
-	adjust_position()
+	_adjust_position()

@@ -6,6 +6,7 @@ const StatusCutscene = preload("res://Source/Scripts/Map/CharacterStatus/StatusC
 class_name Event
 
 var map
+var caller
 var player
 var event_actions = []
 

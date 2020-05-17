@@ -62,3 +62,6 @@ func _change_direction(direction: Vector2):
 
 func _after_teleport():
 	pass
+
+func _adjust_position():
+	pass

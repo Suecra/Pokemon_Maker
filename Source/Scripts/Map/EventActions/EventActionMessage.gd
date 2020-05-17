@@ -8,3 +8,7 @@ func _execute():
 	var message_box = event.map.get_message_box()
 	message_box.connect("finished", self, "finish")
 	message_box.display_async(message)
+	return true
+
+func _init(message: String):
+	self.message = message

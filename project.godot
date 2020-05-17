@@ -24,6 +24,26 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Source/Scripts/Map/EventActions/EventActionMessage.gd"
 }, {
+"base": "Node",
+"class": "EventActionRun",
+"language": "GDScript",
+"path": "res://Source/Scripts/Map/EventActions/EventActionRun.gd"
+}, {
+"base": "Node",
+"class": "EventActionTurn",
+"language": "GDScript",
+"path": "res://Source/Scripts/Map/EventActions/EventActionTurn.gd"
+}, {
+"base": "Node",
+"class": "EventActionWait",
+"language": "GDScript",
+"path": "res://Source/Scripts/Map/EventActions/EventActionWait.gd"
+}, {
+"base": "Node",
+"class": "EventActionWalk",
+"language": "GDScript",
+"path": "res://Source/Scripts/Map/EventActions/EventActionWalk.gd"
+}, {
 "base": "Reference",
 "class": "Global",
 "language": "GDScript",
@@ -34,6 +54,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Source/Scripts/Map/MapObject.gd"
 }, {
+"base": "Node2D",
+"class": "NPC",
+"language": "GDScript",
+"path": "res://Source/Scripts/Map/MapObjects/NPC.gd"
+}, {
 "base": "Node",
 "class": "WATTest",
 "language": "GDScript",
@@ -43,8 +68,13 @@ _global_script_class_icons={
 "Event": "",
 "EventAction": "",
 "EventActionMessage": "",
+"EventActionRun": "",
+"EventActionTurn": "",
+"EventActionWait": "",
+"EventActionWalk": "",
 "Global": "",
 "MapObject": "",
+"NPC": "",
 "WATTest": ""
 }
 

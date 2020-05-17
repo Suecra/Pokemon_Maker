@@ -41,10 +41,11 @@ func get_message_box():
 		return message_box
 	return $MessageBox
 
-func get_event():
+func get_event(caller: MapObject):
 	if not has_node("Event"):
 		var event = Event.new()
 		event.map = self
+		event.caller = caller
 		event.name = "Event"
 		add_child(event)
 		event.owner = self

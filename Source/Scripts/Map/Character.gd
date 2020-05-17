@@ -14,6 +14,7 @@ var running_speed
 var direction: Vector2
 
 signal step_taken
+signal stopped
 
 func get_position():
 	return movement.body.global_position
@@ -67,6 +68,7 @@ func run(steps: int = -1):
 func stop():
 	if movement.stop():
 		sprite.play_animation("stop")
+		emit_signal("stopped")
 
 func teleport(pos: Vector2):
 	movement.body.global_position = pos
