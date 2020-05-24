@@ -647,6 +647,14 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 34, 20 )
 
+[node name="Reflection" type="Sprite" parent="SpriteWalk"]
+position = Vector2( 0, 50 )
+z_index = -2
+texture = ExtResource( 2 )
+flip_v = true
+vframes = 4
+hframes = 4
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/run_down = SubResource( 1 )
 anims/run_left = SubResource( 2 )
