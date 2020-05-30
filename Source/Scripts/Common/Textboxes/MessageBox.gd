@@ -70,7 +70,9 @@ func display_next_page():
 	if page_index < page_list.pages.size():
 		text_label.clear()
 		for i in page_list.pages[page_index].lines.size():
-			text_label.add_text(page_list.pages[page_index].lines[i])
+			var text = page_list.pages[page_index].lines[i]
+			text_label.add_text(text)
+			print(text)
 			text_label.newline()
 		if instant:
 			displaying = false

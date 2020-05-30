@@ -9,84 +9,112 @@
 [ext_resource path="res://Graphics/Battle/CancelButton.png" type="Texture" id=7]
 
 [node name="MoveSelectionDP" type="CanvasLayer"]
+layer = 2
 script = ExtResource( 1 )
 move_button_style = ExtResource( 2 )
 
 [node name="MovePosition1" type="Node2D" parent="."]
-position = Vector2( 500, 400 )
+position = Vector2( 157.596, 97.199 )
 
 [node name="FightButton" type="Button" parent="MovePosition1"]
 visible = false
-margin_left = 9.0
-margin_top = 17.0
-margin_right = 147.0
-margin_bottom = 84.0
+margin_right = 40.0
+margin_bottom = 21.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
 
 [node name="Sprite" type="Sprite" parent="MovePosition1/FightButton"]
-position = Vector2( -9, -17 )
-scale = Vector2( 2, 2 )
+position = Vector2( -3, -3 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 3 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="MovePosition2" type="Node2D" parent="."]
-position = Vector2( 750, 400 )
+position = Vector2( 206.556, 98.258 )
 
 [node name="SwitchButton" type="Button" parent="MovePosition2"]
 visible = false
-margin_left = 9.0
-margin_top = 18.0
-margin_right = 147.0
-margin_bottom = 84.0
+margin_top = -1.0
+margin_right = 41.0
+margin_bottom = 21.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
 
 [node name="Sprite" type="Sprite" parent="MovePosition2/SwitchButton"]
-position = Vector2( -9, -18 )
-scale = Vector2( 2, 2 )
+position = Vector2( -3, -3 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 4 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="MovePosition3" type="Node2D" parent="."]
-position = Vector2( 500, 500 )
+position = Vector2( 157.343, 125.426 )
 
 [node name="BagButton" type="Button" parent="MovePosition3"]
 visible = false
-margin_left = 10.0
-margin_top = 18.0
-margin_right = 147.0
-margin_bottom = 83.0
+margin_right = 41.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Sprite" type="Sprite" parent="MovePosition3/BagButton"]
-position = Vector2( -10, -18 )
-scale = Vector2( 2, 2 )
+position = Vector2( -3, -3 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 5 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="MovePosition4" type="Node2D" parent="."]
-position = Vector2( 750, 500 )
+position = Vector2( 206.453, 125.509 )
 
 [node name="RunButton" type="Button" parent="MovePosition4"]
 visible = false
-margin_left = 10.0
-margin_top = 20.0
-margin_right = 147.0
-margin_bottom = 84.0
+margin_right = 41.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
 
 [node name="Sprite" type="Sprite" parent="MovePosition4/RunButton"]
-position = Vector2( -10, -20 )
-scale = Vector2( 2, 2 )
+position = Vector2( -3, -3 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 6 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CancelButton" type="Button" parent="."]
 visible = false
-margin_left = 349.644
-margin_top = 518.288
-margin_right = 489.644
-margin_bottom = 584.288
+margin_left = 106.822
+margin_top = 125.329
+margin_right = 147.822
+margin_bottom = 145.329
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Sprite" type="Sprite" parent="CancelButton"]
-position = Vector2( 69.636, 28.15 )
-scale = Vector2( 2, 2 )
+position = Vector2( -3, -3 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 7 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 [connection signal="button_down" from="MovePosition1/FightButton" to="." method="_on_FightButton_button_down"]
 [connection signal="button_down" from="MovePosition2/SwitchButton" to="." method="_on_SwitchButton_button_down"]
 [connection signal="button_down" from="MovePosition3/BagButton" to="." method="_on_BagButton_button_down"]

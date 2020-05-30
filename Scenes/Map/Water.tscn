@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Graphics/white.png" type="Texture" id=1]
 [ext_resource path="res://Source/Scripts/Map/Water.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -18,10 +19,8 @@ void fragment() {
 	float displace_x = sin(time_speed + SCREEN_UV.y * wave_count);
 	float displace_y = sin(time_speed + SCREEN_UV.x * wave_count);
 	vec2 offset = vec2(displace_x, displace_y);
-	vec4 color = texture(SCREEN_TEXTURE, SCREEN_UV + offset * SCREEN_PIXEL_SIZE * strength);
-	//color.r -= 0.6;
-	//color.g -= 0.6;
-	//color.b -= 0.6;
+	vec2 uv = SCREEN_UV + offset * SCREEN_PIXEL_SIZE * strength;
+	vec4 color = texture(SCREEN_TEXTURE, uv);
 	COLOR = color;
 }"
 
@@ -36,17 +35,23 @@ script = ExtResource( 2 )
 
 [node name="Shader" type="Sprite" parent="."]
 material = SubResource( 2 )
-position = Vector2( -5.80029, -3.21382 )
-scale = Vector2( 1034.52, 608.375 )
+position = Vector2( -2.87346, -1.95946 )
+scale = Vector2( 261.982, 154.618 )
 z_index = -1
 texture = ExtResource( 1 )
 centered = false
 
 [node name="Background" type="Sprite" parent="."]
 modulate = Color( 0.262745, 0.537255, 0.827451, 1 )
-position = Vector2( -8.75511, -5.14526 )
-scale = Vector2( 1041.2, 615.354 )
+position = Vector2( -4.34337, -3.88476 )
+scale = Vector2( 265.663, 158.495 )
 z_index = -3
 z_as_relative = false
 texture = ExtResource( 1 )
 centered = false
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 67.1456, 34.8118 )
+scale = Vector2( 0.315197, 0.310862 )
+z_index = -2
+texture = ExtResource( 3 )

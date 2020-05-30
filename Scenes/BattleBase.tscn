@@ -30,14 +30,16 @@ script = ExtResource( 2 )
 [node name="Choicebox" parent="." instance=ExtResource( 6 )]
 
 [node name="Background_Field_Day" type="Sprite" parent="."]
-position = Vector2( 511.292, 284.867 )
-scale = Vector2( 4.5, 4.5 )
+position = Vector2( 128.059, 75.2696 )
+scale = Vector2( 1.01719, 1.07641 )
 texture = ExtResource( 7 )
 
 [node name="BaseOpponent" parent="." instance=ExtResource( 8 )]
-position = Vector2( 574.078, 125.154 )
+position = Vector2( 153.489, 45.4426 )
+scale = Vector2( 0.25, 0.25 )
 
 [node name="BasePlayer" parent="." instance=ExtResource( 9 )]
-position = Vector2( -66.6584, 387.707 )
+position = Vector2( -28.3322, 104.189 )
+scale = Vector2( 0.5, 0.5 )
 
 [node name="MoveSelection" parent="." instance=ExtResource( 10 )]

@@ -4,6 +4,7 @@ const PlayerController = preload("res://Source/Scripts/Map/CharacterController/P
 
 signal action
 
+onready var trainer = $Trainer
 var triggered_map_object: MapObject
 
 func _ready():

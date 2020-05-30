@@ -16,4 +16,8 @@ func _execute():
 	return false
 
 func finish():
+	_de_init()
 	emit_signal("finished")
+
+func _de_init():
+	pass

@@ -4,7 +4,7 @@
 [ext_resource path="res://Graphics/Battle/base_player.png" type="Texture" id=2]
 
 [node name="BattleBaseHGSSPlayer" type="Node2D"]
-scale = Vector2( 1.5, 1.5 )
+scale = Vector2( 1.25, 1.25 )
 script = ExtResource( 1 )
 pokemon_position = Vector2( 204, 30 )
 

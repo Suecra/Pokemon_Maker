@@ -10,5 +10,5 @@ script = ExtResource( 1 )
 style = ExtResource( 2 )
 
 [node name="Style" parent="." instance=ExtResource( 2 )]
-visible = false
-position = Vector2( 221.249, 109.646 )
+position = Vector2( 55.2083, 28.1395 )
+scale = Vector2( 0.25, 0.25 )

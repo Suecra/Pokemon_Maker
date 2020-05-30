@@ -20,6 +20,11 @@ _global_script_classes=[ {
 "path": "res://Source/Scripts/Map/EventAction.gd"
 }, {
 "base": "Node",
+"class": "EventActionBattle",
+"language": "GDScript",
+"path": "res://Source/Scripts/Map/EventActions/EventActionBattle.gd"
+}, {
+"base": "Node",
 "class": "EventActionMessage",
 "language": "GDScript",
 "path": "res://Source/Scripts/Map/EventActions/EventActionMessage.gd"
@@ -59,6 +64,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Source/Scripts/Map/MapObjects/NPC.gd"
 }, {
+"base": "Node2D",
+"class": "Trainer",
+"language": "GDScript",
+"path": "res://Source/Scripts/Map/MapObjects/Trainer.gd"
+}, {
 "base": "Node",
 "class": "WATTest",
 "language": "GDScript",
@@ -67,6 +77,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Event": "",
 "EventAction": "",
+"EventActionBattle": "",
 "EventActionMessage": "",
 "EventActionRun": "",
 "EventActionTurn": "",
@@ -75,6 +86,7 @@ _global_script_class_icons={
 "Global": "",
 "MapObject": "",
 "NPC": "",
+"Trainer": "",
 "WATTest": ""
 }
 
@@ -85,6 +97,10 @@ run/main_scene="res://Scenes/Simulator/BattleSimulatorMain.tscn"
 
 [display]
 
+window/size/width=256
+window/size/height=150
+window/size/test_width=1024
+window/size/test_height=600
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 

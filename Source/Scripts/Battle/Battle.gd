@@ -15,21 +15,23 @@ var current_turn
 var ally_field: Field
 var opponent_field: Field
 var battlefield: Battlefield
+var trainers = []
+
+signal ended
 
 func add_ally_trainer(trainer):
-	get_node("Trainers").add_child(trainer)
+	trainers.append(trainer)
 	ally_field.trainers.append(trainer)
 	trainer.field = ally_field
 	trainer.battle = self
 
 func add_opponent_trainer(trainer):
-	get_node("Trainers").add_child(trainer)
+	trainers.append(trainer)
 	opponent_field.trainers.append(trainer)
 	trainer.field = opponent_field
 	trainer.battle = self
 
 func is_battle_ended():
-	var trainers = $Trainers.get_children()
 	var count = 0
 	for t in trainers:
 		if t.resigned:
@@ -39,26 +41,27 @@ func is_battle_ended():
 	return count <= 1
 
 func start():
-	for t in $Trainers.get_children():
+	for t in trainers:
 		t.init_battle()
 	current_turn_nr = 0
 	current_turn = first_turn()
-	yield(current_turn._start(), "completed");
+	yield(current_turn._start(), "completed")
 	current_turn_nr = 1
 	while not is_battle_ended():
 		current_turn = next_turn()
-		yield(current_turn._start(), "completed");
+		yield(current_turn._start(), "completed")
 		current_turn_nr += 1
 	$MessageBox.close()
+	emit_signal("ended")
 
 func start_async():
-	for t in $Trainers.get_children():
+	for t in trainers:
 		t.init_battle()
 	current_turn_nr = 0
 	current_turn = first_turn()
 	current_turn.connect("turn_end", self, "turn_end")
 	current_turn._start_async()
-	turn_end()
+	#turn_end()
 
 func turn_end():
 	current_turn_nr += 1
@@ -67,6 +70,8 @@ func turn_end():
 		current_turn = next_turn()
 		current_turn.connect("turn_end", self, "turn_end")
 		current_turn._start_async()
+	else:
+		emit_signal("ended")
 
 func next_turn():
 	var Turn = load("res://Source/Scripts/Battle/Turn.gd")
@@ -82,7 +87,6 @@ func first_turn():
 
 func init_turn(turn):
 	turn.battle = self
-	var trainers = $Trainers.get_children()
 	for t in trainers:
 		turn.trainers.append(t)
 	var prev_turns = $Turns.get_children()
@@ -99,7 +103,6 @@ func register_message(message: String):
 	current_turn.register_animation(msg)
 
 func _ready():
-	Utils.add_node_if_not_exists(self, self, "Trainers")
 	ally_field = Field.new()
 	add_child(ally_field)
 	opponent_field = Field.new()
