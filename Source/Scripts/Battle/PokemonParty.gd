@@ -59,6 +59,10 @@ func to_string_array_battler():
 		arr.append(get_battler(i).nickname)
 	return arr
 
+func full_heal_all():
+	for pokemon in get_children():
+		pokemon.full_heal()
+
 func save(path):
 	for pokemon in get_children():
 		pokemon.prepare_for_save(self)

@@ -9,6 +9,8 @@ var trainer1
 var trainer2
 
 func execute():
+	trainer1.pokemon_party.full_heal_all()
+	trainer2.pokemon_party.full_heal_all()
 	battle = Battle.instance()
 	event.map.get_node("BattleLayer").add_child(battle)
 	battle.add_ally_trainer(trainer1)

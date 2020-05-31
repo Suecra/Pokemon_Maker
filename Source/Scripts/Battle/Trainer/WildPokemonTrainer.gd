@@ -10,7 +10,8 @@ func _do_half_turn():
 		if move._can_use():
 			usable_moves.append(i)
 	if usable_moves.size() == 0:
-		return struggle()
+		emit_signal("choice_made", self, struggle())
+		return
 	var move_index = randi() % usable_moves.size()
 	emit_signal("choice_made", self, move(usable_moves[move_index]))
 

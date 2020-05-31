@@ -313,6 +313,7 @@ func _ready():
 	Utils.add_node_if_not_exists(self, self, "MoveArchive")
 	add_movepool_if_not_exists()
 	$Movepool.pokemon = self
+	calculate_stats()
 	current_hp = hp
 
 func _init():

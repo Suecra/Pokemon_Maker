@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Source/Scripts/Battle/Trainer/PlayerTrainer.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/PokemonParty.gd" type="Script" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://Source/Data/Nature/lax.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Source/Data/Pokemon/flygon.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=7]
+[ext_resource path="res://Source/Scripts/Battle/Movepool.gd" type="Script" id=8]
+[ext_resource path="res://Source/Scripts/Battle/Move.gd" type="Script" id=9]
+[ext_resource path="res://Source/Data/Move/explosion.tscn" type="PackedScene" id=10]
 
 [node name="PlayerTrainer" type="Node"]
 script = ExtResource( 1 )
@@ -21,6 +24,14 @@ level = 50
 current_hp = 1
 species = ExtResource( 3 )
 nature = ExtResource( 4 )
+
+[node name="Movepool" type="Node" parent="PokemonParty/Aggron"]
+script = ExtResource( 8 )
+
+[node name="Explosion" type="Node" parent="PokemonParty/Aggron/Movepool"]
+script = ExtResource( 9 )
+move = ExtResource( 10 )
+current_pp = 1
 
 [node name="Flygon" type="Node" parent="PokemonParty"]
 script = ExtResource( 7 )

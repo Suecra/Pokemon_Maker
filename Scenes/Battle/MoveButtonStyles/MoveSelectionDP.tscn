@@ -14,7 +14,7 @@ script = ExtResource( 1 )
 move_button_style = ExtResource( 2 )
 
 [node name="MovePosition1" type="Node2D" parent="."]
-position = Vector2( 157.596, 97.199 )
+position = Vector2( 157, 97 )
 
 [node name="FightButton" type="Button" parent="MovePosition1"]
 visible = false
@@ -35,7 +35,7 @@ __meta__ = {
 }
 
 [node name="MovePosition2" type="Node2D" parent="."]
-position = Vector2( 206.556, 98.258 )
+position = Vector2( 206, 97 )
 
 [node name="SwitchButton" type="Button" parent="MovePosition2"]
 visible = false
@@ -57,7 +57,7 @@ __meta__ = {
 }
 
 [node name="MovePosition3" type="Node2D" parent="."]
-position = Vector2( 157.343, 125.426 )
+position = Vector2( 157, 125 )
 
 [node name="BagButton" type="Button" parent="MovePosition3"]
 visible = false
@@ -77,7 +77,7 @@ __meta__ = {
 }
 
 [node name="MovePosition4" type="Node2D" parent="."]
-position = Vector2( 206.453, 125.509 )
+position = Vector2( 206, 125 )
 
 [node name="RunButton" type="Button" parent="MovePosition4"]
 visible = false
