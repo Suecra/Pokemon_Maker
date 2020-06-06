@@ -16,6 +16,7 @@ var ally_field: Field
 var opponent_field: Field
 var battlefield: Battlefield
 var trainers = []
+var player_won = false
 
 signal ended
 
@@ -35,9 +36,13 @@ func is_battle_ended():
 	var count = 0
 	for t in trainers:
 		if t.resigned:
+			if t.field == opponent_field:
+				player_won = true
 			return true
 		if t.has_pokemon_left():
-			count = count + 1
+			count += 1
+		elif t.field == opponent_field:
+			player_won = true
 	return count <= 1
 
 func start():

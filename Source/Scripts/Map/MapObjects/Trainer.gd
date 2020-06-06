@@ -15,6 +15,5 @@ func _trigger():
 		event.add_action(EventActionMessage.new(text_after_defeat))
 	else:
 		event.add_action(EventActionMessage.new(text))
-		event.add_action(EventActionBattle.new(map.player.trainer, trainer))
+		event.add_action(EventActionBattle.new(map.player.trainer, trainer)).won().add_action(EventActionSetVariable.new(self, "defeated"))
 	event.start()
-	defeated = true

@@ -1,4 +1,4 @@
-extends Node
+extends "res://Source/Scripts/Map/EventNode.gd"
 
 class_name EventAction
 

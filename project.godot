@@ -25,6 +25,11 @@ _global_script_classes=[ {
 "path": "res://Source/Scripts/Map/EventActions/EventActionBattle.gd"
 }, {
 "base": "Node",
+"class": "EventActionCondition",
+"language": "GDScript",
+"path": "res://Source/Scripts/Map/EventActions/EventActionCondition.gd"
+}, {
+"base": "Node",
 "class": "EventActionMessage",
 "language": "GDScript",
 "path": "res://Source/Scripts/Map/EventActions/EventActionMessage.gd"
@@ -33,6 +38,11 @@ _global_script_classes=[ {
 "class": "EventActionRun",
 "language": "GDScript",
 "path": "res://Source/Scripts/Map/EventActions/EventActionRun.gd"
+}, {
+"base": "Node",
+"class": "EventActionSetVariable",
+"language": "GDScript",
+"path": "res://Source/Scripts/Map/EventActions/EventActionSetVariable.gd"
 }, {
 "base": "Node",
 "class": "EventActionTurn",
@@ -78,8 +88,10 @@ _global_script_class_icons={
 "Event": "",
 "EventAction": "",
 "EventActionBattle": "",
+"EventActionCondition": "",
 "EventActionMessage": "",
 "EventActionRun": "",
+"EventActionSetVariable": "",
 "EventActionTurn": "",
 "EventActionWait": "",
 "EventActionWalk": "",

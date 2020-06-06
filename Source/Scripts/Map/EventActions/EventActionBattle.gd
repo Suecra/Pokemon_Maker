@@ -7,6 +7,7 @@ const Battle = preload("res://Scenes/BattleBase.tscn")
 var battle
 var trainer1
 var trainer2
+var player_won
 
 func execute():
 	trainer1.pokemon_party.full_heal_all()
@@ -17,7 +18,11 @@ func execute():
 	battle.add_opponent_trainer(trainer2)
 	battle.connect("ended", self, "finish")
 	yield(battle.start(), "completed")
+	player_won = battle.player_won
 	event.map.get_node("BattleLayer").remove_child(battle)
+
+func won():
+	return event.add_action(EventActionCondition.new(self, "player_won"))
 
 func _init(trainer1, trainer2):
 	self.trainer1 = trainer1

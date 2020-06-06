@@ -19,6 +19,8 @@ func set_cursor(value):
 		remove_child(cursor_node)
 	if cursor != null:
 		cursor_node = cursor.instance();
+		cursor_node.position.x = 3
+		cursor_node.position.y = 6
 		$Container.add_child(cursor_node)
 		$Container.move_child(cursor_node, 0)
 
