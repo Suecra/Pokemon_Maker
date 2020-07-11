@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<testsuites failures="0" name="TestXML" tests="1" time="0.913">
+<testsuite failures="0" name="Battle Tests" tests="5" time="0.002">
+<testcase name=" modified pokemon" time="0.202">
+</testcase>
+<testcase name=" damage" time="0.112">
+</testcase>
+<testcase name=" get last moves" time="0.256">
+</testcase>
+<testcase name=" add pokemon" time="0.066">
+</testcase>
+<testcase name=" stat change damage" time="0.247">
+</testcase>
+</testsuite>
+</testsuites>

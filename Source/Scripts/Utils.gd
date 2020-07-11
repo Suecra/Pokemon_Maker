@@ -1,5 +1,7 @@
 extends Object
 
+class_name Utils
+
 static func trigger(chance: float):
 	return rand_range(0, 1) < chance
 

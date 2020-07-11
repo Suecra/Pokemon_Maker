@@ -70,19 +70,29 @@ _global_script_classes=[ {
 "path": "res://Source/Scripts/Map/MapObject.gd"
 }, {
 "base": "Node2D",
+"class": "MapTrainer",
+"language": "GDScript",
+"path": "res://Source/Scripts/Map/MapObjects/MapTrainer.gd"
+}, {
+"base": "Node2D",
 "class": "NPC",
 "language": "GDScript",
 "path": "res://Source/Scripts/Map/MapObjects/NPC.gd"
 }, {
-"base": "Node2D",
-"class": "Trainer",
+"base": "Object",
+"class": "Utils",
 "language": "GDScript",
-"path": "res://Source/Scripts/Map/MapObjects/Trainer.gd"
+"path": "res://Source/Scripts/Utils.gd"
 }, {
-"base": "Node",
+"base": "Reference",
+"class": "WAT",
+"language": "GDScript",
+"path": "res://addons/WAT/namespace.gd"
+}, {
+"base": "",
 "class": "WATTest",
 "language": "GDScript",
-"path": "res://addons/WAT/test/test.gd"
+"path": "res://addons/WAT/core/test/test.gd"
 } ]
 _global_script_class_icons={
 "Event": "",
@@ -97,10 +107,25 @@ _global_script_class_icons={
 "EventActionWalk": "",
 "Global": "",
 "MapObject": "",
+"MapTrainer": "",
 "NPC": "",
-"Trainer": "",
+"Utils": "",
+"WAT": "",
 "WATTest": ""
 }
+
+[WAT]
+
+Test_Directory="res://tests"
+Results_Directory="res://tests/results/WAT"
+Minimize_Window_When_Running_Tests=false
+TestStrategy={
+"repeat": 1,
+"script": "res://tests/BattleTests.gd",
+"strategy": "RunScript"
+}
+Tags=PoolStringArray(  )
+Display=8
 
 [application]
 

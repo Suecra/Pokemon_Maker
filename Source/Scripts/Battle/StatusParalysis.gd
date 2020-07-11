@@ -1,7 +1,5 @@
 extends "res://Source/Scripts/Battle/PrimaryStatus.gd"
 
-const Utils = preload("res://Source/Scripts/Utils.gd")
-
 func _can_move(args):
 	if Utils.trigger(0.25):
 		args.can_move = false

@@ -1,7 +1,5 @@
 extends Node
 
-const Utils = preload("res://Source/Scripts/Utils.gd")
-
 enum EffectedPokemon {User, Target}
 
 export(EffectedPokemon) var effected_pokemon = 0

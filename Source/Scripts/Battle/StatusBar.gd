@@ -1,7 +1,5 @@
 extends CanvasLayer
 
-const Utils = preload("res://Source/Scripts/Utils.gd")
-
 export(PackedScene) var style
 
 var pokemon

@@ -1,7 +1,6 @@
 extends "res://Source/Scripts/Battle/Observable.gd"
 
 const Nature = preload("res://Source/Data/Nature.gd")
-const Utils = preload("res://Source/Scripts/Utils.gd")
 const Boosts = preload("res://Source/Scripts/Battle/Boosts.gd")
 const BattleAnimationDamage = preload("res://Source/Scripts/Battle/Animations/BattleAnimationDamage.gd")
 const BattleAnimationFaint = preload("res://Source/Scripts/Battle/Animations/BattleAnimationFaint.gd")

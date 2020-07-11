@@ -2,7 +2,6 @@ extends Node
 
 enum ChoiceType {Turn, SwitchInAfterFaint, SwitchInAfterUTurn}
 
-const Utils = preload("res://Source/Scripts/Utils.gd")
 const PrioritySorter = preload("res://Source/Scripts/Battle/PrioritySorter.gd")
 
 signal turn_start

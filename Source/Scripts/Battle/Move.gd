@@ -1,7 +1,5 @@
 extends "res://Source/Scripts/Battle/HalfTurn.gd"
 
-const Utils = preload("res://Source/Scripts/Utils.gd")
-
 export(PackedScene) var move
 export(int) var current_pp = 0 setget set_current_pp
 

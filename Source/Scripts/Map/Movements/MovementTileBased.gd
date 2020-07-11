@@ -1,7 +1,5 @@
 extends "res://Source/Scripts/Map/Movement.gd"
 
-const Utils = preload("res://Source/Scripts/Utils.gd")
-
 const STEP_DELAY = 0.1
 const SPRITE_OFFSET = Global.TILE_SIZE / 2
 const PREPARING_WALK = 3

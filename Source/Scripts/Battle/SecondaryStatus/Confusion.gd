@@ -1,6 +1,5 @@
 extends "res://Source/Scripts/Battle/SecondaryStatus.gd"
 
-const Utils = preload("res://Source/Scripts/Utils.gd")
 const SELF_HIT_CHANCE = 1.0 / 3.0
 
 var counter

@@ -1,6 +1,5 @@
 extends Node2D
 
-const Utils = preload("res://Source/Scripts/Utils.gd")
 const StatusFreeMovement = preload("res://Source/Scripts/Map/CharacterStatus/StatusFreeMovement.gd")
 const MovementTileBased = preload("res://Source/Scripts/Map/Movements/MovementTileBased.gd")
 const MovementFree = preload("res://Source/Scripts/Map/Movements/MovementFree.gd")

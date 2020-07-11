@@ -1,7 +1,5 @@
 extends "res://Source/Scripts/Battle/MoveSelection.gd"
 
-const Utils = preload("res://Source/Scripts/Utils.gd")
-
 func _show_options():
 	$MovePosition1/FightButton.visible = true
 	$MovePosition2/SwitchButton.visible = true

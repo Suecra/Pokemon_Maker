@@ -1,7 +1,6 @@
 extends Node
 
 const Switch = preload("res://Source/Scripts/Battle/Switch.gd")
-const Utils = preload("res://Source/Scripts/Utils.gd")
 const Move = preload("res://Source/Scripts/Battle/Move.gd")
 
 signal choice_made(sender, half_turn)

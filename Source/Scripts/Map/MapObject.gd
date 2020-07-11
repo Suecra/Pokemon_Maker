@@ -2,7 +2,6 @@ extends Node2D
 
 class_name MapObject
 
-const Utils = preload("res://Source/Scripts/Utils.gd")
 const SPRITE_OFFSET = Global.TILE_SIZE / 2
 
 enum TriggerType {Ground, ActionPress}

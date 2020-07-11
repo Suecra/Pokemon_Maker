@@ -1,7 +1,5 @@
 extends Node2D
 
-const Utils = preload("res://Source/Scripts/Utils.gd")
-
 var player
 
 func init_map_objects(node):

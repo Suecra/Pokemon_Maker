@@ -1,6 +1,5 @@
 extends Node
 
-const Utils = preload("res://Source/Scripts/Utils.gd")
 const Trainer = preload("res://Source/Scripts/Battle/Trainer.gd")
 const Field = preload("res://Source/Scripts/Battle/Field.gd")
 const Battlefield = preload("res://Source/Scripts/Battle/Battlefield.gd")
@@ -66,7 +65,7 @@ func start_async():
 	current_turn = first_turn()
 	current_turn.connect("turn_end", self, "turn_end")
 	current_turn._start_async()
-	#turn_end()
+	turn_end()
 
 func turn_end():
 	current_turn_nr += 1
