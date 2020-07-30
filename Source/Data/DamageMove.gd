@@ -1,10 +1,10 @@
 extends "res://Source/Data/Move.gd"
 
-var crit_level
-var critical_hit
-var damage_multiplier
+var crit_level: int
+var critical_hit: bool
+var damage_multiplier: float
 
-func _hit(target):
+func _hit(target: Node) -> void:
 	crit_level = 1
 	var messages = []
 	var damage = _get_damage(target)
@@ -18,7 +18,7 @@ func _hit(target):
 	target.damage(damage, messages)
 	._hit(target)
 
-func _get_damage(target):
+func _get_damage(target: Node) -> int:
 	var damage = floor(user.level * 2 / 5) + 2
 	damage *= _get_base_damage()
 	damage *= _get_attack()
@@ -32,24 +32,24 @@ func _get_damage(target):
 	damage = max(damage, 1)
 	return damage
 
-func _get_attack():
-	pass
+func _get_attack() -> int:
+	return 0
 
-func _get_defense(target):
-	pass
+func _get_defense(target: Node) -> int:
+	return 0
 
-func _get_factor1():
+func _get_factor1() -> float:
 	if targets.size() > 1:
 		return 0.75
 	return 1.0
 
-func _get_crit_multiplier():
+func _get_crit_multiplier() -> float:
 	if _is_critical_hit():
 		return 1.5
 	return 1.0
 	pass
 
-func _is_critical_hit():
+func _is_critical_hit() -> bool:
 	match crit_level:
 		1: critical_hit = Utils.trigger(0.0416)
 		2: critical_hit = Utils.trigger(0.125)
@@ -57,21 +57,21 @@ func _is_critical_hit():
 		4: critical_hit = true
 	return critical_hit
 
-func get_damage_roll():
+func get_damage_roll() -> float:
 	return float(randi() % 16 + 85) / 100
 
-func _get_STAB_multiplier():
+func _get_STAB_multiplier() -> float:
 	if _is_STAB():
 		return 1.5
 	return 1.0
 
-func _is_STAB():
+func _is_STAB() -> bool:
 	var types = user.get_types()
 	for type in types:
 		if type.id == get_type().id:
 			return true
 	return false
 
-func _get_damage_multiplier(target):
+func _get_damage_multiplier(target: Node) -> float:
 	damage_multiplier = get_type().get_damage_multiplier(target.get_types())
 	return damage_multiplier

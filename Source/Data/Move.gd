@@ -1,7 +1,5 @@
 extends Node
 
-const Utils = preload("res://Source/Scripts/Utils.gd")
-
 enum DamageClass {Physical, Special, Status}
 enum Flags {Contact, Protect, Mirrorable, Kings_Rock, Sky_Battle, Damage, Ailment, Heal, Punch, Lower, Raise, OHKO, Field_Effect, Whole_Field_Effect}
 enum HitRange {Opponent, All_Opponents, All, User, Partner, User_or_Partner, User_Field, Opponent_Field, Entire_Field}
@@ -25,33 +23,34 @@ export(PackedScene) var contest_effect
 export(int, "Attack", "Defense", "Support") var battle_style
 export(String) var description
 
-var user
-var targets = []
-var battle
-var turn
+onready var effects = $Effects
 
-func _execute():
-	for t in targets:
-		if _is_hit(t):
-			_hit(t)
+var user: Node
+var targets := []
+var battle: Node
+var turn: Node
+
+func _execute() -> void:
+	for target in targets:
+		if _is_hit(target):
+			_hit(target)
 		else:
-			battle.register_message(t.nickname + " avoided the attack!")
+			battle.register_message(target.nickname + " avoided the attack!")
 
-func _hit(target):
+func _hit(target: Node) -> void:
 	trigger_effects(target)
 
-func trigger_effects(target):
-	if has_node("Effects"):
-		var effects = $Effects.get_children()
-		for e in effects:
-			e.user = user
-			e.target = target
-			e.trigger()
+func trigger_effects(target: Node) -> void:
+	if effects != null:
+		for effect in effects.get_children():
+			effect.user = user
+			effect.target = target
+			effect.trigger()
 
-func _get_base_damage():
+func _get_base_damage() -> int:
 	return power
 
-func _get_accuracy(accuracy_level):
+func _get_accuracy(accuracy_level: int) -> float:
 	var acc = accuracy
 	if acc == 0:
 		acc = 100
@@ -72,13 +71,13 @@ func _get_accuracy(accuracy_level):
 		6: actual_accuracy = 3
 	return min(100, actual_accuracy * acc)
 
-func _is_hit(target):
+func _is_hit(target: Node) -> bool:
 	return Utils.trigger(_get_accuracy(user.accuracy_level - target.evasion_level) / 100)
 
-func get_type():
+func get_type() -> Node:
 	return Utils.unpack(self, type, "Type")
 
-func get_possible_target_positions(user_position: int):
+func get_possible_target_positions(user_position: int) -> Array:
 	var result = []
 	if hit_range == HitRange.Opponent:
 		result.append(user_position + 3)
@@ -88,7 +87,7 @@ func get_possible_target_positions(user_position: int):
 		result.append(user_position + 3)
 	return result
 
-func get_target_positions(user_position: int, index: int):
+func get_target_positions(user_position: int, index: int) -> Array:
 	var result = []
 	var possible_target_positions = get_possible_target_positions(user_position)
 	if has_target_choice():
@@ -98,7 +97,7 @@ func get_target_positions(user_position: int, index: int):
 		result = possible_target_positions
 	return result
 
-func has_target_choice():
+func has_target_choice() -> bool:
 	match hit_range:
 		HitRange.Opponent, HitRange.User_or_Partner: return true
 	return false

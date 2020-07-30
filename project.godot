@@ -79,7 +79,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Source/Scripts/Map/MapObjects/NPC.gd"
 }, {
-"base": "Object",
+"base": "Reference",
 "class": "Utils",
 "language": "GDScript",
 "path": "res://Source/Scripts/Utils.gd"
@@ -121,8 +121,7 @@ Results_Directory="res://tests/results/WAT"
 Minimize_Window_When_Running_Tests=false
 TestStrategy={
 "repeat": 1,
-"script": "res://tests/BattleTests.gd",
-"strategy": "RunScript"
+"strategy": "RunAll"
 }
 Tags=PoolStringArray(  )
 Display=8
@@ -143,7 +142,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "Pokemon", "WAT", "vnen.tiled_importer" )
+enabled=PoolStringArray( "WAT", "vnen.tiled_importer" )
 
 [importer_defaults]
 

@@ -7,5 +7,5 @@ const TILE_SIZE = 16
 
 const MESSAGEBOX_SCENE = "res://Scenes/Textboxes/MessageBox.tscn"
 
-static func create_message_box():
+static func create_message_box() -> Node:
 	return load(MESSAGEBOX_SCENE).instance()

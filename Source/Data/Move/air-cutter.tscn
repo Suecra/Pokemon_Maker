@@ -11,15 +11,10 @@ type = ExtResource( 2 )
 damage_class = 1
 power = 60
 accuracy = 95
-priority = 0
 pp = 25
-z_power = 0
 flags = 32
 hit_range = 1
-is_HM = false
-contest_type = 0
 contest_effect = ExtResource( 3 )
-battle_style = 0
 description = "The user launches razor-like wind to slash the
 opposing Pokémon. Critical hits land more easily."
 

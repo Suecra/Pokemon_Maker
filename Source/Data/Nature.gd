@@ -21,7 +21,7 @@ export(int, 1, 100) var low_hp_defense_chance
 export(int, 1, 100) var high_hp_support_chance
 export(int, 1, 100) var low_hp_support_chance
 
-func change_stats(pokemon):
+func change_stats(pokemon: Node) -> void:
 	match inc_stat:
 		Stat.Attack: pokemon.attack = int(pokemon.attack * INC_MULTIPLIER)
 		Stat.Defense: pokemon.defense = int(pokemon.defense * INC_MULTIPLIER)

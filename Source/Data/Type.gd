@@ -8,7 +8,7 @@ export(Types, FLAGS) var neutral
 export(Types, FLAGS) var not_very_effective
 export(Types, FLAGS) var no_effect
 
-func get_damage_multiplier(types):
+func get_damage_multiplier(types: Array) -> float:
 	var multiplier = 1.0
 	for type in types:
 		var flag_id = int(pow(2, type.id))

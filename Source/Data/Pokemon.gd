@@ -30,5 +30,5 @@ export(String, MULTILINE) var dex_entry
 
 export(PackedScene) var sprite_collection
 
-func get_sprite_collection():
+func get_sprite_collection() -> Node:
 	return Utils.unpack(self, sprite_collection, "Sprites")
