@@ -8,3 +8,4 @@ script = ExtResource( 1 )
 
 [node name="PokemonParty" type="Node" parent="."]
 script = ExtResource( 2 )
+

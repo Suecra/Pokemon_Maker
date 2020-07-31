@@ -42,8 +42,10 @@ func can_move():
 	return false
 
 func change_direction(direction: Vector2):
-	self.direction = direction.normalized()
-	return movement._change_direction(self.direction)
+	if movement._change_direction(direction.normalized()):
+		self.direction = movement.direction
+		return true
+	return false
 
 func look(direction: Vector2):
 	if change_direction(direction):

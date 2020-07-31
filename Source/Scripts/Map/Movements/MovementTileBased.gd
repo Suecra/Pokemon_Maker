@@ -46,6 +46,7 @@ func _change_direction(direction: Vector2):
 				running_against_wall = false
 			else:
 				running_against_wall = true
+			self.direction = new_direction
 			return true
 	return false
 
