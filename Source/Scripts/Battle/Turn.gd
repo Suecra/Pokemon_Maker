@@ -9,17 +9,18 @@ signal turn_end
 
 var trainers = []
 var half_turns = []
-var battle
-var prev_turn
-var choices_made
-var required_choices
+var battle: Node
+var choices_made: int
+var required_choices: int
 var choice_type
 var async = false
+var animations: Node
+var prev_turn: Node
 
-func register_animation(animation):
-	$Animations.add_child(animation)
+func register_animation(animation: Node) -> void:
+	animations.add_child(animation)
 
-func do_half_turns():
+func do_half_turns() -> bool:
 	PrioritySorter.sort(half_turns)
 	for half_turn in half_turns:
 		half_turn._execute()
@@ -28,46 +29,45 @@ func do_half_turns():
 	half_turns.clear()
 	return true
 
-func do_animations():
-	var animations = $Animations.get_children()
-	for animation in animations:
+func do_animations() -> void:
+	for animation in animations.get_children():
 		yield(animation._execute(), "completed")
-		$Animations.remove_child(animation)
+		animations.remove_child(animation)
 	yield(get_tree().create_timer(0.0), "timeout")
 
-func force_switch_ins():
+func force_switch_ins() -> void:
 	required_choices = 0
 	choice_type = ChoiceType.SwitchInAfterFaint
-	for t in trainers:
-		if not t.has_pokemon_left():
+	for trainer in trainers:
+		if not trainer.has_pokemon_left():
 			required_choices = 0
 			break
-		if t.current_pokemon.fainted():
+		if trainer.current_pokemon.fainted():
 			required_choices += 1
-			t._force_switch_in()
+			trainer._force_switch_in()
 	if not async:
 		if required_choices > 0:
 			yield(self, "turn_end")
 		else:
 			yield(get_tree().create_timer(0.0), "timeout")
 
-func _start():
+func _start() -> void:
 	choices_made = 0
 	required_choices = trainers.size()
 	choice_type = ChoiceType.Turn
-	for t in trainers:
-		t._do_half_turn()
+	for trainer in trainers:
+		trainer._do_half_turn()
 	yield(self, "turn_end")
 
-func _start_async():
+func _start_async() -> void:
 	async = true
 	choices_made = 0
 	required_choices = trainers.size()
 	choice_type = ChoiceType.Turn
-	for t in trainers:
-		t._do_half_turn()
+	for trainer in trainers:
+		trainer._do_half_turn()
 
-func trainer_choice_made(sender, half_turn):
+func trainer_choice_made(sender: Node, half_turn: Node) -> void:
 	half_turn.turn = self
 	half_turn.battle = battle
 	half_turn.battlefield = battle.battlefield
@@ -92,15 +92,15 @@ func trainer_choice_made(sender, half_turn):
 		disconnect_trainers()
 		emit_signal("turn_end")
 
-func connect_trainers():
-	for t in trainers:
-		t.connect("choice_made", self, "trainer_choice_made")
+func connect_trainers() -> void:
+	for trainer in trainers:
+		trainer.connect("choice_made", self, "trainer_choice_made")
 
-func disconnect_trainers():
-	for t in trainers:
-		t.disconnect("choice_made", self, "trainer_choice_made")
+func disconnect_trainers() -> void:
+	for trainer in trainers:
+		trainer.disconnect("choice_made", self, "trainer_choice_made")
 
-func _ready():
+func _ready() -> void:
 	Utils.add_node_if_not_exists(self, self, "Animations")
+	animations = $Animations
 	connect_trainers()
-	

@@ -6,10 +6,10 @@ export(EffectedPokemon) var effected_pokemon = 0
 export(bool) var guaranteed = true
 export(float) var chance = 0.0
 
-var user
-var target
+var user: Node
+var target: Node
 
-func trigger():
+func trigger() -> void:
 	if guaranteed || Utils.trigger(chance):
 		if effected_pokemon == EffectedPokemon.User:
 			_execute(user)
@@ -17,5 +17,5 @@ func trigger():
 			if not target.fainted():
 				_execute(target)
 
-func _execute(pokemon):
+func _execute(pokemon: Node) -> void:
 	pass

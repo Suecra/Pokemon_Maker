@@ -83,6 +83,16 @@ _global_script_classes=[ {
 "class": "Utils",
 "language": "GDScript",
 "path": "res://Source/Scripts/Utils.gd"
+}, {
+"base": "Reference",
+"class": "WAT",
+"language": "GDScript",
+"path": "res://addons/WAT/namespace.gd"
+}, {
+"base": "",
+"class": "WATTest",
+"language": "GDScript",
+"path": "res://addons/WAT/core/test/test.gd"
 } ]
 _global_script_class_icons={
 "Event": "",
@@ -99,7 +109,9 @@ _global_script_class_icons={
 "MapObject": "",
 "MapTrainer": "",
 "NPC": "",
-"Utils": ""
+"Utils": "",
+"WAT": "",
+"WATTest": ""
 }
 
 [WAT]

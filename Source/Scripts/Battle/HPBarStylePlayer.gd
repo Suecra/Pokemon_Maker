@@ -1,10 +1,13 @@
 extends "res://Source/Scripts/Battle/HPBarStyle.gd"
 
-func _set_max_hp(value):
-	._set_max_hp(value)
-	$MaxHP.text = str(value)
+onready var max_hp_label := $MaxHP
+onready var hp_label := $HP
 
-func _set_hp(value):
+func _set_max_hp(value: int) -> void:
+	._set_max_hp(value)
+	max_hp_label.text = str(value)
+
+func _set_hp(value: int) -> void:
 	._set_hp(value)
-	$HP.text = str(int(value))
+	hp_label.text = str(int(value))
 

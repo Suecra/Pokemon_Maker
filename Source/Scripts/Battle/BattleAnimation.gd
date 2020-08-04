@@ -1,6 +1,6 @@
 extends Node
 
-var battle
+var battle: Node
 
-func _execute():
+func _execute() -> void:
 	pass

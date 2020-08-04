@@ -24,23 +24,23 @@ signal canceled
 var movepool
 var state
 
-func show_selection():
+func show_selection() -> void:
 	state = SelectionState.SELECT_OPTION
 	_show_options()
 
-func _show_options():
+func _show_options() -> void:
 	pass
 
-func _hide_options():
+func _hide_options() -> void:
 	pass
 
-func _show_moves():
+func _show_moves() -> void:
 	pass
 	
-func _hide_moves():
+func _hide_moves() -> void:
 	pass
 
-func selected(id):
+func selected(id: int) -> void:
 	if state == SelectionState.SELECT_OPTION:
 		_hide_options()
 		match id:
@@ -65,7 +65,7 @@ func selected(id):
 			SEL_MOVE_3: move_selected(2)
 			SEL_MOVE_4: move_selected(3)
 
-func move_selected(id):
+func move_selected(id: int):
 	var move = movepool.get_move(id)
 	if move._can_use():
 		_hide_moves()

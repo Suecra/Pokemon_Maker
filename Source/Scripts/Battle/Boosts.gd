@@ -8,9 +8,9 @@ var special_attack_boost: int
 var special_defense_boost: int
 var speed_boost: int
 
-var pokemon
+var pokemon: Node
 
-func get_boosted_stat(stat: int, amount: int):
+func get_boosted_stat(stat: int, amount: int) -> int:
 	match amount:
 		-6: return int(floor(stat * 0.25))
 		-5: return int(floor(stat * 0.286))
@@ -25,8 +25,9 @@ func get_boosted_stat(stat: int, amount: int):
 		4: return int(floor(stat * 3))
 		3: return int(floor(stat * 3.5))
 		4: return int(floor(stat * 4))
+	return stat
 
-func get_boosted_stat_acc_eva(amount: int):
+func get_boosted_stat_acc_eva(amount: int) -> float:
 	match amount:
 		-6: return 0.33
 		-5: return 0.38
@@ -37,19 +38,20 @@ func get_boosted_stat_acc_eva(amount: int):
 		0: return 1.0
 		1: return 1.33
 		2: return 1.67
-		3: return 2
+		3: return 2.0
 		4: return 2.33
 		5: return 2.67
-		6: return 3
+		6: return 3.0
+	return 1.0
 
-func boost_stats():
+func boost_stats() -> void:
 	pokemon.current_attack = get_boosted_stat(pokemon.attack, attack_boost)
 	pokemon.current_defense = get_boosted_stat(pokemon.defense, defense_boost)
 	pokemon.current_special_attack = get_boosted_stat(pokemon.special_attack, special_attack_boost)
 	pokemon.current_special_defense = get_boosted_stat(pokemon.special_defense, special_defense_boost)
 	pokemon.current_speed = get_boosted_stat(pokemon.speed, speed_boost)
 
-func reset():
+func reset() -> void:
 	attack_boost = 0
 	defense_boost = 0
 	special_attack_boost = 0

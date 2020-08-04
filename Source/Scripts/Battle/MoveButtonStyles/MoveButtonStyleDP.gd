@@ -1,34 +1,39 @@
 extends "res://Source/Scripts/Battle/MoveButtonStyle.gd"
 
-func _set_move_name(value):
-	$MoveName.text = value
+onready var move_name_label = $MoveName
+onready var move_buttons = $MoveButtons
+onready var max_pp_label = $MaxPP
+onready var pp_label = $PP
 
-func _set_type_id(value):
+func _set_move_name(value: String) -> void:
+	move_name_label.text = value
+
+func _set_type_id(value: int) -> void:
 	match value:
-		Types.NORMAL: $MoveButtons.frame = 8
-		Types.FIGHTING: $MoveButtons.frame = 4
-		Types.FLYING: $MoveButtons.frame = 16
-		Types.POISON: $MoveButtons.frame = 9
-		Types.GROUND: $MoveButtons.frame = 0
-		Types.ROCK: $MoveButtons.frame = 13
-		Types.BUG: $MoveButtons.frame = 3
-		Types.GHOST: $MoveButtons.frame = 2
-		Types.STEEL: $MoveButtons.frame = 12
-		Types.FIRE: $MoveButtons.frame = 17
-		Types.WATER: $MoveButtons.frame = 1
-		Types.GRASS: $MoveButtons.frame = 6
-		Types.ELECTRIC: $MoveButtons.frame = 10
-		Types.PSYCHIC: $MoveButtons.frame = 5
-		Types.ICE: $MoveButtons.frame = 18
-		Types.DRAGON: $MoveButtons.frame = 14
-		Types.DARK: $MoveButtons.frame = 7
-		Types.UNKNOWN: $MoveButtons.frame = 11
+		Types.NORMAL: move_buttons.frame = 8
+		Types.FIGHTING: move_buttons.frame = 4
+		Types.FLYING: move_buttons.frame = 16
+		Types.POISON: move_buttons.frame = 9
+		Types.GROUND: move_buttons.frame = 0
+		Types.ROCK: move_buttons.frame = 13
+		Types.BUG: move_buttons.frame = 3
+		Types.GHOST: move_buttons.frame = 2
+		Types.STEEL: move_buttons.frame = 12
+		Types.FIRE: move_buttons.frame = 17
+		Types.WATER: move_buttons.frame = 1
+		Types.GRASS: move_buttons.frame = 6
+		Types.ELECTRIC: move_buttons.frame = 10
+		Types.PSYCHIC: move_buttons.frame = 5
+		Types.ICE: move_buttons.frame = 18
+		Types.DRAGON: move_buttons.frame = 14
+		Types.DARK: move_buttons.frame = 7
+		Types.UNKNOWN: move_buttons.frame = 11
 
-func _set_max_pp(value):
-	$MaxPP.text = String(value)
+func _set_max_pp(value: int) -> void:
+	max_pp_label.text = String(value)
 
-func _set_pp(value):
-	$PP.text = String(value)
+func _set_pp(value: int) -> void:
+	pp_label.text = String(value)
 
-func _on_Button_button_down():
+func _on_Button_button_down() -> void:
 	emit_signal("selected", move_id)

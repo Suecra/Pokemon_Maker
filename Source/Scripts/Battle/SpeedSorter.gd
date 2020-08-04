@@ -1,7 +1,5 @@
 extends Object
 
-const Utils = preload("res://Source/Scripts/Utils.gd")
-
 class Sorter:
 	static func sort(a, b):
 		if a.current_speed == b.current_speed:
@@ -11,5 +9,5 @@ class Sorter:
 		else:
 			return false
 
-static func sort(pokemon_list):
+static func sort(pokemon_list: Array) -> void:
 	pokemon_list.sort_custom(Sorter, "sort")

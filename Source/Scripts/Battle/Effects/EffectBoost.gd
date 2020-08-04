@@ -10,7 +10,7 @@ export(int, -6, 6) var speed_boost = 0
 export(int, -6, 6) var accuracy_boost = 0
 export(int, -6, 6) var evasion_boost = 0
 
-func _execute(pokemon):
+func _execute(pokemon: Node) -> void:
 	pokemon.boost_stat(0, attack_boost)
 	pokemon.boost_stat(1, defense_boost)
 	pokemon.boost_stat(2, special_attack_boost)

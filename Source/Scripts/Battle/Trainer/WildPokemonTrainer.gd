@@ -2,9 +2,9 @@ extends "res://Source/Scripts/Battle/Trainer.gd"
 
 var usable_moves = []
 
-func _do_half_turn():
+func _do_half_turn() -> void:
 	usable_moves.clear()
-	var movepool = current_pokemon.get_movepool()
+	var movepool = current_pokemon.movepool
 	for i in movepool.get_child_count():
 		var move = movepool.get_move(i)
 		if move._can_use():
@@ -15,5 +15,5 @@ func _do_half_turn():
 	var move_index = randi() % usable_moves.size()
 	emit_signal("choice_made", self, move(usable_moves[move_index]))
 
-func _force_switch_in():
+func _force_switch_in() -> void:
 	emit_signal("choice_made", self, switch(0))

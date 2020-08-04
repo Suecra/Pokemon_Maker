@@ -35,7 +35,7 @@ func create_basic_pokemon(name: String, level: int, moves: Array, nature: String
 	pokemon.calculate_stats()
 	pokemon.full_heal()
 	for move in moves:
-		pokemon.get_movepool().add_move(load(MOVE_PATH + move + ".tscn"))
+		pokemon.movepool.add_move(load(MOVE_PATH + move + ".tscn"))
 	return pokemon
 
 func test_add_pokemon():
@@ -91,7 +91,7 @@ func test_modified_pokemon():
 func test_get_last_moves():
 	var scizor = create_basic_pokemon("scizor", 60, [], "hardy")
 	var moves = scizor.get_last_learnable_moves()
-	var movepool = scizor.get_movepool()
+	var movepool = scizor.movepool
 	for m in moves:
 		movepool.add_move(m.move)
 	
@@ -102,7 +102,7 @@ func test_get_last_moves():
 	
 	var aggron = create_basic_pokemon("aggron", 40, [], "hardy")
 	moves = aggron.get_last_learnable_moves()
-	movepool = aggron.get_movepool()
+	movepool = aggron.movepool
 	for m in moves:
 		movepool.add_move(m.move)
 	

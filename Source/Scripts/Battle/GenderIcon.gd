@@ -4,7 +4,7 @@ enum Gender {Male, Female, Genderless}
 
 export(Gender) var gender setget set_gender
 
-func set_gender(value):
+func set_gender(value) -> void:
 	gender = value
 	match gender:
 		Gender.Male:

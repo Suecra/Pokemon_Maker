@@ -1,7 +1,7 @@
 extends "res://Source/Scripts/Battle/BattleAnimation.gd"
 
-var pokemon
+var pokemon: Node
 
-func _execute():
+func _execute() -> void:
 	var sprite = pokemon.get_sprite()
 	yield(sprite._faint(), "completed")

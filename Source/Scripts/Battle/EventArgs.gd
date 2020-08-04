@@ -1,3 +1,3 @@
-extends Object
+extends Reference
 
 var modified := false

@@ -9,9 +9,9 @@ const TARGET_RIGHT_OPPONENT = 5
 
 const MAX_POKEMON_COUNT_ON_FIELD = 3
 
-var weather
-var field_effect
-var battle
+var weather #:??
+var field_effect #:??
+var battle: Node
 # TODO: Add "Field" references
 
 # Opponent side
@@ -21,7 +21,7 @@ var battle
 #
 # Player side
 
-func get_pokemon_at_position(position: int, attacker_field):
+func get_pokemon_at_position(position: int, attacker_field: Node) -> Node:
 	var opponent_field
 	if attacker_field == battle.ally_field:
 		opponent_field = battle.opponent_field
@@ -32,25 +32,23 @@ func get_pokemon_at_position(position: int, attacker_field):
 		return attacker_field.get_pokemon_at_position(position)
 	return opponent_field.get_pokemon_at_position(position - MAX_POKEMON_COUNT_ON_FIELD)
 
-func get_targets(target_positions, attacker_field):
+func get_targets(target_positions: Array, attacker_field: Node) -> Array:
 	var result = []
 	for pos in target_positions:
 		result.append(get_pokemon_at_position(pos, attacker_field))
 	return result
 
-func get_status_bar(attacker_field):
+func get_status_bar(attacker_field: Node) -> Node:
 	if attacker_field == battle.ally_field:
 		return battle.get_node("PlayerStatusBar")
 	if attacker_field == battle.opponent_field:
 		return battle.get_node("EnemyStatusBar")
+	return null
 
-func begin_of_turn():
+func begin_of_turn() -> void:
 	battle.ally_field.begin_of_turn()
 	battle.opponent_field.begin_of_turn()
 
-func end_of_turn():
+func end_of_turn() -> void:
 	battle.ally_field.end_of_turn()
 	battle.opponent_field.end_of_turn()
-
-func _enter_tree():
-	battle = get_parent()

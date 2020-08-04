@@ -97,8 +97,8 @@ func init_turn(turn: Node) -> void:
 	var prev_turns = $Turns.get_children()
 	if prev_turns.size() > 0:
 		turn.prev_turn = prev_turns[prev_turns.size() - 1]
-	turn.owner = $Turns
 	$Turns.add_child(turn)
+	turn.owner = $Turns
 
 #rename to "register_text_message"
 func register_message(message: String) -> void:
@@ -111,5 +111,6 @@ func _ready() -> void:
 	ally_field = Field.new()
 	add_child(ally_field)
 	opponent_field = Field.new()
-	add_child(battlefield)
+	add_child(opponent_field)
+	battlefield.battle = self
 	Utils.add_node_if_not_exists(self, self, "Turns")

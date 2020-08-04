@@ -12,7 +12,7 @@ class Sorter:
 		else:
 			return false
 
-static func sort(list):
+static func sort(list: Array) -> void:
 	list.sort_custom(Sorter, "sort")
 	var same_prio_list = []
 	var same_prio: bool

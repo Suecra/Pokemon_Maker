@@ -1,8 +1,8 @@
 extends "res://Source/Scripts/Battle/HalfTurn.gd"
 
-func _get_priority():
+func _get_priority() -> int:
 	return 99
 
-func _execute():
+func _execute() -> void:
 	trainer.resigned = true
 	battle.register_message("The battle has been resigned!")

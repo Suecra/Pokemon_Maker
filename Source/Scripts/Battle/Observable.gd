@@ -5,7 +5,7 @@ const RegisteredSubject = preload("res://Source/Scripts/Battle/RegisteredSubject
 
 var registered_subjects: Dictionary = {}
 
-func register(subject, message: String, method: String, priority: int = 0):
+func register(subject: Node, message: String, method: String, priority: int = 0) -> void:
 	var registered_subject = RegisteredSubject.new()
 	registered_subject.priority = priority
 	registered_subject.subject = subject
@@ -15,15 +15,15 @@ func register(subject, message: String, method: String, priority: int = 0):
 	else:
 		registered_subjects[message] = [registered_subject]
 
-func unregister(subject, message: String):
+func unregister(subject: Node, message: String) -> void:
 	if registered_subjects.has(message):
 		var subjects = registered_subjects[message]
-		for s in subjects:
-			if s.subject == subject:
-				subjects.erase(s)
+		for subj in subjects:
+			if subj.subject == subject:
+				subjects.erase(subj)
 				break
 
-func unregister_all(subject):
+func unregister_all(subject: Node) -> void:
 	for i in registered_subjects.size():
 		var subjects = registered_subjects.values()[i]
 		for registered_subject in subjects:
@@ -34,9 +34,9 @@ func unregister_all(subject):
 				else:
 					idx += 1
 
-func notify(message: String, args = null):
+func notify(message: String, args = null) -> void:
 	if registered_subjects.has(message):
 		var subjects = registered_subjects[message]
 		PrioritySorter.sort(subjects)
-		for s in subjects:
-			s.notify(args)
+		for subject in subjects:
+			subject.notify(args)
