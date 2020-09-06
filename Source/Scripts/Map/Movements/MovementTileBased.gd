@@ -4,17 +4,17 @@ const STEP_DELAY = 0.1
 const SPRITE_OFFSET = Global.TILE_SIZE / 2
 const PREPARING_WALK = 3
 
-var walking_time = 0.0
-var stop_requested = false
-var walk_requested = false
-var change_direction_requested = false
-var running_against_wall = false
-var is_stepping = false
+var walking_time := 0.0
+var stop_requested := false
+var walk_requested := false
+var change_direction_requested := false
+var running_against_wall := false
+var is_stepping := false
 var velocity: Vector2
 var last_direction: Vector2
-var current_step_size = 0
+var current_step_size := 0
 
-func _walk(steps):
+func _walk(steps: int) -> bool:
 	if (steps > 0 || walking_time >= STEP_DELAY):
 		if check_path():
 			running_against_wall = false
@@ -24,10 +24,10 @@ func _walk(steps):
 	state = PREPARING_WALK
 	return false
 
-func _run(steps):
+func _run(steps: int) -> bool:
 	return true
 
-func _stop():
+func _stop() -> bool:
 	stop_requested = true
 	walk_requested = false
 	if running_against_wall:
@@ -35,7 +35,7 @@ func _stop():
 		return true
 	return not is_stepping
 
-func _change_direction(direction: Vector2):
+func _change_direction(direction: Vector2) -> bool:
 	var new_direction = get_tile_based_direction(direction)
 	if new_direction != last_direction:
 		if is_stepping && not running_against_wall:
@@ -50,7 +50,7 @@ func _change_direction(direction: Vector2):
 			return true
 	return false
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
 	if state == STANDING || state == PREPARING_WALK:
 		if walk_requested:
 			walking_time += delta
@@ -69,7 +69,7 @@ func _physics_process(delta):
 			current_step_size -= Global.TILE_SIZE
 			complete_step()
 
-func get_tile_based_direction(direction: Vector2):
+func get_tile_based_direction(direction: Vector2) -> Vector2:
 	var x = int(round(direction.x))
 	var y = int(round(direction.y))
 	if abs(x) == abs(y):
@@ -79,7 +79,7 @@ func get_tile_based_direction(direction: Vector2):
 			x = 0
 	return Vector2(x, y)
 
-func complete_step():
+func complete_step() -> void:
 	step_taken()
 	if check_path():
 		running_against_wall = false
@@ -96,18 +96,18 @@ func complete_step():
 		is_stepping = false
 		change_direction_requested = false
 
-func _adjust_position():
+func _adjust_position() -> void:
 	var offset = Vector2(SPRITE_OFFSET, SPRITE_OFFSET)
 	var tile_pos = Utils.tile_pos(character.get_position() + offset)
 	tile_pos = Vector2(round(tile_pos.x), round(tile_pos.y))
 	body.global_position = Utils.pixel_pos(tile_pos) - offset
 
-func check_path():
+func check_path() -> bool:
 	var transf = body.global_transform.translated(last_direction * SPRITE_OFFSET)
 	return not body.test_move(transf, last_direction)
 
-func _after_teleport():
+func _after_teleport() -> void:
 	_adjust_position()
 
-func _ready():
+func _ready() -> void:
 	_adjust_position()

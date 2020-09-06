@@ -5,20 +5,20 @@ const StatusCutscene = preload("res://Source/Scripts/Map/CharacterStatus/StatusC
 
 class_name Event
 
-var map
-var caller
-var player
+var map: Node
+var caller: Node
+var player: Node
 
-func clear():
+func clear() -> void:
 	event_actions.clear()
 
-func start():
+func start() -> void:
 	player.status = StatusCutscene.new()
 	yield(execute_event_actions(), "completed")
 	end()
 
-func end():
+func end() -> void:
 	player.status = StatusFreeMovement.new()
 
-func _ready():
+func _ready() -> void:
 	player = map.player

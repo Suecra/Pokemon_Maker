@@ -11,16 +11,16 @@ export(bool) var auto_hide
 export(bool) var fast_forward
 export(float) var display_time = 1.5
 
-var counter = 0.0
-var displaying = false
-var page_index
-var page_list
-var actual_chars_per_second
+var counter := 0.0
+var displaying := false
+var page_index: int
+var page_list: TextboxPageList
+var actual_chars_per_second: float
 
 signal finished
 signal finsihed_display
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
 	counter += delta
 	if displaying:
 		if fast_forward && Input.is_action_pressed("textbox_skip"):
@@ -45,11 +45,11 @@ func _physics_process(delta):
 		if skip && Input.is_action_just_pressed("textbox_skip"):
 			display_next_page()
 
-func display(text: String, bb_code := false):
+func display(text: String, bb_code := false) -> void:
 	display_async(text, bb_code)
 	yield(self, "finished")
 
-func display_async(text: String, bb_code := false):
+func display_async(text: String, bb_code := false) -> void:
 	page_list.is_bbcode = bb_code
 	page_list.create_pages(text)
 	style_container._show()
@@ -58,13 +58,13 @@ func display_async(text: String, bb_code := false):
 	set_physics_process(true)
 	display_next_page()
 
-func close():
+func close() -> void:
 	if auto_hide:
 		text_label.clear()
 		style_container._hide()
 	emit_signal("finished")
 
-func display_next_page():
+func display_next_page() -> void:
 	counter = 0
 	page_index += 1
 	if page_index < page_list.pages.size():
@@ -82,7 +82,7 @@ func display_next_page():
 	else:
 		close()
 
-func _ready():
+func _ready() -> void:
 	._ready()
 	text_label.scroll_active = false
 	page_list = TextboxPageList.new()

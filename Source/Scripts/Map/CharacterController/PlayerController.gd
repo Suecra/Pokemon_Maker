@@ -1,6 +1,6 @@
 extends "res://Source/Scripts/Map/CharacterController.gd"
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
 	var x = 0
 	var y = 0
 	if Input.is_action_pressed("move_left"):

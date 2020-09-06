@@ -13,7 +13,7 @@ var count: int
 var items: Array
 var selection: String
 
-func set_cursor(value):
+func set_cursor(value: PackedScene) -> void:
 	cursor = value
 	if cursor_node != null:
 		remove_child(cursor_node)
@@ -21,10 +21,10 @@ func set_cursor(value):
 		cursor_node = cursor.instance();
 		cursor_node.position.x = 3
 		cursor_node.position.y = 6
-		$Container.add_child(cursor_node)
-		$Container.move_child(cursor_node, 0)
+		container.add_child(cursor_node)
+		container.move_child(cursor_node, 0)
 
-func set_item_index(value: int):
+func set_item_index(value: int) -> void:
 	if value != item_index:
 		if value >= count:
 			if wrap:
@@ -37,7 +37,7 @@ func set_item_index(value: int):
 		selection = items[item_index]
 		cursor_node.index = item_index
 
-func prepare_text():
+func prepare_text() -> String:
 	var text = ""
 	for item in items:
 		if text != "":
@@ -45,11 +45,11 @@ func prepare_text():
 		text += String(item)
 	return text
 
-func display(items: Array):
+func display(items: Array) -> void:
 	display_async(items)
 	yield(self, "selected")
 
-func display_async(items: Array):
+func display_async(items: Array) -> void:
 	self.items = items
 	count = items.size()
 	text_label.text = prepare_text()
@@ -58,15 +58,15 @@ func display_async(items: Array):
 	cursor_node._show()
 	set_process(true)
 
-func close():
+func close() -> void:
 	style_container._hide()
 	cursor_node._hide()
 	emit_signal("selected")
 
-func _process(delta):
-	var mouse_position = $Container.get_local_mouse_position()
+func _process(delta: float) -> void:
+	var mouse_position = container.get_local_mouse_position()
 	var mouse_index: int
-	if mouse_position.x > 0 && mouse_position.x < $Container.rect_size.x:
+	if mouse_position.x > 0 && mouse_position.x < container.rect_size.x:
 		if mouse_position.y > 0 && mouse_position.y < cursor_node.step * count:
 			mouse_index = int(mouse_position.y / cursor_node.step)
 			set_item_index(mouse_index)
@@ -77,7 +77,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		close()
 
-func _ready():
+func _ready() -> void:
 	set_process(false)
 	set_cursor(cursor)
 	cursor_node._hide()

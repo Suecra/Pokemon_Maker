@@ -1,35 +1,35 @@
 <?xml version="1.0" ?>
-<testsuites failures="0" name="TestXML" tests="3" time="0.824">
+<testsuites failures="0" name="TestXML" tests="3" time="1.938">
 <testsuite failures="0" name="Battle Tests" tests="5" time="0.002">
-<testcase name=" stat change damage" time="0.334">
+<testcase name=" damage" time="1.328">
 </testcase>
-<testcase name=" damage" time="0.072">
+<testcase name=" add pokemon" time="1.278">
 </testcase>
-<testcase name=" get last moves" time="0.233">
+<testcase name=" get last moves" time="0.612">
 </testcase>
-<testcase name=" modified pokemon" time="0.088">
+<testcase name=" stat change damage" time="1.033">
 </testcase>
-<testcase name=" add pokemon" time="0.056">
+<testcase name=" modified pokemon" time="0.82">
 </testcase>
 </testsuite>
-<testsuite failures="0" name="Battle Tests 2" tests="5" time="0.009">
-<testcase name=" stat change damage" time="0.011">
+<testsuite failures="0" name="Battle Tests 2" tests="5" time="0.011">
+<testcase name=" damage" time="0.014">
 </testcase>
-<testcase name=" damage" time="0.012">
+<testcase name=" add pokemon" time="0.012">
 </testcase>
-<testcase name=" get last moves" time="0.007">
+<testcase name=" get last moves" time="0.009">
 </testcase>
-<testcase name=" modified pokemon" time="0.008">
+<testcase name=" stat change damage" time="0.017">
 </testcase>
-<testcase name=" add pokemon" time="0.008">
+<testcase name=" modified pokemon" time="0.007">
 </testcase>
 </testsuite>
 <testsuite failures="0" name="Observer Test" tests="3" time="0.003">
-<testcase name=" normal call" time="0">
-</testcase>
 <testcase name=" priority" time="0">
 </testcase>
-<testcase name=" notification" time="0">
+<testcase name=" notification" time="0.001">
+</testcase>
+<testcase name=" normal call" time="0">
 </testcase>
 </testsuite>
 </testsuites>

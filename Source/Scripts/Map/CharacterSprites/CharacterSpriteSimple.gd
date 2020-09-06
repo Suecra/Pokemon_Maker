@@ -1,9 +1,10 @@
 extends "res://Source/Scripts/Map/CharacterSprite.gd"
 
-var direction_string = ""
-var animation_name = "stop"
+onready var animation_player := $AnimationPlayer
+var direction_string := ""
+var animation_name := "stop"
 
-func _set_direction(value):
+func _set_direction(value: Vector2) -> void:
 	._set_direction(value)
 	var x = int(round(value.x))
 	var y = int(round(value.y))
@@ -18,14 +19,14 @@ func _set_direction(value):
 		new_direction = "down"
 	if new_direction != direction_string:
 		direction_string = new_direction
-		$AnimationPlayer.play(animation_name + "_" + direction_string)
+		animation_player.play(animation_name + "_" + direction_string)
 
 func _has_animation(name):
-	return $AnimationPlayer.has_animation(name + "_" + direction_string)
+	return animation_player.has_animation(name + "_" + direction_string)
 
 func _play_animation(name):
 	animation_name = name
-	$AnimationPlayer.play(animation_name + "_" + direction_string)
+	animation_player.play(animation_name + "_" + direction_string)
 
 func _stop_animation():
-	$AnimationPlayer.stop()
+	animation_player.stop()

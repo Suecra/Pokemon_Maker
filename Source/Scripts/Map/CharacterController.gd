@@ -1,6 +1,6 @@
 extends Node
 
-var character
+var character: Node
 
-func _ready():
+func _ready() -> void:
 	pass

@@ -5,9 +5,9 @@ class_name EventActionTurn
 enum Direction {Up, Left, Right, Down}
 
 export(Direction) var direction = Direction.Up
-var character
+var character: Node
 
-func _execute():
+func _execute() -> bool:
 	character = event.caller.character
 	match direction:
 		Direction.Up: character.look(Vector2(0, -1))
@@ -16,5 +16,5 @@ func _execute():
 		Direction.Down: character.look(Vector2(0, 1))
 	return false
 
-func _init(direction):
+func _init(direction) -> void:
 	self.direction = direction

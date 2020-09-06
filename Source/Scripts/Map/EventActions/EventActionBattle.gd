@@ -4,12 +4,12 @@ class_name EventActionBattle
 
 const Battle = preload("res://Scenes/BattleBase.tscn")
 
-var battle
-var trainer1
-var trainer2
-var player_won
+var battle: Node
+var trainer1: Node
+var trainer2: Node
+var player_won: bool
 
-func execute():
+func execute() -> void:
 	trainer1.pokemon_party.full_heal_all()
 	trainer2.pokemon_party.full_heal_all()
 	battle = Battle.instance()
@@ -21,9 +21,9 @@ func execute():
 	player_won = battle.player_won
 	event.map.get_node("BattleLayer").remove_child(battle)
 
-func won():
+func won() -> EventAction:
 	return event.add_action(EventActionCondition.new(self, "player_won"))
 
-func _init(trainer1, trainer2):
+func _init(trainer1, trainer2) -> void:
 	self.trainer1 = trainer1
 	self.trainer2 = trainer2

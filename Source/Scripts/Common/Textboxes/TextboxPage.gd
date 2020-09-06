@@ -1,4 +1,4 @@
 extends Object
 
-var lines = []
-var char_count = 0
+var lines := []
+var char_count := 0

@@ -12,7 +12,7 @@ export(PackedScene) var female_back_sprite
 export(PackedScene) var shiny_back_sprite
 export(PackedScene) var shiny_female_back_sprite
 
-func get_sprite(id):
+func get_sprite(id: int) -> Node:
 	var sprite
 	match id:
 		Sprites.Front: sprite = front_sprite.instance()

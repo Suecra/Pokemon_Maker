@@ -748,7 +748,7 @@ const MOVE = {
 	"zing-zap": {"name": "zing-zap", "path": "Source/Data/Move/zing-zap"},
 }
 
-static func get_move_filter_dict(filter: String):
+static func get_move_filter_dict(filter: String) -> Dictionary:
 	var result = {}
 	filter = filter.to_lower()
 	for key in MOVE.keys():

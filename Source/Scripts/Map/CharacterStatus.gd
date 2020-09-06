@@ -1,9 +1,9 @@
 extends Node
 
-var character
+var character: Node
 
-func _enter():
+func _enter() -> void:
 	pass
 
-func _exit():
+func _exit() -> void:
 	pass

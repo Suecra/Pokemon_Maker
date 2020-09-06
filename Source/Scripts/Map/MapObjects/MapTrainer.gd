@@ -5,10 +5,10 @@ class_name MapTrainer
 export(String, MULTILINE) var text_after_defeat
 export(String, MULTILINE) var text_after_victory
 
-onready var trainer = $Trainer
-var defeated = false
+onready var trainer := $Trainer
+var defeated := false
 
-func _trigger():
+func _trigger() -> void:
 	character.look_at(map.player.get_position())
 	var event = map.get_event(self)
 	if defeated:

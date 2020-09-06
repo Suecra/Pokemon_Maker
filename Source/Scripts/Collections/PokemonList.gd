@@ -812,7 +812,7 @@ const POKEMON = {
 	"zeraora": {"id": 807, "path": "Source/Data/Pokemon/zeraora"},
 }
 
-static func get_pokemon_filter_dict(filter: String):
+static func get_pokemon_filter_dict(filter: String) -> Dictionary:
 	var result = {}
 	filter = filter.to_lower()
 	for key in POKEMON.keys():
@@ -820,7 +820,7 @@ static func get_pokemon_filter_dict(filter: String):
 			result[key] = POKEMON[key]
 	return result
 
-static func get_single_icon(pokemon_id: int):
+static func get_single_icon(pokemon_id: int) -> Resource:
 	var filename = str(pokemon_id)
 	while filename.length() < ICON_NAME_DIGITS:
 		filename = "0" + filename

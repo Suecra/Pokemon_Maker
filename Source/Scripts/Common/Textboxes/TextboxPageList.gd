@@ -2,25 +2,25 @@ extends Object
 
 const TextboxPage = preload("res://Source/Scripts/Common/Textboxes/TextboxPage.gd")
 
-var pages = []
-var lines_per_page
-var font
-var textbox_width
-var is_bbcode
+var pages := []
+var lines_per_page: int
+var font: Font
+var textbox_width: float
+var is_bbcode: bool
 
-func trim(text):
+func trim(text: String) -> String:
 	while text.begins_with(" "):
 		text = text.substr(1, text.length())
 	while text.ends_with(" "):
 		text = text.substr(0, text.length() - 1)
 	return text
 
-func get_raw_text(text):
+func get_raw_text(text: String) -> String:
 	if is_bbcode:
 		pass
 	return trim(text)
 
-func create_pages(text, safe_margin = 0):
+func create_pages(text: String, safe_margin = 0) -> void:
 	pages.clear()
 	
 	var lines = text.split("\n", false)

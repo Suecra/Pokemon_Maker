@@ -1,19 +1,22 @@
 extends "res://Source/Scripts/Common/PokemonSprite.gd"
 
-func _out_of_pokeball():
+onready var animation_player := $AnimationPlayer
+onready var sprite := $Sprite
+
+func _out_of_pokeball() -> void:
 	_show()
-	$AnimationPlayer.play("anim", -1, 1.1)
+	animation_player.play("anim", -1, 1.1)
 	yield(get_tree().create_timer(0.0), "timeout")
 
-func _into_pokeball():
+func _into_pokeball() -> void:
 	_hide()
-	$AnimationPlayer.stop()
+	animation_player.stop()
 	yield(get_tree().create_timer(0.0), "timeout")
 
-func _faint():
+func _faint() -> void:
 	_hide()
-	$AnimationPlayer.stop()
+	animation_player.stop()
 	yield(get_tree().create_timer(0.0), "timeout")
 
-func _get_height():
-	return $Sprite.texture.get_height() / $Sprite.vframes
+func _get_height() -> float:
+	return sprite.texture.get_height() / sprite.vframes

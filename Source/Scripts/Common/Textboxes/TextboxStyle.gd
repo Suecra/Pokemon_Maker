@@ -3,14 +3,14 @@ extends Control
 export(bool) var custom_border = false
 export(NodePath) var text_node
 
-func set_debug_text(value):
+func set_debug_text(value: String) -> void:
 	pass
 
-func _resize():
+func _resize() -> void:
 	pass
 
-func _show():
+func _show() -> void:
 	visible = true
 
-func _hide():
+func _hide() -> void:
 	visible = false
