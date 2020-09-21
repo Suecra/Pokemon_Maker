@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 	elif state == RUNNING:
 		velocity = character.running_speed * direction
 	current_step_size += velocity.length() * delta
-	if current_step_size >= Global.TILE_SIZE:
-		current_step_size -= Global.TILE_SIZE
+	if current_step_size >= Consts.TILE_SIZE:
+		current_step_size -= Consts.TILE_SIZE
 		step_taken()
 	velocity = body.move_and_slide(velocity)

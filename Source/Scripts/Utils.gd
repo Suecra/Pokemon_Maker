@@ -40,7 +40,7 @@ static func set_node_owner(node: Node, owner: Node) -> void:
 		set_node_owner(child, owner)
 
 static func tile_pos(pixel_pos: Vector2) -> Vector2:
-	return pixel_pos / Global.TILE_SIZE
+	return pixel_pos / Consts.TILE_SIZE
 
 static func pixel_pos(tile_pos: Vector2) -> Vector2:
-	return tile_pos * Global.TILE_SIZE
+	return tile_pos * Consts.TILE_SIZE

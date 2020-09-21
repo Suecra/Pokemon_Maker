@@ -1,7 +1,7 @@
 extends "res://Source/Scripts/Map/Movement.gd"
 
 const STEP_DELAY = 0.1
-const SPRITE_OFFSET = Global.TILE_SIZE / 2
+const SPRITE_OFFSET = Consts.TILE_SIZE / 2
 const PREPARING_WALK = 3
 
 var walking_time := 0.0
@@ -65,8 +65,8 @@ func _physics_process(delta: float) -> void:
 	if is_stepping && not running_against_wall:
 		body.move_and_slide(velocity)
 		current_step_size += velocity.length() * delta
-		if current_step_size >= Global.TILE_SIZE:
-			current_step_size -= Global.TILE_SIZE
+		if current_step_size >= Consts.TILE_SIZE:
+			current_step_size -= Consts.TILE_SIZE
 			complete_step()
 
 func get_tile_based_direction(direction: Vector2) -> Vector2:

@@ -11,5 +11,5 @@ func _adjust_position() -> void:
 	character.movement._adjust_position()
 
 func _trigger() -> void:
-	character.look_at(map.player.get_position())
+	character.look_at(Global.player.get_position())
 	._trigger()

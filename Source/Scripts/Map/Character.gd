@@ -73,12 +73,16 @@ func stop() -> void:
 		sprite.play_animation("stop")
 		emit_signal("stopped")
 
-func teleport(position: Vector2) -> void:
+func teleport(map: Node, position: Vector2) -> void:
+	var parent = get_parent()
+	if parent != map:
+		parent.remove_child(self)
+		map.add_child(self)
 	movement.body.global_position = position
 	movement._after_teleport()
 
-func teleport_tile(x_tile: int, y_tile: int) -> void:
-	teleport(Utils.pixel_pos(Vector2(x_tile, y_tile)))
+func teleport_tile(map: Node, x_tile: int, y_tile: int) -> void:
+	teleport(map, Utils.pixel_pos(Vector2(x_tile, y_tile)))
 
 func is_facing(position: Vector2) -> bool:
 	var delta_pos = position - get_position()
@@ -95,7 +99,7 @@ func get_distance(position: Vector2) -> float:
 func _ready() -> void:
 	self.status = StatusFreeMovement.new()
 	
-	if Global.MOVEMENT == Global.MOVEMENT_TYPE.FREE:
+	if Consts.MOVEMENT == Consts.MOVEMENT_TYPE.FREE:
 		movement = MovementFree.new()
 	else:
 		movement = MovementTileBased.new()

@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Reference",
+"class": "Consts",
+"language": "GDScript",
+"path": "res://Source/Scripts/Consts.gd"
+}, {
 "base": "Node",
 "class": "Event",
 "language": "GDScript",
@@ -59,11 +64,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Source/Scripts/Map/EventActions/EventActionWalk.gd"
 }, {
-"base": "Reference",
-"class": "Global",
-"language": "GDScript",
-"path": "res://Source/Scripts/Global.gd"
-}, {
 "base": "Node2D",
 "class": "MapObject",
 "language": "GDScript",
@@ -95,6 +95,7 @@ _global_script_classes=[ {
 "path": "res://addons/WAT/core/test/test.gd"
 } ]
 _global_script_class_icons={
+"Consts": "",
 "Event": "",
 "EventAction": "",
 "EventActionBattle": "",
@@ -105,7 +106,6 @@ _global_script_class_icons={
 "EventActionTurn": "",
 "EventActionWait": "",
 "EventActionWalk": "",
-"Global": "",
 "MapObject": "",
 "MapTrainer": "",
 "NPC": "",
@@ -130,6 +130,10 @@ Display=8
 
 config/name="Pokémon Maker"
 run/main_scene="res://Scenes/Simulator/BattleSimulatorMain.tscn"
+
+[autoload]
+
+Global="*res://Scenes/Global.tscn"
 
 [display]
 

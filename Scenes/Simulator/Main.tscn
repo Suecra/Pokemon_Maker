@@ -1,19 +1,18 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Main.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/BattleBase.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/BattleBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Simulator/Main.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 524.767, 308.922 )
 
 [node name="Main" type="Node"]
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
-[node name="Battle" parent="." instance=ExtResource( 2 )]
+[node name="Battle" parent="." instance=ExtResource( 1 )]
 visible = false
 
 [node name="Interface" type="Control" parent="."]
-editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 
