@@ -13,7 +13,7 @@ func _on_Import_pressed():
 	var importer_list = $HTTPRequest.get_children()
 	if dir.open($DestinationDirectory.text) == 0:
 		for importer in importer_list:
-			if importer.enabled:
+			if importer.name.find("Importer") != -1 && importer.enabled:
 				yield(importer.import(base_url, $DestinationDirectory.text), "completed")
 	else:
 		do_log("Directory not found: " + $DestinationDirectory.text)

@@ -5,7 +5,7 @@ const Nature = preload("res://Source/Data/Nature.gd")
 func _create_item():
 	return Nature.new()
 
-func _import_item(item):
+func _import_item():
 	item.nature_name = api_item["name"]
 	item.inc_stat = get_stat("increased_stat")
 	item.dec_stat = get_stat("decreased_stat")

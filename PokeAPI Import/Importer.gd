@@ -5,6 +5,7 @@ export(String) var folder_name
 export(bool) var enabled = true
 export(int) var max_amount = -1
 export(int) var offset = 0
+export(String) var file_type
 
 var base_url
 var destination
@@ -14,6 +15,9 @@ var api_item
 var request_result
 var directory
 var result
+var path
+var scene
+var item
 
 func import(base_url, destination):
 	self.base_url = base_url
@@ -34,25 +38,29 @@ func import(base_url, destination):
 			yield(do_request(api_item_list["results"][i]["url"], true), "completed")
 			api_item = json.result
 			var name = _get_name()
-			var file = File.new()
-			var scene
-			var item
 			yield(_get_path(directory_name, name), "completed")
-			var path = result
-			if file.file_exists(path):
-				scene = load(path)
-				item = scene.instance()
-			else:
-				scene = PackedScene.new()
-				item = _create_item()
-				item.name = name
+			path = result
+			_load()
 			_on_import_item()
-			yield(_import_item(item), "completed")
-			scene.pack(item)
-			ResourceSaver.save(path, scene)
+			yield(_import_item(), "completed")
+			_save()
 			progress_bar.value = (i / count) * 100
 		progress_bar.value = 0
 		_after_import()
+
+func _load() -> void:
+	var file = File.new()
+	if file.file_exists(path):
+		scene = load(path)
+		item = scene.instance()
+	else:
+		scene = PackedScene.new()
+		item = _create_item()
+		item.name = name
+
+func _save() -> void:
+	scene.pack(item)
+	ResourceSaver.save(path, scene)
 
 func do_request(url, absolute = false):
 	var full_url = url
@@ -76,7 +84,7 @@ func _get_name():
 	return api_item["name"]
 
 func _get_path(directory_name, name):
-	result = directory_name + "/" + name + ".tscn"
+	result = directory_name + "/" + name + "." + file_type
 	yield(get_tree().create_timer(0), "timeout")
 
 func get_en_description(entries, property_name):
@@ -108,5 +116,5 @@ func _after_import():
 func _create_item():
 	pass
 
-func _import_item(item):
+func _import_item():
 	pass

@@ -15,7 +15,7 @@ export(String) var nickname
 export(int, 1, 100) var level
 export(Gender) var gender
 export(int) var current_hp setget set_current_hp
-export(PackedScene) var species setget set_species
+export(String) var species_name
 export(PackedScene) var nature setget set_nature
 
 var item: Node
@@ -61,11 +61,6 @@ export(int, 0, 31) var special_defense_iv
 export(int, 0, 31) var speed_iv
 
 export(bool) var shiny
-
-func set_species(value: PackedScene) -> void:
-	species = value
-	if has_node("Species"):
-		remove_child($Species)
 
 func set_nature(value: PackedScene) -> void:
 	nature = value
@@ -118,7 +113,12 @@ func get_types():
 	return get_species().get_node("Types").get_children()
 
 func get_species() -> Node:
-	return Utils.unpack(self, species, "Species")
+	if not has_node("Species"):
+		var species = Global.create_pokemon(species_name)
+		species.name = "Species"
+		add_child(species)
+		species.owner = self
+	return $Species
 
 func get_nature() -> Node:
 	return Utils.unpack(self, nature, "Nature")

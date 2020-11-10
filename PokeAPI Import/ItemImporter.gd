@@ -35,7 +35,7 @@ func _create_item():
 		return Item.new()
 	pass
 
-func _import_item(item):
+func _import_item():
 	match pocket:
 		"misc": item.pocket = Item.Pocket.Objects
 		"medicine": item.pocket = Item.Pocket.Medicine

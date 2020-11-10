@@ -8,7 +8,7 @@ func _get_name():
 func _create_item():
 	return Berry.new()
 
-func _import_item(item):
+func _import_item():
 	item.size = api_item["size"]
 	item.smoothness = api_item["smoothness"]
 	item.soil_dryness = api_item["soil_dryness"]

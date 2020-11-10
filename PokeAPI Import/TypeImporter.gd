@@ -5,7 +5,7 @@ const Type = preload("res://Source/Data/Type.gd")
 func _create_item():
 	return Type.new()
 
-func _import_item(item):
+func _import_item():
 	item.name = api_item["name"]
 	item.very_effective = 0
 	match api_item["name"]:

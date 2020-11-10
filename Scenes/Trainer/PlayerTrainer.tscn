@@ -1,11 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Source/Scripts/Battle/Trainer/PlayerTrainer.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/PokemonParty.gd" type="Script" id=2]
-[ext_resource path="res://Source/Data/Pokemon/aggron.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Source/Data/Nature/bold.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Source/Data/Nature/lax.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Source/Data/Pokemon/flygon.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=7]
 [ext_resource path="res://Source/Scripts/Battle/Movepool.gd" type="Script" id=8]
 [ext_resource path="res://Source/Scripts/Battle/Move.gd" type="Script" id=9]
@@ -22,7 +20,7 @@ script = ExtResource( 7 )
 nickname = "Aggron"
 level = 50
 current_hp = 1
-species = ExtResource( 3 )
+species_name = "aggron"
 nature = ExtResource( 4 )
 
 [node name="Movepool" type="Node" parent="PokemonParty/Aggron"]
@@ -38,5 +36,5 @@ script = ExtResource( 7 )
 nickname = "Flygon"
 level = 50
 current_hp = 1
-species = ExtResource( 6 )
+species_name = "flygon"
 nature = ExtResource( 5 )

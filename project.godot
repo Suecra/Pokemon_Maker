@@ -64,6 +64,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Source/Scripts/Map/EventActions/EventActionWalk.gd"
 }, {
+"base": "Node",
+"class": "LearnableMove",
+"language": "GDScript",
+"path": "res://Source/Data/LearnableMove.gd"
+}, {
 "base": "Node2D",
 "class": "MapObject",
 "language": "GDScript",
@@ -79,6 +84,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Source/Scripts/Map/MapObjects/NPC.gd"
 }, {
+"base": "Node",
+"class": "Pokemon",
+"language": "GDScript",
+"path": "res://Source/Data/Pokemon.gd"
+}, {
+"base": "Node",
+"class": "PokemonAbility",
+"language": "GDScript",
+"path": "res://Source/Data/PokemonAbility.gd"
+}, {
 "base": "Reference",
 "class": "Utils",
 "language": "GDScript",
@@ -93,6 +108,11 @@ _global_script_classes=[ {
 "class": "WATTest",
 "language": "GDScript",
 "path": "res://addons/WAT/core/test/test.gd"
+}, {
+"base": "Node",
+"class": "WildPokemonItem",
+"language": "GDScript",
+"path": "res://Source/Data/WildPokemonItem.gd"
 } ]
 _global_script_class_icons={
 "Consts": "",
@@ -106,12 +126,16 @@ _global_script_class_icons={
 "EventActionTurn": "",
 "EventActionWait": "",
 "EventActionWalk": "",
+"LearnableMove": "",
 "MapObject": "",
 "MapTrainer": "",
 "NPC": "",
+"Pokemon": "",
+"PokemonAbility": "",
 "Utils": "",
 "WAT": "",
-"WATTest": ""
+"WATTest": "",
+"WildPokemonItem": ""
 }
 
 [WAT]
@@ -258,4 +282,4 @@ environment/default_environment="res://default_env.tres"
 
 [tiled_importer]
 
-enable_json_format=true
+enable_json_format=false

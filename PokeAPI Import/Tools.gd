@@ -2,6 +2,7 @@ extends Tabs
 
 const PokemonListCreator = preload("res://Source/Scripts/Collections/PokemonListCreator.gd")
 const MoveListCreator = preload("res://Source/Scripts/Collections/MoveListCreator.gd")
+const Pokemon = preload("res://Source/Data/Pokemon.gd")
 
 func _ready():
 	pass
@@ -21,3 +22,20 @@ func _on_BtnCreateMoveList_button_down():
 	creator.create_collection()
 	creator.create_from_directory($EditMoveDir.text)
 	creator.save_collection()
+
+func _on_JSONConvert_button_down():
+	var pokemon = $aggron
+	var json: Dictionary
+	pokemon._save_to_json(json)
+	var json_string = to_json(json);
+	var file = File.new()
+	var error = file.open("res://Source/Data/PokemonJSON/aggron.json", 2)
+	file.store_line(json_string)
+	file.close()
+
+func _on_JSONConvertLoad_button_down():
+	var pokemon = Pokemon.new()
+	pokemon.load_from_file("res://Source/Data/PokemonJSON/bulbasaur.json")
+	var scene = PackedScene.new()
+	scene.pack(pokemon)
+	ResourceSaver.save("res://Source/Data/PokemonJSON/bulbasaurScene.tscn", scene)

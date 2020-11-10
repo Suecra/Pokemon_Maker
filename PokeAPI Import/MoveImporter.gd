@@ -29,7 +29,7 @@ func _create_item():
 		"physical": return PhysicalMove.new()
 		"special": return SpecialMove.new()
 
-func _import_item(item):
+func _import_item():
 	item.move_name = api_item["name"].capitalize()
 	item.type = load("res://Source/Data/Type/" + api_item["type"]["name"] + ".tscn")
 	match api_item["damage_class"]["name"]:
