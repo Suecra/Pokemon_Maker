@@ -99,6 +99,7 @@ func complete_step() -> void:
 func _adjust_position() -> void:
 	var offset = Vector2(SPRITE_OFFSET, SPRITE_OFFSET)
 	var tile_pos = Utils.tile_pos(character.get_position() + offset)
+	#print("Adjusting position by " + str(tile_pos.x - round(tile_pos.x)) + ", " + str(tile_pos.y - round(tile_pos.y)))
 	tile_pos = Vector2(round(tile_pos.x), round(tile_pos.y))
 	body.global_position = Utils.pixel_pos(tile_pos) - offset
 

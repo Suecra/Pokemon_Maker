@@ -5,8 +5,7 @@
 [node name="steel" type="Node"]
 script = ExtResource( 1 )
 id = 8
+type_name = "Steel"
 very_effective = 147488
 neutral = -153377
 not_very_effective = 5888
-no_effect = 0
-

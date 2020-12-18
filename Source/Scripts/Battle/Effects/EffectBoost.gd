@@ -1,5 +1,7 @@
 extends "res://Source/Scripts/Battle/Effect.gd"
 
+class_name EffectBoost
+
 enum Stat {ATTACK, DEFENSE, SPECIAL_ATTACK, SPECIAL_DEFENSE, SPEED}
 
 export(int, -6, 6) var attack_boost = 0

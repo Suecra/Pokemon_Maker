@@ -11,3 +11,4 @@ const SPRITE_COLLECTION_PATH = "res://Scenes/Sprite_Collections/BW/"
 
 const DATA_PATH = "res://Source/Data/"
 const POKEMON_PATH = DATA_PATH + "Pokemon/"
+const TYPE_PATH = DATA_PATH + "Type/"

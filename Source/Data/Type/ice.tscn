@@ -5,8 +5,7 @@
 [node name="ice" type="Node"]
 script = ExtResource( 1 )
 id = 14
+type_name = "Ice"
 very_effective = 34836
 neutral = -53013
 not_very_effective = 18176
-no_effect = 0
-

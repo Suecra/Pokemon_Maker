@@ -15,6 +15,56 @@ _global_script_classes=[ {
 "path": "res://Source/Scripts/Consts.gd"
 }, {
 "base": "Node",
+"class": "Effect",
+"language": "GDScript",
+"path": "res://Source/Scripts/Battle/Effect.gd"
+}, {
+"base": "Node",
+"class": "EffectBadPoison",
+"language": "GDScript",
+"path": "res://Source/Scripts/Battle/Effects/EffectBadPoison.gd"
+}, {
+"base": "Node",
+"class": "EffectBoost",
+"language": "GDScript",
+"path": "res://Source/Scripts/Battle/Effects/EffectBoost.gd"
+}, {
+"base": "Node",
+"class": "EffectBurn",
+"language": "GDScript",
+"path": "res://Source/Scripts/Battle/Effects/EffectBurn.gd"
+}, {
+"base": "Node",
+"class": "EffectConfusion",
+"language": "GDScript",
+"path": "res://Source/Scripts/Battle/Effects/EffectConfusion.gd"
+}, {
+"base": "Node",
+"class": "EffectFlinch",
+"language": "GDScript",
+"path": "res://Source/Scripts/Battle/Effects/EffectFlinch.gd"
+}, {
+"base": "Node",
+"class": "EffectFreeze",
+"language": "GDScript",
+"path": "res://Source/Scripts/Battle/Effects/EffectFreeze.gd"
+}, {
+"base": "Node",
+"class": "EffectParalysis",
+"language": "GDScript",
+"path": "res://Source/Scripts/Battle/Effects/EffectParalysis.gd"
+}, {
+"base": "Node",
+"class": "EffectPoison",
+"language": "GDScript",
+"path": "res://Source/Scripts/Battle/Effects/EffectPoison.gd"
+}, {
+"base": "Node",
+"class": "EffectSleep",
+"language": "GDScript",
+"path": "res://Source/Scripts/Battle/Effects/EffectSleep.gd"
+}, {
+"base": "Node",
 "class": "Event",
 "language": "GDScript",
 "path": "res://Source/Scripts/Map/Event.gd"
@@ -79,6 +129,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Source/Scripts/Map/MapObjects/MapTrainer.gd"
 }, {
+"base": "Node",
+"class": "Move",
+"language": "GDScript",
+"path": "res://Source/Data/Move.gd"
+}, {
 "base": "Node2D",
 "class": "NPC",
 "language": "GDScript",
@@ -116,6 +171,16 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Consts": "",
+"Effect": "",
+"EffectBadPoison": "",
+"EffectBoost": "",
+"EffectBurn": "",
+"EffectConfusion": "",
+"EffectFlinch": "",
+"EffectFreeze": "",
+"EffectParalysis": "",
+"EffectPoison": "",
+"EffectSleep": "",
 "Event": "",
 "EventAction": "",
 "EventActionBattle": "",
@@ -129,6 +194,7 @@ _global_script_class_icons={
 "LearnableMove": "",
 "MapObject": "",
 "MapTrainer": "",
+"Move": "",
 "NPC": "",
 "Pokemon": "",
 "PokemonAbility": "",
@@ -144,7 +210,7 @@ Test_Directory="res://tests"
 Results_Directory="res://tests/results/WAT"
 Minimize_Window_When_Running_Tests=false
 TestStrategy={
-"repeat": 1,
+"repeat": 0,
 "strategy": "RunAll"
 }
 Tags=PoolStringArray(  )
@@ -165,7 +231,6 @@ window/size/width=256
 window/size/height=150
 window/size/test_width=1024
 window/size/test_height=600
-window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
 [editor_plugins]

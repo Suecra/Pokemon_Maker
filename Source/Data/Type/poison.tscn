@@ -5,8 +5,8 @@
 [node name="poison" type="Node"]
 script = ExtResource( 1 )
 id = 3
+type_name = "Poison"
 very_effective = 133120
 neutral = -133561
 not_very_effective = 184
 no_effect = 256
-

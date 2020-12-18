@@ -24,18 +24,18 @@ func _on_BtnCreateMoveList_button_down():
 	creator.save_collection()
 
 func _on_JSONConvert_button_down():
-	var pokemon = $aggron
+	var move = $tackle
 	var json: Dictionary
-	pokemon._save_to_json(json)
+	move._save_to_json(json)
 	var json_string = to_json(json);
 	var file = File.new()
-	var error = file.open("res://Source/Data/PokemonJSON/aggron.json", 2)
+	var error = file.open("res://Source/Data/MoveJSON/tackle.json", 2)
 	file.store_line(json_string)
 	file.close()
 
 func _on_JSONConvertLoad_button_down():
-	var pokemon = Pokemon.new()
-	pokemon.load_from_file("res://Source/Data/PokemonJSON/bulbasaur.json")
+	var move = Move.new()
+	move.load_from_file("res://Source/Data/MoveJSON/tackle.json")
 	var scene = PackedScene.new()
-	scene.pack(pokemon)
-	ResourceSaver.save("res://Source/Data/PokemonJSON/bulbasaurScene.tscn", scene)
+	scene.pack(move)
+	ResourceSaver.save("res://Source/Data/MoveJSON/tackleScene.tscn", scene)

@@ -38,8 +38,3 @@ func get_message_box() -> Node:
 
 func create_message_box() -> Node:
 	return load(Consts.MESSAGEBOX_SCENE).instance()
-
-static func create_pokemon(name: String) -> Pokemon:
-	var pokemon = Pokemon.new()
-	pokemon.load_from_file(Consts.POKEMON_PATH + name + ".json")
-	return pokemon

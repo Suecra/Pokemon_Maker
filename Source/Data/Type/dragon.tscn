@@ -5,8 +5,8 @@
 [node name="dragon" type="Node"]
 script = ExtResource( 1 )
 id = 15
+type_name = "Dragon"
 very_effective = 32768
 neutral = -164097
 not_very_effective = 256
 no_effect = 131072
-

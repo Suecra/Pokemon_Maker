@@ -5,8 +5,7 @@
 [node name="fairy" type="Node"]
 script = ExtResource( 1 )
 id = 17
+type_name = "Fairy"
 very_effective = 98306
 neutral = -99083
 not_very_effective = 776
-no_effect = 0
-

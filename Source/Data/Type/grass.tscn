@@ -5,6 +5,7 @@
 [node name="grass" type="Node"]
 script = ExtResource( 1 )
 id = 11
+type_name = "Grass"
 very_effective = 1072
 neutral = -36733
 not_very_effective = 35660

@@ -5,8 +5,8 @@
 [node name="ground" type="Node"]
 script = ExtResource( 1 )
 id = 4
+type_name = "Ground"
 very_effective = 4904
 neutral = -7021
 not_very_effective = 2112
 no_effect = 4
-

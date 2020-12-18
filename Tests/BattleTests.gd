@@ -1,7 +1,7 @@
 extends WATTest
 
 const Battle = preload("res://Source/Scripts/Battle/Battle.gd")
-const Pokemon = preload("res://Source/Scripts/Battle/Pokemon.gd")
+const Fighter = preload("res://Source/Scripts/Battle/Pokemon.gd")
 const Movepool = preload("res://Source/Scripts/Battle/Movepool.gd")
 const SPECIES_PATH = "res://Source/Data/Pokemon/"
 const NATURE_PATH = "res://Source/Data/Nature/"
@@ -27,9 +27,8 @@ func set_up():
 func tear_down():
 	remove_child(battle)
 
-func create_basic_pokemon(name: String, level: int, moves: Array, nature: String) -> Pokemon:
-	var pokemon = Pokemon.new()
-	pokemon.species = load(SPECIES_PATH + name + ".tscn")
+func create_basic_pokemon(name: String, level: int, moves: Array, nature: String) -> Fighter:
+	var pokemon = Fighter.new(name)
 	pokemon.nature = load(NATURE_PATH + nature + ".tscn")
 	pokemon.level = level
 	pokemon.calculate_stats()
@@ -78,13 +77,12 @@ func test_modified_pokemon():
 	seviper.defense_ev = 128
 	seviper.special_defense_ev = 128
 	seviper.calculate_stats()
-	seviper.current_hp = 9999
 	
 	asserts.is_equal(155, zangoose.attack, "Zangoose has 155 attack")
 	asserts.is_equal(51, zangoose.special_attack, "Zangoose has 51 special_attack")
 	asserts.is_equal(115, zangoose.speed, "Zangoose has 115 speed")
 	
-	asserts.is_equal(231, seviper.current_hp, "Seviper has 231 hp")
+	asserts.is_equal(231, seviper.hp, "Seviper has 231 hp")
 	asserts.is_equal(129, seviper.defense, "Seviper has 129 defense")
 	asserts.is_equal(109, seviper.special_defense, "Seviper has 109 special_defense")
 

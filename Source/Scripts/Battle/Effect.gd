@@ -1,5 +1,7 @@
 extends Node
 
+class_name Effect
+
 enum EffectedPokemon {User, Target}
 
 export(EffectedPokemon) var effected_pokemon = 0

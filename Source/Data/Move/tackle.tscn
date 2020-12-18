@@ -8,18 +8,12 @@
 script = ExtResource( 1 )
 move_name = "Tackle"
 type = ExtResource( 2 )
-damage_class = 0
 power = 40
 accuracy = 100
-priority = 0
 pp = 35
-z_power = 0
 flags = 32
-hit_range = 0
-is_HM = false
 contest_type = 4
 contest_effect = ExtResource( 3 )
-battle_style = 0
 description = "A physical attack in which the user charges and
 slams into the target with its whole body."
 

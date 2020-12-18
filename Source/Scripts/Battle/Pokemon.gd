@@ -16,8 +16,9 @@ export(int, 1, 100) var level
 export(Gender) var gender
 export(int) var current_hp setget set_current_hp
 export(String) var species_name
-export(PackedScene) var nature setget set_nature
+export(PackedScene) var nature setget set_nature, get_nature
 
+var species: Node setget ,get_species
 var item: Node
 var field: Node
 var battle: Node
@@ -88,7 +89,7 @@ func damage_percent(percent: float) -> int:
 	return damage
 
 func full_heal() -> void:
-	current_hp = hp
+	self.current_hp = hp
 	heal_primary_status(true)
 	if movepool != null:
 		for move in movepool.get_children():
@@ -96,29 +97,32 @@ func full_heal() -> void:
 
 func calculate_stats() -> void:
 	calculate_hp()
-	attack = calculate_stat(get_species().attack, attack_ev, attack_iv)
-	defense = calculate_stat(get_species().defense, defense_ev, defense_iv)
-	special_attack = calculate_stat(get_species().special_attack, special_attack_ev, special_attack_iv)
-	special_defense = calculate_stat(get_species().special_defense, special_defense_ev, special_defense_iv)
-	speed = calculate_stat(get_species().speed, speed_ev, speed_iv)
-	get_nature().change_stats(self)
+	attack = calculate_stat(self.species.attack, attack_ev, attack_iv)
+	defense = calculate_stat(self.species.defense, defense_ev, defense_iv)
+	special_attack = calculate_stat(self.species.special_attack, special_attack_ev, special_attack_iv)
+	special_defense = calculate_stat(self.species.special_defense, special_defense_ev, special_defense_iv)
+	speed = calculate_stat(self.species.speed, speed_ev, speed_iv)
+	self.nature.change_stats(self)
 
 func calculate_stat(base: int, ev: int, iv: int) -> float:
 	return floor((2 * base + iv + ev / 4) * level / 100 + 5)
 
 func calculate_hp() -> void:
-	hp = floor(((2 * get_species().hp + hp_iv + hp_ev / 4) * level / 100) + level + 10)
+	hp = floor(((2 * self.species.hp + hp_iv + hp_ev / 4) * level / 100) + level + 10)
 
 func get_types():
-	return get_species().get_node("Types").get_children()
+	return self.species.get_node("Types").get_children()
 
 func get_species() -> Node:
 	if not has_node("Species"):
-		var species = Global.create_pokemon(species_name)
-		species.name = "Species"
-		add_child(species)
-		species.owner = self
+		load_species()
 	return $Species
+
+func load_species() -> void:
+	species = Pokemon.new(species_name)
+	species.name = "Species"
+	add_child(species)
+	species.owner = self
 
 func get_nature() -> Node:
 	return Utils.unpack(self, nature, "Nature")
@@ -130,16 +134,16 @@ func get_sprite() -> Node:
 		base = battle.get_node("BasePlayer")
 		base.remove_child(base.get_node("PKMNSprite"))
 		if shiny:
-			sprite = Utils.unpack(base, get_species().get_sprite_collection().shiny_back_sprite, "PKMNSprite")
+			sprite = Utils.unpack(base, self.species.get_sprite_collection().shiny_back_sprite, "PKMNSprite")
 		else:
-			sprite = Utils.unpack(base, get_species().get_sprite_collection().back_sprite, "PKMNSprite")
+			sprite = Utils.unpack(base, self.species.get_sprite_collection().back_sprite, "PKMNSprite")
 	elif field == battle.opponent_field:
 		base = battle.get_node("BaseOpponent")
 		base.remove_child(base.get_node("PKMNSprite"))
 		if shiny:
-			sprite = Utils.unpack(base, get_species().get_sprite_collection().shiny_sprite, "PKMNSprite")
+			sprite = Utils.unpack(base, self.species.get_sprite_collection().shiny_sprite, "PKMNSprite")
 		else:
-			sprite = Utils.unpack(base, get_species().get_sprite_collection().front_sprite, "PKMNSprite")
+			sprite = Utils.unpack(base, self.species.get_sprite_collection().front_sprite, "PKMNSprite")
 	sprite.position = base.calculate_pokemon_position(sprite._get_height())
 	return sprite
 
@@ -218,14 +222,11 @@ func fainted() -> bool:
 		return primary_status.status_name == "Faint"
 	return false
 
-func do_move(move: Node) -> void:
+func can_move(move_name: String) -> bool:
 	var args = CanMoveEventArgs.new()
-	args.move_name = move.move_name
+	args.move_name = move_name
 	notify("CAN_MOVE", args)
-	if args.can_move:
-		move.user = self
-		battle.register_message(nickname + " uses " + move.move_name + "!")
-		move._execute()
+	return args.can_move
 
 func boost_stat(stat, amount: int) -> void:
 	match stat:
@@ -261,9 +262,8 @@ func get_stat_name(stat) -> String:
 
 func get_last_learnable_moves() -> Array:
 	var moves = []
-	var species = get_species()
-	if species.has_node("Moves"):
-		for m in species.get_node("Moves").get_children():
+	if self.species.has_node("Moves"):
+		for m in self.species.get_node("Moves").get_children():
 			if m.level > 0 && m.level <= level:
 				var added = false
 				for i in moves.size():
@@ -305,10 +305,13 @@ func _ready() -> void:
 	add_movepool_if_not_exists()
 	movepool.pokemon = self
 	calculate_stats()
-	current_hp = hp
+	self.current_hp = hp
 
-func _init() -> void:
+func _init(species_name: String = "") -> void:
 	add_movepool_if_not_exists()
+	self.species_name = species_name
+	if species_name != "":
+		load_species()
 
 func init_battle() -> void:
 	battlefield = battle.battlefield

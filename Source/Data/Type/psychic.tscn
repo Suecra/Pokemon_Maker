@@ -5,8 +5,8 @@
 [node name="psychic" type="Node"]
 script = ExtResource( 1 )
 id = 13
+type_name = "Psychic"
 very_effective = 10
 neutral = -73995
 not_very_effective = 8448
 no_effect = 65536
-

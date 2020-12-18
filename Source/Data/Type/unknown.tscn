@@ -5,8 +5,5 @@
 [node name="unknown" type="Node"]
 script = ExtResource( 1 )
 id = 19
-very_effective = 0
+type_name = "Unknown"
 neutral = -1
-not_very_effective = 0
-no_effect = 0
-

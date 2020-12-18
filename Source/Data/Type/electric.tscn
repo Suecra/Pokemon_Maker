@@ -5,8 +5,8 @@
 [node name="electric" type="Node"]
 script = ExtResource( 1 )
 id = 12
+type_name = "Electric"
 very_effective = 1028
 neutral = -39957
 not_very_effective = 38912
 no_effect = 16
-

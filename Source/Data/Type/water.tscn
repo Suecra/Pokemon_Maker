@@ -5,8 +5,7 @@
 [node name="water" type="Node"]
 script = ExtResource( 1 )
 id = 10
+type_name = "Water"
 very_effective = 560
 neutral = -36401
 not_very_effective = 35840
-no_effect = 0
-

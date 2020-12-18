@@ -31,6 +31,10 @@ export(PackedScene) var sprite_collection
 onready var gender_chance := $GenderChance
 onready var growth_rate := $GrowthRate
 
+func _init(name: String = "") -> void:
+	if name != "":
+		load_from_file(Consts.POKEMON_PATH + name + ".json")
+
 func get_sprite_collection() -> Node:
 	if not has_node("Sprites"):
 		var sprites_name = String(national_dex_nr)
@@ -48,12 +52,12 @@ func _load_from_json(data: Dictionary) -> void:
 	pokemon_name = data["name"]
 	name = pokemon_name
 	
-	hp = int(data["stats"][5]["base_stat"])
-	attack = int(data["stats"][4]["base_stat"])
-	defense = int(data["stats"][3]["base_stat"])
-	special_attack = int(data["stats"][2]["base_stat"])
-	special_defense = int(data["stats"][1]["base_stat"])
-	speed = int(data["stats"][0]["base_stat"])
+	hp = int(data["stats"][0]["base_stat"])
+	attack = int(data["stats"][1]["base_stat"])
+	defense = int(data["stats"][2]["base_stat"])
+	special_attack = int(data["stats"][3]["base_stat"])
+	special_defense = int(data["stats"][4]["base_stat"])
+	speed = int(data["stats"][5]["base_stat"])
 	
 	catch_rate = int(species["capture_rate"])
 	happiness = int(species["base_happiness"])
