@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Endures any attack for\n1 turn, leaving at least 1HP.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":""},"flinch_chance":0},"name":"endure","pp":10,"priority":4,"stat_changes":[],"target":{"name":"user"},"type":{"name":"normal"}}

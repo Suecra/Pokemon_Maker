@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"The user employs its\npsychic power to\nswitch its Attack\nwith its Defense\nstat.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":""},"flinch_chance":0},"name":"power-trick","pp":10,"priority":0,"stat_changes":[],"target":{"name":"user"},"type":{"name":"psychic"}}

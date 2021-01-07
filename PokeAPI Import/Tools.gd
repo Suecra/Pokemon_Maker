@@ -34,8 +34,7 @@ func _on_JSONConvert_button_down():
 	file.close()
 
 func _on_JSONConvertLoad_button_down():
-	var move = Move.new()
-	move.load_from_file("res://Source/Data/MoveJSON/tackle.json")
+	var move = Move.new("swords-dance")
 	var scene = PackedScene.new()
 	scene.pack(move)
-	ResourceSaver.save("res://Source/Data/MoveJSON/tackleScene.tscn", scene)
+	ResourceSaver.save("res://Source/Data/Move/swords-dance.tscn", scene)

@@ -1,0 +1,1 @@
+{"accuracy":100,"damage_class":{"name":"special"},"flavor_text_entries":[{"flavor_text":"The power varies\nwith the POKéMON.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":0},"name":"hidden-power","power":60,"pp":15,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"normal"}}

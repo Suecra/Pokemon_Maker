@@ -127,8 +127,8 @@ func do_import():
 			animation.loop = true
 			animation.add_track(0)
 			animation.track_set_path(0, "Sprite:frame")
-			for i in range(frames):
-				animation.track_insert_key(0, float(i) / 10, i)
+			for j in range(frames):
+				animation.track_insert_key(0, float(j) / 10, j)
 			animation.value_track_set_update_mode(0, Animation.UPDATE_DISCRETE)
 			animation_player.add_animation("anim", animation)
 			

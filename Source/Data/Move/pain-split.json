@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Adds user & foe's\nHPs. Shares total.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":""},"flinch_chance":0},"name":"pain-split","pp":20,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"normal"}}

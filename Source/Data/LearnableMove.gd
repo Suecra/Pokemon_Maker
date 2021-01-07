@@ -2,7 +2,7 @@ extends "res://Source/Data/PMDataObject.gd"
 
 class_name LearnableMove
 
-export(PackedScene) var move
+export(String) var move_name
 export(int) var level
 export(bool) var egg
 export(bool) var tm
@@ -20,7 +20,7 @@ func _save_to_json(data: Dictionary) -> void:
 	set_move_data(data["version_group_details"][0])
 
 func get_move_data(data: Dictionary) -> void:
-	move = load("res://Source/Data/Move/" + name + ".tscn")
+	move_name = name
 	match data["move_learn_method"]["name"]:
 		"egg": egg = true
 		"machine": tm = true

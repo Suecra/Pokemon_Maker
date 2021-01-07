@@ -1,0 +1,1 @@
+{"accuracy":100,"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Makes the opposite\ngender infatuated.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"ailment;"},"flinch_chance":0},"name":"attract","pp":15,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"normal"}}

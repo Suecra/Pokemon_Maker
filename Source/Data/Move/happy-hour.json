@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Using Happy Hour doubles\nthe amount of prize money\nreceived after battle.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":""},"flinch_chance":0},"name":"happy-hour","pp":30,"priority":0,"stat_changes":[],"target":{"name":"users-field"},"type":{"name":"normal"}}

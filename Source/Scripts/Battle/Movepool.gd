@@ -1,6 +1,6 @@
 extends Node
 
-const Move = preload("res://Source/Scripts/Battle/Move.gd")
+const BattleMove = preload("res://Source/Scripts/Battle/Move.gd")
 
 var pokemon: Node
 
@@ -22,18 +22,18 @@ func swap(index1: int, index2: int) -> void:
 	var move = get_child(index1)
 	move_child(move, index2)
 
-func add_move(move) -> void:
-	var move_node = Move.new()
-	move_node.name = "Move" + str(get_child_count() + 1)
-	move_node.move = move
-	move_node.current_pp = 99
-	add_child(move_node)
-	move_node.owner = self
+func add_move(name: String) -> void:
+	var move = BattleMove.new()
+	move.move_name = name
+	move.name = "Move" + str(get_child_count() + 1)
+	move.current_pp = 99
+	add_child(move)
+	move.owner = self
 
 func to_string_array() -> Array:
 	var moves = []
 	for move in get_children():
-		moves.append(move.get_move_data().move_name)
+		moves.append(move.data.get_move_name())
 	return moves
 
 func fill_from_last_learnable_moves() -> void:

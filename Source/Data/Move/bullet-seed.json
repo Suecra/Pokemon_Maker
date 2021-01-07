@@ -1,0 +1,1 @@
+{"accuracy":100,"damage_class":{"name":"physical"},"flavor_text_entries":[{"flavor_text":"Shoots 2 to 5 seeds in a row\nto strike the foe.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":0},"name":"bullet-seed","power":25,"pp":30,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"grass"}}

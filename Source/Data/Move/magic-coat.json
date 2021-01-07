@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Reflects special effects\nback to the attacker.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":""},"flinch_chance":0},"name":"magic-coat","pp":15,"priority":4,"stat_changes":[],"target":{"name":"user"},"type":{"name":"psychic"}}

@@ -1,0 +1,1 @@
+{"accuracy":30,"damage_class":{"name":"special"},"flavor_text_entries":[{"flavor_text":"A chilling attack that\ncauses fainting if it hits.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"ohko"},"flinch_chance":0},"name":"sheer-cold","pp":5,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"ice"}}

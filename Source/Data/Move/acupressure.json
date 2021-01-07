@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"The user applies\npressure to stress\npoints, sharply\nboosting one of its\nstats.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":""},"flinch_chance":0},"name":"acupressure","pp":30,"priority":0,"stat_changes":[],"target":{"name":"user-or-ally"},"type":{"name":"normal"}}

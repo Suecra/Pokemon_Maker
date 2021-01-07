@@ -1,6 +1,6 @@
 extends Node
 
-export(int) var priority setget ,_get_priority
+var priority setget ,_get_priority
 
 var trainer: Node
 var pokemon: Node

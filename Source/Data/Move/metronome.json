@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Randomly uses any\nPOKéMON move.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":""},"flinch_chance":0},"name":"metronome","pp":10,"priority":0,"stat_changes":[],"target":{"name":"user"},"type":{"name":"normal"}}

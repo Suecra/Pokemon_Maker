@@ -1,0 +1,1 @@
+{"accuracy":95,"damage_class":{"name":"special"},"flavor_text_entries":[{"flavor_text":"Hacks with razorlike wind.\nHigh critical-hit ratio.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":0},"name":"air-cutter","power":60,"pp":25,"priority":0,"stat_changes":[],"target":{"name":"all-opponents"},"type":{"name":"flying"}}

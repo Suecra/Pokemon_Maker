@@ -34,7 +34,7 @@ func create_basic_pokemon(name: String, level: int, moves: Array, nature: String
 	pokemon.calculate_stats()
 	pokemon.full_heal()
 	for move in moves:
-		pokemon.movepool.add_move(load(MOVE_PATH + move + ".tscn"))
+		pokemon.movepool.add_move(move)
 	return pokemon
 
 func test_add_pokemon():
@@ -91,23 +91,23 @@ func test_get_last_moves():
 	var moves = scizor.get_last_learnable_moves()
 	var movepool = scizor.movepool
 	for m in moves:
-		movepool.add_move(m.move)
+		movepool.add_move(m.move_name)
 	
-	asserts.is_equal("Night-slash", movepool.get_move(3).get_move_data().move_name, "Scizor learned Night Slash")
-	asserts.is_equal("Double-hit", movepool.get_move(2).get_move_data().move_name, "Scizor learned Double Hit")
-	asserts.is_equal("Iron-head", movepool.get_move(1).get_move_data().move_name, "Scizor learned Iron Head")
-	asserts.is_equal("Swords-dance", movepool.get_move(0).get_move_data().move_name, "Scizor learned Swords Dance")
+	asserts.is_equal("Night-slash", movepool.get_move(3).data.get_move_name(), "Scizor learned Night Slash")
+	asserts.is_equal("Double-hit", movepool.get_move(2).data.get_move_name(), "Scizor learned Double Hit")
+	asserts.is_equal("Iron-head", movepool.get_move(1).data.get_move_name(), "Scizor learned Iron Head")
+	asserts.is_equal("Swords-dance", movepool.get_move(0).data.get_move_name(), "Scizor learned Swords Dance")
 	
 	var aggron = create_basic_pokemon("aggron", 40, [], "hardy")
 	moves = aggron.get_last_learnable_moves()
 	movepool = aggron.movepool
 	for m in moves:
-		movepool.add_move(m.move)
+		movepool.add_move(m.move_name)
 	
-	asserts.is_equal("Take-down", movepool.get_move(3).get_move_data().move_name, "Aggron learned Take Down")
-	asserts.is_equal("Metal-sound", movepool.get_move(2).get_move_data().move_name, "Aggron learned Metal Sound")
-	asserts.is_equal("Iron-tail", movepool.get_move(1).get_move_data().move_name, "Aggron learned Iron Tail")
-	asserts.is_equal("Iron-defense", movepool.get_move(0).get_move_data().move_name, "Aggron learned Iron Defense")
+	asserts.is_equal("Take-down", movepool.get_move(3).data.get_move_name(), "Aggron learned Take Down")
+	asserts.is_equal("Metal-sound", movepool.get_move(2).data.get_move_name(), "Aggron learned Metal Sound")
+	asserts.is_equal("Iron-tail", movepool.get_move(1).data.get_move_name(), "Aggron learned Iron Tail")
+	asserts.is_equal("Iron-defense", movepool.get_move(0).data.get_move_name(), "Aggron learned Iron Defense")
 
 func test_damage():
 	var pidgeotto = create_basic_pokemon("pidgeotto", 25, ["gust", "tackle", "twister", "sand-attack"], "modest")

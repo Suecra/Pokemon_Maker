@@ -19,7 +19,7 @@ func save_to_file(filename: String) -> void:
 	var file = File.new()
 	var result = file.open(filename, 2)
 	if result == 0:
-		var json: Dictionary
+		var json = {}
 		_save_to_json(json)
 		file.store_line(to_json(json))
 		file.close()

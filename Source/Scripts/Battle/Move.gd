@@ -1,6 +1,6 @@
 extends "res://Source/Scripts/Battle/HalfTurn.gd"
 
-export(PackedScene) var move
+export(String) var move_name
 export(int) var current_pp setget set_current_pp
 
 var target_index: int
@@ -18,7 +18,15 @@ func set_current_pp(value: int) -> void:
 	current_pp = max(current_pp, 0)
 
 func get_move_data() -> Node:
-	return Utils.unpack(self, move, "Move")
+	if not has_node("Data"):
+		load_move()
+	return $Data
+
+func load_move() -> void:
+	data = Move.new(move_name)
+	data.name = "Data"
+	add_child(data)
+	data.owner = self
 
 func _can_use() -> bool:
 	return current_pp > 0
@@ -32,7 +40,7 @@ func _execute() -> void:
 	if pokemon.can_move(self.data.move_name):
 		var target_positions = self.data.get_target_positions(pokemon.position, target_index)
 		targets = battle.battlefield.get_targets(target_positions, field)
-		battle.register_message(pokemon.nickname + " uses " + self.data.move_name + "!")
+		battle.register_message(pokemon.nickname + " uses " + self.data.get_move_name() + "!")
 		for target in targets:
 			if _is_hit(target):
 				_hit(target)

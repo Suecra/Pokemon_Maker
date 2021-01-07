@@ -1,0 +1,1 @@
+{"accuracy":100,"damage_class":{"name":"special"},"flavor_text_entries":[{"flavor_text":"Causes an uproar for 2 to 5\nturns and prevents sleep.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":0},"name":"uproar","power":90,"pp":10,"priority":0,"stat_changes":[],"target":{"name":"all-opponents"},"type":{"name":"normal"}}

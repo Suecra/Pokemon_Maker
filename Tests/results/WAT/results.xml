@@ -1,43 +1,43 @@
 <?xml version="1.0" ?>
-<testsuites failures="2" name="TestXML" tests="3" time="0.941">
+<testsuites failures="2" name="TestXML" tests="3" time="1.182">
 <testsuite failures="1" name="Battle Tests" tests="5" time="0.002">
-<testcase name=" stat change damage" time="0.154">
+<testcase name=" add pokemon" time="0.046">
 </testcase>
-<testcase name=" add pokemon" time="0.06">
+<testcase name=" stat change damage" time="0.055">
 </testcase>
-<testcase name=" damage" time="0.056">
-</testcase>
-<testcase name=" get last moves" time="0.039">
+<testcase name=" get last moves" time="0.032">
 <failure message="EXPECTED: |String| Night-slash is equal to |String| Iron-defense but GOT |String| Night-slash is not equal to |String| Iron-defense"></failure>
 <failure message="EXPECTED: |String| Double-hit is equal to |String| Night-slash but GOT |String| Double-hit is not equal to |String| Night-slash"></failure>
 <failure message="EXPECTED: |String| Iron-head is equal to |String| Double-hit but GOT |String| Iron-head is not equal to |String| Double-hit"></failure>
 <failure message="EXPECTED: |String| Swords-dance is equal to |String| Iron-head but GOT |String| Swords-dance is not equal to |String| Iron-head"></failure>
 </testcase>
-<testcase name=" modified pokemon" time="0.041">
+<testcase name=" damage" time="0.065">
+</testcase>
+<testcase name=" modified pokemon" time="0.035">
 </testcase>
 </testsuite>
-<testsuite failures="1" name="Battle Tests 2" tests="5" time="0.008">
-<testcase name=" stat change damage" time="0.023">
+<testsuite failures="1" name="Battle Tests 2" tests="5" time="0.014">
+<testcase name=" add pokemon" time="0.034">
 </testcase>
-<testcase name=" add pokemon" time="0.019">
+<testcase name=" stat change damage" time="0.039">
 </testcase>
-<testcase name=" damage" time="0.021">
-</testcase>
-<testcase name=" get last moves" time="0.017">
+<testcase name=" get last moves" time="0.027">
 <failure message="EXPECTED: |String| Night-slash is equal to |String| Iron-defense but GOT |String| Night-slash is not equal to |String| Iron-defense"></failure>
 <failure message="EXPECTED: |String| Double-hit is equal to |String| Night-slash but GOT |String| Double-hit is not equal to |String| Night-slash"></failure>
 <failure message="EXPECTED: |String| Iron-head is equal to |String| Double-hit but GOT |String| Iron-head is not equal to |String| Double-hit"></failure>
 <failure message="EXPECTED: |String| Swords-dance is equal to |String| Iron-head but GOT |String| Swords-dance is not equal to |String| Iron-head"></failure>
 </testcase>
-<testcase name=" modified pokemon" time="0.02">
+<testcase name=" damage" time="0.05">
+</testcase>
+<testcase name=" modified pokemon" time="0.03">
 </testcase>
 </testsuite>
-<testsuite failures="0" name="Observer Test" tests="3" time="0.002">
-<testcase name=" notification" time="0.001">
+<testsuite failures="0" name="Observer Test" tests="3" time="0.004">
+<testcase name=" priority" time="0">
 </testcase>
 <testcase name=" normal call" time="0">
 </testcase>
-<testcase name=" priority" time="0">
+<testcase name=" notification" time="0">
 </testcase>
 </testsuite>
 </testsuites>

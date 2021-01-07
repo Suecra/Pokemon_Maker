@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"A move that raises\nthe user's ATTACK.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"raise;"},"flinch_chance":0,"stat_chance":0},"name":"sharpen","pp":30,"priority":0,"stat_changes":[{"change":1,"stat":{"name":"attack"}}],"target":{"name":"user"},"type":{"name":"normal"}}

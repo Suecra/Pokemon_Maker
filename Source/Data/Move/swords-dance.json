@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"A dance that in­\ncreases ATTACK.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"raise;"},"flinch_chance":0,"stat_chance":0},"name":"swords-dance","pp":20,"priority":0,"stat_changes":[{"change":2,"stat":{"name":"attack"}}],"target":{"name":"user"},"type":{"name":"normal"}}

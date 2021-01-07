@@ -51,10 +51,10 @@ func create_pages(text: String, safe_margin = 0) -> void:
 	var pagecount = int(ceil(float(lines.size()) / float(lines_per_page)))
 	var page
 	var idx
-	for i in pagecount:
+	for j in pagecount:
 		page = TextboxPage.new()
 		for k in lines_per_page:
-			idx = i * lines_per_page + k
+			idx = j * lines_per_page + k
 			if idx < lines.size():
 				page.lines.append(lines[idx])
 				page.char_count += lines[idx].length()

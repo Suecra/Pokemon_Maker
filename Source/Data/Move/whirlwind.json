@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Blows away the foe\n& ends battle.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":""},"flinch_chance":0},"name":"whirlwind","pp":20,"priority":-6,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"normal"}}

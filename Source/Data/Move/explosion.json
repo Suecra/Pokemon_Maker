@@ -1,0 +1,1 @@
+{"accuracy":100,"damage_class":{"name":"physical"},"flavor_text_entries":[{"flavor_text":"Very powerful but\nmakes user faint.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":0},"name":"explosion","power":250,"pp":5,"priority":0,"stat_changes":[],"target":{"name":"all-other-pokemon"},"type":{"name":"normal"}}

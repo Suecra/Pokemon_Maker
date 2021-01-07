@@ -1,0 +1,1 @@
+{"accuracy":85,"damage_class":{"name":"physical"},"flavor_text_entries":[{"flavor_text":"A powerful charge\nattack.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":0},"name":"megahorn","power":120,"pp":10,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"bug"}}

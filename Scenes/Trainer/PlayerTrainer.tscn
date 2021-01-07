@@ -1,13 +1,12 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Source/Scripts/Battle/Trainer/PlayerTrainer.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/PokemonParty.gd" type="Script" id=2]
+[ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=3]
 [ext_resource path="res://Source/Data/Nature/bold.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Source/Data/Nature/lax.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=7]
-[ext_resource path="res://Source/Scripts/Battle/Movepool.gd" type="Script" id=8]
-[ext_resource path="res://Source/Scripts/Battle/Move.gd" type="Script" id=9]
-[ext_resource path="res://Source/Data/Move/explosion.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Source/Scripts/Battle/Movepool.gd" type="Script" id=5]
+[ext_resource path="res://Source/Scripts/Battle/Move.gd" type="Script" id=6]
+[ext_resource path="res://Source/Data/Nature/lax.tscn" type="PackedScene" id=7]
 
 [node name="PlayerTrainer" type="Node"]
 script = ExtResource( 1 )
@@ -16,7 +15,7 @@ script = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Aggron" type="Node" parent="PokemonParty"]
-script = ExtResource( 7 )
+script = ExtResource( 3 )
 nickname = "Aggron"
 level = 50
 current_hp = 1
@@ -24,17 +23,29 @@ species_name = "aggron"
 nature = ExtResource( 4 )
 
 [node name="Movepool" type="Node" parent="PokemonParty/Aggron"]
-script = ExtResource( 8 )
+script = ExtResource( 5 )
 
-[node name="Explosion" type="Node" parent="PokemonParty/Aggron/Movepool"]
-script = ExtResource( 9 )
-move = ExtResource( 10 )
-current_pp = 1
+[node name="Move1" type="Node" parent="PokemonParty/Aggron/Movepool"]
+script = ExtResource( 6 )
+move_name = "iron-head"
+
+[node name="Move2" type="Node" parent="PokemonParty/Aggron/Movepool"]
+script = ExtResource( 6 )
+move_name = "earthquake"
+
+[node name="Move3" type="Node" parent="PokemonParty/Aggron/Movepool"]
+script = ExtResource( 6 )
+move_name = "head-smash"
+
+[node name="Move4" type="Node" parent="PokemonParty/Aggron/Movepool"]
+script = ExtResource( 6 )
+move_name = "iron-defense"
 
 [node name="Flygon" type="Node" parent="PokemonParty"]
-script = ExtResource( 7 )
+script = ExtResource( 3 )
 nickname = "Flygon"
 level = 50
 current_hp = 1
 species_name = "flygon"
-nature = ExtResource( 5 )
+nature = ExtResource( 7 )
+

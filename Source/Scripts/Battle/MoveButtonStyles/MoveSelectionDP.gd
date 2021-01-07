@@ -24,10 +24,10 @@ func _show_moves() -> void:
 		var parent = get_node("MovePosition" + String(i + 1))
 		var style = Utils.unpack(parent, move_button_style, "MoveButton")
 		var move = movepool.get_child(i)
-		style.move_name = move.get_move_data().move_name
-		style.max_pp = move.get_move_data().pp
+		style.move_name = move.data.get_move_name()
+		style.max_pp = move.data.pp
 		style.pp = move.current_pp
-		style.type_id = move.get_move_data().get_type().id
+		style.type_id = move.data.get_type().id
 		style.move_id = i
 		parent.add_child(style)
 		style.owner = self

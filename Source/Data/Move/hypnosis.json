@@ -1,0 +1,1 @@
+{"accuracy":60,"damage_class":{"name":"status"},"effect_chance":0,"flavor_text_entries":[{"flavor_text":"May put the foe to\nsleep.","language":{"name":"en"}}],"meta":{"ailment":{"name":"sleep"},"category":{"name":"ailment;"},"flinch_chance":0},"name":"hypnosis","pp":20,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"psychic"}}

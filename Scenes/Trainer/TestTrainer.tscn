@@ -3,8 +3,8 @@
 [ext_resource path="res://Source/Scripts/Battle/Trainer/WildPokemonTrainer.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/PokemonParty.gd" type="Script" id=2]
 [ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=3]
+[ext_resource path="res://Source/Data/Nature/docile.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Source/Data/Nature/brave.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Source/Data/Nature/docile.tscn" type="PackedScene" id=7]
 
 [node name="TestTrainer" type="Node"]
 script = ExtResource( 1 )
@@ -18,7 +18,7 @@ nickname = "Luxray"
 level = 50
 current_hp = 1
 species_name = "luxray"
-nature = ExtResource( 7 )
+nature = ExtResource( 4 )
 
 [node name="Tangrowth" type="Node" parent="PokemonParty"]
 script = ExtResource( 3 )
@@ -27,3 +27,4 @@ level = 50
 current_hp = 1
 species_name = "tangrowth"
 nature = ExtResource( 5 )
+

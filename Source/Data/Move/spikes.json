@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Sets spikes that hurt a \nfoe switching out.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"field_effect"},"flinch_chance":0},"name":"spikes","pp":20,"priority":0,"stat_changes":[],"target":{"name":"opponents-field"},"type":{"name":"ground"}}

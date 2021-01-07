@@ -1,0 +1,1 @@
+{"accuracy":85,"damage_class":{"name":"physical"},"flavor_text_entries":[{"flavor_text":"Jabs the target\n2-5 times.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":0},"name":"fury-attack","power":15,"pp":20,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"normal"}}

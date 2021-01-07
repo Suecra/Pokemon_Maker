@@ -1,0 +1,1 @@
+{"accuracy":90,"damage_class":{"name":"physical"},"flavor_text_entries":[{"flavor_text":"An attack that may\ncause flinching.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":10},"name":"hyper-fang","power":80,"pp":15,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"normal"}}

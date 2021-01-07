@@ -1,0 +1,1 @@
+{"accuracy":90,"damage_class":{"name":"physical"},"flavor_text_entries":[{"flavor_text":"Drops rocks on the\nenemy.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":0},"name":"rock-throw","power":50,"pp":15,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"rock"}}

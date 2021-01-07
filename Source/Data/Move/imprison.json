@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Prevents foes from using\nmoves known by the user.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":""},"flinch_chance":0},"name":"imprison","pp":10,"priority":0,"stat_changes":[],"target":{"name":"user"},"type":{"name":"psychic"}}

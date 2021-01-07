@@ -1,0 +1,1 @@
+{"accuracy":90,"damage_class":{"name":"special"},"flavor_text_entries":[{"flavor_text":"Always inflicts\n20HP damage.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":0},"name":"sonic-boom","pp":20,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"normal"}}

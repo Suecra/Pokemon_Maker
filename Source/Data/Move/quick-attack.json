@@ -1,0 +1,1 @@
+{"accuracy":100,"damage_class":{"name":"physical"},"flavor_text_entries":[{"flavor_text":"Lets the user get\nin the first hit.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":0},"name":"quick-attack","power":40,"pp":30,"priority":1,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"normal"}}

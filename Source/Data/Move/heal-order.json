@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"The user calls out\nits underlings to heal\nit. The user regains\nup to half of its\nmax HP.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"heal;"},"flinch_chance":0},"name":"heal-order","pp":10,"priority":0,"stat_changes":[],"target":{"name":"user"},"type":{"name":"bug"}}

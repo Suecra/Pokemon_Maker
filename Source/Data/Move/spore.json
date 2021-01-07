@@ -1,0 +1,1 @@
+{"accuracy":100,"damage_class":{"name":"status"},"effect_chance":0,"flavor_text_entries":[{"flavor_text":"A move that\ninduces sleep.","language":{"name":"en"}}],"meta":{"ailment":{"name":"sleep"},"category":{"name":"ailment;"},"flinch_chance":0},"name":"spore","pp":15,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"grass"}}

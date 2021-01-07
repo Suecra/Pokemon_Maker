@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Raises the user's\nATTACK.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"raise;"},"flinch_chance":0,"stat_chance":0},"name":"meditate","pp":40,"priority":0,"stat_changes":[{"change":1,"stat":{"name":"attack"}}],"target":{"name":"user"},"type":{"name":"psychic"}}

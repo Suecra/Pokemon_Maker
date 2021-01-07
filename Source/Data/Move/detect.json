@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Evades attack that\nturn. It may fail.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":""},"flinch_chance":0},"name":"detect","pp":5,"priority":4,"stat_changes":[],"target":{"name":"user"},"type":{"name":"fighting"}}

@@ -1,0 +1,1 @@
+{"accuracy":90,"damage_class":{"name":"physical"},"flavor_text_entries":[{"flavor_text":"Attacks 5 turns\nwith rising power.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":0},"name":"rollout","power":30,"pp":20,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"rock"}}

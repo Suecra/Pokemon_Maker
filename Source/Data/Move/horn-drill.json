@@ -1,0 +1,1 @@
+{"accuracy":30,"damage_class":{"name":"physical"},"flavor_text_entries":[{"flavor_text":"A one-hit KO,\ndrill attack.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"ohko"},"flinch_chance":0},"name":"horn-drill","pp":5,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"normal"}}

@@ -1,0 +1,1 @@
+{"accuracy":100,"damage_class":{"name":"special"},"flavor_text_entries":[{"flavor_text":"A loud attack that can be\nused only while asleep.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":30},"name":"snore","power":50,"pp":15,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"normal"}}

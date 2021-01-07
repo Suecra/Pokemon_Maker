@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Both user and foe\nfaint in 3 turns.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"ailment;"},"flinch_chance":0},"name":"perish-song","pp":5,"priority":0,"stat_changes":[],"target":{"name":"entire-field"},"type":{"name":"normal"}}

@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Boosts the power of the\nrecipient’s moves.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":""},"flinch_chance":0},"name":"helping-hand","pp":20,"priority":5,"stat_changes":[],"target":{"name":"ally"},"type":{"name":"normal"}}

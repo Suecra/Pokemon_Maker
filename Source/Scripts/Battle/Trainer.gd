@@ -46,7 +46,7 @@ func move(move_index: int) -> Move:
 
 func struggle() -> Move:
 	var move = Move.new()
-	move.move = load("res://Source/Data/Move/struggle.tscn")
+	move.move_name = "struggle"
 	move.trainer = self
 	move.pokemon = current_pokemon
 	move.target_index = _select_target()

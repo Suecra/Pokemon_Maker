@@ -21,3 +21,6 @@ func trigger() -> void:
 
 func _execute(pokemon: Node) -> void:
 	pass
+
+func _save_to_json(data: Dictionary) -> void:
+	pass

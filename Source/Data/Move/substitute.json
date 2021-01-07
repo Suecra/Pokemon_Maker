@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Makes a decoy with\n1/4 user's max HP.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":""},"flinch_chance":0},"name":"substitute","pp":10,"priority":0,"stat_changes":[],"target":{"name":"user"},"type":{"name":"normal"}}

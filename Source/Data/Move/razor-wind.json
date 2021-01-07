@@ -1,0 +1,1 @@
+{"accuracy":100,"damage_class":{"name":"special"},"flavor_text_entries":[{"flavor_text":"1st turn: Prepare\n2nd turn: Attack","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":0},"name":"razor-wind","power":80,"pp":10,"priority":0,"stat_changes":[],"target":{"name":"all-opponents"},"type":{"name":"normal"}}

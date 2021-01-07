@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Sharply increases\nuser's DEFENSE.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"raise;"},"flinch_chance":0,"stat_chance":0},"name":"barrier","pp":20,"priority":0,"stat_changes":[{"change":2,"stat":{"name":"defense"}}],"target":{"name":"user"},"type":{"name":"psychic"}}

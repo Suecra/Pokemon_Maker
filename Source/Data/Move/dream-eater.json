@@ -1,0 +1,1 @@
+{"accuracy":100,"damage_class":{"name":"special"},"flavor_text_entries":[{"flavor_text":"Steals HP from a\nsleeping victim.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;heal;"},"flinch_chance":0},"name":"dream-eater","power":100,"pp":15,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"psychic"}}

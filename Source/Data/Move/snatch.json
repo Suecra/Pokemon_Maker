@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Steals the effects of the\nmove the foe uses next.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":""},"flinch_chance":0},"name":"snatch","pp":10,"priority":4,"stat_changes":[],"target":{"name":"user"},"type":{"name":"dark"}}

@@ -1,0 +1,1 @@
+{"accuracy":75,"damage_class":{"name":"physical"},"flavor_text_entries":[{"flavor_text":"Slams the foe with\na tail, vine, etc.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":0},"name":"slam","power":80,"pp":20,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"normal"}}

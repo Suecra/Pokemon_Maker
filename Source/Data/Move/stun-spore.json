@@ -1,0 +1,1 @@
+{"accuracy":75,"damage_class":{"name":"status"},"effect_chance":0,"flavor_text_entries":[{"flavor_text":"A move that may\nparalyze the foe.","language":{"name":"en"}}],"meta":{"ailment":{"name":"paralysis"},"category":{"name":"ailment;"},"flinch_chance":0},"name":"stun-spore","pp":30,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"grass"}}

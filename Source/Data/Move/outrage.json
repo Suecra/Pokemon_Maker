@@ -1,0 +1,1 @@
+{"accuracy":100,"damage_class":{"name":"physical"},"flavor_text_entries":[{"flavor_text":"Works 2-3 turns\nand confuses user.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;"},"flinch_chance":0},"name":"outrage","power":120,"pp":10,"priority":0,"stat_changes":[],"target":{"name":"all-opponents"},"type":{"name":"dragon"}}

@@ -1,0 +1,1 @@
+{"accuracy":100,"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Reduces the foe's\nevasiveness.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"lower;"},"flinch_chance":0,"stat_chance":0},"name":"sweet-scent","pp":20,"priority":0,"stat_changes":[],"target":{"name":"all-opponents"},"type":{"name":"normal"}}

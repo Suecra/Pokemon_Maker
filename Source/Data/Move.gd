@@ -27,6 +27,13 @@ export(String) var description
 
 onready var effects = $Effects
 
+func get_move_name() -> String:
+	return move_name.capitalize()
+
+func _init(name: String = "") -> void:
+	if name != "":
+		load_from_file(Consts.MOVE_PATH + name + ".json")
+
 func _load_from_json(data: Dictionary) -> void:
 	move_name = data["name"]
 	name = move_name
@@ -35,34 +42,15 @@ func _load_from_json(data: Dictionary) -> void:
 		"status": damage_class = DamageClass.Status
 		"physical": damage_class = DamageClass.Physical
 		"special": damage_class = DamageClass.Special
-	if data["power"] != null:
+	power = 0
+	if data.has("power") && data["power"] != null:
 		power = int(data["power"])
-	if data["accuracy"] != null:
+	if data.has("accuracy") && data["accuracy"] != null:
 		accuracy = int(data["accuracy"])
-	if data["priority"] != null:
+	if data.has("priority") && data["priority"] != null:
 		priority = int(data["priority"])
-	if data["pp"] != null:
+	if data.has("pp") && data["pp"] != null:
 		pp = int(data["pp"])
-	
-	if data["meta"] != null:
-		flags = 0
-		var cat_name = data["meta"]["category"]["name"]
-		if cat_name.find("damage") != -1:
-			flags |= int(pow(2, Flags.Damage))
-		if cat_name.find("ailment") != -1:
-			flags |= int(pow(2, Flags.Ailment))
-		if cat_name.find("heal") != -1:
-			flags |= int(pow(2, Flags.Heal))
-		if cat_name == "ohko":
-			flags |= int(pow(2, Flags.OHKO))
-		if cat_name == "field-effect":
-			flags |= int(pow(2, Flags.Field_Effect))
-		if cat_name == "whole_field_effect":
-			flags |= int(pow(2, Flags.Whole_Field_Effect))
-		if cat_name == "damage+lower":
-			flags |= int(pow(2, Flags.Lower))
-		if cat_name == "damage+raise":
-			flags |= int(pow(2, Flags.Raise))
 	
 	if data["target"]["name"].find("selected-pokemon") != -1:
 		hit_range = HitRange.Opponent
@@ -82,6 +70,31 @@ func _load_from_json(data: Dictionary) -> void:
 		hit_range = HitRange.Opponent_Field
 	elif data["target"]["name"] == "entire-field" || data["target"]["name"] == "all-pokemon":
 		hit_range = HitRange.Entire_Field
+	
+	if data.has("meta") && data["meta"] != null:
+		flags = 0
+		var cat_name = data["meta"]["category"]["name"]
+		if cat_name.find("damage") != -1:
+			flags |= int(pow(2, Flags.Damage))
+		if cat_name.find("ailment") != -1:
+			flags |= int(pow(2, Flags.Ailment))
+		if cat_name.find("heal") != -1:
+			flags |= int(pow(2, Flags.Heal))
+		if cat_name == "ohko":
+			flags |= int(pow(2, Flags.OHKO))
+		if cat_name == "field-effect":
+			flags |= int(pow(2, Flags.Field_Effect))
+		if cat_name == "whole_field_effect":
+			flags |= int(pow(2, Flags.Whole_Field_Effect))
+		if cat_name.find("lower") != -1:
+			flags |= int(pow(2, Flags.Lower))
+		if cat_name.find("raise") != -1:
+			flags |= int(pow(2, Flags.Raise))
+		if cat_name == "net-good-stats":
+			if Utils.hits_user(hit_range):
+				flags |= int(pow(2, Flags.Raise))
+			if Utils.hits_target(hit_range):
+				flags |= int(pow(2, Flags.Lower))
 	
 	load_effects(data)
 	
@@ -113,10 +126,10 @@ func _save_to_json(data: Dictionary) -> void:
 	data["priority"] = priority
 	data["pp"] = pp
 	data["meta"] = {}
+	data["meta"]["category"] = {}
+	data["meta"]["category"]["name"] = ""
 	if flags > 0:
-		data["meta"]["category"] = {}
 		var cat = data["meta"]["category"]
-		cat["name"] = ""
 		if int(pow(2, Flags.Damage)) & flags == int(pow(2, Flags.Damage)):
 			cat["name"] = cat["name"] + "damage;"
 		if int(pow(2, Flags.Ailment)) & flags == int(pow(2, Flags.Ailment)):
@@ -130,9 +143,9 @@ func _save_to_json(data: Dictionary) -> void:
 		if int(pow(2, Flags.Whole_Field_Effect)) & flags == int(pow(2, Flags.Whole_Field_Effect)):
 			cat["name"] = "whole_field_effect"
 		if int(pow(2, Flags.Lower)) & flags == int(pow(2, Flags.Lower)):
-			cat["name"] = "damage+lower"
+			cat["name"] = cat["name"] + "lower;"
 		if int(pow(2, Flags.Raise)) & flags == int(pow(2, Flags.Raise)):
-			cat["name"] = "damage+raise"
+			cat["name"] = cat["name"] + "raise;"
 	
 	data["target"] = {}
 	var target = data["target"]
@@ -159,20 +172,22 @@ func _save_to_json(data: Dictionary) -> void:
 	data["meta"]["ailment"] = {}
 	data["meta"]["ailment"]["name"] = "none"
 	data["meta"]["flinch_chance"] = 0
-	#TODO: Save Effects
+	save_effects(data)
 	
 	data["flavor_text_entries"] = []
 	set_en_description(data["flavor_text_entries"], "flavor_text", description)
 
 func load_effects(data: Dictionary) -> void:
 	var effects
-	if data["stat_changes"] != null || data["meta"]["ailment"]["name"] != "none":
+	if data["stat_changes"] != []:
 		effects = Utils.add_node_if_not_exists(self, self, "Effects")
 		if data["stat_changes"].size() > 0:
-			var effect = Utils.add_typed_node_if_not_exists(EffectBoost, effects, self, "Boosts")
+			var effect = Utils.add_typed_node_if_not_exists(EffectBoost, effects, self, "boosts")
 			if data["meta"]["stat_chance"] == 0:
 				effect.guaranteed = true
+				effect.chance = 0
 			else:
+				effect.guaranteed = false
 				effect.chance = data["meta"]["stat_chance"] / 100
 			var flag_raise = int(pow(2, 10))
 			if flags & flag_raise == flag_raise:
@@ -183,35 +198,42 @@ func load_effects(data: Dictionary) -> void:
 				match stat_change["stat"]["name"]:
 					"attack": effect.attack_boost = int(stat_change["change"])
 					"defense": effect.defense_boost = int(stat_change["change"])
-					"special-attack": effect.special_attack_boost = int(stat_change["change"])
-					"special-denfense": effect.special_defense_boost = int(stat_change["change"])
+					"special-attack", "special_attack": effect.special_attack_boost = int(stat_change["change"])
+					"special-defense", "special_defense": effect.special_defense_boost = int(stat_change["change"])
 					"speed": effect.speed_boost = int(stat_change["change"])
-		if data["meta"]["ailment"]["name"] != "none":
-			var effect
-			match data["meta"]["ailment"]["name"]:
-				"paralysis": effect = Utils.add_typed_node_if_not_exists(EffectParalysis, effects, self, "paralysis")
-				"burn": effect = Utils.add_typed_node_if_not_exists(EffectBurn, effects, self, "burn")
-				"poison": effect = Utils.add_typed_node_if_not_exists(EffectPoison, effects, self, "poison")
-				"sleep": effect = Utils.add_typed_node_if_not_exists(EffectSleep, effects, self, "sleep")
-				"freeze": effect = Utils.add_typed_node_if_not_exists(EffectFreeze, effects, self, "freeze")
-				"confusion": effect = Utils.add_typed_node_if_not_exists(EffectConfusion, effects, self, "confusion")
-			if effect != null:
-				effect.effected_pokemon = Effect.EffectedPokemon.Target
-				if data["effect_chance"] == null:
-					effect.guaranteed = true
-					effect.chance = 0
-				else:
-					effect.guaranteed = false
-					effect.chance = data["effect_chance"] / 100
-		if data["meta"]["flinch_chance"] > 0:
-			var effect = Utils.add_typed_node_if_not_exists(EffectFlinch, effects, self, "flinch")
+	if data["meta"]["ailment"]["name"] != "none":
+		effects = Utils.add_node_if_not_exists(self, self, "Effects")
+		var effect
+		match data["meta"]["ailment"]["name"]:
+			"paralysis": effect = Utils.add_typed_node_if_not_exists(EffectParalysis, effects, self, "paralysis")
+			"burn": effect = Utils.add_typed_node_if_not_exists(EffectBurn, effects, self, "burn")
+			"poison": effect = Utils.add_typed_node_if_not_exists(EffectPoison, effects, self, "poison")
+			"sleep": effect = Utils.add_typed_node_if_not_exists(EffectSleep, effects, self, "sleep")
+			"freeze": effect = Utils.add_typed_node_if_not_exists(EffectFreeze, effects, self, "freeze")
+			"confusion": effect = Utils.add_typed_node_if_not_exists(EffectConfusion, effects, self, "confusion")
+		if effect != null:
 			effect.effected_pokemon = Effect.EffectedPokemon.Target
-			if data["meta"]["flinch_chance"] == 100:
+			if data["effect_chance"] == null:
 				effect.guaranteed = true
 				effect.chance = 0
 			else:
 				effect.guaranteed = false
-				effect.chance = data["meta"]["flinch_chance"] / 100
+				effect.chance = data["effect_chance"] / 100.0
+	if data["meta"]["flinch_chance"] > 0:
+		effects = Utils.add_node_if_not_exists(self, self, "Effects")
+		var effect = Utils.add_typed_node_if_not_exists(EffectFlinch, effects, self, "flinch")
+		effect.effected_pokemon = Effect.EffectedPokemon.Target
+		if data["meta"]["flinch_chance"] == 100:
+			effect.guaranteed = true
+			effect.chance = 0
+		else:
+			effect.guaranteed = false
+			effect.chance = data["meta"]["flinch_chance"] / 100
+
+func save_effects(data: Dictionary) -> void:
+	if has_node("Effects"):
+		for effect in $Effects.get_children():
+			effect._save_to_json(data)
 
 func get_effects() -> Array:
 	if effects != null:

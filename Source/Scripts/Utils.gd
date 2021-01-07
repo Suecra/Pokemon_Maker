@@ -44,3 +44,29 @@ static func tile_pos(pixel_pos: Vector2) -> Vector2:
 
 static func pixel_pos(tile_pos: Vector2) -> Vector2:
 	return tile_pos * Consts.TILE_SIZE
+
+static func hits_target(hit_range: int) -> bool:
+	match hit_range:
+		0: return true
+		1: return true
+		2: return true
+		3: return false
+		4: return true
+		5: return false
+		6: return false
+		7: return true
+		8: return true
+	return false
+
+static func hits_user(hit_range: int) -> bool:
+	match hit_range:
+		0: return false
+		1: return false
+		2: return true
+		3: return true
+		4: return false
+		5: return false
+		6: return true
+		7: return false
+		8: return true
+	return false

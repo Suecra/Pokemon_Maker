@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"The user regains up to half of its max HP. It restores\nmore HP in a sandstorm.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"heal;"},"flinch_chance":0},"name":"shore-up","pp":10,"priority":0,"stat_changes":[],"target":{"name":"user"},"type":{"name":"ground"}}

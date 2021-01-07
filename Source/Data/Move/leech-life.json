@@ -1,0 +1,1 @@
+{"accuracy":100,"damage_class":{"name":"physical"},"flavor_text_entries":[{"flavor_text":"Steals 1/2 of the\ndamage inflicted.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":"damage;heal;"},"flinch_chance":0},"name":"leech-life","power":80,"pp":10,"priority":0,"stat_changes":[],"target":{"name":"selected-pokemon"},"type":{"name":"bug"}}

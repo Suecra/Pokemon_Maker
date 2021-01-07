@@ -1,0 +1,1 @@
+{"damage_class":{"name":"status"},"flavor_text_entries":[{"flavor_text":"Charges up power for up to\n3 turns.","language":{"name":"en"}}],"meta":{"ailment":{"name":"none"},"category":{"name":""},"flinch_chance":0},"name":"stockpile","pp":20,"priority":0,"stat_changes":[],"target":{"name":"user"},"type":{"name":"normal"}}

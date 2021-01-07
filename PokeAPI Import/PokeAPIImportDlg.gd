@@ -5,7 +5,7 @@ var base_url
 var edit
 
 func _ready():
-	$DestinationDirectory.text = $DirectoryDialog.current_dir
+	$DestinationDirectory.text = $DirectoryDialog.current_dir + "/Source/Data"
 
 func _on_Import_pressed():
 	base_url = $BaseURL.text
