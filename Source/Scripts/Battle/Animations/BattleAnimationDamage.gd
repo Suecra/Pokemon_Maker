@@ -1,7 +1,8 @@
 extends "res://Source/Scripts/Battle/BattleAnimation.gd"
 
-var status_bar: Node
-var damage: int
+var hp_bar: Node
+var hp: int
 
 func _execute() -> void:
-	yield(status_bar.animate_damage(damage), "completed")
+	hp_bar.hp = hp
+	yield(hp_bar, "animation_finished")

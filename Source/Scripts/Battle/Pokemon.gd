@@ -23,7 +23,7 @@ var item: Node
 var field: Node
 var battle: Node
 var battlefield: Node
-var status_bar: Node
+var hp_bar: Node
 var position: int
 
 onready var primary_status := $Status
@@ -75,8 +75,8 @@ func set_current_hp(value: int) -> void:
 func damage(hp: int, messages = []) -> void:
 	self.current_hp = current_hp - hp
 	var damage_animation = BattleAnimationDamage.new()
-	damage_animation.status_bar = status_bar
-	damage_animation.damage = hp
+	damage_animation.hp_bar = hp_bar
+	damage_animation.hp = current_hp
 	battle.current_turn.register_animation(damage_animation)
 	for message in messages:
 		battle.register_message(message)
@@ -188,7 +188,8 @@ func change_status(status: Node) -> void:
 	status.owner = self
 	primary_status = status
 	var animation_status = BattleAnimationStatus.new()
-	animation_status.pokemon = self
+	animation_status.hp_bar = hp_bar
+	animation_status.status = get_primary_status_name()
 	battle.current_turn.register_animation(animation_status)
 
 func remove_primary_status() -> void:
@@ -221,6 +222,11 @@ func fainted() -> bool:
 	if primary_status != null:
 		return primary_status.status_name == "Faint"
 	return false
+
+func get_primary_status_name() -> String:
+	if primary_status != null:
+		return primary_status.status_name
+	return ""
 
 func can_move(move_name: String) -> bool:
 	var args = CanMoveEventArgs.new()
@@ -315,7 +321,7 @@ func _init(species_name: String = "") -> void:
 
 func init_battle() -> void:
 	battlefield = battle.battlefield
-	status_bar = battlefield.get_status_bar(field)
+	hp_bar = field.hp_bar
 	calculate_stats()
 	boosts = Boosts.new()
 	boosts.name = "Boosts"

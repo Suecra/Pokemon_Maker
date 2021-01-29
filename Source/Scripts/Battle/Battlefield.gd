@@ -38,13 +38,6 @@ func get_targets(target_positions: Array, attacker_field: Node) -> Array:
 		result.append(get_pokemon_at_position(pos, attacker_field))
 	return result
 
-func get_status_bar(attacker_field: Node) -> Node:
-	if attacker_field == battle.ally_field:
-		return battle.get_node("PlayerStatusBar")
-	if attacker_field == battle.opponent_field:
-		return battle.get_node("EnemyStatusBar")
-	return null
-
 func begin_of_turn() -> void:
 	battle.ally_field.begin_of_turn()
 	battle.opponent_field.begin_of_turn()

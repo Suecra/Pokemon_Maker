@@ -9,9 +9,10 @@ const BattleAnimationMessage = preload("res://Source/Scripts/Battle/Animations/B
 
 onready var battlefield := $Battlefield
 
-export(int) var current_turn_nr
-export(Vector2) var ally_position
-export(Vector2) var opponent_position
+export(PackedScene) var player_hp_bar
+export(PackedScene) var opponent_hp_bar
+
+var current_turn_nr: int
 var current_turn: Node
 var ally_field: Field
 var opponent_field: Field
@@ -108,9 +109,21 @@ func register_message(message: String) -> void:
 	current_turn.register_animation(msg)
 
 func _ready() -> void:
+	var inst = player_hp_bar.instance()
+	inst.name = "HPBar"
+	$PlayerHPBars.add_child(inst)
+	inst.owner = self
+	inst = opponent_hp_bar.instance()
+	inst.name = "HPBar"
+	$OpponentHPBars.add_child(inst)
+	inst.owner = self
+	
 	ally_field = Field.new()
 	add_child(ally_field)
 	opponent_field = Field.new()
 	add_child(opponent_field)
+	
+	ally_field.hp_bar = $PlayerHPBars/HPBar
+	opponent_field.hp_bar = $OpponentHPBars/HPBar
 	battlefield.battle = self
 	Utils.add_node_if_not_exists(self, self, "Turns")

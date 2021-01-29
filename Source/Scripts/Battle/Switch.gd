@@ -14,9 +14,9 @@ func _execute() -> void:
 	trainer.current_pokemon = to_pokemon
 	to_pokemon.switch_in()
 	register_switch_in()
-	var status_bar = battlefield.get_status_bar(field)
-	status_bar.initialize(to_pokemon)
-	status_bar.show()
+	var hp_bar = field.hp_bar
+	hp_bar.full_update(to_pokemon)
+	hp_bar._show()
 
 func register_switch_in() -> void:
 	var animation = BattleAnimationOutOfPokeball.new()

@@ -48,4 +48,3 @@ level = 50
 current_hp = 1
 species_name = "flygon"
 nature = ExtResource( 7 )
-

@@ -3,18 +3,23 @@
 [ext_resource path="res://Source/Scripts/Battle/Battle.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/Battlefield.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Textboxes/MessageBox.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Battle/PlayerStatusBar.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Battle/EnemyStatusBar.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Textboxes/Choicebox.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Graphics/Battle/Background_Field_Day.png" type="Texture" id=7]
+[ext_resource path="res://Graphics/New/Battle-Backgrounds/battleback10.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Battle/Bases/BattleBaseHGSSOpponent.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Battle/Bases/BattleBaseHGSSPlayer.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Battle/MoveButtonStyles/MoveSelectionDP.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Battle/StatusBars/SimpleStatusBarOpponent.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Battle/StatusBars/SimpleStatusBarPlayer.tscn" type="PackedScene" id=12]
 
 [node name="Battle" type="Node2D"]
 script = ExtResource( 1 )
-ally_position = Vector2( 100, 400 )
-opponent_position = Vector2( 650, 100 )
+player_hp_bar = ExtResource( 12 )
+opponent_hp_bar = ExtResource( 11 )
+
+[node name="battleback10" type="Sprite" parent="."]
+position = Vector2( 128.394, 74.742 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
 
 [node name="Battlefield" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -23,16 +28,7 @@ script = ExtResource( 2 )
 
 [node name="Trainers" type="Node" parent="."]
 
-[node name="PlayerStatusBar" parent="." instance=ExtResource( 4 )]
-
-[node name="EnemyStatusBar" parent="." instance=ExtResource( 5 )]
-
 [node name="Choicebox" parent="." instance=ExtResource( 6 )]
-
-[node name="Background_Field_Day" type="Sprite" parent="."]
-position = Vector2( 128.059, 75.2696 )
-scale = Vector2( 1.01719, 1.07641 )
-texture = ExtResource( 7 )
 
 [node name="BaseOpponent" parent="." instance=ExtResource( 8 )]
 position = Vector2( 153.489, 45.4426 )
@@ -43,3 +39,11 @@ position = Vector2( -28.3322, 104.189 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="MoveSelection" parent="." instance=ExtResource( 10 )]
+
+[node name="PlayerHPBars" type="Node2D" parent="."]
+position = Vector2( 203.446, 79.9753 )
+z_index = 2
+
+[node name="OpponentHPBars" type="Node2D" parent="."]
+position = Vector2( 46.8627, 19.0818 )
+z_index = 2

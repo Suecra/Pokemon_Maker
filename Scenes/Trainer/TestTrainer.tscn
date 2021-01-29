@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Source/Scripts/Battle/Trainer/WildPokemonTrainer.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/PokemonParty.gd" type="Script" id=2]
 [ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=3]
 [ext_resource path="res://Source/Data/Nature/docile.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Source/Data/Nature/brave.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Source/Scripts/Battle/Move.gd" type="Script" id=6]
+[ext_resource path="res://Source/Scripts/Battle/Movepool.gd" type="Script" id=7]
 
 [node name="TestTrainer" type="Node"]
 script = ExtResource( 1 )
@@ -20,6 +22,13 @@ current_hp = 1
 species_name = "luxray"
 nature = ExtResource( 4 )
 
+[node name="Movepool" type="Node" parent="PokemonParty/Luxray"]
+script = ExtResource( 7 )
+
+[node name="Move1" type="Node" parent="PokemonParty/Luxray/Movepool"]
+script = ExtResource( 6 )
+move_name = "thunder-wave"
+
 [node name="Tangrowth" type="Node" parent="PokemonParty"]
 script = ExtResource( 3 )
 nickname = "Tangrowth"
@@ -27,4 +36,3 @@ level = 50
 current_hp = 1
 species_name = "tangrowth"
 nature = ExtResource( 5 )
-

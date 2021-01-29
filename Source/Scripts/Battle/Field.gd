@@ -4,6 +4,7 @@ const SpeedSorter = preload("res://Source/Scripts/Battle/SpeedSorter.gd")
 
 var size: int
 var trainers = []
+var hp_bar: Node
 
 func get_all_fighting_pokemon() -> Array:
 	var list = []

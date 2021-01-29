@@ -213,7 +213,7 @@ func load_effects(data: Dictionary) -> void:
 			"confusion": effect = Utils.add_typed_node_if_not_exists(EffectConfusion, effects, self, "confusion")
 		if effect != null:
 			effect.effected_pokemon = Effect.EffectedPokemon.Target
-			if data["effect_chance"] == null:
+			if data["effect_chance"] == 0:
 				effect.guaranteed = true
 				effect.chance = 0
 			else:
