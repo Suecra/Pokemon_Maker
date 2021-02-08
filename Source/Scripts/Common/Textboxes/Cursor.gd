@@ -1,8 +1,8 @@
 extends Node2D
 
 export(int) var step
-export(int) var index setget set_index
 
+var index setget set_index
 var start_y: int
 
 func set_index(value: int) -> void:

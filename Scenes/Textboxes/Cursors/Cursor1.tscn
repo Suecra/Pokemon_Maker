@@ -1,12 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Source/Scripts/Common/Textboxes/Cursor.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/New/UI/cursor.png" type="Texture" id=2]
 
 [node name="Cursor1" type="Node2D"]
 script = ExtResource( 1 )
-step = 14
+step = 16
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color( 0.223529, 0.223529, 0.223529, 1 )
-antialiased = true
-polygon = PoolVector2Array( 0, 0, 0, 12, 5, 6 )
+[node name="cursor" type="Sprite" parent="."]
+texture = ExtResource( 2 )

@@ -13,16 +13,21 @@ var count: int
 var items: Array
 var selection: String
 
+func _set_display_rect(value: Rect2) -> void:
+	._set_display_rect(value)
+	if cursor_node != null:
+		cursor_node.position.x = display_rect.position.x + 7
+		cursor_node.position.y = display_rect.position.y + 11
+
 func set_cursor(value: PackedScene) -> void:
 	cursor = value
 	if cursor_node != null:
 		remove_child(cursor_node)
 	if cursor != null:
 		cursor_node = cursor.instance();
-		cursor_node.position.x = 3
-		cursor_node.position.y = 6
-		container.add_child(cursor_node)
-		container.move_child(cursor_node, 0)
+		cursor_node.position.x = display_rect.position.x + 7
+		cursor_node.position.y = display_rect.position.y + 11
+		add_child(cursor_node)
 
 func set_item_index(value: int) -> void:
 	if value != item_index:
@@ -52,24 +57,23 @@ func display(items: Array) -> void:
 func display_async(items: Array) -> void:
 	self.items = items
 	count = items.size()
-	text_label.text = prepare_text()
+	style.text = prepare_text()
 	self.item_index = 0
-	style_container._show()
+	style._show()
 	cursor_node._show()
 	set_process(true)
 
 func close() -> void:
-	style_container._hide()
+	style._hide()
 	cursor_node._hide()
 	emit_signal("selected")
 
 func _process(delta: float) -> void:
-	var mouse_position = container.get_local_mouse_position()
+	var mouse_position = style.get_local_mouse_position()
 	var mouse_index: int
-	if mouse_position.x > 0 && mouse_position.x < container.rect_size.x:
-		if mouse_position.y > 0 && mouse_position.y < cursor_node.step * count:
-			mouse_index = int(mouse_position.y / cursor_node.step)
-			set_item_index(mouse_index)
+	if display_rect.has_point(mouse_position):
+		mouse_index = int((mouse_position.y - display_rect.position.y) / cursor_node.step)
+		set_item_index(mouse_index)
 	if Input.is_action_just_pressed("ui_down"):
 		set_item_index(item_index + 1)
 	if Input.is_action_just_pressed("ui_up"):
@@ -79,6 +83,6 @@ func _process(delta: float) -> void:
 
 func _ready() -> void:
 	set_process(false)
+	self.display_rect = display_rect
 	set_cursor(cursor)
 	cursor_node._hide()
-	._ready()

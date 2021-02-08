@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Source/Scripts/Common/Textboxes/TextboxAutoStyleLabel.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/New/UI/textbox.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/fff-forward.regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+extra_spacing_bottom = 4
+font_data = ExtResource( 3 )
+
+[node name="TextboxStyleTest" type="Node2D"]
+visible = false
+script = ExtResource( 1 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 7.0
+margin_bottom = 7.0
+texture = ExtResource( 2 )
+inner_rect = Rect2( 16, 16, 16, 16 )
+label_path = NodePath("RichTextLabel")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 255.0
+margin_bottom = 51.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.184314, 0.14902, 0.117647, 1 )
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}

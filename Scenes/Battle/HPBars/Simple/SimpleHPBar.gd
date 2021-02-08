@@ -1,4 +1,4 @@
-extends "res://Source/Scripts/Battle/StatusBarStyleBase.gd"
+extends "res://Source/Scripts/Battle/HPBar.gd"
 
 export(Color, RGB) var high_hp_color
 export(Color, RGB) var medium_hp_color

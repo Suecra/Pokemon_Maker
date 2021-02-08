@@ -20,6 +20,11 @@ var actual_chars_per_second: float
 signal finished
 signal finsihed_display
 
+func _set_display_rect(value: Rect2) -> void:
+	._set_display_rect(value)
+	if page_list != null:
+		page_list.textbox_width = value.size.x - style.margin_left - style.margin_right
+
 func _physics_process(delta: float) -> void:
 	counter += delta
 	if displaying:
@@ -30,10 +35,10 @@ func _physics_process(delta: float) -> void:
 		
 		var chars = counter / (1 / actual_chars_per_second)
 		if chars >= 1:
-			text_label.visible_characters = text_label.visible_characters + int(chars)
+			style.visible_chars = style.visible_chars + int(chars)
 			counter = max(0, counter - int(chars))
-		if text_label.visible_characters >= page_list.pages[page_index].char_count:
-			text_label.visible_characters = page_list.pages[page_index].char_count
+		if style.visible_chars >= page_list.pages[page_index].char_count:
+			style.visible_chars = page_list.pages[page_index].char_count
 			counter = 0
 			if page_index >= page_list.pages.size() - 1:
 				emit_signal("finsihed_display")
@@ -45,47 +50,46 @@ func _physics_process(delta: float) -> void:
 		if skip && Input.is_action_just_pressed("textbox_skip"):
 			display_next_page()
 
-func display(text: String, bb_code := false) -> void:
-	display_async(text, bb_code)
+func display(text: String) -> void:
+	display_async(text)
 	yield(self, "finished")
 
-func display_async(text: String, bb_code := false) -> void:
-	page_list.is_bbcode = bb_code
+func display_async(text: String) -> void:
+	page_list.is_bbcode = false
 	page_list.create_pages(text)
-	style_container._show()
-	text_label.bbcode_enabled = bb_code
+	style._show()
 	page_index = -1
 	set_physics_process(true)
 	display_next_page()
 
 func close() -> void:
 	if auto_hide:
-		text_label.clear()
-		style_container._hide()
+		style.text = ""
+		style._hide()
 	emit_signal("finished")
 
 func display_next_page() -> void:
 	counter = 0
 	page_index += 1
 	if page_index < page_list.pages.size():
-		text_label.clear()
+		style.text = ""
+		var text = ""
 		for i in page_list.pages[page_index].lines.size():
-			var text = page_list.pages[page_index].lines[i]
-			text_label.add_text(text)
-			print(text)
-			text_label.newline()
+			if text != "":
+				text = text + "\n"
+			text = text + page_list.pages[page_index].lines[i]
+		print(text)
+		style.text = text
 		if instant:
 			displaying = false
 		else:
-			text_label.visible_characters = 0
+			style.visible_chars = 0
 			displaying = true
 	else:
 		close()
 
 func _ready() -> void:
-	._ready()
-	text_label.scroll_active = false
 	page_list = TextboxPageList.new()
 	page_list.lines_per_page = lines_per_page
-	page_list.font = text_label.get_font("normal_font")
-	page_list.textbox_width = text_label.rect_size.x
+	page_list.font = style.font
+	self.display_rect = display_rect
