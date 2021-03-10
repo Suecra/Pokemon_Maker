@@ -55,6 +55,7 @@ func start() -> void:
 	current_turn_nr = 1
 	while not is_battle_ended():
 		current_turn = next_turn()
+		$MessageBox.close()
 		yield(current_turn._start(), "completed")
 		current_turn_nr += 1
 	$MessageBox.close()

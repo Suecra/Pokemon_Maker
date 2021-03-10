@@ -9,8 +9,11 @@ func get_move(index: int) -> Move:
 	move.pokemon = pokemon
 	return move
 
+func count() -> int:
+	return get_child_count()
+
 func has_space() -> bool:
-	return get_child_count() < 4
+	 return count() < 4
 
 func has_moves_left() -> bool:
 	for move in get_children():
@@ -25,7 +28,7 @@ func swap(index1: int, index2: int) -> void:
 func add_move(name: String) -> void:
 	var move = BattleMove.new()
 	move.move_name = name
-	move.name = "Move" + str(get_child_count() + 1)
+	move.name = "Move" + str(count() + 1)
 	move.current_pp = 99
 	add_child(move)
 	move.owner = self

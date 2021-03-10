@@ -63,6 +63,7 @@ func display_async(text: String) -> void:
 	display_next_page()
 
 func close() -> void:
+	set_physics_process(false)
 	if auto_hide:
 		style.text = ""
 		style._hide()

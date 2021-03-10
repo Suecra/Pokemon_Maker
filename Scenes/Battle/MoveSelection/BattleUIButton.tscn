@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Fonts/fff-forward.regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Source/Scripts/Battle/MoveSelection/BattleUIButton.gd" type="Script" id=2]
+[ext_resource path="res://Graphics/New/UI/move_button.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/New/UI/move_button_overlay.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/New/UI/move_button_border.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 1 )
+
+[node name="Button1" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Area" type="Area2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area"]
+polygon = PoolVector2Array( -28.7308, -5.8891, 39.5394, -5.91077, 28.1998, 5.41991, -39.8164, 5.44323 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="move_button" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="move_button_overlay" type="Sprite" parent="move_button"]
+modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
+position = Vector2( -8, 7 )
+texture = ExtResource( 4 )
+
+[node name="move_button_border" type="Sprite" parent="move_button"]
+texture = ExtResource( 5 )
+
+[node name="Text" type="Label" parent="."]
+margin_left = -28.9052
+margin_top = -4.93882
+margin_right = 53.0948
+margin_bottom = 6.06118
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.184314, 0.14902, 0.117647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextRight" type="Label" parent="."]
+margin_left = 18.1984
+margin_top = -4.67844
+margin_right = 49.1984
+margin_bottom = 6.32156
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.184314, 0.14902, 0.117647, 1 )
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextBottom" type="Label" parent="."]
+margin_left = -35.0
+margin_top = 2.0
+margin_right = 5.0
+margin_bottom = 13.0
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.184314, 0.14902, 0.117647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="input_event" from="Area" to="." method="_on_Area_input_event"]

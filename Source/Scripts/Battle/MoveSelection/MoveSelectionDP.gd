@@ -1,5 +1,7 @@
 extends "res://Source/Scripts/Battle/MoveSelection.gd"
 
+export(PackedScene) var move_button_style
+
 onready var fight_button := $MovePosition1/FightButton
 onready var switch_button := $MovePosition2/SwitchButton
 onready var bag_button := $MovePosition3/BagButton

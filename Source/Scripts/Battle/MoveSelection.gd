@@ -1,7 +1,5 @@
 extends CanvasLayer
 
-export(PackedScene) var move_button_style
-
 enum SelectionState {SELECT_OPTION, SELECT_MOVE}
 
 const SEL_CANCEL = -1
@@ -9,7 +7,7 @@ const SEL_MOVE_1 = 0
 const SEL_MOVE_2 = 1
 const SEL_MOVE_3 = 2
 const SEL_MOVE_4 = 3
-const SEL_MOVE = 4
+const SEL_FIGHT = 4
 const SEL_RUN = 5
 const SEL_BAG = 6
 const SEL_SWITCH = 7
@@ -45,7 +43,7 @@ func selected(id: int) -> void:
 		_hide_options()
 		match id:
 			SEL_CANCEL: emit_signal("canceled")
-			SEL_MOVE:
+			SEL_FIGHT:
 				if movepool.has_moves_left():
 					state = SelectionState.SELECT_MOVE
 					_show_moves()

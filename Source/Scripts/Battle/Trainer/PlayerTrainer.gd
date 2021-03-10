@@ -12,7 +12,7 @@ func _do_half_turn() -> void:
 	move_selection.connect("move_selected", self, "move_selected")
 	move_selection.connect("switch_selected", self, "switch_selected")
 	move_selection.connect("run_selected", self, "run_selected")
-	battle.get_node("MessageBox").display_async("What will 'Player' do?")
+	#battle.get_node("MessageBox").display_async("What will 'Player' do?")
 	move_selection.movepool = current_pokemon.movepool
 	move_selection.show_selection()
 

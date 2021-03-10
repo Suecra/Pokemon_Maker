@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Source/Scripts/Battle/MoveSelection/MoveSelectionSimple.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Battle/MoveSelection/BattleUIButton.tscn" type="PackedScene" id=2]
+
+[node name="MoveSelectionSimple" type="CanvasLayer"]
+script = ExtResource( 1 )
+fight_color = Color( 0.913725, 0.121569, 0.121569, 1 )
+switch_color = Color( 0.286275, 0.780392, 0.145098, 1 )
+bag_color = Color( 0.964706, 0.87451, 0.145098, 1 )
+run_color = Color( 0.133333, 0.505882, 0.945098, 1 )
+
+[node name="Button1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 213, 100 )
+
+[node name="Button2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 206, 113 )
+
+[node name="Button3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 199, 126 )
+
+[node name="Button4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, 139 )

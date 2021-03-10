@@ -3,11 +3,11 @@
 [ext_resource path="res://Source/Scripts/Battle/Battle.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/Battlefield.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Textboxes/MessageBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Battle/MoveSelection/MoveSelectionSimple.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Textboxes/Choicebox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Graphics/New/Battle-Backgrounds/battleback10.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Battle/Bases/BattleBaseHGSSOpponent.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Battle/Bases/BattleBaseHGSSPlayer.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Battle/MoveButtonStyles/MoveSelectionDP.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Battle/HPBars/Simple/SimpleHPBarOpponent.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Battle/HPBars/Simple/SimpleHPBarPlayer.tscn" type="PackedScene" id=12]
 
@@ -25,6 +25,7 @@ texture = ExtResource( 7 )
 script = ExtResource( 2 )
 
 [node name="MessageBox" parent="." instance=ExtResource( 3 )]
+auto_hide = true
 
 [node name="Trainers" type="Node" parent="."]
 
@@ -39,12 +40,12 @@ scale = Vector2( 0.25, 0.25 )
 position = Vector2( -28.3322, 104.189 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="MoveSelection" parent="." instance=ExtResource( 10 )]
-
 [node name="PlayerHPBars" type="Node2D" parent="."]
-position = Vector2( 203.446, 79.9753 )
+position = Vector2( 46.863, 128 )
 z_index = 2
 
 [node name="OpponentHPBars" type="Node2D" parent="."]
 position = Vector2( 46.8627, 19.0818 )
 z_index = 2
+
+[node name="MoveSelection" parent="." instance=ExtResource( 4 )]
