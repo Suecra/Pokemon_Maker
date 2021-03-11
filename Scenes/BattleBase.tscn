@@ -31,6 +31,8 @@ auto_hide = true
 
 [node name="Choicebox" parent="." instance=ExtResource( 6 )]
 layer = 2
+wrap = true
+cancel = true
 
 [node name="BaseOpponent" parent="." instance=ExtResource( 8 )]
 position = Vector2( 153.489, 45.4426 )
@@ -41,11 +43,11 @@ position = Vector2( -28.3322, 104.189 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="PlayerHPBars" type="Node2D" parent="."]
-position = Vector2( 46.863, 128 )
+position = Vector2( 54, 138 )
 z_index = 2
 
 [node name="OpponentHPBars" type="Node2D" parent="."]
-position = Vector2( 46.8627, 19.0818 )
+position = Vector2( 52, 10 )
 z_index = 2
 
 [node name="MoveSelection" parent="." instance=ExtResource( 4 )]

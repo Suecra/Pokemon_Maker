@@ -15,6 +15,7 @@ onready var color_sprite := $move_button/move_button_overlay
 var released := true
 
 signal pressed
+signal hovered
 
 var move_id: int
 
@@ -38,6 +39,12 @@ func _on_Area_input_event(viewport, event, shape_idx):
 				emit_signal("pressed", self)
 		else:
 			released = true
+
+func _on_Area_mouse_entered():
+	emit_signal("hovered", self)
+	
+func _on_Area_mouse_exited():
+	released = true
 
 func _ready() -> void:
 	visible = false

@@ -13,8 +13,12 @@ onready var button3 := $Button3
 onready var button4 := $Button4
 
 onready var buttons := [button1, button2, button3, button4]
+var option_index: int
+var index: int
 
 func _show_options() -> void:
+	index = option_index
+	
 	button1.text = "Fight"
 	button2.text = "Switch"
 	button3.text = "Bag"
@@ -26,13 +30,19 @@ func _show_options() -> void:
 	button4.color = run_color
 	
 	for btn in buttons:
+		btn.bottom_text = ""
+		btn.right_text = ""
 		btn.show()
+	highlight_button()
 
 func _hide_options() -> void:
 	for btn in buttons:
 		btn.hide()
 
 func _show_moves() -> void:
+	option_index = index
+	index = 0
+	
 	for btn in buttons:
 		btn.text = ""
 		btn.bottom_text = ""
@@ -40,7 +50,7 @@ func _show_moves() -> void:
 		btn.color = Color.white
 	
 	for i in range(movepool.count()):
-		buttons[i].text = movepool.get_move(i).data.move_name
+		buttons[i].text = movepool.get_move(i).data.move_name.capitalize()
 		buttons[i].bottom_text = movepool.get_move(i).data.get_type().type_name
 		buttons[i].color = get_type_color(movepool.get_move(i).data.get_type().id)
 		var pp = movepool.get_move(i).current_pp
@@ -49,6 +59,7 @@ func _show_moves() -> void:
 	
 	for btn in buttons:
 		btn.show()
+	highlight_button()
 
 func _hide_moves() -> void:
 	for btn in buttons:
@@ -56,7 +67,24 @@ func _hide_moves() -> void:
 
 func get_type_color(id: int) -> Color:
 	match id:
-		Type.Types.NORMAL: return Color.gray
+		Type.Types.NORMAL: return Color("#DDCCCC")
+		Type.Types.FIGHTING: return Color("#DD9988")
+		Type.Types.FLYING: return Color("#99BBFF")
+		Type.Types.POISON: return Color("#CC88BB")
+		Type.Types.GROUND: return Color("#EFCD9A")
+		Type.Types.ROCK: return Color("#DDCC99")
+		Type.Types.BUG: return Color("#CCDD66")
+		Type.Types.GHOST: return Color("#9999CC")
+		Type.Types.STEEL: return Color("#CCCCCC")
+		Type.Types.FIRE: return Color("#FF8877")
+		Type.Types.WATER: return Color("#77BBFF")
+		Type.Types.GRASS: return Color("#ABDE8A")
+		Type.Types.ELECTRIC: return Color("#FFDD77")
+		Type.Types.PSYCHIC: return Color("#FF99BB")
+		Type.Types.ICE: return Color("#B5E8F4")
+		Type.Types.DRAGON: return Color("#AA99EE")
+		Type.Types.DARK: return Color("#AA9988")
+		Type.Types.FAIRY: return Color("#FFCCFF")
 	return Color.white
 
 func button_pressed(sender: Node) -> void:
@@ -79,6 +107,32 @@ func button_pressed(sender: Node) -> void:
 		if sender == button4:
 			selected(SEL_MOVE_4)
 
+func button_hovered(sender: Node) -> void:
+	index = buttons.find(sender)
+	highlight_button()
+
+func highlight_button() -> void:
+	for btn in buttons:
+		btn.scale = Vector2(1, 1)
+		btn.modulate = Color.white
+	buttons[index].scale = Vector2(1.2, 1.2)
+	buttons[index].modulate = Color.lightblue
+
+func _physics_process(delta) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		selected(SEL_CANCEL)
+	if Input.is_action_just_pressed("ui_up"):
+		index = max(0, index - 1)
+		highlight_button()
+	if Input.is_action_just_pressed("ui_down"):
+		index = min(3, index + 1)
+		highlight_button()
+	if Input.is_action_just_pressed("ui_accept"):
+		button_pressed(buttons[index])
+
 func _ready() -> void:
+	index = 0
+	option_index = index
 	for btn in buttons:
 		btn.connect("pressed", self, "button_pressed")
+		btn.connect("hovered", self, "button_hovered")

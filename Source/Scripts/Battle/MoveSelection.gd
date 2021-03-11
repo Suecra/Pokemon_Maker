@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-enum SelectionState {SELECT_OPTION, SELECT_MOVE}
+enum SelectionState {SELECT_OPTION, SELECT_MOVE, NONE}
 
 const SEL_CANCEL = -1
 const SEL_MOVE_1 = 0
@@ -40,18 +40,18 @@ func _hide_moves() -> void:
 
 func selected(id: int) -> void:
 	if state == SelectionState.SELECT_OPTION:
-		_hide_options()
 		match id:
-			SEL_CANCEL: emit_signal("canceled")
 			SEL_FIGHT:
+				_hide_options()
 				if movepool.has_moves_left():
 					state = SelectionState.SELECT_MOVE
 					_show_moves()
 				else:
+					state = SelectionState.NONE
 					emit_signal("move_selected", STRUGGLE)
-			SEL_RUN: emit_signal("run_selected")
-			SEL_BAG: emit_signal("bag_selected")
-			SEL_SWITCH: emit_signal("switch_selected")
+			SEL_RUN: notify("run_selected")
+			SEL_BAG: notify("bag_selected")
+			SEL_SWITCH: notify("switch_selected")
 	elif state == SelectionState.SELECT_MOVE:
 		match id:
 			SEL_CANCEL:
@@ -67,4 +67,10 @@ func move_selected(id: int):
 	var move = movepool.get_move(id)
 	if move._can_use():
 		_hide_moves()
+		state = SelectionState.NONE
 		emit_signal("move_selected", id)
+
+func notify(choice: String) -> void:
+	_hide_options()
+	state = SelectionState.NONE
+	emit_signal(choice)

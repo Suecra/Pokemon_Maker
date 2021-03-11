@@ -24,7 +24,5 @@ func enter_tile(x_tile: int, y_tile: int) -> void:
 func leave() -> void:
 	deinit_map_objects(self)
 
-func _ready() -> void:
+func _enter_tree() -> void:
 	Global.map = self
-	yield(get_tree().create_timer(1), "timeout")
-	enter_tile(7, 13)

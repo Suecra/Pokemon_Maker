@@ -13,7 +13,7 @@ var resigned: bool
 onready var pokemon_party := $PokemonParty
 
 func has_pokemon_left() -> bool:
-	return pokemon_party.get_battler_count() > 0
+	return pokemon_party.get_fighter_count() > 0
 
 func _do_half_turn() -> void:
 	pass
@@ -27,8 +27,8 @@ func _select_target() -> int:
 func _get_lead() -> Node:
 	return pokemon_party.get_lead()
 
-func switch(battler_index: int) -> Switch:
-	var new_pokemon = pokemon_party.get_battler(battler_index)
+func switch(fighter_index: int) -> Switch:
+	var new_pokemon = pokemon_party.get_switch_target(fighter_index, current_pokemon)
 	var switch = Switch.new()
 	switch.pokemon = current_pokemon
 	switch.trainer = self

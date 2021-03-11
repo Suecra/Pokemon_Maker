@@ -3,7 +3,9 @@ extends "res://Source/Scripts/Common/Textboxes/Textbox.gd"
 const Cursor = preload("res://Source/Scripts/Common/Textboxes/Cursor.gd")
 
 export(PackedScene) var cursor
-export(bool) var wrap
+export(bool) var wrap = false
+export(bool) var cancel = false
+export(int) var cancel_index = -1
 
 signal selected
 
@@ -79,6 +81,9 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_up"):
 		set_item_index(item_index - 1)
 	if Input.is_action_just_pressed("ui_accept"):
+		close()
+	if cancel && Input.is_action_just_pressed("ui_cancel"):
+		item_index = -1
 		close()
 
 func _ready() -> void:

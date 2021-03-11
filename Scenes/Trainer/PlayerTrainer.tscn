@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Source/Scripts/Battle/Trainer/PlayerTrainer.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/PokemonParty.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Source/Scripts/Battle/Movepool.gd" type="Script" id=5]
 [ext_resource path="res://Source/Scripts/Battle/Move.gd" type="Script" id=6]
 [ext_resource path="res://Source/Data/Nature/lax.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Data/Nature/modest.tscn" type="PackedScene" id=8]
 
 [node name="PlayerTrainer" type="Node"]
 script = ExtResource( 1 )
@@ -48,3 +49,30 @@ level = 50
 current_hp = 1
 species_name = "flygon"
 nature = ExtResource( 7 )
+
+[node name="Smeargle" type="Node" parent="PokemonParty"]
+script = ExtResource( 3 )
+nickname = "Smeargle"
+level = 50
+gender = 1
+species_name = "smeargle"
+nature = ExtResource( 8 )
+
+[node name="Movepool" type="Node" parent="PokemonParty/Smeargle"]
+script = ExtResource( 5 )
+
+[node name="Move1" type="Node" parent="PokemonParty/Smeargle/Movepool"]
+script = ExtResource( 6 )
+move_name = "dark-pulse"
+
+[node name="Move2" type="Node" parent="PokemonParty/Smeargle/Movepool"]
+script = ExtResource( 6 )
+move_name = "baby-doll-eyes"
+
+[node name="Move3" type="Node" parent="PokemonParty/Smeargle/Movepool"]
+script = ExtResource( 6 )
+move_name = "wood-hammer"
+
+[node name="Move4" type="Node" parent="PokemonParty/Smeargle/Movepool"]
+script = ExtResource( 6 )
+move_name = "flamethrower"

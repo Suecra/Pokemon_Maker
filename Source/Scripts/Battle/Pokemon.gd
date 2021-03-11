@@ -195,8 +195,9 @@ func change_status(status: Node) -> void:
 func remove_primary_status() -> void:
 	if primary_status != null:
 		remove_child(primary_status)
+		primary_status = null
 		var animation_status = BattleAnimationStatus.new()
-		animation_status.pokemon = self
+		animation_status.status = ""
 		battle.current_turn.register_animation(animation_status)
 
 func heal_primary_status(silent: bool) -> void:
@@ -217,6 +218,7 @@ func add_secondary_status(status: Node) -> void:
 func remove_secondary_status(status: Node) -> void:
 	if secondary_status.has_node(status.status_name):
 		secondary_status.remove_child(status)
+		secondary_status = null
 
 func fainted() -> bool:
 	if primary_status != null:
