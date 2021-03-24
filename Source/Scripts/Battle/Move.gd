@@ -42,10 +42,13 @@ func _execute() -> void:
 		targets = battle.battlefield.get_targets(target_positions, field)
 		battle.register_message(pokemon.nickname + " uses " + self.data.get_move_name() + "!")
 		for target in targets:
-			if _is_hit(target):
-				_hit(target)
+			if affects(target):
+				if _is_hit(target):
+					_hit(target)
+				else:
+					battle.register_message(target.nickname + " avoided the attack!")
 			else:
-				battle.register_message(target.nickname + " avoided the attack!")
+				battle.register_message("It doesn't affect " + target.nickname + "!")
 
 func _hit(target: Node) -> void:
 	damage_messages = []
@@ -150,6 +153,9 @@ func _get_accuracy(accuracy_level: int) -> float:
 
 func _is_hit(target: Node) -> bool:
 	return Utils.trigger(_get_accuracy(pokemon.accuracy_level - target.evasion_level) / 100)
+
+func affects(target: Node) -> bool:
+	return _get_damage_multiplier(target) != 0.0
 
 func trigger_effects(target: Node) -> void:
 		for effect in self.data.get_effects():

@@ -97,7 +97,7 @@ func button_pressed(sender: Node) -> void:
 			selected(SEL_BAG)
 		if sender == button4:
 			selected(SEL_RUN)
-	else:
+	elif state == SelectionState.SELECT_MOVE:
 		if sender == button1:
 			selected(SEL_MOVE_1)
 		if sender == button2:
@@ -127,7 +127,7 @@ func _physics_process(delta) -> void:
 	if Input.is_action_just_pressed("ui_down"):
 		index = min(3, index + 1)
 		highlight_button()
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("select|action"):
 		button_pressed(buttons[index])
 
 func _ready() -> void:

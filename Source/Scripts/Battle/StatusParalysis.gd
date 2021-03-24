@@ -11,4 +11,5 @@ func _heal() -> void:
 
 func _ready() -> void:
 	register(pokemon, "CAN_MOVE", "_can_move")
+	battle.register_message(pokemon.nickname + " was paralysed!")
 	status_name = "Paralysis"

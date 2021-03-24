@@ -27,7 +27,7 @@ script = ExtResource( 7 )
 
 [node name="Move1" type="Node" parent="PokemonParty/Luxray/Movepool"]
 script = ExtResource( 6 )
-move_name = "thunderbolt"
+move_name = "thunder-wave"
 
 [node name="Tangrowth" type="Node" parent="PokemonParty"]
 script = ExtResource( 3 )

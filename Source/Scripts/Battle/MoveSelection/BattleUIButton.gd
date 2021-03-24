@@ -42,9 +42,9 @@ func _on_Area_input_event(viewport, event, shape_idx):
 
 func _on_Area_mouse_entered():
 	emit_signal("hovered", self)
-	
+
 func _on_Area_mouse_exited():
 	released = true
-
+	
 func _ready() -> void:
 	visible = false
