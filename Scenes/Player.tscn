@@ -24,4 +24,3 @@ limit_left = 0
 limit_top = 0
 
 [node name="Trainer" parent="." instance=ExtResource( 3 )]
-

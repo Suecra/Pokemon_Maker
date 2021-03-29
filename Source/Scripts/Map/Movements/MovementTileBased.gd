@@ -1,73 +1,87 @@
 extends "res://Source/Scripts/Map/Movement.gd"
 
-const STEP_DELAY = 0.1
 const SPRITE_OFFSET = Consts.TILE_SIZE / 2
+const STEP_DELAY = 0.1
 const PREPARING_WALK = 3
 
-var walking_time := 0.0
-var stop_requested := false
-var walk_requested := false
-var change_direction_requested := false
-var running_against_wall := false
-var is_stepping := false
-var velocity: Vector2
 var last_direction: Vector2
-var current_step_size := 0
+var new_direction: Vector2
+var total_movement = 0.0
+var move_speed = 0.0
+var stopping = false
+var turning = false
+var turned = false
+var blocked = false
+var walk_timer = 0.0
 
 func _walk(steps: int) -> bool:
-	if (steps > 0 || walking_time >= STEP_DELAY):
-		if check_path():
-			running_against_wall = false
-		walk_requested = false
+	blocked = blocked || ((state == STANDING || state == PREPARING_WALK) && not check_path())
+	move_speed = character.walking_speed
+	stopping = false
+	if walk_timer >= STEP_DELAY || state == RUNNING:
+		walk_timer = 0.0
 		return true
-	walk_requested = true
 	state = PREPARING_WALK
 	return false
 
 func _run(steps: int) -> bool:
+	blocked = blocked || ((state == STANDING || state == PREPARING_WALK) && not check_path())
+	move_speed = character.running_speed
+	stopping = false
 	return true
 
 func _stop() -> bool:
-	stop_requested = true
-	walk_requested = false
-	if running_against_wall:
-		is_stepping = false
-		return true
-	return not is_stepping
+	walk_timer = 0.0
+	if total_movement > 0:
+		stopping = true
+		return false
+	_adjust_position()
+	return true
 
 func _change_direction(direction: Vector2) -> bool:
-	var new_direction = get_tile_based_direction(direction)
-	if new_direction != last_direction:
-		if is_stepping && not running_against_wall:
-			change_direction_requested = true
-		else:
-			last_direction = new_direction
-			if check_path():
-				running_against_wall = false
-			else:
-				running_against_wall = true
-			self.direction = new_direction
-			return true
+	new_direction = get_tile_based_direction(direction)
+	if new_direction != last_direction && (state == STANDING || blocked):
+		last_direction = new_direction
+		blocked = false
+		turned = true
+		return true
+	if turning:
+		turning = false
+		turned = true
+		return true
 	return false
 
-func _physics_process(delta: float) -> void:
-	if state == STANDING || state == PREPARING_WALK:
-		if walk_requested:
-			walking_time += delta
-		else:
-			walking_time = 0
-	elif state == WALKING:
-		velocity = character.walking_speed * last_direction
-		is_stepping = true
-	elif state == RUNNING:
-		velocity = character.running_speed * last_direction
-		is_stepping = true
-	if is_stepping && not running_against_wall:
-		body.move_and_slide(velocity)
-		current_step_size += velocity.length() * delta
-		if current_step_size >= Consts.TILE_SIZE:
-			current_step_size -= Consts.TILE_SIZE
-			complete_step()
+func _after_teleport() -> void:
+	_adjust_position()
+
+func _adjust_position() -> void:
+	var offset = Vector2(SPRITE_OFFSET, SPRITE_OFFSET)
+	var tile_pos = Utils.tile_pos(character.get_position() + offset)
+	tile_pos = Vector2(round(tile_pos.x), round(tile_pos.y))
+	body.global_position = Utils.pixel_pos(tile_pos) - offset
+
+func _physics_process(delta):
+	if state == PREPARING_WALK:
+		walk_timer += delta
+	match state:
+		WALKING, RUNNING:
+			if turned:
+				blocked = not check_path()
+				turned = false
+			if check_path() || total_movement > 0:
+				var movement = move_speed * delta
+				movement = min(movement, Consts.TILE_SIZE - total_movement)
+				total_movement += movement
+				body.move_and_collide(movement * last_direction)
+				if total_movement == Consts.TILE_SIZE:
+					total_movement = 0
+					step_taken()
+					blocked = not check_path()
+					if stopping:
+						character.stop()
+					if new_direction != last_direction:
+						last_direction = new_direction
+						turning = true
 
 func get_tile_based_direction(direction: Vector2) -> Vector2:
 	var x = int(round(direction.x))
@@ -79,36 +93,6 @@ func get_tile_based_direction(direction: Vector2) -> Vector2:
 			x = 0
 	return Vector2(x, y)
 
-func complete_step() -> void:
-	step_taken()
-	if check_path():
-		running_against_wall = false
-	else:
-		_adjust_position()
-		running_against_wall = true
-	if stop_requested:
-		_adjust_position()
-		is_stepping = false
-		character.stop()
-		stop_requested = false
-	if change_direction_requested:
-		_adjust_position()
-		is_stepping = false
-		change_direction_requested = false
-
-func _adjust_position() -> void:
-	var offset = Vector2(SPRITE_OFFSET, SPRITE_OFFSET)
-	var tile_pos = Utils.tile_pos(character.get_position() + offset)
-	#print("Adjusting position by " + str(tile_pos.x - round(tile_pos.x)) + ", " + str(tile_pos.y - round(tile_pos.y)))
-	tile_pos = Vector2(round(tile_pos.x), round(tile_pos.y))
-	body.global_position = Utils.pixel_pos(tile_pos) - offset
-
 func check_path() -> bool:
 	var transf = body.global_transform.translated(last_direction * SPRITE_OFFSET)
 	return not body.test_move(transf, last_direction)
-
-func _after_teleport() -> void:
-	_adjust_position()
-
-func _ready() -> void:
-	_adjust_position()
