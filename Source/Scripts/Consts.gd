@@ -7,7 +7,7 @@ const TILE_SIZE = 16
 
 const PLAYER_SCENE = "res://Scenes/Player.tscn"
 const MESSAGEBOX_SCENE = "res://Scenes/Textboxes/MessageBox.tscn"
-const SPRITE_COLLECTION_PATH = "res://Scenes/Sprite_Collections/BW/"
+const SPRITE_COLLECTION_PATH = "res://Scenes/Sprite_Collections/new/"
 
 const DATA_PATH = "res://Source/Data/"
 const POKEMON_PATH = DATA_PATH + "Pokemon/"

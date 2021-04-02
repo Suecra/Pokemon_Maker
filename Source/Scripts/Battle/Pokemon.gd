@@ -7,6 +7,7 @@ const BattleAnimationFaint = preload("res://Source/Scripts/Battle/Animations/Bat
 const BattleAnimationStatus = preload("res://Source/Scripts/Battle/Animations/BattleAnimationStatus.gd")
 const CanMoveEventArgs = preload("res://Source/Scripts/Battle/EventArgs/CanMoveEventArgs.gd")
 const Movepool = preload("res://Source/Scripts/Battle/Movepool.gd")
+const SpriteCollection = preload("res://Source/Scripts/Common/SpriteCollection.gd")
 
 enum Gender {Male, Female, Genderless}
 enum Stat {ATTACK, DEFENSE, SPECIAL_ATTACK, SPECIAL_DEFENSE, SPEED, ACCURACY, EVASION}
@@ -134,17 +135,18 @@ func get_sprite() -> Node:
 		base = battle.get_node("BasePlayer")
 		base.remove_child(base.get_node("PKMNSprite"))
 		if shiny:
-			sprite = Utils.unpack(base, self.species.get_sprite_collection().shiny_back_sprite, "PKMNSprite")
+			sprite = self.species.get_sprite_collection()._get_sprite(SpriteCollection.Sprites.Shiny_Back)
 		else:
-			sprite = Utils.unpack(base, self.species.get_sprite_collection().back_sprite, "PKMNSprite")
+			sprite = self.species.get_sprite_collection()._get_sprite(SpriteCollection.Sprites.Back)
 	elif field == battle.opponent_field:
 		base = battle.get_node("BaseOpponent")
 		base.remove_child(base.get_node("PKMNSprite"))
 		if shiny:
-			sprite = Utils.unpack(base, self.species.get_sprite_collection().shiny_sprite, "PKMNSprite")
+			sprite = self.species.get_sprite_collection()._get_sprite(SpriteCollection.Sprites.Shiny_Front)
 		else:
-			sprite = Utils.unpack(base, self.species.get_sprite_collection().front_sprite, "PKMNSprite")
-	sprite.position = base.calculate_pokemon_position(sprite._get_height())
+			sprite = self.species.get_sprite_collection()._get_sprite(SpriteCollection.Sprites.Front)
+	base.add_child(sprite)
+	sprite.owner = base
 	return sprite
 
 func burn() -> bool:

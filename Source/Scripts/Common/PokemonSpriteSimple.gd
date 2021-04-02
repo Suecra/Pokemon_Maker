@@ -11,3 +11,7 @@ func _out_of_pokeball() -> void:
 func _change_status(status: String) -> void:
 	if status == "fainted":
 		_hide()
+
+func _faint() -> void:
+	_hide()
+	yield(get_tree().create_timer(0.0), "timeout")

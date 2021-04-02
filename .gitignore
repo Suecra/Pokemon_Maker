@@ -3,6 +3,8 @@
 *.png
 Graphics/
 Scenes/Test/
+Scenes/Sprite_Collections/new/
+Import/other/
 addons
 .import/
 Fonts/

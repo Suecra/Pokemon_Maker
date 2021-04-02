@@ -35,12 +35,12 @@ wrap = true
 cancel = true
 
 [node name="BaseOpponent" parent="." instance=ExtResource( 8 )]
-position = Vector2( 153.489, 45.4426 )
-scale = Vector2( 0.25, 0.25 )
+position = Vector2( 204.608, 53.3886 )
+scale = Vector2( 0.75, 0.75 )
 
 [node name="BasePlayer" parent="." instance=ExtResource( 9 )]
-position = Vector2( -28.3322, 104.189 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 53.5113, 104.189 )
+scale = Vector2( 1.5, 1.5 )
 
 [node name="PlayerHPBars" type="Node2D" parent="."]
 position = Vector2( 54, 138 )
