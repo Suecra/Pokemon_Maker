@@ -52,16 +52,17 @@ func _ready():
 
 func _on_ButtonSprites_button_down():
 	$DirectoryDialog.visible = true
+	$DirectoryDialog.invalidate()
 
 func _on_DirectoryDialog_dir_selected(dir):
 	$EditSprites.text = dir
 
 func _on_ButtonImport_button_down():
 	if $EditSprites.text == "":
-		print("Sprite directory not specified!")
+		do_log("Sprite directory not specified!")
 		return
 	if $EditCollections.text == "":
-		print("Sprite-Collection directory not specified!")
+		do_log("Sprite-Collection directory not specified!")
 		return
 	
 	var files = []
@@ -109,14 +110,27 @@ func _on_ButtonImport_button_down():
 	patterns.append(pattern)
 	
 	get_all_files(files, "")
+	var count = files.size()
 	var pkmn_id
 	var sprite_collection
+	var i = 0
+	var progress = 0.0
+	var last_progress = 0
 	for file in files:
 		for pat in patterns:
 			pkmn_id = pat.is_match(file)
 			if pkmn_id != -1:
 				save_to_sprite_collection($EditSprites.text + "/" + file, pkmn_id, pat.sprite_id)
 				break
+		if pkmn_id == -1:
+			do_log("No match for \"" + file + "\"")
+		i = i + 1
+		progress = i / float(count) * 100
+		if progress >= last_progress + 1:
+			last_progress = int(progress)
+			$ProgressBar.value = last_progress
+			yield(get_tree().create_timer(0.02), "timeout")
+	do_log("Import finished")
 
 func get_all_files(array: Array, sub_dir: String) -> void:
 	var directory = Directory.new()
@@ -127,7 +141,6 @@ func get_all_files(array: Array, sub_dir: String) -> void:
 			if directory.current_is_dir():
 				get_all_files(array, sub_dir + filename + "/")
 			elif not filename.ends_with(".import"):
-				print(sub_dir + filename)
 				array.append(sub_dir + filename)
 			filename = directory.get_next()
 
@@ -143,9 +156,7 @@ func save_to_sprite_collection(file: String, pokemon_id: int, sprite_id: int) ->
 	else:
 		sprite_collection = scene.instance()
 	sprite_collection.name = sprites_name
-	var texture = ImageTexture.new()
-	texture.load(file)
-	texture.flags = 0
+	var texture = load(file)
 	match sprite_id:
 		SpriteCollection.Sprites.Front: sprite_collection.front = texture
 		SpriteCollection.Sprites.Female_Front: sprite_collection.female_front = texture
@@ -158,3 +169,6 @@ func save_to_sprite_collection(file: String, pokemon_id: int, sprite_id: int) ->
 	scene = PackedScene.new()
 	scene.pack(sprite_collection)
 	ResourceSaver.save(scene_path, scene)
+
+func do_log(text: String) -> void:
+	$Log.text = $Log.text + text + "\n"
