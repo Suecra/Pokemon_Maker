@@ -109,7 +109,7 @@ func _ready() -> void:
 	
 	sprite.direction = Vector2(0, 1)
 	
-	walking_speed = 64
-	running_speed = 128
+	walking_speed = Consts.CHARACTER_WALK_SPEED
+	running_speed = Consts.CHARACTER_RUN_SPEED
 	
 	add_child(movement)

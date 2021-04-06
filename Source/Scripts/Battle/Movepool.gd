@@ -9,6 +9,9 @@ func get_move(index: int) -> Move:
 	move.pokemon = pokemon
 	return move
 
+func clear() -> void:
+	get_children().clear()
+
 func count() -> int:
 	return get_child_count()
 

@@ -13,3 +13,6 @@ const DATA_PATH = "res://Source/Data/"
 const POKEMON_PATH = DATA_PATH + "Pokemon/"
 const TYPE_PATH = DATA_PATH + "Type/"
 const MOVE_PATH = DATA_PATH + "Move/"
+
+const CHARACTER_WALK_SPEED = 64
+const CHARACTER_RUN_SPEED = CHARACTER_WALK_SPEED * 2

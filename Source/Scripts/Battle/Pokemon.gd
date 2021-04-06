@@ -11,6 +11,7 @@ const SpriteCollection = preload("res://Source/Scripts/Common/SpriteCollection.g
 
 enum Gender {Male, Female, Genderless}
 enum Stat {ATTACK, DEFENSE, SPECIAL_ATTACK, SPECIAL_DEFENSE, SPEED, ACCURACY, EVASION}
+enum MoveType {Automatic, Movepool}
 
 export(String) var nickname
 export(int, 1, 100) var level
@@ -18,6 +19,7 @@ export(Gender) var gender
 export(int) var current_hp setget set_current_hp
 export(String) var species_name
 export(PackedScene) var nature setget set_nature, get_nature
+export(MoveType) var move_type
 
 var species: Node setget ,get_species
 var item: Node
@@ -332,6 +334,11 @@ func init_battle() -> void:
 	boosts.pokemon = self
 	boosts.boost_stats()
 	add_child(boosts)
+	if move_type == MoveType.Automatic:
+		var moves = get_last_learnable_moves()
+		movepool.clear()
+		for move in moves:
+			movepool.add_move(move.move_name)
 
 func switch_in() -> void:
 	position = 0
