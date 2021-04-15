@@ -6,7 +6,8 @@ const RUN_ANIM_SPEED = 0.05
 
 export(Texture) var texture_walk
 export(Texture) var texture_run
-export(int) var frames = 4
+export(int) var walk_frames = 4
+export(int) var run_frames = 4
 export(bool) var walk_include_first_frame = false
 
 var animation_player
@@ -60,34 +61,31 @@ func prepare_animations() -> void:
 	var anims = ["stop_down", "stop_left", "stop_right", "stop_up"]
 	for i in range(4):
 		anim = animation_player.get_animation(anims[i])
-		anim.track_set_key_value(0, 0, i * frames)
+		anim.track_set_key_value(0, 0, i * walk_frames)
 		anim.track_set_key_value(3, 0, get_walk_head_rect(0, i))
 	
 	anims = ["walk_down", "walk_left", "walk_right", "walk_up"]
 	for i in range(4):
 		anim = animation_player.get_animation(anims[i])
-		anim.track_insert_key(0, 0, i * frames + (frames - 1))
-		anim.track_insert_key(3, 0, get_walk_head_rect(frames - 1, i))
+		for k in range(walk_frames - 1):
+			anim.track_insert_key(0, WALK_ANIM_SPEED * k, i * walk_frames + k + 1)
+			anim.track_insert_key(3, WALK_ANIM_SPEED * k, get_walk_head_rect(k + 1, i))
 		if walk_include_first_frame:
-			anim.length = WALK_ANIM_SPEED * frames
-			for k in range(frames - 1):
-				anim.track_insert_key(0, WALK_ANIM_SPEED * (k + 1), i * frames + k)
-				anim.track_insert_key(3, WALK_ANIM_SPEED * (k + 1), get_walk_head_rect(k, i))
+			anim.length = WALK_ANIM_SPEED * walk_frames
+			anim.track_insert_key(0, WALK_ANIM_SPEED * (walk_frames - 1), i * walk_frames)
+			anim.track_insert_key(3, WALK_ANIM_SPEED * (walk_frames - 1), get_walk_head_rect(0, i))
 		else:
-			anim.length = WALK_ANIM_SPEED * (frames - 1)
-			for k in range(frames - 2):
-				anim.track_insert_key(0, WALK_ANIM_SPEED * (k + 1), i * frames + k + 1)
-				anim.track_insert_key(3, WALK_ANIM_SPEED * (k + 1), get_walk_head_rect(k + 1, i))
+			anim.length = WALK_ANIM_SPEED * (walk_frames - 1)
 	
 	anims = ["run_down", "run_left", "run_right", "run_up"]
 	for i in range(4):
 		anim = animation_player.get_animation(anims[i])
-		anim.length = RUN_ANIM_SPEED * frames
-		anim.track_insert_key(0, 0, i * frames + (frames - 1))
-		anim.track_insert_key(3, 0, get_run_head_rect(frames - 1, i))
-		for k in range(frames - 1):
-			anim.track_insert_key(0, RUN_ANIM_SPEED * (k + 1), i * frames + k)
-			anim.track_insert_key(3, RUN_ANIM_SPEED * (k + 1), get_run_head_rect(k, i))
+		anim.length = RUN_ANIM_SPEED * run_frames
+		for k in range(run_frames - 1):
+			anim.track_insert_key(0, RUN_ANIM_SPEED * k, i * run_frames + k + 1)
+			anim.track_insert_key(3, RUN_ANIM_SPEED * k, get_run_head_rect(k + 1, i))
+		anim.track_insert_key(0, RUN_ANIM_SPEED * (run_frames - 1), i * run_frames)
+		anim.track_insert_key(3, RUN_ANIM_SPEED * (run_frames - 1), get_run_head_rect(0, i))
 
 func _ready() -> void:
 	animation_player = $AnimationPlayer.duplicate()
@@ -97,13 +95,13 @@ func _ready() -> void:
 	remove_child($AnimationPlayer)
 	
 	$SpriteWalk.texture = texture_walk
-	$SpriteWalk.hframes = frames
+	$SpriteWalk.hframes = walk_frames
 	$SpriteWalk/Head.texture = texture_walk
 	$SpriteRun.texture = texture_run
-	$SpriteRun.hframes = frames
+	$SpriteRun.hframes = run_frames
 	$SpriteRun/Head.texture = texture_run
-	walk_sprite_width = texture_walk.get_width() / frames
-	run_sprite_width = texture_run.get_width() / frames
+	walk_sprite_width = texture_walk.get_width() / walk_frames
+	run_sprite_width = texture_run.get_width() / run_frames
 	walk_sprite_height = texture_walk.get_height() / 4
 	run_sprite_height = texture_run.get_height() / 4
 	walk_head_height = walk_sprite_height - BODY_HEIGHT

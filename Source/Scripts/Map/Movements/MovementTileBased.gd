@@ -1,8 +1,6 @@
 extends "res://Source/Scripts/Map/Movement.gd"
 
 const SPRITE_OFFSET = Consts.TILE_SIZE / 2
-const STEP_DELAY = 0.1
-const PREPARING_WALK = 3
 
 var last_direction: Vector2
 var new_direction: Vector2
@@ -12,26 +10,20 @@ var stopping = false
 var turning = false
 var turned = false
 var blocked = false
-var walk_timer = 0.0
 
 func _walk(steps: int) -> bool:
-	blocked = blocked || ((state == STANDING || state == PREPARING_WALK) && not check_path())
+	blocked = blocked || (state == STANDING && not check_path())
 	move_speed = character.walking_speed
 	stopping = false
-	if walk_timer >= STEP_DELAY || state == RUNNING:
-		walk_timer = 0.0
-		return true
-	state = PREPARING_WALK
-	return false
+	return true
 
 func _run(steps: int) -> bool:
-	blocked = blocked || ((state == STANDING || state == PREPARING_WALK) && not check_path())
+	blocked = blocked || (state == STANDING && not check_path())
 	move_speed = character.running_speed
 	stopping = false
 	return true
 
 func _stop() -> bool:
-	walk_timer = 0.0
 	if total_movement > 0:
 		stopping = true
 		return false
@@ -61,8 +53,6 @@ func _adjust_position() -> void:
 	body.global_position = Utils.pixel_pos(tile_pos) - offset
 
 func _physics_process(delta):
-	if state == PREPARING_WALK:
-		walk_timer += delta
 	match state:
 		WALKING, RUNNING:
 			if turned:

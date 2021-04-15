@@ -219,7 +219,7 @@ Display=8
 [application]
 
 config/name="Pokémon Maker"
-run/main_scene="res://Scenes/Test/Testmap/TestMap.tscn"
+run/main_scene="res://Maps/map2/Map2.tscn"
 
 [autoload]
 
@@ -259,6 +259,17 @@ texture={
 "size_limit": 0,
 "stream": false,
 "svg/scale": 1.0
+}
+vnen.tiled_importer={
+"add_background": true,
+"collision_layer": 1,
+"custom_properties": true,
+"embed_internal_images": false,
+"image_flags": 7,
+"post_import_script": "res://addons/PostImport.gd",
+"save_tiled_properties": false,
+"tile_metadata": false,
+"uv_clip": true
 }
 
 [input]
