@@ -1,6 +1,8 @@
 extends Node
 
-const Pokemon = preload("res://Source/Scripts/Battle/Pokemon.gd")
+func clear() -> void:
+	while get_child_count() > 0:
+		remove_child(get_child(0))
 
 func get_pokemon_count() -> int:
 	return get_child_count()
@@ -25,14 +27,14 @@ func get_fighter(index: int) -> Node:
 				i += 1
 	return null
 
-func add_pokemon(pokemon: Pokemon) -> void:
+func add_pokemon(pokemon: Node) -> void:
 	add_child(pokemon)
 	pokemon.owner = self
 
-func remove_pokemon(pokemon: Pokemon) -> void:
+func remove_pokemon(pokemon: Node) -> void:
 	remove_child(pokemon)
 
-func exchange(pokemon1: Pokemon, pokemon2: Pokemon) -> void:
+func exchange(pokemon1: Node, pokemon2: Node) -> void:
 	var index = pokemon2.get_index()
 	move_child(pokemon2, pokemon1.get_index())
 	move_child(pokemon1, index)

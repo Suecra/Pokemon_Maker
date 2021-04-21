@@ -289,6 +289,17 @@ func get_last_learnable_moves() -> Array:
 					moves.remove(4)
 	return moves
 
+func encounter() -> void:
+	nickname = self.species.pokemon_name.capitalize()
+	gender = self.species.gender_chance._generate_gender()
+	var natures = ["hardy", "bold", "modest", "calm", "timid", "lonely", "docile", "mild", "gentle", "hasty", "adamant", "impish", "bashful", "careful", "rash", "jolly", "naughty", "lax", "quirky", "naive", "brave", "relaxed", "quiet", "sassy", "serious"]
+	var nature_name = natures[randi() % natures.size()]
+	self.nature = load("res://Source/Data/Nature/" + nature_name + ".tscn")
+	get_random_ivs()
+	print(Consts.SHINY_CHANCE)
+	shiny = Utils.trigger(Consts.SHINY_CHANCE)
+	move_type = MoveType.Automatic
+
 func get_random_ivs() -> void:
 	hp_iv = randi() % 31
 	attack_iv = randi() % 31

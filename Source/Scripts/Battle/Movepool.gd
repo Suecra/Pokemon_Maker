@@ -10,7 +10,8 @@ func get_move(index: int) -> Move:
 	return move
 
 func clear() -> void:
-	get_children().clear()
+	while get_child_count() > 0:
+		remove_child(get_child(0))
 
 func count() -> int:
 	return get_child_count()

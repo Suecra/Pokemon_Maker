@@ -1,26 +1,53 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Source/Scripts/Map/Map.gd" type="Script" id=1]
 [ext_resource path="res://Maps/map2/map2.tmx" type="PackedScene" id=2]
 [ext_resource path="res://Source/Scripts/Map/Spawnpoint.gd" type="Script" id=3]
 [ext_resource path="res://Maps/map2/TestTrainer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Scripts/Map/Encounter.gd" type="Script" id=5]
+[ext_resource path="res://Source/Scripts/Map/Encounters.gd" type="Script" id=6]
 
 [node name="Map2" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="map2" parent="." instance=ExtResource( 2 )]
+[node name="Map" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 32 )
 
 [node name="BattleLayer" type="CanvasLayer" parent="."]
 
 [node name="Spawn" type="Node2D" parent="."]
-position = Vector2( 343.844, 799.893 )
+position = Vector2( 370.541, 511.568 )
 script = ExtResource( 3 )
 
 [node name="Trainer" parent="." instance=ExtResource( 4 )]
-position = Vector2( 465.035, 365.67 )
+position = Vector2( 467.867, 400.593 )
 trigger_type = 1
 trigger_range = 40
 text = "Hallo"
 text_after_defeat = "cool
 "
 text_after_victory = "cool"
+
+[node name="Encounters" type="Node" parent="."]
+script = ExtResource( 6 )
+
+[node name="poochyena" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "poochyena"
+min_level = 2
+max_level = 4
+chance = 2
+
+[node name="zigzagoon" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "zigzagoon"
+min_level = 2
+max_level = 4
+chance = 2
+
+[node name="shroomish" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "shroomish"
+min_level = 2
+max_level = 4
+chance = 1
