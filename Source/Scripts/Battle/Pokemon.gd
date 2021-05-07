@@ -296,7 +296,6 @@ func encounter() -> void:
 	var nature_name = natures[randi() % natures.size()]
 	self.nature = load("res://Source/Data/Nature/" + nature_name + ".tscn")
 	get_random_ivs()
-	print(Consts.SHINY_CHANCE)
 	shiny = Utils.trigger(Consts.SHINY_CHANCE)
 	move_type = MoveType.Automatic
 

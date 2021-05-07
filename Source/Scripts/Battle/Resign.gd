@@ -4,5 +4,5 @@ func _get_priority() -> int:
 	return 99
 
 func _execute() -> void:
-	trainer.resigned = true
+	trainer.left_battle = true
 	battle.register_message("The battle has been resigned!")

@@ -1,12 +1,13 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Source/Scripts/Battle/Trainer/WildPokemonTrainer.gd" type="Script" id=1]
+[ext_resource path="res://Source/Scripts/Battle/Trainer/EnemyTrainer.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/PokemonParty.gd" type="Script" id=2]
 [ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=3]
 [ext_resource path="res://Source/Data/Nature/docile.tscn" type="PackedScene" id=4]
 
 [node name="TestTrainer" type="Node"]
 script = ExtResource( 1 )
+trainer_name = "Sebastian"
 
 [node name="PokemonParty" type="Node" parent="."]
 script = ExtResource( 2 )

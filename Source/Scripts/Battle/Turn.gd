@@ -24,7 +24,7 @@ func do_half_turns() -> bool:
 	PrioritySorter.sort(half_turns)
 	for half_turn in half_turns:
 		half_turn._execute()
-		if half_turn.trainer.resigned:
+		if half_turn.trainer.left_battle:
 			return false
 	half_turns.clear()
 	return true

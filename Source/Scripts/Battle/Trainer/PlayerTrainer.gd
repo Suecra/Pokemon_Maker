@@ -1,10 +1,13 @@
 extends "res://Source/Scripts/Battle/Trainer.gd"
 
 const Resign = preload("res://Source/Scripts/Battle/Resign.gd")
+const Escape = preload("res://Source/Scripts/Battle/Escape.gd")
+const Battle = preload("res://Source/Scripts/Battle/Battle.gd")
 
 var choicebox: Node
 var move_selection: Node
 var selected_move: Node
+var escape: Node
 
 func _do_half_turn() -> void:
 	choicebox = battle.get_node("Choicebox")
@@ -19,6 +22,7 @@ func _do_half_turn() -> void:
 	move_selection.show_selection()
 
 func move_selected(index) -> void:
+	escape.tries = 0
 	emit_signal("choice_made", self, move(index))
 
 func switch_selected() -> void:
@@ -33,9 +37,19 @@ func bag_selected() -> void:
 	move_selection.show_selection()
 
 func run_selected() -> void:
-	var resign = Resign.new()
-	resign.trainer = self
-	emit_signal("choice_made", self, resign)
+	var action
+	match battle.battle_type:
+		Battle.BattleType.WildPokemon:
+			action = escape
+		Battle.BattleType.Trainer:
+			var messagebox = battle.get_node("MessageBox")
+			yield(messagebox.display("You can't escape in a trainer-battle!"), "completed")
+			move_selection.show_selection()
+			return
+		Battle.BattleType.BattleTower:
+			action = Resign.new()
+	action.trainer = self
+	emit_signal("choice_made", self, action)
 
 func _force_switch_in() -> void:
 	if pokemon_party.get_fighter_count() == 1:
@@ -50,4 +64,15 @@ func pokemon_selected() -> void:
 	if choicebox.item_index == -1:
 		move_selection.show_selection()
 	else:
+		escape.tries = 0
 		emit_signal("choice_made", self, switch(choicebox.item_index))
+
+func _get_switch_in_message() -> String:
+	return "Go, " + current_pokemon.nickname + "!"
+
+func _get_switch_out_message() -> String:
+	return "Enough, " + current_pokemon.nickname + "! Come back!"
+
+func _init_battle() -> void:
+	._init_battle()
+	escape = Escape.new()

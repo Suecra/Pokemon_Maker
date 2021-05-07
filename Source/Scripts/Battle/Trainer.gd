@@ -8,7 +8,7 @@ signal choice_made(sender, half_turn)
 var current_pokemon: Node
 var field: Node
 var battle: Node
-var resigned: bool
+var left_battle: bool
 
 onready var pokemon_party := $PokemonParty
 
@@ -35,6 +35,12 @@ func switch(fighter_index: int) -> Switch:
 	switch.to_pokemon = new_pokemon
 	switch.turn = battle.current_turn
 	return switch
+
+func _get_switch_in_message() -> String:
+	return ""
+
+func _get_switch_out_message() -> String:
+	return ""
 
 func move(move_index: int) -> Move:
 	if move_index == -1:
@@ -76,9 +82,11 @@ func query_delete_move() -> bool:
 
 func _ready() -> void:
 	set_physics_process(false)
+	pokemon_party.full_heal_all()
 
-func init_battle() -> void:
-	resigned = false
+func _init_battle() -> void:
+	left_battle = false
+	current_pokemon = null
 	for i in pokemon_party.get_pokemon_count():
 		var pokemon = pokemon_party.get_pokemon(i)
 		pokemon.battle = battle

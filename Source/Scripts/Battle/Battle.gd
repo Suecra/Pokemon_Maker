@@ -7,17 +7,21 @@ const HalfTurn = preload("res://Source/Scripts/Battle/HalfTurn.gd")
 const BattleAnimation = preload("res://Source/Scripts/Battle/BattleAnimation.gd")
 const BattleAnimationMessage = preload("res://Source/Scripts/Battle/Animations/BattleAnimationMessage.gd")
 
+enum BattleType {WildPokemon, Trainer, BattleTower}
+enum BattleResult {PlayerWon, OpponentWon, Canceled}
+
 onready var battlefield := $Battlefield
 
 export(PackedScene) var player_hp_bar
 export(PackedScene) var opponent_hp_bar
 
+var battle_type: int
 var current_turn_nr: int
 var current_turn: Node
 var ally_field: Field
 var opponent_field: Field
 var trainers := []
-var player_won := false
+var result: int
 
 signal ended
 
@@ -36,19 +40,25 @@ func add_opponent_trainer(trainer: Trainer) -> void:
 func is_battle_ended() -> bool:
 	var count = 0
 	for trainer in trainers:
-		if trainer.resigned:
-			if trainer.field == opponent_field:
-				player_won = true
+		if trainer.left_battle:
+			if battle_type == BattleType.WildPokemon:
+				result = BattleResult.Canceled
+			elif trainer.field == opponent_field:
+				result = BattleResult.PlayerWon
+			else:
+				result = BattleResult.OpponentWon
 			return true
 		if trainer.has_pokemon_left():
 			count += 1
 		elif trainer.field == opponent_field:
-			player_won = true
+			result = BattleResult.PlayerWon
+		else:
+			result = BattleResult.OpponentWon
 	return count <= 1
 
 func start() -> void:
 	for trainer in trainers:
-		trainer.init_battle()
+		trainer._init_battle()
 	current_turn_nr = 0
 	current_turn = first_turn()
 	yield(current_turn._start(), "completed")
@@ -63,7 +73,7 @@ func start() -> void:
 
 func start_async() -> void:
 	for trainer in trainers:
-		trainer.init_battle()
+		trainer._init_battle()
 	current_turn_nr = 0
 	current_turn = first_turn()
 	current_turn.connect("turn_end", self, "turn_end")
@@ -104,10 +114,11 @@ func init_turn(turn: Node) -> void:
 
 #rename to "register_text_message"
 func register_message(message: String) -> void:
-	var msg = BattleAnimationMessage.new()
-	msg.battle = self
-	msg.message = message
-	current_turn.register_animation(msg)
+	if message != "":
+		var msg = BattleAnimationMessage.new()
+		msg.battle = self
+		msg.message = message
+		current_turn.register_animation(msg)
 
 func _ready() -> void:
 	var inst = player_hp_bar.instance()
@@ -123,6 +134,8 @@ func _ready() -> void:
 	add_child(ally_field)
 	opponent_field = Field.new()
 	add_child(opponent_field)
+	ally_field.opponent_field = opponent_field
+	opponent_field.opponent_field = ally_field
 	
 	ally_field.hp_bar = $PlayerHPBars/HPBar
 	opponent_field.hp_bar = $OpponentHPBars/HPBar
