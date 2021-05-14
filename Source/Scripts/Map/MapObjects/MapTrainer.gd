@@ -15,5 +15,5 @@ func _trigger() -> void:
 		event.add_action(EventActionMessage.new(text_after_defeat))
 	else:
 		event.add_action(EventActionMessage.new(text))
-		event.add_action(EventActionBattle.new(Global.player.trainer, trainer)).won().add_action(EventActionSetVariable.new(self, "defeated"))
+		event.add_action(EventActionBattle.new(Global.player.trainer, trainer, 1)).won().add_action(EventActionSetVariable.new(self, "defeated"))
 	event.start()

@@ -5,6 +5,7 @@ export(String) var trainer_name
 var usable_moves = []
 
 func _do_half_turn() -> void:
+	._do_half_turn()
 	usable_moves.clear()
 	var movepool = current_pokemon.movepool
 	for i in movepool.get_child_count():
@@ -18,6 +19,7 @@ func _do_half_turn() -> void:
 	emit_signal("choice_made", self, move(usable_moves[move_index]))
 
 func _force_switch_in() -> void:
+	._force_switch_in()
 	emit_signal("choice_made", self, switch(0))
 
 func _get_switch_in_message() -> String:

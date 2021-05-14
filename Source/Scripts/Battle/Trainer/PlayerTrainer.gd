@@ -10,6 +10,7 @@ var selected_move: Node
 var escape: Node
 
 func _do_half_turn() -> void:
+	._do_half_turn()
 	choicebox = battle.get_node("Choicebox")
 	choicebox.cancel = true
 	move_selection = battle.get_node("MoveSelection")
@@ -52,6 +53,7 @@ func run_selected() -> void:
 	emit_signal("choice_made", self, action)
 
 func _force_switch_in() -> void:
+	._force_switch_in()
 	if pokemon_party.get_fighter_count() == 1:
 		emit_signal("choice_made", self, switch(0))
 	else:

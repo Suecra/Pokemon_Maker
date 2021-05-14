@@ -9,6 +9,7 @@ var current_pokemon: Node
 var field: Node
 var battle: Node
 var left_battle: bool
+var switch_forced: bool
 
 onready var pokemon_party := $PokemonParty
 
@@ -16,9 +17,11 @@ func has_pokemon_left() -> bool:
 	return pokemon_party.get_fighter_count() > 0
 
 func _do_half_turn() -> void:
+	switch_forced = false
 	pass
 
 func _force_switch_in() -> void:
+	switch_forced = true
 	pass
 
 func _select_target() -> int:
@@ -30,6 +33,7 @@ func _get_lead() -> Node:
 func switch(fighter_index: int) -> Switch:
 	var new_pokemon = pokemon_party.get_switch_target(fighter_index, current_pokemon)
 	var switch = Switch.new()
+	switch.forced = switch_forced
 	switch.pokemon = current_pokemon
 	switch.trainer = self
 	switch.to_pokemon = new_pokemon
@@ -86,6 +90,7 @@ func _ready() -> void:
 
 func _init_battle() -> void:
 	left_battle = false
+	switch_forced = false
 	current_pokemon = null
 	for i in pokemon_party.get_pokemon_count():
 		var pokemon = pokemon_party.get_pokemon(i)

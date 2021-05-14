@@ -5,6 +5,8 @@ var message_box: Node setget ,get_message_box
 var event: Node
 var map: Node
 
+onready var battle_layer := $BattleLayer
+
 func new_event(caller: Node) -> Node:
 	if event == null:
 		event = Event.new()
@@ -38,3 +40,6 @@ func get_message_box() -> Node:
 
 func create_message_box() -> Node:
 	return load(Consts.MESSAGEBOX_SCENE).instance()
+
+func _ready() -> void:
+	randomize()

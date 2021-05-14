@@ -3,6 +3,7 @@ extends "res://Source/Scripts/Battle/HalfTurn.gd"
 const BattleAnimationOutOfPokeball = preload("res://Source/Scripts/Battle/Animations/BattleAnimationOutOfPokeball.gd")
 
 var to_pokemon: Node
+var forced = false
 
 func _init() -> void:
 	priority = 6
@@ -10,7 +11,8 @@ func _init() -> void:
 func _execute() -> void:
 	var message = ""
 	if trainer.current_pokemon != null:
-		battle.register_message(trainer._get_switch_out_message())
+		if not forced:
+			battle.register_message(trainer._get_switch_out_message())
 		trainer.current_pokemon.switch_out()
 	trainer.current_pokemon = to_pokemon
 	battle.register_message(trainer._get_switch_in_message())

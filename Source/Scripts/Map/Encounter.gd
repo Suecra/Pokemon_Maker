@@ -29,7 +29,7 @@ func encounter_pokemon() -> void:
 	pokemon.encounter()
 	wild_pokemon_trainer.pokemon_party.add_pokemon(pokemon)
 	
-	event.add_action(EventActionBattle.new(Global.player.trainer, wild_pokemon_trainer))
+	event.add_action(EventActionBattle.new(Global.player.trainer, wild_pokemon_trainer, 0))
 	event.start()
 
 func _ready() -> void:
