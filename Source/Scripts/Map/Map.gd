@@ -18,7 +18,6 @@ func deinit_map_objects(node: Node) -> void:
 
 func enter(position: Vector2) -> void:
 	Global.player.teleport(self, position)
-	Global.player.connect("step_taken", self, "player_step_taken")
 	init_map_objects(self)
 
 func enter_tile(x_tile: int, y_tile: int) -> void:

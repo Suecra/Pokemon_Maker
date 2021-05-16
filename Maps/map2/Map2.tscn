@@ -14,14 +14,15 @@ script = ExtResource( 1 )
 position = Vector2( 0, 32 )
 
 [node name="Spawn" type="Node2D" parent="."]
-position = Vector2( 751.898, 1441.6 )
+position = Vector2( 751.357, 1133.02 )
 script = ExtResource( 3 )
 
 [node name="Trainer" parent="." instance=ExtResource( 4 )]
-position = Vector2( 467.867, 400.593 )
+position = Vector2( 889.774, 1027.45 )
 trigger_type = 1
 trigger_range = 40
 text = "Hallo"
+facing = 1
 text_after_defeat = "cool
 "
 text_after_victory = "cool"

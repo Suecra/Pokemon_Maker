@@ -65,4 +65,5 @@ func player_action() -> void:
 				Global.player.request_trigger(self)
 
 func _ready() -> void:
+	spawn_radius = Consts.MAP_OBJECT_SPAWN_RADIUS
 	spawned = false

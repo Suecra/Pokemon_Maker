@@ -17,7 +17,7 @@ func step_taken() -> void:
 		remaining_steps -= 1
 	if remaining_steps == 0:
 		character.stop()
-	character.emit_signal("step_taken")
+	character.step_taken()
 
 func step() -> void:
 	if state == WALKING:

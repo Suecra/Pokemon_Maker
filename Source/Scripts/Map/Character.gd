@@ -9,13 +9,16 @@ var movement: Node
 var controller: Node
 var walking_speed: int
 var running_speed: int
+var vision_range: int setget set_vision_range
 var direction: Vector2
+var ray_cast: RayCast2D
 
 onready var body := $Body
 onready var sprite := $Body/Sprite
 
 signal step_taken
 signal stopped
+signal object_spotted
 
 func get_position() -> Vector2:
 	return movement.body.global_position
@@ -29,6 +32,10 @@ func set_status(value: Node) -> void:
 	status.name = "Status"
 	add_child(status)
 	status._enter()
+
+func set_vision_range(value: int) -> void:
+	vision_range = value
+	ray_cast.cast_to = direction * vision_range
 
 func start_cutscene() -> void:
 	if status.has_method("start_cutscene"):
@@ -52,6 +59,8 @@ func change_direction(direction: Vector2) -> bool:
 func look(direction: Vector2) -> void:
 	if change_direction(direction):
 		sprite.direction = direction
+		ray_cast.cast_to = direction * vision_range
+		spot_objects()
 
 func look_at(position: Vector2) -> void:
 	var direction = position - get_position()
@@ -72,6 +81,15 @@ func stop() -> void:
 	if movement.stop():
 		sprite.play_animation("stop")
 		emit_signal("stopped")
+
+func step_taken() -> void:
+	emit_signal("step_taken")
+	spot_objects()
+
+func spot_objects() -> void:
+	var collider = ray_cast.get_collider()
+	if collider != null:
+		emit_signal("object_spotted", collider)
 
 func teleport(map: Node, position: Vector2) -> void:
 	var parent = get_parent()
@@ -113,3 +131,11 @@ func _ready() -> void:
 	running_speed = Consts.CHARACTER_RUN_SPEED
 	
 	add_child(movement)
+	
+	ray_cast = RayCast2D.new()
+	ray_cast.name = "RayCast"
+	body.add_child(ray_cast)
+	ray_cast.owner = self
+	ray_cast.enabled = true
+	ray_cast.cast_to = direction * vision_range
+	Global.player.connect("step_taken", self, "spot_objects")

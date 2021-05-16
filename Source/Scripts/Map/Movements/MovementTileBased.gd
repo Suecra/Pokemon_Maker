@@ -34,6 +34,7 @@ func _change_direction(direction: Vector2) -> bool:
 	new_direction = get_tile_based_direction(direction)
 	if new_direction != last_direction && (state == STANDING || blocked):
 		last_direction = new_direction
+		self.direction = direction
 		blocked = false
 		turned = true
 		return true
