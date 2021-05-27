@@ -30,23 +30,72 @@ text_after_victory = "cool"
 [node name="Encounters" type="Node" parent="."]
 script = ExtResource( 6 )
 
-[node name="poochyena" type="Node" parent="Encounters"]
+[node name="bidoof" type="Node" parent="Encounters"]
 script = ExtResource( 5 )
-pokemon_name = "poochyena"
+pokemon_name = "bidoof"
 min_level = 2
-max_level = 4
-chance = 2
+max_level = 10
+chance = 30
 
-[node name="zigzagoon" type="Node" parent="Encounters"]
+[node name="starly" type="Node" parent="Encounters"]
 script = ExtResource( 5 )
-pokemon_name = "zigzagoon"
+pokemon_name = "starly"
 min_level = 2
-max_level = 4
-chance = 2
+max_level = 10
+chance = 30
+
+[node name="pachirisu" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "bidoof"
+min_level = 2
+max_level = 10
+chance = 10
 
 [node name="shroomish" type="Node" parent="Encounters"]
 script = ExtResource( 5 )
 pokemon_name = "shroomish"
 min_level = 2
-max_level = 4
+max_level = 10
+chance = 10
+
+[node name="jigglypuff" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "jigglypuff"
+min_level = 2
+max_level = 10
+chance = 5
+
+[node name="slowpoke" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "slowpoke"
+min_level = 2
+max_level = 10
+chance = 5
+
+[node name="ralts" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "ralts"
+min_level = 2
+max_level = 10
+chance = 5
+
+[node name="eevee" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "eevee"
+min_level = 2
+max_level = 10
+chance = 2
+
+[node name="riolu" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "riolu"
+min_level = 2
+max_level = 10
+chance = 2
+
+[node name="gible" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "gible"
+min_level = 2
+max_level = 10
 chance = 1

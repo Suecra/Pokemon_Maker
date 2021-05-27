@@ -1,6 +1,7 @@
 extends "res://Source/Scripts/Map/Movement.gd"
 
 const SPRITE_OFFSET = Consts.TILE_SIZE / 2
+const PATH_CHECK_RANGE = Consts.TILE_SIZE * 3 / 3
 
 var last_direction: Vector2
 var new_direction: Vector2
@@ -10,6 +11,18 @@ var stopping = false
 var turning = false
 var turned = false
 var blocked = false
+var ray_cast: RayCast2D
+
+func _set_body(value: KinematicBody2D) -> void:
+	._set_body(value)
+	ray_cast = body.get_node("CheckPathCast")
+	if ray_cast == null:
+		ray_cast = RayCast2D.new()
+		ray_cast.name = "CheckPathCast"
+		body.add_child(ray_cast)
+		ray_cast.owner = body
+	ray_cast.enabled = true
+	ray_cast.cast_to = direction * PATH_CHECK_RANGE
 
 func _walk(steps: int) -> bool:
 	blocked = blocked || (state == STANDING && not check_path())
@@ -37,10 +50,13 @@ func _change_direction(direction: Vector2) -> bool:
 		self.direction = direction
 		blocked = false
 		turned = true
+		ray_cast.cast_to = direction * PATH_CHECK_RANGE
 		return true
 	if turning:
+		self.direction = direction
 		turning = false
 		turned = true
+		ray_cast.cast_to = direction * PATH_CHECK_RANGE
 		return true
 	return false
 
@@ -85,5 +101,4 @@ func get_tile_based_direction(direction: Vector2) -> Vector2:
 	return Vector2(x, y)
 
 func check_path() -> bool:
-	var transf = body.global_transform.translated(last_direction * SPRITE_OFFSET)
-	return not body.test_move(transf, last_direction)
+	return ray_cast.get_collider() == null

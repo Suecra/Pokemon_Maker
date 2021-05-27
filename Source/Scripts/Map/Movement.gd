@@ -6,11 +6,14 @@ const RUNNING = 2
 
 var state = 0
 var character: Node
-var body: KinematicBody2D
+var body: KinematicBody2D setget _set_body
 var direction: Vector2
 var remaining_steps = 0
 
 signal step_taken
+
+func _set_body(value: KinematicBody2D) -> void:
+	body = value
 
 func step_taken() -> void:
 	if remaining_steps > 0:
