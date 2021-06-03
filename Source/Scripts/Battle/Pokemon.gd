@@ -9,13 +9,12 @@ const CanMoveEventArgs = preload("res://Source/Scripts/Battle/EventArgs/CanMoveE
 const Movepool = preload("res://Source/Scripts/Battle/Movepool.gd")
 const SpriteCollection = preload("res://Source/Scripts/Common/SpriteCollection.gd")
 
-enum Gender {Male, Female, Genderless}
 enum Stat {ATTACK, DEFENSE, SPECIAL_ATTACK, SPECIAL_DEFENSE, SPEED, ACCURACY, EVASION}
 enum MoveType {Automatic, Movepool}
 
 export(String) var nickname
 export(int, 1, 100) var level
-export(Gender) var gender
+export(Consts.Gender) var gender
 export(int) var current_hp setget set_current_hp
 export(String) var species_name
 export(PackedScene) var nature setget set_nature, get_nature
@@ -136,17 +135,11 @@ func get_sprite() -> Node:
 	if field == battle.ally_field:
 		base = battle.get_node("BasePlayer")
 		base.remove_child(base.get_node("PKMNSprite"))
-		if shiny:
-			sprite = self.species.get_sprite_collection()._get_sprite(SpriteCollection.Sprites.Shiny_Back)
-		else:
-			sprite = self.species.get_sprite_collection()._get_sprite(SpriteCollection.Sprites.Back)
+		sprite = self.species.get_sprite_collection().get_back_sprite(self)
 	elif field == battle.opponent_field:
 		base = battle.get_node("BaseOpponent")
 		base.remove_child(base.get_node("PKMNSprite"))
-		if shiny:
-			sprite = self.species.get_sprite_collection()._get_sprite(SpriteCollection.Sprites.Shiny_Front)
-		else:
-			sprite = self.species.get_sprite_collection()._get_sprite(SpriteCollection.Sprites.Front)
+		sprite = self.species.get_sprite_collection().get_front_sprite(self)
 	base.add_child(sprite)
 	sprite.owner = base
 	return sprite
@@ -174,6 +167,7 @@ func faint():
 		change_status(load("res://Source/Scripts/Battle/StatusFaint.gd").new())
 		var animation = BattleAnimationFaint.new()
 		animation.pokemon = self
+		animation.hp_bar = hp_bar
 		battle.current_turn.register_animation(animation)
 		battle.register_message(nickname + " has fainted!")
 

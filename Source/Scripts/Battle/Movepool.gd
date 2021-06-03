@@ -6,7 +6,8 @@ var pokemon: Node
 
 func get_move(index: int) -> Move:
 	var move = get_child(index)
-	move.pokemon = pokemon
+	if move != null:
+		move.pokemon = pokemon
 	return move
 
 func clear() -> void:

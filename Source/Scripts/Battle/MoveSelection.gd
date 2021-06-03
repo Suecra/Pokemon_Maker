@@ -65,7 +65,7 @@ func selected(id: int) -> void:
 
 func move_selected(id: int):
 	var move = movepool.get_move(id)
-	if move._can_use():
+	if move != null && move._can_use():
 		_hide_moves()
 		state = SelectionState.NONE
 		emit_signal("move_selected", id)

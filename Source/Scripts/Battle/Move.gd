@@ -122,7 +122,9 @@ func _is_STAB() -> bool:
 	return false
 
 func _get_damage_multiplier(target: Node) -> float:
-	return self.data.get_type().get_damage_multiplier(target.get_types())
+	var mult = self.data.get_type().get_damage_multiplier(target.get_types())
+	_get_damage_multiplier_message(mult)
+	return mult
 
 func _get_damage_multiplier_message(multiplier: float) -> void:
 	if multiplier > 1:

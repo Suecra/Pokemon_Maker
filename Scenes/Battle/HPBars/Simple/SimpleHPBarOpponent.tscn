@@ -38,7 +38,7 @@ hp_x_offset = -16
 hp_y_offset = 1
 hp_width = 55
 hp_height = 4
-status_x_offset = -24
+status_x_offset = -22
 status_y_offset = 1
 status_size = 4
 

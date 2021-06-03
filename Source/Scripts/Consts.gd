@@ -3,6 +3,8 @@ class_name Consts
 enum MOVEMENT_TYPE {FREE = 0, TILE = 1}
 enum TERRAIN_TAGS {GRASS = 1, WATER = 2}
 
+enum Gender {Male, Female, Genderless}
+
 const MOVEMENT = MOVEMENT_TYPE.TILE
 const TILE_SIZE = 32
 

@@ -1,6 +1,5 @@
 extends "res://Source/Scripts/Battle/BattleAnimation.gd"
 
-var hp_bar: Node
 var hp: int
 
 func _execute() -> void:

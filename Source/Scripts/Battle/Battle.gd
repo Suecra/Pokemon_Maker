@@ -69,6 +69,10 @@ func start() -> void:
 		yield(current_turn._start(), "completed")
 		current_turn_nr += 1
 	$MessageBox.close()
+	if result == BattleResult.OpponentWon:
+		yield($MessageBox.display("Player is out of usable Pokémon!"), "completed")
+		yield($MessageBox.display("Player blacked out!"), "completed")
+		get_tree().quit()
 	emit_signal("ended")
 
 func start_async() -> void:

@@ -1,5 +1,7 @@
 extends Node2D
 
+export(Vector2) var size = Vector2(1000, 1000)
+
 onready var tilemaps = $Map
 
 func init_map_objects(node: Node) -> void:
@@ -43,3 +45,5 @@ func get_terrain_tags_player() -> Array:
 
 func _enter_tree() -> void:
 	Global.map = self
+	Global.camera.limit_right = size.x
+	Global.camera.limit_bottom = size.y

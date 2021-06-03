@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Source/Scripts/Map/MapObjects/MapTrainer.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/NPCs/npc3.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Source/Data/Nature/bashful.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=4]
+[ext_resource path="res://Source/Scripts/Battle/PokemonParty.gd" type="Script" id=5]
+[ext_resource path="res://Source/Scripts/Battle/Trainer/EnemyTrainer.gd" type="Script" id=6]
+
+[node name="Trainer" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Character" parent="." instance=ExtResource( 2 )]
+
+[node name="Trainer" type="Node" parent="."]
+script = ExtResource( 6 )
+trainer_name = "Anna"
+
+[node name="PokemonParty" type="Node" parent="Trainer"]
+script = ExtResource( 5 )
+
+[node name="Pokemon1" type="Node" parent="Trainer/PokemonParty"]
+script = ExtResource( 4 )
+nickname = "Emolga"
+level = 10
+gender = 1
+current_hp = 1
+species_name = "emolga"
+nature = ExtResource( 3 )

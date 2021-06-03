@@ -1,31 +1,63 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Source/Scripts/Map/Map.gd" type="Script" id=1]
 [ext_resource path="res://Maps/map2/map2.tmx" type="PackedScene" id=2]
 [ext_resource path="res://Source/Scripts/Map/Spawnpoint.gd" type="Script" id=3]
-[ext_resource path="res://Maps/map2/TestTrainer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Maps/map2/Trainer1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Source/Scripts/Map/Encounter.gd" type="Script" id=5]
 [ext_resource path="res://Source/Scripts/Map/Encounters.gd" type="Script" id=6]
+[ext_resource path="res://Maps/map2/HealNPC.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/NPCs/npc1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Maps/map2/Trainer2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Maps/map2/Trainer3.tscn" type="PackedScene" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 300, 15 )
 
 [node name="Map2" type="Node2D"]
 script = ExtResource( 1 )
+size = Vector2( 1600, 1600 )
 
 [node name="Map" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0, 32 )
 
 [node name="Spawn" type="Node2D" parent="."]
-position = Vector2( 751.357, 1133.02 )
+position = Vector2( 751.821, 1502.37 )
 script = ExtResource( 3 )
 
-[node name="Trainer" parent="." instance=ExtResource( 4 )]
-position = Vector2( 889.774, 1027.45 )
+[node name="Trainer1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 850.915, 1059.61 )
 trigger_type = 1
 trigger_range = 40
-text = "Hallo"
+text = "Hi"
 facing = 1
-text_after_defeat = "cool
-"
-text_after_victory = "cool"
+text_after_defeat = "Mein Rutenschlag war wohl nicht hart genug."
+text_after_victory = "Hey mein Schwalbini, zieh aus den Bikini!"
+
+[node name="Trainer2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 492.922, 790.126 )
+trigger_type = 1
+trigger_range = 40
+text = "Hello"
+text_after_defeat = "I lost"
+text_after_victory = "I won"
+
+[node name="Trainer3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1070.68, 779.531 )
+trigger_type = 1
+trigger_range = 40
+text = "Hello"
+text_after_defeat = "I lost"
+
+[node name="HealNPC" type="Node2D" parent="."]
+position = Vector2( 821.897, 1459.74 )
+script = ExtResource( 7 )
+trigger_type = 1
+trigger_range = 40
+text = "I heal your Pokémon. And I don't want anything in return for it!"
+facing = 1
+
+[node name="Character" parent="HealNPC" instance=ExtResource( 8 )]
 
 [node name="Encounters" type="Node" parent="."]
 script = ExtResource( 6 )
@@ -99,3 +131,9 @@ pokemon_name = "gible"
 min_level = 2
 max_level = 10
 chance = 1
+
+[node name="blockade" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blockade"]
+position = Vector2( 754.22, 1619.44 )
+shape = SubResource( 1 )

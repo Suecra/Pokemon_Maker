@@ -17,12 +17,13 @@ func _execute() -> void:
 	trainer.current_pokemon = to_pokemon
 	battle.register_message(trainer._get_switch_in_message())
 	to_pokemon.switch_in()
-	register_switch_in()
 	var hp_bar = field.hp_bar
+	register_switch_in(hp_bar)
 	hp_bar.full_update(to_pokemon)
 	hp_bar._show()
 
-func register_switch_in() -> void:
+func register_switch_in(hp_bar: Node) -> void:
 	var animation = BattleAnimationOutOfPokeball.new()
 	animation.pokemon = to_pokemon
+	animation.hp_bar = hp_bar
 	turn.register_animation(animation)

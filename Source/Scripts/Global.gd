@@ -1,6 +1,7 @@
 extends Node
 
 var player: Node setget ,get_player
+var camera: Node setget ,get_camera
 var message_box: Node setget ,get_message_box
 var event: Node
 var map: Node
@@ -24,6 +25,9 @@ func get_player() -> Node:
 		add_child(player)
 		player.owner = self
 	return player
+
+func get_camera() -> Node:
+	return get_player().get_node("Body/Camera")
 
 func create_player() -> Node:
 	return load(Consts.PLAYER_SCENE).instance()

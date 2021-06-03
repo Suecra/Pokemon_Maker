@@ -7,7 +7,7 @@ func _get_priority() -> int:
 
 func _execute() -> void:
 	var enemy_pokemon = field.opponent_field.get_all_fighting_pokemon()[0]
-	var f = (trainer.current_pokemon.speed * 128 / enemy_pokemon.speed + 30 * tries) % 256
+	var f = (trainer.current_pokemon.speed * 128 / enemy_pokemon.speed + 30 * tries)
 	var r = randi() % 256
 	if f > r:
 		trainer.left_battle = true

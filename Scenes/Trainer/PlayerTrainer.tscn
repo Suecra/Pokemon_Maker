@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Source/Scripts/Battle/Trainer/PlayerTrainer.gd" type="Script" id=1]
 [ext_resource path="res://Source/Scripts/Battle/PokemonParty.gd" type="Script" id=2]
 [ext_resource path="res://Source/Scripts/Battle/Pokemon.gd" type="Script" id=3]
-[ext_resource path="res://Source/Data/Nature/bold.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Data/Nature/modest.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Data/Nature/timid.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Source/Data/Nature/impish.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Source/Data/Nature/adamant.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Source/Scripts/Battle/Move.gd" type="Script" id=8]
+[ext_resource path="res://Source/Scripts/Battle/Movepool.gd" type="Script" id=9]
 
 [node name="PlayerTrainer" type="Node"]
 script = ExtResource( 1 )
@@ -11,26 +16,135 @@ script = ExtResource( 1 )
 [node name="PokemonParty" type="Node" parent="."]
 script = ExtResource( 2 )
 
-[node name="Pokemon" type="Node" parent="PokemonParty"]
+[node name="Chimchar" type="Node" parent="PokemonParty"]
 script = ExtResource( 3 )
-nickname = "Aggron"
-level = 50
+nickname = "Chimchar"
+level = 12
 current_hp = 1
-species_name = "aggron"
-nature = ExtResource( 4 )
+species_name = "chimchar"
+nature = ExtResource( 7 )
+move_type = 1
+hp_iv = 31
+attack_iv = 31
+defense_iv = 31
+special_attack_iv = 31
+special_defense_iv = 31
+speed_iv = 31
 
-[node name="Pokemon2" type="Node" parent="PokemonParty"]
-script = ExtResource( 3 )
-nickname = "Altaria"
-level = 50
-current_hp = 1
-species_name = "altaria"
-nature = ExtResource( 4 )
+[node name="Movepool" type="Node" parent="PokemonParty/Chimchar"]
+script = ExtResource( 9 )
 
-[node name="Pokemon3" type="Node" parent="PokemonParty"]
+[node name="Move1" type="Node" parent="PokemonParty/Chimchar/Movepool"]
+script = ExtResource( 8 )
+move_name = "scratch"
+
+[node name="Move2" type="Node" parent="PokemonParty/Chimchar/Movepool"]
+script = ExtResource( 8 )
+move_name = "leer"
+
+[node name="Move3" type="Node" parent="PokemonParty/Chimchar/Movepool"]
+script = ExtResource( 8 )
+move_name = "ember"
+
+[node name="Move4" type="Node" parent="PokemonParty/Chimchar/Movepool"]
+script = ExtResource( 8 )
+move_name = "taunt"
+
+[node name="Turtwig" type="Node" parent="PokemonParty"]
 script = ExtResource( 3 )
-nickname = "Jolteon"
-level = 50
+nickname = "Turtwig"
+level = 12
 current_hp = 1
-species_name = "jolteon"
+species_name = "turtwig"
+nature = ExtResource( 6 )
+move_type = 1
+hp_iv = 31
+attack_iv = 31
+defense_iv = 31
+special_attack_iv = 31
+special_defense_iv = 31
+speed_iv = 31
+
+[node name="Movepool" type="Node" parent="PokemonParty/Turtwig"]
+script = ExtResource( 9 )
+
+[node name="Move1" type="Node" parent="PokemonParty/Turtwig/Movepool"]
+script = ExtResource( 8 )
+move_name = "tackle"
+
+[node name="Move2" type="Node" parent="PokemonParty/Turtwig/Movepool"]
+script = ExtResource( 8 )
+move_name = "withdraw"
+
+[node name="Move3" type="Node" parent="PokemonParty/Turtwig/Movepool"]
+script = ExtResource( 8 )
+move_name = "absorb"
+
+[node name="Piplup" type="Node" parent="PokemonParty"]
+script = ExtResource( 3 )
+nickname = "Piplup"
+level = 12
+current_hp = 1
+species_name = "piplup"
 nature = ExtResource( 4 )
+move_type = 1
+hp_iv = 31
+attack_iv = 31
+defense_iv = 31
+special_attack_iv = 31
+special_defense_iv = 31
+speed_iv = 31
+
+[node name="Movepool" type="Node" parent="PokemonParty/Piplup"]
+script = ExtResource( 9 )
+
+[node name="Move1" type="Node" parent="PokemonParty/Piplup/Movepool"]
+script = ExtResource( 8 )
+move_name = "pound"
+
+[node name="Move2" type="Node" parent="PokemonParty/Piplup/Movepool"]
+script = ExtResource( 8 )
+move_name = "growl"
+
+[node name="Move3" type="Node" parent="PokemonParty/Piplup/Movepool"]
+script = ExtResource( 8 )
+move_name = "bubble"
+
+[node name="Move4" type="Node" parent="PokemonParty/Piplup/Movepool"]
+script = ExtResource( 8 )
+move_name = "water-sport"
+
+[node name="Pikachu" type="Node" parent="PokemonParty"]
+script = ExtResource( 3 )
+nickname = "Pikachu"
+level = 12
+gender = 1
+current_hp = 1
+species_name = "pikachu"
+nature = ExtResource( 5 )
+move_type = 1
+hp_iv = 31
+attack_iv = 31
+defense_iv = 31
+special_attack_iv = 31
+special_defense_iv = 31
+speed_iv = 31
+
+[node name="Movepool" type="Node" parent="PokemonParty/Pikachu"]
+script = ExtResource( 9 )
+
+[node name="Move1" type="Node" parent="PokemonParty/Pikachu/Movepool"]
+script = ExtResource( 8 )
+move_name = "quick-attack"
+
+[node name="Move2" type="Node" parent="PokemonParty/Pikachu/Movepool"]
+script = ExtResource( 8 )
+move_name = "thunder-wave"
+
+[node name="Move3" type="Node" parent="PokemonParty/Pikachu/Movepool"]
+script = ExtResource( 8 )
+move_name = "double-team"
+
+[node name="Move4" type="Node" parent="PokemonParty/Pikachu/Movepool"]
+script = ExtResource( 8 )
+move_name = "thunderbolt"
