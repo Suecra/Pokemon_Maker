@@ -29,7 +29,6 @@ func _trigger() -> void:
 	else:
 		if approaching:
 			var distance = Global.player.get_position().distance_to(character.get_position()) - Consts.TILE_SIZE
-			print(distance)
 			var steps = int(distance) / Consts.TILE_SIZE
 			event.add_action(EventActionWalk.new(steps))
 			approaching = false

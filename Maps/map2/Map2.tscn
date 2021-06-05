@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Source/Scripts/Map/Map.gd" type="Script" id=1]
 [ext_resource path="res://Maps/map2/map2.tmx" type="PackedScene" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://Scenes/NPCs/npc1.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Maps/map2/Trainer2.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Maps/map2/Trainer3.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Maps/map2/Trainer4.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Maps/map2/Trainer5.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 300, 15 )
@@ -22,11 +24,11 @@ size = Vector2( 1600, 1600 )
 position = Vector2( 0, 32 )
 
 [node name="Spawn" type="Node2D" parent="."]
-position = Vector2( 751.821, 1502.37 )
+position = Vector2( 752.796, 1524.17 )
 script = ExtResource( 3 )
 
 [node name="Trainer1" parent="." instance=ExtResource( 4 )]
-position = Vector2( 850.915, 1059.61 )
+position = Vector2( 850.73, 1060.81 )
 trigger_type = 1
 trigger_range = 40
 text = "Hi"
@@ -47,6 +49,21 @@ position = Vector2( 1070.68, 779.531 )
 trigger_type = 1
 trigger_range = 40
 text = "Hello"
+text_after_defeat = "I lost"
+
+[node name="Trainer4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 304.586, 400.74 )
+trigger_type = 1
+trigger_range = 40
+text = "Hi"
+facing = 2
+text_after_defeat = "I lost"
+
+[node name="Trainer5" parent="." instance=ExtResource( 12 )]
+position = Vector2( 985.408, 252.198 )
+trigger_type = 1
+trigger_range = 40
+text = "Hi"
 text_after_defeat = "I lost"
 
 [node name="HealNPC" type="Node2D" parent="."]
@@ -133,7 +150,8 @@ max_level = 10
 chance = 1
 
 [node name="blockade" type="StaticBody2D" parent="."]
+position = Vector2( 758.615, 1623.33 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="blockade"]
-position = Vector2( 754.22, 1619.44 )
+position = Vector2( -0.702576, -4.7244 )
 shape = SubResource( 1 )
