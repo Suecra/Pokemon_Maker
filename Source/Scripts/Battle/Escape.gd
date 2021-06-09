@@ -11,7 +11,7 @@ func _execute() -> void:
 	var r = randi() % 256
 	if f > r:
 		trainer.left_battle = true
-		battle.register_message("You escaped!")
+		battle.register_message("Got away safely!")
 	else:
 		tries += 1
 		battle.register_message("Can't escape!")

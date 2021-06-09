@@ -26,4 +26,4 @@ func _get_switch_in_message() -> String:
 	return trainer_name + " sent out " + current_pokemon.nickname + "!"
 
 func _get_switch_out_message() -> String:
-	return current_pokemon.nickname + " was switched out by enemy Trainer " + trainer_name + "!"
+	return trainer_name + " withdrew " + current_pokemon.nickname + "!"

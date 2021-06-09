@@ -9,6 +9,7 @@ var character: Node
 var body: KinematicBody2D setget _set_body
 var direction: Vector2
 var remaining_steps = 0
+var debug_mode = false
 
 signal step_taken
 

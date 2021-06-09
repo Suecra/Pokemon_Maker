@@ -101,4 +101,4 @@ func get_tile_based_direction(direction: Vector2) -> Vector2:
 	return Vector2(x, y)
 
 func check_path() -> bool:
-	return ray_cast.get_collider() == null
+	return debug_mode || ray_cast.get_collider() == null

@@ -29,6 +29,7 @@ func tear_down():
 
 func create_basic_pokemon(name: String, level: int, moves: Array, nature: String) -> Fighter:
 	var pokemon = Fighter.new(name)
+	pokemon.move_type = Fighter.MoveType.Movepool
 	pokemon.nature = load(NATURE_PATH + nature + ".tscn")
 	pokemon.level = level
 	pokemon.calculate_stats()
@@ -121,8 +122,10 @@ func test_damage():
 	asserts.is_equal(breloom, trainer2.current_pokemon, "Trainer2's first pokemon is Breloom")
 	trainer1.custom_move("Gust", "")
 	trainer2.custom_move("Tackle", "")
+	print("Breloom HP: " + str(breloom.current_hp) + " of " + str(breloom.hp))
 	asserts.is_less_than(breloom.current_hp, 69, "Breloom's HP lower than 69")
-	asserts.is_less_than(pidgeotto.current_hp, 33, "Pidgeotto's's HP lower than 33")
+	print("Pidgeotto HP: " + str(pidgeotto.current_hp) + " of " + str(pidgeotto.hp))
+	asserts.is_less_than(pidgeotto.current_hp, 33, "Pidgeotto's HP lower than 33")
 
 func test_stat_change_damage():
 	var milotic = create_basic_pokemon("milotic", 38, ["surf", "fake-tears"], "hardy")
@@ -140,7 +143,9 @@ func test_stat_change_damage():
 	print(furret.current_attack)
 	print(milotic.current_special_attack)
 	print(furret.current_special_defense)
+	print("Breloom HP: " + str(milotic.current_hp) + " of " + str(milotic.hp))
 	asserts.is_less_than(milotic.current_hp, 33, "Milotic's HP lower than 33")
+	print("Furret HP: " + str(furret.current_hp) + " of " + str(furret.hp))
 	asserts.is_less_than(furret.current_hp, 59, "Furret's's HP lower than 59")
 	print(furret.current_hp)
 	print(milotic.current_hp)

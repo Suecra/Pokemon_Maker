@@ -38,5 +38,7 @@ func _physics_process(delta: float) -> void:
 		character.action_pressed()
 	if Input.is_key_pressed(KEY_CONTROL):
 		character.movement.body.get_node("Collision").disabled = true
+		character.movement.debug_mode = true
 	else:
 		character.movement.body.get_node("Collision").disabled = false
+		character.movement.debug_mode = false

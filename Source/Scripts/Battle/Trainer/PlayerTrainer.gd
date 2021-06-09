@@ -44,7 +44,7 @@ func run_selected() -> void:
 			action = escape
 		Battle.BattleType.Trainer:
 			var messagebox = battle.get_node("MessageBox")
-			yield(messagebox.display("You can't escape in a trainer-battle!"), "completed")
+			yield(messagebox.display("No! There's no running from a Trainer battle!"), "completed")
 			move_selection.show_selection()
 			return
 		Battle.BattleType.BattleTower:
@@ -70,10 +70,31 @@ func pokemon_selected() -> void:
 		emit_signal("choice_made", self, switch(choicebox.item_index))
 
 func _get_switch_in_message() -> String:
-	return "Go, " + current_pokemon.nickname + "!"
+	var msg = ""
+	var opponent = field.opponent_field.trainers[0].current_pokemon
+	if opponent != null && float(opponent.current_hp) / float(opponent.hp) < 0.33:
+		var i = randi() % 2
+		match i:
+			0: msg = "Your foe's weak! Get 'em, " + current_pokemon.nickname
+			1: msg = "Just a little more! Hang in there, " + current_pokemon.nickname
+	else:
+		var i = randi() % 3
+		match i:
+			0: msg = "Go, " + current_pokemon.nickname + "!"
+			1: msg = "You're in charge, " + current_pokemon.nickname + "!"
+			2: msg = "Go for it, " + current_pokemon.nickname + "!"
+	return msg
 
 func _get_switch_out_message() -> String:
-	return "Enough, " + current_pokemon.nickname + "! Come back!"
+	var msg = ""
+	var i = randi() % 5
+	match i:
+		0: msg = current_pokemon.nickname + ", switch out! Come back!"
+		1: msg = current_pokemon.nickname + ", come back!"
+		2: msg = current_pokemon.nickname + ", OK! Come back!"
+		3: msg = current_pokemon.nickname + ", enough! Get back!"
+		4: msg = current_pokemon.nickname + ", good! Come back!"
+	return msg
 
 func _init_battle() -> void:
 	._init_battle()

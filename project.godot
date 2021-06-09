@@ -210,7 +210,7 @@ Test_Directory="res://tests"
 Results_Directory="res://tests/results/WAT"
 Minimize_Window_When_Running_Tests=false
 TestStrategy={
-"repeat": 1,
+"repeat": 0,
 "strategy": "RunAll"
 }
 Tags=PoolStringArray(  )
