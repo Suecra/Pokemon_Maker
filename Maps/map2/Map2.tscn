@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Source/Scripts/Map/Map.gd" type="Script" id=1]
 [ext_resource path="res://Maps/map2/map2.tmx" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Maps/map2/Trainer3.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Maps/map2/Trainer4.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Maps/map2/Trainer5.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Map/Waterfall.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 300, 15 )
@@ -24,7 +25,7 @@ size = Vector2( 1600, 1600 )
 position = Vector2( 0, 32 )
 
 [node name="Spawn" type="Node2D" parent="."]
-position = Vector2( 752.796, 1524.17 )
+position = Vector2( 753.818, 1513.99 )
 script = ExtResource( 3 )
 
 [node name="Trainer1" parent="." instance=ExtResource( 4 )]
@@ -65,6 +66,12 @@ trigger_type = 1
 trigger_range = 40
 text = "Hi"
 text_after_defeat = "I lost"
+
+[node name="Waterfall1" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1249, 495 )
+
+[node name="Waterfall2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1345, 943 )
 
 [node name="HealNPC" type="Node2D" parent="."]
 position = Vector2( 821.897, 1459.74 )

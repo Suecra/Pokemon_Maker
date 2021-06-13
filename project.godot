@@ -236,7 +236,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "WAT", "vnen.tiled_importer" )
+enabled=PoolStringArray( "res://addons/WAT/plugin.cfg", "res://addons/pokemon_sprite_importer/plugin.cfg", "res://addons/vnen.tiled_importer/plugin.cfg" )
 
 [importer_defaults]
 
@@ -386,8 +386,9 @@ textbox_skip={
 
 [rendering]
 
-quality/2d/use_pixel_snap=true
+2d/snapping/use_gpu_pixel_snap=true
 environment/default_environment="res://default_env.tres"
+quality/2d/use_pixel_snap=true
 
 [tiled_importer]
 
