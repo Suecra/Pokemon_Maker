@@ -94,10 +94,10 @@ func test_get_last_moves():
 	for m in moves:
 		movepool.add_move(m.move_name)
 	
-	asserts.is_equal("Night-slash", movepool.get_move(3).data.get_move_name(), "Scizor learned Night Slash")
-	asserts.is_equal("Double-hit", movepool.get_move(2).data.get_move_name(), "Scizor learned Double Hit")
-	asserts.is_equal("Iron-head", movepool.get_move(1).data.get_move_name(), "Scizor learned Iron Head")
-	asserts.is_equal("Swords-dance", movepool.get_move(0).data.get_move_name(), "Scizor learned Swords Dance")
+	asserts.is_equal("Iron-defense", movepool.get_move(3).data.get_move_name(), "Scizor learned Iron Defense")
+	asserts.is_equal("Night-slash", movepool.get_move(2).data.get_move_name(), "Scizor learned Night Slash")
+	asserts.is_equal("Double-hit", movepool.get_move(1).data.get_move_name(), "Scizor learned Double Hit")
+	asserts.is_equal("Iron-head", movepool.get_move(0).data.get_move_name(), "Scizor learned Iron Head")
 	
 	var aggron = create_basic_pokemon("aggron", 40, [], "hardy")
 	moves = aggron.get_last_learnable_moves()

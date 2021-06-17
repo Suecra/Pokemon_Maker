@@ -159,7 +159,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/WAT/namespace.gd"
 }, {
-"base": "",
+"base": "Node",
 "class": "WATTest",
 "language": "GDScript",
 "path": "res://addons/WAT/core/test/test.gd"
@@ -215,6 +215,12 @@ TestStrategy={
 }
 Tags=PoolStringArray(  )
 Display=8
+Test_Metadata_Directory="res://tests"
+Window_Size=Vector2( 1280, 720 )
+Port=6008
+Run_All_Tests=Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"unicode":0,"echo":false,"script":null)
+
+Auto_Refresh_Tests=false
 
 [application]
 

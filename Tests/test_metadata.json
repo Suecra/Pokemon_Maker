@@ -1,0 +1,23 @@
+{
+	"res://tests/BattleTests.gd": {
+		"path": "res://tests/BattleTests.gd",
+		"tags": [
+
+		],
+		"passing": false
+	},
+	"res://tests/BattleTests2.gd": {
+		"path": "res://tests/BattleTests2.gd",
+		"tags": [
+
+		],
+		"passing": false
+	},
+	"res://tests/ObserverTest.gd": {
+		"path": "res://tests/ObserverTest.gd",
+		"tags": [
+
+		],
+		"passing": true
+	}
+}
