@@ -1,0 +1,163 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Source/Scripts/Map/Map.gd" type="Script" id=1]
+[ext_resource path="res://Maps/map1/map1.tmx" type="PackedScene" id=2]
+[ext_resource path="res://Source/Scripts/Map/Spawnpoint.gd" type="Script" id=3]
+[ext_resource path="res://Maps/map1/Trainer1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Source/Scripts/Map/Encounter.gd" type="Script" id=5]
+[ext_resource path="res://Source/Scripts/Map/Encounters.gd" type="Script" id=6]
+[ext_resource path="res://Maps/map1/HealNPC.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/NPCs/npc1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Maps/map1/Trainer2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Maps/map1/Trainer3.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Maps/map1/Trainer4.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Maps/map1/Trainer5.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Map/Waterfall.tscn" type="PackedScene" id=13]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 300, 15 )
+
+[node name="Map2" type="Node2D"]
+script = ExtResource( 1 )
+size = Vector2( 1600, 1600 )
+
+[node name="Map" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 32 )
+
+[node name="Spawn" type="Node2D" parent="."]
+position = Vector2( 753.818, 1513.99 )
+script = ExtResource( 3 )
+
+[node name="Trainer1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 850.73, 1060.81 )
+trigger_type = 1
+trigger_range = 40
+text = "Let's battle!"
+facing = 1
+text_after_defeat = "My Pokémon weren't strong enough!"
+
+[node name="Trainer2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 492.922, 790.126 )
+trigger_type = 1
+trigger_range = 40
+text = "Hey, Trainer! Time to fight!"
+text_after_defeat = "Your Pokémon rock!"
+text_after_victory = "I won"
+
+[node name="Trainer3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1070.68, 779.531 )
+trigger_type = 1
+trigger_range = 40
+text = "Let me show you my favorite Pokémon!"
+text_after_defeat = "What's your favorite Pokémon?"
+
+[node name="Trainer4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 304.586, 400.74 )
+trigger_type = 1
+trigger_range = 40
+text = "Hi there! Have you already found a Shroomish?"
+facing = 2
+text_after_defeat = "With a Shroomish, I surely would have won!"
+
+[node name="Trainer5" parent="." instance=ExtResource( 12 )]
+position = Vector2( 985.408, 252.198 )
+trigger_type = 1
+trigger_range = 40
+text = "Can you defeat my full team of Pokémon?"
+text_after_defeat = "Incredible!"
+
+[node name="Waterfall1" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1249, 495 )
+
+[node name="Waterfall2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1345, 943 )
+
+[node name="HealNPC" type="Node2D" parent="."]
+position = Vector2( 821.897, 1459.74 )
+script = ExtResource( 7 )
+trigger_type = 1
+trigger_range = 40
+text = "I heal your Pokémon. And I don't want anything in return for it!"
+facing = 1
+
+[node name="Character" parent="HealNPC" instance=ExtResource( 8 )]
+
+[node name="Encounters" type="Node" parent="."]
+script = ExtResource( 6 )
+
+[node name="bidoof" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "bidoof"
+min_level = 2
+max_level = 10
+chance = 30
+
+[node name="starly" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "starly"
+min_level = 2
+max_level = 10
+chance = 30
+
+[node name="pachirisu" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "bidoof"
+min_level = 2
+max_level = 10
+chance = 10
+
+[node name="shroomish" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "shroomish"
+min_level = 2
+max_level = 10
+chance = 10
+
+[node name="jigglypuff" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "jigglypuff"
+min_level = 2
+max_level = 10
+chance = 5
+
+[node name="slowpoke" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "slowpoke"
+min_level = 2
+max_level = 10
+chance = 5
+
+[node name="ralts" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "ralts"
+min_level = 2
+max_level = 10
+chance = 5
+
+[node name="eevee" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "eevee"
+min_level = 2
+max_level = 10
+chance = 2
+
+[node name="riolu" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "riolu"
+min_level = 2
+max_level = 10
+chance = 2
+
+[node name="gible" type="Node" parent="Encounters"]
+script = ExtResource( 5 )
+pokemon_name = "gible"
+min_level = 2
+max_level = 10
+chance = 1
+
+[node name="blockade" type="StaticBody2D" parent="."]
+position = Vector2( 758.615, 1623.33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blockade"]
+position = Vector2( -0.702576, -4.7244 )
+shape = SubResource( 1 )

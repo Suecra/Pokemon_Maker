@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Source/Scripts/Map/Character.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/New/Characters/npc8.png" type="Texture" id=2]
-[ext_resource path="res://Graphics/New/Characters/npc8_run.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/Characters/npc8.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/Characters/npc8_run.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Sprites/Characters/CharacterSprite4Dim.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]

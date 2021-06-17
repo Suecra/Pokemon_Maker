@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Source/Scripts/Common/Textboxes/TextboxAutoStyleLabel.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/New/UI/textbox.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/UI/textbox.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/fff-forward.regular.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]

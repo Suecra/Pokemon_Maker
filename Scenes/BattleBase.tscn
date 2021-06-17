@@ -4,10 +4,10 @@
 [ext_resource path="res://Source/Scripts/Battle/Battlefield.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Textboxes/MessageBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Battle/MoveSelection/MoveSelectionSimple.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Graphics/Battle-Backgrounds/battleback1.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Textboxes/Choicebox.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Graphics/New/Battle-Backgrounds/battleback10.png" type="Texture" id=7]
-[ext_resource path="res://Scenes/Battle/Bases/BattleBaseHGSSOpponent.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Battle/Bases/BattleBaseHGSSPlayer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Battle/Bases/BattleBaseOpponent.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Battle/Bases/BattleBasePlayer.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Battle/HPBars/Simple/SimpleHPBarOpponent.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Battle/HPBars/Simple/SimpleHPBarPlayer.tscn" type="PackedScene" id=12]
 
@@ -19,7 +19,7 @@ opponent_hp_bar = ExtResource( 11 )
 [node name="battleback10" type="Sprite" parent="."]
 position = Vector2( 128.394, 74.742 )
 scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 
 [node name="Battlefield" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -37,11 +37,9 @@ cancel = true
 
 [node name="BaseOpponent" parent="." instance=ExtResource( 8 )]
 position = Vector2( 204.608, 53.3886 )
-scale = Vector2( 0.4, 0.4 )
 
 [node name="BasePlayer" parent="." instance=ExtResource( 9 )]
 position = Vector2( 53.5113, 104.189 )
-scale = Vector2( 0.5, 0.5 )
 
 [node name="PlayerHPBars" type="Node2D" parent="."]
 position = Vector2( 54, 138 )

@@ -83,6 +83,7 @@ func _physics_process(delta):
 				if total_movement == Consts.TILE_SIZE:
 					total_movement = 0
 					step_taken()
+					character.emit_signal("moved")
 					blocked = not check_path()
 					if stopping:
 						character.stop()

@@ -8,7 +8,7 @@ const NATURE_PATH = "res://Source/Data/Nature/"
 const MOVE_PATH = "res://Source/Data/Move/"
 
 var battle_scene = preload("res://Scenes/BattleBase.tscn")
-var trainer_scene = preload("res://Scenes/Trainer/TestTrainer2.tscn")
+var trainer_scene = preload("res://Scenes/Trainer/TestTrainer.tscn")
 
 var battle: Battle
 var trainer1

@@ -10,7 +10,7 @@ const TILE_SIZE = 32
 
 const PLAYER_SCENE = "res://Scenes/Player.tscn"
 const MESSAGEBOX_SCENE = "res://Scenes/Textboxes/MessageBox.tscn"
-const SPRITE_COLLECTION_PATH = "res://Scenes/Sprite_Collections/new/"
+const SPRITE_COLLECTION_PATH = "res://Scenes/Sprite_Collections/"
 
 const DATA_PATH = "res://Source/Data/"
 const POKEMON_PATH = DATA_PATH + "Pokemon/"
@@ -21,5 +21,8 @@ const MAP_OBJECT_SPAWN_RADIUS = TILE_SIZE * 15
 const CHARACTER_WALK_SPEED = 128
 const CHARACTER_RUN_SPEED = CHARACTER_WALK_SPEED * 2
 const TRAINER_VISION_RANGE = TILE_SIZE * 6
+
+const ALLY_POKEMON_SCALE = 0.5
+const OPPONENT_POKEMON_SCALE = 0.4
 
 const SHINY_CHANCE = 1.0 / 4096.0

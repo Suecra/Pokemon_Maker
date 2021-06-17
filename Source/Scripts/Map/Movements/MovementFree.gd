@@ -31,3 +31,4 @@ func _physics_process(delta: float) -> void:
 		current_step_size -= Consts.TILE_SIZE
 		step_taken()
 	velocity = body.move_and_slide(velocity)
+	character.emit_signal("moved")

@@ -17,6 +17,7 @@ onready var body := $Body
 onready var sprite := $Body/Sprite
 
 signal step_taken
+signal moved
 signal stopped
 signal object_spotted
 
@@ -138,4 +139,4 @@ func _ready() -> void:
 	ray_cast.owner = self
 	ray_cast.enabled = true
 	ray_cast.cast_to = direction * vision_range
-	Global.player.connect("step_taken", self, "spot_objects")
+	Global.player.connect("moved", self, "spot_objects")

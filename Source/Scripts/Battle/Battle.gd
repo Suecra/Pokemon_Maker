@@ -144,4 +144,8 @@ func _ready() -> void:
 	ally_field.hp_bar = $PlayerHPBars/HPBar
 	opponent_field.hp_bar = $OpponentHPBars/HPBar
 	battlefield.battle = self
+	
+	$BasePlayer.scale = Vector2(Consts.ALLY_POKEMON_SCALE, Consts.ALLY_POKEMON_SCALE)
+	$BaseOpponent.scale = Vector2(Consts.OPPONENT_POKEMON_SCALE, Consts.OPPONENT_POKEMON_SCALE)
+	
 	Utils.add_node_if_not_exists(self, self, "Turns")

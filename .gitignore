@@ -1,12 +1,6 @@
 *.apk
 *.import
-*.png
-Graphics/
-Scenes/Test/
-Scenes/Sprite_Collections/new/
-Import/other/
-addons
 .import/
-Fonts/
-Audio/
+Graphics/Pokemon Essentials
+Scenes/Sprite_Collections/
 export_presets.cfg

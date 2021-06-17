@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Battle/HPBars/Simple/SimpleHPBar.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/New/UI/status_bar_player_overlay.png" type="Texture" id=2]
-[ext_resource path="res://Graphics/New/UI/status_bar_player.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/UI/status_bar_player_overlay.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/UI/status_bar_player.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/fff-forward.regular.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]

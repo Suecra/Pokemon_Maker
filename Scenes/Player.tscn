@@ -3,8 +3,8 @@
 [ext_resource path="res://Source/Scripts/Map/Characters/Player.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Sprites/Characters/CharacterSprite4Dim.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Trainer/PlayerTrainer.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Graphics/New/Characters/npc2.png" type="Texture" id=4]
-[ext_resource path="res://Graphics/New/Characters/npc2_run.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/Characters/npc2.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/Characters/npc2_run.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14, 14 )
