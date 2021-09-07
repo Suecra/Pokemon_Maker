@@ -40,7 +40,12 @@ func get_sprite_collection() -> Node:
 		var sprites_name = String(national_dex_nr)
 		while sprites_name.length() < 4:
 			sprites_name = "0" + sprites_name
-		var sprites = load(Consts.SPRITE_COLLECTION_PATH + sprites_name + ".tscn").instance()
+		var res = load(Consts.SPRITE_COLLECTION_PATH + sprites_name + ".tscn")
+		var sprites
+		if res != null:
+			sprites = res.instance()
+		else:
+			sprites = SpriteCollection.new()
 		sprites.name = "Sprites"
 		add_child(sprites)
 		sprites.owner = self

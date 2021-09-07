@@ -1,9 +1,11 @@
 extends Node
 
+class_name SpriteCollection
+
 enum Sprites {Front, Female_Front, Shiny_Front, Shiny_Female_Front, Back, Female_Back, Shiny_Back, Shiny_Female_Back}
 
 func _get_sprite(id: int) -> Node:
-	return null
+	return PokemonSprite.new()
 
 func get_pokemon_sprite(field: Node, pokemon: Node) -> Node:
 	if field == pokemon.battle.ally_field:
