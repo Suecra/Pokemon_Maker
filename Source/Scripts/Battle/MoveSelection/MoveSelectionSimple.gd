@@ -119,12 +119,12 @@ func highlight_button() -> void:
 	buttons[index].modulate = Color.lightblue
 
 func _physics_process(delta) -> void:
-	if Input.is_action_just_pressed("ui_cancel"):
+	if Input.is_action_just_pressed("run|back"):
 		selected(SEL_CANCEL)
-	if Input.is_action_just_pressed("ui_up"):
+	if Input.is_action_just_pressed("move_up"):
 		index = max(0, index - 1)
 		highlight_button()
-	if Input.is_action_just_pressed("ui_down"):
+	if Input.is_action_just_pressed("move_down"):
 		index = min(3, index + 1)
 		highlight_button()
 	if Input.is_action_just_pressed("select|action"):

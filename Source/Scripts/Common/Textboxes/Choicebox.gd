@@ -76,13 +76,13 @@ func _process(delta: float) -> void:
 	if display_rect.has_point(mouse_position):
 		mouse_index = int((mouse_position.y - display_rect.position.y) / cursor_node.step)
 		set_item_index(mouse_index)
-	if Input.is_action_just_pressed("ui_down"):
+	if Input.is_action_just_pressed("move_down"):
 		set_item_index(item_index + 1)
-	if Input.is_action_just_pressed("ui_up"):
+	if Input.is_action_just_pressed("move_up"):
 		set_item_index(item_index - 1)
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("select|action"):
 		close()
-	if cancel && Input.is_action_just_pressed("ui_cancel"):
+	if cancel && Input.is_action_just_pressed("run|back"):
 		item_index = -1
 		close()
 

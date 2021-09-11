@@ -18,7 +18,6 @@ func _do_half_turn() -> void:
 	move_selection.connect("switch_selected", self, "switch_selected")
 	move_selection.connect("bag_selected", self, "bag_selected")
 	move_selection.connect("run_selected", self, "run_selected")
-	#battle.get_node("MessageBox").display_async("What will 'Player' do?")
 	move_selection.movepool = current_pokemon.movepool
 	move_selection.show_selection()
 
@@ -28,7 +27,7 @@ func move_selected(index) -> void:
 
 func switch_selected() -> void:
 	choicebox.connect("selected", self, "pokemon_selected")
-	Input.action_release("ui_accept")
+	Input.action_release("select|action")
 	choicebox.display_async(pokemon_party.get_switch_targets(current_pokemon))
 	choicebox.item_index = 1
 

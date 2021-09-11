@@ -67,6 +67,10 @@ func _on_ButtonImport_button_down():
 		do_log("Sprite-Collection directory not specified!")
 		return
 	
+	var dir = Directory.new()
+	if not dir.dir_exists($EditCollections.text):
+		dir.make_dir($EditCollections.text)
+	
 	var files = []
 	var patterns = []
 	var pattern

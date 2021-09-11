@@ -25,7 +25,7 @@ func create_pages(text: String, safe_margin = 0) -> void:
 	
 	var lines = text.split("\n", false)
 	
-	#ignore bbcode first
+	#ignore bbcode for now
 	
 	var i = 0
 	var text_width
