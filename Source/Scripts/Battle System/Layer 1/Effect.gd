@@ -3,8 +3,10 @@ extends Reference
 const BattleEntity = preload("res://Source/Scripts/Battle System/Layer 0/BattleEntity.gd")
 
 var id: int
+var base_id: int
 var owner: BattleEntity
 var effect_manager: Reference
+var battle: Reference
 
 func _register() -> void:
 	pass

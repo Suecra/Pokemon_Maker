@@ -31,21 +31,16 @@ func update_defeated() -> void:
 func _get_entity_relation(battle_entity: Reference) -> int:
 	var type = battle_entity._get_type()
 	match type:
-		Type.FIGHTER:
+		Type.FIGHTER, Type.TEAM:
 			if battle_entity.field == self:
 				return Role.ALLY
 			else:
 				return Role.OPPONENT
-		Type.TEAM:
-			if battle_entity.field == self:
-				return Role.ALLY_TEAM
-			else:
-				return Role.OPPONENT_TEAM
 		Type.FIELD:
 			if battle_entity == self:
-				return Role.ALLY_FIELD
+				return Role.SELF
 			else:
-				return Role.OPPONENT_FIELD
+				return Role.OPPONENT
 	return Role.BATTLEFIELD
 
 func _get_type() -> int:

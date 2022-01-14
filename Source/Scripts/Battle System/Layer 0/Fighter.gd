@@ -35,20 +35,22 @@ func _get_entity_relation(battle_entity: Reference) -> int:
 	var type = battle_entity._get_type()
 	match type:
 		Type.FIGHTER:
-			if battle_entity.field == field:
+			if battle_entity == self:
+				return Role.SELF
+			elif battle_entity.field == field:
 				return Role.ALLY
 			else:
 				return Role.OPPONENT
 		Type.TEAM:
-			if battle_entity.team == team:
-				return Role.ALLY_TEAM
+			if battle_entity == team:
+				return Role.ALLY
 			else:
-				return Role.OPPONENT_TEAM
+				return Role.OPPONENT
 		Type.FIELD:
 			if battle_entity == field:
-				return Role.ALLY_FIELD
+				return Role.ALLY
 			else:
-				return Role.OPPONENT_FIELD
+				return Role.OPPONENT
 	return Role.BATTLEFIELD
 
 func _get_type() -> int:

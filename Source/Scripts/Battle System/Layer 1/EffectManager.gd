@@ -18,10 +18,21 @@ func send(message: String, params: Array, sender: BattleEntity):
 	for registered_effect in registered_effects:
 		var effect = registered_effect.effect
 		var sender_type = effect.owner._get_entity_relation(sender)
-		if registered_effect.sender_type == sender_type:
-			if effect.has_method(message):
-				result = effect.callv(message, params)
+		match sender_type:
+			L1Consts.SenderType.SELF_OR_ALLY:
+				if registered_effect.sender_type == L1Consts.SenderType.SELF || registered_effect.sender_type == L1Consts.SenderType.ALLY:
+					result = call_method(effect, message, params)
+			L1Consts.SenderType.BATTLEFIELD:
+				result = call_method(effect, message, params)
+			var other:
+				if registered_effect.sender_type == other:
+					result = call_method(effect, message, params)
 	return result
+
+func call_method(effect: Effect, message: String, params: Array):
+	if effect.has_method(message):
+		return effect.callv(message, params)
+	return null
 
 class RegisteredEffectSorter:
 	static func sort(a, b) -> bool:
