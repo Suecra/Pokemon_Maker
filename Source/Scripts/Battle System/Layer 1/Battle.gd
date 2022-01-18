@@ -9,20 +9,36 @@ const BattleEntity = preload("res://Source/Scripts/Battle System/Layer 0/BattleE
 var battle_l0: BattleL0
 var effect_manager: EffectManager
 var effect_factory: EffectFactory
-var effects: Array
+var effects: Dictionary
 
 func add_effect(owner: BattleEntity, name: String) -> void:
+	if not effects.has(owner):
+		effects[owner] = []
 	var effect = effect_factory.create_effect(name, owner)
 	effect.effect_manager = effect_manager
 	effect.battle = self
 	effect._register()
-	effects.append(effect)
+	effects[owner].append(effect)
 
-func get_effect(owner: BattleEntity, base_type: String) -> Effect:
-	return null
+func get_effects(owner: BattleEntity, name: String) -> Array:
+	var result = []
+	if effects.has(owner):
+		var effects = effects[owner]
+		for effect in effects:
+			if effect.is_type(name):
+				result.append(effect)
+	return result
 
-func remove_effect(owner: BattleEntity, name: String) -> void:
-	pass
+func remove_effects(owner: BattleEntity, name: String) -> void:
+	if effects.has(owner):
+		var effects = effects[owner]
+		var i = 0
+		while i < effects.size():
+			var effect = effects[i]
+			if effect.is_type(name):
+				effects.erase(effect)
+			else:
+				i += 1
 
 func nudge_effects() -> void:
 	effect_manager.send("nudge", [], battle_l0.battlefield)
