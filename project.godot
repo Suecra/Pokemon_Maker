@@ -260,7 +260,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray(  )
+enabled=PoolStringArray( "WAT" )
 
 [importer_defaults]
 

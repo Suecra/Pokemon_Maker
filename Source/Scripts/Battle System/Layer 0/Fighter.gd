@@ -26,10 +26,10 @@ func check_position(position: int) -> void:
 	assert(not field.is_position_blocked(position), "Position " + str(position) + " is blocked!")
 
 func damage(hp: int) -> void:
-	self.hp = max(0, self.hp - hp)
+	self.hp = max(0, self.hp - max(0, hp))
 
 func heal(hp: int) -> void:
-	self.hp += hp
+	self.hp += max(0, hp)
 
 func _get_entity_relation(battle_entity: Reference) -> int:
 	var type = battle_entity._get_type()

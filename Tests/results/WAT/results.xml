@@ -1,13 +1,30 @@
 <?xml version="1.0" ?>
-<testsuites failures="1" name="TestXML" tests="1" time="0">
+<testsuites failures="1" name="TestXML" tests="3" time="0">
+	<testsuite name="Fighter Tests" failures="0"  tests="8" time="0">
+		<testcase name=" damage" time="0"></testcase>
+		<testcase name=" set active" time="0"></testcase>
+		<testcase name=" set position" time="0"></testcase>
+		<testcase name=" set fainted" time="0"></testcase>
+		<testcase name=" check position" time="0"></testcase>
+		<testcase name=" heal" time="0"></testcase>
+		<testcase name=" get entity relation" time="0"></testcase>
+		<testcase name=" get type" time="0"></testcase>
+	</testsuite>
+
 	<testsuite name="Battle Tests" failures="4"  tests="5" time="0">
-		<testcase name=" add pokemon" time="0"></testcase>
+		<testcase name=" stat change damage" time="0"></testcase>
+		<testcase name=" get last moves" time="0"></testcase>
+		<testcase name=" damage" time="0"></testcase>
 		<testcase name=" modified pokemon" time="0">
 			<failure message="EXPECTED: |int| 155 is equal to |int| 141 but GOT |int| 155 is not equal to |int| 141"></failure>
 			<failure message="EXPECTED: |int| 51 is equal to |int| 57 but GOT |int| 51 is not equal to |int| 57"></failure></testcase>
-		<testcase name=" damage" time="0"></testcase>
-		<testcase name=" stat change damage" time="0"></testcase>
-		<testcase name=" get last moves" time="0"></testcase>
+		<testcase name=" add pokemon" time="0"></testcase>
+	</testsuite>
+
+	<testsuite name="Observer Test" failures="0"  tests="3" time="0">
+		<testcase name=" notification" time="0"></testcase>
+		<testcase name=" normal call" time="0"></testcase>
+		<testcase name=" priority" time="0"></testcase>
 	</testsuite>
 
 </testsuites>

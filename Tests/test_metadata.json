@@ -12,5 +12,12 @@
 
 		],
 		"passing": true
+	},
+	"res://tests/BattleSystemTests/Layer 0/FighterTests.gd": {
+		"path": "res://tests/BattleSystemTests/Layer 0/FighterTests.gd",
+		"tags": [
+
+		],
+		"passing": true
 	}
 }
