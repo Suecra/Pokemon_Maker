@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/wat_test_generator/TestGenerator.gd" type="Script" id=1]
+
+[node name="TestGenerator" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 332.025, 174.196 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelPath" type="Label" parent="."]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 127.636
+margin_bottom = 26.0
+text = "Files or Directory"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EditPath" type="LineEdit" parent="."]
+anchor_right = 1.0
+margin_left = 4.0
+margin_top = 29.0
+margin_right = -31.0
+margin_bottom = 51.0
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonPath" type="Button" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -27.0
+margin_top = 29.0
+margin_right = -3.0
+margin_bottom = 51.0
+text = "..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DirectoryDialog" type="FileDialog" parent="."]
+margin_left = 72.8057
+margin_top = 85.3568
+margin_right = 455.806
+margin_bottom = 385.357
+window_title = "Datei oder Verzeichnis öffnen"
+resizable = true
+mode = 3
+filters = PoolStringArray( "*.gd" )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonGenerate" type="Button" parent="."]
+anchor_right = 1.0
+margin_left = 6.0
+margin_top = 66.0
+margin_right = -4.0
+margin_bottom = 98.0
+text = "Generate"
+[connection signal="button_down" from="ButtonPath" to="." method="_on_ButtonPath_button_down"]
+[connection signal="dir_selected" from="DirectoryDialog" to="." method="_on_DirectoryDialog_dir_selected"]
+[connection signal="file_selected" from="DirectoryDialog" to="." method="_on_DirectoryDialog_file_selected"]
+[connection signal="files_selected" from="DirectoryDialog" to="." method="_on_DirectoryDialog_files_selected"]
+[connection signal="button_down" from="ButtonGenerate" to="." method="_on_ButtonGenerate_button_down"]

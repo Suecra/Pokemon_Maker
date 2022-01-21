@@ -19,5 +19,12 @@
 
 		],
 		"passing": true
+	},
+	"res://tests/BattleSystemTests/Layer 0/TeamTest.gd": {
+		"path": "res://tests/BattleSystemTests/Layer 0/TeamTest.gd",
+		"tags": [
+
+		],
+		"passing": false
 	}
 }
