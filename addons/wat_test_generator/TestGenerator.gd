@@ -35,22 +35,42 @@ func to_sneak_case(s: String) -> String:
 	return result
 
 func generate_test(file: String) -> void:
-	var obj = load(file).new()
-	var name_of_class := file.substr(file.find_last("/") + 1)
-	name_of_class.erase(name_of_class.find_last("."), 3)
+	var test_file = File.new()
+	var test_file_name = file.replace("res://Source", "res://Tests")
+	var name_of_class := file.substr(file.find_last("/") + 1).trim_suffix(".gd")
+	var dir_path = test_file_name.trim_suffix(name_of_class + ".gd")
+	test_file_name = dir_path + name_of_class + "Tests.gd"
+	if test_file.file_exists(test_file_name):
+		return
+	var source_file = File.new()
+	if source_file.open(file, File.READ) != OK:
+		return
+	var script_content = source_file.get_as_text()
+	source_file.close()
+	var script = GDScript.new()
+	script.source_code = script_content
+	script.reload()
 	var instance_name = to_sneak_case(name_of_class)
 	var test_script = "extends WATTest\n\n"
 	test_script += "const " + name_of_class + " = preload(\"" + file + "\")\n"
 	test_script += "var " + instance_name + ": " + name_of_class + "\n\n"
-	var methods = obj.get_script().get_script_method_list()
+	var methods = script.get_script_method_list()
+	var used_methods = {}
 	for method in methods:
 		var method_name = method["name"]
-		if not IGNORED_METHODS.has(method_name):
+		if not IGNORED_METHODS.has(method_name) && not used_methods.has(method_name):
 			if not method_name.begins_with("_"):
 				method_name = "_" + method_name
 			test_script += "func test" + method_name + "() -> void:\n\tpass\n\n"
+			used_methods[method_name] = true
 	test_script += "func pre() -> void:\n\t" + instance_name + " = " + name_of_class + ".new()\n"
-	print(test_script)
+	var directory = Directory.new()
+	if not directory.dir_exists(dir_path):
+		directory.make_dir_recursive(dir_path)
+	var result = test_file.open(test_file_name, File.WRITE)
+	if result == OK:
+		test_file.store_string(test_script)
+		test_file.close()
 
 func _on_ButtonGenerate_button_down():
 	var dir = Directory.new()
