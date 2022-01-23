@@ -20,7 +20,7 @@ func is_position_blocked(position: int) -> bool:
 	return false
 
 func is_position_out_of_bounds(position: int) -> bool:
-	return position >= size
+	return position < 0 || position >= size
 
 func update_defeated() -> void:
 	for team in teams:

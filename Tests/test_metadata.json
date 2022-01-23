@@ -18,62 +18,69 @@
 		"tags": [
 
 		],
-		"passing": false
+		"passing": true
 	},
 	"res://tests/Scripts/Battle System/Layer 0/BattleActionHealTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 0/BattleActionHealTests.gd",
 		"tags": [
 
 		],
-		"passing": false
+		"passing": true
 	},
 	"res://tests/Scripts/Battle System/Layer 0/BattleActionSetActiveTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 0/BattleActionSetActiveTests.gd",
 		"tags": [
 
 		],
-		"passing": false
+		"passing": true
 	},
 	"res://tests/Scripts/Battle System/Layer 0/BattleActionSetFaintedTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 0/BattleActionSetFaintedTests.gd",
 		"tags": [
 
 		],
-		"passing": false
+		"passing": true
 	},
 	"res://tests/Scripts/Battle System/Layer 0/BattleActionSetPositionTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 0/BattleActionSetPositionTests.gd",
 		"tags": [
 
 		],
-		"passing": false
+		"passing": true
 	},
 	"res://tests/Scripts/Battle System/Layer 0/BattlefieldTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 0/BattlefieldTests.gd",
 		"tags": [
 
 		],
-		"passing": false
+		"passing": true
 	},
 	"res://tests/Scripts/Battle System/Layer 0/BattleTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 0/BattleTests.gd",
 		"tags": [
 
 		],
-		"passing": false
+		"passing": true
 	},
 	"res://tests/Scripts/Battle System/Layer 0/FieldTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 0/FieldTests.gd",
 		"tags": [
 
 		],
-		"passing": false
+		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 0/FighterTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 0/FighterTests.gd",
+		"tags": [
+
+		],
+		"passing": true
 	},
 	"res://tests/Scripts/Battle System/Layer 0/TeamTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 0/TeamTests.gd",
 		"tags": [
 
 		],
-		"passing": false
+		"passing": true
 	}
 }
