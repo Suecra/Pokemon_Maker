@@ -82,5 +82,96 @@
 
 		],
 		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 1/BattleAddTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/BattleAddTests.gd",
+		"tags": [
+
+		],
+		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 1/BattleAndTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/BattleAndTests.gd",
+		"tags": [
+
+		],
+		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 1/BattleArrayTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/BattleArrayTests.gd",
+		"tags": [
+
+		],
+		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 1/BattleBoolTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/BattleBoolTests.gd",
+		"tags": [
+
+		],
+		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 1/BattleExcludeTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/BattleExcludeTests.gd",
+		"tags": [
+
+		],
+		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 1/BattleFloatTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/BattleFloatTests.gd",
+		"tags": [
+
+		],
+		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 1/BattleIncludeTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/BattleIncludeTests.gd",
+		"tags": [
+
+		],
+		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 1/BattleIntTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/BattleIntTests.gd",
+		"tags": [
+
+		],
+		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 1/BattleMultTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/BattleMultTests.gd",
+		"tags": [
+
+		],
+		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 1/BattleOrTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/BattleOrTests.gd",
+		"tags": [
+
+		],
+		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 1/BattleTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/BattleTests.gd",
+		"tags": [
+
+		],
+		"passing": false
+	},
+	"res://tests/Scripts/Battle System/Layer 1/EffectFactoryTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/EffectFactoryTests.gd",
+		"tags": [
+
+		],
+		"passing": false
+	},
+	"res://tests/Scripts/Battle System/Layer 1/EffectManagerTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/EffectManagerTests.gd",
+		"tags": [
+
+		],
+		"passing": false
 	}
 }
