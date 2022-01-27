@@ -11,7 +11,7 @@ var effect_manager: EffectManager
 var effect_factory: EffectFactory
 var effects: Dictionary
 
-func add_effect(owner: BattleEntity, name: String) -> void:
+func add_effect(owner: BattleEntity, name: String) -> Effect:
 	if not effects.has(owner):
 		effects[owner] = []
 	var effect = effect_factory.create_effect(name, owner)
@@ -19,24 +19,25 @@ func add_effect(owner: BattleEntity, name: String) -> void:
 	effect.battle = self
 	effect._register()
 	effects[owner].append(effect)
+	return effect
 
 func get_effects(owner: BattleEntity, name: String) -> Array:
 	var result = []
 	if effects.has(owner):
-		var effects = effects[owner]
-		for effect in effects:
+		var effect_list = effects[owner]
+		for effect in effect_list:
 			if effect.is_type(name):
 				result.append(effect)
 	return result
 
 func remove_effects(owner: BattleEntity, name: String) -> void:
 	if effects.has(owner):
-		var effects = effects[owner]
+		var effect_list = effects[owner]
 		var i = 0
-		while i < effects.size():
-			var effect = effects[i]
+		while i < effect_list.size():
+			var effect = effect_list[i]
 			if effect.is_type(name):
-				effects.erase(effect)
+				effect_list.erase(effect)
 			else:
 				i += 1
 
