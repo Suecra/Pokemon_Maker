@@ -1,13 +1,13 @@
 extends "res://Source/Scripts/Battle System/Layer 0/BattleEntity.gd"
 
-const Team = preload("res://Source/Scripts/Battle System/Layer 0/Team.gd")
+#const Team = preload("res://Source/Scripts/Battle System/Layer 0/Team.gd")
 
 var size: int
 var defeated := false
 var teams = []
 
-func add_team() -> Team:
-	var team = Team.new()
+func add_team() -> Reference:
+	var team = load("res://Source/Scripts/Battle System/Layer 0/Team.gd").new()
 	team.field = self
 	teams.append(team)
 	return team
@@ -33,15 +33,15 @@ func _get_entity_relation(battle_entity: Reference) -> int:
 	match type:
 		Type.FIGHTER, Type.TEAM:
 			if battle_entity.field == self:
-				return Role.ALLY
+				return L1Consts.Role.ALLY
 			else:
-				return Role.OPPONENT
+				return L1Consts.Role.OPPONENT
 		Type.FIELD:
 			if battle_entity == self:
-				return Role.SELF
+				return L1Consts.Role.SELF
 			else:
-				return Role.OPPONENT
-	return Role.BATTLEFIELD
+				return L1Consts.Role.OPPONENT
+	return L1Consts.Role.BATTLEFIELD
 
 func _get_type() -> int:
 	return Type.FIELD

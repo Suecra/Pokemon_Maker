@@ -12,7 +12,7 @@ func test_add_field() -> void:
 	asserts.is_equal(1, battlefield.fields.size())
 
 func test_get_entity_relation() -> void:
-	asserts.is_equal(BattleEntity.Role.BATTLEFIELD, battlefield._get_entity_relation(null))
+	asserts.is_equal(L1Consts.Role.BATTLEFIELD, battlefield._get_entity_relation(null))
 
 func pre() -> void:
 	battlefield = Battlefield.new()

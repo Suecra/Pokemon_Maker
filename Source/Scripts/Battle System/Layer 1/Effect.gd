@@ -1,6 +1,11 @@
 extends Reference
 
 const BattleEntity = preload("res://Source/Scripts/Battle System/Layer 0/BattleEntity.gd")
+const BattleVar = preload("res://Source/Scripts/Battle System/Layer 1/BattleVar.gd")
+const BattleBool = preload("res://Source/Scripts/Battle System/Layer 1/BattleBool.gd")
+const BattleInt = preload("res://Source/Scripts/Battle System/Layer 1/BattleInt.gd")
+const BattleFloat = preload("res://Source/Scripts/Battle System/Layer 1/BattleFloat.gd")
+const BattleArray = preload("res://Source/Scripts/Battle System/Layer 1/BattleArray.gd")
 
 var names: Array
 var owner: BattleEntity
@@ -33,6 +38,3 @@ func f(message: String, params: Array) -> float:
 
 func arr(message: String, params: Array) -> Array:
 	return effect_manager.send(message, params, owner)
-
-func _init(owner: BattleEntity) -> void:
-	self.owner = owner

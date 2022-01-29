@@ -49,13 +49,13 @@ func test_is_position_out_of_bounds() -> void:
 func test_get_entity_relation() -> void:
 	var team = field.add_team()
 	var fighter = team.add_fighter()
-	asserts.is_equal(BattleEntity.Role.SELF, field._get_entity_relation(field))
-	asserts.is_equal(BattleEntity.Role.ALLY, field._get_entity_relation(field.team))
-	asserts.is_equal(BattleEntity.Role.ALLY, field._get_entity_relation(fighter))
-	asserts.is_equal(BattleEntity.Role.OPPONENT, field._get_entity_relation(Fighter.new()))
-	asserts.is_equal(BattleEntity.Role.OPPONENT, field._get_entity_relation(Team.new()))
-	asserts.is_equal(BattleEntity.Role.OPPONENT, field._get_entity_relation(Field.new()))
-	asserts.is_equal(BattleEntity.Role.BATTLEFIELD, field._get_entity_relation(Battlefield.new()))
+	asserts.is_equal(L1Consts.Role.SELF, field._get_entity_relation(field))
+	asserts.is_equal(L1Consts.Role.ALLY, field._get_entity_relation(field.team))
+	asserts.is_equal(L1Consts.Role.ALLY, field._get_entity_relation(fighter))
+	asserts.is_equal(L1Consts.Role.OPPONENT, field._get_entity_relation(Fighter.new()))
+	asserts.is_equal(L1Consts.Role.OPPONENT, field._get_entity_relation(Team.new()))
+	asserts.is_equal(L1Consts.Role.OPPONENT, field._get_entity_relation(Field.new()))
+	asserts.is_equal(L1Consts.Role.BATTLEFIELD, field._get_entity_relation(Battlefield.new()))
 
 func test_get_type() -> void:
 	asserts.is_equal(BattleEntity.Type.FIELD, field._get_type())

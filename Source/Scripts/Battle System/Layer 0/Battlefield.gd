@@ -10,7 +10,7 @@ func add_field() -> Field:
 	return field
 
 func _get_entity_relation(battle_entity: Reference) -> int:
-	return Role.BATTLEFIELD
+	return L1Consts.Role.BATTLEFIELD
 
 func _get_type() -> int:
 	return Type.BATTLEFIELD

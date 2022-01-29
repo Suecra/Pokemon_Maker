@@ -42,13 +42,13 @@ func test_heal() -> void:
 	asserts.is_equal(150, fighter.hp)
 
 func test_get_entity_relation() -> void:
-	asserts.is_equal(BattleEntity.Role.SELF, fighter._get_entity_relation(fighter))
-	asserts.is_equal(BattleEntity.Role.ALLY, fighter._get_entity_relation(fighter.team))
-	asserts.is_equal(BattleEntity.Role.ALLY, fighter._get_entity_relation(fighter.field))
-	asserts.is_equal(BattleEntity.Role.OPPONENT, fighter._get_entity_relation(Fighter.new()))
-	asserts.is_equal(BattleEntity.Role.OPPONENT, fighter._get_entity_relation(Team.new()))
-	asserts.is_equal(BattleEntity.Role.OPPONENT, fighter._get_entity_relation(Field.new()))
-	asserts.is_equal(BattleEntity.Role.BATTLEFIELD, fighter._get_entity_relation(Battlefield.new()))
+	asserts.is_equal(L1Consts.Role.SELF, fighter._get_entity_relation(fighter))
+	asserts.is_equal(L1Consts.Role.ALLY, fighter._get_entity_relation(fighter.team))
+	asserts.is_equal(L1Consts.Role.ALLY, fighter._get_entity_relation(fighter.field))
+	asserts.is_equal(L1Consts.Role.OPPONENT, fighter._get_entity_relation(Fighter.new()))
+	asserts.is_equal(L1Consts.Role.OPPONENT, fighter._get_entity_relation(Team.new()))
+	asserts.is_equal(L1Consts.Role.OPPONENT, fighter._get_entity_relation(Field.new()))
+	asserts.is_equal(L1Consts.Role.BATTLEFIELD, fighter._get_entity_relation(Battlefield.new()))
 
 func test_get_type() -> void:
 	asserts.is_equal(BattleEntity.Type.FIGHTER, fighter._get_type())
