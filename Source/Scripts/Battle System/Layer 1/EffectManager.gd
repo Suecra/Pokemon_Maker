@@ -16,6 +16,18 @@ func register(effect, message: String, priority: int, sender_type: int) -> void:
 		registered_effects[message] = []
 	registered_effects[message].append(RegisteredEffect.new(effect, priority, sender_type))
 
+func unregister(effect) -> void:
+	for message in registered_effects.keys():
+		var reg_effects = registered_effects[message]
+		var i = 0
+		while i < reg_effects.size():
+			if reg_effects[i].effect == effect:
+				reg_effects.remove(i)
+			else:
+				i += 1
+		if reg_effects.size() == 0:
+			registered_effects.erase(message)
+
 func send(message: String, params: Array, sender: BattleEntity):
 	var result
 	match L1Consts.MESSAGES[message][0]:
@@ -40,7 +52,7 @@ func call_method(effect, message: String, params: Array, result: BattleVar) -> v
 	if effect.has_method(message):
 		var next_result = effect.callv(message, params)
 		if next_result != null:
-			next_result.concat(result)
+			next_result._concat(result)
 
 class RegisteredEffectSorter:
 	static func sort(a, b) -> bool:

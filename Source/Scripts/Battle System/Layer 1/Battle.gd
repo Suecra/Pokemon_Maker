@@ -38,6 +38,7 @@ func remove_effects(owner: BattleEntity, name: String) -> void:
 			var effect = effect_list[i]
 			if effect.is_type(name):
 				effect_list.erase(effect)
+				effect_manager.unregister(effect)
 			else:
 				i += 1
 

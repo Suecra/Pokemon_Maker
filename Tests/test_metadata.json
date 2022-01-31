@@ -172,6 +172,13 @@
 		"tags": [
 
 		],
-		"passing": false
+		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 1/L1ConstsTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/L1ConstsTests.gd",
+		"tags": [
+
+		],
+		"passing": true
 	}
 }

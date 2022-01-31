@@ -259,7 +259,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "WAT" )
+enabled=PoolStringArray( "WAT", "pokemon_sprite_importer" )
 
 [importer_defaults]
 

@@ -7,6 +7,7 @@ const Fighter = preload("res://Source/Scripts/Battle System/Layer 0/Fighter.gd")
 const EffectManager = preload("res://Source/Scripts/Battle System/Layer 1/EffectManager.gd")
 const TestEffectFactory = preload("res://Tests/Scripts/Battle System/Layer 1/TestEffectFactory.gd")
 const Battlefield = preload("res://Source/Scripts/Battle System/Layer 0/Battlefield.gd")
+const RegisteredEffect = preload("res://Source/Scripts/Battle System/Layer 1/RegisteredEffect.gd")
 var battle: Battle
 
 func test_get_effects() -> void:
@@ -60,10 +61,13 @@ func test_remove_effects() -> void:
 	e3.names = ["TestEffect2"]
 	battle.effects[f1] = [e1]
 	battle.effects[f2] = [e2, e3]
+	battle.effect_manager.registered_effects["test"] = []
+	battle.effect_manager.registered_effects["test"].append(RegisteredEffect.new(e1, 1, 0))
 	battle.remove_effects(f1, "TestEffect1")
 	asserts.is_false(battle.effects[f1].has(e1))
 	asserts.is_true(battle.effects[f2].has(e2))
 	asserts.is_true(battle.effects[f2].has(e3))
+	asserts.is_false(battle.effect_manager.registered_effects.has("test"))
 	battle.remove_effects(f2, "TestEffect1")
 	asserts.is_false(battle.effects[f2].has(e2))
 	asserts.is_true(battle.effects[f2].has(e3))
