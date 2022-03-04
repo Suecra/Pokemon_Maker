@@ -1,65 +1,63 @@
 <?xml version="1.0" ?>
-<testsuites failures="0" name="TestXML" tests="14" time="0">
-	<testsuite name="Battle Add Tests" failures="0"  tests="1" time="0">
-		<testcase name=" concat" time="0"></testcase>
+<testsuites failures="0" name="TestXML" tests="10" time="0">
+	<testsuite name="Battle Action Damage Tests" failures="0"  tests="1" time="0">
+		<testcase name=" execute" time="0"></testcase>
 	</testsuite>
 
-	<testsuite name="Battle And Tests" failures="0"  tests="1" time="0">
-		<testcase name=" concat" time="0"></testcase>
+	<testsuite name="Battle Action Heal Tests" failures="0"  tests="1" time="0">
+		<testcase name=" execute" time="0"></testcase>
 	</testsuite>
 
-	<testsuite name="Battle Array Tests" failures="0"  tests="1" time="0">
-		<testcase name=" concat" time="0"></testcase>
+	<testsuite name="Battle Action Set Active Tests" failures="0"  tests="1" time="0">
+		<testcase name=" execute" time="0"></testcase>
 	</testsuite>
 
-	<testsuite name="Battle Bool Tests" failures="0"  tests="1" time="0">
-		<testcase name=" concat" time="0"></testcase>
+	<testsuite name="Battle Action Set Fainted Tests" failures="0"  tests="1" time="0">
+		<testcase name=" execute" time="0"></testcase>
 	</testsuite>
 
-	<testsuite name="Battle Exclude Tests" failures="0"  tests="1" time="0">
-		<testcase name=" concat" time="0"></testcase>
+	<testsuite name="Battle Action Set Position Tests" failures="0"  tests="1" time="0">
+		<testcase name=" execute" time="0"></testcase>
 	</testsuite>
 
-	<testsuite name="Battle Float Tests" failures="0"  tests="1" time="0">
-		<testcase name=" concat" time="0"></testcase>
-	</testsuite>
-
-	<testsuite name="Battle Include Tests" failures="0"  tests="1" time="0">
-		<testcase name=" concat" time="0"></testcase>
-	</testsuite>
-
-	<testsuite name="Battle Int Tests" failures="0"  tests="1" time="0">
-		<testcase name=" concat" time="0"></testcase>
-	</testsuite>
-
-	<testsuite name="Battle Mult Tests" failures="0"  tests="1" time="0">
-		<testcase name=" concat" time="0"></testcase>
-	</testsuite>
-
-	<testsuite name="Battle Or Tests" failures="0"  tests="1" time="0">
-		<testcase name=" concat" time="0"></testcase>
+	<testsuite name="Battlefield Tests" failures="0"  tests="3" time="0">
+		<testcase name=" get entity relation" time="0"></testcase>
+		<testcase name=" get type" time="0"></testcase>
+		<testcase name=" add field" time="0"></testcase>
 	</testsuite>
 
 	<testsuite name="Battle Tests" failures="0"  tests="4" time="0">
-		<testcase name=" get effects" time="0"></testcase>
-		<testcase name=" nudge effects" time="0"></testcase>
-		<testcase name=" add effect" time="0"></testcase>
-		<testcase name=" remove effects" time="0"></testcase>
+		<testcase name=" check finished" time="0"></testcase>
+		<testcase name=" abort" time="0"></testcase>
+		<testcase name=" start" time="0"></testcase>
+		<testcase name=" do action" time="0"></testcase>
 	</testsuite>
 
-	<testsuite name="Effect Factory Tests" failures="0"  tests="1" time="0">
-		<testcase name=" create effect" time="0"></testcase>
+	<testsuite name="Field Tests" failures="0"  tests="6" time="0">
+		<testcase name=" get entity relation" time="0"></testcase>
+		<testcase name=" get type" time="0"></testcase>
+		<testcase name=" update defeated" time="0"></testcase>
+		<testcase name=" is position blocked" time="0"></testcase>
+		<testcase name=" add team" time="0"></testcase>
+		<testcase name=" is position out of bounds" time="0"></testcase>
 	</testsuite>
 
-	<testsuite name="Effect Manager Tests" failures="0"  tests="4" time="0">
-		<testcase name=" send" time="0"></testcase>
-		<testcase name=" call method" time="0"></testcase>
-		<testcase name=" register" time="0"></testcase>
-		<testcase name=" sort registered effects" time="0"></testcase>
+	<testsuite name="Fighter Tests" failures="0"  tests="8" time="0">
+		<testcase name=" damage" time="0"></testcase>
+		<testcase name=" get entity relation" time="0"></testcase>
+		<testcase name=" get type" time="0"></testcase>
+		<testcase name=" set position" time="0"></testcase>
+		<testcase name=" heal" time="0"></testcase>
+		<testcase name=" set active" time="0"></testcase>
+		<testcase name=" check position" time="0"></testcase>
+		<testcase name=" set fainted" time="0"></testcase>
 	</testsuite>
 
-	<testsuite name="L 1 Consts Tests" failures="0"  tests="1" time="0">
-		<testcase name=" is sender type" time="0"></testcase>
+	<testsuite name="Team Tests" failures="0"  tests="4" time="0">
+		<testcase name=" get entity relation" time="0"></testcase>
+		<testcase name=" get type" time="0"></testcase>
+		<testcase name=" update defeated" time="0"></testcase>
+		<testcase name=" add fighter" time="0"></testcase>
 	</testsuite>
 
 </testsuites>
