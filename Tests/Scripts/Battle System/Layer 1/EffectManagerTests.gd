@@ -22,12 +22,12 @@ func test_send() -> void:
 	effect_manager.registered_effects["nudge"] = []
 	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(e1, 2, L1Consts.SenderType.SELF_OR_ALLY))
 	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(e2, 1, L1Consts.SenderType.SELF))
-	effect_manager.send("nudge", [], f1)
+	effect_manager.send("nudge", [], f1, 0)
 	asserts.is_equal(1, e1.i)
 	asserts.is_equal(0, e2.i)
 	e1.i = 0
 	e2.i = 0
-	effect_manager.send("nudge", [], f2)
+	effect_manager.send("nudge", [], f2, 0)
 	asserts.is_equal(1, e1.i)
 	asserts.is_equal(1, e2.i)
 

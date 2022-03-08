@@ -42,8 +42,11 @@ func remove_effects(owner: BattleEntity, name: String) -> void:
 			else:
 				i += 1
 
+func random_trigger(chance: float) -> bool:
+	return Utils.trigger(chance)
+
 func nudge_effects() -> void:
-	effect_manager.send("nudge", [], battle_l0.battlefield)
+	effect_manager.send("nudge", [], battle_l0.battlefield, 0)
 
 func _init() -> void:
 	effect_factory = EffectFactory.new()

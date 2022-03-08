@@ -7,6 +7,7 @@ const BattleVar = preload("res://Source/Scripts/Battle System/Layer 1/BattleVar.
 const BattleBool = preload("res://Source/Scripts/Battle System/Layer 1/BattleBool.gd")
 const BattleInt = preload("res://Source/Scripts/Battle System/Layer 1/BattleInt.gd")
 const BattleFloat = preload("res://Source/Scripts/Battle System/Layer 1/BattleFloat.gd")
+const BattleVarEntity = preload("res://Source/Scripts/Battle System/Layer 1/BattleVarEntity.gd")
 const BattleArray = preload("res://Source/Scripts/Battle System/Layer 1/BattleArray.gd")
 
 var registered_effects := {}
@@ -28,13 +29,20 @@ func unregister(effect) -> void:
 		if reg_effects.size() == 0:
 			registered_effects.erase(message)
 
-func send(message: String, params: Array, sender: BattleEntity):
+func send(message: String, params: Array, sender: BattleEntity, default):
 	var result
-	match L1Consts.MESSAGES[message][0]:
-		L1Consts.MessageType.BOOL: result = BattleBool.new(false)
-		L1Consts.MessageType.INT: result = BattleInt.new(0)
-		L1Consts.MessageType.FLOAT: result = BattleFloat.new(1)
-		L1Consts.MessageType.ARRAY: result = BattleArray.new([])
+	if message.begins_with("can_"):
+		result = BattleBool.new(default)
+	else:
+		match L1Consts.MESSAGES[message][1]:
+			L1Consts.MessageType.BOOL: result = BattleBool.new(default)
+			L1Consts.MessageType.INT: result = BattleInt.new(default)
+			L1Consts.MessageType.FLOAT: result = BattleFloat.new(default)
+			L1Consts.MessageType.ENTITY: result = BattleVarEntity.new(default)
+			L1Consts.MessageType.ARRAY: result = BattleArray.new(default)
+			L1Consts.MessageType.VOID:
+				if not send("can_" + message, params, sender, true):
+					return null
 	
 	if registered_effects.has(message):
 		var reg_effects = registered_effects[message]
