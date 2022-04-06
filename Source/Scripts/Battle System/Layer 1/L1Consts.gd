@@ -5,7 +5,7 @@ enum MessageType {VOID, BOOL, INT, FLOAT, ENTITY, ARRAY}
 enum Role {SELF, ALLY, OPPONENT, BATTLEFIELD}
 
 const MESSAGES = {
-	"nudge": [[], MessageType.VOID]
+	"nudge": MessageType.VOID
 }
 
 static func is_sender_type(type: int, role: int) -> bool:

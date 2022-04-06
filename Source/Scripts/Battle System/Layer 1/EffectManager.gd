@@ -34,7 +34,7 @@ func send(message: String, params: Array, sender: BattleEntity, default):
 	if message.begins_with("can_"):
 		result = BattleBool.new(default)
 	else:
-		match L1Consts.MESSAGES[message][1]:
+		match L1Consts.MESSAGES[message]:
 			L1Consts.MessageType.BOOL: result = BattleBool.new(default)
 			L1Consts.MessageType.INT: result = BattleInt.new(default)
 			L1Consts.MessageType.FLOAT: result = BattleFloat.new(default)
@@ -51,10 +51,13 @@ func send(message: String, params: Array, sender: BattleEntity, default):
 			var effect = registered_effect.effect
 			var role = effect.owner._get_entity_relation(sender)
 			if L1Consts.is_sender_type(registered_effect.sender_type, role):
-				call_method(effect, message, params, result)
-	if result == null:
-		return null
-	return result.value
+				var can_receive = true
+				if message != "can_receive":
+					var bvbool = send("can_receive", [sender, effect], sender, can_receive)
+					can_receive = bvbool.value
+				if can_receive:
+					call_method(effect, message, params, result)
+	return result
 
 func call_method(effect, message: String, params: Array, result: BattleVar) -> void:
 	if effect.has_method(message):

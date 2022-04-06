@@ -5,6 +5,7 @@ const BattleVar = preload("res://Source/Scripts/Battle System/Layer 1/BattleVar.
 const BattleBool = preload("res://Source/Scripts/Battle System/Layer 1/BattleBool.gd")
 const BattleInt = preload("res://Source/Scripts/Battle System/Layer 1/BattleInt.gd")
 const BattleFloat = preload("res://Source/Scripts/Battle System/Layer 1/BattleFloat.gd")
+const BattleVarEntity = preload("res://Source/Scripts/Battle System/Layer 1/BattleVarEntity.gd")
 const BattleArray = preload("res://Source/Scripts/Battle System/Layer 1/BattleArray.gd")
 
 var names: Array
@@ -25,24 +26,27 @@ func reg(message: String, priority: int, sender_type: int) -> void:
 	effect_manager.register(self, message, priority, sender_type)
 
 func v(message: String, params: Array) -> void:
-	effect_manager.send(message, get_params(message, params), owner, 0)
+	effect_manager.send(message, get_params(params), owner, 0)
 
-func b(message: String, params: Array, default := false) -> bool:
-	return effect_manager.send(message, get_params(message, params), owner, default)
+func b(message: String, params: Array, default := false) -> BattleBool:
+	return effect_manager.send(message, get_params(params), owner, default)
 
-func i(message: String, params: Array, default := 0) -> int:
-	return effect_manager.send(message, get_params(message, params), owner, default)
+func i(message: String, params: Array, default := 0) -> BattleInt:
+	return effect_manager.send(message, get_params(params), owner, default)
+
+func f(message: String, params: Array, default := 1) -> BattleFloat:
+	return effect_manager.send(message, get_params(params), owner, default)
+
+func ent(message: String, params: Array, default := null) -> BattleVarEntity:
+	return effect_manager.send(message, get_params(params), owner, default)
 	
-func f(message: String, params: Array, default := 1) -> float:
-	return effect_manager.send(message, get_params(message, params), owner, default)
+func arr(message: String, params: Array, default := []) -> BattleArray:
+	return effect_manager.send(message, get_params(params), owner, default)
 
-func arr(message: String, params: Array, default := []) -> Array:
-	return effect_manager.send(message, get_params(message, params), owner, default)
-
-func get_params(message: String, params: Array) -> Array:
+func get_params(params: Array) -> Array:
 	var result = []
-	for i in range(params.size()):
-		result.append(effect_manager.send("get_" + message + "_" + L1Consts.MESSAGES[message][0][i]), [], owner, params[i])
+	for param in params:
+		result.append(param.value)
 	return result
 
 func exists(effect_name: String) -> BattleBool:

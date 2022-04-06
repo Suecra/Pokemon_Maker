@@ -45,6 +45,10 @@ func remove_effects(owner: BattleEntity, name: String) -> void:
 func random_trigger(chance: float) -> bool:
 	return Utils.trigger(chance)
 
+func random_select(list: Array):
+	var idx = randi() % list.size()
+	return list[idx]
+
 func nudge_effects() -> void:
 	effect_manager.send("nudge", [], battle_l0.battlefield, 0)
 
