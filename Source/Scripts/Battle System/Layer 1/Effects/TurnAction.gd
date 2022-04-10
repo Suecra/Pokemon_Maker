@@ -4,6 +4,7 @@ var priority := 0
 
 func _register() -> void:
 	._register()
+	set_name("TurnAction")
 	reg("get_turn_actions", 0, L1Consts.SenderType.BATTLEFIELD)
 	reg("get_priority", 0, L1Consts.SenderType.SELF)
 	reg("get_reference_speed", 0, L1Consts.SenderType.SELF)
@@ -11,3 +12,9 @@ func _register() -> void:
 
 func get_priority() -> BattleInt:
 	return BattleInt.new(priority)
+
+func get_turn_actions() -> BattleArray:
+	return BattleInclude.new([self])
+
+func get_reference_speed() -> BattleFloat:
+	return BattleFloat.new(f("get_speed", []).value)

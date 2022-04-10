@@ -5,8 +5,10 @@ const BattleVar = preload("res://Source/Scripts/Battle System/Layer 1/BattleVar.
 const BattleBool = preload("res://Source/Scripts/Battle System/Layer 1/BattleBool.gd")
 const BattleInt = preload("res://Source/Scripts/Battle System/Layer 1/BattleInt.gd")
 const BattleFloat = preload("res://Source/Scripts/Battle System/Layer 1/BattleFloat.gd")
+const BattleMax = preload("res://Source/Scripts/Battle System/Layer 1/BattleMax.gd")
 const BattleVarEntity = preload("res://Source/Scripts/Battle System/Layer 1/BattleVarEntity.gd")
 const BattleArray = preload("res://Source/Scripts/Battle System/Layer 1/BattleArray.gd")
+const BattleInclude = preload("res://Source/Scripts/Battle System/Layer 1/BattleInclude.gd")
 
 var names: Array
 var owner: BattleEntity
