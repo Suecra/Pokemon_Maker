@@ -17,4 +17,4 @@ func get_turn_actions() -> BattleArray:
 	return BattleInclude.new([self])
 
 func get_reference_speed() -> BattleFloat:
-	return BattleFloat.new(f("get_speed", []).value)
+	return BattleFloat.new(f("get_speed", [true]).value)

@@ -5,4 +5,4 @@ func _register() -> void:
 	set_name("FieldTurnAction")
 
 func get_reference_speed() -> BattleFloat:
-	return BattleFloat.new(f("get_max_speed", []).value)
+	return BattleFloat.new(f("get_max_speed", [true]).value)

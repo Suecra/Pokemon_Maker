@@ -53,7 +53,7 @@ func test_sort_registered_effects() -> void:
 	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(TestEffect.new(), 2, L1Consts.SenderType.SELF))
 	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(TestEffect.new(), 25, L1Consts.SenderType.SELF))
 	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(TestEffect.new(), 13, L1Consts.SenderType.SELF))
-	effect_manager.registered_effects["nudge"].sort_custom(EffectManager.RegisteredEffectSorter, "sort")
+	effect_manager.registered_effects["nudge"].sort_custom(effect_manager, "sort")
 	asserts.is_equal(2, effect_manager.registered_effects["nudge"][0].priority)
 	asserts.is_equal(4, effect_manager.registered_effects["nudge"][1].priority)
 	asserts.is_equal(13, effect_manager.registered_effects["nudge"][2].priority)

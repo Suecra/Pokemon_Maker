@@ -9,6 +9,9 @@ const MESSAGES = {
 	"get_turn_actions": MessageType.ARRAY,
 	"get_priority": MessageType.INT,
 	"get_reference_speed": MessageType.FLOAT,
+	"get_speed": MessageType.FLOAT,
+	"get_max_speed": MessageType.FLOAT,
+	"get_opponent_max_speed": MessageType.FLOAT,
 	"execute": MessageType.VOID
 }
 

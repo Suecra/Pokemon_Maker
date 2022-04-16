@@ -1,7 +1,5 @@
 extends "res://Source/Scripts/Battle System/Layer 0/BattleEntity.gd"
 
-#const Team = preload("res://Source/Scripts/Battle System/Layer 0/Team.gd")
-
 var size: int
 var defeated := false
 var teams = []

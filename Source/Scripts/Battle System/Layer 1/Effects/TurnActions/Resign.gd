@@ -6,4 +6,4 @@ func init() -> void:
 
 func execute() -> void:
 	owner.field.defeated = true
-	battle.add_effect(battle.battle_l0.battlefield, "Aborted")
+	battle.add_effect(battle.battle_l0.battlefield, "FieldEffects/Aborted")

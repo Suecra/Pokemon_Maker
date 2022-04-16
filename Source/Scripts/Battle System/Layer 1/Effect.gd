@@ -12,10 +12,12 @@ const BattleInclude = preload("res://Source/Scripts/Battle System/Layer 1/Battle
 
 var names: Array
 var owner: BattleEntity
+var current_owner: BattleEntity
 var effect_manager: Reference
 var battle: Reference
 
 func _register() -> void:
+	current_owner = owner
 	reg("exists", 0, L1Consts.SenderType.BATTLEFIELD)
 
 func set_name(name: String) -> void:
@@ -28,28 +30,47 @@ func reg(message: String, priority: int, sender_type: int) -> void:
 	effect_manager.register(self, message, priority, sender_type)
 
 func v(message: String, params: Array) -> void:
-	effect_manager.send(message, get_params(params), owner, 0)
+	effect_manager.send(message, get_params(params), current_owner, 0)
+	current_owner = owner
 
 func b(message: String, params: Array, default := false) -> BattleBool:
-	return effect_manager.send(message, get_params(params), owner, default)
+	var result = effect_manager.send(message, get_params(params), current_owner, default)
+	current_owner = owner
+	return result
 
 func i(message: String, params: Array, default := 0) -> BattleInt:
-	return effect_manager.send(message, get_params(params), owner, default)
+	var result = effect_manager.send(message, get_params(params), current_owner, default)
+	current_owner = owner
+	return result
 
 func f(message: String, params: Array, default := 1) -> BattleFloat:
-	return effect_manager.send(message, get_params(params), owner, default)
+	var result = effect_manager.send(message, get_params(params), current_owner, default)
+	current_owner = owner
+	return result
 
 func ent(message: String, params: Array, default := null) -> BattleVarEntity:
-	return effect_manager.send(message, get_params(params), owner, default)
+	var result = effect_manager.send(message, get_params(params), current_owner, default)
+	current_owner = owner
+	return result
 	
 func arr(message: String, params: Array, default := []) -> BattleArray:
-	return effect_manager.send(message, get_params(params), owner, default)
+	var result = effect_manager.send(message, get_params(params), current_owner, default)
+	current_owner = owner
+	return result
 
 func get_params(params: Array) -> Array:
 	var result = []
 	for param in params:
 		result.append(param.value)
 	return result
+
+func delegate(entity: BattleEntity) -> Reference:
+	current_owner = entity
+	return self
+
+func delegate_e(effect: Reference) -> Reference:
+	current_owner = effect.owner
+	return self
 
 func exists(effect_name: String) -> BattleBool:
 	if is_type(effect_name):

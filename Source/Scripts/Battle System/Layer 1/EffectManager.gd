@@ -46,7 +46,7 @@ func send(message: String, params: Array, sender: BattleEntity, default):
 	
 	if registered_effects.has(message):
 		var reg_effects = registered_effects[message]
-		reg_effects.sort_custom(RegisteredEffectSorter, "sort")
+		reg_effects.sort_custom(self, "sort")
 		for registered_effect in reg_effects:
 			var effect = registered_effect.effect
 			var role = effect.owner._get_entity_relation(sender)
@@ -65,8 +65,12 @@ func call_method(effect, message: String, params: Array, result: BattleVar) -> v
 		if next_result != null:
 			next_result._concat(result)
 
-class RegisteredEffectSorter:
-	static func sort(a, b) -> bool:
-		if a.priority < b.priority:
+func sort(a, b) -> bool:
+	if a.priority < b.priority:
+		return true
+	elif a.priority == b.priority && (not a.effect.is_type("get_reference_speed") || not b.effect.is_type("get_reference_speed")):
+		var ref_speed_a = send("get_reference_speed", [], a.owner, 0)
+		var ref_speed_b = send("get_reference_speed", [], b.owner, 0)
+		if ref_speed_a > ref_speed_b:
 			return true
-		return false
+	return false

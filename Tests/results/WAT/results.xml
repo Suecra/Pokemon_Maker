@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<testsuites failures="0" name="TestXML" tests="15" time="0">
+<testsuites failures="0" name="TestXML" tests="17" time="0">
 	<testsuite name="Battle Add Tests" failures="0"  tests="1" time="0">
 		<testcase name=" concat" time="0"></testcase>
 	</testsuite>
@@ -32,6 +32,14 @@
 		<testcase name=" concat" time="0"></testcase>
 	</testsuite>
 
+	<testsuite name="Battle Max Tests" failures="0"  tests="1" time="0">
+		<testcase name=" concat" time="0"></testcase>
+	</testsuite>
+
+	<testsuite name="Battle Min Tests" failures="0"  tests="1" time="0">
+		<testcase name=" concat" time="0"></testcase>
+	</testsuite>
+
 	<testsuite name="Battle Mult Tests" failures="0"  tests="1" time="0">
 		<testcase name=" concat" time="0"></testcase>
 	</testsuite>
@@ -43,8 +51,8 @@
 	<testsuite name="Battle Tests" failures="0"  tests="4" time="0">
 		<testcase name=" add effect" time="0"></testcase>
 		<testcase name=" get effects" time="0"></testcase>
-		<testcase name=" nudge effects" time="0"></testcase>
 		<testcase name=" remove effects" time="0"></testcase>
+		<testcase name=" nudge effects" time="0"></testcase>
 	</testsuite>
 
 	<testsuite name="Effect Factory Tests" failures="0"  tests="1" time="0">
@@ -52,17 +60,17 @@
 	</testsuite>
 
 	<testsuite name="Effect Manager Tests" failures="0"  tests="4" time="0">
+		<testcase name=" send" time="0"></testcase>
 		<testcase name=" call method" time="0"></testcase>
 		<testcase name=" register" time="0"></testcase>
 		<testcase name=" sort registered effects" time="0"></testcase>
-		<testcase name=" send" time="0"></testcase>
 	</testsuite>
 
 	<testsuite name="Effect Tests" failures="0"  tests="4" time="0">
-		<testcase name=" set name" time="0"></testcase>
-		<testcase name=" reg" time="0"></testcase>
 		<testcase name=" is type" time="0"></testcase>
+		<testcase name=" reg" time="0"></testcase>
 		<testcase name=" v" time="0"></testcase>
+		<testcase name=" set name" time="0"></testcase>
 	</testsuite>
 
 	<testsuite name="L 1 Consts Tests" failures="0"  tests="1" time="0">
