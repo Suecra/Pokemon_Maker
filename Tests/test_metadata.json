@@ -144,14 +144,14 @@
 		"tags": [
 
 		],
-		"passing": false
+		"passing": true
 	},
 	"res://tests/Scripts/Battle System/Layer 1/BattleMinTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 1/BattleMinTests.gd",
 		"tags": [
 
 		],
-		"passing": false
+		"passing": true
 	},
 	"res://tests/Scripts/Battle System/Layer 1/BattleMultTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 1/BattleMultTests.gd",
@@ -172,7 +172,7 @@
 		"tags": [
 
 		],
-		"passing": false
+		"passing": true
 	},
 	"res://tests/Scripts/Battle System/Layer 1/EffectFactoryTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 1/EffectFactoryTests.gd",

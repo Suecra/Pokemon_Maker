@@ -30,6 +30,10 @@ func get_effects(owner: BattleEntity, name: String) -> Array:
 				result.append(effect)
 	return result
 
+func remove_effect(effect: Reference) -> void:
+	effects[effect.owner].erase(effect)
+	effect_manager.unregister(effect)
+
 func remove_effects(owner: BattleEntity, name: String) -> void:
 	if effects.has(owner):
 		var effect_list = effects[owner]
@@ -37,8 +41,7 @@ func remove_effects(owner: BattleEntity, name: String) -> void:
 		while i < effect_list.size():
 			var effect = effect_list[i]
 			if effect.is_type(name):
-				effect_list.erase(effect)
-				effect_manager.unregister(effect)
+				remove_effect(effect)
 			else:
 				i += 1
 

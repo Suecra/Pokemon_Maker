@@ -4,5 +4,5 @@ func init() -> void:
 	priority = 6
 	set_name("Run")
 
-func execute() -> void:
+func do_action() -> void:
 	v("tr_escape", [])

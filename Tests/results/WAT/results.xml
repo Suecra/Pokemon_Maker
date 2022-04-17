@@ -49,8 +49,8 @@
 	</testsuite>
 
 	<testsuite name="Battle Tests" failures="0"  tests="4" time="0">
-		<testcase name=" add effect" time="0"></testcase>
 		<testcase name=" get effects" time="0"></testcase>
+		<testcase name=" add effect" time="0"></testcase>
 		<testcase name=" remove effects" time="0"></testcase>
 		<testcase name=" nudge effects" time="0"></testcase>
 	</testsuite>
@@ -67,10 +67,10 @@
 	</testsuite>
 
 	<testsuite name="Effect Tests" failures="0"  tests="4" time="0">
-		<testcase name=" is type" time="0"></testcase>
-		<testcase name=" reg" time="0"></testcase>
 		<testcase name=" v" time="0"></testcase>
+		<testcase name=" is type" time="0"></testcase>
 		<testcase name=" set name" time="0"></testcase>
+		<testcase name=" reg" time="0"></testcase>
 	</testsuite>
 
 	<testsuite name="L 1 Consts Tests" failures="0"  tests="1" time="0">
