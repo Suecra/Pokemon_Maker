@@ -12,7 +12,13 @@ const MESSAGES = {
 	"get_speed": MessageType.FLOAT,
 	"get_max_speed": MessageType.FLOAT,
 	"get_opponent_max_speed": MessageType.FLOAT,
-	"execute": MessageType.VOID
+	"execute": MessageType.VOID,
+	"try_escape": MessageType.VOID,
+	"escape": MessageType.VOID,
+	"can_switch_out": MessageType.BOOL,
+	"switch": MessageType.VOID,
+	"use_item": MessageType.VOID,
+	"can_use_item": MessageType.BOOL,
 }
 
 static func is_sender_type(type: int, role: int) -> bool:
