@@ -4,9 +4,11 @@ const Fighter = preload("res://Source/Scripts/Battle System/Layer 0/Fighter.gd")
 
 var bag: Dictionary
 
+func _init() -> void:
+	set_name("TeamFunctions")
+
 func _register() -> void:
 	._register()
-	set_name("TeamFunctions")
 	reg("use_item", 0, L1Consts.SenderType.SELF)
 	reg("can_use_item", 0, L1Consts.SenderType.SELF)
 

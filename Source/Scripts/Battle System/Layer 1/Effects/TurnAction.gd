@@ -2,6 +2,9 @@ extends "res://Source/Scripts/Battle System/Layer 1/Effect.gd"
 
 var priority := 0
 
+func _init() -> void:
+	set_name("TurnAction")
+
 func _register() -> void:
 	._register()
 	set_name("TurnAction")

@@ -1,8 +1,10 @@
 extends "res://Source/Scripts/Battle System/Layer 1/Effect.gd"
 
+func _init() -> void:
+	set_name("TurnPriorityQueue")
+
 func _register() -> void:
 	._register()
-	set_name("TurnPriorityQueue")
 	reg("nudge", 0, L1Consts.SenderType.BATTLEFIELD)
 
 func nudge() -> void:

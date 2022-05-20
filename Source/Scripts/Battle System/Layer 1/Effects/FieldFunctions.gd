@@ -2,10 +2,12 @@ extends "res://Source/Scripts/Battle System/Layer 1/Effect.gd"
 
 var run_tries: int
 
-func _register() -> void:
-	._register()
+func _init() -> void:
 	run_tries = 0
 	set_name("FieldFunctions")
+
+func _register() -> void:
+	._register()
 	reg("escape", 0, L1Consts.SenderType.SELF_OR_ALLY)
 	reg("try_escape", 0, L1Consts.SenderType.SELF_OR_ALLY)
 
