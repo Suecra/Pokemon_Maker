@@ -5,8 +5,7 @@ const Effect = preload("res://Source/Scripts/Battle System/Layer 1/Effect.gd")
 const RegisteredEffect = preload("res://Source/Scripts/Battle System/Layer 1/RegisteredEffect.gd")
 const BattleVar = preload("res://Source/Scripts/Battle System/Layer 1/BattleVar.gd")
 const BattleBool = preload("res://Source/Scripts/Battle System/Layer 1/BattleBool.gd")
-const BattleInt = preload("res://Source/Scripts/Battle System/Layer 1/BattleInt.gd")
-const BattleFloat = preload("res://Source/Scripts/Battle System/Layer 1/BattleFloat.gd")
+const BattleNumber = preload("res://Source/Scripts/Battle System/Layer 1/BattleNumber.gd")
 const BattleVarEntity = preload("res://Source/Scripts/Battle System/Layer 1/BattleVarEntity.gd")
 const BattleArray = preload("res://Source/Scripts/Battle System/Layer 1/BattleArray.gd")
 
@@ -36,8 +35,7 @@ func send(message: String, params: Array, sender: BattleEntity, default):
 	else:
 		match L1Consts.MESSAGES[message]:
 			L1Consts.MessageType.BOOL: result = BattleBool.new(default)
-			L1Consts.MessageType.INT: result = BattleInt.new(default)
-			L1Consts.MessageType.FLOAT: result = BattleFloat.new(default)
+			L1Consts.MessageType.NUMBER: result = BattleNumber.new(default)
 			L1Consts.MessageType.ENTITY: result = BattleVarEntity.new(default)
 			L1Consts.MessageType.ARRAY: result = BattleArray.new(default)
 			L1Consts.MessageType.VOID:

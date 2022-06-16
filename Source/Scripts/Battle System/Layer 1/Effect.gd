@@ -5,9 +5,8 @@ const BattleVar = preload("res://Source/Scripts/Battle System/Layer 1/BattleVar.
 const BattleBool = preload("res://Source/Scripts/Battle System/Layer 1/BattleBool.gd")
 const BattleAnd = preload("res://Source/Scripts/Battle System/Layer 1/BattleAnd.gd")
 const BattleOr = preload("res://Source/Scripts/Battle System/Layer 1/BattleOr.gd")
-const BattleInt = preload("res://Source/Scripts/Battle System/Layer 1/BattleInt.gd")
 const BattleAdd = preload("res://Source/Scripts/Battle System/Layer 1/BattleAdd.gd")
-const BattleFloat = preload("res://Source/Scripts/Battle System/Layer 1/BattleFloat.gd")
+const BattleNumber = preload("res://Source/Scripts/Battle System/Layer 1/BattleNumber.gd")
 const BattleMax = preload("res://Source/Scripts/Battle System/Layer 1/BattleMax.gd")
 const BattleVarEntity = preload("res://Source/Scripts/Battle System/Layer 1/BattleVarEntity.gd")
 const BattleArray = preload("res://Source/Scripts/Battle System/Layer 1/BattleArray.gd")
@@ -41,12 +40,7 @@ func b(message: String, params: Array, default := false) -> BattleBool:
 	current_owner = owner
 	return result
 
-func i(message: String, params: Array, default := 0) -> BattleInt:
-	var result = effect_manager.send(message, get_params(params), current_owner, default)
-	current_owner = owner
-	return result
-
-func f(message: String, params: Array, default := 1) -> BattleFloat:
+func n(message: String, params: Array, default := 0) -> BattleNumber:
 	var result = effect_manager.send(message, get_params(params), current_owner, default)
 	current_owner = owner
 	return result

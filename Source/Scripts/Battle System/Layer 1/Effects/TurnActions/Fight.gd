@@ -10,5 +10,5 @@ func init() -> void:
 func do_action() -> void:
 	v("execute_move", [move_name, target_positions])
 
-func get_priority() -> BattleInt:
-	return i("get_move_priority", [])
+func get_priority() -> BattleNumber:
+	return n("get_move_priority", [])

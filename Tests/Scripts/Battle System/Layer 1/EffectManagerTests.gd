@@ -4,7 +4,7 @@ const EffectManager = preload("res://Source/Scripts/Battle System/Layer 1/Effect
 const TestEffect = preload("res://Tests/Scripts/Battle System/Layer 1/TestEffect.gd")
 const TestEffect2 = preload("res://Tests/Scripts/Battle System/Layer 1/TestEffect2.gd")
 const RegisteredEffect = preload("res://Source/Scripts/Battle System/Layer 1/RegisteredEffect.gd")
-const BattleFloat = preload("res://Source/Scripts/Battle System/Layer 1/BattleFloat.gd")
+const BattleNumber = preload("res://Source/Scripts/Battle System/Layer 1/BattleNumber.gd")
 const Fighter = preload("res://Source/Scripts/Battle System/Layer 0/Fighter.gd")
 const Field = preload("res://Source/Scripts/Battle System/Layer 0/Field.gd")
 var effect_manager: EffectManager
@@ -33,7 +33,7 @@ func test_send() -> void:
 
 func test_call_method() -> void:
 	var effect = TestEffect2.new()
-	var result = BattleFloat.new(2)
+	var result = BattleNumber.new(2)
 	effect_manager.call_method(effect, "call_test", [5], result)
 	asserts.is_equal(12, result.value)
 	effect_manager.call_method(effect, "call_test", [12], result)

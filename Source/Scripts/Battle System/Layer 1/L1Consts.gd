@@ -1,17 +1,17 @@
 class_name L1Consts
 
 enum SenderType {SELF, ALLY, SELF_OR_ALLY, OPPONENT, BATTLEFIELD}
-enum MessageType {VOID, BOOL, INT, FLOAT, ENTITY, ARRAY}
+enum MessageType {VOID, BOOL, NUMBER, ENTITY, ARRAY}
 enum Role {SELF, ALLY, OPPONENT, BATTLEFIELD}
 
 const MESSAGES = {
 	"nudge": MessageType.VOID,
 	"get_turn_actions": MessageType.ARRAY,
-	"get_priority": MessageType.INT,
-	"get_reference_speed": MessageType.FLOAT,
-	"get_speed": MessageType.FLOAT,
-	"get_max_speed": MessageType.FLOAT,
-	"get_opponent_max_speed": MessageType.FLOAT,
+	"get_priority": MessageType.NUMBER,
+	"get_reference_speed": MessageType.NUMBER,
+	"get_speed": MessageType.NUMBER,
+	"get_max_speed": MessageType.NUMBER,
+	"get_opponent_max_speed": MessageType.NUMBER,
 	"execute": MessageType.VOID,
 	"try_escape": MessageType.VOID,
 	"escape": MessageType.VOID,

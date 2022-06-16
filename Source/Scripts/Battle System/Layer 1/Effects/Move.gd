@@ -27,11 +27,20 @@ func execute_move(move_name: String, target_positions: Array) -> void:
 			battle.add_effect(owner, "MoveEffects/" + effect)
 		v("do_move", [target_positions])
 
-func get_move_priority() -> BattleInt:
-	return BattleInt.new(move_priority)
+func get_move_priority() -> BattleNumber:
+	return BattleNumber.new(move_priority)
 
-func get_display_pp(index: int) -> BattleInt:
+func get_display_pp(index: int) -> BattleNumber:
 	if index == self.index:
-		return BattleInt.new(pp)
+		return BattleNumber.new(pp)
 	return BattleAdd.new(0)
 	
+func get_display_type(index: int) -> BattleNumber:
+	if index == self.index:
+		return BattleNumber.new(move_type)
+	return BattleAdd.new(0)
+
+func get_possible_targets(index: int) -> BattleNumber:
+	if index == self.index:
+		return BattleNumber.new(possible_targets)
+	return BattleAdd.new(0)
