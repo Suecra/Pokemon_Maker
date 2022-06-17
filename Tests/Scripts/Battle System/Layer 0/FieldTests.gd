@@ -24,6 +24,20 @@ func test_update_defeated() -> void:
 	field.update_defeated()
 	asserts.is_true(field.defeated)
 
+func test_get_fighter_at_position() -> void:
+	var team = field.add_team()
+	var fighter = team.add_fighter()
+	field.size = 3
+	fighter.position = 2
+	fighter.active = true
+	asserts.is_null(field.get_fighter_at_position(1))
+	asserts.is_equal(fighter, field.get_fighter_at_position(2))
+	fighter.active = false
+	asserts.is_null(field.get_fighter_at_position(2))
+	fighter.active = true
+	fighter.fainted = true
+	asserts.is_null(field.get_fighter_at_position(2))
+
 func test_is_position_blocked() -> void:
 	var team = field.add_team()
 	var fighter = team.add_fighter()

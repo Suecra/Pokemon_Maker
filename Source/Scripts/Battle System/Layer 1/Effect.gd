@@ -17,10 +17,12 @@ var owner: BattleEntity
 var current_owner: BattleEntity
 var effect_manager: Reference
 var battle: Reference
+var lasting_turns := -1
 
 func _register() -> void:
 	current_owner = owner
 	reg("exists", 0, L1Consts.SenderType.BATTLEFIELD)
+	reg("end_of_turn", 0, L1Consts.SenderType.BATTLEFIELD)
 
 func set_name(name: String) -> void:
 	names.append(name)
@@ -73,6 +75,14 @@ func exists(effect_name: String) -> BattleBool:
 	if is_type(effect_name):
 		return BattleBool.new(true)
 	return BattleBool.new(false)
+
+func end_of_turn() -> void:
+	lasting_turns = n("get_lasting_turns", [], lasting_turns).value
+	if lasting_turns > -1:
+		if lasting_turns == 0:
+			battle.remove_effect(self)
+		else:
+			lasting_turns -= 1
 
 func random_trigger(chance: float) -> BattleBool:
 	return BattleBool.new(battle.random_trigger(chance))

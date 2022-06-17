@@ -4,6 +4,7 @@ var priority := 0
 
 func _init() -> void:
 	set_name("TurnAction")
+	lasting_turns = 0
 
 func _register() -> void:
 	._register()

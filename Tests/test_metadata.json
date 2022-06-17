@@ -118,22 +118,8 @@
 		],
 		"passing": true
 	},
-	"res://tests/Scripts/Battle System/Layer 1/BattleFloatTests.gd": {
-		"path": "res://tests/Scripts/Battle System/Layer 1/BattleFloatTests.gd",
-		"tags": [
-
-		],
-		"passing": true
-	},
 	"res://tests/Scripts/Battle System/Layer 1/BattleIncludeTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 1/BattleIncludeTests.gd",
-		"tags": [
-
-		],
-		"passing": true
-	},
-	"res://tests/Scripts/Battle System/Layer 1/BattleIntTests.gd": {
-		"path": "res://tests/Scripts/Battle System/Layer 1/BattleIntTests.gd",
 		"tags": [
 
 		],
@@ -155,6 +141,13 @@
 	},
 	"res://tests/Scripts/Battle System/Layer 1/BattleMultTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 1/BattleMultTests.gd",
+		"tags": [
+
+		],
+		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 1/BattleNumberTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 1/BattleNumberTests.gd",
 		"tags": [
 
 		],

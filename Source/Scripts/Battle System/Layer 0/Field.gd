@@ -1,5 +1,7 @@
 extends "res://Source/Scripts/Battle System/Layer 0/BattleEntity.gd"
 
+const Fighter = preload("res://Source/Scripts/Battle System/Layer 0/Fighter.gd")
+
 var size: int
 var defeated := false
 var teams = []
@@ -10,12 +12,16 @@ func add_team() -> Reference:
 	teams.append(team)
 	return team
 
-func is_position_blocked(position: int) -> bool:
+func get_fighter_at_position(position: int) -> Fighter:
 	for team in teams:
 		for fighter in team.fighters:
 			if !fighter.fainted && fighter.active && fighter.position == position:
-				return true
-	return false
+				return fighter
+	return null
+
+func is_position_blocked(position: int) -> bool:
+	var fighter = get_fighter_at_position(position)
+	return fighter != null
 
 func is_position_out_of_bounds(position: int) -> bool:
 	return position < 0 || position >= size

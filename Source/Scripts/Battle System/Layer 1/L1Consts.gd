@@ -15,10 +15,19 @@ const MESSAGES = {
 	"execute": MessageType.VOID,
 	"try_escape": MessageType.VOID,
 	"escape": MessageType.VOID,
-	"can_switch_out": MessageType.BOOL,
 	"switch": MessageType.VOID,
 	"use_item": MessageType.VOID,
-	"can_use_item": MessageType.BOOL,
+	"execute_move": MessageType.VOID,
+	"get_move_priority": MessageType.NUMBER,
+	"get_display_pp": MessageType.NUMBER,
+	#"get_display_name"
+	"get_display_type": MessageType.NUMBER,
+	"get_display_category": MessageType.NUMBER,
+	"get_possible_targets": MessageType.ARRAY,
+	"do_move": MessageType.VOID,
+	"begin_of_turn": MessageType.VOID,
+	"end_of_turn": MessageType.VOID,
+	"get_lasting_turns": MessageType.NUMBER,
 }
 
 static func is_sender_type(type: int, role: int) -> bool:
