@@ -4,6 +4,8 @@ const Effect = preload("res://Source/Scripts/Battle System/Layer 1/Effect.gd")
 const TestEffectFactory = preload("res://Tests/Scripts/Battle System/Layer 1/TestEffectFactory.gd")
 const EffectManager = preload("res://Source/Scripts/Battle System/Layer 1/EffectManager.gd")
 const Battlefield = preload("res://Source/Scripts/Battle System/Layer 0/Battlefield.gd")
+const Field = preload("res://Source/Scripts/Battle System/Layer 0/Field.gd")
+const BattleNumber = preload("res://Source/Scripts/Battle System/Layer 1/BattleNumber.gd")
 var effect: Reference
 var effect_manager: EffectManager
 
@@ -27,6 +29,16 @@ func test_reg() -> void:
 	asserts.is_equal(effect, effect_manager.registered_effects["nudge"][0].effect)
 	asserts.is_equal(1, effect_manager.registered_effects["nudge"][0].priority)
 	asserts.is_equal(L1Consts.SenderType.BATTLEFIELD, effect_manager.registered_effects["nudge"][0].sender_type)
+
+func test_register_vars() -> void:
+	effect.register_vars(["i"], L1Consts.SenderType.BATTLEFIELD)
+	asserts.is_equal(effect, effect_manager.registered_effects["get_i"][0].effect)
+	asserts.is_equal(0, effect_manager.registered_effects["get_i"][0].priority)
+	asserts.is_equal(L1Consts.SenderType.BATTLEFIELD, effect_manager.registered_effects["get_i"][0].sender_type)
+	var fld = Field.new()
+	effect.i = 42
+	var number = effect_manager.send("get_i", [], fld, BattleNumber.new(0))
+	asserts.is_equal(42, number.value)
 
 func pre() -> void:
 	var factory = TestEffectFactory.new()

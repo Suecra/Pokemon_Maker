@@ -7,5 +7,8 @@ var value: BattleEntity
 func _concat(battle_var: Reference) -> void:
 	battle_var.value = value
 
+func _get_type() -> int:
+	return L1Consts.MessageType.ENTITY
+
 func _init(value: BattleEntity) -> void:
 	self.value = value

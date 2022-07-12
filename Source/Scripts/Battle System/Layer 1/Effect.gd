@@ -33,27 +33,31 @@ func is_type(name: String) -> bool:
 func reg(message: String, priority: int, sender_type: int) -> void:
 	effect_manager.register(self, message, priority, sender_type)
 
+func register_vars(vars: Array, sender_type: int) -> void:
+	for v in vars:
+		reg("get_" + v, 0, sender_type)
+
 func v(message: String, params: Array) -> void:
-	effect_manager.send(message, get_params(params), current_owner, 0)
+	effect_manager.send(message, get_params(params), current_owner, null)
 	current_owner = owner
 
 func b(message: String, params: Array, default := false) -> BattleBool:
-	var result = effect_manager.send(message, get_params(params), current_owner, default)
+	var result = effect_manager.send(message, get_params(params), current_owner, BattleBool.new(default))
 	current_owner = owner
 	return result
 
 func n(message: String, params: Array, default := 0) -> BattleNumber:
-	var result = effect_manager.send(message, get_params(params), current_owner, default)
+	var result = effect_manager.send(message, get_params(params), current_owner, BattleNumber.new(default))
 	current_owner = owner
 	return result
 
 func ent(message: String, params: Array, default := null) -> BattleVarEntity:
-	var result = effect_manager.send(message, get_params(params), current_owner, default)
+	var result = effect_manager.send(message, get_params(params), current_owner, BattleVarEntity.new(default))
 	current_owner = owner
 	return result
 	
 func arr(message: String, params: Array, default := []) -> BattleArray:
-	var result = effect_manager.send(message, get_params(params), current_owner, default)
+	var result = effect_manager.send(message, get_params(params), current_owner, BattleArray.new(default))
 	current_owner = owner
 	return result
 

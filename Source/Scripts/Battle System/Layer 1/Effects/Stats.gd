@@ -1,6 +1,15 @@
 extends "res://Source/Scripts/Battle System/Layer 1/Effect.gd"
 
+var level: int
+var gender: int
+var hp: int
+var attack: int
+var defense: int
+var special_attack: int
+var special_defense: int
 var speed: int
+var weight: int
+var happiness: int
 
 func _init() -> void:
 	set_name("Stats")

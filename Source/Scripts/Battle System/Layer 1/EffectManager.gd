@@ -28,19 +28,10 @@ func unregister(effect) -> void:
 		if reg_effects.size() == 0:
 			registered_effects.erase(message)
 
-func send(message: String, params: Array, sender: BattleEntity, default):
-	var result
-	if message.begins_with("can_"):
-		result = BattleBool.new(default)
-	else:
-		match L1Consts.MESSAGES[message]:
-			L1Consts.MessageType.BOOL: result = BattleBool.new(default)
-			L1Consts.MessageType.NUMBER: result = BattleNumber.new(default)
-			L1Consts.MessageType.ENTITY: result = BattleVarEntity.new(default)
-			L1Consts.MessageType.ARRAY: result = BattleArray.new(default)
-			L1Consts.MessageType.VOID:
-				if not send("can_" + message, params, sender, true):
-					return null
+func send(message: String, params: Array, sender: BattleEntity, default: BattleVar):
+	var result = default
+	if not message.begins_with("can_") && not send("can_" + message, params, sender, BattleBool.new(true)):
+		return null
 	
 	if registered_effects.has(message):
 		var reg_effects = registered_effects[message]
@@ -51,7 +42,7 @@ func send(message: String, params: Array, sender: BattleEntity, default):
 			if L1Consts.is_sender_type(registered_effect.sender_type, role):
 				var can_receive = true
 				if message != "can_receive":
-					var bvbool = send("can_receive", [sender, effect], sender, can_receive)
+					var bvbool = send("can_receive", [sender, effect], sender, BattleBool.new(can_receive))
 					can_receive = bvbool.value
 				if can_receive:
 					call_method(effect, message, params, result)
@@ -62,13 +53,20 @@ func call_method(effect, message: String, params: Array, result: BattleVar) -> v
 		var next_result = effect.callv(message, params)
 		if next_result != null:
 			next_result._concat(result)
+	else:
+		var var_name = message.substr(4, -1)
+		var v = effect.get(var_name)
+		if result._get_type() == L1Consts.MessageType.NUMBER:
+			BattleNumber.new(v)._concat(result)
+		elif result._get_type() == L1Consts.MessageType.BOOL:
+			BattleBool.new(v)._concat(result)
 
 func sort(a, b) -> bool:
 	if a.priority < b.priority:
 		return true
 	elif a.priority == b.priority && (not a.effect.is_type("get_reference_speed") || not b.effect.is_type("get_reference_speed")):
-		var ref_speed_a = send("get_reference_speed", [], a.owner, 0)
-		var ref_speed_b = send("get_reference_speed", [], b.owner, 0)
+		var ref_speed_a = send("get_reference_speed", [], a.owner, BattleNumber.new(0))
+		var ref_speed_b = send("get_reference_speed", [], b.owner, BattleNumber.new(0))
 		if ref_speed_a > ref_speed_b:
 			return true
 	return false

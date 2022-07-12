@@ -52,8 +52,11 @@ func random_select(list: Array):
 	var idx = randi() % list.size()
 	return list[idx]
 
+func random_number(lower_bound: float, upper_bound: float) -> float:
+	return rand_range(lower_bound, upper_bound)
+
 func nudge_effects() -> void:
-	effect_manager.send("nudge", [], battle_l0.battlefield, 0)
+	effect_manager.send("nudge", [], battle_l0.battlefield, null)
 
 func _init() -> void:
 	effect_factory = EffectFactory.new()
