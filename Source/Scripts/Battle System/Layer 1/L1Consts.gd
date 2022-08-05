@@ -5,6 +5,7 @@ enum MessageType {VOID, BOOL, NUMBER, ENTITY, ARRAY}
 enum Role {SELF, ALLY, OPPONENT, BATTLEFIELD}
 enum MoveFailReason {NO_TARGET}
 enum MoveCategory {PHYSICAL, SPECIAL, STATUS}
+enum EffectReplaceMode {NONE, FIFO, LIFO}
 
 static func is_sender_type(type: int, role: int) -> bool:
 	match role:

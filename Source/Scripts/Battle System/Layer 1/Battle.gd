@@ -15,6 +15,19 @@ func add_effect(owner: BattleEntity, name: String) -> Effect:
 	if not effects.has(owner):
 		effects[owner] = []
 	var effect = effect_factory.create_effect(name, owner)
+	if effect.cardinality != -1:
+		var count = 0
+		for e in effects[owner]:
+			if e.is_type(name):
+				count += 1
+		if count == effect.cardinality:
+			match effect.replace_mode:
+				L1Consts.EffectReplaceMode.NONE:
+					return effects[owner][effects[owner].size() - 1]
+				L1Consts.EffectReplaceMode.FIFO:
+					effects[owner].remove(0)
+				L1Consts.EffectReplaceMode.LIFO:
+					effects[owner].remove(effects[owner].size() - 1)
 	effect.effect_manager = effect_manager
 	effect.battle = self
 	effect._register()
