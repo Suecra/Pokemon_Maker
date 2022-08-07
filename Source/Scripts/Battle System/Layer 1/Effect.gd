@@ -6,6 +6,7 @@ const BattleBool = preload("res://Source/Scripts/Battle System/Layer 1/BattleBoo
 const BattleAnd = preload("res://Source/Scripts/Battle System/Layer 1/BattleAnd.gd")
 const BattleOr = preload("res://Source/Scripts/Battle System/Layer 1/BattleOr.gd")
 const BattleAdd = preload("res://Source/Scripts/Battle System/Layer 1/BattleAdd.gd")
+const BattleMult = preload("res://Source/Scripts/Battle System/Layer 1/BattleMult.gd")
 const BattleNumber = preload("res://Source/Scripts/Battle System/Layer 1/BattleNumber.gd")
 const BattleMax = preload("res://Source/Scripts/Battle System/Layer 1/BattleMax.gd")
 const BattleVarEntity = preload("res://Source/Scripts/Battle System/Layer 1/BattleVarEntity.gd")

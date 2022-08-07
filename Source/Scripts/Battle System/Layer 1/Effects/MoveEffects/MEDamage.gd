@@ -13,24 +13,28 @@ func _register() -> void:
 	reg("get_damage", 0, L1Consts.SenderType.SELF)
 	reg("get_damage_roll", 0, L1Consts.SenderType.SELF)
 
-func hit_target(target: Reference) -> void:
-	var damage = n("get_damage", [target])
-	target.damage(damage)
-
-func get_damage(target: Reference) -> BattleNumber:
+func hit_target(target: Reference) -> BattleBool:
 	var cat = n("get_move_category", [target, type_id, category], category).value
 	var type = n("get_move_type", [target, type_id, cat], type_id).value
-	var params = [target, type, cat]
+	var effectiveness = n("get_effectiveness", [target, type, cat], 1.0).value
+	if effectiveness == 0:
+		return BattleBool.new(false)
+	var damage = n("get_damage", [target, type, cat])
+	delegate(target).v("damage", [damage])
+	return BattleBool.new(true)
+
+func get_damage(target: Reference, type: int, category: int) -> BattleNumber:
+	var params = [target, type, category]
 	var damage = n("get_base_damage", params, base_damage).value
 	var level = n("get_level", params).value
 	var attack := 0
 	var defense := 0
-	if cat == L1Consts.MoveCategory.PHYSICAL:
+	if category == L1Consts.MoveCategory.PHYSICAL:
 		attack = n("get_attack", params).value
-		defense = delegate(target).n("get_defense", [self, type, cat]).value
-	elif cat == L1Consts.MoveCategory.SPECIAL:
+		defense = delegate(target).n("get_defense", [self, type, category]).value
+	elif category == L1Consts.MoveCategory.SPECIAL:
 		attack = n("get_special_attack", params).value
-		defense = delegate(target).n("get_special_defense", [self, type, cat]).value
+		defense = delegate(target).n("get_special_defense", [self, type, category]).value
 	var factor_1 = n("get_damage_factor_1", params, 1.0).value
 	var is_crit = b("is_critical_hit", params, false).value
 	if not is_crit:
@@ -42,8 +46,8 @@ func get_damage(target: Reference) -> BattleNumber:
 	var factor_2 = n("get_damage_factor_2", params, 1.0).value
 	var damage_roll = n("get_damage_roll", params, 1.0).value
 	var stab = n("get_STAB", params, 1.0).value
-	var type_factor = n("get_effectiveness", params, 1.0).value
 	var factor_3 = n("get_damage_factor_3", params, 1.0).value
+	var type_factor = n("get_effectiveness", params, 1.0).value
 	
 	damage = floor(((level * 2.0 / 5.0 + 2) * damage * attack / (50 * defense) * factor_1 + 2) * crit_factor * factor_2 * damage_roll * stab * type_factor * factor_3)
 	

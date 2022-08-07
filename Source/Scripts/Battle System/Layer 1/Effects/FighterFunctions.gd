@@ -7,7 +7,11 @@ func _init() -> void:
 
 func _register() -> void:
 	._register()
+	reg("damage", 0, L1Consts.SenderType.SELF)
 	reg("switch", 0, L1Consts.SenderType.SELF)
+
+func damage(hp: int) -> void:
+	owner.damage(hp)
 
 func switch(fighter: Fighter) -> void:
 	owner.active = false

@@ -11,6 +11,7 @@ func _register() -> void:
 	._register()
 	reg("use_item", 0, L1Consts.SenderType.SELF)
 	reg("can_use_item", 0, L1Consts.SenderType.SELF)
+	reg("get_battle_options", 0, L1Consts.SenderType.SELF)
 
 func use_item(item_name: String, fighter: Fighter) -> void:
 	var item = battle.add_effect(fighter, "Items/" + item_name)
@@ -19,3 +20,6 @@ func use_item(item_name: String, fighter: Fighter) -> void:
 
 func can_use_item(item_name: String, fighter: Fighter) -> BattleBool:
 	return BattleAnd.new(bag[item_name] > 0)
+
+func get_battle_options() -> BattleArray:
+	return BattleArray.new([0, 1, 2, 3])

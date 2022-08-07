@@ -3,9 +3,10 @@ class_name L1Consts
 enum SenderType {SELF, ALLY, SELF_OR_ALLY, OPPONENT, BATTLEFIELD}
 enum MessageType {VOID, BOOL, NUMBER, ENTITY, ARRAY}
 enum Role {SELF, ALLY, OPPONENT, BATTLEFIELD}
-enum MoveFailReason {NO_TARGET}
+enum MoveFailReason {NO_TARGET, NO_EFFECT}
 enum MoveCategory {PHYSICAL, SPECIAL, STATUS}
 enum EffectReplaceMode {NONE, FIFO, LIFO}
+enum BattleOptions {FIGHT, ITEM, SWITCH, RUN}
 
 static func is_sender_type(type: int, role: int) -> bool:
 	match role:

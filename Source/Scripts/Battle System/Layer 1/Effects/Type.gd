@@ -19,5 +19,5 @@ func get_stab(target: Reference, type_id: int, category: int) -> BattleNumber:
 
 func get_effectiveness(target: Reference, type_id: int, category: int) -> BattleNumber:
 	if damage_factors.has(type_id):
-		return BattleMult.new(damage_factors[type])
+		return BattleMult.new(damage_factors[type_id])
 	return BattleMult.new(1)
