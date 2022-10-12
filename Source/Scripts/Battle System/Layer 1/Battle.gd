@@ -11,6 +11,10 @@ var effect_manager: EffectManager
 var effect_factory: EffectFactory
 var effects: Dictionary
 
+func start() -> void:
+	effects.clear()
+	battle_l0.start()
+
 func add_effect(owner: BattleEntity, name: String) -> Effect:
 	if not effects.has(owner):
 		effects[owner] = []
@@ -73,3 +77,4 @@ func nudge_effects() -> void:
 
 func _init() -> void:
 	effect_factory = EffectFactory.new()
+	battle_l0 = BattleL0.new()
