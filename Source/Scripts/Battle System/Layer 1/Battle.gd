@@ -34,6 +34,7 @@ func add_effect(owner: BattleEntity, name: String) -> Effect:
 					effects[owner].remove(effects[owner].size() - 1)
 	effect.effect_manager = effect_manager
 	effect.battle = self
+	effect.battlefield = battle_l0.battlefield
 	effect._register()
 	effects[owner].append(effect)
 	return effect

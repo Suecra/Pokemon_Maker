@@ -18,3 +18,20 @@ func init_battle() -> void:
 	effect.speed = pokemon.speed
 	effect.weight = pokemon.species.weight
 	effect.happiness = pokemon.happiness
+	
+	var idx = 0
+	for m in pokemon.moves:
+		var move = get_move_data(m)
+		effect = battle.battle_l1.add_effect(fighter, "Move")
+		effect.index = idx
+		effect.pp = move.pp
+		effect.move_name = m
+		effect.move_type = move.type
+		effect.move_category = move.category
+		effect.move_priority = move.priority
+		effect.move_effects = move.effects
+		effect.possible_targets = move.possible_targets
+		idx += 1
+
+func get_move_data(move: String) -> Reference:
+	return null

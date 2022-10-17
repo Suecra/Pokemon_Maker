@@ -18,6 +18,7 @@ var owner: BattleEntity
 var current_owner: BattleEntity
 var effect_manager: Reference
 var battle: Reference
+var battlefield: Reference
 var lasting_turns := -1
 var cardinality := -1
 var replace_mode = L1Consts.EffectReplaceMode.NONE
