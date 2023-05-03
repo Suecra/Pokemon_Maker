@@ -25,13 +25,7 @@ export(int, 0, 31) var speed_iv
 export(int, 0, 255) var happiness
 export(bool) var shiny
 
-var pokemon: Reference
-var hp: int
-var attack: int
-var defense: int
-var special_attack: int
-var special_defense: int
-var speed: int
+var pokemon: Pokemon
 
 func get_hp() -> int:
 	return int(floor(((2 * pokemon.hp + hp_iv + hp_ev / 4) * level / 100)) + level + 10)
@@ -52,7 +46,7 @@ func get_speed() -> int:
 	return int(calculate_stat(pokemon.speed, speed_ev, speed_iv, 4))
 
 func set_current_hp(value: int) -> void:
-	current_hp = min(value, hp)
+	current_hp = min(value, get_hp())
 	current_hp = max(current_hp, 0)
 
 func calculate_stat(base: int, ev: int, iv: int, idx: int) -> float:
@@ -68,3 +62,10 @@ func find_moves(node: Node, moves: Array) -> void:
 		if child.get_meta("class_name") == "Move":
 			moves.append(child)
 			find_moves(child, moves)
+
+func load_species() -> void:
+	if pokemon == null:
+		pokemon = Pokemon.new(species)
+		pokemon.name = "Species"
+		add_child(pokemon)
+		pokemon.owner = self

@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Reference",
+"class": "BattleBuilder",
+"language": "GDScript",
+"path": "res://Source/Scripts/Battle System/Layer 2/BattleBuilder.gd"
+}, {
+"base": "Reference",
 "class": "Consts",
 "language": "GDScript",
 "path": "res://Source/Scripts/Consts.gd"
@@ -185,6 +190,7 @@ _global_script_classes=[ {
 "path": "res://Source/Data/WildPokemonItem.gd"
 } ]
 _global_script_class_icons={
+"BattleBuilder": "",
 "Consts": "",
 "Effect": "",
 "EffectBadPoison": "",

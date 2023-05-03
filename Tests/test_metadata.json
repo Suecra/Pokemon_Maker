@@ -55,13 +55,6 @@
 		],
 		"passing": true
 	},
-	"res://tests/Scripts/Battle System/Layer 0/BattleTests.gd": {
-		"path": "res://tests/Scripts/Battle System/Layer 0/BattleTests.gd",
-		"tags": [
-
-		],
-		"passing": true
-	},
 	"res://tests/Scripts/Battle System/Layer 0/FieldTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 0/FieldTests.gd",
 		"tags": [
@@ -155,13 +148,6 @@
 	},
 	"res://tests/Scripts/Battle System/Layer 1/BattleOrTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 1/BattleOrTests.gd",
-		"tags": [
-
-		],
-		"passing": true
-	},
-	"res://tests/Scripts/Battle System/Layer 1/BattleTests.gd": {
-		"path": "res://tests/Scripts/Battle System/Layer 1/BattleTests.gd",
 		"tags": [
 
 		],

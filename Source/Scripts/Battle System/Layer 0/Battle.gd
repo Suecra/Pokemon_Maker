@@ -36,5 +36,6 @@ func check_finished() -> void:
 func abort() -> void:
 	state = BattleState.ABORTED
 
-func _init() -> void:
+func _init(battlefield_size: int) -> void:
 	battlefield = Battlefield.new()
+	battlefield.size = battlefield_size

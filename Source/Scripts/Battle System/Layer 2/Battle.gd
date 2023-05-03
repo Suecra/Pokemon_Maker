@@ -2,12 +2,20 @@ extends Reference
 
 const BattleL0 = preload("res://Source/Scripts/Battle System/Layer 0/Battle.gd")
 const BattleL1 = preload("res://Source/Scripts/Battle System/Layer 1/Battle.gd")
+const Field = preload("res://Source/Scripts/Battle System/Layer 2/Field.gd")
 const Trainer = preload("res://Source/Scripts/Battle System/Layer 2/Trainer.gd")
+const Team = preload("res://Source/Scripts/Battle System/Layer 2/Team.gd")
 const Pokemon = preload("res://Source/Scripts/Battle System/Layer 2/Pokemon.gd")
 
 var battle_l1: BattleL1
-var trainers: Array
+var fields: Array
 var requested_pokemon: Array
+
+func add_field() -> Field:
+	var field = Field.new()
+	field.battle = self
+	fields.append(field)
+	return field
 
 func start() -> void:
 	battle_l1.start()
@@ -21,11 +29,11 @@ func turn() -> void:
 			battle_l1.add_effect(battle_l1.battle_l0.battlefield, "TurnActions/BeginOfTurn")
 			battle_l1.add_effect(battle_l1.battle_l0.battlefield, "TurnActions/EndOfTurn")
 			requested_pokemon = []
-			for trainer in trainers:
-				requested_pokemon.append_array(trainer.team.pokemon)
-			for trainer in trainers:
-				for p in trainer.team.pokemon:
-					trainer.request_action(p)
+			for field in fields:
+				for trainer in field.trainers:
+					requested_pokemon.append_array(trainer.team.pokemon)
+			for field in fields:
+				field.request_action()
 
 func get_possible_moves(pokemon: Pokemon) -> Array:
 	var moves = battle_l1.effect_manager.send("get_move", [], pokemon.fighter, null)
@@ -66,8 +74,5 @@ func do_action(trainer: Trainer, pokemon: Array) -> void:
 
 func init_battle() -> void:
 	battle_l1.add_effect(battle_l1.battle_l0.battlefield, "TurnPriorityQueue")
-	for trainer in trainers:
-		trainer.init_battle()
-
-func _init() -> void:
-	battle_l1 = BattleL1.new()
+	for field in fields:
+		field.init_battle()

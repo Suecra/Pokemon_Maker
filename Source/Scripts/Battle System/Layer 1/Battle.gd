@@ -78,4 +78,4 @@ func nudge_effects() -> void:
 
 func _init() -> void:
 	effect_factory = EffectFactory.new()
-	battle_l0 = BattleL0.new()
+	effect_manager = EffectManager.new()

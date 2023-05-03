@@ -3,15 +3,17 @@ extends Reference
 const Fighter = preload("res://Source/Scripts/Battle System/Layer 0/Fighter.gd")
 
 var battle: Reference
+var field: Reference
+var trainer: Reference
+var team: Reference
 var fighter: Fighter
 var pokemon: Reference
-var team: Reference
 
 func init_battle() -> void:
-	fighter = team.teaml0.add_fighter()
 	fighter.hp = pokemon.hp
 	battle.battle_l1.add_effect(fighter, "FighterFunctions")
 	var effect = battle.battle_l1.add_effect(fighter, "Stats")
+	pokemon.load_species()
 	effect.level = pokemon.level
 	effect.gender = pokemon.gender
 	effect.attack = pokemon.get_attack()
@@ -24,16 +26,17 @@ func init_battle() -> void:
 	
 	var idx = 0
 	for m in pokemon.get_moves():
-		var move = m.move
+		m.load_move_data()
+		var move = m.move_data
 		effect = battle.battle_l1.add_effect(fighter, "Move")
 		effect.index = idx
 		effect.pp = move.pp
 		effect.move_name = m.move_name
-		effect.move_type = move.type
-		effect.move_category = move.category
+		effect.move_type = move.type_id
+		effect.move_category = move.damage_class
 		effect.move_priority = move.priority
-		effect.move_effects = move.effects
-		effect.possible_targets = move.possible_targets
+		effect.move_effects = move.effect_dict
+		effect.target_type = move.possible_targets
 		idx += 1
 
 func get_move_data(move: String) -> Reference:

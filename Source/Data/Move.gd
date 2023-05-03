@@ -9,6 +9,7 @@ enum ContestType {Cool, Beauty, Cute, Smart, Tough}
 
 export(String) var move_name
 export(PackedScene) var type
+export(int) var type_id
 export(DamageClass) var damage_class
 export(int, 0, 255) var power
 export(int, 0, 100) var accuracy
@@ -24,6 +25,7 @@ export(ContestType) var contest_type
 export(PackedScene) var contest_effect
 export(int, "Attack", "Defense", "Support") var battle_style
 export(String) var description
+export(Dictionary) var effect_dict
 
 onready var effects = $Effects
 
@@ -38,6 +40,8 @@ func _load_from_json(data: Dictionary) -> void:
 	move_name = data["name"]
 	name = move_name
 	type = load(Consts.TYPE_PATH + data["type"]["name"] + ".tscn")
+	var temp = type.instance()
+	type_id = temp.id
 	match data["damage_class"]["name"]:
 		"status": damage_class = DamageClass.Status
 		"physical": damage_class = DamageClass.Physical
@@ -178,6 +182,8 @@ func _save_to_json(data: Dictionary) -> void:
 	set_en_description(data["flavor_text_entries"], "flavor_text", description)
 
 func load_effects(data: Dictionary) -> void:
+	if data.has("move_effects"):
+		effect_dict = data["move_effects"]
 	var effects
 	if data["stat_changes"] != []:
 		effects = Utils.add_node_if_not_exists(self, self, "Effects")
