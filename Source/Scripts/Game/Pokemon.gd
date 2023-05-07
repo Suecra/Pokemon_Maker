@@ -1,5 +1,7 @@
 extends Node
 
+const Move = preload("res://Source/Scripts/Game/Move.gd")
+
 export(String) var nickname
 export(String) var species
 export(int, 1, 100) var level
@@ -56,6 +58,13 @@ func get_moves() -> Array:
 	var moves = []
 	find_moves(self, moves)
 	return moves
+
+func add_move(name: String) -> Move:
+	var move = Move.new()
+	move.move_name = name
+	add_child(move)
+	move.owner = self
+	return move
 
 func find_moves(node: Node, moves: Array) -> void:
 	for child in node.get_children():

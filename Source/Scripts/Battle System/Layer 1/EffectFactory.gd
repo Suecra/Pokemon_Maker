@@ -5,4 +5,6 @@ const BattleEntity = preload("res://Source/Scripts/Battle System/Layer 0/BattleE
 const BASE_PATH = "res://Source/Scripts/Battle System/Layer 1/Effects/"
 
 func create_effect(name: String, owner: BattleEntity) -> Effect:
-	 return load(BASE_PATH + name + ".gd").new(owner)
+	var effect = load(BASE_PATH + name + ".gd").new()
+	effect.owner = owner
+	return effect

@@ -6,10 +6,12 @@ const Field = preload("res://Source/Scripts/Battle System/Layer 2/Field.gd")
 const Trainer = preload("res://Source/Scripts/Battle System/Layer 2/Trainer.gd")
 const Team = preload("res://Source/Scripts/Battle System/Layer 2/Team.gd")
 const Pokemon = preload("res://Source/Scripts/Battle System/Layer 2/Pokemon.gd")
+const Logger = preload("res://Source/Scripts/Battle System/Layer 2/Logger.gd")
 
 var battle_l1: BattleL1
 var fields: Array
 var requested_pokemon: Array
+var logger: Logger
 
 func add_field() -> Field:
 	var field = Field.new()
@@ -76,3 +78,5 @@ func init_battle() -> void:
 	battle_l1.add_effect(battle_l1.battle_l0.battlefield, "TurnPriorityQueue")
 	for field in fields:
 		field.init_battle()
+	if logger != null:
+		logger.init_battle()

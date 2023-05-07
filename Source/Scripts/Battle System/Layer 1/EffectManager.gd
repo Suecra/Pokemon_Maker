@@ -65,8 +65,8 @@ func sort(a, b) -> bool:
 	if a.priority < b.priority:
 		return true
 	elif a.priority == b.priority && (not a.effect.is_type("get_reference_speed") || not b.effect.is_type("get_reference_speed")):
-		var ref_speed_a = send("get_reference_speed", [], a.owner, BattleNumber.new(0))
-		var ref_speed_b = send("get_reference_speed", [], b.owner, BattleNumber.new(0))
+		var ref_speed_a = send("get_reference_speed", [], a.effect.owner, BattleNumber.new(0))
+		var ref_speed_b = send("get_reference_speed", [], b.effect.owner, BattleNumber.new(0))
 		if ref_speed_a > ref_speed_b:
 			return true
 	return false

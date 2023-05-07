@@ -7,13 +7,13 @@ var field: Reference
 var trainer: Reference
 var team: Reference
 var fighter: Fighter
-var pokemon: Reference
+var pokemon
 
 func init_battle() -> void:
-	fighter.hp = pokemon.hp
 	battle.battle_l1.add_effect(fighter, "FighterFunctions")
 	var effect = battle.battle_l1.add_effect(fighter, "Stats")
 	pokemon.load_species()
+	fighter.hp = pokemon.get_hp()
 	effect.level = pokemon.level
 	effect.gender = pokemon.gender
 	effect.attack = pokemon.get_attack()

@@ -2,6 +2,8 @@ extends Reference
 
 enum Type {FIGHTER, TEAM, FIELD, BATTLEFIELD}
 
+var name: String
+
 func _get_entity_relation(battle_entity: Reference) -> int:
 	return L1Consts.Role.BATTLEFIELD
 

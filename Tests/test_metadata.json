@@ -180,5 +180,12 @@
 
 		],
 		"passing": true
+	},
+	"res://tests/Scripts/Battle System/Layer 2/SampleBattleTests.gd": {
+		"path": "res://tests/Scripts/Battle System/Layer 2/SampleBattleTests.gd",
+		"tags": [
+
+		],
+		"passing": false
 	}
 }

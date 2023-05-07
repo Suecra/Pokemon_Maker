@@ -28,5 +28,5 @@ func init_battle() -> void:
 	for i in range(field_size):
 		pokemon[i].fighter.position = i
 		pokemon[i].fighter.active = true
-		var switch = battle.battle_l1.add_effect(pokemon[i].fighter, "Switch")
+		var switch = battle.battle_l1.add_effect(pokemon[i].fighter, "TurnActions/Switch")
 		switch.fighter = pokemon[i].fighter

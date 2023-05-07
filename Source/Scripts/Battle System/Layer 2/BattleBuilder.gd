@@ -6,13 +6,14 @@ const BattleL0 = preload("res://Source/Scripts/Battle System/Layer 0/Battle.gd")
 const BattleL1 = preload("res://Source/Scripts/Battle System/Layer 1/Battle.gd")
 const BattleL2 = preload("res://Source/Scripts/Battle System/Layer 2/Battle.gd")
 const Field = preload("res://Source/Scripts/Battle System/Layer 0/Field.gd")
+const Fighter = preload("res://Source/Scripts/Battle System/Layer 0/Fighter.gd")
 const Battlefield = preload("res://Source/Scripts/Battle System/Layer 0/Battlefield.gd")
 const Trainer = preload("res://Source/Scripts/Battle System/Layer 2/Trainer.gd")
 const Team = preload("res://Source/Scripts/Battle System/Layer 2/Team.gd")
 const SimpleTrainerController = preload("res://Source/Scripts/Battle System/Layer 2/TrainerControllers/SimpleController.gd")
 const Pokemon = preload("res://Source/Scripts/Game/Pokemon.gd")
 
-static func BuildSampleBattle() -> BattleL2:
+static func build_sample_battle(parent: Node) -> BattleL2:
 	var b0 = BattleL0.new(1)
 	var b1 = BattleL1.new()
 	var b2 = BattleL2.new()
@@ -31,12 +32,30 @@ static func BuildSampleBattle() -> BattleL2:
 	var pokemon1 = trainer1.team.add_pokemon()
 	var pokemon2 = trainer2.team.add_pokemon()
 	
+	fighter1.name = "bidoof1"
+	fighter2.name = "bidoof2"
+	team1.name = "Team1"
+	team2.name = "Team2"
 	pokemon1.fighter = fighter1
 	pokemon2.fighter = fighter2
-	pokemon1.pokemon = Pokemon.new()
-	pokemon2.pokemon = Pokemon.new()
-	pokemon1.pokemon.species = "bidoof"
-	pokemon2.pokemon.species = "bidoof"
+	
+	var p1 = Pokemon.new()
+	parent.add_child(p1)
+	p1.owner = parent
+	p1.species = "bidoof"
+	p1.level = 5
+	p1.nature = "hardy"
+	p1.add_move("tackle")
+	var p2 = Pokemon.new()
+	parent.add_child(p2)
+	p2.owner = parent
+	p2.species = "bidoof"
+	p2.level = 5
+	p2.nature = "hardy"
+	p2.add_move("tackle")
+	
+	pokemon1.pokemon = p1
+	pokemon2.pokemon = p2
 	trainer1.team.team_l0 = team1
 	trainer2.team.team_l0 = team2
 	trainer1.controller = SimpleTrainerController.new()
