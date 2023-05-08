@@ -13,7 +13,7 @@ func _register() -> void:
 
 func get_stab(target: Reference, type_id: int, category: int) -> BattleNumber:
 	if type_id == self.type_id:
-		var stab_factor = n("get_stab_factor", [target, type_id, category], 1.5).value
+		var stab_factor = f("get_stab_factor", [target, type_id, category], 1.5)
 		return BattleMult.new(stab_factor)
 	return BattleMult.new(1)
 

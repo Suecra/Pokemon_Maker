@@ -16,9 +16,9 @@ func escape() -> void:
 	battle.add_effect(battle.battle_l0.battlefield, "FieldEffects/Aborted")
 
 func try_escape() -> void:
-	var own_speed = n("get_max_speed", [false])
-	var opponent_speed = n("get_opponent_max_speed", [false])
-	var run_tries = n("get_run_tries", [], run_tries)
+	var own_speed = f("get_max_speed", [false])
+	var opponent_speed = f("get_opponent_max_speed", [false])
+	var run_tries = i("get_run_tries", [], run_tries)
 	var chance = 255 / (own_speed * 128 / opponent_speed + 30 * run_tries)
 	if b("trigger", [chance]):
 		v("escape", [])

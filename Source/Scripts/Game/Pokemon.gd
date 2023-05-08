@@ -61,7 +61,9 @@ func get_moves() -> Array:
 
 func add_move(name: String) -> Move:
 	var move = Move.new()
+	move.name = name
 	move.move_name = name
+	move.set_meta("class_name", "Move")
 	add_child(move)
 	move.owner = self
 	return move

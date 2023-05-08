@@ -26,12 +26,12 @@ func _register() -> void:
 func execute_move(move_name: String, target_index: int) -> void:
 	if move_name == self.move_name:
 		var effects = arr("get_move_effects", [], move_effects)
-		for effect in effects.value:
+		for effect in effects:
 			var move_effect = battle.add_effect(owner, "MoveEffects/" + effect["name"])
 			for key in effect["params"].get_keys():
 				move_effect.set(key, effect["params"][key])
 		var target_positions = arr("get_target_positions", [index, target_index])
-		v("do_move", [target_positions.value])
+		v("do_move", [target_positions])
 
 func get_move() -> BattleArray:
 	return BattleInclude.new([self])

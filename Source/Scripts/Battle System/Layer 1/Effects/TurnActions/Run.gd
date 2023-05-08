@@ -5,4 +5,4 @@ func init() -> void:
 	set_name("Run")
 
 func do_action() -> void:
-	v("tr_escape", [])
+	v("try_escape", [])

@@ -11,10 +11,10 @@ const BattleArray = preload("res://Source/Scripts/Battle System/Layer 1/BattleAr
 
 var registered_effects := {}
 
-func register(effect, message: String, priority: int, sender_type: int) -> void:
+func register(effect, message: String, priority: int, sender_type: int, sorted: bool) -> void:
 	if not registered_effects.has(message):
 		registered_effects[message] = []
-	registered_effects[message].append(RegisteredEffect.new(effect, priority, sender_type))
+	registered_effects[message].append(RegisteredEffect.new(effect, priority, sender_type, sorted))
 
 func unregister(effect) -> void:
 	for message in registered_effects.keys():
@@ -32,7 +32,6 @@ func send(message: String, params: Array, sender: BattleEntity, default: BattleV
 	var result = default
 	if not message.begins_with("can_") && not send("can_" + message, params, sender, BattleBool.new(true)):
 		return null
-	
 	if registered_effects.has(message):
 		var reg_effects = registered_effects[message]
 		reg_effects.sort_custom(self, "sort")
@@ -42,8 +41,7 @@ func send(message: String, params: Array, sender: BattleEntity, default: BattleV
 			if L1Consts.is_sender_type(registered_effect.sender_type, role):
 				var can_receive = true
 				if message != "can_receive":
-					var bvbool = send("can_receive", [sender, effect], sender, BattleBool.new(can_receive))
-					can_receive = bvbool.value
+					can_receive = send("can_receive", [sender, effect], sender, BattleBool.new(can_receive)).value
 				if can_receive:
 					call_method(effect, message, params, result)
 	return result
@@ -64,9 +62,13 @@ func call_method(effect, message: String, params: Array, result: BattleVar) -> v
 func sort(a, b) -> bool:
 	if a.priority < b.priority:
 		return true
-	elif a.priority == b.priority && (not a.effect.is_type("get_reference_speed") || not b.effect.is_type("get_reference_speed")):
-		var ref_speed_a = send("get_reference_speed", [], a.effect.owner, BattleNumber.new(0))
-		var ref_speed_b = send("get_reference_speed", [], b.effect.owner, BattleNumber.new(0))
+	elif a.priority == b.priority:
+		if not a.sorted:
+			return false
+		if not b.sorted:
+			return true
+		var ref_speed_a = send("get_reference_speed", [], a.effect.owner, BattleNumber.new(0)).value
+		var ref_speed_b = send("get_reference_speed", [], b.effect.owner, BattleNumber.new(0)).value
 		if ref_speed_a > ref_speed_b:
 			return true
 	return false

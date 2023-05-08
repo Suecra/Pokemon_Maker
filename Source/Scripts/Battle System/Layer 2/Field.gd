@@ -26,6 +26,5 @@ func init_battle() -> void:
 
 func request_action() -> void:
 	for t in trainers:
-		t.request_action()
 		for p in t.team.pokemon:
 			t.request_action(p)

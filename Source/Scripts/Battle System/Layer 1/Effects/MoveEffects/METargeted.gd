@@ -20,9 +20,9 @@ func do_move(target_positions: Array) -> void:
 			no_target = false
 			var is_hit = guaranteed_hit
 			if not is_hit:
-				var hit_chance = n("get_accuracy", [target], accuracy)
+				var hit_chance = f("get_accuracy", [target], accuracy)
 				is_hit = random_trigger(hit_chance)
-			if is_hit && b("hit_target", [target]).value:
+			if is_hit && b("hit_target", [target]):
 				no_effect = false
 	if no_target:
 		v("fail_move", [L1Consts.MoveFailReason.NO_TARGET])

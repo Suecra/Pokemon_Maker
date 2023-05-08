@@ -14,7 +14,7 @@ func _register() -> void:
 func end_of_turn() -> void:
 	print("Round " + str(round_nr) + " has finished.")
 	round_nr += 1
-	fighters = arr("get_fighters", []).value
+	fighters = arr("get_fighters", [])
 	for fighter in fighters:
 		print(fighter.name + " has " + str(fighter.hp) + " HP.")
 	if battle.battle_l0.state == 2:

@@ -15,9 +15,10 @@ func _init() -> void:
 
 func _register() -> void:
 	._register()
-	register_vars(["level", "gender", "attack", "defense", "special_attack", "special_defense", "speed", "weight", "happiness"], L1Consts.SenderType.SELF)
+	register_vars(["level", "gender", "attack", "defense", "special_attack", "special_defense", "weight", "happiness"], L1Consts.SenderType.SELF)
 	reg("get_hp", 0, L1Consts.SenderType.SELF_OR_ALLY)
-	reg("get_max_speed", 0, L1Consts.SenderType.SELF_OR_ALLY)
+	reg("get_speed", 0, L1Consts.SenderType.SELF_OR_ALLY, false)
+	reg("get_max_speed", 0, L1Consts.SenderType.SELF_OR_ALLY, false)
 	reg("get_opponent_max_speed", 0, L1Consts.SenderType.OPPONENT)
 
 func get_hp() -> BattleNumber:
@@ -27,7 +28,7 @@ func get_speed(modified: bool) -> BattleNumber:
 	return BattleNumber.new(speed)
 	
 func get_max_speed(modified: bool) -> BattleNumber:
-	return BattleMax.new(n("get_speed", [modified]).value)
+	return BattleMax.new(f("get_speed", [modified]))
 
 func get_opponent_max_speed(modified: bool) -> BattleNumber:
-	return BattleMax.new(n("get_speed", [modified]).value)
+	return BattleMax.new(f("get_speed", [modified]))

@@ -165,7 +165,7 @@
 		"tags": [
 
 		],
-		"passing": true
+		"passing": false
 	},
 	"res://tests/Scripts/Battle System/Layer 1/EffectTests.gd": {
 		"path": "res://tests/Scripts/Battle System/Layer 1/EffectTests.gd",

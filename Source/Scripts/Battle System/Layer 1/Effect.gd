@@ -34,42 +34,41 @@ func set_name(name: String) -> void:
 func is_type(name: String) -> bool:
 	return names.has(name)
 
-func reg(message: String, priority: int, sender_type: int) -> void:
-	effect_manager.register(self, message, priority, sender_type)
+func reg(message: String, priority: int, sender_type: int, sorted: bool = true) -> void:
+	effect_manager.register(self, message, priority, sender_type, sorted)
 
 func register_vars(vars: Array, sender_type: int) -> void:
 	for v in vars:
 		reg("get_" + v, 0, sender_type)
 
 func v(message: String, params: Array) -> void:
-	effect_manager.send(message, get_params(params), current_owner, null)
+	effect_manager.send(message, params, current_owner, null)
 	current_owner = owner
 
-func b(message: String, params: Array, default := false) -> BattleBool:
-	var result = effect_manager.send(message, get_params(params), current_owner, BattleBool.new(default))
+func b(message: String, params: Array, default := false) -> bool:
+	var result = effect_manager.send(message, params, current_owner, BattleBool.new(default))
 	current_owner = owner
-	return result
+	return result.value
 
-func n(message: String, params: Array, default := 0) -> BattleNumber:
-	var result = effect_manager.send(message, get_params(params), current_owner, BattleNumber.new(default))
+func f(message: String, params: Array, default := 0) -> float:
+	var result = effect_manager.send(message, params, current_owner, BattleNumber.new(default))
 	current_owner = owner
-	return result
+	return result.value
 
-func ent(message: String, params: Array, default := null) -> BattleVarEntity:
-	var result = effect_manager.send(message, get_params(params), current_owner, BattleVarEntity.new(default))
+func i(message: String, params: Array, default := 0) -> int:
+	var result = effect_manager.send(message, params, current_owner, BattleNumber.new(default))
 	current_owner = owner
-	return result
+	return int(result.value)
+
+func ent(message: String, params: Array, default := null) -> BattleEntity:
+	var result = effect_manager.send(message, params, current_owner, BattleVarEntity.new(default))
+	current_owner = owner
+	return result.value
 	
-func arr(message: String, params: Array, default := []) -> BattleArray:
-	var result = effect_manager.send(message, get_params(params), current_owner, BattleArray.new(default))
+func arr(message: String, params: Array, default := []) -> Array:
+	var result = effect_manager.send(message, params, current_owner, BattleArray.new(default))
 	current_owner = owner
-	return result
-
-func get_params(params: Array) -> Array:
-	var result = []
-	for param in params:
-		result.append(param.value)
-	return result
+	return result.value
 
 func delegate(entity: BattleEntity) -> Reference:
 	current_owner = entity
@@ -85,7 +84,7 @@ func exists(effect_name: String) -> BattleBool:
 	return BattleBool.new(false)
 
 func end_of_turn() -> void:
-	lasting_turns = n("get_lasting_turns", [], lasting_turns).value
+	lasting_turns = i("get_lasting_turns", [], lasting_turns)
 	if lasting_turns > -1:
 		if lasting_turns == 0:
 			battle.remove_effect(self)

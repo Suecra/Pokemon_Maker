@@ -59,7 +59,9 @@ static func build_sample_battle(parent: Node) -> BattleL2:
 	trainer1.team.team_l0 = team1
 	trainer2.team.team_l0 = team2
 	trainer1.controller = SimpleTrainerController.new()
+	trainer1.controller.battle = b2
 	trainer2.controller = SimpleTrainerController.new()
+	trainer2.controller.battle = b2
 	fieldl2_1.field_l0 = field1
 	fieldl2_2.field_l0 = field2
 	

@@ -5,7 +5,6 @@ const BattleL1 = preload("res://Source/Scripts/Battle System/Layer 1/Battle.gd")
 const Field = preload("res://Source/Scripts/Battle System/Layer 2/Field.gd")
 const Trainer = preload("res://Source/Scripts/Battle System/Layer 2/Trainer.gd")
 const Team = preload("res://Source/Scripts/Battle System/Layer 2/Team.gd")
-const Pokemon = preload("res://Source/Scripts/Battle System/Layer 2/Pokemon.gd")
 const Logger = preload("res://Source/Scripts/Battle System/Layer 2/Logger.gd")
 
 var battle_l1: BattleL1
@@ -37,26 +36,26 @@ func turn() -> void:
 			for field in fields:
 				field.request_action()
 
-func get_possible_moves(pokemon: Pokemon) -> Array:
+func get_possible_moves(pokemon) -> Array:
 	var moves = battle_l1.effect_manager.send("get_move", [], pokemon.fighter, null)
 	return moves.value
 
-func get_move_target_type(pokemon: Pokemon, move: Reference) -> int:
+func get_move_target_type(pokemon, move: Reference) -> int:
 	var target_type = battle_l1.effect_manager.send("get_target_type", [move.index], pokemon.fighter, null)
 	return target_type.value
 
-func move(trainer: Trainer, pokemon: Pokemon, move_name: String, target_index: int) -> void:
+func move(trainer: Trainer, pokemon, move_name: String, target_index: int) -> void:
 	var effect = battle_l1.add_effect(pokemon.fighter, "TurnActions/Move")
 	effect.move_name = move_name
 	effect.target_index = target_index
 	do_action(trainer, [pokemon])
 
-func switch(trainer: Trainer, from: Pokemon, to: Pokemon) -> void:
+func switch(trainer: Trainer, from, to) -> void:
 	var effect = battle_l1.add_effect(from.fighter, "TurnActions/Switch")
 	effect.fighter = to
 	do_action(trainer, [from])
 
-func item(trainer: Trainer, pokemon: Pokemon, item_name: String) -> void:
+func item(trainer: Trainer, pokemon, item_name: String) -> void:
 	var effect = battle_l1.add_effect(pokemon.fighter, "TurnActions/UseItem")
 	effect.item_name = item_name
 	do_action(trainer, [pokemon])
