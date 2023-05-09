@@ -14,14 +14,14 @@ func do_move(target_positions: Array) -> void:
 	var no_target = true
 	var no_effect = true
 	for target_position in target_positions:
-		var field = battle.battle_l0.battlefield.fields[target_position.x]
-		var target = field.get_fighter_at_position(target_position.y)
+		var field = owner.field
+		var target = field.get_fighter_at_position(target_position)
 		if target != null:
 			no_target = false
 			var is_hit = guaranteed_hit
 			if not is_hit:
 				var hit_chance = f("get_accuracy", [target], accuracy)
-				is_hit = random_trigger(hit_chance)
+				is_hit = b("random_trigger", [hit_chance])
 			if is_hit && b("hit_target", [target]):
 				no_effect = false
 	if no_target:

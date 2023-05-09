@@ -1,6 +1,6 @@
 extends "res://Source/Scripts/Battle System/Layer 1/Effects/FieldTurnAction.gd"
 
-func init() -> void:
+func _init() -> void:
 	priority = -8
 	set_name("EndOfTurn")
 

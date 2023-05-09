@@ -27,6 +27,7 @@ func _register() -> void:
 	current_owner = owner
 	reg("exists", 0, L1Consts.SenderType.BATTLEFIELD)
 	reg("end_of_turn", 0, L1Consts.SenderType.BATTLEFIELD)
+	reg("random_trigger", 0, L1Consts.SenderType.SELF)
 
 func set_name(name: String) -> void:
 	names.append(name)

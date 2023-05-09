@@ -25,7 +25,8 @@ export(ContestType) var contest_type
 export(PackedScene) var contest_effect
 export(int, "Attack", "Defense", "Support") var battle_style
 export(String) var description
-export(Dictionary) var effect_dict
+export(Array) var effect_array
+export(int) var target_type
 
 onready var effects = $Effects
 
@@ -37,6 +38,7 @@ func _init(name: String = "") -> void:
 		load_from_file(Consts.MOVE_PATH + name + ".json")
 
 func _load_from_json(data: Dictionary) -> void:
+	target_type = 0
 	move_name = data["name"]
 	name = move_name
 	type = load(Consts.TYPE_PATH + data["type"]["name"] + ".tscn")
@@ -102,16 +104,20 @@ func _load_from_json(data: Dictionary) -> void:
 	
 	load_effects(data)
 	
-	#if data["contest_type"] != null:
-	#	match data["contest_type"]["name"]:
-	#		"cool": contest_type = ContestType.Cool
-	#		"beauty": contest_type = ContestType.Beauty
-	#		"cute": contest_type = ContestType.Cute
-	#		"smart": contest_type = ContestType.Smart
-	#		"tough": contest_type = ContestType.Tough
+	var effect_targeted = {}
+	effect_targeted["name"] = "METargeted"
+	effect_targeted["params"] = {}
+	effect_targeted["params"]["accuracy"] = float(accuracy) / 100.0
+	effect_targeted["params"]["guaranteed_hit"] = accuracy == 0
+	effect_array.append(effect_targeted)
+	var effect_damage = {}
+	effect_damage["name"] = "MEDamage"
+	effect_damage["params"] = {}
+	effect_damage["params"]["base_damage"] = power
+	effect_damage["params"]["type_id"] = type_id
+	effect_damage["params"]["category"] = damage_class
+	effect_array.append(effect_damage)
 	
-	#if data["contest_effect"] != null:
-		#contest_effect = load("res://Source/Data/Contest-Effect/contest_effect" + str(result["id"]) + ".tscn")
 	description = get_en_description(data["flavor_text_entries"], "flavor_text")
 
 func _save_to_json(data: Dictionary) -> void:
@@ -183,7 +189,7 @@ func _save_to_json(data: Dictionary) -> void:
 
 func load_effects(data: Dictionary) -> void:
 	if data.has("move_effects"):
-		effect_dict = data["move_effects"]
+		effect_array = data["move_effects"]
 	var effects
 	if data["stat_changes"] != []:
 		effects = Utils.add_node_if_not_exists(self, self, "Effects")

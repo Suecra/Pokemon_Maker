@@ -15,6 +15,9 @@ func _register() -> void:
 	reg("execute", 0, L1Consts.SenderType.SELF)
 	reg("do_action", 0, L1Consts.SenderType.SELF)
 
+func get_priority() -> BattleNumber:
+	return BattleNumber.new(priority)
+
 func get_turn_actions() -> BattleArray:
 	return BattleInclude.new([self])
 

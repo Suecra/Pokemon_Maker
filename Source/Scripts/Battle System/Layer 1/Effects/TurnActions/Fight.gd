@@ -1,7 +1,7 @@
 extends "res://Source/Scripts/Battle System/Layer 1/Effects/FieldTurnAction.gd"
 
 var move_name: String
-var target_index: Array
+var target_index: int
 
 func init() -> void:
 	priority = 0

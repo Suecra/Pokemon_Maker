@@ -35,8 +35,8 @@ func init_battle() -> void:
 		effect.move_type = move.type_id
 		effect.move_category = move.damage_class
 		effect.move_priority = move.priority
-		effect.move_effects = move.effect_dict
-		effect.target_type = move.possible_targets
+		effect.move_effects = move.effect_array
+		effect.target_type = move.target_type
 		idx += 1
 
 func get_move_data(move: String) -> Reference:
