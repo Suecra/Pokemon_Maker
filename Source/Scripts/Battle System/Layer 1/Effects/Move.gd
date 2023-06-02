@@ -14,14 +14,15 @@ func _init() -> void:
 
 func _register() -> void:
 	._register()
-	reg("execute_move", 0, L1Consts.SenderType.SELF)
-	reg("get_move", 0, L1Consts.SenderType.SELF)
-	reg("get_move_priority", 0, L1Consts.SenderType.SELF)
-	reg("get_display_pp", 0, L1Consts.SenderType.SELF)
-	reg("get_display_type", 0, L1Consts.SenderType.SELF)
-	reg("get_display_category", 0, L1Consts.SenderType.SELF)
-	reg("get_possible_targets", 0, L1Consts.SenderType.SELF)
-	reg("get_target_positions", 0, L1Consts.SenderType.SELF)
+	reg("execute_move", 0, me())
+	reg("get_move", 0, all_roles())
+	reg("get_target_type", 0, all_roles())
+	reg("get_move_priority", 0, me())
+	reg("get_display_pp", 0, me())
+	reg("get_display_type", 0, me())
+	reg("get_display_category", 0, me())
+	reg("get_possible_targets", 0, me())
+	reg("get_target_positions", 0, me())
 
 func execute_move(move_name: String, target_index: int) -> void:
 	if move_name == self.move_name:
@@ -33,8 +34,10 @@ func execute_move(move_name: String, target_index: int) -> void:
 		var target_positions = arr("get_target_positions", [index, target_index])
 		v("do_move", [target_positions])
 
-func get_move() -> BattleArray:
-	return BattleInclude.new([self])
+func get_move(fighter) -> BattleArray:
+	if fighter == owner:
+		return BattleInclude.new([self])
+	return BattleInclude.new([])
 
 func get_move_priority() -> BattleNumber:
 	return BattleNumber.new(move_priority)
@@ -54,8 +57,8 @@ func get_display_category(index: int) -> BattleNumber:
 		return BattleNumber.new(move_category)
 	return BattleAdd.new(0)
 
-func get_target_type(index: int) -> BattleNumber:
-	if index == self.index:
+func get_target_type(fighter, index: int) -> BattleNumber:
+	if fighter == owner && index == self.index:
 		return BattleNumber.new(target_type)
 	return BattleAdd.new(0)
 

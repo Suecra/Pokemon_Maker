@@ -19,6 +19,7 @@ func set_position(value: int) -> void:
 func set_fainted(value: bool) -> void:
 	fainted = value
 	if fainted:
+		active = false
 		team.update_defeated()
 
 func check_position(position: int) -> void:
@@ -36,7 +37,7 @@ func _get_entity_relation(battle_entity: Reference) -> int:
 	match type:
 		Type.FIGHTER:
 			if battle_entity == self:
-				return L1Consts.Role.SELF
+				return L1Consts.Role.OWNER
 			elif battle_entity.field == field:
 				return L1Consts.Role.ALLY
 			else:

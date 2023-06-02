@@ -42,7 +42,7 @@ func test_heal() -> void:
 	asserts.is_equal(150, fighter.hp)
 
 func test_get_entity_relation() -> void:
-	asserts.is_equal(L1Consts.Role.SELF, fighter._get_entity_relation(fighter))
+	asserts.is_equal(L1Consts.Role.OWNER, fighter._get_entity_relation(fighter))
 	asserts.is_equal(L1Consts.Role.ALLY, fighter._get_entity_relation(fighter.team))
 	asserts.is_equal(L1Consts.Role.ALLY, fighter._get_entity_relation(fighter.field))
 	asserts.is_equal(L1Consts.Role.OPPONENT, fighter._get_entity_relation(Fighter.new()))

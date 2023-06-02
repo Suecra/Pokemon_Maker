@@ -18,16 +18,20 @@ func test_send() -> void:
 	f1.field = fld
 	f2.field = fld
 	e1.owner = f1
+	e1.current_owner = f1
+	e1.current_effect = e1
 	e2.owner = f2
+	e2.current_owner = f2
+	e2.current_effect = e2
 	effect_manager.registered_effects["nudge"] = []
-	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(e1, 2, L1Consts.SenderType.SELF_OR_ALLY, true))
-	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(e2, 1, L1Consts.SenderType.SELF, true))
-	effect_manager.send("nudge", [], f1, null)
+	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(e1, 2, [L1Consts.Role.SELF, L1Consts.Role.ALLY], true))
+	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(e2, 1, [L1Consts.Role.SELF], true))
+	effect_manager.send("nudge", [], e1, null)
 	asserts.is_equal(1, e1.i)
 	asserts.is_equal(0, e2.i)
 	e1.i = 0
 	e2.i = 0
-	effect_manager.send("nudge", [], f2, null)
+	effect_manager.send("nudge", [], e2, null)
 	asserts.is_equal(1, e1.i)
 	asserts.is_equal(1, e2.i)
 
@@ -41,7 +45,7 @@ func test_call_method() -> void:
 
 func test_register() -> void:
 	var effect = TestEffect.new()
-	effect_manager.register(effect, "nudge", 1, 2, true)
+	effect_manager.register(effect, "nudge", 1, [L1Consts.Role.OPPONENT], true)
 	asserts.is_true(effect_manager.registered_effects.has("nudge"))
 	asserts.is_equal(effect, effect_manager.registered_effects["nudge"][0].effect)
 	asserts.is_equal(1, effect_manager.registered_effects["nudge"][0].priority)
@@ -49,10 +53,10 @@ func test_register() -> void:
 
 func test_sort_registered_effects() -> void:
 	effect_manager.registered_effects["nudge"] = []
-	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(TestEffect.new(), 4, L1Consts.SenderType.SELF, true))
-	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(TestEffect.new(), 2, L1Consts.SenderType.SELF, true))
-	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(TestEffect.new(), 25, L1Consts.SenderType.SELF, true))
-	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(TestEffect.new(), 13, L1Consts.SenderType.SELF, true))
+	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(TestEffect.new(), 4, [L1Consts.Role.OWNER], true))
+	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(TestEffect.new(), 2, [L1Consts.Role.OWNER], true))
+	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(TestEffect.new(), 25, [L1Consts.Role.OWNER], true))
+	effect_manager.registered_effects["nudge"].append(RegisteredEffect.new(TestEffect.new(), 13, [L1Consts.Role.OWNER], true))
 	effect_manager.registered_effects["nudge"].sort_custom(effect_manager, "sort")
 	asserts.is_equal(2, effect_manager.registered_effects["nudge"][0].priority)
 	asserts.is_equal(4, effect_manager.registered_effects["nudge"][1].priority)

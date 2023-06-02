@@ -1,8 +1,7 @@
 class_name L1Consts
 
-enum SenderType {SELF, ALLY, SELF_OR_ALLY, OPPONENT, BATTLEFIELD}
 enum MessageType {VOID, BOOL, NUMBER, ENTITY, ARRAY}
-enum Role {SELF, ALLY, OPPONENT, BATTLEFIELD}
+enum Role {SELF, OWNER, ALLY, OPPONENT, BATTLEFIELD}
 enum MoveFailReason {NO_TARGET, NO_EFFECT}
 enum MoveCategory {PHYSICAL, SPECIAL, STATUS}
 enum EffectReplaceMode {NONE, FIFO, LIFO}
@@ -10,17 +9,8 @@ enum BattleOptions {FIGHT, ITEM, SWITCH, RUN}
 enum TargetType {SELF, SINGLE, SINGLE_SELF, MULTI, ALLY, ALLY_SELF, ALLY_TEAM, OPPONENT_TEAM, BATTLEFIELD}
 enum TargetPosition {LEFT_ALLY, SELF, RIGHT_ALLY, LEFT_OPPONENT, CENTER_OPPONENT, RIGHT_OPPONENT}
 
-static func is_sender_type(type: int, role: int) -> bool:
-	match role:
-		Role.SELF:
-			return type == SenderType.SELF || type == SenderType.SELF_OR_ALLY
-		Role.ALLY:
-			return type == SenderType.ALLY || type == SenderType.SELF_OR_ALLY
-		Role.OPPONENT:
-			return type == SenderType.OPPONENT
-		Role.BATTLEFIELD:
-			return type == SenderType.BATTLEFIELD
-	return false
+static func contains_role(roles: Array, role: int) -> bool:
+	return roles.has(role)
 
 static func get_target_positions(target_type: int, position: int, target_index: int, field_size: int) -> Array:
 	match target_type:

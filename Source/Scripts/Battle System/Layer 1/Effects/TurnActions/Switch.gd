@@ -4,7 +4,7 @@ const Fighter = preload("res://Source/Scripts/Battle System/Layer 0/Fighter.gd")
 
 var fighter: Fighter
 
-func init() -> void:
+func _init() -> void:
 	priority = 6
 	set_name("Switch")
 

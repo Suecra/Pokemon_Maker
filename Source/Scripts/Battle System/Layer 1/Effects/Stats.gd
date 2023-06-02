@@ -11,15 +11,16 @@ var weight: int
 var happiness: int
 
 func _init() -> void:
+	cardinality = 1
 	set_name("Stats")
 
 func _register() -> void:
 	._register()
-	register_vars(["level", "gender", "attack", "defense", "special_attack", "special_defense", "weight", "happiness"], L1Consts.SenderType.SELF)
-	reg("get_hp", 0, L1Consts.SenderType.SELF_OR_ALLY)
-	reg("get_speed", 0, L1Consts.SenderType.SELF_OR_ALLY, false)
-	reg("get_max_speed", 0, L1Consts.SenderType.SELF_OR_ALLY, false)
-	reg("get_opponent_max_speed", 0, L1Consts.SenderType.OPPONENT)
+	register_vars(["level", "gender", "attack", "defense", "special_attack", "special_defense", "weight", "happiness"], me())
+	reg("get_hp", 0, me())
+	reg("get_speed", 0, me(), false)
+	reg("get_max_speed", 0, self_or_ally(), false)
+	reg("get_opponent_max_speed", 0, [L1Consts.Role.OPPONENT])
 
 func get_hp() -> BattleNumber:
 	return BattleNumber.new(owner.hp)

@@ -8,8 +8,8 @@ func _init() -> void:
 
 func _register() -> void:
 	._register()
-	reg("get_stab", 0, L1Consts.SenderType.SELF)
-	reg("get_effectiveness", 0, L1Consts.SenderType.OPPONENT)
+	reg("get_stab", 0, me())
+	reg("get_effectiveness", 0, [L1Consts.Role.OPPONENT])
 
 func get_stab(target: Reference, type_id: int, category: int) -> BattleNumber:
 	if type_id == self.type_id:

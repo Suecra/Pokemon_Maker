@@ -8,7 +8,7 @@ func _init() -> void:
 
 func _register() -> void:
 	._register()
-	reg("do_move", 0, L1Consts.SenderType.SELF)
+	reg("do_move", 0, me())
 
 func do_move(target_positions: Array) -> void:
 	var no_target = true

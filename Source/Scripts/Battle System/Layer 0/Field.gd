@@ -42,7 +42,7 @@ func _get_entity_relation(battle_entity: Reference) -> int:
 				return L1Consts.Role.OPPONENT
 		Type.FIELD:
 			if battle_entity == self:
-				return L1Consts.Role.SELF
+				return L1Consts.Role.OWNER
 			else:
 				return L1Consts.Role.OPPONENT
 	return L1Consts.Role.BATTLEFIELD

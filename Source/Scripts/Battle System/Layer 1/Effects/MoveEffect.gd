@@ -6,7 +6,7 @@ func _init() -> void:
 
 func _register() -> void:
 	._register()
-	reg("fail_move", 0, L1Consts.SenderType.SELF)
+	reg("fail_move", 0, me())
 
 func fail_move(move_fail_reason: int) -> void:
 	battle.remove_effect(self)

@@ -9,9 +9,9 @@ func _init() -> void:
 
 func _register() -> void:
 	._register()
-	reg("hit_target", 0, L1Consts.SenderType.SELF)
-	reg("get_damage", 0, L1Consts.SenderType.SELF)
-	reg("get_damage_roll", 0, L1Consts.SenderType.SELF)
+	reg("hit_target", 0, me())
+	reg("get_damage", 0, me())
+	reg("get_damage_roll", 0, me())
 
 func hit_target(target: Reference) -> BattleBool:
 	var cat = i("get_move_category", [target, type_id, category], category)

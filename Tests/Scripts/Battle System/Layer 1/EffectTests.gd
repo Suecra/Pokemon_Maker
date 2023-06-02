@@ -25,16 +25,16 @@ func test_is_type() -> void:
 	asserts.is_true(effect.is_type("Confusion"))
 
 func test_reg() -> void:
-	effect.reg("nudge", 1, L1Consts.SenderType.BATTLEFIELD)
+	effect.reg("nudge", 1, [L1Consts.Role.BATTLEFIELD])
 	asserts.is_equal(effect, effect_manager.registered_effects["nudge"][0].effect)
 	asserts.is_equal(1, effect_manager.registered_effects["nudge"][0].priority)
-	asserts.is_equal(L1Consts.SenderType.BATTLEFIELD, effect_manager.registered_effects["nudge"][0].sender_type)
+	asserts.is_equal([L1Consts.Role.BATTLEFIELD], effect_manager.registered_effects["nudge"][0].roles)
 
 func test_register_vars() -> void:
-	effect.register_vars(["i"], L1Consts.SenderType.BATTLEFIELD)
+	effect.register_vars(["i"], [L1Consts.Role.BATTLEFIELD])
 	asserts.is_equal(effect, effect_manager.registered_effects["get_i"][0].effect)
 	asserts.is_equal(0, effect_manager.registered_effects["get_i"][0].priority)
-	asserts.is_equal(L1Consts.SenderType.BATTLEFIELD, effect_manager.registered_effects["get_i"][0].sender_type)
+	asserts.is_equal([L1Consts.Role.BATTLEFIELD], effect_manager.registered_effects["get_i"][0].roles)
 	var fld = Field.new()
 	effect.i = 42
 	var number = effect_manager.send("get_i", [], fld, BattleNumber.new(0))

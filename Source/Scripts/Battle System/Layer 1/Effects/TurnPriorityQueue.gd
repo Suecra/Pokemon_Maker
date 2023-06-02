@@ -1,11 +1,12 @@
 extends "res://Source/Scripts/Battle System/Layer 1/Effect.gd"
 
 func _init() -> void:
+	cardinality = 1
 	set_name("TurnPriorityQueue")
 
 func _register() -> void:
 	._register()
-	reg("nudge", 0, L1Consts.SenderType.BATTLEFIELD)
+	reg("nudge", 0, all_roles())
 
 func nudge() -> void:
 	var turn_actions = arr("get_turn_actions", [])
@@ -21,7 +22,7 @@ func nudge() -> void:
 				tied_actions.clear()
 			elif priority == top_priority:
 				var reference_speed = delegate_e(turn_action).f("get_reference_speed", [])
-				var top_reference_speed = delegate_e(top_priority_action).f("get_reference_speed", [])
+				var top_reference_speed = delegate_e(turn_action).f("get_reference_speed", [])
 				if reference_speed > top_reference_speed:
 					top_priority_action = turn_action
 					tied_actions.clear()

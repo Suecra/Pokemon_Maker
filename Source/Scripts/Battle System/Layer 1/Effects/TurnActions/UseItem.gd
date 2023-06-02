@@ -2,7 +2,7 @@ extends "res://Source/Scripts/Battle System/Layer 1/Effects/FieldTurnAction.gd"
 
 var item_name: String
 
-func init() -> void:
+func _init() -> void:
 	priority = 6
 	set_name("UseItem")
 

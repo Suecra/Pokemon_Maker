@@ -63,7 +63,7 @@ func test_is_position_out_of_bounds() -> void:
 func test_get_entity_relation() -> void:
 	var team = field.add_team()
 	var fighter = team.add_fighter()
-	asserts.is_equal(L1Consts.Role.SELF, field._get_entity_relation(field))
+	asserts.is_equal(L1Consts.Role.OWNER, field._get_entity_relation(field))
 	asserts.is_equal(L1Consts.Role.ALLY, field._get_entity_relation(field.team))
 	asserts.is_equal(L1Consts.Role.ALLY, field._get_entity_relation(fighter))
 	asserts.is_equal(L1Consts.Role.OPPONENT, field._get_entity_relation(Fighter.new()))

@@ -15,7 +15,7 @@ func test_add_fighter() -> void:
 func test_get_entity_relation() -> void:
 	var fighter = team.add_fighter()
 	team.field = Field.new()
-	asserts.is_equal(L1Consts.Role.SELF, team._get_entity_relation(team))
+	asserts.is_equal(L1Consts.Role.OWNER, team._get_entity_relation(team))
 	asserts.is_equal(L1Consts.Role.ALLY, team._get_entity_relation(team.field))
 	asserts.is_equal(L1Consts.Role.ALLY, team._get_entity_relation(fighter))
 	asserts.is_equal(L1Consts.Role.OPPONENT, team._get_entity_relation(Fighter.new()))

@@ -74,7 +74,7 @@ func random_number(lower_bound: float, upper_bound: float) -> float:
 	return rand_range(lower_bound, upper_bound)
 
 func nudge_effects() -> void:
-	effect_manager.send("nudge", [], battle_l0.battlefield, null)
+	effect_manager.send("nudge", [], null, null)
 
 func _init() -> void:
 	effect_factory = EffectFactory.new()

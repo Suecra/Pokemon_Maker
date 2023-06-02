@@ -8,12 +8,11 @@ func _init() -> void:
 
 func _register() -> void:
 	._register()
-	set_name("TurnAction")
-	register_vars(["priority"], L1Consts.SenderType.SELF)
-	reg("get_turn_actions", 0, L1Consts.SenderType.BATTLEFIELD)
-	reg("get_reference_speed", 0, L1Consts.SenderType.SELF, false)
-	reg("execute", 0, L1Consts.SenderType.SELF)
-	reg("do_action", 0, L1Consts.SenderType.SELF)
+	register_vars(["priority"], [L1Consts.Role.SELF])
+	reg("get_turn_actions", 0, all_roles())
+	reg("get_reference_speed", 0, [L1Consts.Role.SELF], false)
+	reg("execute", 0, [L1Consts.Role.SELF])
+	reg("do_action", 0, [L1Consts.Role.SELF])
 
 func get_priority() -> BattleNumber:
 	return BattleNumber.new(priority)

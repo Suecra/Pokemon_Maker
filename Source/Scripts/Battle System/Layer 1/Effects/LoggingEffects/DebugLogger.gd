@@ -9,7 +9,7 @@ func _init() -> void:
 
 func _register() -> void:
 	._register()
-	reg("end_of_turn", 0, L1Consts.SenderType.BATTLEFIELD)
+	reg("end_of_turn", 0, all_roles())
 
 func end_of_turn() -> void:
 	print("Round " + str(round_nr) + " has finished.")

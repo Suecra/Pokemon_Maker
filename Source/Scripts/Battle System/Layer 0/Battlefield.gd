@@ -12,6 +12,8 @@ func add_field() -> Field:
 	return field
 
 func _get_entity_relation(battle_entity: Reference) -> int:
+	if battle_entity == self:
+		return L1Consts.Role.OWNER
 	return L1Consts.Role.BATTLEFIELD
 
 func _get_type() -> int:

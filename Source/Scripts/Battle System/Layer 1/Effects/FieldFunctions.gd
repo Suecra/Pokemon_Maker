@@ -4,12 +4,13 @@ var run_tries: int
 
 func _init() -> void:
 	run_tries = 0
+	cardinality = 1
 	set_name("FieldFunctions")
 
 func _register() -> void:
 	._register()
-	reg("escape", 0, L1Consts.SenderType.SELF_OR_ALLY)
-	reg("try_escape", 0, L1Consts.SenderType.SELF_OR_ALLY)
+	reg("escape", 0, self_or_ally())
+	reg("try_escape", 0, self_or_ally())
 
 func escape() -> void:
 	battle.battle_l0.state = 3

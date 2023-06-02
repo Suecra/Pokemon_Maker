@@ -3,7 +3,7 @@ extends "res://Source/Scripts/Battle System/Layer 1/Effects/FieldTurnAction.gd"
 var move_name: String
 var target_index: int
 
-func init() -> void:
+func _init() -> void:
 	priority = 0
 	set_name("Fight")
 

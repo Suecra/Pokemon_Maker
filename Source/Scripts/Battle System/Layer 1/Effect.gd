@@ -16,6 +16,7 @@ const BattleInclude = preload("res://Source/Scripts/Battle System/Layer 1/Battle
 var names: Array
 var owner: BattleEntity
 var current_owner: BattleEntity
+var current_effect: Reference
 var effect_manager: Reference
 var battle: Reference
 var battlefield: Reference
@@ -24,10 +25,11 @@ var cardinality := -1
 var replace_mode = L1Consts.EffectReplaceMode.NONE
 
 func _register() -> void:
+	current_effect = self
 	current_owner = owner
-	reg("exists", 0, L1Consts.SenderType.BATTLEFIELD)
-	reg("end_of_turn", 0, L1Consts.SenderType.BATTLEFIELD)
-	reg("random_trigger", 0, L1Consts.SenderType.SELF)
+	reg("exists", 0, all_roles())
+	reg("end_of_turn", 0, [L1Consts.Role.BATTLEFIELD])
+	reg("random_trigger", 0, [L1Consts.Role.SELF])
 
 func set_name(name: String) -> void:
 	names.append(name)
@@ -35,39 +37,61 @@ func set_name(name: String) -> void:
 func is_type(name: String) -> bool:
 	return names.has(name)
 
-func reg(message: String, priority: int, sender_type: int, sorted: bool = true) -> void:
-	effect_manager.register(self, message, priority, sender_type, sorted)
+func get_entity_relation(effect) -> int:
+	if effect == null:
+		return L1Consts.Role.BATTLEFIELD
+	if effect == self:
+		return L1Consts.Role.SELF
+	return current_owner._get_entity_relation(effect.current_owner)
 
-func register_vars(vars: Array, sender_type: int) -> void:
+func reg(message: String, priority: int, roles: Array, sorted: bool = true) -> void:
+	effect_manager.register(self, message, priority, roles, sorted)
+
+func register_vars(vars: Array, roles: Array) -> void:
 	for v in vars:
-		reg("get_" + v, 0, sender_type)
+		reg("get_" + v, 0, roles)
+
+func me() -> Array:
+	return [L1Consts.Role.SELF, L1Consts.Role.OWNER]
+
+func self_or_ally() -> Array:
+	return [L1Consts.Role.SELF, L1Consts.Role.OWNER, L1Consts.Role.ALLY]
+
+func all_roles() -> Array:
+	return [L1Consts.Role.SELF, L1Consts.Role.OWNER, L1Consts.Role.ALLY, L1Consts.Role.OPPONENT, L1Consts.Role.BATTLEFIELD]
 
 func v(message: String, params: Array) -> void:
-	effect_manager.send(message, params, current_owner, null)
+	effect_manager.send(message, params, current_effect, null)
+	current_effect = self
 	current_owner = owner
 
 func b(message: String, params: Array, default := false) -> bool:
-	var result = effect_manager.send(message, params, current_owner, BattleBool.new(default))
+	var result = effect_manager.send(message, params, current_effect, BattleBool.new(default))
+	current_effect = self
 	current_owner = owner
 	return result.value
 
 func f(message: String, params: Array, default := 0) -> float:
-	var result = effect_manager.send(message, params, current_owner, BattleNumber.new(default))
+	var result = effect_manager.send(message, params, current_effect, BattleNumber.new(default))
+	current_effect = self
 	current_owner = owner
 	return result.value
 
 func i(message: String, params: Array, default := 0) -> int:
-	var result = effect_manager.send(message, params, current_owner, BattleNumber.new(default))
+	var result = effect_manager.send(message, params, current_effect, BattleNumber.new(default))
+	current_effect = self
 	current_owner = owner
 	return int(result.value)
 
 func ent(message: String, params: Array, default := null) -> BattleEntity:
-	var result = effect_manager.send(message, params, current_owner, BattleVarEntity.new(default))
+	var result = effect_manager.send(message, params, current_effect, BattleVarEntity.new(default))
+	current_effect = self
 	current_owner = owner
 	return result.value
 	
 func arr(message: String, params: Array, default := []) -> Array:
-	var result = effect_manager.send(message, params, current_owner, BattleArray.new(default))
+	var result = effect_manager.send(message, params, current_effect, BattleArray.new(default))
+	current_effect = self
 	current_owner = owner
 	return result.value
 
@@ -76,6 +100,7 @@ func delegate(entity: BattleEntity) -> Reference:
 	return self
 
 func delegate_e(effect: Reference) -> Reference:
+	current_effect = effect
 	current_owner = effect.owner
 	return self
 

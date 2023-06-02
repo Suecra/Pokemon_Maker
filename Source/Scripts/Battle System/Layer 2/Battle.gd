@@ -24,10 +24,12 @@ func start() -> void:
 	battle_l1.start()
 	init_battle()
 	turn()
+	print("battle finished")
 
 func turn() -> void:
 	if requested_pokemon.size() == 0:
 		battle_l1.nudge_effects()
+		battle_l1.battle_l0.check_finished()
 		if battle_l1.battle_l0.state == BattleL0.BattleState.RUNNING:
 			battle_l1.add_effect(battle_l1.battle_l0.battlefield, "TurnActions/BeginOfTurn")
 			battle_l1.add_effect(battle_l1.battle_l0.battlefield, "TurnActions/EndOfTurn")
@@ -39,11 +41,11 @@ func turn() -> void:
 				field.request_action()
 
 func get_possible_moves(pokemon) -> Array:
-	var moves = battle_l1.effect_manager.send("get_move", [], pokemon.fighter, BattleArray.new([]))
+	var moves = battle_l1.effect_manager.send("get_move", [pokemon.fighter], null, BattleArray.new([]))
 	return moves.value
 
 func get_move_target_type(pokemon, move: Reference) -> int:
-	var target_type = battle_l1.effect_manager.send("get_target_type", [move.index], pokemon.fighter, BattleNumber.new(0))
+	var target_type = battle_l1.effect_manager.send("get_target_type", [pokemon.fighter, move.index], null, BattleNumber.new(0))
 	return target_type.value
 
 func move(trainer: Trainer, pokemon, move_name: String, target_index: int) -> void:
@@ -80,4 +82,5 @@ func init_battle() -> void:
 	for field in fields:
 		field.init_battle()
 	if logger != null:
+		logger.battle_l1 = battle_l1
 		logger.init_battle()

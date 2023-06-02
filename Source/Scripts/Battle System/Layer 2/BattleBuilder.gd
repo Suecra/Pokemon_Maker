@@ -12,6 +12,7 @@ const Trainer = preload("res://Source/Scripts/Battle System/Layer 2/Trainer.gd")
 const Team = preload("res://Source/Scripts/Battle System/Layer 2/Team.gd")
 const SimpleTrainerController = preload("res://Source/Scripts/Battle System/Layer 2/TrainerControllers/SimpleController.gd")
 const Pokemon = preload("res://Source/Scripts/Game/Pokemon.gd")
+const Logger = preload("res://Source/Scripts/Battle System/Layer 2/Logger.gd")
 
 static func build_sample_battle(parent: Node) -> BattleL2:
 	var b0 = BattleL0.new(1)
@@ -68,4 +69,5 @@ static func build_sample_battle(parent: Node) -> BattleL2:
 	b1.battle_l0 = b0
 	b2.battle_l1 = b1
 	
+	b2.logger = Logger.new()
 	return b2

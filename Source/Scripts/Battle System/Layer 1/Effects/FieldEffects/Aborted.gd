@@ -5,7 +5,7 @@ func _init() -> void:
 
 func _register() -> void:
 	._register()
-	reg("get_turn_actions", 1, L1Consts.SenderType.BATTLEFIELD)
+	reg("get_turn_actions", 1, all_roles())
 
 func get_turn_actions() -> BattleArray:
 	return BattleArray.new([])
